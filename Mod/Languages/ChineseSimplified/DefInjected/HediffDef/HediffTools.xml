@@ -7,10 +7,10 @@
 <LanguageData>
 
   <!-- EN: fang -->
-  <SZ_MingShe_Teeth.comps.0.tools.fang.label>牙</SZ_MingShe_Teeth.comps.0.tools.fang.label>
+  <SZ_MingShe_Teeth.comps.HediffComp_VerbGiver.tools.fang.label>牙</SZ_MingShe_Teeth.comps.HediffComp_VerbGiver.tools.fang.label>
   <!-- EN: claw -->
-  <SZ_QiongQi_Scratch.comps.0.tools.claw.label>爪</SZ_QiongQi_Scratch.comps.0.tools.claw.label>
+  <SZ_QiongQi_Scratch.comps.HediffComp_VerbGiver.tools.claw.label>爪</SZ_QiongQi_Scratch.comps.HediffComp_VerbGiver.tools.claw.label>
   <!-- EN: horn -->
-  <SZ_Year_Horn.comps.0.tools.horn.label>角</SZ_Year_Horn.comps.0.tools.horn.label>
+  <SZ_Year_Horn.comps.HediffComp_VerbGiver.tools.horn.label>角</SZ_Year_Horn.comps.HediffComp_VerbGiver.tools.horn.label>
 
 </LanguageData>
