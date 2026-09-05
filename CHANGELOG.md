@@ -1,0 +1,70 @@
+# Changelog
+
+All notable changes to this port are recorded here.
+The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
+
+## [1.0.0] — unreleased
+
+First 1.6 release. Ported from andery233xj, Frolg, DongFang and Ninedaylongbow's
+**山海志怪-华夏凶兽和基因扩展 — Ancient Chinese Beast And Gene Expanded**, Workshop
+[3292446841](https://steamcommunity.com/sharedfiles/filedetails/?id=3292446841), last supporting
+1.5. `ATTRIBUTION.md` records the whole of it; this is the summary.
+
+### Changed — to run on 1.6
+
+- **The qiongqi's flying strike flies again.** 1.6 moved `PawnFlyer`'s flight logic from `Tick()`
+  to `TickInterval(int delta)`. The mod's flyer overrode `Tick()`, which in 1.6 overrides nothing
+  and reaches an empty base — the flyer would have hung in the air over its target. It now
+  overrides `TickInterval` and advances two ticks per game tick, as before.
+- **The sexie changes shape again.** `ThingComp.PostDeSpawn` gained a `DestroyMode`, so the hook
+  that turns the broken human form into the scorpion quietly stopped overriding anything. The
+  same change had silenced the hook that ends the mingshe's drought when its causer dies.
+- **The beasts are untameable again.** 1.6 turned animal wildness from a field of
+  `RaceProperties` into a stat, defaulting to an out-of-range `-1`. All seven defs were moved to
+  `<statBases><Wildness>`.
+- **Explosions carry the right arguments.** `GenExplosion.DoExplosion` gained two parameters in
+  the middle of its list; both call sites were rewritten with named arguments.
+- `PathFinder.FindPath` became `Verse.PathFinder.FindPathNow` with a reordered signature,
+  `JumpUtility.ValidJumpTarget` gained a leading `Thing`, `RegionGrid.allRooms` became the
+  `AllRooms` property, and `Entity.Tick()` became `protected`. All followed.
+- Every one of the ten Harmony patch targets was verified against the 1.6 assemblies by
+  reflection before anything was compiled. All ten survived unchanged.
+
+### Changed — English text
+
+- **The beasts have their names.** The original English was machine-translated: the qiongqi was
+  "Pauper", the sexie "Sex evil", and the mingshe was called "Ming Snake", "Snake Snake", "song
+  snake" and — in one recipe — "Naruto". They are now mingshe, qiongqi, sexie, nian beast and
+  Pleiades star officer.
+- Every label and description was rewritten. Content the Chinese carried and the English had lost
+  is back: the tip about the Pleiades star officer, the five clone beasts' own descriptions (the
+  English reused the hostile beast's, so a tame beast described itself as a raider), and the
+  authors' joke at the end of the chicken's description.
+- **Labels that were Chinese in every language are now translatable.** 91 body-part names, every
+  beast's melee tools, the firecracker's throw verb and the flame projectiles sat in the defs in
+  Chinese, where no translation could reach them. They now hold vanilla's English wording, and
+  the authors' Chinese moved into `Languages/ChineseSimplified/DefInjected/` — including a
+  `BodyDef/` folder the original did not have.
+
+### Fixed — defects present in the original
+
+- **A comp that threw on every destroy.** `CompCauseGameCondition_WithLetter` read a private
+  field off a class it does not derive from, so its `PostDestroy` raised `ArgumentException` and
+  its message never appeared. No def uses the comp, which is why it went unnoticed.
+- **A null reference on a player-faction mingshe.** The permanent-drought comp only creates its
+  condition for non-player beasts, then ended it unconditionally on despawn.
+- **The mingshe's sound wave described itself as a flamethrower** — its description was a copy of
+  the nian beast's.
+- **The monstrous strength hediff described the opposite of what it does.** It claimed to weaken
+  enemies; it doubles the bearer's unarmed melee damage, which is what the Chinese says.
+- **The Pleiades crow thought is translated again.** Its Chinese keys addressed the stage by
+  index where RimWorld resolves it by label handle.
+- Two Chinese translation keys pointing at a research project that does not ship were removed.
+
+### Changed — packaging
+
+- `Storyteller.png` went from 2192×2343 and 5.6 MB to 1160×1240, twice the 580×620 the game draws
+  it at; `BeastGeneExtractor.png` from 5334×5334 to 1344×1344. The mod is 6 MB instead of 13 MB.
+  Both originals are kept under `Art/textures-original/`.
+- Harmony is declared as a dependency, as it already was upstream, alongside Biotech.
+- Single-version layout: the 1.4 and 1.5 folders and `LoadFolders.xml` are gone.

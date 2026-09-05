@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="SZBeastParent">
+    <defName>SZ_MingShe</defName>
+    <label>mingshe</label>
+    <description>There is a chance of one appearing near the colony a year after it is founded. Shenzhou legend gives this beast a snake's body and a pair of wings. \n\nWorking from the myth, the Tianbing gene engineering programme bred a rim mingshe to help them wreck the rim. \n\nA plague-snake of this kind brings drought with it. It will not attack colonists of its own accord, but left alone it will slowly wither the colony's crops. \n\nAt range the mingshe uses a wide sound-wave attack that leaves every colonist caught in it reeling. Up close it bites, and its fangs are deadly. Worse still, every so often it raises a wind shield: every ranged attack fired from outside the shield is thrown back, and anything caught inside it takes continuous cutting damage.</description>
+    <statBases><!-- 冥蛇？冥河？致敬背刺王冥河-->
+      <MoveSpeed>6.5</MoveSpeed>
+      <ArmorRating_Sharp>0.55</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+      <MeleeDodgeChance>0.5</MeleeDodgeChance>
+    </statBases>
+    <race>
+      <thinkTreeMain>SZ_AIMingShe</thinkTreeMain>
+      <body>SZ_MingSheSnakeBody</body>
+    </race>
+    <damageMultipliers>
+      <li>
+        <damageDef>AntiEvilBeastBullet</damageDef>
+        <multiplier>6</multiplier>
+      </li>
+    </damageMultipliers>
+    <tools>
+      <li>
+        <label>bite</label>
+        <capacities>
+          <li>SZ_MingSheToxicBite</li>
+        </capacities>
+        <power>30</power>
+        <cooldownTime>1</cooldownTime>
+        <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+      </li>
+    </tools>
+    <comps>
+      <li Class="AncientChineseBeast.CompProperties_CausePermanentGameCondition">
+        <conditionDef>SZ_MingSheDrought</conditionDef>
+      </li>
+      <li>
+        <compClass>AncientChineseBeast.CompMingSheAIExpansion</compClass>
+      </li>
+      <li Class="AncientChineseBeast.CompProperties_ConnaturalAbilities">
+        <abilities>
+          <li>SZ_MingShe_SoundWave</li>
+          <li>SZ_MingShe_WindWing</li>
+        </abilities>
+      </li>
+      <li Class="AncientChineseBeast.CompProperties_GenesInCorpse">
+        <genes>
+          <li>SZGene_MingShe_WindWing</li>
+          <li>SZGene_MingShe_SoundWave</li>
+          <li>SZGene_MingShe_Teeth</li>
+        </genes>
+      </li>
+      <li>
+        <compClass>AncientChineseBeast.CompActiveAfterTakenDamage</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+  <PawnKindDef ParentName="SZBeast_PawnKindParent">
+    <defName>SZ_MingShe</defName>
+    <race>SZ_MingShe</race>
+    <label>mingshe</label>
+    <combatPower>1200</combatPower>
+    <ecoSystemWeight>0.01</ecoSystemWeight>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>AncientChineseBeast/MingShe/MingShe</texPath>
+          <drawSize>6.5</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>AncientChineseBeast/MingShe/Dessicated_MingShe</texPath>
+          <drawSize>6.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+</Defs>

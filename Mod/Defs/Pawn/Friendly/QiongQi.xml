@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="SZBeastParent">
+    <defName>SZ_QiongQi_Friendly</defName>
+    <label>qiongqi (friendly)</label>
+    <description>A qiongqi grown by gene engineering. Its original mind has been wiped away and it fights for the colony now; its claws open the Tianbing mechanoids' heavy armour like paper. \n\n\n&lt;color=#33ff00&gt;[More]&lt;/color&gt;\nWhen the gene engineers cloned a beast they took the DNA of the original, and most of that beast's abilities came through intact. \n\nA line from the Shenzhou settlers' history books runs: "Chinese learning for the substance, Western learning for the use". The same thinking went into breeding the beasts, and every part of a copied beast carries the traditional culture and colour of a Shenzhou settlement.</description>
+    <statBases>
+      <Wildness>0</Wildness>
+      <MoveSpeed>6.5</MoveSpeed>
+      <ArmorRating_Sharp>0.55</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+      <MeleeDodgeChance>0.5</MeleeDodgeChance>
+      <ImmunityGainSpeed>5</ImmunityGainSpeed>
+    </statBases>
+    <race>
+      <thinkTreeMain>Animal</thinkTreeMain>
+      <thinkTreeConstant>AnimalConstant</thinkTreeConstant>
+      <body>SZ_QuadrupedAnimalWithPawsTailWings</body>
+    </race>
+    <tools>
+      <li>
+        <label>bite</label>
+        <capacities>
+          <li>SZ_QiongQiBite</li>
+        </capacities>
+        <power>25</power>
+        <cooldownTime>1</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>left claw</label>
+        <capacities>
+          <li>SZ_QiongQiScratch</li>
+        </capacities>
+        <power>20</power>
+        <cooldownTime>0.5</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>right claw</label>
+        <capacities>
+          <li>SZ_QiongQiScratch</li>
+        </capacities>
+        <power>20</power>
+        <cooldownTime>0.5</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+      </li>
+    </tools>
+    <comps>
+      <li Class="AncientChineseBeast.CompProperties_ConnaturalAbilities">
+        <abilities>
+          <li>SZ_QiongQi_FlyingStrike</li>
+        </abilities>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <PawnKindDef ParentName="SZBeast_PawnKindParent">
+    <defName>SZ_QiongQi_Friendly</defName>
+    <race>SZ_QiongQi_Friendly</race>
+    <label>qiongqi (friendly)</label>
+    <combatPower>1200</combatPower>
+    <ecoSystemWeight>0.01</ecoSystemWeight>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>AncientChineseBeast/QiongQi/QiongQi</texPath>
+          <drawSize>13</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>AncientChineseBeast/QiongQi/Dessicated_QiongQi</texPath>
+          <drawSize>13</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  
+</Defs>

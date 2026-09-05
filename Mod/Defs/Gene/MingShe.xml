@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <GeneDef>
+    <defName>SZGene_MingShe_WindWing</defName>
+    <label>mingshe wind shield</label>
+    <description>The mingshe's wind shield, taken from its corpse. It carries the beast's own ability: enemies inside the shield take continuous cutting damage, and anything in flight from outside it - bullets and thrown objects both - is thrown back.</description>
+    <iconPath>AncientChineseBeast/MingShe/WindWingIcon</iconPath>
+    <displayCategory>Archite</displayCategory>
+    <marketValueFactor>1.5</marketValueFactor>
+    <abilities>
+      <li>SZ_MingShe_WindWing</li>
+    </abilities>
+    <descriptionHyperlinks>
+      <AbilityDef>SZ_MingShe_WindWing</AbilityDef>
+    </descriptionHyperlinks>
+    <renderNodeProperties>
+      <li>
+        <texPath>AncientChineseBeast/MingShe/Wing</texPath>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <parentTagDef>Body</parentTagDef>
+        <drawSize>2</drawSize>
+        <drawData>
+          <dataNorth>
+            <offset>(0, 0.3, 0)</offset>
+          </dataNorth>
+          <dataSouth>
+            <offset>(0, -0.3, 0)</offset>
+          </dataSouth>
+          <dataWest>
+            <flip>true</flip>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+    <biostatCpx>10</biostatCpx>
+    <biostatMet>-4</biostatMet>
+    <biostatArc>1</biostatArc>
+    <symbolPack>
+      <wholeNameSymbols>
+        <li>
+          <symbol>鸣蛇的祝福</symbol>
+        </li>
+        <li>
+          <symbol>鸣蛇的恩赐</symbol>
+        </li>
+      </wholeNameSymbols>
+    </symbolPack>
+    <randomChosen>false</randomChosen>
+  </GeneDef>
+
+  <GeneDef>
+    <defName>SZGene_MingShe_SoundWave</defName>
+    <label>mingshe sound wave</label>
+    <description>Extracted by gene engineering. The mingshe's sound wave leaves everyone it hits reeling.</description>
+    <iconPath>AncientChineseBeast/MingShe/SoundWaveIcon</iconPath>
+    <displayCategory>Archite</displayCategory>
+    <marketValueFactor>1.5</marketValueFactor>
+    <abilities>
+      <li>SZ_MingShe_SoundWave</li>
+    </abilities>
+    <descriptionHyperlinks>
+      <AbilityDef>SZ_MingShe_SoundWave</AbilityDef>
+    </descriptionHyperlinks>
+    <biostatCpx>10</biostatCpx>
+    <biostatMet>-3</biostatMet>
+    <biostatArc>1</biostatArc>
+    <symbolPack>
+      <wholeNameSymbols>
+        <li>
+          <symbol>鸣蛇的祝福</symbol>
+        </li>
+        <li>
+          <symbol>鸣蛇的恩赐</symbol>
+        </li>
+      </wholeNameSymbols>
+    </symbolPack>
+    <randomChosen>false</randomChosen>
+  </GeneDef>
+
+  <GeneDef>
+    <defName>SZGene_MingShe_Teeth</defName>
+    <label>mingshe fangs</label>
+    <description>The mingshe's deadly fangs. The venom in them makes anyone who doubts their power pay with their life.</description>
+    <iconPath>AncientChineseBeast/MingShe/TeethIcon</iconPath>
+    <displayCategory>Archite</displayCategory>
+    <marketValueFactor>1.5</marketValueFactor>
+    <geneClass>AncientChineseBeast.Gene_Hediffs</geneClass>
+    <descriptionHyperlinks>
+      <HediffDef>SZ_QiongQi_Scratch</HediffDef>
+    </descriptionHyperlinks>
+    <modExtensions>
+      <li Class="AncientChineseBeast.DefModExtension_GeneHediffs">
+        <hediffs>
+          <li>
+            <bodyPartGroup>Teeth</bodyPartGroup>
+            <hediff>SZ_MingShe_Teeth</hediff>
+          </li>
+        </hediffs>
+      </li>
+    </modExtensions>
+    <biostatCpx>10</biostatCpx>
+    <biostatMet>-2</biostatMet>
+    <biostatArc>1</biostatArc>
+    <symbolPack>
+      <wholeNameSymbols>
+        <li>
+          <symbol>鸣蛇的祝福</symbol>
+        </li>
+        <li>
+          <symbol>鸣蛇的恩赐</symbol>
+        </li>
+      </wholeNameSymbols>
+    </symbolPack>
+    <randomChosen>false</randomChosen>
+  </GeneDef>
+</Defs>

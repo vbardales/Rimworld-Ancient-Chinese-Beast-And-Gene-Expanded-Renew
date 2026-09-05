@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  The melee tools the three implanted beast parts grant. Their labels used to sit in the defs
+  as "牙 (Tooth)", "爪 (Paw)" and "角 (horn)" - readable in neither language and translatable
+  in neither. The 1.6 port put plain English in the defs and the Chinese here.
+-->
+<LanguageData>
+
+  <!-- EN: fang -->
+  <SZ_MingShe_Teeth.comps.0.tools.fang.label>牙</SZ_MingShe_Teeth.comps.0.tools.fang.label>
+  <!-- EN: claw -->
+  <SZ_QiongQi_Scratch.comps.0.tools.claw.label>爪</SZ_QiongQi_Scratch.comps.0.tools.claw.label>
+  <!-- EN: horn -->
+  <SZ_Year_Horn.comps.0.tools.horn.label>角</SZ_Year_Horn.comps.0.tools.horn.label>
+
+</LanguageData>

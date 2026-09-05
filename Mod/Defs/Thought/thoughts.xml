@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThoughtDef>
+    <defName>SZ_ChickenCrow</defName>
+    <durationDays>1</durationDays>
+    <stages>
+      <li>
+        <label>heartened by the Pleiades star officer</label>
+        <description>The Pleiades star officer's crow filled me with fight in an instant, and every hardship scattered like cloud.</description>
+        <baseMoodEffect>20</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

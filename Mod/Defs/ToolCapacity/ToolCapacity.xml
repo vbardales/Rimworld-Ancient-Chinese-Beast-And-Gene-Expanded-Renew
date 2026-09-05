@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ToolCapacityDef>
+    <defName>SZ_QiongQiBite</defName>
+    <label>bite</label>
+  </ToolCapacityDef>
+
+  <ToolCapacityDef>
+    <defName>SZ_QiongQiScratch</defName>
+    <label>scratch</label>
+  </ToolCapacityDef>
+
+  <ToolCapacityDef>
+    <defName>SZ_MingSheToxicBite</defName>
+    <label>toxic bite</label>
+  </ToolCapacityDef>
+
+  <ToolCapacityDef>
+    <defName>SZ_SeXieToxicBite</defName>
+    <label>toxic bite</label>
+  </ToolCapacityDef>
+
+  <ToolCapacityDef>
+    <defName>SZ_SeXieToxicChela</defName>
+    <label>pincer</label>
+  </ToolCapacityDef>
+  
+</Defs>

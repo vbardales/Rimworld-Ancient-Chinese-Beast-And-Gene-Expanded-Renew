@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: left wing -->
+  <SZ_MingSheSnakeBody.corePart.parts.left_wing.customLabel>左翼</SZ_MingSheSnakeBody.corePart.parts.left_wing.customLabel>
+  <!-- EN: right wing -->
+  <SZ_MingSheSnakeBody.corePart.parts.right_wing.customLabel>右翼</SZ_MingSheSnakeBody.corePart.parts.right_wing.customLabel>
+  <!-- EN: left lung -->
+  <SZ_MingSheSnakeBody.corePart.parts.left_lung.customLabel>左肺</SZ_MingSheSnakeBody.corePart.parts.left_lung.customLabel>
+  <!-- EN: right lung -->
+  <SZ_MingSheSnakeBody.corePart.parts.right_lung.customLabel>右肺</SZ_MingSheSnakeBody.corePart.parts.right_lung.customLabel>
+  <!-- EN: left kidney -->
+  <SZ_MingSheSnakeBody.corePart.parts.left_kidney.customLabel>左肾</SZ_MingSheSnakeBody.corePart.parts.left_kidney.customLabel>
+  <!-- EN: right kidney -->
+  <SZ_MingSheSnakeBody.corePart.parts.right_kidney.customLabel>右肾</SZ_MingSheSnakeBody.corePart.parts.right_kidney.customLabel>
+  <!-- EN: left eye -->
+  <SZ_MingSheSnakeBody.corePart.parts.SnakeHead.parts.left_eye.customLabel>左眼</SZ_MingSheSnakeBody.corePart.parts.SnakeHead.parts.left_eye.customLabel>
+  <!-- EN: right eye -->
+  <SZ_MingSheSnakeBody.corePart.parts.SnakeHead.parts.right_eye.customLabel>右眼</SZ_MingSheSnakeBody.corePart.parts.SnakeHead.parts.right_eye.customLabel>
+
+  <!-- EN: left lung -->
+  <SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.left_lung.customLabel>左肺</SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.left_lung.customLabel>
+  <!-- EN: right lung -->
+  <SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.right_lung.customLabel>右肺</SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.right_lung.customLabel>
+  <!-- EN: left kidney -->
+  <SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.left_kidney.customLabel>左肾</SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.left_kidney.customLabel>
+  <!-- EN: right kidney -->
+  <SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.right_kidney.customLabel>右肾</SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.right_kidney.customLabel>
+  <!-- EN: left eye -->
+  <SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.Neck.parts.Head.parts.left_eye.customLabel>左眼</SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.Neck.parts.Head.parts.left_eye.customLabel>
+  <!-- EN: right eye -->
+  <SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.Neck.parts.Head.parts.right_eye.customLabel>右眼</SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.Neck.parts.Head.parts.right_eye.customLabel>
+  <!-- EN: left ear -->
+  <SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.Neck.parts.Head.parts.left_ear.customLabel>左耳</SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.Neck.parts.Head.parts.left_ear.customLabel>
+  <!-- EN: right ear -->
+  <SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.Neck.parts.Head.parts.right_ear.customLabel>右耳</SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.Neck.parts.Head.parts.right_ear.customLabel>
+  <!-- EN: left wing -->
+  <SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.left_wing.customLabel>左翼</SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.left_wing.customLabel>
+  <!-- EN: right wing -->
+  <SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.right_wing.customLabel>右翼</SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.right_wing.customLabel>
+  <!-- EN: front left leg -->
+  <SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.front_left_leg.customLabel>左前腿</SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.front_left_leg.customLabel>
+  <!-- EN: front left paw -->
+  <SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.front_left_leg.parts.front_left_paw.customLabel>左前爪</SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.front_left_leg.parts.front_left_paw.customLabel>
+  <!-- EN: front right leg -->
+  <SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.front_right_leg.customLabel>右前腿</SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.front_right_leg.customLabel>
+  <!-- EN: front right paw -->
+  <SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.front_right_leg.parts.front_right_paw.customLabel>右前爪</SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.front_right_leg.parts.front_right_paw.customLabel>
+  <!-- EN: rear left leg -->
+  <SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.rear_left_leg.customLabel>左后腿</SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.rear_left_leg.customLabel>
+  <!-- EN: rear left paw -->
+  <SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.rear_left_leg.parts.rear_left_paw.customLabel>左后爪</SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.rear_left_leg.parts.rear_left_paw.customLabel>
+  <!-- EN: rear right leg -->
+  <SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.rear_right_leg.customLabel>右后腿</SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.rear_right_leg.customLabel>
+  <!-- EN: rear right paw -->
+  <SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.rear_right_leg.parts.rear_right_paw.customLabel>右后爪</SZ_QuadrupedAnimalWithPawsTailWings.corePart.parts.rear_right_leg.parts.rear_right_paw.customLabel>
+
+  <!-- EN: left lung -->
+  <SZ_Human_SeXie.corePart.parts.left_lung.customLabel>左肺</SZ_Human_SeXie.corePart.parts.left_lung.customLabel>
+  <!-- EN: right lung -->
+  <SZ_Human_SeXie.corePart.parts.right_lung.customLabel>右肺</SZ_Human_SeXie.corePart.parts.right_lung.customLabel>
+  <!-- EN: left kidney -->
+  <SZ_Human_SeXie.corePart.parts.left_kidney.customLabel>左肾</SZ_Human_SeXie.corePart.parts.left_kidney.customLabel>
+  <!-- EN: right kidney -->
+  <SZ_Human_SeXie.corePart.parts.right_kidney.customLabel>右肾</SZ_Human_SeXie.corePart.parts.right_kidney.customLabel>
+  <!-- EN: left eye -->
+  <SZ_Human_SeXie.corePart.parts.Neck.parts.Head.parts.left_eye.customLabel>左眼</SZ_Human_SeXie.corePart.parts.Neck.parts.Head.parts.left_eye.customLabel>
+  <!-- EN: right eye -->
+  <SZ_Human_SeXie.corePart.parts.Neck.parts.Head.parts.right_eye.customLabel>右眼</SZ_Human_SeXie.corePart.parts.Neck.parts.Head.parts.right_eye.customLabel>
+  <!-- EN: left ear -->
+  <SZ_Human_SeXie.corePart.parts.Neck.parts.Head.parts.left_ear.customLabel>左耳</SZ_Human_SeXie.corePart.parts.Neck.parts.Head.parts.left_ear.customLabel>
+  <!-- EN: right ear -->
+  <SZ_Human_SeXie.corePart.parts.Neck.parts.Head.parts.right_ear.customLabel>右耳</SZ_Human_SeXie.corePart.parts.Neck.parts.Head.parts.right_ear.customLabel>
+  <!-- EN: left shoulder -->
+  <SZ_Human_SeXie.corePart.parts.left_shoulder.customLabel>左肩</SZ_Human_SeXie.corePart.parts.left_shoulder.customLabel>
+  <!-- EN: left clavicle -->
+  <SZ_Human_SeXie.corePart.parts.left_shoulder.parts.left_clavicle.customLabel>左锁骨</SZ_Human_SeXie.corePart.parts.left_shoulder.parts.left_clavicle.customLabel>
+  <!-- EN: left arm -->
+  <SZ_Human_SeXie.corePart.parts.left_shoulder.parts.left_arm.customLabel>左臂</SZ_Human_SeXie.corePart.parts.left_shoulder.parts.left_arm.customLabel>
+  <!-- EN: left humerus -->
+  <SZ_Human_SeXie.corePart.parts.left_shoulder.parts.left_arm.parts.left_humerus.customLabel>左肱骨</SZ_Human_SeXie.corePart.parts.left_shoulder.parts.left_arm.parts.left_humerus.customLabel>
+  <!-- EN: left radius -->
+  <SZ_Human_SeXie.corePart.parts.left_shoulder.parts.left_arm.parts.left_radius.customLabel>左桡骨</SZ_Human_SeXie.corePart.parts.left_shoulder.parts.left_arm.parts.left_radius.customLabel>
+  <!-- EN: left hand -->
+  <SZ_Human_SeXie.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.customLabel>左手</SZ_Human_SeXie.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.customLabel>
+  <!-- EN: left little finger -->
+  <SZ_Human_SeXie.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_little_finger.customLabel>左尾指</SZ_Human_SeXie.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_little_finger.customLabel>
+  <!-- EN: left ring finger -->
+  <SZ_Human_SeXie.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_ring_finger.customLabel>左无名指</SZ_Human_SeXie.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_ring_finger.customLabel>
+  <!-- EN: left middle finger -->
+  <SZ_Human_SeXie.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_middle_finger.customLabel>左中指</SZ_Human_SeXie.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_middle_finger.customLabel>
+  <!-- EN: left index finger -->
+  <SZ_Human_SeXie.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_index_finger.customLabel>左食指</SZ_Human_SeXie.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_index_finger.customLabel>
+  <!-- EN: left thumb -->
+  <SZ_Human_SeXie.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_thumb.customLabel>左拇指</SZ_Human_SeXie.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_thumb.customLabel>
+  <!-- EN: right shoulder -->
+  <SZ_Human_SeXie.corePart.parts.right_shoulder.customLabel>右肩</SZ_Human_SeXie.corePart.parts.right_shoulder.customLabel>
+  <!-- EN: right clavicle -->
+  <SZ_Human_SeXie.corePart.parts.right_shoulder.parts.right_clavicle.customLabel>右锁骨</SZ_Human_SeXie.corePart.parts.right_shoulder.parts.right_clavicle.customLabel>
+  <!-- EN: right arm -->
+  <SZ_Human_SeXie.corePart.parts.right_shoulder.parts.right_arm.customLabel>右臂</SZ_Human_SeXie.corePart.parts.right_shoulder.parts.right_arm.customLabel>
+  <!-- EN: right humerus -->
+  <SZ_Human_SeXie.corePart.parts.right_shoulder.parts.right_arm.parts.right_humerus.customLabel>右肱骨</SZ_Human_SeXie.corePart.parts.right_shoulder.parts.right_arm.parts.right_humerus.customLabel>
+  <!-- EN: right radius -->
+  <SZ_Human_SeXie.corePart.parts.right_shoulder.parts.right_arm.parts.right_radius.customLabel>右桡骨</SZ_Human_SeXie.corePart.parts.right_shoulder.parts.right_arm.parts.right_radius.customLabel>
+  <!-- EN: right hand -->
+  <SZ_Human_SeXie.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.customLabel>右手</SZ_Human_SeXie.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.customLabel>
+  <!-- EN: right little finger -->
+  <SZ_Human_SeXie.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_little_finger.customLabel>右尾指</SZ_Human_SeXie.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_little_finger.customLabel>
+  <!-- EN: right ring finger -->
+  <SZ_Human_SeXie.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_ring_finger.customLabel>右无名指</SZ_Human_SeXie.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_ring_finger.customLabel>
+  <!-- EN: right middle finger -->
+  <SZ_Human_SeXie.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_middle_finger.customLabel>右中指</SZ_Human_SeXie.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_middle_finger.customLabel>
+  <!-- EN: right index finger -->
+  <SZ_Human_SeXie.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_index_finger.customLabel>右食指</SZ_Human_SeXie.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_index_finger.customLabel>
+  <!-- EN: right thumb -->
+  <SZ_Human_SeXie.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_thumb.customLabel>右拇指</SZ_Human_SeXie.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_thumb.customLabel>
+  <!-- EN: left leg -->
+  <SZ_Human_SeXie.corePart.parts.left_leg.customLabel>左腿</SZ_Human_SeXie.corePart.parts.left_leg.customLabel>
+  <!-- EN: left femur -->
+  <SZ_Human_SeXie.corePart.parts.left_leg.parts.left_femur.customLabel>左股骨</SZ_Human_SeXie.corePart.parts.left_leg.parts.left_femur.customLabel>
+  <!-- EN: left tibia -->
+  <SZ_Human_SeXie.corePart.parts.left_leg.parts.left_tibia.customLabel>左胫骨</SZ_Human_SeXie.corePart.parts.left_leg.parts.left_tibia.customLabel>
+  <!-- EN: left foot -->
+  <SZ_Human_SeXie.corePart.parts.left_leg.parts.left_foot.customLabel>左足</SZ_Human_SeXie.corePart.parts.left_leg.parts.left_foot.customLabel>
+  <!-- EN: left little toe -->
+  <SZ_Human_SeXie.corePart.parts.left_leg.parts.left_foot.parts.left_little_toe.customLabel>左小趾</SZ_Human_SeXie.corePart.parts.left_leg.parts.left_foot.parts.left_little_toe.customLabel>
+  <!-- EN: left fourth toe -->
+  <SZ_Human_SeXie.corePart.parts.left_leg.parts.left_foot.parts.left_fourth_toe.customLabel>左次小趾</SZ_Human_SeXie.corePart.parts.left_leg.parts.left_foot.parts.left_fourth_toe.customLabel>
+  <!-- EN: left middle toe -->
+  <SZ_Human_SeXie.corePart.parts.left_leg.parts.left_foot.parts.left_middle_toe.customLabel>左三趾</SZ_Human_SeXie.corePart.parts.left_leg.parts.left_foot.parts.left_middle_toe.customLabel>
+  <!-- EN: left second toe -->
+  <SZ_Human_SeXie.corePart.parts.left_leg.parts.left_foot.parts.left_second_toe.customLabel>左二趾</SZ_Human_SeXie.corePart.parts.left_leg.parts.left_foot.parts.left_second_toe.customLabel>
+  <!-- EN: left big toe -->
+  <SZ_Human_SeXie.corePart.parts.left_leg.parts.left_foot.parts.left_big_toe.customLabel>左大拇趾</SZ_Human_SeXie.corePart.parts.left_leg.parts.left_foot.parts.left_big_toe.customLabel>
+  <!-- EN: right leg -->
+  <SZ_Human_SeXie.corePart.parts.right_leg.customLabel>右腿</SZ_Human_SeXie.corePart.parts.right_leg.customLabel>
+  <!-- EN: right femur -->
+  <SZ_Human_SeXie.corePart.parts.right_leg.parts.right_femur.customLabel>右股骨</SZ_Human_SeXie.corePart.parts.right_leg.parts.right_femur.customLabel>
+  <!-- EN: right tibia -->
+  <SZ_Human_SeXie.corePart.parts.right_leg.parts.right_tibia.customLabel>右胫骨</SZ_Human_SeXie.corePart.parts.right_leg.parts.right_tibia.customLabel>
+  <!-- EN: right foot -->
+  <SZ_Human_SeXie.corePart.parts.right_leg.parts.right_foot.customLabel>右足</SZ_Human_SeXie.corePart.parts.right_leg.parts.right_foot.customLabel>
+  <!-- EN: right little toe -->
+  <SZ_Human_SeXie.corePart.parts.right_leg.parts.right_foot.parts.right_little_toe.customLabel>右小趾</SZ_Human_SeXie.corePart.parts.right_leg.parts.right_foot.parts.right_little_toe.customLabel>
+  <!-- EN: right fourth toe -->
+  <SZ_Human_SeXie.corePart.parts.right_leg.parts.right_foot.parts.right_fourth_toe.customLabel>右次小趾</SZ_Human_SeXie.corePart.parts.right_leg.parts.right_foot.parts.right_fourth_toe.customLabel>
+  <!-- EN: right middle toe -->
+  <SZ_Human_SeXie.corePart.parts.right_leg.parts.right_foot.parts.right_middle_toe.customLabel>右三趾</SZ_Human_SeXie.corePart.parts.right_leg.parts.right_foot.parts.right_middle_toe.customLabel>
+  <!-- EN: right second toe -->
+  <SZ_Human_SeXie.corePart.parts.right_leg.parts.right_foot.parts.right_second_toe.customLabel>右二趾</SZ_Human_SeXie.corePart.parts.right_leg.parts.right_foot.parts.right_second_toe.customLabel>
+  <!-- EN: right big toe -->
+  <SZ_Human_SeXie.corePart.parts.right_leg.parts.right_foot.parts.right_big_toe.customLabel>右大拇趾</SZ_Human_SeXie.corePart.parts.right_leg.parts.right_foot.parts.right_big_toe.customLabel>
+
+  <!-- EN: left elytra -->
+  <SZ_Insect_SeXie.corePart.parts.left_elytra.customLabel>左鞘</SZ_Insect_SeXie.corePart.parts.left_elytra.customLabel>
+  <!-- EN: right elytra -->
+  <SZ_Insect_SeXie.corePart.parts.right_elytra.customLabel>右鞘</SZ_Insect_SeXie.corePart.parts.right_elytra.customLabel>
+  <!-- EN: left eye -->
+  <SZ_Insect_SeXie.corePart.parts.Pronotum.parts.InsectHead.parts.left_eye.customLabel>左眼</SZ_Insect_SeXie.corePart.parts.Pronotum.parts.InsectHead.parts.left_eye.customLabel>
+  <!-- EN: right eye -->
+  <SZ_Insect_SeXie.corePart.parts.Pronotum.parts.InsectHead.parts.right_eye.customLabel>右眼</SZ_Insect_SeXie.corePart.parts.Pronotum.parts.InsectHead.parts.right_eye.customLabel>
+  <!-- EN: left antenna -->
+  <SZ_Insect_SeXie.corePart.parts.Pronotum.parts.InsectHead.parts.left_antenna.customLabel>左触角</SZ_Insect_SeXie.corePart.parts.Pronotum.parts.InsectHead.parts.left_antenna.customLabel>
+  <!-- EN: right antenna -->
+  <SZ_Insect_SeXie.corePart.parts.Pronotum.parts.InsectHead.parts.right_antenna.customLabel>右触角</SZ_Insect_SeXie.corePart.parts.Pronotum.parts.InsectHead.parts.right_antenna.customLabel>
+  <!-- EN: front left leg -->
+  <SZ_Insect_SeXie.corePart.parts.front_left_leg.customLabel>左前肢</SZ_Insect_SeXie.corePart.parts.front_left_leg.customLabel>
+  <!-- EN: front right leg -->
+  <SZ_Insect_SeXie.corePart.parts.front_right_leg.customLabel>右前肢</SZ_Insect_SeXie.corePart.parts.front_right_leg.customLabel>
+  <!-- EN: middle left leg -->
+  <SZ_Insect_SeXie.corePart.parts.middle_left_leg.customLabel>左中肢</SZ_Insect_SeXie.corePart.parts.middle_left_leg.customLabel>
+  <!-- EN: middle right leg -->
+  <SZ_Insect_SeXie.corePart.parts.middle_right_leg.customLabel>右中肢</SZ_Insect_SeXie.corePart.parts.middle_right_leg.customLabel>
+  <!-- EN: rear left leg -->
+  <SZ_Insect_SeXie.corePart.parts.rear_left_leg.customLabel>左后肢</SZ_Insect_SeXie.corePart.parts.rear_left_leg.customLabel>
+  <!-- EN: rear right leg -->
+  <SZ_Insect_SeXie.corePart.parts.rear_right_leg.customLabel>右后肢</SZ_Insect_SeXie.corePart.parts.rear_right_leg.customLabel>
+  <!-- EN: right pincer -->
+  <SZ_Insect_SeXie.corePart.parts.right_pincer.customLabel>右螯</SZ_Insect_SeXie.corePart.parts.right_pincer.customLabel>
+  <!-- EN: left pincer -->
+  <SZ_Insect_SeXie.corePart.parts.left_pincer.customLabel>左螯</SZ_Insect_SeXie.corePart.parts.left_pincer.customLabel>
+  <!-- EN: right sting -->
+  <SZ_Insect_SeXie.corePart.parts.right_sting.customLabel>右尾刺</SZ_Insect_SeXie.corePart.parts.right_sting.customLabel>
+  <!-- EN: middle sting -->
+  <SZ_Insect_SeXie.corePart.parts.middle_sting.customLabel>中尾刺</SZ_Insect_SeXie.corePart.parts.middle_sting.customLabel>
+  <!-- EN: left sting -->
+  <SZ_Insect_SeXie.corePart.parts.left_sting.customLabel>左尾刺</SZ_Insect_SeXie.corePart.parts.left_sting.customLabel>
+
+</LanguageData>

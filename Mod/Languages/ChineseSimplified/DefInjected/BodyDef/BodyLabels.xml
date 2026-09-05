@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: mingshe body -->
+  <SZ_MingSheSnakeBody.label>鸣蛇身体</SZ_MingSheSnakeBody.label>
+  <!-- EN: winged beast body -->
+  <SZ_QuadrupedAnimalWithPawsTailWings.label>展翼神兽身体</SZ_QuadrupedAnimalWithPawsTailWings.label>
+  <!-- EN: sexie human body -->
+  <SZ_Human_SeXie.label>色邪（人形）</SZ_Human_SeXie.label>
+  <!-- EN: sexie scorpion body -->
+  <SZ_Insect_SeXie.label>色邪（蝎子形态）</SZ_Insect_SeXie.label>
+
+</LanguageData>

@@ -1,0 +1,15 @@
+<Project>
+
+  <PropertyGroup>
+    <!--
+      Build intermediates are kept out of the mod folder. RimWorld's Workshop uploader sends
+      the whole folder (SteamUGC.SetItemContent on the root, with no way to exclude anything):
+      leaving obj/ inside means publishing the publicised Assembly-CSharp.dll, that is,
+      redistributing the game's code. This has to stay in a Directory.Build.props - NuGet
+      restore reads the property before the csproj.
+    -->
+    <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)..\..\.build\obj\AncientChineseBeast\</BaseIntermediateOutputPath>
+    <BaseOutputPath>$(MSBuildThisFileDirectory)..\..\.build\bin\AncientChineseBeast\</BaseOutputPath>
+  </PropertyGroup>
+
+</Project>

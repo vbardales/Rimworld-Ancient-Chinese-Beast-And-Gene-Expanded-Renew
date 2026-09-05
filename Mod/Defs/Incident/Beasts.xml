@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <IncidentDef>
+    <defName>SZ_YearBeastApproach</defName>
+    <label>nian beast attack</label>
+    <category>ThreatBig</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>AncientChineseBeast.IncidentWorker_YearBeastApproach</workerClass>
+    <baseChance>0</baseChance>
+    <letterLabel>The nian beast has come! (click it to read about it)</letterLabel>
+    <letterText>A nian beast made by the Tianbing mechanoid clan's gene engineering has appeared near the colony! It has a pair of sharp horns and the body of a tiger, and worse, it is thickly armoured. It needs dealing with quickly, or it will tear the colony's food chain apart.</letterText>
+    <letterDef>ThreatBig</letterDef>
+  </IncidentDef>
+
+  <IncidentDef>
+    <defName>SZ_BeastApproach</defName>
+    <label>beast attack</label>
+    <category>ThreatBig</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>AncientChineseBeast.IncidentWorker_BeastApproach</workerClass>
+    <modExtensions>
+      <li Class="AncientChineseBeast.DefModExtension_Beasts">
+        <beasts>
+          <li>
+            <pawn>SZ_QiongQi</pawn>
+            <label>穷奇！(qiongqi)</label>
+            <text>没想到这种只存在于山海经中的凶兽竟然真的出现在了边缘世界上！据可靠情报透露，穷奇有着一对极其敏锐的双眼，如果放任它肆虐不管的话，我们的殖民地最终也只会成为它的囊中之物！\n\nWe never thought a beast that exists only in the Classic of Mountains and Seas would really turn up on the rim! Reliable word has it that the qiongqi has a pair of extraordinarily sharp eyes. Let it rampage unchecked and our colony ends up in its jaws.</text>
+          </li>
+          <li>
+            <pawn>SZ_MingShe</pawn>
+            <label>鸣蛇！(mingshe)</label>
+            <text>造成华夏据点多处发生旱灾的凶兽——鸣蛇已经出现在了我们的殖民地！为了保卫我们的庄稼能够顺利生长，我们有必要迅速找到应对它的方法并将它送去见阎王老爷。\n\nThe beast behind the droughts across so many Shenzhou settlements - the mingshe - has appeared in our colony! If our crops are to grow at all, we had better find a way to deal with it quickly, and send it to Lord Yama.</text>
+          </li>
+        </beasts>
+      </li>
+    </modExtensions>
+    <baseChance>0</baseChance>
+    <letterDef>ThreatBig</letterDef>
+  </IncidentDef>
+
+  <IncidentDef>
+    <defName>SZ_BeastApproachTunnel</defName>
+    <label>beast attack</label>
+    <category>ThreatBig</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>AncientChineseBeast.IncidentWorker_TunnelBeastApproach</workerClass>
+    <modExtensions>
+      <li Class="AncientChineseBeast.DefModExtension_Beasts">
+        <beasts>
+          <li>
+            <pawn>SZ_SeXie</pawn>
+            <label>色邪 (sexie)</label>
+            <text>色邪，这种有着蝎子特征的人形凶兽总算是在我们面前露出了它的真容，据说它是华夏据点在基因凶兽里遇到的最难缠的对手，除了有各种特殊能力外，还可以进行形态转换，我们一定要小心了！\n\nThe sexie - the humanlike beast with a scorpion's traits - has finally shown us its true face. They say it is the hardest of the engineered beasts the Shenzhou settlements have ever met: on top of every kind of special ability, it can change shape. We must be careful.</text>
+          </li>
+        </beasts>
+      </li>
+    </modExtensions>
+    <baseChance>0</baseChance>
+    <letterDef>ThreatBig</letterDef>
+  </IncidentDef>
+</Defs>

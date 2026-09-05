@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BenchBase">
+    <defName>SZ_BeastGeneExtractor</defName>
+    <label>beast gene extractor</label>
+    <description>An oversized gene extraction rig. It holds a great deal of data on beast genes and comes with a full set of extraction tools; once the research is done, colonists need only keep a beast's corpse to pull the matching gene out of it. \n\nJudging by its size it was plainly not built with colonists in mind, and no human would choose to climb into a vessel like this - but every visiting technologist who sees the thing for the first time comes away shaken by the sheer scale of it.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <graphicData>
+      <texPath>AncientChineseBeast/BeastGeneExtractor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(10.5, 10.5)</drawSize>
+      <drawOffset>(0,0.05,0)</drawOffset>
+      <drawRotated>false</drawRotated>
+    </graphicData>
+    <size>(5,5)</size>
+    <canOverlapZones>false</canOverlapZones>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0,0,3)</interactionCellOffset>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <designationCategory>Biotech</designationCategory>
+    <researchPrerequisites>
+      <li>SZ_BeastGene</li>
+    </researchPrerequisites>
+    <building>
+      <buildingTags>
+        <li>Biotech</li>
+      </buildingTags>
+    </building>
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <WorkToBuild>50000</WorkToBuild>
+      <Mass>85</Mass>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <costList>
+      <Steel>200</Steel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+    </costList>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>200</basePowerConsumption>
+        <idlePowerDraw>50</idlePowerDraw>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+    </comps>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <WorkGiverDef>
+    <defName>SZ_DoBeastGeneExtractor</defName>
+    <label>extract genes from beasts</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Smithing</workType>
+    <priorityInType>80</priorityInType>
+    <fixedBillGiverDefs>
+      <li>SZ_BeastGeneExtractor</li>
+    </fixedBillGiverDefs>
+    <verb>work</verb>
+    <gerund>working at</gerund>
+    <requiredCapacities>
+      <li>Moving</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+  
+</Defs>

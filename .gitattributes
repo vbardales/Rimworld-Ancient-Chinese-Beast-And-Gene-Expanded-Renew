@@ -1,0 +1,15 @@
+# Normalise line endings inside the repository, while letting each machine keep its own.
+* text=auto
+
+*.cs    text diff=csharp
+*.xml   text
+*.md    text
+*.props text
+*.yml   text
+
+# Binaries: neither normalised nor diffed as text.
+*.png binary
+*.jpg binary
+*.dll binary
+*.wav binary
+*.mp3 binary

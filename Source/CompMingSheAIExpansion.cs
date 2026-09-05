@@ -1,0 +1,20 @@
+using RimWorld;
+using Verse;
+using Verse.AI;
+
+namespace AncientChineseBeast;
+
+public class CompMingSheAIExpansion : ThingComp
+{
+	private Ability ability;
+
+	public override void CompTick()
+	{
+		if (parent.Spawned && parent.Faction != Faction.OfPlayer && parent.GetComp<CompActiveAfterTakenDamage>().actived && Find.TickManager.TicksGame % 60 == 0 && (ability ?? (ability = (parent as Pawn).abilities.GetAbility(DefDatabase<AbilityDef>.GetNamed("SZ_MingShe_WindWing")))).CanCast)
+		{
+			Pawn pawn = parent as Pawn;
+			pawn.jobs.ClearQueuedJobs();
+			pawn.jobs.TryTakeOrderedJob(ability.GetJob(pawn, pawn), JobTag.Misc, requestQueueing: true);
+		}
+	}
+}

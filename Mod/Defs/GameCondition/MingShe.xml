@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <GameConditionDef>
+    <defName>SZ_MingSheDrought</defName>
+    <conditionClass>AncientChineseBeast.GameCondition_MingSheDrought</conditionClass>
+    <label>Drought</label>
+    <description>A mingshe is using its own gift to hold the colony under full sun all day, and the plants around it are withering fast. We need to be rid of it soon, or the crops go with them.</description>
+    <letterText>The crops nearby are withering under the endless sun a mingshe has brought!</letterText>
+    <letterDef>NegativeEvent</letterDef>
+    <preventRain>true</preventRain>
+    <canBePermanent>false</canBePermanent>
+    <natural>false</natural>
+  </GameConditionDef>
+</Defs>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Tool and verb labels, and the handful of ThingDefs the original translation did not cover.
+  These labels used to sit in the defs themselves, in Chinese, which meant an English game
+  showed Chinese and no translation could reach them. The 1.6 port put English in the defs and
+  moved the Chinese here, where it belongs.
+-->
+<LanguageData>
+
+  <!-- EN: bite -->
+  <SZ_MingShe.tools.bite.label>咬</SZ_MingShe.tools.bite.label>
+  <SZ_MingShe_Friendly.tools.bite.label>咬</SZ_MingShe_Friendly.tools.bite.label>
+
+  <SZ_QiongQi.tools.bite.label>咬</SZ_QiongQi.tools.bite.label>
+  <!-- EN: left claw -->
+  <SZ_QiongQi.tools.left_claw.label>左爪</SZ_QiongQi.tools.left_claw.label>
+  <!-- EN: right claw -->
+  <SZ_QiongQi.tools.right_claw.label>右爪</SZ_QiongQi.tools.right_claw.label>
+  <SZ_QiongQi_Friendly.tools.bite.label>咬</SZ_QiongQi_Friendly.tools.bite.label>
+  <SZ_QiongQi_Friendly.tools.left_claw.label>左爪</SZ_QiongQi_Friendly.tools.left_claw.label>
+  <SZ_QiongQi_Friendly.tools.right_claw.label>右爪</SZ_QiongQi_Friendly.tools.right_claw.label>
+
+  <SZ_SeXie.tools.bite.label>咬</SZ_SeXie.tools.bite.label>
+  <SZ_SeXie_Friendly.tools.bite.label>咬</SZ_SeXie_Friendly.tools.bite.label>
+  <SZ_SeXieInsect.tools.bite.label>咬</SZ_SeXieInsect.tools.bite.label>
+  <!-- EN: left pincer -->
+  <SZ_SeXieInsect.tools.left_pincer.label>左螯</SZ_SeXieInsect.tools.left_pincer.label>
+  <!-- EN: right pincer -->
+  <SZ_SeXieInsect.tools.right_pincer.label>右螯</SZ_SeXieInsect.tools.right_pincer.label>
+  <SZ_SeXieInsect_Friendly.tools.bite.label>咬</SZ_SeXieInsect_Friendly.tools.bite.label>
+  <SZ_SeXieInsect_Friendly.tools.left_pincer.label>左螯</SZ_SeXieInsect_Friendly.tools.left_pincer.label>
+  <SZ_SeXieInsect_Friendly.tools.right_pincer.label>右螯</SZ_SeXieInsect_Friendly.tools.right_pincer.label>
+
+  <!-- EN: horn -->
+  <SZ_YearBeast.tools.horn.label>角</SZ_YearBeast.tools.horn.label>
+  <SZ_YearBeast.tools.bite.label>咬</SZ_YearBeast.tools.bite.label>
+  <SZ_YearBeast.tools.left_claw.label>左爪</SZ_YearBeast.tools.left_claw.label>
+  <SZ_YearBeast.tools.right_claw.label>右爪</SZ_YearBeast.tools.right_claw.label>
+  <SZ_YearBeast_Friendly.tools.horn.label>角</SZ_YearBeast_Friendly.tools.horn.label>
+  <SZ_YearBeast_Friendly.tools.bite.label>咬</SZ_YearBeast_Friendly.tools.bite.label>
+  <SZ_YearBeast_Friendly.tools.left_claw.label>左爪</SZ_YearBeast_Friendly.tools.left_claw.label>
+  <SZ_YearBeast_Friendly.tools.right_claw.label>右爪</SZ_YearBeast_Friendly.tools.right_claw.label>
+
+  <!-- EN: claws -->
+  <SZ_Chicken.tools.claws.label>爪</SZ_Chicken.tools.claws.label>
+  <!-- EN: beak -->
+  <SZ_Chicken.tools.beak.label>喙</SZ_Chicken.tools.beak.label>
+
+  <!-- EN: throw firecracker -->
+  <SZ_Firecracker.verbs.throw_firecracker.label>投掷爆竹</SZ_Firecracker.verbs.throw_firecracker.label>
+
+  <!-- EN: firecracker -->
+  <SZ_FirecrackerProjectile.label>爆竹</SZ_FirecrackerProjectile.label>
+  <!-- EN: explosion -->
+  <SZ_Firecracker_Explosion.label>爆炸</SZ_Firecracker_Explosion.label>
+  <SZ_Firecracker_Explosion.description>爆炸</SZ_Firecracker_Explosion.description>
+  <!-- EN: flame -->
+  <SZ_YearBeastFlameProjectile_Small.label>火焰</SZ_YearBeastFlameProjectile_Small.label>
+  <!-- EN: tunnel -->
+  <SZ_SeXieTunnelSpawner.label>隧道</SZ_SeXieTunnelSpawner.label>
+
+</LanguageData>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<IncidentDef>
+  <defName>SZ_ChickenPasses</defName>
+  <label>wandering Pleiades star officer</label>
+  <category>Misc</category>
+  <letterLabel>A wandering Pleiades star officer</letterLabel>
+  <letterText>The divine bird of old Shenzhou legend - the Pleiades star officer - has wandered near the colony! The colours in its plumage give off something that lifts the spirits, and its unusual comb marks it out as no ordinary bird. We ought to invite it to join us.</letterText>
+  <letterDef>PositiveEvent</letterDef>
+  <targetTags>
+    <li>Map_PlayerHome</li>
+  </targetTags>
+  <workerClass>AncientChineseBeast.IncidentWorker_ChickenPasses</workerClass>
+  <baseChance>0.85</baseChance>
+  <minRefireDays>13</minRefireDays>
+</IncidentDef>
+</Defs>

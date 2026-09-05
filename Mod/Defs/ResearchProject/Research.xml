@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ResearchTabDef>
+    <defName>RE_Chinese</defName>
+    <label>Chinese items</label>
+  </ResearchTabDef>
+
+  <ResearchProjectDef>
+    <defName>SZ_BeastGene</defName>
+    <label>beast gene extraction</label>
+    <tab>RE_Chinese</tab>
+    <description>Over years of fighting the god-forged Tianbing mechanoid clan, the Shenzhou settlers found that the clan had used gene engineering to bring back beasts that until then had only existed in old Chinese myth - and that once made, those beasts raided the rim's richest colonies again and again. Fortunately, some Shenzhou settlements have killed one and kept samples of the corpse. A modest investment of high-tech research should be enough to unravel the beasts' genes. \n\nStudying the beasts' movements, their habits and the DNA samples collected from them unlocks the ability to extract the genes of the Shenzhou beasts. \n\n(You must keep the corpse after killing a beast, then extract the matching gene in the gene extractor.)</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <researchViewX>0.00</researchViewX>
+    <researchViewY>0.00</researchViewY>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <prerequisites>
+      <li>Archogenetics</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
+</Defs>

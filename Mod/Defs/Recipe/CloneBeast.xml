@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RecipeDef Name="SZ_CloneBeastRecipe" Abstract="True">
+    <jobString>cloning a beast</jobString>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <workAmount>1</workAmount>
+    <workSkill>Crafting</workSkill>
+    <recipeUsers>
+      <li>SZ_BeastGeneExtractor</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SZ_CloneBeastRecipe">
+    <defName>SZ_Clone_YearBeast</defName>
+    <label>clone nian beast</label>
+    <description>Take DNA from a nian beast's corpse and copy it, then spend a while pouring in the right culture medium and running the rig, and out comes a nian beast of your own - one whose fire breath clears a crowd of enemies for the colony.</description>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Corpse_SZ_YearBeast</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <modExtensions>
+      <li Class="AncientChineseBeast.DefModExtension_CloneBeast">
+        <pawn>SZ_YearBeast_Friendly</pawn>
+      </li>
+    </modExtensions>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SZ_CloneBeastRecipe">
+    <defName>SZ_Clone_SeXieA</defName>
+    <label>clone sexie (human form)</label>
+    <description>Take DNA from a sexie's corpse and copy it, then spend a while pouring in the right culture medium and running the rig, and out comes the highly venomous killer itself, in its human shape, working for the colony.</description>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Corpse_SZ_SeXieInsect</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <modExtensions>
+      <li Class="AncientChineseBeast.DefModExtension_CloneBeast">
+        <pawn>SZ_SeXie_Friendly</pawn>
+      </li>
+    </modExtensions>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SZ_CloneBeastRecipe">
+    <defName>SZ_Clone_SeXieB</defName>
+    <label>clone sexie (scorpion form)</label>
+    <description>Take DNA from a sexie's corpse and copy it, then spend a while pouring in the right culture medium and running the rig, and out comes the highly venomous killer itself, in its scorpion shape, working for the colony.</description>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Corpse_SZ_SeXieInsect</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <modExtensions>
+      <li Class="AncientChineseBeast.DefModExtension_CloneBeast">
+        <pawn>SZ_SeXieInsect_Friendly</pawn>
+      </li>
+    </modExtensions>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SZ_CloneBeastRecipe">
+    <defName>SZ_Clone_QiongQi</defName>
+    <label>clone qiongqi</label>
+    <description>Take DNA from a qiongqi's corpse and copy it, then spend a while pouring in the right culture medium and running the rig, and out comes a qiongqi of your own, ready to tear open an enemy's line for the colony.</description>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Corpse_SZ_QiongQi</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <modExtensions>
+      <li Class="AncientChineseBeast.DefModExtension_CloneBeast">
+        <pawn>SZ_QiongQi_Friendly</pawn>
+      </li>
+    </modExtensions>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SZ_CloneBeastRecipe">
+    <defName>SZ_Clone_MingShe</defName>
+    <label>clone mingshe</label>
+    <description>Take DNA from a mingshe's corpse and copy it, then spend a while pouring in the right culture medium and running the rig, and out comes a mingshe of your own, drought and all, working for the colony.</description>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Corpse_SZ_MingShe</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <modExtensions>
+      <li Class="AncientChineseBeast.DefModExtension_CloneBeast">
+        <pawn>SZ_MingShe_Friendly</pawn>
+      </li>
+    </modExtensions>
+  </RecipeDef>
+  
+</Defs>

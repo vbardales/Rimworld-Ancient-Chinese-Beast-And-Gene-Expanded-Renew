@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="SZBeastParent">
+    <defName>SZ_Chicken</defName>
+    <label>Pleiades star officer</label>
+    <description>This is the sacred chicken carved into the totems of the old Shenzhou tribes. It is hard to find in the wild; it turns up near a colony at its own hours. Plainly it is not a chicken for eating. The Shenzhou tribes say this divine bird has one gift: when a sexie comes, it can strike the sexie dead where it stands. \n\nLegend has it the Pleiades star came down to the rim on many-coloured clouds. The colours in its feathers are the mark of its rank. It crows once every morning at four, and that crow can also be called for by hand. \n\nThe Pleiades star officer's crow is a very pleasant thing to hear, and it stirs the fighting spirit of everyone in the colony. \n\n"What a beautiful chicken you are." - the verdict of an "ordinary" Shenzhou man by the name of Longbow, on first seeing it.</description>
+    <statBases><!-- 鸡你太美~-->
+      <Wildness>0.99</Wildness>
+      <MoveSpeed>3.1</MoveSpeed>
+      <Mass>40</Mass>
+    </statBases>
+    <tools>
+      <li>
+        <label>claws</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>30</power>
+        <cooldownTime>1</cooldownTime>
+        <linkedBodyPartsGroup>Feet</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>beak</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>45</power>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>Beak</linkedBodyPartsGroup>
+      </li>
+    </tools>
+    <race>
+      <body>Bird</body>
+      <trainability>Advanced</trainability>
+      <manhunterOnDamageChance>0</manhunterOnDamageChance>
+    </race>
+    <comps>
+      <li Class="AncientChineseBeast.CompProperties_ConnaturalAbilities">
+        <abilities>
+          <li>SZ_Chicken_Crow</li>
+        </abilities>
+        <forceHostile>false</forceHostile>
+      </li>
+      <li>
+        <compClass>AncientChineseBeast.CompChickenAIExpansion</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <PawnKindDef ParentName="SZBeast_PawnKindParent">
+    <defName>SZ_Chicken</defName>
+    <label>Pleiades star officer</label>
+    <race>SZ_Chicken</race>
+    <combatPower>500</combatPower>
+    <canArriveManhunter>false</canArriveManhunter>
+    <ecoSystemWeight>1</ecoSystemWeight>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>AncientChineseBeast/Chicken/Chicken</texPath>
+          <drawSize>4</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Chicken/Dessicated_Chicken</texPath>
+          <drawSize>4</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+</Defs>
