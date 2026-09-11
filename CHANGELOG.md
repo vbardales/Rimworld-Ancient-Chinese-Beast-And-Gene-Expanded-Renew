@@ -69,5 +69,9 @@ Ported from andery233xj, Frolg, DongFang and Ninedaylongbow's
 - `Storyteller.png` went from 2192×2343 and 5.6 MB to 1160×1240, twice the 580×620 the game draws
   it at; `BeastGeneExtractor.png` from 5334×5334 to 1344×1344. The mod is 6 MB instead of 13 MB.
   Both originals are kept under `Art/textures-original/`.
+- The two showcase images were re-encoded, losslessly: `Preview.png` from 840 KB to 590 KB and
+  `ModIcon.png` from 29 KB to 26 KB, both pixel for pixel what they were. Neither needed the alpha
+  channel it carried, and both had been written with a fixed row filter where PNG allows one per
+  row.
 - Harmony is declared as a dependency, as it already was upstream, alongside Biotech.
 - Single-version layout: the 1.4 and 1.5 folders and `LoadFolders.xml` are gone.
