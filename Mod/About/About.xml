@@ -3,7 +3,7 @@
   <name>Ancient Chinese Beast And Gene Expanded 1.6</name>
   <author>andery233xj, Frolg, DongFang, Ninedaylongbow - 1.6 port: nelim</author>
   <packageId>nelim.ancientchinesebeast</packageId>
-  <url>https://github.com/vbardales/Rimworld-Ancient-Chinese-Beast</url>
+  <url>https://github.com/vbardales/Rimworld-Ancient-Chinese-Beast-Renew</url>
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>
@@ -47,7 +47,7 @@ The English text has been rewritten. The original was machine-translated from Ch
 
 Safe to add to an ongoing save. Removing it mid-save removes the beasts, their genes and the storyteller.
 
-Source, changelog and the list of defects inherited from the original: https://github.com/vbardales/Rimworld-Ancient-Chinese-Beast
+Source, changelog and the list of defects inherited from the original: https://github.com/vbardales/Rimworld-Ancient-Chinese-Beast-Renew
 
 The update work was done with the help of an AI assistant (Claude, by Anthropic). Thanks to andery233xj, Frolg, DongFang and Ninedaylongbow for the mod, and to Andreas Pardeike for Harmony.
 
