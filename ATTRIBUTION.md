@@ -184,6 +184,16 @@ unambiguous, listed here either way.
   `radiusCache` it never assigns, and fills its result cache with `resultCache.AddRange(resultCache)`
   — the list added to itself. The cache branch is unreachable and the cache is always empty. It
   costs nothing and was left as it is.
+- **Two of the three debug buttons do nothing.** `CompSZBeastDebug`, on the firecracker, adds 120
+  or 1 200 000 to `Singleton.nextBeastTimeHours`. That field is incremented every hour and reset to
+  zero when a beast arrives, and **no code reads it**. Only the third button, the one that forces
+  the nian beast, does anything. Left as it is; `TESTING.md` says not to spend time on them.
+- **The beast incidents threw when fired from the development menu.** Both workers read the chosen
+  beast out of `Singleton.beast`, which only the mod's own clock ever sets. In play that is the
+  only route, so it never showed; from the debug menu the field is null and the worker raised a
+  null reference before spawning anything. Fixed with `Singleton.BeastFor`, which falls back to the
+  incident def's own list. This one was worth fixing rather than recording: without it half of
+  `TESTING.md` cannot be run at all.
 - **The friendly beasts' English descriptions were the hostile ones, word for word.** Fixed, from
   the Chinese.
 

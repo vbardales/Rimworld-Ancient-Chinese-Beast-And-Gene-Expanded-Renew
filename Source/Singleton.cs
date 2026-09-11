@@ -60,6 +60,25 @@ public class Singleton : IExposable
 		}
 	}
 
+	// Which beast the incident is about. BeastApproach picks one before firing either incident,
+	// which is the only route that exists in play, so the workers used to read `beast` straight
+	// out of this object. Fired any other way - from the development menu, which is the only way
+	// to see these incidents without waiting out a 1% daily roll gated behind sixty days - `beast`
+	// is null and the worker throws before it spawns anything.
+	//
+	// Each incident def carries its own list in a DefModExtension_Beasts, so there is always an
+	// answer available; taking it here keeps the choice in one place, and leaves the field set so
+	// the letter and the tunnel spawner that read it later agree with what was spawned.
+	public BeastClass BeastFor(IncidentDef incident)
+	{
+		if (beast == null)
+		{
+			var extension = incident?.GetModExtension<DefModExtension_Beasts>();
+			if (extension != null && extension.beasts.Count > 0) beast = extension.beasts.RandomElement();
+		}
+		return beast;
+	}
+
 	public void BeastApproach()
 	{
 		Map target = Find.Maps.FindAll((Map x) => x.IsPlayerHome).RandomElement();

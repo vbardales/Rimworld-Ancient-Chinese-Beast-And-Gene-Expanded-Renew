@@ -126,6 +126,10 @@ It checks the three things that broke when this mod met 1.6, none of which the c
 It runs no game code and starts no game. A clean run says the mod's attachment points are where
 it thinks they are, not that the mod works.
 
+Whether it works is [TESTING.md](TESTING.md): sixteen scenarios to run by hand in a live colony,
+ordered so each leaves the save in the state the next one needs. Nothing in this mod can be
+exercised any other way, and nothing in it has been.
+
 ## Layout
 
 ```

@@ -22,8 +22,9 @@ public class IncidentWorker_TunnelBeastApproach : IncidentWorker
 		{
 			return false;
 		}
+		BeastClass beast = Singleton.instance.BeastFor(def);
 		Thing thing = GenSpawn.Spawn(ThingDef.Named("SZ_SeXieTunnelSpawner"), cell, map);
-		SendStandardLetter(Singleton.instance.beast.label, Singleton.instance.beast.text, def.letterDef, parms, thing);
+		SendStandardLetter(beast.label, beast.text, def.letterDef, parms, thing);
 		return true;
 	}
 

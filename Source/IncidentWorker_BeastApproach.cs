@@ -20,9 +20,10 @@ public class IncidentWorker_BeastApproach : IncidentWorker
 			return false;
 		}
 		IntVec3 loc = CellFinder.RandomClosewalkCellNear(cell, map, 10);
-		Pawn pawn = PawnGenerator.GeneratePawn(Singleton.instance.beast.pawn, (Faction)null);
+		BeastClass beast = Singleton.instance.BeastFor(def);
+		Pawn pawn = PawnGenerator.GeneratePawn(beast.pawn, (Faction)null);
 		GenSpawn.Spawn(pawn, loc, map, Rot4.Random);
-		SendStandardLetter(Singleton.instance.beast.label, Singleton.instance.beast.text, def.letterDef, parms, pawn);
+		SendStandardLetter(beast.label, beast.text, def.letterDef, parms, pawn);
 		return true;
 	}
 

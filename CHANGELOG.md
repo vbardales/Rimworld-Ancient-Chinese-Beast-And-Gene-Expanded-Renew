@@ -33,7 +33,17 @@ Ported from andery233xj, Frolg, DongFang and Ninedaylongbow's
 - Every one of the nine Harmony patch targets was verified against the 1.6 assemblies by
   reflection before anything was compiled. All nine survived unchanged.
 
-### Added — a test suite
+### Added — a test suite and a test protocol
+
+- `TESTING.md` is sixteen manual scenarios, ordered so each leaves the save in the state the next
+  one needs, covering the four beasts, the chicken, the twelve genes, the bench, the schedule and
+  the save. Every expected result in it is read out of the code, never observed. It exists because
+  nothing else in this repository can say whether the mod works.
+- **The beast incidents can now be fired from the development menu.** Both workers read the chosen
+  beast out of a field only the mod's own clock sets, so firing them by hand raised a null
+  reference before anything spawned. `Singleton.BeastFor` falls back to the incident def's own
+  list.
+
 
 - `Tests/` checks the mod against the RimWorld assemblies it will be loaded beside: that every
   Harmony target still resolves, that every patch method's parameters still bind by name, and that
