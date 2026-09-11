@@ -106,12 +106,33 @@ dotnet build
 needed to compile. The output lands in `Mod/Assemblies/`; build intermediates are kept out of the
 published folder by `Source/Directory.Build.props`.
 
+## Testing
+
+```bash
+dotnet run --project Tests
+```
+
+This one does need RimWorld installed, since it reads the game's own assembly. Pass the path to
+`RimWorldWin64_Data/Managed` as an argument if the game is not in the default Steam location.
+
+It checks the three things that broke when this mod met 1.6, none of which the compiler catches:
+
+- every Harmony target still resolves to a real method, with the signature the patch declares
+- every patch method's parameters still bind, since Harmony matches them **by name** against the
+  target's own parameters, and a rename upstream is not a compile error
+- no method that shares a name with a virtual one has quietly stopped overriding it, which is what
+  happened to the flyer's `Tick` and to two `PostDeSpawn` hooks
+
+It runs no game code and starts no game. A clean run says the mod's attachment points are where
+it thinks they are, not that the mod works.
+
 ## Layout
 
 ```
 AncientChineseBeastAndGeneExpandedRenew/
   Mod/     the published folder - this is what the Workshop uploader sends
   Source/  C#, never published
+  Tests/   reflection checks against the installed game, never published
   Art/     uncropped showcase art, the two oversized textures, and the script that letters the preview
   .build/  compiler intermediates, git-ignored, deliberately outside Mod/
 ```

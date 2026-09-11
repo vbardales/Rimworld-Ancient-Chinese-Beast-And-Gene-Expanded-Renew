@@ -30,8 +30,16 @@ Ported from andery233xj, Frolg, DongFang and Ninedaylongbow's
 - `PathFinder.FindPath` became `Verse.PathFinder.FindPathNow` with a reordered signature,
   `JumpUtility.ValidJumpTarget` gained a leading `Thing`, `RegionGrid.allRooms` became the
   `AllRooms` property, and `Entity.Tick()` became `protected`. All followed.
-- Every one of the ten Harmony patch targets was verified against the 1.6 assemblies by
-  reflection before anything was compiled. All ten survived unchanged.
+- Every one of the nine Harmony patch targets was verified against the 1.6 assemblies by
+  reflection before anything was compiled. All nine survived unchanged.
+
+### Added — a test suite
+
+- `Tests/` checks the mod against the RimWorld assemblies it will be loaded beside: that every
+  Harmony target still resolves, that every patch method's parameters still bind by name, and that
+  no method that shares a name with a virtual one has quietly stopped overriding it. Those are the
+  three ways this port broke, and none of them is a compile error. `dotnet run --project Tests`,
+  22 checks, no game needed and none launched.
 
 ### Changed — English text
 

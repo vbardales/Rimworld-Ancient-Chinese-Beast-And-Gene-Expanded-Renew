@@ -1,0 +1,10 @@
+<Project>
+
+  <PropertyGroup>
+    <!-- Same reason as Source/Directory.Build.props: nothing a compiler writes belongs anywhere
+         the Workshop uploader can reach, and NuGet restore reads this before the csproj. -->
+    <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)..\.build\obj-tests\</BaseIntermediateOutputPath>
+    <BaseOutputPath>$(MSBuildThisFileDirectory)..\.build\bin-tests\</BaseOutputPath>
+  </PropertyGroup>
+
+</Project>

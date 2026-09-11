@@ -41,7 +41,7 @@ The mod's own logic is unchanged. What broke was where 1.6 moved the ground unde
 - Animal wildness stopped being a field of RaceProperties and became a stat. Left as it was, every beast would have tamed like a rat.
 - GenExplosion.DoExplosion, PathFinder.FindPath, JumpUtility.ValidJumpTarget and RegionGrid.allRooms all changed shape.
 
-All ten Harmony patch targets were checked against the 1.6 assemblies before anything was compiled; all of them survived.
+All nine Harmony patch targets were checked against the 1.6 assemblies before anything was compiled; all of them survived.
 
 The English text has been rewritten. The original was machine-translated from Chinese and had gone wrong in places - the qiongqi was called "Pauper", the sexie "Sex evil", the mingshe's tooth "Naruto-tooth" - and a number of weapon and body-part labels had never been translated at all and showed as Chinese in an English game. The Simplified Chinese translation is the authors' own and is untouched; it has been extended to cover the labels that used to be hard-coded.
 
