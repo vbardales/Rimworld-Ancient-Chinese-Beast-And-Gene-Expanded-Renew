@@ -1,0 +1,19 @@
+# What earns a line here, now that this folder is its own repository rather than a directory of
+# the monorepo it came out of. The monorepo's .gitignore used to cover all of it; a clone of this
+# repository has none of that.
+
+# Claude Code session settings and worktrees. A session creates its worktree in whatever folder
+# it is working in, and a worktree is a full copy of the repository. The machine's global ignore
+# file covers .claude/settings.local.json already; that is a property of this machine, not of
+# this repository, so it is written down here as well.
+.claude/
+
+# Build intermediates. Source/Directory.Build.props sends them here, OUTSIDE Mod/, and that
+# placement is not a matter of taste: SteamUGC.SetItemContent uploads the published folder as it
+# stands on disk with no filtering, so an obj/ inside Mod/ would publish the publicised
+# Assembly-CSharp.dll - the game's own code - to every subscriber.
+.build/
+
+# Art/ is NOT ignored. The uncropped showcase sources and the two oversized original textures are
+# tracked on purpose: ATTRIBUTION.md points at Art/textures-original/ as the record of what the
+# rescaled textures were cut from, and a link to a file nobody has is worth nothing.

@@ -7,9 +7,16 @@
       leaving obj/ inside means publishing the publicised Assembly-CSharp.dll, that is,
       redistributing the game's code. This has to stay in a Directory.Build.props - NuGet
       restore reads the property before the csproj.
+
+      The path used to climb one level higher, to the monorepo's .build/, and per-mod folders
+      under it were how several projects shared it. This folder is its own repository now, so
+      the intermediates come with it: .build/ sits beside Source/ and Mod/, inside the repository
+      and outside the published folder, which is the only placement the paragraph above requires.
+      A clone of this repository no longer writes into whatever directory happens to be its
+      parent.
     -->
-    <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)..\..\.build\obj\AncientChineseBeast\</BaseIntermediateOutputPath>
-    <BaseOutputPath>$(MSBuildThisFileDirectory)..\..\.build\bin\AncientChineseBeast\</BaseOutputPath>
+    <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)..\.build\obj\</BaseIntermediateOutputPath>
+    <BaseOutputPath>$(MSBuildThisFileDirectory)..\.build\bin\</BaseOutputPath>
   </PropertyGroup>
 
 </Project>
