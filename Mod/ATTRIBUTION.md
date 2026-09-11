@@ -40,8 +40,9 @@ that side.
 
 ## What 1.6 broke
 
-Ten Harmony patch targets, checked one by one against 1.6's `Assembly-CSharp.dll` by reflection
-**before** anything was compiled. All ten still exist with the same signature:
+Nine Harmony patch targets, checked one by one against 1.6's `Assembly-CSharp.dll` by reflection
+**before** anything was compiled. All nine still exist with the same signature, and `Tests/` now
+asserts it on every run:
 
 | Target | |
 |---|---|
