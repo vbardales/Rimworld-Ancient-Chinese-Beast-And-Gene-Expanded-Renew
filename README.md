@@ -112,7 +112,7 @@ published folder by `Source/Directory.Build.props`.
 AncientChineseBeast/
   Mod/     the published folder - this is what the Workshop uploader sends
   Source/  C#, never published
-  Art/     the two original oversized textures, kept as sources
+  Art/     uncropped showcase art and the two oversized textures, kept as sources
 ```
 
 ## Compatibility
