@@ -1,4 +1,4 @@
-# Ancient Chinese Beast And Gene Expanded 1.6
+# Ancient Chinese Beast And Gene Expanded Renew
 
 A RimWorld 1.6 port of **山海志怪-华夏凶兽和基因扩展 — Ancient Chinese Beast And Gene Expanded**
 by **andery233xj, Frolg, DongFang and Ninedaylongbow** — Steam Workshop
