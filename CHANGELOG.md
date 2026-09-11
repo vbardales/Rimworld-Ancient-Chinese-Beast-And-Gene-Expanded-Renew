@@ -3,9 +3,12 @@
 All notable changes to this port are recorded here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
-## [1.0.0] — unreleased
+## [1.0.0] — 2026-09-11
 
-First 1.6 release. Ported from andery233xj, Frolg, DongFang and Ninedaylongbow's
+First release. Not yet on the Steam Workshop: this tags the source, and the Workshop item follows
+once the mod has been tried in a running game.
+
+Ported from andery233xj, Frolg, DongFang and Ninedaylongbow's
 **山海志怪-华夏凶兽和基因扩展 — Ancient Chinese Beast And Gene Expanded**, Workshop
 [3292446841](https://steamcommunity.com/sharedfiles/filedetails/?id=3292446841), last supporting
 1.5. `ATTRIBUTION.md` records the whole of it; this is the summary.

@@ -186,6 +186,30 @@ unambiguous, listed here either way.
 - **The friendly beasts' English descriptions were the hostile ones, word for word.** Fixed, from
   the Chinese.
 
+## What was checked, and what still has not been
+
+The five XML checkers in `scripts/` were run over the published folder on 2026-09-11, each one
+against the 1.6 assemblies by reflection. All five came back clean:
+
+| | |
+|---|---|
+| `Check-XmlFields.ps1` | every element maps to a field on the 1.6 class — 52 files |
+| `Check-XmlClasses.ps1` | all 83 types named from the XML resolve |
+| `Check-DefRefs.ps1` | 108 defs, 7 abstract parents; every reference resolves, to the right def type |
+| `Check-TypeRefs.ps1` | 49 references to types outside RimWorld, none of them to a third-party mod |
+| `Check-DefInjected.ps1` | 302 translation keys, all of them landing on something |
+
+The first of those runs found eleven problems that turned out to be the checker's, not the mod's:
+it walked `DrawData.dataNorth` and its siblings as objects, where the field is a
+`Nullable<RotationalData>` that `DirectXmlToObject` unwraps before it reads the node. The checker
+now unwraps `Nullable<T>` and `SlateRef<T>` the same way, which also took vanilla's own count from
+eighteen problems to none.
+
+What none of this covers: **the mod has never been run in a game.** Every behaviour described in
+this file is read out of the code, not observed. The beasts' arrival, the sexie's second phase,
+the flyer's landing, the gene extraction bench and the crow have all been reasoned about and none
+of them has been seen to happen.
+
 ## Credits
 
 The mod is andery233xj, Frolg, DongFang and Ninedaylongbow's work. This repository holds a 1.6
