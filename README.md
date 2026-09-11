@@ -109,10 +109,11 @@ published folder by `Source/Directory.Build.props`.
 ## Layout
 
 ```
-AncientChineseBeast/
+AncientChineseBeastAndGeneExpandedRenew/
   Mod/     the published folder - this is what the Workshop uploader sends
   Source/  C#, never published
   Art/     uncropped showcase art and the two oversized textures, kept as sources
+  .build/  compiler intermediates, git-ignored, deliberately outside Mod/
 ```
 
 ## Compatibility
