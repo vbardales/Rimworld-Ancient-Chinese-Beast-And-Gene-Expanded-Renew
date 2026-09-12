@@ -57,9 +57,6 @@
         <explosiveDamageType>Flame</explosiveDamageType>
         <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
       </li>
-      <li>
-        <compClass>AncientChineseBeast.CompSZBeastDebug</compClass>
-      </li>
     </comps>
   </ThingDef>
 

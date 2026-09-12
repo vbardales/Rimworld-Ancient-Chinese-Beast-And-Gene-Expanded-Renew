@@ -184,10 +184,21 @@ unambiguous, listed here either way.
   `radiusCache` it never assigns, and fills its result cache with `resultCache.AddRange(resultCache)`
   — the list added to itself. The cache branch is unreachable and the cache is always empty. It
   costs nothing and was left as it is.
-- **Two of the three debug buttons do nothing.** `CompSZBeastDebug`, on the firecracker, adds 120
-  or 1 200 000 to `Singleton.nextBeastTimeHours`. That field is incremented every hour and reset to
-  zero when a beast arrives, and **no code reads it**. Only the third button, the one that forces
-  the nian beast, does anything. Left as it is; `TESTING.md` says not to spend time on them.
+- **Two of the three debug buttons did nothing.** `CompSZBeastDebug`, a comp on the firecracker,
+  added 120 or 1 200 000 to `Singleton.nextBeastTimeHours`. That field is incremented every hour
+  and reset to zero when a beast arrives, and **no code reads it**; whatever gate it once opened
+  had gone by the version that shipped. Only the third button, the one that forces the nian beast,
+  did anything, and all three required spawning a firecracker and selecting it to appear.
+
+  Replaced rather than recorded, because the port needs them to be testable at all: the comp and
+  its def entry are gone, and four `[DebugAction]` entries sit under **Ancient Chinese Beast** in
+  the development menu instead. What the two dead buttons were reaching for turns out to be two
+  separate levers, since `HourTick` gates a beast behind both a 1% daily roll and a sixty-day
+  interval: one entry forces a beast now, another clears the interval and leaves the roll to do
+  its work. A third keeps the nian beast button, and a fourth prints the clock to the log.
+
+  `nextBeastTimeHours` itself is left in place. It is written on load and saved, so removing it
+  would change the save format for a field that costs nothing.
 - **The beast incidents threw when fired from the development menu.** Both workers read the chosen
   beast out of `Singleton.beast`, which only the mod's own clock ever sets. In play that is the
   only route, so it never showed; from the debug menu the field is null and the worker raised a

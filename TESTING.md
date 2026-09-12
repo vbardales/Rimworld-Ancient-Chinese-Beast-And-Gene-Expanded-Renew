@@ -5,7 +5,7 @@ and the overrides are still where the code thinks they are; the five checkers in
 `scripts/` check the XML against the game's classes. Neither runs a single line of the mod. What
 follows is the part only a person with the game open can do.
 
-Sixteen scenarios, ordered so that each one leaves the save in the state the next one needs. The
+Seventeen scenarios, ordered so that each one leaves the save in the state the next one needs. The
 whole run is about an hour. Stop at the end of any block; each block stands on its own.
 
 ## Before you start
@@ -76,15 +76,29 @@ tunnel delay a sexie comes out of it. Check it chose the room you expected: that
 
 ### B3. The nian beast comes on New Year
 
-1. Spawn a firecracker (`SZ_Firecracker`), drop it on the ground, and select it.
-2. In development mode, three extra buttons appear on it. Click the one labelled **年兽**.
-3. Let an hour of game time pass.
+1. Debug actions, category **Ancient Chinese Beast**, then **Nian beast next hour**.
+2. Let an hour of game time pass.
 
-**Expected.** The nian beast incident fires within the hour, whatever the date.
+**Expected.** A message saying so, then the nian beast incident fires within the hour, whatever the
+date.
 
-> The other two buttons, 凶兽 and 凶兽Forced, **do nothing at all**. They add to a counter that no
-> code reads. That is the original mod's, not the port's, and it is left as it is; it is recorded
-> in `ATTRIBUTION.md`. Do not spend time on them.
+> The original put this on a `ThingComp` on the firecracker: you had to spawn one, drop it and
+> select it to see three buttons labelled in Chinese, of which **two did nothing at all** - they
+> added to a counter no code reads. The comp is gone and the four entries below replaced it.
+
+### B4. The development entries do what they say
+
+All four are under **Ancient Chinese Beast** in the debug actions menu.
+
+| entry | expected |
+|---|---|
+| **Beast attack now** | one of the four beasts arrives immediately, by whichever of the two incidents suits it |
+| **Nian beast next hour** | scenario B3 |
+| **Clear the sixty-day gate** | a message; no beast yet. It only lifts the interval, leaving the 1% daily roll to fire on its own, which is what makes F1 testable in an evening |
+| **Report the beast clock** | a line in the log giving the tick, the ticks since the last beast, the storyteller and its schedule, the beast currently chosen, and how many kinds of corpse are held |
+
+**Run "Report the beast clock" before and after each of the other three.** It is the only window
+onto the scheduling state, and every claim in block F is a claim about that state.
 
 ---
 

@@ -35,7 +35,7 @@ Ported from andery233xj, Frolg, DongFang and Ninedaylongbow's
 
 ### Added — a test suite and a test protocol
 
-- `TESTING.md` is sixteen manual scenarios, ordered so each leaves the save in the state the next
+- `TESTING.md` is seventeen manual scenarios, ordered so each leaves the save in the state the next
   one needs, covering the four beasts, the chicken, the twelve genes, the bench, the schedule and
   the save. Every expected result in it is read out of the code, never observed. It exists because
   nothing else in this repository can say whether the mod works.
@@ -43,13 +43,16 @@ Ported from andery233xj, Frolg, DongFang and Ninedaylongbow's
   beast out of a field only the mod's own clock sets, so firing them by hand raised a null
   reference before anything spawned. `Singleton.BeastFor` falls back to the incident def's own
   list.
-
-
 - `Tests/` checks the mod against the RimWorld assemblies it will be loaded beside: that every
   Harmony target still resolves, that every patch method's parameters still bind by name, and that
   no method that shares a name with a virtual one has quietly stopped overriding it. Those are the
   three ways this port broke, and none of them is a compile error. `dotnet run --project Tests`,
   22 checks, no game needed and none launched.
+- **Four development-mode entries, under "Ancient Chinese Beast" in the debug menu**, replacing the
+  three buttons the original hung on a comp on the firecracker. Two of those three added to a
+  counter no code reads, and all three needed a firecracker spawned and selected to appear. A beast
+  now, the nian beast within the hour, the sixty-day interval cleared, and the beast clock printed
+  to the log. `CompSZBeastDebug` and its def entry are gone.
 
 ### Changed — English text
 
