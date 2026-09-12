@@ -1,16 +1,17 @@
 ---
-mod:        Ancient Chinese Beast And Gene Expanded Renew
-packageId:  nelim.ancientchinesebeastandgeneexpandedrenew
-repo:       Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
-visibility: public
-detached:   yes
-stage:      done
-licence:    silent
-licence_at: four places checked - no LICENSE file in the mod's 207 files, no clause in the About
+mod:          Ancient Chinese Beast And Gene Expanded Renew
+packageId:    nelim.ancientchinesebeastandgeneexpandedrenew
+repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
+visibility:   public
+detached:     yes
+stage:        done
+licence:      silent
+licence_at:   four places checked - no LICENSE file in the mod's 207 files, no clause in the About
             description, no repository linked from it, nothing on the Workshop page
-showcase:   complete
+dependencies: declared
+showcase:     complete
 tested_on:
-workshop:   not published
+workshop:     not published
 remaining:
   - unverified: never seen running; TESTING.md is the protocol, sixteen scenarios, none run
   - defect: Singleton.nextBeastTimeHours is incremented, reset, and read by nothing. Inherited,
@@ -19,8 +20,8 @@ remaining:
       branch is unreachable. Inherited, deliberate, costs nothing
   - defect: the keyed string SZ_CannotReachBuildingToExtractGene is referenced from neither the
       C# nor the defs. Inherited, left alone
-session:    c81f6605-4d8c-49a6-a097-494859f3e856
-updated:    2026-09-12
+session:      c81f6605-4d8c-49a6-a097-494859f3e856
+updated:      2026-09-12
 ---
 
 # Ancient Chinese Beast And Gene Expanded Renew — status
@@ -62,6 +63,13 @@ printed to the log.
 
 `stage` vocabulary: `port`, `showcase`, `preTest`, `done`, `tested`, `published`.
 `licence` vocabulary: `open` an explicit licence, `silent` no licence and a dead source,
-`alive` no licence but a living source, `forbidden` a written refusal, `original` nothing reused.
+`alive` no licence but a living source, `forbidden` a written refusal, `original` owing nothing
+to anyone — not a name, not an idea traceable to one mod, not a value derived from its assets.
 `remaining` in three kinds: `feature` for something missing from a first release, `defect` for a
 known fault left unfixed, `unverified` for what could not be checked.
+
+- **`dependencies`** — `declared` when every mod this one needs is named in the About's
+  `modDependencies`, `to check` when a non-vanilla `loadAfter` suggests a dependency that is not
+  declared, `none` when the mod needs nothing. An undeclared dependency is not cosmetic: on
+  2026-09-11 Reequilibrage animaux took 47 vanilla animals down with it, Muffalo included, because
+  the class it injects belongs to a mod that was not declared and not loaded.
