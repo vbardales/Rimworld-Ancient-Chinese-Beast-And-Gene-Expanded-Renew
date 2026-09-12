@@ -152,6 +152,14 @@ Whether it works is [TESTING.md](TESTING.md): 28 scenarios to run by hand in a l
 ordered so each leaves the save in the state the next one needs. These gameplay scenarios have
 not yet been executed.
 
+## Languages
+
+English and French cover the mod's text, including incident letters, beast genes and the
+development actions. The original Simplified Chinese resources are retained. Static coverage
+is checked by `Tests/Run-All.ps1`; display and formatting still require the English/French
+in-game checks in [TESTING.md](TESTING.md). See [translation maintenance](Tests/TRANSLATIONS.md)
+for the inventory and validation procedure.
+
 ## Layout
 
 ```

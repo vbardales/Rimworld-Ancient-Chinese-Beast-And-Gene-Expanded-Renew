@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <SZGene_MingShe_SoundWave.description>Extraite par génie génétique, l'onde sonore du mingshe étourdit tous ceux qu'elle touche.</SZGene_MingShe_SoundWave.description>
+  <SZGene_MingShe_SoundWave.label>onde sonore de mingshe</SZGene_MingShe_SoundWave.label>
+  <SZGene_MingShe_SoundWave.symbolPack.wholeNameSymbols.0.symbol>bénédiction du mingshe</SZGene_MingShe_SoundWave.symbolPack.wholeNameSymbols.0.symbol>
+  <SZGene_MingShe_SoundWave.symbolPack.wholeNameSymbols.1.symbol>don du mingshe</SZGene_MingShe_SoundWave.symbolPack.wholeNameSymbols.1.symbol>
+  <SZGene_MingShe_Teeth.description>Les crocs mortels du mingshe. Leur venin fait payer de leur vie ceux qui doutent de leur puissance.</SZGene_MingShe_Teeth.description>
+  <SZGene_MingShe_Teeth.label>crocs de mingshe</SZGene_MingShe_Teeth.label>
+  <SZGene_MingShe_Teeth.symbolPack.wholeNameSymbols.0.symbol>bénédiction du mingshe</SZGene_MingShe_Teeth.symbolPack.wholeNameSymbols.0.symbol>
+  <SZGene_MingShe_Teeth.symbolPack.wholeNameSymbols.1.symbol>don du mingshe</SZGene_MingShe_Teeth.symbolPack.wholeNameSymbols.1.symbol>
+  <SZGene_MingShe_WindWing.description>Le bouclier de vent du mingshe, prélevé sur son cadavre. Il confère la capacité de la bête : les ennemis à l'intérieur subissent continuellement des lacérations, tandis que tous les projectiles venus de l'extérieur, balles comme objets lancés, sont renvoyés.</SZGene_MingShe_WindWing.description>
+  <SZGene_MingShe_WindWing.label>bouclier de vent de mingshe</SZGene_MingShe_WindWing.label>
+  <SZGene_MingShe_WindWing.symbolPack.wholeNameSymbols.0.symbol>bénédiction du mingshe</SZGene_MingShe_WindWing.symbolPack.wholeNameSymbols.0.symbol>
+  <SZGene_MingShe_WindWing.symbolPack.wholeNameSymbols.1.symbol>don du mingshe</SZGene_MingShe_WindWing.symbolPack.wholeNameSymbols.1.symbol>
+  <SZGene_QiongQi_Eyes.description>L'œil de qiongqi, extrait par génie génétique, confère au porteur la vision de la bête et de fortes chances d'esquiver les attaques au corps à corps comme à distance.</SZGene_QiongQi_Eyes.description>
+  <SZGene_QiongQi_Eyes.label>œil de qiongqi</SZGene_QiongQi_Eyes.label>
+  <SZGene_QiongQi_Eyes.symbolPack.wholeNameSymbols.0.symbol>bénédiction du qiongqi</SZGene_QiongQi_Eyes.symbolPack.wholeNameSymbols.0.symbol>
+  <SZGene_QiongQi_Eyes.symbolPack.wholeNameSymbols.1.symbol>don du qiongqi</SZGene_QiongQi_Eyes.symbolPack.wholeNameSymbols.1.symbol>
+  <SZGene_QiongQi_FlyingStrike.description>L'assaut aérien, extrait par génie génétique. Le porteur peut se jeter sur l'arrière-garde ennemie à la manière d'un qiongqi et ouvrir une brèche dans ses lignes. Touche généralement la tête.</SZGene_QiongQi_FlyingStrike.description>
+  <SZGene_QiongQi_FlyingStrike.label>assaut aérien de qiongqi</SZGene_QiongQi_FlyingStrike.label>
+  <SZGene_QiongQi_FlyingStrike.symbolPack.wholeNameSymbols.0.symbol>bénédiction du qiongqi</SZGene_QiongQi_FlyingStrike.symbolPack.wholeNameSymbols.0.symbol>
+  <SZGene_QiongQi_FlyingStrike.symbolPack.wholeNameSymbols.1.symbol>don du qiongqi</SZGene_QiongQi_FlyingStrike.symbolPack.wholeNameSymbols.1.symbol>
+  <SZGene_QiongQi_Scratch.description>Les griffes acérées du qiongqi. Elles éventrent facilement les armures ennemies et augmentent fortement la pénétration d'armure au corps à corps. Touchent généralement la tête.</SZGene_QiongQi_Scratch.description>
+  <SZGene_QiongQi_Scratch.label>griffes de qiongqi</SZGene_QiongQi_Scratch.label>
+  <SZGene_QiongQi_Scratch.symbolPack.wholeNameSymbols.0.symbol>bénédiction de la bête nian</SZGene_QiongQi_Scratch.symbolPack.wholeNameSymbols.0.symbol>
+  <SZGene_QiongQi_Scratch.symbolPack.wholeNameSymbols.1.symbol>don de la bête nian</SZGene_QiongQi_Scratch.symbolPack.wholeNameSymbols.1.symbol>
+  <SZGene_SeXie_Ring.description>L'aura massacre-cœur d'une sexie. Tous les êtres vivants à sa portée deviennent berserkers.</SZGene_SeXie_Ring.description>
+  <SZGene_SeXie_Ring.label>aura massacre-cœur de sexie</SZGene_SeXie_Ring.label>
+  <SZGene_SeXie_Ring.symbolPack.wholeNameSymbols.0.symbol>bénédiction de la sexie</SZGene_SeXie_Ring.symbolPack.wholeNameSymbols.0.symbol>
+  <SZGene_SeXie_Ring.symbolPack.wholeNameSymbols.1.symbol>don de la sexie</SZGene_SeXie_Ring.symbolPack.wholeNameSymbols.1.symbol>
+  <SZGene_SeXie_Shoot.description>Le gène du dard de la sexie. Le porteur peut tuer à distance avec les mêmes aiguilles acérées et venimeuses.</SZGene_SeXie_Shoot.description>
+  <SZGene_SeXie_Shoot.label>aiguillons de cristal de sexie</SZGene_SeXie_Shoot.label>
+  <SZGene_SeXie_Shoot.symbolPack.wholeNameSymbols.0.symbol>bénédiction de la sexie</SZGene_SeXie_Shoot.symbolPack.wholeNameSymbols.0.symbol>
+  <SZGene_SeXie_Shoot.symbolPack.wholeNameSymbols.1.symbol>don de la sexie</SZGene_SeXie_Shoot.symbolPack.wholeNameSymbols.1.symbol>
+  <SZGene_SeXie_Strength.description>Le gène de force monstrueuse d'une sexie. Il augmente la capacité de transport et l'aptitude au combat à mains nues.</SZGene_SeXie_Strength.description>
+  <SZGene_SeXie_Strength.label>force monstrueuse de sexie</SZGene_SeXie_Strength.label>
+  <SZGene_SeXie_Strength.symbolPack.wholeNameSymbols.0.symbol>bénédiction de la sexie</SZGene_SeXie_Strength.symbolPack.wholeNameSymbols.0.symbol>
+  <SZGene_SeXie_Strength.symbolPack.wholeNameSymbols.1.symbol>don de la sexie</SZGene_SeXie_Strength.symbolPack.wholeNameSymbols.1.symbol>
+  <SZGene_YearBeast_Flamethrower.description>Le souffle de feu d'une bête nian. Le porteur peut cracher du feu dans un cône, comme la bête elle-même.</SZGene_YearBeast_Flamethrower.description>
+  <SZGene_YearBeast_Flamethrower.label>souffle de feu de bête nian</SZGene_YearBeast_Flamethrower.label>
+  <SZGene_YearBeast_Flamethrower.symbolPack.wholeNameSymbols.0.symbol>bénédiction de la bête nian</SZGene_YearBeast_Flamethrower.symbolPack.wholeNameSymbols.0.symbol>
+  <SZGene_YearBeast_Flamethrower.symbolPack.wholeNameSymbols.1.symbol>don de la bête nian</SZGene_YearBeast_Flamethrower.symbolPack.wholeNameSymbols.1.symbol>
+  <SZGene_YearBeast_Horn.description>Le porteur développe une corne semblable à celle d'une bête nian, extrêmement acérée.</SZGene_YearBeast_Horn.description>
+  <SZGene_YearBeast_Horn.label>corne de bête nian</SZGene_YearBeast_Horn.label>
+  <SZGene_YearBeast_Horn.symbolPack.wholeNameSymbols.0.symbol>bénédiction de la bête nian</SZGene_YearBeast_Horn.symbolPack.wholeNameSymbols.0.symbol>
+  <SZGene_YearBeast_Horn.symbolPack.wholeNameSymbols.1.symbol>don de la bête nian</SZGene_YearBeast_Horn.symbolPack.wholeNameSymbols.1.symbol>
+  <SZGene_YearBeast_Skin.description>Le gène d'armure de la bête nian. Il renforce considérablement les défenses, mais rend le porteur extrêmement vulnérable aux pétards.</SZGene_YearBeast_Skin.description>
+  <SZGene_YearBeast_Skin.label>écailles de bête nian</SZGene_YearBeast_Skin.label>
+  <SZGene_YearBeast_Skin.symbolPack.wholeNameSymbols.0.symbol>bénédiction de la bête nian</SZGene_YearBeast_Skin.symbolPack.wholeNameSymbols.0.symbol>
+  <SZGene_YearBeast_Skin.symbolPack.wholeNameSymbols.1.symbol>don de la bête nian</SZGene_YearBeast_Skin.symbolPack.wholeNameSymbols.1.symbol>
+</LanguageData>

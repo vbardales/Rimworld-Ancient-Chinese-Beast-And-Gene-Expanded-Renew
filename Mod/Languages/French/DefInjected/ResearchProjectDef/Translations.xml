@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <SZ_BeastGene.description>Au fil des années de lutte contre le clan mécanoïde Tianbing, forgé par les dieux, les colons de Shenzhou ont découvert que le clan avait recréé par génie génétique des bêtes jusque-là cantonnées aux anciens mythes chinois. Une fois créées, ces bêtes ont sans cesse ravagé les colonies les plus riches de la bordure. Heureusement, certains établissements de Shenzhou ont abattu l'une d'elles et conservé des échantillons du cadavre. Un investissement modeste dans la recherche de pointe devrait suffire à percer les secrets de leurs gènes. \n\nL'étude des mouvements des bêtes, de leurs habitudes et des échantillons d'ADN prélevés permet d'extraire les gènes des bêtes de Shenzhou. \n\n(Vous devez conserver le cadavre après avoir tué une bête, puis extraire le gène voulu dans l'extracteur de gènes.)</SZ_BeastGene.description>
+  <SZ_BeastGene.label>extraction de gènes de bêtes</SZ_BeastGene.label>
+</LanguageData>

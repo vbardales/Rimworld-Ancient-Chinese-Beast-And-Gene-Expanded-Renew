@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <AntiEvilBeastBullet.deathMessage>{0} a succombé aux tirs.</AntiEvilBeastBullet.deathMessage>
+  <AntiEvilBeastBullet.label>munition anti-bêtes</AntiEvilBeastBullet.label>
+  <SZ_ChelaBlunt.deathMessage>{0} a succombé aux coups.</SZ_ChelaBlunt.deathMessage>
+  <SZ_ChelaBlunt.label>choc</SZ_ChelaBlunt.label>
+  <SZ_Firecracker_Flame.deathMessage>{0} a péri dans les flammes.</SZ_Firecracker_Flame.deathMessage>
+  <SZ_Firecracker_Flame.label>flamme</SZ_Firecracker_Flame.label>
+  <SZ_Firecracker_FlameB.deathMessage>{0} a péri dans les flammes.</SZ_Firecracker_FlameB.deathMessage>
+  <SZ_Firecracker_FlameB.label>flamme</SZ_Firecracker_FlameB.label>
+  <SZ_Firecracker_FlameC.deathMessage>{0} a péri dans les flammes.</SZ_Firecracker_FlameC.deathMessage>
+  <SZ_Firecracker_FlameC.label>flamme</SZ_Firecracker_FlameC.label>
+  <SZ_MingSheToxicBite.deathMessage>{0} a succombé aux morsures.</SZ_MingSheToxicBite.deathMessage>
+  <SZ_MingSheToxicBite.label>morsure toxique</SZ_MingSheToxicBite.label>
+  <SZ_SeXieToxicBite.deathMessage>{0} a succombé aux morsures.</SZ_SeXieToxicBite.deathMessage>
+  <SZ_SeXieToxicBite.label>morsure toxique</SZ_SeXieToxicBite.label>
+  <SZ_SeXieToxicRangedStab.deathMessage>{0} a succombé aux blessures perforantes.</SZ_SeXieToxicRangedStab.deathMessage>
+  <SZ_SeXieToxicRangedStab.label>perforation</SZ_SeXieToxicRangedStab.label>
+  <SZ_SoundWaveDamage.deathMessage>{0} a succombé à un écrasement.</SZ_SoundWaveDamage.deathMessage>
+  <SZ_SoundWaveDamage.label>onde sonore</SZ_SoundWaveDamage.label>
+</LanguageData>

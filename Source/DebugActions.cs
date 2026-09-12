@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using LudeonTK;
 using RimWorld;
 using Verse;
@@ -20,34 +22,49 @@ namespace AncientChineseBeast;
 // scheduling bug is invisible otherwise.
 public static class DebugActions
 {
-    private const string Category = "Ancient Chinese Beast";
+    [DebugActionYielder]
+    private static IEnumerable<DebugActionNode> LocalizedActions()
+    {
+        yield return LocalizedAction("SZ_DebugBeastNow", ForceBeastApproach);
+        yield return LocalizedAction("SZ_DebugNianNextHour", ForceYearBeast);
+        yield return LocalizedAction("SZ_DebugClearCooldown", ClearBeastCooldown);
+        yield return LocalizedAction("SZ_DebugReportClock", ReportBeastClock);
+    }
+
+    private static DebugActionNode LocalizedAction(string key, Action action)
+    {
+        // Attribute arguments must be constants and the game does not translate them.
+        // Yield nodes directly so both the category and the visible labels are localized.
+        return new DebugActionNode(key, action: action)
+        {
+            category = "SZ_DebugCategory".Translate(),
+            labelGetter = () => key.Translate(),
+            sourceAttribute = new DebugActionAttribute { allowedGameStates = AllowedGameStates.PlayingOnMap }
+        };
+    }
 
     // Sixty days, the interval HourTick requires between two beasts under any storyteller but Sexie.
     private const int BeastCooldownTicks = 3600000;
 
-    [DebugAction(Category, "Beast attack now", allowedGameStates = AllowedGameStates.PlayingOnMap)]
     private static void ForceBeastApproach()
     {
         Singleton.instance.BeastApproach();
     }
 
-    [DebugAction(Category, "Nian beast next hour", allowedGameStates = AllowedGameStates.PlayingOnMap)]
     private static void ForceYearBeast()
     {
         Singleton.instance.YearBeastForced = true;
-        Messages.Message("The nian beast will arrive within the game hour.", MessageTypeDefOf.TaskCompletion, historical: false);
+        Messages.Message("SZ_DebugNianScheduled".Translate(), MessageTypeDefOf.TaskCompletion, historical: false);
     }
 
     // The roll still has to come up, so this is not "a beast now" - it is the difference between a
     // colony that cannot be raided for another fifty days and one that can be raided tomorrow.
-    [DebugAction(Category, "Clear the sixty-day gate", allowedGameStates = AllowedGameStates.PlayingOnMap)]
     private static void ClearBeastCooldown()
     {
         Singleton.instance.lastBeastTime = Find.TickManager.TicksGame - BeastCooldownTicks - 1;
-        Messages.Message("The beast cooldown is clear. The 1% daily roll can fire from the next game day.", MessageTypeDefOf.TaskCompletion, historical: false);
+        Messages.Message("SZ_DebugCooldownCleared".Translate(), MessageTypeDefOf.TaskCompletion, historical: false);
     }
 
-    [DebugAction(Category, "Report the beast clock", allowedGameStates = AllowedGameStates.PlayingOnMap)]
     private static void ReportBeastClock()
     {
         int now = Find.TickManager.TicksGame;
@@ -60,6 +77,6 @@ public static class DebugActions
             $"[Ancient Chinese Beast] tick {now}, {since} ticks since the last beast, storyteller {storyteller} ({schedule}). "
             + $"Chosen beast: {Singleton.instance.beast?.pawn?.defName ?? "none yet"}. "
             + $"Corpses held: {Singleton.instance.beastCorpses.Count} kind(s).");
-        Messages.Message("The beast clock is in the log.", MessageTypeDefOf.TaskCompletion, historical: false);
+        Messages.Message("SZ_DebugClockLogged".Translate(), MessageTypeDefOf.TaskCompletion, historical: false);
     }
 }

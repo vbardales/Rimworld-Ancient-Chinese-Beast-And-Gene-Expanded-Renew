@@ -71,9 +71,16 @@ public class Singleton : IExposable
 	// the letter and the tunnel spawner that read it later agree with what was spawned.
 	public BeastClass BeastFor(IncidentDef incident)
 	{
+		var extension = incident?.GetModExtension<DefModExtension_Beasts>();
+		// Older saves contain a deep copy of the letter in the language used at save time.
+		// Resolve the same pawn kind against the current Def so a language change takes effect.
+		if (beast != null && extension != null)
+		{
+			BeastClass current = extension.beasts.Find(candidate => candidate.pawn == beast.pawn);
+			if (current != null) beast = current;
+		}
 		if (beast == null)
 		{
-			var extension = incident?.GetModExtension<DefModExtension_Beasts>();
 			if (extension != null && extension.beasts.Count > 0) beast = extension.beasts.RandomElement();
 		}
 		return beast;

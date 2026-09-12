@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <SZ_Clone_MingShe.description>Prélève et copie l'ADN d'un cadavre de mingshe, puis alimente l'appareil avec le milieu de culture adéquat et laisse-le fonctionner un moment. Vous obtiendrez votre propre mingshe, sécheresse comprise, au service de la colonie.</SZ_Clone_MingShe.description>
+  <SZ_Clone_MingShe.jobString>clonage d'une bête</SZ_Clone_MingShe.jobString>
+  <SZ_Clone_MingShe.label>cloner un mingshe</SZ_Clone_MingShe.label>
+  <SZ_Clone_QiongQi.description>Prélève et copie l'ADN d'un cadavre de qiongqi, puis alimente l'appareil avec le milieu de culture adéquat et laisse-le fonctionner un moment. Vous obtiendrez votre propre qiongqi, prêt à éventrer les lignes ennemies pour la colonie.</SZ_Clone_QiongQi.description>
+  <SZ_Clone_QiongQi.jobString>clonage d'une bête</SZ_Clone_QiongQi.jobString>
+  <SZ_Clone_QiongQi.label>cloner un qiongqi</SZ_Clone_QiongQi.label>
+  <SZ_Clone_SeXieA.description>Prélève et copie l'ADN d'un cadavre de sexie, puis alimente l'appareil avec le milieu de culture adéquat et laisse-le fonctionner un moment. Vous obtiendrez cette tueuse au venin redoutable, sous sa forme humaine, au service de la colonie.</SZ_Clone_SeXieA.description>
+  <SZ_Clone_SeXieA.jobString>clonage d'une bête</SZ_Clone_SeXieA.jobString>
+  <SZ_Clone_SeXieA.label>cloner une sexie (forme humaine)</SZ_Clone_SeXieA.label>
+  <SZ_Clone_SeXieB.description>Prélève et copie l'ADN d'un cadavre de sexie, puis alimente l'appareil avec le milieu de culture adéquat et laisse-le fonctionner un moment. Vous obtiendrez cette tueuse au venin redoutable, sous sa forme de scorpion, au service de la colonie.</SZ_Clone_SeXieB.description>
+  <SZ_Clone_SeXieB.jobString>clonage d'une bête</SZ_Clone_SeXieB.jobString>
+  <SZ_Clone_SeXieB.label>cloner une sexie (forme scorpion)</SZ_Clone_SeXieB.label>
+  <SZ_Clone_YearBeast.description>Prélève et copie l'ADN d'un cadavre de bête nian, puis alimente l'appareil avec le milieu de culture adéquat et laisse-le fonctionner un moment. Vous obtiendrez votre propre bête nian, dont le souffle de feu éliminera des foules d'ennemis pour la colonie.</SZ_Clone_YearBeast.description>
+  <SZ_Clone_YearBeast.jobString>clonage d'une bête</SZ_Clone_YearBeast.jobString>
+  <SZ_Clone_YearBeast.label>cloner une bête nian</SZ_Clone_YearBeast.label>
+  <SZ_ExtractGene_MingSheA.description>Extrait le gène d'un cadavre de mingshe pour obtenir son bouclier de vent.</SZ_ExtractGene_MingSheA.description>
+  <SZ_ExtractGene_MingSheA.jobString>extraction d'un gène de bête</SZ_ExtractGene_MingSheA.jobString>
+  <SZ_ExtractGene_MingSheA.label>extraire le gène du bouclier de vent de mingshe</SZ_ExtractGene_MingSheA.label>
+  <SZ_ExtractGene_MingSheB.description>Extrait le gène d'un cadavre de mingshe pour obtenir son onde sonore.</SZ_ExtractGene_MingSheB.description>
+  <SZ_ExtractGene_MingSheB.jobString>extraction d'un gène de bête</SZ_ExtractGene_MingSheB.jobString>
+  <SZ_ExtractGene_MingSheB.label>extraire le gène de l'onde sonore de mingshe</SZ_ExtractGene_MingSheB.label>
+  <SZ_ExtractGene_MingSheC.description>Extrait le gène d'un cadavre de mingshe pour obtenir ses crocs.</SZ_ExtractGene_MingSheC.description>
+  <SZ_ExtractGene_MingSheC.jobString>extraction d'un gène de bête</SZ_ExtractGene_MingSheC.jobString>
+  <SZ_ExtractGene_MingSheC.label>extraire le gène des crocs de mingshe</SZ_ExtractGene_MingSheC.label>
+  <SZ_ExtractGene_QiongQiA.description>Extrait le gène d'un cadavre de qiongqi pour obtenir son assaut aérien.</SZ_ExtractGene_QiongQiA.description>
+  <SZ_ExtractGene_QiongQiA.jobString>extraction d'un gène de bête</SZ_ExtractGene_QiongQiA.jobString>
+  <SZ_ExtractGene_QiongQiA.label>extraire le gène de l'assaut aérien de qiongqi</SZ_ExtractGene_QiongQiA.label>
+  <SZ_ExtractGene_QiongQiB.description>Extrait le gène d'un cadavre de qiongqi pour obtenir son œil.</SZ_ExtractGene_QiongQiB.description>
+  <SZ_ExtractGene_QiongQiB.jobString>extraction d'un gène de bête</SZ_ExtractGene_QiongQiB.jobString>
+  <SZ_ExtractGene_QiongQiB.label>extraire le gène de l'œil de qiongqi</SZ_ExtractGene_QiongQiB.label>
+  <SZ_ExtractGene_QiongQiC.description>Extrait le gène d'un cadavre de qiongqi pour obtenir ses griffes.</SZ_ExtractGene_QiongQiC.description>
+  <SZ_ExtractGene_QiongQiC.jobString>extraction d'un gène de bête</SZ_ExtractGene_QiongQiC.jobString>
+  <SZ_ExtractGene_QiongQiC.label>extraire le gène des griffes de qiongqi</SZ_ExtractGene_QiongQiC.label>
+  <SZ_ExtractGene_SeXieA.description>Extrait le gène d'un cadavre de sexie pour obtenir ses aiguillons de cristal.</SZ_ExtractGene_SeXieA.description>
+  <SZ_ExtractGene_SeXieA.jobString>extraction d'un gène de bête</SZ_ExtractGene_SeXieA.jobString>
+  <SZ_ExtractGene_SeXieA.label>extraire le gène des aiguillons de cristal de sexie</SZ_ExtractGene_SeXieA.label>
+  <SZ_ExtractGene_SeXieB.description>Extrait le gène d'un cadavre de sexie pour obtenir son aura massacre-cœur.</SZ_ExtractGene_SeXieB.description>
+  <SZ_ExtractGene_SeXieB.jobString>extraction d'un gène de bête</SZ_ExtractGene_SeXieB.jobString>
+  <SZ_ExtractGene_SeXieB.label>extraire le gène de l'aura massacre-cœur de sexie</SZ_ExtractGene_SeXieB.label>
+  <SZ_ExtractGene_SeXieC.description>Extrait le gène d'un cadavre de sexie pour obtenir sa force monstrueuse.</SZ_ExtractGene_SeXieC.description>
+  <SZ_ExtractGene_SeXieC.jobString>extraction d'un gène de bête</SZ_ExtractGene_SeXieC.jobString>
+  <SZ_ExtractGene_SeXieC.label>extraire le gène de la force monstrueuse de sexie</SZ_ExtractGene_SeXieC.label>
+  <SZ_ExtractGene_YearA.description>Extrait le gène d'un cadavre de bête nian pour obtenir son souffle de feu.</SZ_ExtractGene_YearA.description>
+  <SZ_ExtractGene_YearA.jobString>extraction d'un gène de bête</SZ_ExtractGene_YearA.jobString>
+  <SZ_ExtractGene_YearA.label>extraire le gène du souffle de feu de bête nian</SZ_ExtractGene_YearA.label>
+  <SZ_ExtractGene_YearB.description>Extrait le gène d'un cadavre de bête nian pour obtenir son armure d'écailles.</SZ_ExtractGene_YearB.description>
+  <SZ_ExtractGene_YearB.jobString>extraction d'un gène de bête</SZ_ExtractGene_YearB.jobString>
+  <SZ_ExtractGene_YearB.label>extraire le gène des écailles de bête nian</SZ_ExtractGene_YearB.label>
+  <SZ_ExtractGene_YearC.description>Extrait le gène d'un cadavre de bête nian pour obtenir sa corne.</SZ_ExtractGene_YearC.description>
+  <SZ_ExtractGene_YearC.jobString>extraction d'un gène de bête</SZ_ExtractGene_YearC.jobString>
+  <SZ_ExtractGene_YearC.label>extraire le gène de la corne de bête nian</SZ_ExtractGene_YearC.label>
+  <SZ_ExtractGene.description>Utilise les facteurs particuliers présents dans les cadavres des bêtes de Shenzhou pour extraire des capsules d'archites.</SZ_ExtractGene.description>
+  <SZ_ExtractGene.jobString>extraction d'un gène de bête</SZ_ExtractGene.jobString>
+  <SZ_ExtractGene.label>extraire des capsules d'archites</SZ_ExtractGene.label>
+</LanguageData>

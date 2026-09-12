@@ -1,4 +1,9 @@
 ---
+localization: complete
+translation_en: complete
+translation_fr: complete
+settings_audit: not_applicable
+audit_revision: 4871397f5ed3f48a75035b6d090af53039932a62 plus local changes recorded below
 mod:          Ancient Chinese Beast And Gene Expanded Renew (unofficial)
 packageId:    nelim.ancientchinesebeastandgeneexpandedrenew
 repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
@@ -15,7 +20,11 @@ showcase:     complete
 tested_on:
 workshop:     not published
 remaining:
+  - defect: publication metadata uses a raw repository URL instead of the final Steam
+      Source code on GitHub link required by PUBLISHING.md; correct before publication
   - unverified: never seen running; TESTING.md is the protocol, 28 scenarios, none run
+  - unverified: English and French display checks, generated names, debug actions and
+      save/reload across languages have not been run; see TESTING.md, Translation checks
   - defect: Singleton.nextBeastTimeHours is incremented, reset, and read by nothing. Inherited,
       deliberate, harmless now that no button depends on it
   - defect: CompAbilityEffect_SectorCells caches into a list it fills with itself, so the cache
@@ -23,7 +32,7 @@ remaining:
   - defect: the keyed string SZ_CannotReachBuildingToExtractGene is referenced from neither the
       C# nor the defs. Inherited, left alone
 session:      c81f6605-4d8c-49a6-a097-494859f3e856
-updated:      2026-09-12
+updated:      2026-09-13
 ---
 
 # Ancient Chinese Beast And Gene Expanded Renew — status
@@ -32,6 +41,101 @@ Read by a sweep across every mod, rather than by asking each thread in turn. It 
 root, never inside `Mod/`, so Steam never receives it.
 
 ## Where this one stands
+
+### Ordered workflow audit — 2026-09-13
+
+**Result: `done` -> `done`.** This is a fresh audit of the working tree, not an inference
+from the historical stage. The user's ordered workflow takes precedence over the parent
+documents: the options gate does not require in-game interaction when source inspection
+justifies no settings. `done` is readiness for final gameplay validation; it is not `tested`.
+
+Scope: this autonomous Git repository, with the distributed root at `Mod/`. Audited HEAD:
+`4871397f5ed3f48a75035b6d090af53039932a62`. Existing local changes covered CHANGELOG,
+README, STATUS, TESTING, the delivered DLL, DebugActions.cs, Singleton.cs, English Keyed,
+and Tests/Run-All.ps1. Untracked work comprised English DefInjected, French resources,
+Check-Translations.ps1, Get-TranslationInventory.ps1, Tests/TRANSLATIONS.md and
+Test-TranslationChecker.ps1. All were included in the audit and preserved. No commit,
+publication, feature change or image generation was performed.
+
+Evidence is retained in `.build/audit-2026-09-13/`: `working-tree-before.txt`,
+`audited-files.json` (SHA-256 inventory of Mod, Source and Tests), `dll-before.txt`,
+`run-all.log` (sandbox access failure), `run-all-unrestricted.log` (successful full run),
+and directly inspected 32 px / 268 px image reductions. Earlier narrative and test logs
+remain historical evidence; the following results describe this audit.
+
+| Transition destination | Result | Evidence and limits |
+| --- | --- | --- |
+| horsMonoRepo | Validated | `git rev-parse --show-toplevel` identifies this repository. `git ls-remote origin HEAD` returns the audited HEAD; `gh repo view` confirms PUBLIC and main on the configured GitHub repository. Names follow the Renew/unofficial convention without requiring literal equality. English documentation exists; root/distributed LICENSE and ATTRIBUTION copies have identical SHA-256 hashes. |
+| ModIcon generated | Validated | Development deliverables present; mod build succeeded with zero warnings/errors and the delivered DLL remained byte-identical. Icon directly inspected at 128 px and 32 px: PNG, 27059 bytes, single orange winking beast mascot, dark background, legible silhouette, no text. |
+| Preview generated | Validated | Delivered PNG directly inspected at 896x504 and 268 px; 612132 bytes. Overhead ground scene, restricted palette, winged beast and firecrackers, no concrete camera defect. A historical generation report or recorded comparison with a game screenshot is not required. |
+| preOptions | Validated | English description; exact title order/case, reduced And and Renew, separate unofficial tag and 1.6 badge. Red accent is visually distinct from the ochre secondary ink. Art/preview.html reads the saved palette and layout. Existing contrast/font measurements are retained, not claimed as rerun measurements. |
+| options | Not applicable, justified | Settings inventory and access checks below establish no relevant settings, empty page or shortcut. |
+| l10n | Validated, static | 370 Def fields and nine Keyed entries checked, zero failures; 702 injection paths checked, zero errors. Four translation negative controls passed. Source call sites, dynamic debug keys, incident fields and representative EN/FR wording reviewed. English Def source values provide native coverage where appropriate. |
+| preTest | Validated | Harmony and Biotech are used and declared, with appropriate loadAfter entries. The ChineseComprehensiveExpansion entry is optional ordering only: no source/Def dependency found. No LoadFolders, conditional content or mod patches. No missing Def/type reference found. No RIMMSQOL dependency is needed. |
+| done | Validated | Tests/Run-All.ps1 completed with exit 0: builds, 262 content checks, 26 assembly contracts, six XML/translation/configuration validators and eleven negative controls passed. TESTING.md provides 28 manual scenarios, setup/actions/expected results and EN/FR checks, including new colonies and existing saves. |
+| tested | Unverified | No gameplay session executed or supplied for this working tree. Logs, EN/FR display, gameplay, save/reload and new/existing-save scenarios remain unverified. Installed game assemblies establish static compatibility only. |
+
+The exact `stage` value `done` maps to **done** in the requested chain:
+`dansMonoRepo -> horsMonoRepo -> ModIcon generated -> Preview generated -> preOptions ->
+options -> l10n -> preTest -> done -> tested`. Older vocabulary below is historical;
+`port` and `showcase` alone do not certify a precise gate in this chain.
+
+#### Settings audit
+
+`settings_audit: not_applicable`, established against the 74 source files and distributed
+Defs. There is no Verse.Mod settings implementation, ModSettings/GetSettings,
+SettingsCategory/DoSettingsWindowContents, MainButtonDef or MainTabWindow settings route.
+The inventory includes Singleton's normal 1% daily roll and sixty-day gate, Sexie's
+fifteen-day schedule, annual nian event, combat/ability values, extraction/cloning recipes
+and the four debug actions. These are the inherited gameplay design and developer test
+controls, not an existing player configuration that has been left accessible only in XML.
+No documented player configuration requirement or unfinished settings feature was found.
+Exposing balance constants would add new customization scope, so no option is invented.
+
+There is consequently no defaults/input/reset/application-time/settings-persistence or
+shortcut integration test to run. Saved gameplay state is covered separately by the manual
+scenarios. No RIMMSQOL or other customization integration was tested or certified.
+The mandatory source check establishes absence of both an empty page and a shortcut.
+
+#### Verification details and limits
+
+The first test invocation stopped at MSBuild because sandbox permissions denied access to
+the installed Microsoft SDK directory; this was an environment failure, not a mod defect.
+The authorized retry completed the whole suite against RimWorld assembly 1.6.9676.17735.
+Delivered DLL SHA-256 before and after the build:
+`5F38C06080A1E04AEE40FA6448EE430FCBE7D1D8CF73E87AE34534EA8676769D`.
+The XML run resolved 82 class references, checked fields in 52 files, resolved Def references
+and parents, and checked 133/133 configuration Defs using 26 rules. The external-type
+checker's ambiguous lordJob/targetType/type element names are absent from the mod XML.
+Its passing result does not prove arbitrary runtime ConfigErrors or gameplay behavior;
+the log explicitly describes its static limits. No artificial gameplay pass is inferred.
+
+The recorded rights classification remains `silent`: no third-party licence is invented,
+and MIT explicitly excludes original content. The earlier 2026-09-12 source-rights review
+is retained; Workshop comments and author profiles were not re-audited live in this run.
+This classification records the evidence available, not permission or proven abandonment.
+
+#### Remaining work, distinguished from optional recommendations
+
+- **Next gate, done -> tested (unverified):** execute all applicable TESTING.md scenarios in
+  game, inspect logs and EN/FR UI, cover a new colony and existing saves, and rerun affected
+  regression checks after any fixes. No settings/shortcut runtime test is applicable.
+- **Publication-only defect:** About.xml currently provides raw repository URLs but lacks
+  the final `[url=...]Source code on GitHub[/url]` required by PUBLISHING.md. Correct that
+  before publication; it does not change the user's English-description/naming gate or
+  constitute a failure of the gameplay-readiness stage. Nothing was published here.
+- **Documentation cleanup completed — 2026-09-13:** LICENSE/ATTRIBUTION now describe the
+  recorded 2026-09-12 review without implying abandonment or reuse permission. MIT remains
+  limited to the listed port additions. Both distributed copies were synchronized and
+  verified byte-identical to their root counterparts. This documentation-only follow-up
+  leaves `stage: done` and the independent code, XML, translation and image checks unchanged;
+  the audit's file-hash inventory predates these documentation edits.
+- The inherited dead counter, ineffective cache and unused Keyed entry below were confirmed
+  by source inspection. They do not establish a failed gameplay test. The counter is read
+  for its own increment and serialization, but not used to decide scheduling; historical
+  shorthand such as “read by nothing” should be understood in that narrower sense.
+
+The following sections retain the previous audit history.
 
 The port is finished and nothing about it is waiting on a decision. What it is waiting on is a
 game.
@@ -42,7 +146,7 @@ game.
   game assembly 1.6.9676.17735, including explicit presence checks for the three critical hooks.
 - **The XML.** All six versioned checkers in `Tests/Xml/` pass: fields, classes, def references,
   third-party type references, translation keys and configuration consistency. There are also
-  240 passing content checks and seven passing negative controls. Run `Tests/Run-All.ps1` to
+  262 passing content checks and eleven passing negative controls. Run `Tests/Run-All.ps1` to
   rebuild and repeat the checks; no scripts from the parent repository are needed.
 - **The showcase.** `Mod/About/Preview.png` recomposed in HTML/CSS at 896x504 according to
   `../STYLE_RIMWORLD.md`; see the preview verification below. `ModIcon.png` remains 128x128.
@@ -55,6 +159,51 @@ So `stage: done` means done as far as a person without the game running can take
 mean the mod works, and `tested_on` being empty is the honest half of that sentence.
 
 ## What would move it
+
+### Translation audit — 2026-09-13
+
+The translation gate in `../PUBLISHING.md` and `../TRANSLATIONS.md` has been applied to
+the working tree based on `4871397`. The historical `stage: done` is preserved. The three
+`complete` fields certify static translation readiness only, not an observed game session.
+
+- Scope: all `Source/*.cs`, `Mod/Defs/**/*.xml`, and language resources. This mod has no
+  `LoadFolders.xml`, version-specific content, optional integration folders or XML patches.
+  Reflection over the installed RimWorld 1.6 and rebuilt mod assemblies inventories 370
+  `[MustTranslate]` string fields, including inherited recipe job strings, body-part labels,
+  tools, thought stages, gene name symbols and the incident extension's beast letters.
+- French now covers all 370 fields. English uses the source Def values for 340 fields and
+  30 explicit English injections for the inherited Chinese gene-name symbols and bilingual
+  incident letters. Chinese resources and original source text remain available unchanged.
+  The inherited qiongqi-claw naming symbols refer to the nian beast in the original data;
+  both new languages preserve that meaning rather than changing the content during translation.
+- Eight active mod-owned Keyed entries cover the debug category, four action labels and three
+  messages. One unused original compatibility key is also present in English and French;
+  its presence is not counted as active UI coverage. Debug nodes use `DebugActionYielder`
+  because the game's `DebugActionAttribute` labels are constant strings and are not translated.
+- `Singleton.BeastFor` refreshes a saved beast's letter from the currently translated incident
+  Def by pawn kind. The original deep save fields are preserved. This prevents a newly sent
+  letter from reusing the language serialized in an older save; existing historical letters
+  are not rewritten.
+- Reused vanilla key `TextMote_Dodge` verified locally as `Dodge` / `Esquive`. Vanilla
+  `CorpseLabel`, `MeatLabel`, `RecipeMake`, `RecipeMakeDescription` and `RecipeMakeJobString`
+  exist in both installed languages with matching `{0}` parameters. Generated content uses
+  these templates and translated owned labels; combat grammar comes from the referenced
+  vanilla maneuver rules. No mod-owned grammar packs or custom string-list resources exist.
+- Technical logs, serialized names, defNames, texture paths, reflection targets and About
+  metadata are excluded from in-game translation. The unused condition-letter comp already
+  marks its custom `text` field `[MustTranslate]` and has no XML instance to translate.
+- Validation: `pwsh -NoProfile -File Tests/Run-All.ps1` builds the delivered DLL and runs the
+  existing content/assembly/XML suite plus EN/FR coverage. The dedicated
+  `Tests/Check-Translations.ps1` validates 370 fields and nine Keyed entries with zero failures;
+  its inventory stage also validates 702 DefInjected paths across all three languages with
+  zero errors and no unresolved targets. Four negative controls detect a missing French field,
+  a key missing from both languages, a duplicate key and a broken format parameter.
+  XML, parameter tokens, rich-text tags, line-break counts and identical texts were checked;
+  unchanged `mingshe`, `qiongqi`, `explosion` and `tunnel` are reviewed names/cognates.
+- Evidence and maintenance: `Tests/TRANSLATIONS.md`; generated field inventory and full test
+  output are in `.build/translation-inventory.json` and `.build/translation-tests.log`.
+  English/French UI, generated text, clipping and language-switch save checks remain unverified
+  until performed in game, as explicitly recorded in `remaining`.
 
 ### Preview verification — 2026-09-12
 

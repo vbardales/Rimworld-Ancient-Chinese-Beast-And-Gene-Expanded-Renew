@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <SZ_Chicken_Crow.description>L'officier stellaire des Pléiades se met à chanter. Son chant long et mélodieux redonne courage à tous les colons qui l'entendent et transperce le cœur d'une sexie, la tuant sur le coup.</SZ_Chicken_Crow.description>
+  <SZ_Chicken_Crow.label>bond du dragon, cri du phénix</SZ_Chicken_Crow.label>
+  <SZ_MingShe_SoundWave.description>Une attaque par onde sonore dans un cône. Étourdit les ennemis touchés.</SZ_MingShe_SoundWave.description>
+  <SZ_MingShe_SoundWave.label>Onde sonore</SZ_MingShe_SoundWave.label>
+  <SZ_MingShe_WindWing.description>Lacère tout ce qui se trouve dans le bouclier de vent et renvoie tous les projectiles venus de l'extérieur, balles comme objets lancés.</SZ_MingShe_WindWing.description>
+  <SZ_MingShe_WindWing.label>Bouclier de vent</SZ_MingShe_WindWing.label>
+  <SZ_QiongQi_FlyingStrike.description>Fond sur la cible en lui infligeant d'énormes dégâts.</SZ_QiongQi_FlyingStrike.description>
+  <SZ_QiongQi_FlyingStrike.label>assaut aérien</SZ_QiongQi_FlyingStrike.label>
+  <SZ_SeXie_Ring.description>Émet une aura massacre-cœur. Tous les êtres vivants pris à l'intérieur deviennent berserkers.</SZ_SeXie_Ring.description>
+  <SZ_SeXie_Ring.label>aura massacre-cœur</SZ_SeXie_Ring.label>
+  <SZ_SeXieShootA.description>Tire des aiguilles enduites de venin terrasse-cheval. La douleur causée par ce venin fait s'effondrer les victimes.</SZ_SeXieShootA.description>
+  <SZ_SeXieShootA.label>tir d'aiguillons de cristal</SZ_SeXieShootA.label>
+  <SZ_SeXieShootB.description>Tire des aiguilles enduites de venin terrasse-cheval. La douleur causée par ce venin fait s'effondrer les victimes.</SZ_SeXieShootB.description>
+  <SZ_SeXieShootB.label>tir d'aiguillons de cristal</SZ_SeXieShootB.label>
+  <SZ_YearBeast_Flamethrower.description>Crache du feu dans un cône.</SZ_YearBeast_Flamethrower.description>
+  <SZ_YearBeast_Flamethrower.label>souffle de feu</SZ_YearBeast_Flamethrower.label>
+</LanguageData>

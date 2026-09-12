@@ -5,6 +5,14 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+- Add complete French DefInjected coverage, including inherited jobs, anatomy, attacks,
+  incident letters and generated gene names. Add English overrides for the remaining Chinese
+  names and bilingual letters while retaining the original Chinese resources.
+- Localize the development actions and their messages through English/French Keyed entries.
+  Refresh saved beast letters from the current language's Def before sending new incidents.
+- Add the mandatory translation gate to `Tests/Run-All.ps1`: a reflected field inventory,
+  EN/FR resource checks and four negative controls. Track static readiness and pending in-game
+  language checks separately in `STATUS.md`.
 - Correct the manual scenario count to 28 throughout the documentation.
 - Add content checks for gene extraction, friendly cloning, duplicate defs and publication
   metadata, with five negative controls. Explicitly require the three critical port hooks and

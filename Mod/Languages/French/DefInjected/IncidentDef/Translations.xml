@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <SZ_BeastApproach.label>attaque de bête</SZ_BeastApproach.label>
+  <SZ_BeastApproach.modExtensions.0.beasts.0.label>Un qiongqi !</SZ_BeastApproach.modExtensions.0.beasts.0.label>
+  <SZ_BeastApproach.modExtensions.0.beasts.0.text>Nous n'aurions jamais imaginé qu'une bête connue uniquement par le Classique des montagnes et des mers apparaîtrait vraiment sur la bordure ! Selon des informations fiables, le qiongqi possède des yeux d'une acuité extraordinaire. Si nous le laissons ravager les environs, notre colonie finira dans sa gueule.</SZ_BeastApproach.modExtensions.0.beasts.0.text>
+  <SZ_BeastApproach.modExtensions.0.beasts.1.label>Un mingshe !</SZ_BeastApproach.modExtensions.0.beasts.1.label>
+  <SZ_BeastApproach.modExtensions.0.beasts.1.text>La bête responsable des sécheresses qui frappent tant d'établissements de Shenzhou, le mingshe, est apparue dans notre colonie ! Si nous voulons que nos cultures poussent encore, il faut trouver rapidement comment nous en débarrasser et l'envoyer rejoindre le seigneur Yama.</SZ_BeastApproach.modExtensions.0.beasts.1.text>
+  <SZ_BeastApproachTunnel.label>attaque de bête</SZ_BeastApproachTunnel.label>
+  <SZ_BeastApproachTunnel.modExtensions.0.beasts.0.label>Une sexie</SZ_BeastApproachTunnel.modExtensions.0.beasts.0.label>
+  <SZ_BeastApproachTunnel.modExtensions.0.beasts.0.text>La sexie, cette bête humanoïde aux traits de scorpion, nous a enfin montré son vrai visage. On dit qu'elle est la plus coriace des bêtes génétiquement créées qu'aient affrontées les établissements de Shenzhou : outre ses nombreuses capacités spéciales, elle peut changer de forme. Soyons prudents !</SZ_BeastApproachTunnel.modExtensions.0.beasts.0.text>
+  <SZ_ChickenPasses.label>officier stellaire des Pléiades en vadrouille</SZ_ChickenPasses.label>
+  <SZ_ChickenPasses.letterLabel>Un officier stellaire des Pléiades en vadrouille</SZ_ChickenPasses.letterLabel>
+  <SZ_ChickenPasses.letterText>L'oiseau divin des anciennes légendes de Shenzhou, l'officier stellaire des Pléiades, s'est aventuré près de la colonie ! Les couleurs de son plumage dégagent quelque chose de revigorant, et sa crête singulière révèle qu'il ne s'agit pas d'un oiseau ordinaire. Nous devrions l'inviter à nous rejoindre.</SZ_ChickenPasses.letterText>
+  <SZ_YearBeastApproach.label>attaque de bête nian</SZ_YearBeastApproach.label>
+  <SZ_YearBeastApproach.letterLabel>La bête nian est arrivée ! (cliquez sur elle pour en savoir plus)</SZ_YearBeastApproach.letterLabel>
+  <SZ_YearBeastApproach.letterText>Une bête nian issue du génie génétique du clan mécanoïde Tianbing est apparue près de la colonie ! Elle possède deux cornes acérées et le corps d'un tigre, le tout sous une épaisse armure. Il faut s'en occuper rapidement, sans quoi elle ravagera la chaîne alimentaire de la colonie.</SZ_YearBeastApproach.letterText>
+</LanguageData>

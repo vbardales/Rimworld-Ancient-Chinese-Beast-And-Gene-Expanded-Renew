@@ -21,9 +21,14 @@ feature list; it says nothing about reuse either way.
 That fourth check is there because of たたら製鉄, whose refusal of redistribution was buried in
 the prose of its `About.xml` description and not in any file. This one has no such clause.
 
-Silence is not a refusal, and it is not permission either. This is redistributed under the usual
-practice for abandoned RimWorld mods: explicit credit, a link to the original, and removal on
-request.
+The source review recorded on 2026-09-12 found no explicit licence, reuse permission or
+prohibition for the original material. This is the basis for the `silent` classification;
+abandonment is not established. Silence is neither refusal nor permission.
+
+This unofficial port is distributed without the original authors' explicit consent, with
+credit, a link to the original, and removal on request. These commitments do not constitute
+permission from the original authors. The MIT licence in `LICENSE` covers only the port
+additions listed there, not the original material.
 
 ## What was taken
 

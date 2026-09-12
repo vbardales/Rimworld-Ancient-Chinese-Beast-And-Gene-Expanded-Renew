@@ -334,6 +334,31 @@ after a reload, or a drought that comes back without its causer, is a failure he
 
 ---
 
+## Translation checks
+
+Apply these checks while running the 28 scenarios in **English and French**. Static coverage
+passes as of 2026-09-13, but none of these display checks has been performed in game.
+
+- During blocks A, C, D and E, inspect beasts in both forms, friendly clones, anatomy, melee
+  tools, weapons, firecrackers, abilities, genes, research, the extractor and its recipe bills.
+  Check labels, descriptions, tooltips and current job reports. Include generated corpse,
+  meat and crafting recipe names, and a generated xenotype using the beast gene-name symbols.
+- During blocks B and C, read every arrival letter, the drought notification, the chicken's
+  mood thought and combat reports. Trigger a qiongqi dodge and verify `Dodge` / `Esquive`.
+  Rich-text markers and `{0}` parameters must be rendered, with no raw keys or English/Chinese
+  fallback in French. Chinese proper names transliterated as `mingshe` and `qiongqi` are intended.
+- During block F, check the category `Ancient Chinese Beast` / `Bêtes chinoises antiques`,
+  all four development actions and their three notification messages. Technical log entries
+  deliberately remain English. Check the action labels again after changing language.
+- During block G, save after a beast has been selected, change language, reload and trigger
+  its matching arrival incident. The newly sent letter must use the new language and still
+  describe the selected beast. Repeat in the other direction and, if available, with a save
+  from before this translation update. Existing historical letters keep their saved wording.
+
+Look for clipped buttons/tooltips and malformed line breaks as well as incorrect words.
+Record each language, game version, outcome and any screenshot/log evidence in `STATUS.md`.
+Keep the runtime entry in `remaining` until both languages have been checked.
+
 ## What to send back
 
 For each scenario: its number, and **seen** or **not seen**, plus what happened instead. A scenario

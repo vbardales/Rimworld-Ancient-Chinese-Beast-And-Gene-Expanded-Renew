@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <SZ_MingShe_Teeth.comps.HediffComp_VerbGiver.tools.fang.label>croc</SZ_MingShe_Teeth.comps.HediffComp_VerbGiver.tools.fang.label>
+  <SZ_MingShe_Teeth.description>Les crocs très acérés du mingshe. Les ennemis qui les aperçoivent prennent souvent la fuite.</SZ_MingShe_Teeth.description>
+  <SZ_MingShe_Teeth.label>crocs de mingshe</SZ_MingShe_Teeth.label>
+  <SZ_MingShe_Teeth.labelNoun>crocs de mingshe</SZ_MingShe_Teeth.labelNoun>
+  <SZ_QiongQi_Scratch.comps.HediffComp_VerbGiver.tools.claw.label>griffe</SZ_QiongQi_Scratch.comps.HediffComp_VerbGiver.tools.claw.label>
+  <SZ_QiongQi_Scratch.description>Des griffes de qiongqi. Le qiongqi aime abattre ses griffes sur la tête de ses ennemis.</SZ_QiongQi_Scratch.description>
+  <SZ_QiongQi_Scratch.label>griffes de qiongqi</SZ_QiongQi_Scratch.label>
+  <SZ_QiongQi_Scratch.labelNoun>griffes de qiongqi</SZ_QiongQi_Scratch.labelNoun>
+  <SZ_ScorpionPoison.description>Le venin de la sexie. La douleur qu'il inflige fait s'effondrer les ennemis.</SZ_ScorpionPoison.description>
+  <SZ_ScorpionPoison.label>venin terrasse-cheval</SZ_ScorpionPoison.label>
+  <SZ_Strength.description>Une force monstrueuse qui double les dégâts des coups à mains nues du porteur.</SZ_Strength.description>
+  <SZ_Strength.label>force monstrueuse</SZ_Strength.label>
+  <SZ_Year_Horn.comps.HediffComp_VerbGiver.tools.horn.label>corne</SZ_Year_Horn.comps.HediffComp_VerbGiver.tools.horn.label>
+  <SZ_Year_Horn.description>Une corne de bête nian très acérée. Elle transperce sans difficulté les armures épaisses.</SZ_Year_Horn.description>
+  <SZ_Year_Horn.label>corne de bête nian</SZ_Year_Horn.label>
+  <SZ_Year_Horn.labelNoun>corne de bête nian</SZ_Year_Horn.labelNoun>
+</LanguageData>

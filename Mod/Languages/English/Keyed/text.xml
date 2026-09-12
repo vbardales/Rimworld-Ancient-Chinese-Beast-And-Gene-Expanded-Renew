@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <SZ_CannotReachBuildingToExtractGene>Can not reach building to extract gene.</SZ_CannotReachBuildingToExtractGene>
+  <SZ_CannotReachBuildingToExtractGene>Cannot reach the building to extract genes.</SZ_CannotReachBuildingToExtractGene>
+  <SZ_DebugCategory>Ancient Chinese Beast</SZ_DebugCategory>
+  <SZ_DebugBeastNow>Beast attack now</SZ_DebugBeastNow>
+  <SZ_DebugNianNextHour>Nian beast next hour</SZ_DebugNianNextHour>
+  <SZ_DebugClearCooldown>Clear the sixty-day gate</SZ_DebugClearCooldown>
+  <SZ_DebugReportClock>Report the beast clock</SZ_DebugReportClock>
+  <SZ_DebugNianScheduled>The nian beast will arrive within the game hour.</SZ_DebugNianScheduled>
+  <SZ_DebugCooldownCleared>The beast cooldown is clear. The 1% daily roll can fire from the next game day.</SZ_DebugCooldownCleared>
+  <SZ_DebugClockLogged>The beast clock is in the log.</SZ_DebugClockLogged>
 </LanguageData>

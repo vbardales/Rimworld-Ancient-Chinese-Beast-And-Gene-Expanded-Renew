@@ -29,7 +29,8 @@ try {
     Invoke-Check 'XML fields' { & pwsh -NoProfile -File "$PSScriptRoot/Xml/Check-XmlFields.ps1" -ModPath $mod -Managed $Managed -ExtraAssemblies $assembly }
     Invoke-Check 'Def references' { & pwsh -NoProfile -File "$PSScriptRoot/Xml/Check-DefRefs.ps1" -ModPath $mod -Managed $Managed -GameData $GameData -Brief }
     Invoke-Check 'External types' { & pwsh -NoProfile -File "$PSScriptRoot/Xml/Check-TypeRefs.ps1" -ModPath $mod -Managed $Managed }
-    Invoke-Check 'Translations' { & pwsh -NoProfile -File "$PSScriptRoot/Xml/Check-DefInjected.ps1" -TransMod $mod -Managed $Managed -GameData $GameData -ExtraAssemblies $assembly }
+    Invoke-Check 'Translations and EN/FR coverage' { & pwsh -NoProfile -File "$PSScriptRoot/Check-Translations.ps1" -ModPath $mod -Managed $Managed -GameData $GameData }
+    Invoke-Check 'Translation checker negative controls' { & pwsh -NoProfile -File "$PSScriptRoot/Test-TranslationChecker.ps1" }
     Invoke-Check 'Configuration' { & pwsh -NoProfile -File "$PSScriptRoot/Xml/Check-ConfigErrors.ps1" -ModPath $mod -Managed $Managed -GameData $GameData -ExtraAssemblies $assembly }
     Invoke-Check 'XML checker exit codes' { & pwsh -NoProfile -File "$PSScriptRoot/Test-XmlExitCodes.ps1" -Managed $Managed -GameData $GameData -TypeList $types }
     Write-Host "`nAll automated checks passed. In-game scenarios remain manual."
