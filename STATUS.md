@@ -6,8 +6,10 @@ visibility:   public
 detached:     yes
 stage:        done
 licence:      silent
-licence_at:   four places checked - no LICENSE file in the mod's 207 files, no clause in the About
-            description, no repository linked from it, nothing on the Workshop page
+licence_at:   reviewed 2026-09-12 - original files and About.xml, English and Chinese Workshop
+            descriptions, all 68 public comments, and the four coauthors' Steam profiles;
+            no explicit reuse permission or prohibition found, no source repository link found.
+            Local MIT licence covers port additions only; abandonment is not established.
 dependencies: declared
 showcase:     complete
 tested_on:
@@ -95,8 +97,9 @@ printed to the log.
 ---
 
 `stage` vocabulary: `port`, `showcase`, `preTest`, `done`, `tested`, `published`.
-`licence` vocabulary: `open` an explicit licence, `silent` no licence and a dead source,
-`alive` no licence but a living source, `forbidden` a written refusal, `original` owing nothing
+`licence` vocabulary: `open` an explicit licence or permission, `silent` no explicit licence,
+reuse permission or prohibition found (does not establish abandonment),
+`alive` no licence but a source explicitly recorded as maintained, `forbidden` a written refusal, `original` owing nothing
 to anyone — not a name, not an idea traceable to one mod, not a value derived from its assets.
 `remaining` in three kinds: `feature` for something missing from a first release, `defect` for a
 known fault left unfixed, `unverified` for what could not be checked.
