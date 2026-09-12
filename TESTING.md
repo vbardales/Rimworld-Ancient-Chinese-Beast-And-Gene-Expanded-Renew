@@ -1,11 +1,10 @@
 # Manual test scenarios
 
-Nothing in this mod can be tested outside a running game. `Tests/` checks that the Harmony targets
-and the overrides are still where the code thinks they are; the five checkers in the monorepo's
-`scripts/` check the XML against the game's classes. Neither runs a single line of the mod. What
-follows is the part only a person with the game open can do.
+Run `pwsh -NoProfile -File Tests/Run-All.ps1` first for the automated content, Harmony, override
+and XML checks. The six XML validators are versioned in `Tests/Xml/`; no monorepo is needed.
+These static checks do not execute gameplay. The following scenarios require a running game.
 
-Seventeen scenarios, ordered so that each one leaves the save in the state the next one needs. The
+28 scenarios, ordered so that each one leaves the save in the state the next one needs. The
 whole run is about an hour. Stop at the end of any block; each block stands on its own.
 
 ## Before you start

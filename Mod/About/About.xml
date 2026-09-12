@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>Ancient Chinese Beast And Gene Expanded Renew</name>
+  <name>Ancient Chinese Beast And Gene Expanded Renew (unofficial)</name>
   <author>andery233xj, Frolg, DongFang, Ninedaylongbow - 1.6 port: nelim</author>
   <packageId>nelim.ancientchinesebeastandgeneexpandedrenew</packageId>
   <url>https://github.com/vbardales/Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew</url>
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>
-  <description>Update of andery233xj, Frolg, DongFang and Ninedaylongbow's 山海志怪-华夏凶兽和基因扩展 - Ancient Chinese Beast And Gene Expanded to RimWorld 1.6.
+  <description>UNOFFICIAL. This mod is published without the original author's explicit consent. If the original author contacts me to request its removal, I undertake to take it down promptly.
+
+Update of andery233xj, Frolg, DongFang and Ninedaylongbow's 山海志怪-华夏凶兽和基因扩展 - Ancient Chinese Beast And Gene Expanded to RimWorld 1.6.
 
 I am not the author of this mod. The creatures, the art, the mechanics and the original code are theirs; all I did was the work needed to make it run on 1.6, and a pass over the English text. Credit goes to them; mistakes in the update are mine. If the original authors come back to it, or ask me to take this down, I will.
 

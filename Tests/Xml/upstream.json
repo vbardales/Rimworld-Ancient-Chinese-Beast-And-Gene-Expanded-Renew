@@ -1,0 +1,38 @@
+[
+  {
+    "file": "Check-ConfigErrors.ps1",
+    "source": "rimworld/scripts/Check-ConfigErrors.ps1",
+    "snapshotDate": "2026-09-12",
+    "sourceSha256": "48EE0937D63DE27D6FCEBC3FBDCF93A02EDC296451DC7CBA0B3DF7C35A7F28A4"
+  },
+  {
+    "file": "Check-DefInjected.ps1",
+    "source": "rimworld/scripts/Check-DefInjected.ps1",
+    "snapshotDate": "2026-09-12",
+    "sourceSha256": "6242FC37F0B43C61967979F7837DB65D80E12BF8A019A4822D58C6532F6A2C6F"
+  },
+  {
+    "file": "Check-DefRefs.ps1",
+    "source": "rimworld/scripts/Check-DefRefs.ps1",
+    "snapshotDate": "2026-09-12",
+    "sourceSha256": "690B57439FD5FBB74420F469A0AC84729ABDBE359A4126D9B7BB2D809AF81589"
+  },
+  {
+    "file": "Check-TypeRefs.ps1",
+    "source": "rimworld/scripts/Check-TypeRefs.ps1",
+    "snapshotDate": "2026-09-12",
+    "sourceSha256": "772B7AEC5BBE0A152DA644579E1A2235EEDFB2CBCF6D1D3185E0E3DB50DC819C"
+  },
+  {
+    "file": "Check-XmlClasses.ps1",
+    "source": "rimworld/scripts/Check-XmlClasses.ps1",
+    "snapshotDate": "2026-09-12",
+    "sourceSha256": "D687E3215C94AD679D810995EA49405AB7C9280B143A523199C649DE581108C7"
+  },
+  {
+    "file": "Check-XmlFields.ps1",
+    "source": "rimworld/scripts/Check-XmlFields.ps1",
+    "snapshotDate": "2026-09-12",
+    "sourceSha256": "5D91E447CD123BFA08BC2BE7DED4B2071D0C12860DFC7A701E86116FBE75621A"
+  }
+]

@@ -3,6 +3,17 @@
 All notable changes to this port are recorded here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [Unreleased]
+
+- Correct the manual scenario count to 28 throughout the documentation.
+- Add content checks for gene extraction, friendly cloning, duplicate defs and publication
+  metadata, with five negative controls. Explicitly require the three critical port hooks and
+  all nine Harmony patches; assembly checks increase from 22 to 26.
+- Version the six XML validators under `Tests/Xml`, record their provenance, and add
+  `Tests/Run-All.ps1` to build and run the complete suite. Unknown classes and invalid def
+  references now fail the process; two negative controls verify those exit codes.
+- Replace the recursive Workshop search for Harmony with bounded lookup and an explicit path.
+
 ## [1.0.0] — 2026-09-11
 
 First release. Not yet on the Steam Workshop: this tags the source, and the Workshop item follows
@@ -35,7 +46,7 @@ Ported from andery233xj, Frolg, DongFang and Ninedaylongbow's
 
 ### Added — a test suite and a test protocol
 
-- `TESTING.md` is seventeen manual scenarios, ordered so each leaves the save in the state the next
+- `TESTING.md` is 28 manual scenarios, ordered so each leaves the save in the state the next
   one needs, covering the four beasts, the chicken, the twelve genes, the bench, the schedule and
   the save. Every expected result in it is read out of the code, never observed. It exists because
   nothing else in this repository can say whether the mod works.
@@ -47,7 +58,7 @@ Ported from andery233xj, Frolg, DongFang and Ninedaylongbow's
   Harmony target still resolves, that every patch method's parameters still bind by name, and that
   no method that shares a name with a virtual one has quietly stopped overriding it. Those are the
   three ways this port broke, and none of them is a compile error. `dotnet run --project Tests`,
-  22 checks, no game needed and none launched.
+  22 checks at release, requiring installed game assemblies but no running game.
 - **Four development-mode entries, under "Ancient Chinese Beast" in the debug menu**, replacing the
   three buttons the original hung on a comp on the firecracker. Two of those three added to a
   counter no code reads, and all three needed a firecracker spawned and selected to appear. A beast

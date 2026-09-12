@@ -48,6 +48,11 @@ if (!File.Exists(modDll))
 // of to an error.
 var probeDirs = new List<string> { managed, Path.GetDirectoryName(modDll) };
 foreach (var harmonyDir in FindHarmony()) probeDirs.Add(harmonyDir);
+if (probeDirs.Count == 2)
+{
+    Console.Error.WriteLine("Harmony 2 was not found. Pass its 0Harmony.dll path as the second argument.");
+    return 2;
+}
 var probed = new HashSet<string>();
 AppDomain.CurrentDomain.AssemblyResolve += (_, e) =>
 {
@@ -63,8 +68,11 @@ AppDomain.CurrentDomain.AssemblyResolve += (_, e) =>
 
 var mod = Assembly.LoadFrom(modDll);
 var game = Assembly.LoadFrom(Path.Combine(managed, "Assembly-CSharp.dll"));
-var modTypes = TypesOf(mod);
+// Do not silently omit a broken mod class: only the game's optional Unity types may be skipped.
+var modTypes = mod.GetTypes();
 var gameTypes = TypesOf(game);
+if (args.Length > 2)
+    File.WriteAllLines(args[2], gameTypes.Concat(modTypes).Select(t => t.FullName).Where(n => n != null).OrderBy(n => n));
 
 Console.WriteLine($"mod   {Path.GetFileName(modDll)}  {modTypes.Length} types");
 Console.WriteLine($"game  Assembly-CSharp.dll  {gameTypes.Length} types  ({FileVersion(Path.Combine(managed, "Assembly-CSharp.dll"))})");
@@ -76,6 +84,9 @@ int checks = 0;
 CheckHarmonyTargets();
 CheckPatchParameters();
 CheckOverridesStillOverride();
+CheckRequiredHooks();
+checks++;
+if (PatchedTypes().Count() != 9) failures.Add("Expected nine Harmony patches; a patch may have been removed or skipped.");
 
 Console.WriteLine();
 if (failures.Count == 0)
@@ -88,6 +99,24 @@ foreach (var f in failures) Console.WriteLine("  " + f);
 return 1;
 
 // ---------------------------------------------------------------------------------------------
+
+void CheckRequiredHooks()
+{
+    foreach (var (className, methodName, argumentNames) in new[]
+    {
+        ("PawnFlyingStrike", "TickInterval", new[] { "System.Int32" }),
+        ("CompSeXieExpansion", "PostDeSpawn", new[] { "Verse.Map", "Verse.DestroyMode" }),
+        ("CompCausePermanentGameCondition", "PostDeSpawn", new[] { "Verse.Map", "Verse.DestroyMode" })
+    })
+    {
+        checks++;
+        var type = mod.GetType("AncientChineseBeast." + className);
+        var hook = type?.GetMethods(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.DeclaredOnly)
+            .SingleOrDefault(m => m.Name == methodName && m.GetParameters().Select(p => p.ParameterType.FullName).SequenceEqual(argumentNames));
+        if (hook == null || hook.GetBaseDefinition() == hook)
+            failures.Add($"Required hook {className}.{methodName} is missing or no longer overrides the game hook.");
+    }
+}
 
 // Every [HarmonyPatch] must name a method that exists. The attribute comes in two shapes here:
 // with an explicit Type[] of argument types, and without, which is only unambiguous when the
@@ -292,29 +321,13 @@ static string FileVersion(string path) =>
 
 IEnumerable<string> FindHarmony()
 {
-    // Harmony ships as its own mod, and its assembly is needed here so that the [HarmonyPatch]
-    // attributes on the mod's patch classes can be read at all.
-    //
-    // The version matters, and finding the wrong one is not hypothetical: the first 0Harmony.dll
-    // under the Workshop folder on this machine is a 1.2 shipped inside some other mod, and
-    // HarmonyLib.HarmonyPatch does not exist in Harmony 1 - the namespace was Harmony. Loading it
-    // makes every attribute read throw TypeLoadException. So: only version 2 and above, newest
-    // first, which puts brrainz.harmony's own copy in front of anything vendored.
-    var roots = new[]
+    // Probe only known locations: scanning the entire Workshop can take minutes.
+    var candidates = args.Length > 1 ? new[] { args[1] } : new[]
     {
-        @"C:\Program Files (x86)\Steam\steamapps\workshop\content\294100",
-        @"C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods",
+        Path.Combine(managed, "0Harmony.dll"),
+        Path.GetFullPath(Path.Combine(managed, "..", "..", "..", "..", "workshop", "content", "294100", "2009463077", "Current", "Assemblies", "0Harmony.dll")),
     };
-    var found = new List<(Version version, string dir)>();
-    foreach (var root in roots.Where(Directory.Exists))
-        foreach (var dll in Directory.EnumerateFiles(root, "0Harmony.dll", SearchOption.AllDirectories))
-        {
-            try
-            {
-                var v = AssemblyName.GetAssemblyName(dll).Version;
-                if (v.Major >= 2) found.Add((v, Path.GetDirectoryName(dll)));
-            }
-            catch { /* not a managed assembly, or unreadable: it is not the one we want either */ }
-        }
-    return found.OrderByDescending(f => f.version).Select(f => f.dir).Distinct();
+    return candidates.Where(File.Exists)
+        .Where(p => AssemblyName.GetAssemblyName(p).Version.Major >= 2)
+        .Select(p => Path.GetDirectoryName(Path.GetFullPath(p))).Take(1);
 }

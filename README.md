@@ -1,4 +1,6 @@
-# Ancient Chinese Beast And Gene Expanded Renew
+# Ancient Chinese Beast And Gene Expanded Renew (unofficial)
+
+UNOFFICIAL. This mod is published without the original author's explicit consent. If the original author contacts me to request its removal, I undertake to take it down promptly.
 
 A RimWorld 1.6 port of **山海志怪-华夏凶兽和基因扩展 — Ancient Chinese Beast And Gene Expanded**
 by **andery233xj, Frolg, DongFang and Ninedaylongbow** — Steam Workshop
@@ -108,14 +110,23 @@ published folder by `Source/Directory.Build.props`.
 
 ## Testing
 
-```bash
-dotnet run --project Tests
+```powershell
+pwsh -NoProfile -File Tests/Run-All.ps1
 ```
 
-This one does need RimWorld installed, since it reads the game's own assembly. Pass the path to
-`RimWorldWin64_Data/Managed` as an argument if the game is not in the default Steam location.
+Requires PowerShell 7, the .NET 8 SDK, RimWorld 1.6 and Harmony 2. The runner builds the mod and
+tests, then checks content contracts, assembly compatibility and XML. For a non-default install:
 
-It checks the three things that broke when this mod met 1.6, none of which the compiler catches:
+```powershell
+pwsh -NoProfile -File Tests/Run-All.ps1 -Managed 'D:/Steam/steamapps/common/RimWorld/RimWorldWin64_Data/Managed' -Harmony 'D:/Steam/steamapps/workshop/content/294100/2009463077/Current/Assemblies/0Harmony.dll'
+```
+
+`-GameData` can override the game's Data directory. Missing prerequisites or a failed check
+stop the runner with a nonzero exit code. Harmony lookup only probes known paths; it never
+scans the whole Workshop. For assembly checks alone, use `dotnet run --project Tests --
+"path/to/Managed" "path/to/0Harmony.dll"` after building the mod.
+
+The assembly checks cover the three things that broke when this mod met 1.6:
 
 - every Harmony target still resolves to a real method, with the signature the patch declares
 - every patch method's parameters still bind, since Harmony matches them **by name** against the
@@ -123,12 +134,23 @@ It checks the three things that broke when this mod met 1.6, none of which the c
 - no method that shares a name with a virtual one has quietly stopped overriding it, which is what
   happened to the flyer's `Tick` and to two `PostDeSpawn` hooks
 
-It runs no game code and starts no game. A clean run says the mod's attachment points are where
-it thinks they are, not that the mod works.
+Explicit assertions also require all nine patches and the three critical flight/despawn hooks
+to remain present. Content checks cover XML syntax, duplicate defs, extraction for all twelve
+genes, friendly clone targets, dependencies, the unofficial suffix and the description's GitHub
+link. Five negative controls inject defects into isolated XML copies and require their detection.
+Two more verify that unknown XML classes and parents produce failing validator exit codes.
 
-Whether it works is [TESTING.md](TESTING.md): seventeen scenarios to run by hand in a live colony,
-ordered so each leaves the save in the state the next one needs. Nothing in this mod can be
-exercised any other way, and nothing in it has been.
+The six versioned validators in [Tests/Xml](Tests/Xml/README.md) check fields, classes, def
+references, external types, translation keys and configuration consistency. They need no files
+outside this repository except the installed game and Harmony. Type indexes and test fixtures
+stay in `.build/`, outside the published mod.
+
+The checks start no game and do not execute gameplay. A clean run validates static contracts;
+it does not prove that the mod works in a colony.
+
+Whether it works is [TESTING.md](TESTING.md): 28 scenarios to run by hand in a live colony,
+ordered so each leaves the save in the state the next one needs. These gameplay scenarios have
+not yet been executed.
 
 ## Layout
 
@@ -136,7 +158,7 @@ exercised any other way, and nothing in it has been.
 AncientChineseBeastAndGeneExpandedRenew/
   Mod/     the published folder - this is what the Workshop uploader sends
   Source/  C#, never published
-  Tests/   reflection checks against the installed game, never published
+  Tests/   content, reflection and XML checks, never published
   Art/     uncropped showcase art, the two oversized textures, and the script that letters the preview
   .build/  compiler intermediates, git-ignored, deliberately outside Mod/
 ```
