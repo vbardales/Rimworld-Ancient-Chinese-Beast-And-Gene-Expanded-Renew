@@ -20,11 +20,18 @@ showcase:     complete
 tested_on:
 workshop:     prepublished 2026-09-23, item 3806709132, private, version 0.1.0
 remaining:
-  - unverified: Tests/Pickle now supplies loading, staged creature-review, save/reload,
-      ordinary-beast/Pleiades incidents, chicken crow, nian debug action, representative
-      gene/cloning recipes and compiled local steps/features for the three critical 1.6 hooks,
-      but still lacks nian/firecracker and scheduling scenarios
+  - unverified: Tests/Pickle is written - 13 features, 52 scenarios, nine manual exceptions (M1 to M9)
+      recorded in its README - and has never been run. Its phrases were checked, not its behavior; a
+      run waits for the owner's word, and the incompatibility pass for a download of the original mod
   - unverified: never seen running; TESTING.md is the protocol, 28 scenarios, none run
+  - unverified: nine manual tests to validate (M1 to M9, Tests/Pickle/README.md), the cases the suite
+      cannot play. `tested` waits for every one of them to be green
+  - unverified: butchering a nian beast is promised to yield "nian beast fangs" (race description,
+      README); no item def of that name ships and the race has no butcher product. 09-nian-and-firecracker
+      writes what it yields into the report, and until a run the promise may be inherited text
+  - unverified: four offline scripts need PowerShell 7, which this machine lacks (Check-Translations,
+      Test-ContentChecker, Test-TranslationChecker, Test-XmlExitCodes), so Tests/Run-All.ps1 as a whole
+      has not run since Tests/Pickle/Source was added; every other step of it ran green on 2026-09-24
   - unverified: what the 0.1.0 upload carried. It was made from the working folder, where 80 .dds
       files (21 MB) sat beside the PNGs, written by the game 18 minutes earlier. Check the item's
       file list; the first CI upload builds from a checkout and replaces it
@@ -69,9 +76,9 @@ this is a consequence of the timestamps, not an observation.
 
 | Condition | This mod |
 | --- | --- |
-| No `@wip` | Holds for the eight features written: none carries the tag, they carry `@review` only |
-| Conditional scenarios have run | Nothing to run: the mod has no optional integration. The declared incompatibility with `andery233xj.AncientChineseBeast` still needs a pass of its own, and it is not written |
-| No manual test to validate | Not met. No manual exception is recorded in `Tests/Pickle/README.md`, so it is the suite that blocks: 12 scenarios written against the 28 planned in `TESTING.md`, and none of them run |
+| No `@wip` | Holds for the thirteen features written: none carries the tag, they carry `@review` only |
+| Conditional scenarios have run | The only one is `13-original-mod-incompatibility` (`@requires:andery233xj.AncientChineseBeast`). It is written, with its pass map, and has not run: the original mod has to be downloaded into the WSL install first |
+| No manual test to validate | Not met. Nine manual exceptions (M1 to M9) are recorded in `Tests/Pickle/README.md`, each with why it is not automated and what to inspect. None has been done |
 
 Nothing counts until the suite has been run, so `tested_on` stays empty and a green static run does
 not move `stage`. The first run also has to be made twice, English and French.
@@ -81,8 +88,55 @@ and in what form. None exists yet: no Pickle report of this mod is in the shared
 runner's archive.
 
 **Queue tickets.** A Codex heartbeat is what a Claude session does with a watcher, the Monitor tool,
-on its ticket. The suite is not ready to take one: its README says it must not be run before the
-nian/firecracker and scheduling scenarios exist.
+on its ticket. The suite is written and its phrases check, and it takes no ticket until the owner
+authorizes one (`PickleTools/TESTING.md`, after WSL's root filesystem went read-only on 2026-09-23).
+When it does, the launch is followed by a watcher and not polled.
+
+### The Pickle suite, finished — 2026-09-24
+
+**What it is now.** `Tests/Pickle/` holds 13 features and 52 scenarios once the outlines are expanded,
+five step classes and a phrase checker. It plays the nian beast and the firecracker (real blows through
+the game's damage path, the fire breath, butchery, the chain of small explosions and its end), the whole
+scheduler by moving the game clock (the debug flag, the first hour of the year and its two negative
+controls, Sexie's 900000 ticks, the sixty-day gate and the daily roll under a seed chosen to win),
+every development action by its Keyed key in whichever language the pass runs, the sexie's tunnel, all
+twelve gene recipes, all five clones, the archite capsules, a tame mingshe's death, the crow's mood and
+its kill count, the bird crowing by itself at four, and the declared incompatibility as its own pass.
+`Tests/Pickle/README.md` maps each of the 28 `TESTING.md` scenarios to the feature that plays it or to a
+manual exception, and lists the three pass commands.
+
+**What was checked, and what that proves.** `Tests/Pickle/Check-Steps.ps1`: 52 patterns compile, none is
+declared twice or ambiguous with Pickle's 205 built-in expressions, every step that waits declares a
+deadline, and all 250 step lines of the features resolve to exactly one expression. The step assembly
+builds against the game's 1.6 reference assemblies and against the mod's own assembly, so a scheduler
+member that goes away breaks the build. That proves the lines will find their steps. It proves nothing
+about what the steps do: no line of it has run in a game.
+
+**What writing it found.**
+
+- Six steps written earlier waited up to ten seconds with the default five-second deadline. They now
+  declare one, and the checker fails the next one that does not.
+- `I save and reload` and `the save round trips` are not attributes in Pickle: the runner registers them as
+  string literals in `RunSession.RegisterBuiltInEngineSteps`. The checker knows them now.
+- `Tests/Tests.csproj` compiled every `.cs` under `Tests/`, including the net48 Pickle step sources, so
+  the offline suite's `Build tests` step failed. Excluded in the project. `Tests/Run-All.ps1` had last run
+  green before `Tests/Pickle/Source` existed.
+- The nian beast's fangs, above, and the debug labels: the four development actions are now exercised
+  through the Keyed key that names them, so a key untranslated in the language of the run fails the step.
+
+**What was not done.** Nothing was run in a game and no ticket was taken. The original mod is not
+downloaded into the WSL install, so the incompatibility pass cannot stage. The four PowerShell 7 scripts
+above could not be re-run here. When they can, `Tests/Run-All.ps1` is one command, and `preTest -> done`
+is revalidated from its result: everything else it runs was green on 2026-09-24 (262 content checks,
+26 assembly contracts, XML classes and fields, def references, external types, 133 of 133 configuration
+defs), on a delivered assembly whose SHA-256 is still `5F38C060...676769D`.
+
+**The preview.** The copy moved from the lower right to the upper left. The lower-right placement covered
+the three red firecrackers, which are the image's one vivid accent, and its veil dimmed the beast. Five
+placements were rendered through `Art/preview.html` and compared. The delivered one has a two-line title
+at 32 px, a 330 px summary and a smaller veil; `Art/render-preview.cjs` passed every check it has (Segoe UI
+throughout, title over two lines, contrast 8.9, 6.7, 8.1, 7.0 and 5.0 to 1, 763 KB) and the image was
+inspected at 896 px and at 268.
 
 ### Ordered workflow audit — 2026-09-22
 

@@ -3,13 +3,13 @@
 What each Pickle run of this mod showed, in text. **The evidence itself is on disk and ignored by git**:
 `.build/pickle-run-<date>-<time>-<language>/` holds the report of a run (`summary.md`, `junit.xml`, the captures it
 produced), copied out of the runner's shared `pickle-reports/` folder before the next session's run overwrote it. A
-capture is about 3 MB on the other mods measured and a run of this one leaves up to seven; none of it is needed to read
+capture is about 3 MB on the other mods measured and a run of this one leaves up to nine; none of it is needed to read
 what was concluded, which is what the files in this folder say. Root `AGENTS.md`, "Test evidence", is the rule this
 page applies.
 
-**No run is recorded yet.** The companion suite in `Tests/Pickle/` covers 12 scenarios of the 28 in `TESTING.md` and
-its own README says it must not be run before the nian/firecracker and scheduling scenarios exist. The table at the
-bottom stays empty until a run of the finished suite has been read.
+**No run is recorded yet.** The companion suite in `Tests/Pickle/` is written (52 scenarios in 13 features, the
+nine manual exceptions listed in its README) and has not been run: no ticket is taken without the owner's word.
+The table at the bottom stays empty until a run has been read.
 
 ## Which proofs to keep, and which to drop
 
@@ -18,7 +18,7 @@ The disk is full and the runner's report folder is shared by every mod. For this
 - **Keep, per run:** `summary.md` and `junit.xml` (a few KB: what played, what failed), a `log-check.txt` giving the
   two numbers that decide whether the log was clean (red errors, and warnings from this mod, expected 0 and 0), and one
   line in the table of the day's file below. Nothing else is needed to read the conclusion.
-- **Keep, only for the current build, from the English pass:** the seven `@review` captures, each as one **minified**
+- **Keep, only for the current build, from the English pass:** the nine `@review` captures, each as one **minified**
   picture (JPEG, 1280 px wide, quality 70, about 100 KB, never the 3 MB PNG). They are the checks that only a picture
   answers, and the scenario name is the caption:
 
@@ -28,13 +28,18 @@ The disk is full and the runner's report folder is shared by every mod. For this
   | `04-critical-hooks` | sexie scorpion form after human form death |
   | `04-critical-hooks` | qiongqi after its flying strike lands |
   | `05-incidents` | Pleiades star officer after its incident |
+  | `09-nian-and-firecracker` | nian beast breathing fire at a muffalo |
+  | `11-tunnel` | the tunnel opening in the richest room |
   | `06-chicken-crow` | Pleiades star officer crow after its real ability effect |
   | `08-recipes` | nian fire-breath genepack produced by the real recipe hook |
   | `08-recipes` | friendly mingshe produced by the real clone recipe hook |
 
   A green `@review` scenario says the trajectory and its assertions ran, not that anybody looked at the picture. The
-  scenarios `01-loads`, `03-save-reload`, `07-debug-actions` and the drought scenario of `04` take no capture: their
-  proof is the assertion, and `summary.md` holds it.
+  scenarios `01-loads`, `03-save-reload`, `07-debug-actions`, `10-scheduler`, `12-recipes-and-clones`, the drought
+  scenario of `04` and every scenario of `09` but the fire breath take no capture: their proof is the assertion, and
+  `summary.md` holds it. Two things are written into the report as attachments and are worth a line in the day's file:
+  what butchering a nian beast yielded (the fangs question) and which mod's copy of a def the game kept in the
+  incompatibility pass.
 - **Keep, from the French pass:** `summary.md`, `junit.xml` and `log-check.txt`, and a picture only for a check whose
   subject is the French text itself. The pass exists to show the game boots and plays with the French UI; the beasts
   look the same in both languages, so their captures are not kept twice.

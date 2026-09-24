@@ -24,8 +24,11 @@ setup. Record the exception, its reason and the exact evidence to inspect in `Te
 Evidence stays on disk and out of git. Which proofs of a run are worth keeping, in what form and for
 how long, is in `docs/runs/README.md`; read it before deleting or committing anything a run wrote.
 
-The companion suite has not yet been created. Until it exists, the 28 cases below are **planned
-automation coverage**, not completed manual testing and not evidence for `done`.
+The companion suite exists (`Tests/Pickle/`, 13 features, 52 scenarios) and has never been run. Which of the
+28 cases below each feature plays is the table in its README, and so are the nine manual exceptions (M1 to
+M9), the cases it does not play and why. Those nine are the only cases below that a person still has to do
+by hand, and they are manual tests to validate: until they are green the mod cannot be `tested`. The
+other cases are automation that has been written, not evidence that anything passed.
 
 28 scenarios, ordered so that each one leaves the save in the state the next one needs. The
 whole run is about an hour when performed manually. Pickle features should instead reload or

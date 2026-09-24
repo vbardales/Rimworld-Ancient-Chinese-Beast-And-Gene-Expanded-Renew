@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <AssemblyName>AncientChineseBeast.PickleSteps</AssemblyName>
+    <RootNamespace>AncientChineseBeast.PickleSteps</RootNamespace>
+    <LangVersion>latest</LangVersion><Nullable>disable</Nullable><Deterministic>true</Deterministic>
+    <DebugType>none</DebugType><OutputPath>..\Mod\Pickle\Assemblies\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath><GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.*-*" ExcludeAssets="runtime" PrivateAssets="all" />
+    <PackageReference Include="RimWorks.Pickle.Ref" Version="4.*" ExcludeAssets="runtime" PrivateAssets="all" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- The mod under test, referenced so that a member the scheduler steps rely on that goes away breaks
+         the build instead of the run. Private=false: the game has already loaded it, and a second copy
+         next to the step assembly would be a second, separate Singleton. Build Source/ first. -->
+    <Reference Include="AncientChineseBeast">
+      <HintPath>..\..\..\Mod\Assemblies\AncientChineseBeast.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+</Project>
