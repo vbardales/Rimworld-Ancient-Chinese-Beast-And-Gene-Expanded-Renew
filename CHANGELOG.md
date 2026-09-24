@@ -1,31 +1,9 @@
-# Changelog
+# 0.1.0
 
-All notable changes to this port are recorded here.
-The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
-
-## [Unreleased]
-
-- Add complete French DefInjected coverage, including inherited jobs, anatomy, attacks,
-  incident letters and generated gene names. Add English overrides for the remaining Chinese
-  names and bilingual letters while retaining the original Chinese resources.
-- Localize the development actions and their messages through English/French Keyed entries.
-  Refresh saved beast letters from the current language's Def before sending new incidents.
-- Add the mandatory translation gate to `Tests/Run-All.ps1`: a reflected field inventory,
-  EN/FR resource checks and four negative controls. Track static readiness and pending in-game
-  language checks separately in `STATUS.md`.
-- Correct the manual scenario count to 28 throughout the documentation.
-- Add content checks for gene extraction, friendly cloning, duplicate defs and publication
-  metadata, with five negative controls. Explicitly require the three critical port hooks and
-  all nine Harmony patches; assembly checks increase from 22 to 26.
-- Version the six XML validators under `Tests/Xml`, record their provenance, and add
-  `Tests/Run-All.ps1` to build and run the complete suite. Unknown classes and invalid def
-  references now fail the process; two negative controls verify those exit codes.
-- Replace the recursive Workshop search for Harmony with bounded lookup and an explicit path.
-
-## [1.0.0] — 2026-09-11
-
-First release. Not yet on the Steam Workshop: this tags the source, and the Workshop item follows
-once the mod has been tried in a running game.
+First version. RimWorld 1.6. Creation of the `PublishedFileId.txt` file (`Mod/About/PublishedFileId.txt`): the
+Workshop item, 3806709132, was created by the first upload on 2026-09-23 and is private until it is switched to
+public by hand. Nothing in this version has been seen running: the port is checked by static tests only, and
+`TESTING.md` is the inventory of what a game still has to show.
 
 Ported from andery233xj, Frolg, DongFang and Ninedaylongbow's
 **山海志怪-华夏凶兽和基因扩展 — Ancient Chinese Beast And Gene Expanded**, Workshop
@@ -52,12 +30,30 @@ Ported from andery233xj, Frolg, DongFang and Ninedaylongbow's
 - Every one of the nine Harmony patch targets was verified against the 1.6 assemblies by
   reflection before anything was compiled. All nine survived unchanged.
 
+### Added — French, translation gate and validation
+
+- Complete French DefInjected coverage, including inherited jobs, anatomy, attacks, incident
+  letters and generated gene names. English overrides for the remaining Chinese names and
+  bilingual letters, while the original Chinese resources are retained.
+- The development actions and their messages are localized through English/French Keyed entries.
+  Saved beast letters are refreshed from the current language's Def before new incidents are sent.
+- The mandatory translation gate in `Tests/Run-All.ps1`: a reflected field inventory, EN/FR
+  resource checks and four negative controls. Static readiness and the pending in-game language
+  checks are tracked separately in `STATUS.md`.
+- Content checks for gene extraction, friendly cloning, duplicate defs and publication metadata,
+  with five negative controls. The three critical port hooks and all nine Harmony patches are
+  explicitly required; assembly checks went from 22 to 26.
+- The six XML validators are versioned under `Tests/Xml` with their provenance, and
+  `Tests/Run-All.ps1` builds and runs the complete suite. Unknown classes and invalid def
+  references now fail the process; two negative controls verify those exit codes.
+- The recursive Workshop search for Harmony was replaced by a bounded lookup and an explicit path.
+
 ### Added — a test suite and a test protocol
 
-- `TESTING.md` is 28 manual scenarios, ordered so each leaves the save in the state the next
-  one needs, covering the four beasts, the chicken, the twelve genes, the bench, the schedule and
-  the save. Every expected result in it is read out of the code, never observed. It exists because
-  nothing else in this repository can say whether the mod works.
+- `TESTING.md` is 28 scenarios, ordered so each leaves the save in the state the next one needs,
+  covering the four beasts, the chicken, the twelve genes, the bench, the schedule and the save.
+  It is the behavior inventory the Pickle companion suite is written from. Every expected result
+  in it is read out of the code, never observed.
 - **The beast incidents can now be fired from the development menu.** Both workers read the chosen
   beast out of a field only the mod's own clock sets, so firing them by hand raised a null
   reference before anything spawned. `Singleton.BeastFor` falls back to the incident def's own
@@ -66,7 +62,7 @@ Ported from andery233xj, Frolg, DongFang and Ninedaylongbow's
   Harmony target still resolves, that every patch method's parameters still bind by name, and that
   no method that shares a name with a virtual one has quietly stopped overriding it. Those are the
   three ways this port broke, and none of them is a compile error. `dotnet run --project Tests`,
-  22 checks at release, requiring installed game assemblies but no running game.
+  requiring installed game assemblies but no running game.
 - **Four development-mode entries, under "Ancient Chinese Beast" in the debug menu**, replacing the
   three buttons the original hung on a comp on the firecracker. Two of those three added to a
   counter no code reads, and all three needed a firecracker spawned and selected to appear. A beast
@@ -109,13 +105,9 @@ Ported from andery233xj, Frolg, DongFang and Ninedaylongbow's
 - `Storyteller.png` went from 2192×2343 and 5.6 MB to 1160×1240, twice the 580×620 the game draws
   it at; `BeastGeneExtractor.png` from 5334×5334 to 1344×1344. The mod is 6 MB instead of 13 MB.
   Both originals are kept under `Art/textures-original/`.
-- `Preview.png` carries the mod's name. The crop had been chosen with the upper-left third left
-  dark and empty for exactly that, and it had stayed empty. The untitled crop is kept as
-  `Art/Preview-untitled.png` and the script that letters it as `Art/title.ps1`, so the wording can
-  be redone without regenerating the image.
-- The two showcase images were re-encoded, losslessly: `Preview.png` from 840 KB to 590 KB and
-  `ModIcon.png` from 29 KB to 26 KB, both pixel for pixel what they were. Neither needed the alpha
-  channel it carried, and both had been written with a fixed row filter where PNG allows one per
-  row.
+- `Preview.png` carries the mod's name, recomposed onto the calm lower-right ground so the copy no
+  longer covers the beasts; the layout, the renderer and the QA report are under `Art/`.
+- The two showcase images were re-encoded, losslessly: neither needed the alpha channel it
+  carried, and both had been written with a fixed row filter where PNG allows one per row.
 - Harmony is declared as a dependency, as it already was upstream, alongside Biotech.
 - Single-version layout: the 1.4 and 1.5 folders and `LoadFolders.xml` are gone.
