@@ -13,3 +13,7 @@
 *.dll binary
 *.wav binary
 *.mp3 binary
+
+# Pickle pass maps are read line by line by bash in the WSL install, which stages from this working copy: a
+# CR left at the end of a packageId is part of the id. Keep them LF whatever the machine.
+*.map text eol=lf
