@@ -78,8 +78,11 @@ mod only loads after) or are text the port inherited. Until then it is recorded 
 
 ## Passes
 
-There are no optional integrations, and no DLC-absent pass: Biotech is a hard dependency, so the mod does not
-load without it. The passes are these three, and each is a separate launch of the shared runner.
+There is no DLC-absent pass: Biotech is a hard dependency, so the mod does not load without it. About.xml does
+name one optional mod, in `loadAfter`: `ninedaylongbow.ChineseComprehensiveExpansion`. A pass with it is owed
+(`AUDIT.md`: a pass with the optional mods) and is **not written**, because its Workshop id has not been looked
+up; `TESTING.md`, "Passes", lists it as pass 3. The three passes below are written, and each is a separate
+launch of the shared runner.
 
 ```powershell
 powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod AncientChineseBeastAndGeneExpandedRenew -Language English

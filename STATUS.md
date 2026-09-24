@@ -3,13 +3,13 @@ localization: complete
 translation_en: complete
 translation_fr: complete
 settings_audit: not_applicable
-audit_revision: 4871397f5ed3f48a75035b6d090af53039932a62 plus the local preview composition changes recorded below
+audit_revision: eeb57db (pushed, tree clean when the audit began) plus the commit that records the 2026-09-24 audit
 mod:          Ancient Chinese Beast And Gene Expanded Renew (unofficial)
 packageId:    nelim.ancientchinesebeastandgeneexpandedrenew
 repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 visibility:   public
 detached:     yes
-stage:        preTest
+stage:        done
 licence:      silent
 licence_at:   reviewed 2026-09-12 - original files and About.xml, English and Chinese Workshop
             descriptions, all 68 public comments, and the four coauthors' Steam profiles;
@@ -32,6 +32,8 @@ remaining:
   - unverified: four offline scripts need PowerShell 7, which this machine lacks (Check-Translations,
       Test-ContentChecker, Test-TranslationChecker, Test-XmlExitCodes), so Tests/Run-All.ps1 as a whole
       has not run since Tests/Pickle/Source was added; every other step of it ran green on 2026-09-24
+  - unverified: pass 3, the pass with the optional mod ninedaylongbow.ChineseComprehensiveExpansion (the
+      one mod About.xml names in loadAfter), is owed and not written: its Workshop id has not been looked up
   - unverified: what the 0.1.0 upload carried. It was made from the working folder, where 80 .dds
       files (21 MB) sat beside the PNGs, written by the game 18 minutes earlier. Check the item's
       file list; the first CI upload builds from a checkout and replaces it
@@ -54,6 +56,50 @@ root, never inside `Mod/`, so Steam never receives it.
 
 ## Where this one stands
 
+### Ordered workflow audit - 2026-09-24
+
+**Result: `preTest` -> `done`.** Audited revision `eeb57db` (HEAD, pushed, tree clean when the audit began);
+the commit that records this audit follows it. The chain was checked in order against `AUDIT.md` and against
+the artifacts on disk, not against the stage declared here. Nothing was launched in a game, no ticket was
+taken and nothing was published.
+
+| Transition | Result | Evidence and limits |
+| --- | --- | --- |
+| dansMonoRepo -> horsMonoRepo | Validated | Own repository, `origin` public on `main` at HEAD. STATUS present; licence `silent` with its four places named; packageId, repository and folder all spell the displayed name. README, ATTRIBUTION, LICENSE and CHANGELOG in English; the `Mod/` copies of ATTRIBUTION and LICENSE are byte-identical to the root ones (SHA-256 compared). |
+| ModIcon generated | Validated, one note | 128x128 PNG, 27059 bytes. The delivered DLL was rebuilt today and its SHA-256 is unchanged (`5F38C060...676769D`). Note: this session re-encoded the icon losslessly on 2026-09-11, pixel for pixel, before the rule that forbids a session to touch it; it was not redone. |
+| Preview generated | Validated | 896x504 PNG, 762904 bytes, under 1 MB; inspected at 896 px and at 268 px. Recomposed today, text now in the upper left. |
+| preOptions | Validated | Red accent and ochre secondary are distinct in the renderer's own report; English description; title hierarchy (`And`, `Renew`, the unofficial tag) rendered as specified. |
+| options | Not applicable, justified | The 74 source file names include no `Mod` subclass and no settings class; `Mod/Defs` has no MainButton folder. No page and no shortcut exist, so none is empty. Read from file names and the 2026-09-13 inventory, not a symbol search. |
+| l10n | Validated, on unchanged inputs | `.build/translation-coverage.log` and `translation-tests.log` (2026-09-13): 370 Def fields, 9 Keyed entries, 702 injection paths, 0 failures, negative controls passed. Git shows no change to `Mod/Defs`, `Mod/Languages`, `Source` or `Mod/Assemblies` since the l10n commit `ca985d6`. The four scripts that need PowerShell 7 could not be re-run here. |
+| preTest | Validated | `About.xml` declares Harmony and Biotech as hard dependencies and lists the one optional mod in `loadAfter`; no `LoadFolders`, patch or conditional content; changed since only by the GitHub link. |
+| done | Validated | Run today: 262 content checks and 0 failures; the mod built with the delivered hash; 26 assembly contracts; XML classes, XML fields, def references, external types; configuration 133 of 133 defs. Pickle scenarios written (13 features, 52 scenarios), their phrases resolved against Pickle, their scope justified in `Tests/Pickle/README.md`. Settings, DLC-absent and restart passes justified as not applicable. |
+| tested | Unverified | Nothing was played. |
+
+**Defects found, and fixed here.**
+
+- `Tests/Tests.csproj` compiled the net48 Pickle step sources, so `Build tests` failed and `Run-All.ps1` could
+  not complete. Excluded in the project; the build and the assembly contracts pass again.
+- `CHANGELOG.md` recorded the preview change under `0.1.0`, which predates it. `AUDIT.md` wants `0.1.0` to
+  hold only what was uploaded, so the change sits under `1.0.0 - unreleased`, above it.
+- `TESTING.md` did not say how many Pickle passes the mod needs. It does now (four launches).
+- `Tests/Pickle/README.md` said the mod has no optional integration. `loadAfter` names one.
+- A recipe step passed no worker, which the game's own code dereferences. Fixed, see the Pickle section below.
+
+**Mandatory checks still open, for `done` -> `tested`.** None of these is a defect; each is unverified.
+
+- Pass 1 and pass 2 (English and French, without the optional mod): not run. Needs the owner's word for a ticket.
+- Pass 3 (with `ninedaylongbow.ChineseComprehensiveExpansion`): not written, its Workshop id is not looked up.
+- Pass 4 (`13`): written, but the original mod is not downloaded into the WSL install.
+- The nine manual exceptions M1 to M9 (`Tests/Pickle/README.md`): to validate.
+- The `@review` captures: none exists yet, so none has been opened.
+
+**Recommendations, optional.** Install PowerShell 7 so that `Tests/Run-All.ps1` runs as one command. Look up the
+optional mod's Workshop id. `AUDIT.md` writes the prepublication entry as `## [0.1.0]`; the changelog here and
+in the sibling repositories uses `# 0.1.0`, which the owner asked for.
+
+**Left as it was, on purpose.** `.build/translation-inventory.json` was rewritten at 10:30 today by a partial
+run under Windows PowerShell 5.1 (370 entries, a different size). Regenerate it with PowerShell 7 before
+relying on it. The preview on the Workshop item is the lower-right one it was uploaded with.
 ### Prepublication, and what `tested` now requires — 2026-09-24
 
 **The Workshop item exists.** It was created by the first upload on 2026-09-23 at 14:30, from the
@@ -68,7 +114,7 @@ beside the PNGs on 2026-09-23 at 14:12. They were never tracked and are ignored 
 builds from a checkout and will not carry them. The item's actual file list has not been read, so
 this is a consequence of the timestamps, not an observation.
 
-**`stage` stays `preTest`.** Three conditions must all hold before a mod can be `tested`:
+**`stage` is `done`, not `tested`.** Three conditions must all hold before a mod can be `tested`:
 
 1. no scenario tagged `@wip`;
 2. every scenario that depends on a condition (`@requires:`) has run;
@@ -77,7 +123,7 @@ this is a consequence of the timestamps, not an observation.
 | Condition | This mod |
 | --- | --- |
 | No `@wip` | Holds for the thirteen features written: none carries the tag, they carry `@review` only |
-| Conditional scenarios have run | The only one is `13-original-mod-incompatibility` (`@requires:andery233xj.AncientChineseBeast`). It is written, with its pass map, and has not run: the original mod has to be downloaded into the WSL install first |
+| Conditional scenarios have run | `13-original-mod-incompatibility` (`@requires:andery233xj.AncientChineseBeast`) is written with its pass map and has not run: the original mod has to be downloaded into the WSL install first. The pass with the optional mod `ninedaylongbow.ChineseComprehensiveExpansion` (`loadAfter`) is owed and not written |
 | No manual test to validate | Not met. Nine manual exceptions (M1 to M9) are recorded in `Tests/Pickle/README.md`, each with why it is not automated and what to inspect. None has been done |
 
 Nothing counts until the suite has been run, so `tested_on` stays empty and a green static run does
@@ -123,13 +169,16 @@ about what the steps do: no line of it has run in a game.
   green before `Tests/Pickle/Source` existed.
 - The nian beast's fangs, above, and the debug labels: the four development actions are now exercised
   through the Keyed key that names them, so a key untranslated in the language of the run fails the step.
+- The archite-capsule scenario would have failed on a NullReferenceException of the game's own:
+  `GenRecipe.PostProcessProduct` reads `worker.Ideo` with no null check, and the recipe steps passed no
+  worker. They pass the map's first colonist now, and that scenario names one. Read from the game's IL.
 
 **What was not done.** Nothing was run in a game and no ticket was taken. The original mod is not
 downloaded into the WSL install, so the incompatibility pass cannot stage. The four PowerShell 7 scripts
-above could not be re-run here. When they can, `Tests/Run-All.ps1` is one command, and `preTest -> done`
-is revalidated from its result: everything else it runs was green on 2026-09-24 (262 content checks,
-26 assembly contracts, XML classes and fields, def references, external types, 133 of 133 configuration
-defs), on a delivered assembly whose SHA-256 is still `5F38C060...676769D`.
+above could not be re-run here; their last green run (2026-09-13, logs kept in `.build/`) was on inputs
+git shows unchanged since. Everything else `Tests/Run-All.ps1` runs was green on 2026-09-24 (262 content
+checks, 26 assembly contracts, XML classes and fields, def references, external types, 133 of 133
+configuration defs), on a delivered assembly whose SHA-256 is still `5F38C060...676769D`.
 
 **The preview.** The copy moved from the lower right to the upper left. The lower-right placement covered
 the three red firecrackers, which are the image's one vivid accent, and its veil dimmed the beast. Five

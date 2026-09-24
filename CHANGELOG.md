@@ -1,3 +1,14 @@
+# 1.0.0 — unreleased
+
+Not on the Workshop yet. What changed in `Mod/` after the item was created at 0.1.0, and nothing else:
+
+- `Preview.png` moved its text to the upper left. The lower-right placement 0.1.0 shipped covered the three
+  red firecrackers, the image's one vivid accent, and its veil dimmed the beast. The winged beast, the wind
+  sweep and the firecrackers are all in view now, and the title runs on two lines.
+
+Development-only work that never reaches `Mod/` (the Pickle scenarios under `Tests/Pickle/`, the offline test
+project, the evidence rules and `docs/runs/`) is recorded in `STATUS.md`, not here.
+
 # 0.1.0
 
 First version. RimWorld 1.6. Creation of the `PublishedFileId.txt` file (`Mod/About/PublishedFileId.txt`): the
@@ -105,9 +116,8 @@ Ported from andery233xj, Frolg, DongFang and Ninedaylongbow's
 - `Storyteller.png` went from 2192×2343 and 5.6 MB to 1160×1240, twice the 580×620 the game draws
   it at; `BeastGeneExtractor.png` from 5334×5334 to 1344×1344. The mod is 6 MB instead of 13 MB.
   Both originals are kept under `Art/textures-original/`.
-- `Preview.png` carries the mod's name, in the upper-left where the ground is dark and empty: the winged
-  beast, the wind sweep and the three red firecrackers are all in view. An earlier composition put the copy in
-  the lower right and covered the firecrackers. The layout, the renderer and the QA report are under `Art/`.
+- `Preview.png` carries the mod's name, set in the lower right. The layout, the renderer and the QA report
+  are under `Art/`.
 - The two showcase images were re-encoded, losslessly: neither needed the alpha channel it
   carried, and both had been written with a fixed row filter where PNG allows one per row.
 - Harmony is declared as a dependency, as it already was upstream, alongside Biotech.

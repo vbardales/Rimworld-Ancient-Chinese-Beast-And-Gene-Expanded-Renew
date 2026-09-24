@@ -34,6 +34,22 @@ other cases are automation that has been written, not evidence that anything pas
 whole run is about an hour when performed manually. Pickle features should instead reload or
 construct their own state, except for deliberate documented `@same-world` sequences.
 
+## Passes
+
+`AUDIT.md` names three families of Pickle passes and asks each mod to say here how many it needs and what each
+covers. This mod needs four launches:
+
+| # | Pass | Set | Covers |
+| --- | --- | --- | --- |
+| 1 | without the optional mods, English | the minimal set: Core, the DLCs, Harmony, RimLogging, Pickle, Biotech, the mod | every feature but `13`, which is skipped by requirement |
+| 2 | without the optional mods, French | the same set, `-Language French` | the same features, against the French files |
+| 3 | with the optional mod | the minimal set plus `ninedaylongbow.ChineseComprehensiveExpansion`, the one mod `About.xml` names in `loadAfter` | **not written**: it needs that mod's Workshop id, which has not been looked up, and it is where the fangs question (see `Tests/Pickle/README.md`) may be answered |
+| 4 | declared incompatibility | the minimal set plus `andery233xj.AncientChineseBeast`, `wsl-deps.incompat-original.map` | `13`, which asserts the symptom the incompatibility is declared for |
+
+There is no pass without a DLC (Biotech is a hard dependency, so the mod does not load without it) and no
+restart sequence (nothing here crosses a process boundary). Pass 3 is the reason `tested` cannot be reached
+yet on the passes alone: a pass that names an optional mod has not been defined for it.
+
 ## Manual fallback only
 
 - Development mode on: Options, then Development mode. Most scenarios use it.
