@@ -17,4 +17,15 @@
     <InvariantGlobalization>true</InvariantGlobalization>
   </PropertyGroup>
 
+  <!--
+    Tests/Pickle/ is a different project: net48 step sources that reference Pickle and the game, built by
+    Tests/Pickle/Source/*.csproj into a companion mod. An SDK project compiles every .cs under its folder,
+    so without this line the offline suite tries to build them as net8 and fails on the first `using`.
+    It went unseen for a while: Tests/Run-All.ps1 last ran green before Tests/Pickle/Source existed.
+  -->
+  <ItemGroup>
+    <Compile Remove="Pickle\**" />
+    <None Remove="Pickle\**" />
+  </ItemGroup>
+
 </Project>
