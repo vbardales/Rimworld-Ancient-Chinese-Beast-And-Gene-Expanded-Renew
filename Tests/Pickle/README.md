@@ -96,8 +96,8 @@ powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod Anci
 
 The first two are the minimal pass, in both languages; `13` and `14` are skipped by requirement in them, and
 that skip is counted, not passed. The fourth stages A Dog Said 2 (Workshop 3238353862, `wsl-deps.ads2.map`),
-which has to be in the WSL install's Workshop cache first, a download through `Use-Wsl.ps1` that has **not
-been done**; its recipe names are read off that mod's 1.6 files on GitHub, not from a run. The third is the declared-incompatibility pass. It stages the original mod
+which is a Windows subscription (1.3.7), so staging finds it with no download. Its recipe and category names
+were checked against those local 1.6 files; the run itself is what has not happened. The third is the declared-incompatibility pass. It stages the original mod
 (`andery233xj.AncientChineseBeast`, Workshop 3292446841, last supporting 1.5), which has to be in the WSL
 install's Workshop cache first: a download that goes through `Use-Wsl.ps1` and has **not been done**.
 `10-scheduler` already reads the debug labels through their Keyed keys, so the same lines serve both languages.
