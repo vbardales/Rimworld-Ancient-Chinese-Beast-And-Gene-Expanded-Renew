@@ -109,7 +109,12 @@ namespace AncientChineseBeast.PickleSteps
             var method = typeof(GenRecipe).GetMethods(BindingFlags.Public | BindingFlags.Static)
                 .SingleOrDefault(candidate => candidate.Name == "MakeRecipeProducts" && candidate.GetParameters().Length == 8);
             ctx.Assert(method != null, "GenRecipe.MakeRecipeProducts with its 1.6 signature was not loaded");
-            var result = method.Invoke(null, new object[] { recipe, null, new List<Thing>(), null, null, null, null, null }) as IEnumerable<Thing>;
+            // A worker, when the map has one. The mod's postfix replaces the result of the gene and clone recipes
+            // before the game's own iterator ever runs, so they never needed one. The plain product recipe
+            // (the archite capsules) does run it, and GenRecipe.PostProcessProduct reads worker.Ideo with no
+            // null check: with no worker it throws a NullReferenceException that says nothing about the mod.
+            var worker = Map(ctx).mapPawns.FreeColonists.FirstOrDefault();
+            var result = method.Invoke(null, new object[] { recipe, worker, new List<Thing>(), null, null, null, null, null }) as IEnumerable<Thing>;
             var products = result?.ToList();
             ctx.Assert(products != null && products.Count > 0, $"{recipeDefName} produced no recipe products");
             ctx.Set(new RecipeOutput { Products = products });

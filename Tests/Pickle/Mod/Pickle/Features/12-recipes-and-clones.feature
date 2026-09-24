@@ -40,8 +40,10 @@ Feature: Every extractor recipe produces what its def says
       | SZ_Clone_QiongQi   | SZ_QiongQi_Friendly     |
       | SZ_Clone_MingShe   | SZ_MingShe_Friendly     |
 
+  # The one recipe here that runs the game's own product code, which needs a worker to read an ideology from.
   Scenario: rendering a beast corpse gives ten archite capsules
     Given the save "test-colony" is loaded
+    And a colonist "Ada" exists
     When Ancient Chinese Beast: I make recipe "SZ_ExtractGene"
     Then Ancient Chinese Beast: the recipe output holds 10 "ArchiteCapsule"
     And no errors were logged
