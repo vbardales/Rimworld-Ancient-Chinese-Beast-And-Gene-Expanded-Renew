@@ -21,6 +21,9 @@ flight, or a mingshe dying with drought active — and capture it. Manual play i
 missing automation capability or a private pre-existing save; it never substitutes for scenario
 setup. Record the exception, its reason and the exact evidence to inspect in `Tests/Pickle/README.md`.
 
+Evidence stays on disk and out of git. Which proofs of a run are worth keeping, in what form and for
+how long, is in `docs/runs/README.md`; read it before deleting or committing anything a run wrote.
+
 The companion suite has not yet been created. Until it exists, the 28 cases below are **planned
 automation coverage**, not completed manual testing and not evidence for `done`.
 
