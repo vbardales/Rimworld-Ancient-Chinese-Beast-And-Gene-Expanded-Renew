@@ -1,0 +1,11 @@
+# Pass "ads2": A Dog Said... Animal Prosthetics 2 beside this mod, and nothing else optional.
+#
+# SamBucher.ADogSaidAnimalProsthetics2, Workshop 3238353862, by SamBucher, supports 1.4 to 1.6. It declares
+# no dependency: its loadAfter list only orders it after the mods it has patches for, none of which is
+# staged here. This pass plays 14-animal-prosthetics-2, which checks that the recipe lists the game holds
+# on this mod's races carry the prosthetics of the other mod, and that this mod loads before it.
+#
+# The item has to be in the WSL install's Workshop cache before this pass can stage it. That is a download,
+# so it goes through Use-Wsl.ps1 like any other work on the machine (see PickleTools/Headless/README.md,
+# "The lock is about the machine"). It has not been downloaded.
+SamBucher.ADogSaidAnimalProsthetics2   3238353862

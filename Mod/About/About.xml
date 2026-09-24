@@ -34,6 +34,8 @@ A fifth storyteller, Sexie, is included: it likes to cause trouble at random, an
 
 Requires Biotech. Requires Harmony.
 
+Works with A Dog Said... Animal Prosthetics 2 (optional): the five tame clones can receive its prosthetics and bionics like a wolf or a thrumbo, and the Pleiades star officer like a duck. Nothing changes without it.
+
 What changed in the 1.6 update
 
 The mod's own logic is unchanged. What broke was where 1.6 moved the ground under it:
@@ -74,6 +76,9 @@ If I do not answer within a reasonable time after being contacted, anyone may fr
     <li>brrainz.harmony</li>
     <li>ninedaylongbow.ChineseComprehensiveExpansion</li>
   </loadAfter>
+  <loadBefore>
+    <li>SamBucher.ADogSaidAnimalProsthetics2</li>
+  </loadBefore>
   <incompatibleWith>
     <li>andery233xj.AncientChineseBeast</li>
   </incompatibleWith>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Compatibility with "A Dog Said... Animal Prosthetics 2" (SamBucher.ADogSaidAnimalProsthetics2, Workshop 3238353862).
+
+  That mod sorts animals into three cumulative categories, each one an abstract RecipeDef whose recipeUsers
+  is the list of races the category applies to: ADS_Cat1 (basic replacements), ADS_Cat2 (plus simple
+  prosthetics), ADS_Cat3 (plus bionics). Its own z_Category_Patches.xml copies those lists onto the real
+  surgery recipes once, when it runs. A mod that wants its animals in a category adds them to the lists,
+  and has to do it before that copy: About.xml says loadBefore for this reason.
+
+  Only the animals a colony can own are listed. The five friendly clones are trainable combat companions,
+  which is the definition of category 3 (the wolf, the warg and the thrumbo are there); the Pleiades star
+  officer is a small bird and sits with the ducks and the turkeys, in category 2. The four hostile beasts
+  are raid pawns that can never be tamed, so they have no Health tab a player could open and are left out.
+
+  The guard is a conditional on the category def itself: without the other mod the path finds nothing and
+  the operation succeeds silently, so the patch is inert. (MayRequire on an <Operation> is read by nothing.)
+-->
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/RecipeDef[@Name="ADS_Cat1"]</xpath>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <!-- Category 3: bionics -->
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RecipeDef[@Name="ADS_Cat3"]/recipeUsers</xpath>
+          <value>
+            <li>SZ_YearBeast_Friendly</li>
+            <li>SZ_QiongQi_Friendly</li>
+            <li>SZ_MingShe_Friendly</li>
+            <li>SZ_SeXie_Friendly</li>
+            <li>SZ_SeXieInsect_Friendly</li>
+          </value>
+        </li>
+        <!-- Category 2: simple prosthetics -->
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RecipeDef[@Name="ADS_Cat2"]/recipeUsers</xpath>
+          <value>
+            <li>SZ_YearBeast_Friendly</li>
+            <li>SZ_QiongQi_Friendly</li>
+            <li>SZ_MingShe_Friendly</li>
+            <li>SZ_SeXie_Friendly</li>
+            <li>SZ_SeXieInsect_Friendly</li>
+            <li>SZ_Chicken</li>
+          </value>
+        </li>
+        <!-- Category 1: basic replacements -->
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RecipeDef[@Name="ADS_Cat1"]/recipeUsers</xpath>
+          <value>
+            <li>SZ_YearBeast_Friendly</li>
+            <li>SZ_QiongQi_Friendly</li>
+            <li>SZ_MingShe_Friendly</li>
+            <li>SZ_SeXie_Friendly</li>
+            <li>SZ_SeXieInsect_Friendly</li>
+            <li>SZ_Chicken</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

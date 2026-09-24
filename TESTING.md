@@ -24,7 +24,7 @@ setup. Record the exception, its reason and the exact evidence to inspect in `Te
 Evidence stays on disk and out of git. Which proofs of a run are worth keeping, in what form and for
 how long, is in `docs/runs/README.md`; read it before deleting or committing anything a run wrote.
 
-The companion suite exists (`Tests/Pickle/`, 13 features, 52 scenarios) and has never been run. Which of the
+The companion suite exists (`Tests/Pickle/`, 14 features, 63 scenarios) and has never been run. Which of the
 28 cases below each feature plays is the table in its README, and so are the nine manual exceptions (M1 to
 M9), the cases it does not play and why. Those nine are the only cases below that a person still has to do
 by hand, and they are manual tests to validate: until they are green the mod cannot be `tested`. The
@@ -37,14 +37,15 @@ construct their own state, except for deliberate documented `@same-world` sequen
 ## Passes
 
 `AUDIT.md` names three families of Pickle passes and asks each mod to say here how many it needs and what each
-covers. This mod needs four launches:
+covers. This mod needs five launches:
 
 | # | Pass | Set | Covers |
 | --- | --- | --- | --- |
-| 1 | without the optional mods, English | the minimal set: Core, the DLCs, Harmony, RimLogging, Pickle, Biotech, the mod | every feature but `13`, which is skipped by requirement |
+| 1 | without the optional mods, English | the minimal set: Core, the DLCs, Harmony, RimLogging, Pickle, Biotech, the mod | every feature but `13` and `14`, which are skipped by requirement |
 | 2 | without the optional mods, French | the same set, `-Language French` | the same features, against the French files |
 | 3 | with the optional mod | the minimal set plus `ninedaylongbow.ChineseComprehensiveExpansion`, the one mod `About.xml` names in `loadAfter` | **not written**: it needs that mod's Workshop id, which has not been looked up, and it is where the fangs question (see `Tests/Pickle/README.md`) may be answered |
 | 4 | declared incompatibility | the minimal set plus `andery233xj.AncientChineseBeast`, `wsl-deps.incompat-original.map` | `13`, which asserts the symptom the incompatibility is declared for |
+| 5 | with A Dog Said... Animal Prosthetics 2 | the minimal set plus `SamBucher.ADogSaidAnimalProsthetics2` (Workshop 3238353862), `wsl-deps.ads2.map` | `14`, block H below: the recipe lists on the races, and the load order |
 
 There is no pass without a DLC (Biotech is a hard dependency, so the mod does not load without it) and no
 restart sequence (nothing here crosses a process boundary). Pass 3 is the reason `tested` cannot be reached
@@ -374,6 +375,22 @@ after a reload, or a drought that comes back without its causer, is a failure he
 1. Add the mod to an existing save: it should load with no error.
 2. Remove it from a save that has beasts in it: the beasts, their genes, the storyteller and the
    extractor go, and the save should still open.
+
+---
+
+## Block H — A Dog Said... Animal Prosthetics 2 (optional)
+
+### H1. The tame clones and the chicken get its prosthetics, the hostile beasts do not
+
+1. Load the mod with `SamBucher.ADogSaidAnimalProsthetics2` after it.
+2. Open a tame `SZ_YearBeast_Friendly` in the Health tab and add a bill.
+
+**Expected.** The operations menu offers the wooden, simple and bionic replacements that fit the parts the
+beast has. The Pleiades star officer is offered wooden and simple ones and no bionic. A hostile beast has
+no such recipe on its race. Without the other mod, nothing in this block exists and the log stays clean.
+
+> Scenario `14` plays the recipe lists and the load order; which operation the tab offers for which body
+> part is the other mod's own logic, and is not asserted.
 
 ---
 

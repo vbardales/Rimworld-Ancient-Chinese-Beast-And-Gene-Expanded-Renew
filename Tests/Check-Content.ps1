@@ -45,6 +45,45 @@ Assert-Content ($about.ModMetaData.name.EndsWith('(unofficial)')) 'The unofficia
 foreach ($dependency in 'brrainz.harmony','Ludeon.RimWorld.Biotech') {
     Assert-Content ($dependency -in @($about.ModMetaData.modDependencies.li.packageId)) "Missing dependency: $dependency"
 }
+
+# Compatibility with A Dog Said... Animal Prosthetics 2. The other mod's data is not in this repository, so
+# the patch is checked against a stand-in that has its three abstract category defs beside a decoy recipe.
+$adsId = 'SamBucher.ADogSaidAnimalProsthetics2'
+$adsPatchPath = Join-Path $ModPath 'Patches/ADogSaidAnimalProsthetics2.xml'
+Assert-Content (Test-Path -LiteralPath $adsPatchPath) 'The A Dog Said 2 patch is missing.'
+if (Test-Path -LiteralPath $adsPatchPath) {
+    $adsPatch = [xml](Get-Content -LiteralPath $adsPatchPath -Raw)
+    $guard = $adsPatch.SelectSingleNode('/Patch/Operation')
+    Assert-Content ($guard.Class -eq 'PatchOperationConditional') 'The A Dog Said 2 patch must be guarded by a conditional on the category def.'
+    Assert-Content ($guard.xpath -eq '/Defs/RecipeDef[@Name="ADS_Cat1"]') 'The guard must test for the category def itself.'
+    Assert-Content ($null -eq $guard.SelectSingleNode('nomatch')) 'The guard must not fail without the other mod.'
+    Assert-Content ($null -eq $adsPatch.SelectSingleNode('//*[@MayRequire]')) 'MayRequire on an operation is read by nothing.'
+    $friendly = @($defs | Where-Object { $_.Name -eq 'ThingDef' -and ([string]$_.defName).EndsWith('_Friendly') } | ForEach-Object { [string]$_.defName })
+    Assert-Content ($friendly.Count -eq 5) 'Expected five friendly clone races.'
+    $expected = @{ ADS_Cat3 = $friendly; ADS_Cat2 = $friendly + 'SZ_Chicken'; ADS_Cat1 = $friendly + 'SZ_Chicken' }
+    $standIn = [xml]'<Defs><RecipeDef Name="ADS_Cat1" Abstract="True"><recipeUsers><li>Husky</li></recipeUsers></RecipeDef><RecipeDef Name="ADS_Cat2" Abstract="True"><recipeUsers><li>Husky</li></recipeUsers></RecipeDef><RecipeDef Name="ADS_Cat3" Abstract="True"><recipeUsers><li>Husky</li></recipeUsers></RecipeDef><RecipeDef><defName>Decoy</defName><recipeUsers><li>Husky</li></recipeUsers></RecipeDef></Defs>'
+    foreach ($add in @($adsPatch.SelectNodes('//li[@Class="PatchOperationAdd"]'))) {
+        $nodes = @($standIn.SelectNodes($add.xpath))
+        Assert-Content ($nodes.Count -eq 1) "Add must select exactly one category list: $($add.xpath)"
+        $category = if ($add.xpath -match '"(ADS_Cat\d)"') { $Matches[1] } else { '' }
+        $added = @($add.SelectNodes('value/li') | ForEach-Object { $_.InnerText })
+        Assert-Content ($category -in $expected.Keys) "Unknown category in the patch: $($add.xpath)"
+        if ($category -in $expected.Keys) {
+            Assert-Content ((@($added | Sort-Object) -join ',') -eq (@($expected[$category] | Sort-Object) -join ',')) "$category must list exactly the animals a colony can own."
+        }
+    }
+    Assert-Content (@($adsPatch.SelectNodes('//li[@Class="PatchOperationAdd"]')).Count -eq 3) 'Expected one add per category.'
+    $withoutOther = [xml]'<Defs><RecipeDef><defName>Decoy</defName></RecipeDef></Defs>'
+    Assert-Content (@($withoutOther.SelectNodes($guard.xpath)).Count -eq 0) 'Without the other mod the guard must match nothing.'
+    $hostile = @($defs | Where-Object { $_.Name -eq 'ThingDef' -and $_.ParentName -eq 'SZBeastParent' -and ([string]$_.defName) -notlike '*_Friendly' -and $_.defName -ne 'SZ_Chicken' } | ForEach-Object { [string]$_.defName })
+    $everyAdded = @($adsPatch.SelectNodes('//value/li') | ForEach-Object { $_.InnerText })
+    Assert-Content ($hostile.Count -ge 4 -and -not ($hostile | Where-Object { $_ -in $everyAdded })) 'A hostile beast must not be given prosthetics.'
+}
+# The categories are copied onto the surgery recipes once, when the other mod runs its own patch, so this mod
+# has to load before it; a loadAfter as well would make the order unsatisfiable.
+Assert-Content ($adsId -in @($about.ModMetaData.loadBefore.li)) 'About.xml must load before A Dog Said 2.'
+Assert-Content ($adsId -notin @($about.ModMetaData.loadAfter.li)) 'About.xml must not also load after A Dog Said 2.'
+Assert-Content ($adsId -notin @($about.ModMetaData.modDependencies.li.packageId)) 'A Dog Said 2 is optional, not a dependency.'
 Write-Output "$script:checks content checks, $($failures.Count) failure(s)."
 $failures | Write-Output
 if ($failures.Count) { exit 1 }

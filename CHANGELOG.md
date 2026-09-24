@@ -6,6 +6,15 @@ Not on the Workshop yet. What changed in `Mod/` after the item was created at 0.
   red firecrackers, the image's one vivid accent, and its veil dimmed the beast. The winged beast, the wind
   sweep and the firecrackers are all in view now, and the title runs on two lines.
 
+- Compatibility with **A Dog Said... Animal Prosthetics 2**
+  ([3238353862](https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862)), built in and optional.
+  `Mod/Patches/ADogSaidAnimalProsthetics2.xml` adds the five tame clones to its category 3 (every prosthesis and
+  bionic, like a wolf or a thrumbo) and the Pleiades star officer to its category 2 (no bionics, like a duck);
+  the four hostile beasts, which a colony can never own, are left out. `About.xml` gains
+  `loadBefore SamBucher.ADogSaidAnimalProsthetics2`, because that mod copies its category lists onto its
+  surgery recipes once and a mod that loads after it writes into lists nobody reads. Without the other mod
+  the patch finds nothing to change and does nothing.
+
 Development-only work that never reaches `Mod/` (the Pickle scenarios under `Tests/Pickle/`, the offline test
 project, the evidence rules and `docs/runs/`) is recorded in `STATUS.md`, not here.
 

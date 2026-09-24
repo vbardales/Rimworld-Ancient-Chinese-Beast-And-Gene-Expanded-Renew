@@ -20,7 +20,7 @@ showcase:     complete
 tested_on:
 workshop:     prepublished 2026-09-23, item 3806709132, private, version 0.1.0
 remaining:
-  - unverified: Tests/Pickle is written - 13 features, 52 scenarios, nine manual exceptions (M1 to M9)
+  - unverified: Tests/Pickle is written - 14 features, 63 scenarios, nine manual exceptions (M1 to M9)
       recorded in its README - and has never been run. Its phrases were checked, not its behavior; a
       run waits for the owner's word, and the incompatibility pass for a download of the original mod
   - unverified: never seen running; TESTING.md is the protocol, 28 scenarios, none run
@@ -32,6 +32,11 @@ remaining:
   - unverified: four offline scripts need PowerShell 7, which this machine lacks (Check-Translations,
       Test-ContentChecker, Test-TranslationChecker, Test-XmlExitCodes), so Tests/Run-All.ps1 as a whole
       has not run since Tests/Pickle/Source was added; every other step of it ran green on 2026-09-24
+  - unverified: A Dog Said... Animal Prosthetics 2 compatibility (Mod/Patches/ADogSaidAnimalProsthetics2.xml,
+      loadBefore in About.xml, added 2026-09-24). Offline: the patch's paths and lists are checked against a
+      stand-in of the other mod's category defs, negative control seen. In game: feature 14, pass 5
+      (wsl-deps.ads2.map, Workshop 3238353862), written, not run, the item not yet in the WSL cache. Its
+      recipe names come from the other mod's GitHub files, not from a run
   - unverified: pass 3, the pass with the optional mod ninedaylongbow.ChineseComprehensiveExpansion (the
       one mod About.xml names in loadAfter), is owed and not written: its Workshop id has not been looked up
   - unverified: what the 0.1.0 upload carried. It was made from the working folder, where 80 .dds
@@ -71,7 +76,7 @@ taken and nothing was published.
 | preOptions | Validated | Red accent and ochre secondary are distinct in the renderer's own report; English description; title hierarchy (`And`, `Renew`, the unofficial tag) rendered as specified. |
 | options | Not applicable, justified | The 74 source file names include no `Mod` subclass and no settings class; `Mod/Defs` has no MainButton folder. No page and no shortcut exist, so none is empty. Read from file names and the 2026-09-13 inventory, not a symbol search. |
 | l10n | Validated, on unchanged inputs | `.build/translation-coverage.log` and `translation-tests.log` (2026-09-13): 370 Def fields, 9 Keyed entries, 702 injection paths, 0 failures, negative controls passed. Git shows no change to `Mod/Defs`, `Mod/Languages`, `Source` or `Mod/Assemblies` since the l10n commit `ca985d6`. The four scripts that need PowerShell 7 could not be re-run here. |
-| preTest | Validated | `About.xml` declares Harmony and Biotech as hard dependencies and lists the one optional mod in `loadAfter`; no `LoadFolders`, patch or conditional content; changed since only by the GitHub link. |
+| preTest | Validated | `About.xml` declares Harmony and Biotech as hard dependencies and lists the one optional mod in `loadAfter`; no `LoadFolders`, patch or conditional content; changed since only by the GitHub link. (2026-09-24, after this audit: one patch, `Patches/ADogSaidAnimalProsthetics2.xml`, and a `loadBefore` were added, see the remaining lines.) |
 | done | Validated | Run today: 262 content checks and 0 failures; the mod built with the delivered hash; 26 assembly contracts; XML classes, XML fields, def references, external types; configuration 133 of 133 defs. Pickle scenarios written (13 features, 52 scenarios), their phrases resolved against Pickle, their scope justified in `Tests/Pickle/README.md`. Settings, DLC-absent and restart passes justified as not applicable. |
 | tested | Unverified | Nothing was played. |
 
