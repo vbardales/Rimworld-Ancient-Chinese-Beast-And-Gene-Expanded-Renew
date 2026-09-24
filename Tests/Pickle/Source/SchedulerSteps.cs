@@ -136,7 +136,23 @@ namespace AncientChineseBeast.PickleSteps
             var map = Stage.CurrentMap(ctx);
             try { await ctx.WaitUntil(() => Stage.OrdinaryBeastPresent(map), seconds); }
             catch (Exception) { }
-            ctx.Assert(Stage.OrdinaryBeastPresent(map), "no mingshe, qiongqi, sexie or tunnel arrived");
+            ctx.Assert(Stage.OrdinaryBeastPresent(map), "no mingshe, qiongqi, sexie or tunnel arrived; " + WhyNoBeast(map));
+        }
+
+        // The first run failed this step for the "beast attack now" debug action with nothing else to go on. The
+        // action builds ordinary incident parameters (not forced), so an incident that refuses to fire on a day-zero
+        // colony would explain it; this puts the answer in the failure message instead of leaving a guess.
+        private static string WhyNoBeast(Map map)
+        {
+            var reasons = new List<string>();
+            foreach (var name in new[] { "SZ_BeastApproach", "SZ_BeastApproachTunnel" })
+            {
+                var def = DefDatabase<IncidentDef>.GetNamedSilentFail(name);
+                if (def == null) { reasons.Add($"{name}: no such incident"); continue; }
+                var parms = RimWorld.StorytellerUtility.DefaultParmsNow(RimWorld.IncidentCategoryDefOf.ThreatBig, map);
+                reasons.Add($"{name}.CanFireNow={def.Worker.CanFireNow(parms)} (forced={parms.forced}, days passed {GenDate.DaysPassed}, earliestDay {def.earliestDay}, minPopulation {def.minPopulation})");
+            }
+            return string.Join("; ", reasons);
         }
 
         // Waited in game ticks, not seconds: "nothing happened" needs the same amount of game time to

@@ -5,7 +5,7 @@ Feature: The nian beast and the firecracker
 
   Scenario: an ordinary blow does a tenth of its damage to the nian beast
     Given the save "test-colony" is loaded
-    And I spawn a "SZ_YearBeast" at (146, 155)
+    And Ancient Chinese Beast: I spawn the pawn "SZ_YearBeast" at x=146 z=155
     When Ancient Chinese Beast: the "SZ_YearBeast" at x=146 z=155 is struck for 30 damage of "Cut"
     Then Ancient Chinese Beast: the last blow dealt at most 3.5 damage
     And Ancient Chinese Beast: the "SZ_YearBeast" at x=146 z=155 is alive
@@ -15,7 +15,7 @@ Feature: The nian beast and the firecracker
   # on an animal with no factor of its own.
   Scenario: the same blow does its full damage to an ordinary animal
     Given the save "test-colony" is loaded
-    And I spawn a "Muffalo" at (146, 155)
+    And Ancient Chinese Beast: I spawn the pawn "Muffalo" at x=146 z=155
     When Ancient Chinese Beast: the "Muffalo" at x=146 z=155 is struck for 30 damage of "Cut"
     Then Ancient Chinese Beast: the last blow dealt more than 25 damage
     And no errors were logged
@@ -24,14 +24,14 @@ Feature: The nian beast and the firecracker
   # and the beast's own factor takes a tenth of that back, so what lands is a hundred times the blow.
   Scenario: a firecracker's damage does a hundred times its size to the nian beast
     Given the save "test-colony" is loaded
-    And I spawn a "SZ_YearBeast" at (146, 155)
+    And Ancient Chinese Beast: I spawn the pawn "SZ_YearBeast" at x=146 z=155
     When Ancient Chinese Beast: the "SZ_YearBeast" at x=146 z=155 is struck for 3 damage of "SZ_Firecracker_Flame"
     Then Ancient Chinese Beast: the last blow dealt more than 200 damage
     And no errors were logged
 
   Scenario: a firecracker going off beside the nian beast wounds it
     Given the save "test-colony" is loaded
-    And I spawn a "SZ_YearBeast" at (146, 155)
+    And Ancient Chinese Beast: I spawn the pawn "SZ_YearBeast" at x=146 z=155
     When Ancient Chinese Beast: a firecracker goes off at x=146 z=154
     Then Ancient Chinese Beast: the "SZ_YearBeast" at x=146 z=155 is wounded within 10 seconds
     And no errors were logged
@@ -41,8 +41,8 @@ Feature: The nian beast and the firecracker
     Given the save "test-colony" is loaded
     And I zoom out
     And I move the camera to (146, 155)
-    And I spawn a "SZ_YearBeast" at (140, 155)
-    And I spawn a "Muffalo" at (150, 155)
+    And Ancient Chinese Beast: I spawn the pawn "SZ_YearBeast" at x=140 z=155
+    And Ancient Chinese Beast: I spawn the pawn "Muffalo" at x=150 z=155
     When Ancient Chinese Beast: the "SZ_YearBeast" at x=140 z=155 breathes fire at the "Muffalo" at x=150 z=155
     And I wait 30 ticks
     Then Ancient Chinese Beast: a thing "SZ_YearBeastFlame" exists within 5 seconds
@@ -54,7 +54,7 @@ Feature: The nian beast and the firecracker
   # beast fangs" and no def of that name ships with the mod, so the report is where that is settled.
   Scenario: butchering a nian beast yields meat, and the report lists everything else it yields
     Given the save "test-colony" is loaded
-    And I spawn a "SZ_YearBeast" at (146, 155)
+    And Ancient Chinese Beast: I spawn the pawn "SZ_YearBeast" at x=146 z=155
     When Ancient Chinese Beast: the "SZ_YearBeast" at x=146 z=155 is killed outright
     And Ancient Chinese Beast: the corpse of a "SZ_YearBeast" at x=146 z=155 is butchered by a colonist
     Then Ancient Chinese Beast: the butchery yielded meat

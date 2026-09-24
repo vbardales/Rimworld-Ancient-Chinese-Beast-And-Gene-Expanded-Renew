@@ -9,11 +9,11 @@ Feature: Ancient Chinese Beast creatures on a clean map
     And I move the camera to (146, 155)
 
   Scenario: the four hostile beasts and the Pleiades star officer render together
-    When I spawn a "SZ_MingShe" at (142, 153)
-    And I spawn a "SZ_QiongQi" at (144, 153)
-    And I spawn a "SZ_SeXie" at (146, 153)
-    And I spawn a "SZ_YearBeast" at (148, 153)
-    And I spawn a "SZ_Chicken" at (150, 153)
+    When Ancient Chinese Beast: I spawn the pawn "SZ_MingShe" at x=142 z=153
+    And Ancient Chinese Beast: I spawn the pawn "SZ_QiongQi" at x=144 z=153
+    And Ancient Chinese Beast: I spawn the pawn "SZ_SeXie" at x=146 z=153
+    And Ancient Chinese Beast: I spawn the pawn "SZ_YearBeast" at x=148 z=153
+    And Ancient Chinese Beast: I spawn the pawn "SZ_Chicken" at x=150 z=153
     And I wait 30 ticks
     Then I take a screenshot "four beasts and the Pleiades star officer"
     And no errors were logged
