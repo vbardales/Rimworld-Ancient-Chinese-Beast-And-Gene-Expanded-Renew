@@ -13,23 +13,24 @@
     "layout": {
       "width": 896,
       "height": 504,
-      "textPosition": "bottom-right",
-      "textRight": 50,
-      "textBottom": 18,
-      "titleSize": 34,
-      "titleWidth": 440,
+      "textPosition": "top-left",
+      "textLeft": 32,
+      "textTop": 24,
+      "titleSize": 32,
+      "titleWidth": 352,
       "titleConnectors": [
         "And"
       ],
       "titleAffixes": [
         "Renew"
       ],
+      "summaryWidth": 330,
       "summary": "Four mythical beasts, their genes, and a divine rooster on the Rim.",
       "veilMode": "dark",
-      "veilStartOpacity": 0.86,
-      "veilHoldOpacity": 0.75,
-      "veilHoldPercent": 45,
-      "veilFadePercent": 85,
+      "veilStartOpacity": 0.8,
+      "veilHoldOpacity": 0.6,
+      "veilHoldPercent": 22,
+      "veilFadePercent": 52,
       "source": "Preview.png",
       "about": "../Mod/About/About.xml"
     }
@@ -86,41 +87,41 @@
   },
   "boxes": {
     "h1": {
-      "x": 406,
-      "y": 276.953125,
-      "width": 440,
-      "height": 74.78125,
+      "x": 32,
+      "y": 24,
+      "width": 352,
+      "height": 70.375,
       "font": "\"Segoe UI\", system-ui, sans-serif",
-      "size": "34px",
+      "size": "32px",
       "weight": "600",
-      "lineHeight": "37.4px",
+      "lineHeight": "35.2px",
       "color": "rgb(242, 236, 225)"
     },
     ".title-link": {
-      "x": 406,
-      "y": 322.34375,
-      "width": 41.0625,
-      "height": 30,
+      "x": 32,
+      "y": 68.1875,
+      "width": 38.640625,
+      "height": 27,
       "font": "\"Segoe UI\", system-ui, sans-serif",
-      "size": "22.1px",
+      "size": "20.8px",
       "weight": "600",
-      "lineHeight": "24.31px",
+      "lineHeight": "22.88px",
       "color": "rgb(242, 236, 225)"
     },
     ".title-suffix": {
-      "x": 706.15625,
-      "y": 322.34375,
-      "width": 66.28125,
-      "height": 30,
+      "x": 314.453125,
+      "y": 68.1875,
+      "width": 62.375,
+      "height": 27,
       "font": "\"Segoe UI\", system-ui, sans-serif",
-      "size": "22.1px",
+      "size": "20.8px",
       "weight": "600",
-      "lineHeight": "24.31px",
+      "lineHeight": "22.88px",
       "color": "rgb(245, 207, 151)"
     },
     ".tag": {
-      "x": 406,
-      "y": 359.734375,
+      "x": 32,
+      "y": 102.375,
       "width": 113.875,
       "height": 26.390625,
       "font": "\"Segoe UI\", system-ui, sans-serif",
@@ -130,9 +131,9 @@
       "color": "rgb(245, 207, 151)"
     },
     ".summary": {
-      "x": 406,
-      "y": 425.125,
-      "width": 430,
+      "x": 32,
+      "y": 167.765625,
+      "width": 330,
       "height": 60.875,
       "font": "\"Segoe UI\", system-ui, sans-serif",
       "size": "21px",
@@ -156,31 +157,31 @@
   "badgeFits": true,
   "contrast": {
     "h1": {
-      "minimum": 8.287615531192829,
+      "minimum": 8.884962855174514,
       "location": {
-        "x": 585,
-        "y": 277
+        "x": 347,
+        "y": 55
       }
     },
     ".title-suffix": {
-      "minimum": 7.2414716581805845,
+      "minimum": 6.741719199377061,
       "location": {
-        "x": 765,
-        "y": 325
+        "x": 370,
+        "y": 93
       }
     },
     ".tag": {
-      "minimum": 6.779930191558857,
+      "minimum": 8.116171609176327,
       "location": {
-        "x": 418,
-        "y": 360
+        "x": 130,
+        "y": 123
       }
     },
     ".summary": {
-      "minimum": 8.577933043381071,
+      "minimum": 7.0167373860291,
       "location": {
-        "x": 448,
-        "y": 458
+        "x": 289,
+        "y": 219
       }
     },
     ".version": {
@@ -191,6 +192,6 @@
       }
     }
   },
-  "bytes": 575625,
+  "bytes": 762904,
   "method": "Contrast on every background pixel in title word rectangles with their respective inks and tag/summary rectangles; opaque badge sampled at its center; shadows excluded."
 }

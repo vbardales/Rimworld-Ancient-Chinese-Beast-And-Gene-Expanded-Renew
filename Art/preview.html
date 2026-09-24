@@ -15,7 +15,7 @@ h1 > .title-link, h1 > .title-suffix { font-size: .65em; }
 h1 > .title-suffix { color: var(--inkSecondary); }
 .tag { width: max-content; margin-top: 8px; font-size: 24px; font-weight: 400; line-height: 1.1; letter-spacing: .2px; color: var(--inkSecondary); }
 .rule { width: 58px; height: 3px; background: var(--accent); margin-top: 20px; margin-bottom: 16px; }
-.summary { width: 430px; font-size: 21px; font-weight: 400; line-height: 1.45; letter-spacing: 0; color: var(--inkPrimary); }
+.summary { width: var(--summary-width, 430px); font-size: 21px; font-weight: 400; line-height: 1.45; letter-spacing: 0; color: var(--inkPrimary); }
 .badge { position: absolute; right: 0; top: 0; width: 80px; height: 80px; background: var(--accent); clip-path: polygon(0 0, 100% 0, 100% 100%); }
 .version { position: absolute; left: 869px; top: 27px; transform: translate(-50%, -50%) rotate(45deg); font-size: 26px; font-weight: 700; line-height: 1; color: var(--badgeInk); text-shadow: none; }
 </style>
@@ -43,6 +43,10 @@ window.previewReady = (async () => {
   for (const [k,v] of Object.entries({...geometry,'title-size':layout.titleSize,'title-width':layout.titleWidth})) {
     if (!Number.isFinite(v)) throw new Error('Invalid text geometry');
     style.setProperty('--'+k,v+'px');
+  }
+  if (layout.summaryWidth !== undefined) {
+    if (!Number.isFinite(layout.summaryWidth)) throw new Error('Invalid summary width');
+    style.setProperty('--summary-width', layout.summaryWidth + 'px');
   }
   style.setProperty('--shadow',layout.veilMode === 'dark' ? '0 3px 10px rgba(0,0,0,.75)' : 'none');
   const rgb = palette.veil.match(/[0-9a-f]{2}/gi).map(v=>parseInt(v,16)).join(',');
