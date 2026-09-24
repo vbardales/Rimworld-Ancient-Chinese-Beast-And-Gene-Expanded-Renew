@@ -13,10 +13,11 @@
     "layout": {
       "width": 896,
       "height": 504,
-      "textLeft": 50,
-      "textTop": 54,
-      "titleSize": 46,
-      "titleWidth": 650,
+      "textPosition": "bottom-right",
+      "textRight": 50,
+      "textBottom": 18,
+      "titleSize": 34,
+      "titleWidth": 440,
       "titleConnectors": [
         "And"
       ],
@@ -85,41 +86,41 @@
   },
   "boxes": {
     "h1": {
-      "x": 50,
-      "y": 54,
-      "width": 650,
-      "height": 101.1875,
+      "x": 406,
+      "y": 276.953125,
+      "width": 440,
+      "height": 74.78125,
       "font": "\"Segoe UI\", system-ui, sans-serif",
-      "size": "46px",
+      "size": "34px",
       "weight": "600",
-      "lineHeight": "50.6px",
+      "lineHeight": "37.4px",
       "color": "rgb(242, 236, 225)"
     },
     ".title-link": {
-      "x": 50,
-      "y": 116.59375,
-      "width": 55.546875,
-      "height": 40,
+      "x": 406,
+      "y": 322.34375,
+      "width": 41.0625,
+      "height": 30,
       "font": "\"Segoe UI\", system-ui, sans-serif",
-      "size": "29.9px",
+      "size": "22.1px",
       "weight": "600",
-      "lineHeight": "32.89px",
+      "lineHeight": "24.31px",
       "color": "rgb(242, 236, 225)"
     },
     ".title-suffix": {
-      "x": 456.078125,
-      "y": 116.59375,
-      "width": 89.65625,
-      "height": 40,
+      "x": 706.15625,
+      "y": 322.34375,
+      "width": 66.28125,
+      "height": 30,
       "font": "\"Segoe UI\", system-ui, sans-serif",
-      "size": "29.9px",
+      "size": "22.1px",
       "weight": "600",
-      "lineHeight": "32.89px",
+      "lineHeight": "24.31px",
       "color": "rgb(245, 207, 151)"
     },
     ".tag": {
-      "x": 50,
-      "y": 163.1875,
+      "x": 406,
+      "y": 359.734375,
       "width": 113.875,
       "height": 26.390625,
       "font": "\"Segoe UI\", system-ui, sans-serif",
@@ -129,8 +130,8 @@
       "color": "rgb(245, 207, 151)"
     },
     ".summary": {
-      "x": 50,
-      "y": 228.578125,
+      "x": 406,
+      "y": 425.125,
       "width": 430,
       "height": 60.875,
       "font": "\"Segoe UI\", system-ui, sans-serif",
@@ -155,31 +156,31 @@
   "badgeFits": true,
   "contrast": {
     "h1": {
-      "minimum": 6.407837087074151,
+      "minimum": 8.287615531192829,
       "location": {
-        "x": 413,
-        "y": 139
+        "x": 585,
+        "y": 277
       }
     },
     ".title-suffix": {
-      "minimum": 5.366941506659209,
+      "minimum": 7.2414716581805845,
       "location": {
-        "x": 474,
-        "y": 142
+        "x": 765,
+        "y": 325
       }
     },
     ".tag": {
-      "minimum": 7.502620064292209,
+      "minimum": 6.779930191558857,
       "location": {
-        "x": 87,
-        "y": 175
+        "x": 418,
+        "y": 360
       }
     },
     ".summary": {
-      "minimum": 6.602230195692184,
+      "minimum": 8.577933043381071,
       "location": {
-        "x": 447,
-        "y": 259
+        "x": 448,
+        "y": 458
       }
     },
     ".version": {
@@ -190,6 +191,6 @@
       }
     }
   },
-  "bytes": 612132,
+  "bytes": 575625,
   "method": "Contrast on every background pixel in title word rectangles with their respective inks and tag/summary rectangles; opaque badge sampled at its center; shadows excluded."
 }

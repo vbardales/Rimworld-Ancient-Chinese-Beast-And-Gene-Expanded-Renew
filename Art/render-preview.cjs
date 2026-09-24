@@ -49,7 +49,9 @@ const contrast = (a,b) => {const x=luminance(a),y=luminance(b);return (Math.max(
     }
     if(boxes['.title-link'].color!==boxes['.summary'].color || boxes.h1.color!==boxes['.summary'].color || boxes['.title-suffix'].color!==boxes['.tag'].color)throw new Error('Incorrect title ink hierarchy');
     for (const b of Object.values(boxes)) if(b.x<0||b.y<0||b.x+b.width>896||b.y+b.height>504)throw new Error('Text outside image');
-    if(boxes.h1.x+boxes.h1.width>792)throw new Error('Title too close to version badge');
+    const intersects = (a,b) => a.x < b.x+b.width && b.x < a.x+a.width && a.y < b.y+b.height && b.y < a.y+a.height;
+    const badgeBounds = {x:816,y:0,width:80,height:80};
+    if(intersects(boxes.h1,badgeBounds))throw new Error('Title overlaps version badge');
     const badgeFits = await page.evaluate(() => {
       const e=document.querySelector('.version'),w=e.offsetWidth,h=e.offsetHeight;
       return [-1,1].every(a=>[-1,1].every(b=>{const x=869+(a*w/2-b*h/2)/Math.sqrt(2),y=27+(a*w/2+b*h/2)/Math.sqrt(2);return x<=896&&y>=0&&x-y>=816;}));

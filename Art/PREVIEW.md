@@ -6,7 +6,9 @@
 background. The current delivered image is `../Mod/About/Preview.png`.
 
 Composition follows `../../STYLE_RIMWORLD.md` in the parent mod collection. `preview.html` loads `preview-palette.json` as its
-only palette and `preview-layout.json` for geometry, summary and veil settings. It reads the
+only palette and `preview-layout.json` for geometry, summary, veil settings and text position. This
+composition uses the calm lower-right ground (`textPosition: bottom-right`) so its title and summary
+do not cover the beasts in the upper half. It reads the
 name, suffix and highest stable supported version from the delivered `About.xml` at render time.
 All text is rasterized directly at 896 x 504, not scaled down from a larger image.
 Title hierarchy is configured by `titleConnectors` and `titleAffixes`: direct spans render
@@ -26,7 +28,7 @@ the veil and badge. Contrast is checked against every pixel in each text region,
 the four corners, using WCAG relative luminance; the badge uses its opaque rendered background.
 `preview-qa/preview-268.png` is the thumbnail used for visual inspection.
 
-Palette rationale: the veil is sampled from shadowed earth at (70,40). The red firecrackers
+Palette rationale: the veil is sampled from the calm lower-right earth. The red firecrackers
 are amplified for the vivid accent, clearly separate from the dominant ochre family. The secondary ink
 comes from the dominant ochre family of earth and fur, lightened while retaining its warmth.
 The final colour values live only in the palette JSON; `STATUS.md` records the checks.

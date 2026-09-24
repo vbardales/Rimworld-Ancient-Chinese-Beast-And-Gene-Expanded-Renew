@@ -1,13 +1,34 @@
-# Manual test scenarios
+# Runtime behavior inventory and review contract
 
 Run `pwsh -NoProfile -File Tests/Run-All.ps1` first for the automated content, Harmony, override
 and XML checks. The six XML validators are versioned in `Tests/Xml/`; no monorepo is needed.
 These static checks do not execute gameplay. The following scenarios require a running game.
 
-28 scenarios, ordered so that each one leaves the save in the state the next one needs. The
-whole run is about an hour. Stop at the end of any block; each block stands on its own.
+## Automation first
 
-## Before you start
+This file is the behavior inventory from which the Pickle companion suite must be written; it is
+**not** an instruction to make a tester set up and play every case by hand. For each applicable
+scenario, the suite must load or create its fixture, spawn the relevant beast/pawn/corpse/item,
+apply the action through the real game path, assert every observable state it can, and then save a
+bounded screenshot or film tagged `@review`. A green run proves that the trajectory and its
+assertions completed; a person only opens the resulting evidence to judge what an image or sound
+can show.
+
+Some evidence remains inherently human: whether animation, particle effects, a sound, text
+clipping or a translated phrase looks or sounds right. Even then the Gherkin scenario must still
+prepare the exact moment — for example a sexie at its transformation, a qiongqi starting its
+flight, or a mingshe dying with drought active — and capture it. Manual play is an exception for a
+missing automation capability or a private pre-existing save; it never substitutes for scenario
+setup. Record the exception, its reason and the exact evidence to inspect in `Tests/Pickle/README.md`.
+
+The companion suite has not yet been created. Until it exists, the 28 cases below are **planned
+automation coverage**, not completed manual testing and not evidence for `done`.
+
+28 scenarios, ordered so that each one leaves the save in the state the next one needs. The
+whole run is about an hour when performed manually. Pickle features should instead reload or
+construct their own state, except for deliberate documented `@same-world` sequences.
+
+## Manual fallback only
 
 - Development mode on: Options, then Development mode. Most scenarios use it.
 - A colony on a temperate map, a handful of colonists, and a stockpile. Growing crops matters for
@@ -361,8 +382,9 @@ Keep the runtime entry in `remaining` until both languages have been checked.
 
 ## What to send back
 
-For each scenario: its number, and **seen** or **not seen**, plus what happened instead. A scenario
-that could not be reached matters as much as one that failed, and so does the log.
+For each manual exception: its scenario number, why Pickle could not cover it, and **seen** or
+**not seen**, plus what happened instead. A scenario that could not be reached matters as much as
+one that failed, and so does the log.
 
 The three that decide whether the port worked, if there is only time for three: **C6** (the sexie
 changes shape), **C5** (the qiongqi lands its flight) and **C3** (the drought ends with its beast).

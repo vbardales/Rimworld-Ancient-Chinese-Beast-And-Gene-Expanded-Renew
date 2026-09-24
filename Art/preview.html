@@ -9,6 +9,7 @@ body { font-family: "Segoe UI", system-ui, sans-serif; }
 .art, .veil { position: absolute; inset: 0; width: 100%; height: 100%; }
 .art { object-fit: cover; }
 .copy { position: absolute; left: var(--left); top: var(--top); text-shadow: var(--shadow); }
+.copy.bottom-right { left: auto; top: auto; right: var(--right); bottom: var(--bottom); }
 h1 { font-size: var(--title-size); font-weight: 600; line-height: 1.1; letter-spacing: 0; width: var(--title-width); text-wrap: balance; color: var(--inkPrimary); }
 h1 > .title-link, h1 > .title-suffix { font-size: .65em; }
 h1 > .title-suffix { color: var(--inkSecondary); }
@@ -34,10 +35,19 @@ window.previewReady = (async () => {
   if (!versions.length) throw new Error('No stable supported version');
   const style = document.documentElement.style;
   for (const [k,v] of Object.entries(palette)) { if(!/^#[0-9A-F]{6}$/i.test(v))throw new Error('Invalid palette'); style.setProperty('--'+k,v); }
-  for (const [k,v] of Object.entries({'left':layout.textLeft,'top':layout.textTop,'title-size':layout.titleSize,'title-width':layout.titleWidth})) style.setProperty('--'+k,v+'px');
+  const position = layout.textPosition || 'top-left';
+  if (!['top-left','bottom-right'].includes(position)) throw new Error('Unsupported text position');
+  const geometry = position === 'bottom-right'
+    ? {'right':layout.textRight,'bottom':layout.textBottom}
+    : {'left':layout.textLeft,'top':layout.textTop};
+  for (const [k,v] of Object.entries({...geometry,'title-size':layout.titleSize,'title-width':layout.titleWidth})) {
+    if (!Number.isFinite(v)) throw new Error('Invalid text geometry');
+    style.setProperty('--'+k,v+'px');
+  }
   style.setProperty('--shadow',layout.veilMode === 'dark' ? '0 3px 10px rgba(0,0,0,.75)' : 'none');
   const rgb = palette.veil.match(/[0-9a-f]{2}/gi).map(v=>parseInt(v,16)).join(',');
-  document.querySelector('.veil').style.background = `radial-gradient(circle at top left, rgba(${rgb},${layout.veilStartOpacity}) 0%, rgba(${rgb},${layout.veilHoldOpacity}) ${layout.veilHoldPercent}%, rgba(${rgb},0) ${layout.veilFadePercent}%)`;
+  const veilAnchor = position === 'bottom-right' ? 'bottom right' : 'top left';
+  document.querySelector('.veil').style.background = `radial-gradient(circle at ${veilAnchor}, rgba(${rgb},${layout.veilStartOpacity}) 0%, rgba(${rgb},${layout.veilHoldOpacity}) ${layout.veilHoldPercent}%, rgba(${rgb},0) ${layout.veilFadePercent}%)`;
   const title = tag ? name.slice(0, name.lastIndexOf(tag)).trim() : name;
   const heading = document.querySelector('h1');
   for (const token of title.split(/(\s+)/)) {
@@ -48,6 +58,7 @@ window.previewReady = (async () => {
     heading.append(span);
   }
   if(heading.textContent !== title) throw new Error('Title text changed');
+  const copy = document.querySelector('.copy'); copy.classList.toggle('bottom-right', position === 'bottom-right');
   const tagNode = document.querySelector('.tag'); tagNode.textContent = tag; tagNode.hidden = !tag;
   document.querySelector('.summary').textContent = layout.summary;
   document.querySelector('.version').textContent = versions[0];

@@ -53,7 +53,9 @@ Source, changelog and the list of defects inherited from the original: https://g
 
 The update work was done with the help of an AI assistant (Claude, by Anthropic). Thanks to andery233xj, Frolg, DongFang and Ninedaylongbow for the mod, and to Andreas Pardeike for Harmony.
 
-If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.</description>
+If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.
+
+[url=https://github.com/vbardales/Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew]Source code on GitHub[/url]</description>
   <modDependencies>
     <li>
       <packageId>brrainz.harmony</packageId>
