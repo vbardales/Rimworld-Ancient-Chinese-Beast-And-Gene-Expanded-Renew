@@ -3,13 +3,13 @@ localization: complete
 translation_en: complete
 translation_fr: complete
 settings_audit: not_applicable
-audit_revision: 4871397f5ed3f48a75035b6d090af53039932a62 plus local changes recorded below
+audit_revision: 4871397f5ed3f48a75035b6d090af53039932a62 plus the local preview composition changes recorded below
 mod:          Ancient Chinese Beast And Gene Expanded Renew (unofficial)
 packageId:    nelim.ancientchinesebeastandgeneexpandedrenew
 repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 visibility:   public
 detached:     yes
-stage:        done
+stage:        preTest
 licence:      silent
 licence_at:   reviewed 2026-09-12 - original files and About.xml, English and Chinese Workshop
             descriptions, all 68 public comments, and the four coauthors' Steam profiles;
@@ -18,11 +18,16 @@ licence_at:   reviewed 2026-09-12 - original files and About.xml, English and Ch
 dependencies: declared
 showcase:     complete
 tested_on:
-workshop:     not published
+workshop:     prepublished 2026-09-23, item 3806709132, private, version 0.1.0
 remaining:
-  - defect: publication metadata uses a raw repository URL instead of the final Steam
-      Source code on GitHub link required by PUBLISHING.md; correct before publication
+  - unverified: Tests/Pickle now supplies loading, staged creature-review, save/reload,
+      ordinary-beast/Pleiades incidents, chicken crow, nian debug action, representative
+      gene/cloning recipes and compiled local steps/features for the three critical 1.6 hooks,
+      but still lacks nian/firecracker and scheduling scenarios
   - unverified: never seen running; TESTING.md is the protocol, 28 scenarios, none run
+  - unverified: what the 0.1.0 upload carried. It was made from the working folder, where 80 .dds
+      files (21 MB) sat beside the PNGs, written by the game 18 minutes earlier. Check the item's
+      file list; the first CI upload builds from a checkout and replaces it
   - unverified: English and French display checks, generated names, debug actions and
       save/reload across languages have not been run; see TESTING.md, Translation checks
   - defect: Singleton.nextBeastTimeHours is incremented, reset, and read by nothing. Inherited,
@@ -31,8 +36,8 @@ remaining:
       branch is unreachable. Inherited, deliberate, costs nothing
   - defect: the keyed string SZ_CannotReachBuildingToExtractGene is referenced from neither the
       C# nor the defs. Inherited, left alone
-session:      c81f6605-4d8c-49a6-a097-494859f3e856
-updated:      2026-09-13
+session:      local_2aa0146a-2f99-4b81-a9c8-6a3572719d9f
+updated:      2026-09-24
 ---
 
 # Ancient Chinese Beast And Gene Expanded Renew — status
@@ -41,6 +46,88 @@ Read by a sweep across every mod, rather than by asking each thread in turn. It 
 root, never inside `Mod/`, so Steam never receives it.
 
 ## Where this one stands
+
+### Prepublication, and what `tested` now requires — 2026-09-24
+
+**The Workshop item exists.** It was created by the first upload on 2026-09-23 at 14:30, from the
+working folder: item 3806709132, private, version 0.1.0. `Mod/About/PublishedFileId.txt` is committed
+and pushed (`89a2575`) and the remote copy was read back with the same number. Steam froze the name,
+the description and the packageId at creation, and the About.xml it received was the one ending in
+the GitHub link. `CHANGELOG.md` opens on `# 0.1.0`. Publications from here go through GitHub
+Actions: a dry-run for the exact commit first, and only Virginie approves `steam-production`.
+
+**What the upload probably carried that git does not.** 80 `.dds` files, 21 MB, written by the game
+beside the PNGs on 2026-09-23 at 14:12. They were never tracked and are ignored now; a CI upload
+builds from a checkout and will not carry them. The item's actual file list has not been read, so
+this is a consequence of the timestamps, not an observation.
+
+**`stage` stays `preTest`.** Three conditions must all hold before a mod can be `tested`:
+
+1. no scenario tagged `@wip`;
+2. every scenario that depends on a condition (`@requires:`) has run;
+3. no manual test left to validate, every one green.
+
+| Condition | This mod |
+| --- | --- |
+| No `@wip` | Holds for the eight features written: none carries the tag, they carry `@review` only |
+| Conditional scenarios have run | Nothing to run: the mod has no optional integration. The declared incompatibility with `andery233xj.AncientChineseBeast` still needs a pass of its own, and it is not written |
+| No manual test to validate | Not met. No manual exception is recorded in `Tests/Pickle/README.md`, so it is the suite that blocks: 12 scenarios written against the 28 planned in `TESTING.md`, and none of them run |
+
+Nothing counts until the suite has been run, so `tested_on` stays empty and a green static run does
+not move `stage`. The first run also has to be made twice, English and French.
+
+**Evidence** stays on disk and out of git. `docs/runs/README.md` says which proofs of a run to keep
+and in what form. None exists yet: no Pickle report of this mod is in the shared folder or in the
+runner's archive.
+
+**Queue tickets.** A Codex heartbeat is what a Claude session does with a watcher, the Monitor tool,
+on its ticket. The suite is not ready to take one: its README says it must not be run before the
+nian/firecracker and scheduling scenarios exist.
+
+### Ordered workflow audit — 2026-09-22
+
+**Result: `done` -> `preTest`.** The actual distributed `Mod/About/About.xml`
+now ends with the exact final
+`[url=https://github.com/vbardales/Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew]Source code on GitHub[/url]`
+link, after the adoption clause. `Tests/Check-Content.ps1` passed all 262 checks after this
+metadata-only correction, and a direct XML check confirmed the exact ending. The raw repository
+URL earlier in the prose and the separate `<url>` field remain supplemental; the final BBCode link
+satisfies the mandatory `Preview generated -> preOptions` criterion. No publication occurred.
+
+The current `stage: preTest` uses the workflow destination name directly. The metadata correction
+does not invalidate the passing settings, localization, dependency, test-plan or automated-test
+checks, but the mandatory Pickle suite was not present when this repository was rechecked. The
+existing 28 manual scenarios are a useful behavior inventory, not the required automated staging
+that produces captures or films for human review.
+
+Independent later evidence remains valid but cannot complete `preTest -> done` without that suite:
+the 2026-09-22 run of `Tests/Run-All.ps1` passed after the sandbox-only SDK access failure was
+retried with the locally installed SDK available. It rebuilt the delivered DLL with the recorded
+SHA-256 `5F38C06080A1E04AEE40FA6448EE430FCBE7D1D8CF73E87AE34534EA8676769D`, passed 262 content
+checks, five content negative controls, 26 assembly contracts, all XML/configuration validators,
+and the EN/FR translation checks and their negative controls. The mod itself was not launched.
+
+The preview was recomposed from the preserved `Art/Preview.png`, without regenerating its
+illustration. `Art/preview-layout.json` now selects the calm lower-right ground so the copy and
+veil no longer cover the beasts in the upper half; `Art/preview.html` and
+`Art/render-preview.cjs` support that explicit position. The delivered `Mod/About/Preview.png`
+was rendered at 896x504, directly inspected at that size and at 268 px, and is 575625 bytes.
+The fresh QA report records Segoe UI without fallback, a two-line title, no out-of-frame text or
+badge overlap, and minimum contrast of 8.29:1 for primary title text, 7.24:1 for the suffix,
+6.78:1 for the tag, 8.58:1 for the summary and 5.03:1 for the badge. The common style guide now
+requires choosing the upper-left or lower-right calm zone that leaves the subject unobscured,
+rather than imposing upper-left placement.
+
+**Strictly necessary next transition:** complete the `Tests/Pickle/` companion. Its initial
+loading, fixed-cell creature-review, save/reload, ordinary-beast/Pleiades incidents and the three
+critical 1.6-hook features, chicken crow, the nian debug action and representative gene/cloning
+recipes are present and the local step DLL compiles. It still needs self-staging features for
+nian/firecracker and scheduling. Each scenario must set up the relevant beast, pawn, corpse,
+research or save state itself; assert what can be asserted; then make only a bounded `@review`
+capture or film available for human judgment. The minimal pass must run in English and French.
+There are no optional integrations to add to a second pass, and the declared upstream
+incompatibility needs its own documented review pass. Only after that suite is complete can
+`preTest -> done` be revalidated; its execution and media review remain `done -> tested` work.
 
 ### Ordered workflow audit — 2026-09-13
 
