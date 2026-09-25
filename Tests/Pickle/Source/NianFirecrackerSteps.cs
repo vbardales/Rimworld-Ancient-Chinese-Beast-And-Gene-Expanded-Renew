@@ -29,8 +29,18 @@ namespace AncientChineseBeast.PickleSteps
             ctx.Assert(damage != null, $"no DamageDef named {damageDefName}");
             var core = pawn.RaceProps.body.corePart;
             ctx.Assert(core != null, $"{defName} has no core body part to strike");
+            var multiplier = pawn.def.damageMultipliers?.FirstOrDefault(m => m.damageDef == damage)?.multiplier;
+            float partBefore = pawn.health.hediffSet.GetPartHealth(core);
             var result = pawn.TakeDamage(new DamageInfo(damage, amount, 999f, -1f, null, core));
             ctx.Set(new Blow { Dealt = result.totalDamageDealt });
+            // The first real run dealt 4.909 where a tenth of 30 is 3: every factor that touches a blow, in the
+            // report, so the number can be explained instead of argued about.
+            var injuries = pawn.health.hediffSet.hediffs.OfType<Hediff_Injury>()
+                .Select(i => $"{i.def.defName} on {i.Part?.def.defName} severity {i.Severity}");
+            ctx.Attach($"blow of {amount} {damageDefName} on {defName}",
+                $"core {core.def.defName} health {partBefore} before; IncomingDamageFactor {pawn.GetStatValue(StatDefOf.IncomingDamageFactor)}; "
+                + $"def damage multiplier {(multiplier.HasValue ? multiplier.Value.ToString() : "none")}; ArmorRating_Sharp {pawn.GetStatValue(StatDefOf.ArmorRating_Sharp)}; "
+                + $"totalDamageDealt {result.totalDamageDealt}; wounded {result.wounded}; injuries: {string.Join("; ", injuries)}");
         }
 
         // Not a blow: the nian beast takes a tenth of every damage but a firecracker's, so "kill it with a

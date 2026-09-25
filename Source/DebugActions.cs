@@ -48,7 +48,7 @@ public static class DebugActions
 
     private static void ForceBeastApproach()
     {
-        Singleton.instance.BeastApproach();
+        Singleton.instance.BeastApproach(forced: true);
     }
 
     private static void ForceYearBeast()

@@ -151,6 +151,22 @@ namespace AncientChineseBeast.PickleSteps
             }
         }
 
+        // The vanilla tunnel spawner keeps the tick at which it opens in a private field. The scenario used to wait 90
+        // seconds of game time for it; on a saturated machine the game runs slower than real time and the launcher's
+        // 120 s watchdog fired first (the second run, 2026-09-25). The delay itself is the game's, not this mod's, so
+        // the scenario brings the deadline to the next tick and waits for the event, the sexie coming out.
+        [When("Ancient Chinese Beast: the tunnel is due to open now")]
+        public void TunnelDueNow(PickleContext ctx)
+        {
+            var spawner = Stage.ThingsOfDef(Map(ctx), "SZ_SeXieTunnelSpawner").FirstOrDefault();
+            ctx.Assert(spawner != null, "no SZ_SeXieTunnelSpawner on the map");
+            var field = typeof(TunnelHiveSpawner).GetField("secondarySpawnTick", BindingFlags.NonPublic | BindingFlags.Instance);
+            ctx.Assert(field != null && field.FieldType == typeof(int),
+                "TunnelHiveSpawner has no int field secondarySpawnTick in this version; its fields are: "
+                + string.Join(", ", typeof(TunnelHiveSpawner).GetFields(BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Instance).Select(f => f.FieldType.Name + " " + f.Name)));
+            field.SetValue(spawner, Find.TickManager.TicksGame + 1);
+        }
+
         [Then("Ancient Chinese Beast: the year-beast debug flag is set")]
         public void YearBeastFlagIsSet(PickleContext ctx)
         {

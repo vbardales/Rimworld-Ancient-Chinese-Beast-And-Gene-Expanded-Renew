@@ -11,5 +11,6 @@ Feature: The sexie's tunnel
     When Ancient Chinese Beast: I look at the first "SZ_SeXieTunnelSpawner"
     And I zoom in
     Then I take a screenshot "the tunnel opening in the richest room"
-    And Ancient Chinese Beast: a "SZ_SeXie" pawn exists within 90 seconds
+    When Ancient Chinese Beast: the tunnel is due to open now
+    Then Ancient Chinese Beast: a "SZ_SeXie" pawn exists within 20 seconds
     And no errors were logged

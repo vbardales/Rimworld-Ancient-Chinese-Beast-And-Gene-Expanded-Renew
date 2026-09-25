@@ -66,3 +66,4 @@ Rules for reading a run:
 | File | Covers |
 | --- | --- |
 | `2026-09-24.md` | the first full pass in English (partial, the launcher died) and the first ADS2 pass |
+| `2026-09-25.md` | the one-scenario runs after the fixes: the nian blow, the tunnel, the development actions |

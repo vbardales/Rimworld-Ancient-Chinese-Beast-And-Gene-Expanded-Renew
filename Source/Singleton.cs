@@ -86,7 +86,10 @@ public class Singleton : IExposable
 		return beast;
 	}
 
-	public void BeastApproach()
+	// forced is for the development action: an incident that is not forced answers to the storyteller's difficulty
+	// and to its own conditions, and on a run where CanFireNow said no the action did nothing at all, silently
+	// (found by the first Pickle run, 2026-09-24). The scheduler keeps asking with forced false, as before.
+	public void BeastApproach(bool forced = false)
 	{
 		Map target = Find.Maps.FindAll((Map x) => x.IsPlayerHome).RandomElement();
 		IncidentDef incidentDef = IncidentDef.Named("SZ_BeastApproach");
@@ -95,6 +98,7 @@ public class Singleton : IExposable
 		List<BeastClass> beasts2 = incidentDef2.GetModExtension<DefModExtension_Beasts>().beasts;
 		int num = Rand.Range(1, beasts.Count + beasts2.Count + 1);
 		IncidentParms parms = StorytellerUtility.DefaultParmsNow(IncidentCategoryDefOf.ThreatBig, target);
+		parms.forced = forced;
 		if (num > beasts.Count)
 		{
 			beast = beasts2[num - beasts.Count - 1];

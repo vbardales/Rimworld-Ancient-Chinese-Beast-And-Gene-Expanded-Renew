@@ -15,6 +15,11 @@ Not on the Workshop yet. What changed in `Mod/` after the item was created at 0.
   surgery recipes once and a mod that loads after it writes into lists nobody reads. Without the other mod
   the patch finds nothing to change and does nothing.
 
+- The development action **Beast attack now** forces its incident. It asked the game whether the incident could fire
+  with ordinary, unforced parameters and, when the answer was no, did nothing at all and said nothing; on the Pickle
+  test colony (day 1) both incidents answered no. The storyteller's own schedule still asks without forcing, as
+  before. Found by the first Pickle run.
+
 Development-only work that never reaches `Mod/` (the Pickle scenarios under `Tests/Pickle/`, the offline test
 project, the evidence rules and `docs/runs/`) is recorded in `STATUS.md`, not here.
 

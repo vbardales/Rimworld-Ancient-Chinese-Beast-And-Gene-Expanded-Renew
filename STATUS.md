@@ -23,6 +23,10 @@ remaining:
   - unverified: Tests/Pickle is written - 14 features, 63 scenarios, nine manual exceptions (M1 to M9)
       recorded in its README - and has never been run. Its phrases were checked, not its behavior; a
       run waits for the owner's word, and the incompatibility pass for a download of the original mod
+  - unverified: the delivered assembly changed on 2026-09-25 (SHA-256 BE213D7D...9653A0, was 5F38C060...676769D): the
+      debug action "Beast attack now" now forces its incident (Singleton.BeastApproach(forced)), because the first
+      Pickle run showed both incidents refusing to fire unforced on a day-1 colony. Built, 26 assembly contracts
+      and 284 content checks green; the scenario that proves it is submitted, not run
   - unverified: never seen running; TESTING.md is the protocol, 28 scenarios, none run
   - unverified: nine manual tests to validate (M1 to M9, Tests/Pickle/README.md), the cases the suite
       cannot play. `tested` waits for every one of them to be green
