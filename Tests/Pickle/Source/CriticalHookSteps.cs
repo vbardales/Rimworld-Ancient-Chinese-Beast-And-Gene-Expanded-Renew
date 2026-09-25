@@ -184,7 +184,8 @@ namespace AncientChineseBeast.PickleSteps
             var map = Map(ctx);
             await Stage.WaitGameSeconds(ctx, () => map.mapPawns.AllPawnsSpawned.Any(p => p.def.defName == defName), seconds);
             ctx.Assert(map.mapPawns.AllPawnsSpawned.Any(p => p.def.defName == defName),
-                $"no spawned pawn has defName {defName}");
+                $"no spawned pawn has defName {defName}; {Stage.LastWaitReport}; spawners left: {Stage.ThingsOfDef(map, Stage.TunnelSpawner).Count()}; "
+                + "pawns on the map: " + string.Join(", ", map.mapPawns.AllPawnsSpawned.Select(p => p.def.defName).Distinct()));
         }
 
         [Then("Ancient Chinese Beast: a {string} or {string} pawn exists within {int} seconds", TimeoutSeconds = 35f)]
