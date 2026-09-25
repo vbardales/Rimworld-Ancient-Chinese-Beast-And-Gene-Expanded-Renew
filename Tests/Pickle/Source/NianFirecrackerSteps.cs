@@ -97,8 +97,7 @@ namespace AncientChineseBeast.PickleSteps
             var target = ctx.Get<BurntTarget>()?.Pawn;
             ctx.Assert(target != null, "no fire was breathed in this scenario");
             bool Reached() => target.Dead || target.health.hediffSet.hediffs.Count > 0 || target.HasAttachment(ThingDefOf.Fire);
-            try { await ctx.WaitUntil(Reached, seconds); }
-            catch (Exception) { }
+            await Stage.WaitGameSeconds(ctx, Reached, seconds);
             ctx.Assert(Reached(), $"the {target.def.defName} took no wound and caught no fire after the nian beast breathed on it");
         }
 
@@ -190,8 +189,7 @@ namespace AncientChineseBeast.PickleSteps
         {
             var pawn = Stage.PawnAt(ctx, defName, x, z);
             bool Wounded() => pawn.Dead || pawn.health.hediffSet.hediffs.Any(h => h is Hediff_Injury);
-            try { await ctx.WaitUntil(Wounded, seconds); }
-            catch (Exception) { }
+            await Stage.WaitGameSeconds(ctx, Wounded, seconds);
             ctx.Assert(Wounded(), $"the {defName} took no injury within {seconds} seconds");
         }
     }

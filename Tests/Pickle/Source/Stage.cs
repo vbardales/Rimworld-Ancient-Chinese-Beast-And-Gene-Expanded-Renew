@@ -30,6 +30,19 @@ namespace AncientChineseBeast.PickleSteps
             return pawn;
         }
 
+        // Waits for a condition in GAME time: "within N seconds" is 60 * N ticks at normal speed, and the ticks are driven
+        // here, five at a time, with the same wait "I wait N ticks" uses. Pickle's autorun default is fast mode, where the
+        // game's tick loop is driven only by that wait: a real-time WaitUntil there watches a simulation that is not moving,
+        // and the first runs failed the tunnel scenario that way (the sexie never came out of a tunnel due at the next
+        // tick). Nor does the wait depend on how fast the machine is, which is what the launcher's 120 s watchdog punished.
+        // The caller asserts afterwards; a condition that never comes true just spends its budget.
+        internal static async System.Threading.Tasks.Task WaitGameSeconds(PickleContext ctx, System.Func<bool> condition, int seconds)
+        {
+            const int step = 5;
+            for (int spent = 0; spent < seconds * 60 && !condition(); spent += step)
+                await ctx.WaitTicks(step);
+        }
+
         internal static bool OrdinaryBeastPresent(Map map)
         {
             if (map.mapPawns.AllPawnsSpawned.Any(p => !p.Dead && OrdinaryBeastPawns.Contains(p.def.defName))) return true;

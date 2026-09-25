@@ -30,9 +30,10 @@ remaining:
   - unverified: never seen running; TESTING.md is the protocol, 28 scenarios, none run
   - unverified: nine manual tests to validate (M1 to M9, Tests/Pickle/README.md), the cases the suite
       cannot play. `tested` waits for every one of them to be green
-  - unverified: butchering a nian beast is promised to yield "nian beast fangs" (race description,
-      README); no item def of that name ships and the race has no butcher product. 09-nian-and-firecracker
-      writes what it yields into the report, and until a run the promise may be inherited text
+  - defect: butchering a nian beast is promised to yield "nian beast fangs" (race description, README,
+      TESTING.md C8). It does not: the run of 2026-09-25 butchered one and the report lists a single product,
+      Meat_SZ_YearBeast x2800. No item def of that name ships and the race has no butcher product, so the
+      promise is inherited text. To decide: correct the three texts, or add the item. Not touched here
   - unverified: four offline scripts need PowerShell 7, which this machine lacks (Check-Translations,
       Test-ContentChecker, Test-TranslationChecker, Test-XmlExitCodes), so Tests/Run-All.ps1 as a whole
       has not run since Tests/Pickle/Source was added; every other step of it ran green on 2026-09-24
@@ -42,8 +43,11 @@ remaining:
       (wsl-deps.ads2.map, Workshop 3238353862, a Windows subscription at 1.3.7), written and submitted to the
       TicketDispatcher. First run 2026-09-25: 4 of 11 passed, 7 failed, all seven because the staging loaded
       this mod after ADS2 (it does not sort by loadBefore), which is what the mechanism predicts and not a defect of
-      the patch; the pass map now puts the mod first and the pass is resubmitted (request 8dd6), not yet run.
-      Its recipe names were checked against the local 1.6 files
+      the patch. With the pass map naming this mod first (`path:` overlay), the second run passed 11 of 11
+      (exitReason passed, 2026-09-25): the five clones offer wooden, simple and bionic replacements, the chicken
+      wooden and simple and no bionic, the four hostile beasts nothing, and the load order is the mod first. Still
+      unverified: what the Health tab's operation menu shows for a given body part, which is the other mod's own
+      logic and is not asserted (TESTING.md, H1)
   - unverified: pass 3, the pass with the optional mod ninedaylongbow.ChineseComprehensiveExpansion (the
       one mod About.xml names in loadAfter), is owed and not written: its Workshop id has not been looked up
   - unverified: what the 0.1.0 upload carried. It was made from the working folder, where 80 .dds

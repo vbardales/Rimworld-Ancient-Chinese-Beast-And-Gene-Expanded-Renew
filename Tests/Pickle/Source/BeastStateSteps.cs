@@ -27,8 +27,7 @@ namespace AncientChineseBeast.PickleSteps
         {
             var map = Stage.CurrentMap(ctx);
             int Living() => map.mapPawns.AllPawnsSpawned.Count(p => p.def.defName == defName && !p.Dead);
-            try { await ctx.WaitUntil(() => Living() == count, seconds); }
-            catch (Exception) { }
+            await Stage.WaitGameSeconds(ctx, () => Living() == count, seconds);
             ctx.Assert(Living() == count, $"{Living()} living {defName} pawn(s) on the map, expected exactly {count}");
         }
 
@@ -36,8 +35,7 @@ namespace AncientChineseBeast.PickleSteps
         public async Task ThingExists(PickleContext ctx, string defName, int seconds)
         {
             var map = Stage.CurrentMap(ctx);
-            try { await ctx.WaitUntil(() => Stage.ThingsOfDef(map, defName).Any(), seconds); }
-            catch (Exception) { }
+            await Stage.WaitGameSeconds(ctx, () => Stage.ThingsOfDef(map, defName).Any(), seconds);
             ctx.Assert(Stage.ThingsOfDef(map, defName).Any(), $"no thing of def {defName} on the map");
         }
 

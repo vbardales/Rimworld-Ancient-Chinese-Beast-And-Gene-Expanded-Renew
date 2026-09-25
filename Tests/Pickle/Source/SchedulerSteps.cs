@@ -134,8 +134,7 @@ namespace AncientChineseBeast.PickleSteps
         public async Task OrdinaryBeastArrives(PickleContext ctx, int seconds)
         {
             var map = Stage.CurrentMap(ctx);
-            try { await ctx.WaitUntil(() => Stage.OrdinaryBeastPresent(map), seconds); }
-            catch (Exception) { }
+            await Stage.WaitGameSeconds(ctx, () => Stage.OrdinaryBeastPresent(map), seconds);
             ctx.Assert(Stage.OrdinaryBeastPresent(map), "no mingshe, qiongqi, sexie or tunnel arrived; " + WhyNoBeast(map));
         }
 

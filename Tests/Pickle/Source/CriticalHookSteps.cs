@@ -45,8 +45,7 @@ namespace AncientChineseBeast.PickleSteps
         public async Task DroughtEnds(PickleContext ctx, int seconds)
         {
             var map = Map(ctx);
-            try { await ctx.WaitUntil(() => !map.gameConditionManager.ActiveConditions.Any(c => c.def.defName == "SZ_MingSheDrought"), seconds); }
-            catch (Exception) { }
+            await Stage.WaitGameSeconds(ctx, () => !map.gameConditionManager.ActiveConditions.Any(c => c.def.defName == "SZ_MingSheDrought"), seconds);
             ctx.Assert(!map.gameConditionManager.ActiveConditions.Any(c => c.def.defName == "SZ_MingSheDrought"), "SZ_MingSheDrought remained after its mingshe died");
         }
 
@@ -54,8 +53,7 @@ namespace AncientChineseBeast.PickleSteps
         public async Task Appears(PickleContext ctx, string defName, int x, int z, int seconds)
         {
             var cell = new IntVec3(x, 0, z); var map = Map(ctx);
-            try { await ctx.WaitUntil(() => cell.GetThingList(map).OfType<Pawn>().Any(p => p.def.defName == defName), seconds); }
-            catch (Exception) { }
+            await Stage.WaitGameSeconds(ctx, () => cell.GetThingList(map).OfType<Pawn>().Any(p => p.def.defName == defName), seconds);
             ctx.Assert(cell.GetThingList(map).OfType<Pawn>().Any(p => p.def.defName == defName), $"{defName} did not appear at x={x} z={z}");
         }
 
@@ -184,8 +182,7 @@ namespace AncientChineseBeast.PickleSteps
         public async Task PawnExists(PickleContext ctx, string defName, int seconds)
         {
             var map = Map(ctx);
-            try { await ctx.WaitUntil(() => map.mapPawns.AllPawnsSpawned.Any(p => p.def.defName == defName), seconds); }
-            catch (Exception) { }
+            await Stage.WaitGameSeconds(ctx, () => map.mapPawns.AllPawnsSpawned.Any(p => p.def.defName == defName), seconds);
             ctx.Assert(map.mapPawns.AllPawnsSpawned.Any(p => p.def.defName == defName),
                 $"no spawned pawn has defName {defName}");
         }
@@ -195,8 +192,7 @@ namespace AncientChineseBeast.PickleSteps
         {
             var map = Map(ctx);
             bool Exists() => map.mapPawns.AllPawnsSpawned.Any(p => p.def.defName == firstDefName || p.def.defName == secondDefName);
-            try { await ctx.WaitUntil(Exists, seconds); }
-            catch (Exception) { }
+            await Stage.WaitGameSeconds(ctx, Exists, seconds);
             ctx.Assert(Exists(), $"no spawned pawn has defName {firstDefName} or {secondDefName}");
         }
 
@@ -205,8 +201,7 @@ namespace AncientChineseBeast.PickleSteps
         {
             var map = Map(ctx);
             bool Absent() => !map.mapPawns.AllPawnsSpawned.Any(p => p.def.defName == defName && !p.Dead);
-            try { await ctx.WaitUntil(Absent, seconds); }
-            catch (Exception) { }
+            await Stage.WaitGameSeconds(ctx, Absent, seconds);
             ctx.Assert(Absent(), $"a living {defName} pawn remained after the staged behavior");
         }
 
@@ -214,8 +209,7 @@ namespace AncientChineseBeast.PickleSteps
         public async Task QiongQiLands(PickleContext ctx, int x, int z, int seconds)
         {
             var cell = new IntVec3(x, 0, z); var map = Map(ctx);
-            try { await ctx.WaitUntil(() => cell.GetThingList(map).OfType<Pawn>().Any(p => p.def.defName == "SZ_QiongQi"), seconds); }
-            catch (Exception) { }
+            await Stage.WaitGameSeconds(ctx, () => cell.GetThingList(map).OfType<Pawn>().Any(p => p.def.defName == "SZ_QiongQi"), seconds);
             ctx.Assert(cell.GetThingList(map).OfType<Pawn>().Any(p => p.def.defName == "SZ_QiongQi"), "qiongqi never landed at the flight destination");
         }
     }

@@ -3,10 +3,14 @@
 # read and cannot use, so each scenario strikes a real pawn through the game's own damage path.
 Feature: The nian beast and the firecracker
 
+  # A bullet, not a cut: the first run struck with a cut and read 4.235 where a tenth of 30 is 3, because a cut spills
+  # onto a second body part and the total is the sum of two injuries (2.1176 on the leg, 2.1176 on the body). The
+  # bullet lands on the one part it is aimed at, so the number is the tenth itself, and the control below has one
+  # injury to compare with too.
   Scenario: an ordinary blow does a tenth of its damage to the nian beast
     Given the save "test-colony" is loaded
     And Ancient Chinese Beast: I spawn the pawn "SZ_YearBeast" at x=146 z=155
-    When Ancient Chinese Beast: the "SZ_YearBeast" at x=146 z=155 is struck for 30 damage of "Cut"
+    When Ancient Chinese Beast: the "SZ_YearBeast" at x=146 z=155 is struck for 30 damage of "Bullet"
     Then Ancient Chinese Beast: the last blow dealt at most 3.5 damage
     And Ancient Chinese Beast: the "SZ_YearBeast" at x=146 z=155 is alive
     And no errors were logged
@@ -16,7 +20,7 @@ Feature: The nian beast and the firecracker
   Scenario: the same blow does its full damage to an ordinary animal
     Given the save "test-colony" is loaded
     And Ancient Chinese Beast: I spawn the pawn "Muffalo" at x=146 z=155
-    When Ancient Chinese Beast: the "Muffalo" at x=146 z=155 is struck for 30 damage of "Cut"
+    When Ancient Chinese Beast: the "Muffalo" at x=146 z=155 is struck for 30 damage of "Bullet"
     Then Ancient Chinese Beast: the last blow dealt more than 25 damage
     And no errors were logged
 
