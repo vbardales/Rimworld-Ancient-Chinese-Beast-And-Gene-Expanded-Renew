@@ -64,6 +64,10 @@ namespace AncientChineseBeast.PickleSteps
             male.jobs.StartJob(job, JobCondition.InterruptForced);
         }
 
+        // Where a pawn is and what it is doing, for the message of a wait that ran out.
+        private static string Describe(Pawn pawn)
+            => $"{pawn.def.defName} at {pawn.Position}, job {pawn.CurJob?.def?.defName ?? "none"}, spawned {pawn.Spawned}, downed {pawn.Downed}, rest {pawn.needs?.rest?.CurLevelPercentage.ToString("F2") ?? "none"}";
+
         private static string WhyNot(Pawn male, Pawn female)
             => $"male {male.def.defName} {male.gender} stage {male.ageTracker.CurLifeStage.defName}, female {female.def.defName} {female.gender} stage {female.ageTracker.CurLifeStage.defName}";
 
@@ -72,7 +76,7 @@ namespace AncientChineseBeast.PickleSteps
         {
             var pawn = Nth(ctx, number);
             await Stage.WaitGameSeconds(ctx, () => pawn.health.hediffSet.HasHediff(HediffDefOf.Pregnant), seconds);
-            ctx.Assert(pawn.health.hediffSet.HasHediff(HediffDefOf.Pregnant), $"{pawn.def.defName} is not pregnant (job of the male side is unknown here; the female's job is {pawn.CurJob?.def?.defName ?? "none"})");
+            ctx.Assert(pawn.health.hediffSet.HasHediff(HediffDefOf.Pregnant), $"{pawn.def.defName} is not pregnant; {Stage.LastWaitReport}; the male: {Describe(Nth(ctx, 1))}, the female: {Describe(pawn)}");
         }
 
         [When("Ancient Chinese Beast: the pregnancy of pawn {int} is due now")]
@@ -107,7 +111,7 @@ namespace AncientChineseBeast.PickleSteps
             var comp = EggLayer(pawn) as CompEggLayer;
             ctx.Assert(comp != null, $"{pawn.def.defName} has no egg layer");
             await Stage.WaitGameSeconds(ctx, () => comp.FullyFertilized, seconds);
-            ctx.Assert(comp.FullyFertilized, $"{pawn.def.defName} was not fertilised");
+            ctx.Assert(comp.FullyFertilized, $"{pawn.def.defName} was not fertilised; {Stage.LastWaitReport}; the male: {Describe(Nth(ctx, 1))}, the female: {Describe(pawn)}");
         }
 
         [When("Ancient Chinese Beast: the egg of pawn {int} is due now")]
@@ -118,7 +122,7 @@ namespace AncientChineseBeast.PickleSteps
             ctx.Assert(comp != null, $"{pawn.def.defName} has no egg layer");
             var field = typeof(CompEggLayer).GetField("eggProgress", BindingFlags.NonPublic | BindingFlags.Instance);
             ctx.Assert(field != null, "CompEggLayer has no eggProgress field in this version");
-            field.SetValue(comp, 0.9999f);
+            field.SetValue(comp, 1f);
         }
 
         [When("Ancient Chinese Beast: every {string} is due to hatch now")]

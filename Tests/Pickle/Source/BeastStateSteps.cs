@@ -36,7 +36,7 @@ namespace AncientChineseBeast.PickleSteps
         {
             var map = Stage.CurrentMap(ctx);
             await Stage.WaitGameSeconds(ctx, () => Stage.ThingsOfDef(map, defName).Any(), seconds);
-            ctx.Assert(Stage.ThingsOfDef(map, defName).Any(), $"no thing of def {defName} on the map");
+            ctx.Assert(Stage.ThingsOfDef(map, defName).Any(), $"no thing of def {defName} on the map; {Stage.LastWaitReport}");
         }
 
         [When("Ancient Chinese Beast: I look at the first {string}")]
