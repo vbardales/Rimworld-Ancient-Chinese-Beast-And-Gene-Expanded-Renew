@@ -153,6 +153,17 @@ namespace AncientChineseBeast.PickleSteps
         // seconds of game time for it; on a saturated machine the game runs slower than real time and the launcher's
         // 120 s watchdog fired first (the second run, 2026-09-25). The delay itself is the game's, not this mod's, so
         // the scenario brings the deadline to the next tick and waits for the event, the sexie coming out.
+        // A beast incident sends a threat letter, and the game's automatic pause on a major threat stops its clock (the
+        // failure screenshot of the tunnel run of 2026-09-25 shows the pause button lit). A wait for game ticks then
+        // never returns, whatever deadline it was given. The scenario lets the clock run, as a player would after
+        // reading the letter.
+        [When("Ancient Chinese Beast: the game runs at normal speed")]
+        public void RunAtNormalSpeed(PickleContext ctx)
+        {
+            Find.TickManager.CurTimeSpeed = TimeSpeed.Normal;
+            ctx.Assert(!Find.TickManager.Paused, $"the game is still paused at speed {Find.TickManager.CurTimeSpeed}");
+        }
+
         [When("Ancient Chinese Beast: the tunnel is due to open now")]
         public void TunnelDueNow(PickleContext ctx)
         {
