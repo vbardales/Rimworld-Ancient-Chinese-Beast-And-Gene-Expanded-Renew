@@ -71,12 +71,30 @@ namespace AncientChineseBeast.PickleSteps
         private static string WhyNot(Pawn male, Pawn female)
             => $"male {male.def.defName} {male.gender} stage {male.ageTracker.CurLifeStage.defName}, female {female.def.defName} {female.gender} stage {female.ageTracker.CurLifeStage.defName}";
 
+        // The game gives an animal pair a one in two chance of a pregnancy per mating (PawnUtility.Mated), so a single
+        // mating is a coin toss: the first run of this scenario had two of its four races fail on it. When the male has
+        // finished and the female is not pregnant, he mates again, as the think tree would sooner or later; the number of
+        // matings is reported.
         [Then("Ancient Chinese Beast: pawn {int} is pregnant within {int} seconds", TimeoutSeconds = 170f)]
         public async Task IsPregnant(PickleContext ctx, int number, int seconds)
         {
             var pawn = Nth(ctx, number);
-            await Stage.WaitGameSeconds(ctx, () => pawn.health.hediffSet.HasHediff(HediffDefOf.Pregnant), seconds);
-            ctx.Assert(pawn.health.hediffSet.HasHediff(HediffDefOf.Pregnant), $"{pawn.def.defName} is not pregnant; {Stage.LastWaitReport}; the male: {Describe(Nth(ctx, 1))}, the female: {Describe(pawn)}");
+            var male = Nth(ctx, 1);
+            int matings = 1;
+            bool Pregnant() => pawn.health.hediffSet.HasHediff(HediffDefOf.Pregnant);
+            bool DoneOrMateAgain()
+            {
+                if (Pregnant()) return true;
+                if (male.CurJobDef != JobDefOf.Mate && male.Spawned && !male.Downed && PawnUtility.FertileMateTarget(male, pawn))
+                {
+                    male.jobs.StartJob(JobMaker.MakeJob(JobDefOf.Mate, pawn), JobCondition.InterruptForced);
+                    matings++;
+                }
+                return false;
+            }
+            await Stage.WaitGameSeconds(ctx, DoneOrMateAgain, seconds);
+            ctx.Assert(Pregnant(), $"{pawn.def.defName} is not pregnant after {matings} matings; {Stage.LastWaitReport}; the male: {Describe(male)}, the female: {Describe(pawn)}");
+            ctx.Attach("matings", $"{matings} mating(s) before the pregnancy");
         }
 
         [When("Ancient Chinese Beast: the pregnancy of pawn {int} is due now")]

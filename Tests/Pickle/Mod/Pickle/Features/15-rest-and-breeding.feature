@@ -42,7 +42,7 @@ Feature: The beasts rest and breed
     And Ancient Chinese Beast: I spawn the tame "<kind>" of gender male at x=144 z=155
     And Ancient Chinese Beast: I spawn the tame "<kind>" of gender female at x=148 z=155
     When Ancient Chinese Beast: pawn 1 mates with pawn 2
-    Then Ancient Chinese Beast: pawn 2 is pregnant within 40 seconds
+    Then Ancient Chinese Beast: pawn 2 is pregnant within 60 seconds
     When Ancient Chinese Beast: the pregnancy of pawn 2 is due now
     Then Ancient Chinese Beast: a young "<kind>" of the player's faction is born within 20 seconds
     And no errors were logged
