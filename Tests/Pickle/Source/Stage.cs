@@ -37,7 +37,7 @@ namespace AncientChineseBeast.PickleSteps
         // tick). Nor does the wait depend on how fast the machine is, which is what the launcher's 120 s watchdog punished.
         // The caller asserts afterwards; a condition that never comes true just spends its budget.
         //
-        // A wait also stops at 60 real seconds, before Pickle's 100 s step deadline cuts the scenario off with no word on
+        // A wait also stops at 150 real seconds, before the 170 s step deadline of the long waits cuts the scenario off with no word on
         // why (the tunnel run of 2026-09-25 spent all 100 s on 20 game seconds): the caller then asserts with LastWaitReport,
         // which says how many of the ticks it asked for the game really ran.
         internal static string LastWaitReport = "no wait yet";
@@ -47,7 +47,7 @@ namespace AncientChineseBeast.PickleSteps
             const int step = 5;
             var clock = System.Diagnostics.Stopwatch.StartNew();
             int startTick = Find.TickManager.TicksGame;
-            for (int spent = 0; spent < seconds * 60 && !condition() && clock.Elapsed.TotalSeconds < 60; spent += step)
+            for (int spent = 0; spent < seconds * 60 && !condition() && clock.Elapsed.TotalSeconds < 150; spent += step)
                 await ctx.WaitTicks(step);
             LastWaitReport = $"the game advanced {Find.TickManager.TicksGame - startTick} ticks of the {seconds * 60} asked for in {clock.Elapsed.TotalSeconds:F1} real seconds";
         }

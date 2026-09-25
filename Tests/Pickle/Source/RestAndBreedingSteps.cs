@@ -71,7 +71,7 @@ namespace AncientChineseBeast.PickleSteps
         private static string WhyNot(Pawn male, Pawn female)
             => $"male {male.def.defName} {male.gender} stage {male.ageTracker.CurLifeStage.defName}, female {female.def.defName} {female.gender} stage {female.ageTracker.CurLifeStage.defName}";
 
-        [Then("Ancient Chinese Beast: pawn {int} is pregnant within {int} seconds", TimeoutSeconds = 100f)]
+        [Then("Ancient Chinese Beast: pawn {int} is pregnant within {int} seconds", TimeoutSeconds = 170f)]
         public async Task IsPregnant(PickleContext ctx, int number, int seconds)
         {
             var pawn = Nth(ctx, number);
@@ -89,7 +89,7 @@ namespace AncientChineseBeast.PickleSteps
             pregnancy.Severity = 0.9999f;
         }
 
-        [Then("Ancient Chinese Beast: a young {string} of the player's faction is born within {int} seconds", TimeoutSeconds = 100f)]
+        [Then("Ancient Chinese Beast: a young {string} of the player's faction is born within {int} seconds", TimeoutSeconds = 170f)]
         public async Task YoungBorn(PickleContext ctx, string raceDefName, int seconds)
         {
             var map = Stage.CurrentMap(ctx);
@@ -104,7 +104,7 @@ namespace AncientChineseBeast.PickleSteps
 
         private static ThingComp EggLayer(Pawn pawn) => pawn.AllComps.FirstOrDefault(c => c.GetType().Name == "CompEggLayer");
 
-        [Then("Ancient Chinese Beast: pawn {int} is fertilised within {int} seconds", TimeoutSeconds = 100f)]
+        [Then("Ancient Chinese Beast: pawn {int} is fertilised within {int} seconds", TimeoutSeconds = 170f)]
         public async Task IsFertilised(PickleContext ctx, int number, int seconds)
         {
             var pawn = Nth(ctx, number);

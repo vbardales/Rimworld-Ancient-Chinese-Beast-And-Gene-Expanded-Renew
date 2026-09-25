@@ -63,7 +63,7 @@ Feature: The beasts rest and breed
     When Ancient Chinese Beast: pawn 1 mates with pawn 2
     Then Ancient Chinese Beast: pawn 2 is fertilised within 40 seconds
     When Ancient Chinese Beast: the egg of pawn 2 is due now
-    Then Ancient Chinese Beast: a thing "<egg>" exists within 60 seconds
+    Then Ancient Chinese Beast: a thing "<egg>" exists within 30 seconds
     When Ancient Chinese Beast: every "<egg>" is due to hatch now
     Then Ancient Chinese Beast: a young "<kind>" of the player's faction is born within 20 seconds
     And no errors were logged

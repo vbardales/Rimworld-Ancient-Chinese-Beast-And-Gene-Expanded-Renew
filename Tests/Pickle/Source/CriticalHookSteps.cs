@@ -189,7 +189,7 @@ namespace AncientChineseBeast.PickleSteps
 
         // The tunnel scenario waits up to 90 seconds for the sexie to come out; the step's own deadline has to be
         // longer than the longest wait a scenario asks for, or the engine cuts it off at 35 s (it did, first run).
-        [Then("Ancient Chinese Beast: a {string} pawn exists within {int} seconds", TimeoutSeconds = 100f)]
+        [Then("Ancient Chinese Beast: a {string} pawn exists within {int} seconds", TimeoutSeconds = 170f)]
         public async Task PawnExists(PickleContext ctx, string defName, int seconds)
         {
             var map = Map(ctx);
