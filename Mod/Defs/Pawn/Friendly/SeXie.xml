@@ -50,6 +50,26 @@
       <li>
         <bodyGraphicData>
           <texPath>AncientChineseBeast/SeXie/Human</texPath>
+          <drawSize>0.45</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>AncientChineseBeast/SeXie/Human</texPath>
+          <drawSize>0.45</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>AncientChineseBeast/SeXie/Human</texPath>
+          <drawSize>0.9</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>AncientChineseBeast/SeXie/Human</texPath>
+          <drawSize>0.9</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>AncientChineseBeast/SeXie/Human</texPath>
           <drawSize>1.5</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
@@ -129,6 +149,26 @@
     <combatPower>1200</combatPower>
     <ecoSystemWeight>0.01</ecoSystemWeight>
     <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>AncientChineseBeast/SeXie/Insect</texPath>
+          <drawSize>1.95</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>AncientChineseBeast/SeXie/Dessicated_Insect</texPath>
+          <drawSize>1.95</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>AncientChineseBeast/SeXie/Insect</texPath>
+          <drawSize>3.9</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>AncientChineseBeast/SeXie/Dessicated_Insect</texPath>
+          <drawSize>3.9</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
       <li>
         <bodyGraphicData>
           <texPath>AncientChineseBeast/SeXie/Insect</texPath>

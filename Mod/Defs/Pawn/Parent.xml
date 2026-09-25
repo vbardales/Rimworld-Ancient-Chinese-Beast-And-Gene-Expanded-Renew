@@ -27,20 +27,38 @@
           <li>(2000,0)</li>
         </points>
       </ageGenerationCurve>
-      <hasGenders>false</hasGenders>
-      <needsRest>false</needsRest>
       <herdMigrationAllowed>false</herdMigrationAllowed>
       <foodType>CarnivoreAnimal, OvivoreAnimal</foodType>
       <predator>false</predator>
       <baseHealthScale>40</baseHealthScale>
       <baseHungerRate>0</baseHungerRate>
       <trainability>Advanced</trainability>
+      <!-- Rest and breeding, from 2026-09-25: this parent no longer switches off needsRest or hasGenders, so every beast, hostile or tame, rests and has two sexes.
+           Mating is slow on purpose (about every ten days for a fertile adult, twenty days of gestation, one young), so that the extractor's clone recipe stays the way to a beast today.
+           A newborn is a baby of its race and grows to an adult in about fifteen days (ages are in years: 0, 0.06, 0.25), on the same textures at a smaller size. -->
+      <mateMtbHours>240</mateMtbHours>
+      <gestationPeriodDays>20</gestationPeriodDays>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(1.49, 0)</li>
+        </points>
+      </litterSizeCurve>
       <baseBodySize>20</baseBodySize>
       <lifeExpectancy>5000</lifeExpectancy>
       <lifeStageAges>
         <li>
-          <def>AnimalAdult</def>
+          <def>AnimalBaby</def>
           <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.06</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.25</minAge>
           <soundWounded>Pawn_Bear_Injured</soundWounded>
           <soundDeath>Pawn_Bear_Death</soundDeath>
           <soundCall>Pawn_Bear_Call</soundCall>

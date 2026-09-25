@@ -66,6 +66,26 @@
       <li>
         <bodyGraphicData>
           <texPath>AncientChineseBeast/MingShe/MingShe</texPath>
+          <drawSize>1.95</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>AncientChineseBeast/MingShe/Dessicated_MingShe</texPath>
+          <drawSize>1.95</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>AncientChineseBeast/MingShe/MingShe</texPath>
+          <drawSize>3.9</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>AncientChineseBeast/MingShe/Dessicated_MingShe</texPath>
+          <drawSize>3.9</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>AncientChineseBeast/MingShe/MingShe</texPath>
           <drawSize>6.5</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>

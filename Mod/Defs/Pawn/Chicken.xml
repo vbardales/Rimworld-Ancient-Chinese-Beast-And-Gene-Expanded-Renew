@@ -35,6 +35,15 @@
       <manhunterOnDamageChance>0</manhunterOnDamageChance>
     </race>
     <comps>
+      <!-- A bird lays eggs; only a hen does, and only a tame pair gives a fertilised one. -->
+      <li Class="CompProperties_EggLayer">
+        <eggUnfertilizedDef>SZ_ChickenEggUnfertilized</eggUnfertilizedDef>
+        <eggFertilizedDef>SZ_ChickenEggFertilized</eggFertilizedDef>
+        <eggFertilizationCountMax>1</eggFertilizationCountMax>
+        <eggLayIntervalDays>10</eggLayIntervalDays>
+        <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+        <eggCountRange>1~2</eggCountRange>
+      </li>
       <li Class="AncientChineseBeast.CompProperties_ConnaturalAbilities">
         <abilities>
           <li>SZ_Chicken_Crow</li>
@@ -55,6 +64,34 @@
     <canArriveManhunter>false</canArriveManhunter>
     <ecoSystemWeight>1</ecoSystemWeight>
     <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>AncientChineseBeast/Chicken/Chicken</texPath>
+          <drawSize>1.2</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Chicken/Dessicated_Chicken</texPath>
+          <drawSize>1.2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>AncientChineseBeast/Chicken/Chicken</texPath>
+          <drawSize>2.4</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Chicken/Dessicated_Chicken</texPath>
+          <drawSize>2.4</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
       <li>
         <bodyGraphicData>
           <texPath>AncientChineseBeast/Chicken/Chicken</texPath>

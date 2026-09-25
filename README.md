@@ -57,6 +57,14 @@ officer like a duck (no bionics). The hostile beasts, which a colony cannot own,
 (`loadBefore` in `About.xml`) because it copies its category lists onto its surgery recipes once. Without it, nothing
 changes.
 
+**The beasts rest and breed.** Every beast needs rest like any animal. A tame pair gives birth to a baby of its race that
+grows through three life stages (the mingshe and the Pleiades star officer lay eggs instead), slowly enough that the
+extractor stays the way to a first beast. A clone saved before this version has no sex and stays sterile.
+
+**Optional: Nocturnal Animals** ([Workshop 2269731409](https://steamcommunity.com/sharedfiles/filedetails/?id=2269731409)).
+With it the qiongqi and the sexie keep nocturnal hours and the mingshe, the nian beast and the Pleiades star officer
+crepuscular ones. Without it they follow the vanilla clock.
+
 ## The chicken
 
 The **Pleiades star officer** 昴日星官 wanders past the colony now and then and can be tamed. It

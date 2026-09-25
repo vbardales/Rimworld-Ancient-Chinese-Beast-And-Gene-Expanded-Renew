@@ -79,6 +79,50 @@ if (Test-Path -LiteralPath $adsPatchPath) {
     $everyAdded = @($adsPatch.SelectNodes('//value/li') | ForEach-Object { $_.InnerText })
     Assert-Content ($hostile.Count -ge 4 -and -not ($hostile | Where-Object { $_ -in $everyAdded })) 'A hostile beast must not be given prosthetics.'
 }
+# Rest and breeding. Every beast, hostile or tame, rests and has two sexes through the shared parent; a race that says
+# otherwise would silently undo it. The three life stages are the vanilla animal ones, and a kind must carry as many
+# pictures as its race has stages, or the game reports a config error.
+$parentDoc = [xml](Get-Content -LiteralPath (Join-Path $ModPath 'Defs/Pawn/Parent.xml') -Raw)
+$parentRace = $parentDoc.SelectSingleNode('/Defs/ThingDef[@Name="SZBeastParent"]/race')
+Assert-Content ($null -ne $parentRace) 'SZBeastParent has no race.'
+if ($null -ne $parentRace) {
+    Assert-Content ($null -eq $parentRace.SelectSingleNode('needsRest') -and $null -eq $parentRace.SelectSingleNode('hasGenders')) 'The parent must leave needsRest and hasGenders at their defaults (true).'
+    $stages = @($parentRace.SelectNodes('lifeStageAges/li'))
+    Assert-Content (($stages | ForEach-Object { [string]$_.def }) -join ',' -eq 'AnimalBaby,AnimalJuvenile,AnimalAdult') 'The parent race needs the three animal life stages, baby, juvenile and adult, in that order.'
+    $ages = @($stages | ForEach-Object { [double]::Parse([string]$_.minAge, [Globalization.CultureInfo]::InvariantCulture) })
+    Assert-Content ($ages.Count -eq 3 -and $ages[0] -eq 0 -and $ages[0] -lt $ages[1] -and $ages[1] -lt $ages[2]) 'Life stage ages must ascend from 0.'
+    Assert-Content ($null -ne $stages[-1].SelectSingleNode('soundDeath')) 'The adult stage carries the beast''s sounds.'
+    Assert-Content ([double]$parentRace.mateMtbHours -gt 0 -and [double]$parentRace.gestationPeriodDays -gt 0 -and $null -ne $parentRace.SelectSingleNode('litterSizeCurve/points')) 'The parent race needs a mating rate, a gestation and a litter size.'
+    $beastRaces = @($defs | Where-Object { $_.Name -eq 'ThingDef' -and $_.ParentName -eq 'SZBeastParent' })
+    Assert-Content ($beastRaces.Count -eq 11) 'Expected eleven beast races (six hostile, five tame).'
+    foreach ($race in $beastRaces) {
+        Assert-Content ($null -eq $race.SelectSingleNode('race/needsRest') -and $null -eq $race.SelectSingleNode('race/hasGenders')) "$($race.defName) overrides needsRest or hasGenders."
+        $kind = @($defs | Where-Object { $_.Name -eq 'PawnKindDef' -and $_.race -eq $race.defName })
+        Assert-Content ($kind.Count -eq 1) "$($race.defName) needs exactly one pawn kind."
+        if ($kind.Count -eq 1) { Assert-Content (@($kind[0].SelectNodes('lifeStages/li')).Count -eq 3) "$($kind[0].defName) needs three life stage pictures, as its race has three life stages." }
+    }
+    # Two races lay eggs instead of giving birth: the tame mingshe, a snake, and the Pleiades star officer, a bird.
+    foreach ($layer in @(@('SZ_MingShe_Friendly', 'SZ_MingShe_Friendly'), @('SZ_Chicken', 'SZ_Chicken'))) {
+        $egg = @($defs | Where-Object { $_.Name -eq 'ThingDef' -and $_.defName -eq $layer[0] })[0].SelectSingleNode('comps/li[@Class="CompProperties_EggLayer"]')
+        Assert-Content ($null -ne $egg) "$($layer[0]) lays eggs."
+        if ($null -ne $egg) {
+            $fert = @($defs | Where-Object { $_.Name -eq 'ThingDef' -and $_.defName -eq [string]$egg.eggFertilizedDef })
+            $unfert = @($defs | Where-Object { $_.Name -eq 'ThingDef' -and $_.defName -eq [string]$egg.eggUnfertilizedDef })
+            Assert-Content ($fert.Count -eq 1 -and $unfert.Count -eq 1) "Both eggs of $($layer[0]) must be defined."
+            if ($fert.Count -eq 1) { Assert-Content ([string]$fert[0].SelectSingleNode('comps/li[@Class="CompProperties_Hatcher"]/hatcherPawn').InnerText -eq $layer[1]) "The fertilised egg of $($layer[0]) must hatch its own kind." }
+        }
+    }    $naPath = Join-Path $ModPath 'Patches/NocturnalAnimals.xml'
+    Assert-Content (Test-Path -LiteralPath $naPath) 'The Nocturnal Animals patch is missing.'
+    if (Test-Path -LiteralPath $naPath) {
+        $na = [xml](Get-Content -LiteralPath $naPath -Raw)
+        $root = $na.SelectSingleNode('/Patch/Operation')
+        Assert-Content ($root.Class -eq 'PatchOperationFindMod' -and @($root.SelectNodes('mods/li')).Count -ge 2) 'The extension class does not exist without its mod: the patch must be guarded by a FindMod naming the continuation and the original.'
+        $named = @($na.SelectNodes('//xpath') | ForEach-Object { [regex]::Matches($_.InnerText, 'defName="([^"]+)"') | ForEach-Object { $_.Groups[1].Value } })
+        Assert-Content ((@($named | Sort-Object) -join ',') -eq (@($beastRaces | ForEach-Object { [string]$_.defName } | Sort-Object) -join ',')) 'The Nocturnal Animals patch must name each of the eleven beast races exactly once.'
+        Assert-Content (@($na.SelectNodes('//bodyClock') | ForEach-Object { $_.InnerText } | Where-Object { $_ -notin 'Nocturnal','Crepuscular' }).Count -eq 0) 'Only the two chosen clocks are used.'
+        Assert-Content ($null -eq $na.SelectSingleNode('//*[@MayRequire]')) 'MayRequire on an operation is read by nothing.'
+    }
+}
 # The categories are copied onto the surgery recipes once, when the other mod runs its own patch, so this mod
 # has to load before it; a loadAfter as well would make the order unsatisfiable.
 Assert-Content ($adsId -in @($about.ModMetaData.loadBefore.li)) 'About.xml must load before A Dog Said 2.'

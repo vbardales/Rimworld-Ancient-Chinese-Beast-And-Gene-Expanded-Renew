@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- The tame mingshe is a snake and lays eggs, as the vanilla cobra does, and so does the Pleiades star officer, a
+       bird. Same bases as the vanilla eggs; the textures are the vanilla ones, tinted, so that no new art is needed. -->
+  <ThingDef ParentName="EggUnfertBase">
+    <defName>SZ_MingSheEggUnfertilized</defName>
+    <label>mingshe egg (unfert.)</label>
+    <description>An unfertilized mingshe egg. It can be eaten raw, but it's much better cooked.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProductRaw/EggOval</texPath>
+      <color>(150,190,205)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>40.0</MarketValue>
+    </statBases>
+  </ThingDef>
+
+  <ThingDef ParentName="EggFertBase">
+    <defName>SZ_MingSheEggFertilized</defName>
+    <label>mingshe egg (fert.)</label>
+    <description>A fertilized mingshe egg. If all goes well, it should hatch into a young mingshe. It can be eaten raw, but it's much better cooked.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProductRaw/EggOval</texPath>
+      <color>(190,225,235)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>60.0</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>8</hatcherDaystoHatch>
+        <hatcherPawn>SZ_MingShe_Friendly</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="EggUnfertBase">
+    <defName>SZ_ChickenEggUnfertilized</defName>
+    <label>Pleiades star officer egg (unfert.)</label>
+    <description>An unfertilized egg of the Pleiades star officer. It can be eaten raw, but it's much better cooked.</description>
+    <graphicData>
+      <color>(240,205,150)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>30.0</MarketValue>
+    </statBases>
+  </ThingDef>
+
+  <ThingDef ParentName="EggFertBase">
+    <defName>SZ_ChickenEggFertilized</defName>
+    <label>Pleiades star officer egg (fert.)</label>
+    <description>A fertilized egg of the Pleiades star officer. If all goes well, it should hatch into a chick of the divine bird. It can be eaten raw, but it's much better cooked.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <color>(255,235,190)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>45.0</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>5</hatcherDaystoHatch>
+        <hatcherPawn>SZ_Chicken</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

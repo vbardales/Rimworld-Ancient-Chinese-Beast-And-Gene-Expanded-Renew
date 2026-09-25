@@ -130,6 +130,8 @@ $ListClassTags = @(
 
 $known = [System.Collections.Generic.HashSet[string]]::new()
 $shortNames = [System.Collections.Generic.HashSet[string]]::new()
+# Run through -File, an array reaches the script as one string: accept a comma-separated list too.
+$TypeLists = @($TypeLists | ForEach-Object { $_ -split ',' } | Where-Object { $_ })
 foreach ($lst in $TypeLists) {
     foreach ($t in Get-Content $lst) {
         $t = $t.Trim(); if (-not $t) { continue }

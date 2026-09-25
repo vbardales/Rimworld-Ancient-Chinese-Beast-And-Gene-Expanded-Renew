@@ -23,6 +23,19 @@ Not on the Workshop yet. What changed in `Mod/` after the item was created at 0.
   surgery recipes once and a mod that loads after it writes into lists nobody reads. Without the other mod
   the patch finds nothing to change and does nothing.
 
+- **The beasts rest and breed.** Every beast, tame and hostile, now needs rest like any animal: the tame ones lie down
+  when tired, on the vanilla animal behaviour, and the hostile ones do too between their hunts (their think trees already
+  carried the vanilla basic needs). They have two sexes, and a tame pair mates, the female is pregnant and gives birth
+  to a **baby** of the same race that grows through three life stages (baby, juvenile, adult) on the same textures at a
+  smaller size. Breeding is slow on purpose (a mating roll every ten days on average, twenty days of gestation, one young),
+  so the extractor's clone recipe stays the way to a beast today and breeding gives a line. The **mingshe** and the
+  **Pleiades star officer** lay eggs instead (two new egg pairs, hatching after eight and five days). A **saved clone
+  stays genderless and cannot breed**: nothing gives an existing pawn a sex; clones made from now on can.
+- **Optional: Nocturnal Animals** ([2269731409](https://steamcommunity.com/sharedfiles/filedetails/?id=2269731409)).
+  With it, the qiongqi and the sexie (both forms) are nocturnal, and the mingshe, the nian beast and the Pleiades star
+  officer crepuscular, tame and hostile alike; the star officer is crepuscular because it crows at four in the morning
+  and the vanilla clock would have it asleep. The patch is behind a guard on the other mod's name; without it the
+  beasts follow the vanilla clock.
 - The nian beast's description no longer promises **nian beast fangs**. Butchering it yields meat and nothing else, and
   no item of that name ever shipped: the paragraph is out of the English, French and Simplified Chinese descriptions (the
   last is the authors' own text, cut at its last paragraph), and out of the README.

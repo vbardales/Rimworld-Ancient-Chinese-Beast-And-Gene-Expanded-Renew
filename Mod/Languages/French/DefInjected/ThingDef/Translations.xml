@@ -16,6 +16,10 @@
   <SZ_Chicken.label>officier stellaire des Pléiades</SZ_Chicken.label>
   <SZ_Chicken.tools.beak.label>bec</SZ_Chicken.tools.beak.label>
   <SZ_Chicken.tools.claws.label>griffes</SZ_Chicken.tools.claws.label>
+  <SZ_ChickenEggFertilized.description>Un œuf fécondé de l'officier stellaire des Pléiades. Si tout se passe bien, il éclora en un poussin de l'oiseau divin. Il peut se manger cru, mais il est bien meilleur cuit.</SZ_ChickenEggFertilized.description>
+  <SZ_ChickenEggFertilized.label>œuf d'officier stellaire des Pléiades (fécondé)</SZ_ChickenEggFertilized.label>
+  <SZ_ChickenEggUnfertilized.description>Un œuf non fécondé de l'officier stellaire des Pléiades. Il peut se manger cru, mais il est bien meilleur cuit.</SZ_ChickenEggUnfertilized.description>
+  <SZ_ChickenEggUnfertilized.label>œuf d'officier stellaire des Pléiades (non fécondé)</SZ_ChickenEggUnfertilized.label>
   <SZ_Firecracker_Explosion.description>explosion</SZ_Firecracker_Explosion.description>
   <SZ_Firecracker_Explosion.label>explosion</SZ_Firecracker_Explosion.label>
   <SZ_Firecracker.description>Un accessoire de fête venu des régions de Shenzhou. Traditionnellement, le pétard sert uniquement à célébrer la fête du Printemps en ajoutant au vacarme ; sur la bordure, il a pris des allures d'arme, car sa détonation projette des flammes et inflige des dégâts de souffle. \n\nLes pétards se fabriquent sur un emplacement d'artisanat ou dans une forge. Pour une colonie encore au stade médiéval, ou simplement à court d'armes, le pétard fait office de lance-grenades du pauvre, avec un rayon d'explosion inférieur à celui d'une véritable grenade. C'est aussi la parade contre la bête nian, qui en est terrifiée. (Une bête nian ignore neuf dixièmes des dégâts de toute autre arme ; seul le feu des pétards traverse sa protection.)</SZ_Firecracker.description>
@@ -28,6 +32,10 @@
   <SZ_MingShe.description>Cette bête peut apparaître près de la colonie un an après sa fondation. Les légendes de Shenzhou lui prêtent un corps de serpent et une paire d'ailes. \n\nEn s'inspirant du mythe, le programme de génie génétique Tianbing a créé un mingshe pour contribuer à la dévastation de la bordure. \n\nCe serpent de malheur apporte la sécheresse. Il n'attaque pas spontanément les colons, mais si on le laisse tranquille, il dessèche peu à peu les cultures. \n\nÀ distance, le mingshe utilise une vaste onde sonore qui étourdit tous les colons touchés. De près, il mord avec ses crocs mortels. Pire encore, il déploie périodiquement un bouclier de vent : toutes les attaques à distance venues de l'extérieur sont renvoyées, et tout ce qui se trouve à l'intérieur subit continuellement des lacérations.</SZ_MingShe.description>
   <SZ_MingShe.label>mingshe</SZ_MingShe.label>
   <SZ_MingShe.tools.bite.label>morsure</SZ_MingShe.tools.bite.label>
+  <SZ_MingSheEggFertilized.description>Un œuf de mingshe fécondé. Si tout se passe bien, il éclora en un jeune mingshe. Il peut se manger cru, mais il est bien meilleur cuit.</SZ_MingSheEggFertilized.description>
+  <SZ_MingSheEggFertilized.label>œuf de mingshe (fécondé)</SZ_MingSheEggFertilized.label>
+  <SZ_MingSheEggUnfertilized.description>Un œuf de mingshe non fécondé. Il peut se manger cru, mais il est bien meilleur cuit.</SZ_MingSheEggUnfertilized.description>
+  <SZ_MingSheEggUnfertilized.label>œuf de mingshe (non fécondé)</SZ_MingSheEggUnfertilized.label>
   <SZ_QiongQi_Friendly.description>Un qiongqi créé par génie génétique. Son esprit d'origine a été effacé et il combat désormais pour la colonie ; ses griffes déchirent les lourdes armures des mécanoïdes Tianbing comme du papier. \n\n\n&lt;color=#33ff00&gt;[En savoir plus]&lt;/color&gt;\nPour cloner une bête, les ingénieurs généticiens ont prélevé l'ADN de l'original, préservant ainsi la plupart de ses capacités. \n\nLes livres d'histoire des colons de Shenzhou citent cette maxime : « Le savoir chinois pour fondement, le savoir occidental pour application. » Cette même philosophie a guidé la création des bêtes, et chaque partie d'un clone porte la culture et les couleurs traditionnelles de Shenzhou.</SZ_QiongQi_Friendly.description>
   <SZ_QiongQi_Friendly.label>qiongqi (amical)</SZ_QiongQi_Friendly.label>
   <SZ_QiongQi_Friendly.tools.bite.label>morsure</SZ_QiongQi_Friendly.tools.bite.label>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Optional: [XND] Nocturnal Animals (Continued) by Mlie, Workshop 2269731409, packageId Mlie.XNDNocturnalAnimals.
+
+  The beasts rest now (needsRest is left at its default), and that mod gives an animal a body clock through a
+  DefModExtension with one field, `bodyClock`: Diurnal (asleep 22:00 to 06:00, what every unpatched animal does),
+  Nocturnal (asleep 11:00 to 19:00), Crepuscular (asleep 22:00 to 02:00 and 11:00 to 15:00) or Cathemeral.
+
+    - qiongqi and sexie (both forms): nocturnal, the night hunters of the book.
+    - mingshe and nian beast: crepuscular.
+    - the Pleiades star officer: crepuscular, because it crows at four in the morning and the vanilla clock would
+      have it asleep at that hour.
+
+  The extension class does not exist without that mod, and a def that names an unknown class does not load, so the
+  operation is guarded by PatchOperationFindMod, which compares the mod's display name; the continuation's name and
+  the original's are both listed. Neither active: nothing is added and the beasts follow the vanilla clock.
+  The tame and the hostile race of each beast get the same clock.
+-->
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[XND] Nocturnal Animals (Continued)</li>
+      <li>[XND] Nocturnal Animals</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="SZ_QiongQi" or defName="SZ_QiongQi_Friendly" or defName="SZ_SeXie" or defName="SZ_SeXie_Friendly" or defName="SZ_SeXieInsect" or defName="SZ_SeXieInsect_Friendly"]</xpath>
+          <value>
+            <li Class="NocturnalAnimals.ExtendedRaceProperties">
+              <bodyClock>Nocturnal</bodyClock>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="SZ_MingShe" or defName="SZ_MingShe_Friendly" or defName="SZ_YearBeast" or defName="SZ_YearBeast_Friendly" or defName="SZ_Chicken"]</xpath>
+          <value>
+            <li Class="NocturnalAnimals.ExtendedRaceProperties">
+              <bodyClock>Crepuscular</bodyClock>
+            </li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

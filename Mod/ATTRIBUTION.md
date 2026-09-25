@@ -251,6 +251,11 @@ category lists (`ADS_Cat1` to `ADS_Cat3`), the way a mod is added to them and th
 read in its own files to write `Mod/Patches/ADogSaidAnimalProsthetics2.xml`, which names this mod's races and copies
 nothing of that mod. Thanks to SamBucher for the mod and for documenting the convention.
 
+**[XND] Nocturnal Animals (Continued)** by Mlie, after XeoNovaDan's original (Steam Workshop 2269731409), is a second
+optional integration. Its wiki (a DefModExtension `NocturnalAnimals.ExtendedRaceProperties` with one field, `bodyClock`) and its
+installed files were read to write `Mod/Patches/NocturnalAnimals.xml`, which names this mod's races behind a guard on that
+mod's name and copies nothing of it. Thanks to Mlie and XeoNovaDan.
+
 **Pickle and RimLogging**, the test tools this update was checked with, are used in development only and are never a
 dependency of the mod. Thanks to their authors.
 

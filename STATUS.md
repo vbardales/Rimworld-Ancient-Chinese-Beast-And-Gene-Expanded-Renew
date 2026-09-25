@@ -29,6 +29,12 @@ remaining:
       debug action "Beast attack now" now forces its incident (Singleton.BeastApproach(forced)), because the first
       Pickle run showed both incidents refusing to fire unforced on a day-1 colony. Built, 26 assembly contracts
       and 284 content checks green; the scenario that proves it passed on 2026-09-25 (request f2fd)
+  - unverified: the beasts rest and breed (2026-09-25, branch beasts-sleep-breed, merged after the queued runs): every beast
+      has a rest need and two sexes, the tame ones give birth (or lay eggs: mingshe and star officer) to babies that grow
+      through baby, juvenile and adult, and Nocturnal Animals gives each a body clock. Offline: 341 content checks green with
+      the negative controls seen, the XML classes, fields and references green, the four new French keys resolved. In
+      game: features 15 (17 scenarios) and 16 (11, pass 6, wsl-deps.nocturnal.map) are written and have not run. Saved
+      clones stay genderless and sterile
   - unverified: no person has played the mod. What is known of it in a game is what Pickle showed on 2026-09-25
       (above); TESTING.md remains the protocol, 29 scenarios
   - unverified: nine manual tests to validate (M1 to M9, Tests/Pickle/README.md), the cases the suite

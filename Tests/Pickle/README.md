@@ -7,8 +7,8 @@ capture for a person to open. **It was first run on 2026-09-25**, in part (`docs
 
 ## Present coverage
 
-Fourteen features, 63 scenarios once the outlines are expanded (51 in a minimal pass; `13` and `14` are skipped
-by requirement there).
+Sixteen features, 91 scenarios once the outlines are expanded (68 in a minimal pass; `13`, `14` and `16` are
+skipped by requirement there).
 
 | Feature | Scenarios | What it settles | `@review` capture |
 |---|---|---|---|
@@ -26,6 +26,8 @@ by requirement there).
 | `12-recipes-and-clones` | 19 | all twelve gene recipes, all five clones, the archite capsules, and a tame mingshe that dies without a drought or an error | none |
 | `13-original-mod-incompatibility` | 1 | with the original mod staged, both define the same beast and the game keeps one copy (`@requires:andery233xj.AncientChineseBeast`) | none |
 | `14-animal-prosthetics-2` | 11 | with A Dog Said... Animal Prosthetics 2 staged, the recipe list the game holds on each race: the five clones offer bionics, the chicken a simple prosthesis and no bionics, the four hostile beasts nothing, and this mod loads before it (`@requires:SamBucher.ADogSaidAnimalProsthetics2`) | none |
+| `15-rest-and-breeding` | 17 | the beasts rest and breed: a tired tame beast lies down, a hostile one has the need, a tame pair mates and the female gives birth (four races) or lays an egg that hatches (mingshe, star officer) | none |
+| `16-nocturnal-animals` | 11 | with Nocturnal Animals staged, each of the eleven races carries the body clock the patch gives it (`@requires:Mlie.XNDNocturnalAnimals`) | none |
 
 Nine captures in all. `docs/runs/README.md` says which to keep and how small.
 
@@ -52,6 +54,7 @@ Nine captures in all. `docs/runs/README.md` says which to keep and how small.
 | G1 | `03` | M8 |
 | G2 | | M9 |
 | H1 (added with the A Dog Said 2 patch) | `14` | which operation the Health tab offers for which body part, the other mod's own logic |
+| I1, I2, I3 (added with rest and breeding) | `15`, `16` | real hours of sleep, a real gestation and egg, the look of the young |
 
 ### The manual exceptions
 
@@ -84,7 +87,7 @@ There is no DLC-absent pass: Biotech is a hard dependency, so the mod does not l
 name one optional mod, in `loadAfter`: `ninedaylongbow.ChineseComprehensiveExpansion`. A pass with it is owed
 (`AUDIT.md`: a pass with the optional mods) and is **not written**, because its Workshop id has not been looked
 up; `TESTING.md`, "Passes", lists it as pass 3. The other optional mod, A Dog Said... Animal Prosthetics 2, is
-not in `loadAfter` (the mod loads *before* it) and its pass is written. The four passes below are written, and
+not in `loadAfter` (the mod loads *before* it) and its pass is written. The five passes below are written, and
 each is a separate launch of the shared runner, submitted as its own request (see "Before a ticket is taken").
 
 ```powershell
@@ -92,12 +95,14 @@ powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod Anci
 powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod AncientChineseBeastAndGeneExpandedRenew -Language French
 powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod AncientChineseBeastAndGeneExpandedRenew -Language English -DepMap wsl-deps.incompat-original.map -Filter '13-original-mod-incompatibility'
 powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod AncientChineseBeastAndGeneExpandedRenew -Language English -DepMap wsl-deps.ads2.map -Filter '14-animal-prosthetics-2'
+powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod AncientChineseBeastAndGeneExpandedRenew -Language English -DepMap wsl-deps.nocturnal.map -Filter '16-nocturnal-animals'
 ```
 
-The first two are the minimal pass, in both languages; `13` and `14` are skipped by requirement in them, and
+The first two are the minimal pass, in both languages; `13`, `14` and `16` are skipped by requirement in them, and
 that skip is counted, not passed. The fourth stages A Dog Said 2 (Workshop 3238353862, `wsl-deps.ads2.map`),
 which is a Windows subscription (1.3.7), so staging finds it with no download. Its recipe and category names
-were checked against those local 1.6 files; the run itself is what has not happened. The third is the declared-incompatibility pass. It stages the original mod
+were checked against those local 1.6 files, and the pass has run green (11 of 11, 2026-09-25). The fifth stages Nocturnal Animals
+(Workshop 2269731409, `wsl-deps.nocturnal.map`), a Windows subscription too, and plays `16`. The third is the declared-incompatibility pass. It stages the original mod
 (`andery233xj.AncientChineseBeast`, Workshop 3292446841, last supporting 1.5), a Windows subscription that the
 staging reads first, so nothing has to be downloaded into the WSL cache.
 `10-scheduler` already reads the debug labels through their Keyed keys, so the same lines serve both languages.

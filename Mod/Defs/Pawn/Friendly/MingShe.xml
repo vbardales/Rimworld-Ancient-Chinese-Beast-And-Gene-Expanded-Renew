@@ -29,6 +29,15 @@
       </li>
     </tools>
     <comps>
+      <!-- A snake lays eggs: the mingshe does not give birth. The other tame beasts do. -->
+      <li Class="CompProperties_EggLayer">
+        <eggUnfertilizedDef>SZ_MingSheEggUnfertilized</eggUnfertilizedDef>
+        <eggFertilizedDef>SZ_MingSheEggFertilized</eggFertilizedDef>
+        <eggFertilizationCountMax>1</eggFertilizationCountMax>
+        <eggLayIntervalDays>20</eggLayIntervalDays>
+        <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+        <eggCountRange>1~1</eggCountRange>
+      </li>
       <li Class="AncientChineseBeast.CompProperties_ConnaturalAbilities">
         <abilities>
           <li>SZ_MingShe_SoundWave</li>
@@ -47,6 +56,26 @@
     <combatPower>1200</combatPower>
     <ecoSystemWeight>0.01</ecoSystemWeight>
     <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>AncientChineseBeast/MingShe/MingShe</texPath>
+          <drawSize>1.95</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>AncientChineseBeast/MingShe/Dessicated_MingShe</texPath>
+          <drawSize>1.95</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>AncientChineseBeast/MingShe/MingShe</texPath>
+          <drawSize>3.9</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>AncientChineseBeast/MingShe/Dessicated_MingShe</texPath>
+          <drawSize>3.9</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
       <li>
         <bodyGraphicData>
           <texPath>AncientChineseBeast/MingShe/MingShe</texPath>

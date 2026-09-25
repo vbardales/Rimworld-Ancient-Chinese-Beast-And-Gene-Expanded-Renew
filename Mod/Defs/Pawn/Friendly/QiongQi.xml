@@ -65,6 +65,26 @@
       <li>
         <bodyGraphicData>
           <texPath>AncientChineseBeast/QiongQi/QiongQi</texPath>
+          <drawSize>3.9</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>AncientChineseBeast/QiongQi/Dessicated_QiongQi</texPath>
+          <drawSize>3.9</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>AncientChineseBeast/QiongQi/QiongQi</texPath>
+          <drawSize>7.8</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>AncientChineseBeast/QiongQi/Dessicated_QiongQi</texPath>
+          <drawSize>7.8</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>AncientChineseBeast/QiongQi/QiongQi</texPath>
           <drawSize>13</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>

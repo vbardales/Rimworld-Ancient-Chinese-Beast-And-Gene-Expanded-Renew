@@ -24,7 +24,7 @@ setup. Record the exception, its reason and the exact evidence to inspect in `Te
 Evidence stays on disk and out of git. Which proofs of a run are worth keeping, in what form and for
 how long, is in `docs/runs/README.md`; read it before deleting or committing anything a run wrote.
 
-The companion suite exists (`Tests/Pickle/`, 14 features, 63 scenarios) and was first run, in part, on 2026-09-25
+The companion suite exists (`Tests/Pickle/`, 16 features, 91 scenarios) and was first run, in part, on 2026-09-25
 (`docs/runs/`). Which of the
 28 cases below each feature plays is the table in its README, and so are the nine manual exceptions (M1 to
 M9), the cases it does not play and why. Those nine are the only cases below that a person still has to do
@@ -38,7 +38,7 @@ construct their own state, except for deliberate documented `@same-world` sequen
 ## Passes
 
 `AUDIT.md` names three families of Pickle passes and asks each mod to say here how many it needs and what each
-covers. This mod needs five launches:
+covers. This mod needs six launches:
 
 | # | Pass | Set | Covers |
 | --- | --- | --- | --- |
@@ -47,6 +47,7 @@ covers. This mod needs five launches:
 | 3 | with the optional mod | the minimal set plus `ninedaylongbow.ChineseComprehensiveExpansion`, the one mod `About.xml` names in `loadAfter` | **not written**: it needs that mod's Workshop id, which has not been looked up, and it is where the fangs question (see `Tests/Pickle/README.md`) may be answered |
 | 4 | declared incompatibility | the minimal set plus `andery233xj.AncientChineseBeast`, `wsl-deps.incompat-original.map` | `13`, which asserts the symptom the incompatibility is declared for |
 | 5 | with A Dog Said... Animal Prosthetics 2 | the minimal set plus `SamBucher.ADogSaidAnimalProsthetics2` (Workshop 3238353862), `wsl-deps.ads2.map` | `14`, block H below: the recipe lists on the races, and the load order |
+| 6 | with Nocturnal Animals | the minimal set plus `Mlie.XNDNocturnalAnimals` (Workshop 2269731409), `wsl-deps.nocturnal.map` | `16`, block I below: the body clock each race carries |
 
 There is no pass without a DLC (Biotech is a hard dependency, so the mod does not load without it) and no
 restart sequence (nothing here crosses a process boundary). Pass 3 is the reason `tested` cannot be reached
@@ -393,6 +394,35 @@ no such recipe on its race. Without the other mod, nothing in this block exists 
 
 > Scenario `14` plays the recipe lists and the load order; which operation the tab offers for which body
 > part is the other mod's own logic, and is not asserted.
+
+---
+
+## Block I — the beasts rest and breed (from 2026-09-25)
+
+### I1. A tired tame beast lies down; a hostile one has the need
+
+1. Tame a beast (or spawn a tame clone), lower its rest need in development mode, and watch.
+
+**Expected.** It lies down where it stands and gets up when rested. The hostile beasts have a rest need too (they lie down
+between hunts). With Nocturnal Animals, the sleeping hours follow its clock: the qiongqi and the sexie are up at night, the
+star officer is awake at four in the morning and crows.
+
+### I2. A tame pair breeds
+
+1. Clone two of the same beast (the recipe draws the sex at random: clone until there is a pair), keep them together.
+2. Wait, or use the development tools to bring on a mating.
+
+**Expected.** A pregnancy in the female (a **fertilised egg** in the mingshe and the star officer), a **baby** at term, then a
+juvenile, then an adult, on the same textures at a smaller size; the young are in your faction. A clone saved before this
+version has no sex and cannot breed.
+
+### I3. Nocturnal Animals (optional)
+
+**Expected.** Without the other mod, nothing in the log and the vanilla clock. With it, each race carries the clock of the
+patch (`Patches/NocturnalAnimals.xml`) on its info card.
+
+> Scenarios `15` and `16` play the wiring of all three: the need, the Mate job, the pregnancy, the egg and its hatching, and
+> the extension on each race. Real hours of sleep, real gestations and the look of the young stay for a person.
 
 ---
 

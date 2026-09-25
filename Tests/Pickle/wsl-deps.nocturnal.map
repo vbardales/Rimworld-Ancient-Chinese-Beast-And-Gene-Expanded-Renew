@@ -1,0 +1,10 @@
+# Pass "nocturnal": [XND] Nocturnal Animals (Continued) beside this mod, and nothing else optional.
+#
+# Mlie.XNDNocturnalAnimals, Workshop 2269731409, by Mlie, a continuation of XeoNovaDan's mod, supports 1.1 to 1.6 and
+# needs Harmony, which every pass stages. This pass plays 16-nocturnal-animals, which checks that the extension it
+# reads is on the beasts' races. The item is a Windows subscription, which the staging reads first.
+#
+# ORDER. The patch that adds the extension asks whether the mod is active by its display name, which does not depend
+# on the order, and the extension class is loaded with the other mod's assembly before any def is built, so the
+# order of the two is free here. The mod under test is staged after this one, as in every pass.
+Mlie.XNDNocturnalAnimals   2269731409

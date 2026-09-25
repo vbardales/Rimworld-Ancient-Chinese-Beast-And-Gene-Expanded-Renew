@@ -36,6 +36,8 @@ Requires Biotech. Requires Harmony.
 
 Works with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862]A Dog Said... Animal Prosthetics 2[/url] (optional): the five tame clones can receive its prosthetics and bionics like a wolf or a thrumbo, and the Pleiades star officer like a duck. Nothing changes without it.
 
+The beasts rest and breed like any animal: they lie down when tired, and a tame pair gives young that grow up (the mingshe and the Pleiades star officer lay eggs). Clones saved before this version have no sex and stay sterile. With [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2269731409]Nocturnal Animals[/url] (optional) each beast keeps its own hours: the qiongqi and the sexie hunt by night.
+
 What changed in the 1.6 update
 
 The mod's own logic is unchanged. What broke was where 1.6 moved the ground under it:
@@ -53,7 +55,7 @@ Safe to add to an ongoing save. Removing it mid-save removes the beasts, their g
 
 Source, changelog and the list of defects inherited from the original: https://github.com/vbardales/Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 
-The update work was done with the help of an AI assistant (Claude, by Anthropic). Thanks to andery233xj, Frolg, DongFang and Ninedaylongbow for the mod; to SamBucher for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862]A Dog Said... Animal Prosthetics 2[/url] and for saying how a mod is added to it; to Andreas Pardeike for Harmony; and to the authors of Pickle and RimLogging, the test tools this update was checked with (development only, never a dependency of the mod).
+The update work was done with the help of an AI assistant (Claude, by Anthropic). Thanks to andery233xj, Frolg, DongFang and Ninedaylongbow for the mod; to SamBucher for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862]A Dog Said... Animal Prosthetics 2[/url] and for saying how a mod is added to it; to Mlie and XeoNovaDan for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2269731409]Nocturnal Animals[/url]; to Andreas Pardeike for Harmony; and to the authors of Pickle and RimLogging, the test tools this update was checked with (development only, never a dependency of the mod).
 
 If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.
 
