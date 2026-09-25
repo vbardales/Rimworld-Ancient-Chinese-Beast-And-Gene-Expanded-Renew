@@ -37,7 +37,7 @@ additions listed there, not the original material.
 | All 88 textures | unchanged, except for the two noted under *Textures* below |
 | The three sounds | unchanged |
 | All 133 defs | unchanged in shape and numbers; the English text was rewritten |
-| The Simplified Chinese translation | the authors' own, kept and extended |
+| The Simplified Chinese translation | the authors' own, kept and extended; the last paragraph of the nian beast's description, which promised nian beast fangs on butchering that the mod never supplied, was removed on 2026-09-25 |
 | The C# | decompiled from `1.5/Assemblies/AncientChineseBeast.dll` and recompiled against 1.6 |
 
 The mod overwrites no vanilla def and ships no XML patch, so there was nothing to untangle on
@@ -232,10 +232,11 @@ it walked `DrawData.dataNorth` and its siblings as objects, where the field is a
 now unwraps `Nullable<T>` and `SlateRef<T>` the same way, which also took vanilla's own count from
 eighteen problems to none.
 
-What none of this covers: **the mod has never been run in a game.** Every behaviour described in
-this file is read out of the code, not observed. The beasts' arrival, the sexie's second phase,
-the flyer's landing, the gene extraction bench and the crow have all been reasoned about and none
-of them has been seen to happen.
+What none of this covers: **no person has played the mod in a game.** Most of what this file
+describes is read out of the code. Since 2026-09-25 the Pickle suite (`Tests/Pickle/`) has played parts
+of it in a real game: the gene recipes and the clones, the schedule, the incidents, the firecracker damage
+and the compatibility with Animal Prosthetics 2. The sexie's second phase, the flyer's landing and the
+crow are queued and not yet seen; `STATUS.md` says where each stands.
 
 ## Credits
 
@@ -244,5 +245,13 @@ update of it and nothing more.
 
 Thanks to Andreas Pardeike for Harmony, and to the ILSpy project, without which none of the C#
 work would have been possible.
+
+**A Dog Said... Animal Prosthetics 2** by SamBucher (Steam Workshop 3238353862) is an optional integration. Its
+category lists (`ADS_Cat1` to `ADS_Cat3`), the way a mod is added to them and the names of its surgery recipes were
+read in its own files to write `Mod/Patches/ADogSaidAnimalProsthetics2.xml`, which names this mod's races and copies
+nothing of that mod. Thanks to SamBucher for the mod and for documenting the convention.
+
+**Pickle and RimLogging**, the test tools this update was checked with, are used in development only and are never a
+dependency of the mod. Thanks to their authors.
 
 The update was done with the help of an AI assistant (Claude, by Anthropic).

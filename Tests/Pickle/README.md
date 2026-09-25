@@ -3,7 +3,7 @@
 This companion is development-only and is never distributed in `Mod/`. It converts the behaviors of
 `TESTING.md` into self-staging scenarios: each one loads or builds its own state, acts through the real game
 path, asserts what can be asserted, and where a picture is the only honest evidence takes a bounded `@review`
-capture for a person to open. **It has never been run.** Every number below is a count of what was written.
+capture for a person to open. **It was first run on 2026-09-25**, in part (`docs/runs/`). Every number below is a count of what was written, not of what passed.
 
 ## Present coverage
 
@@ -43,7 +43,7 @@ Nine captures in all. `docs/runs/README.md` says which to keep and how small.
 | C5 | `04` (the flight lands) | M3 |
 | C6 | `04` (the shape changes) | M4 |
 | C7 | `09` | M5 |
-| C8 | `09` | the fangs, see below |
+| C8 | `09` | |
 | D1, D2, D3 | `05`, `06` | |
 | E1, E2 | | M6 |
 | E3, E5, E6 | `12` (all of them), `08` (with a picture) | |
@@ -70,13 +70,13 @@ evidence to inspect. **They are manual tests to validate: `tested` waits for eve
 | M8 | G1 (part) | changing language on a saved game and sending the next letter: a language cannot be switched inside a scenario | the letter after the switch, in both directions |
 | M9 | G2 | adding the mod to an existing save and removing it from one that has beasts needs a different mod set between two launches | the save opens, with and without |
 
-### One finding the suite is written to settle
+### A finding the suite settled
 
-The nian beast's description, this repository's README and `TESTING.md` say butchering it yields **nian beast
-fangs**. No item def of that name ships with the mod, and the beast's race carries no butcher product. The
-butchery scenario in `09` asserts meat and writes **every product it yields** into the report, so the first run
-answers whether the fangs exist (perhaps supplied by `ninedaylongbow.ChineseComprehensiveExpansion`, which the
-mod only loads after) or are text the port inherited. Until then it is recorded as unverified in `STATUS.md`.
+The nian beast's description, the README and `TESTING.md` said butchering it yields **nian beast fangs**. The butchery
+scenario in `09` asserts meat and writes **every product it yields** into the report, and the first run
+(2026-09-25) listed one product, `Meat_SZ_YearBeast` x2800: no fangs, and no def of that name ships. The promise was
+text the port inherited, and it has been taken out of the three descriptions (English, French, Simplified Chinese), the
+README and `TESTING.md`. The scenario stays: it now proves that a butchery gives meat and reports anything else.
 
 ## Passes
 
@@ -98,8 +98,8 @@ The first two are the minimal pass, in both languages; `13` and `14` are skipped
 that skip is counted, not passed. The fourth stages A Dog Said 2 (Workshop 3238353862, `wsl-deps.ads2.map`),
 which is a Windows subscription (1.3.7), so staging finds it with no download. Its recipe and category names
 were checked against those local 1.6 files; the run itself is what has not happened. The third is the declared-incompatibility pass. It stages the original mod
-(`andery233xj.AncientChineseBeast`, Workshop 3292446841, last supporting 1.5), which has to be in the WSL
-install's Workshop cache first: a download that goes through `Use-Wsl.ps1` and has **not been done**.
+(`andery233xj.AncientChineseBeast`, Workshop 3292446841, last supporting 1.5), a Windows subscription that the
+staging reads first, so nothing has to be downloaded into the WSL cache.
 `10-scheduler` already reads the debug labels through their Keyed keys, so the same lines serve both languages.
 
 A restart sequence is not claimed: the mod's saved state is the round trip in `03`, and no scenario here depends

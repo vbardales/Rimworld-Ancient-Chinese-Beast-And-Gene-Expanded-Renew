@@ -39,12 +39,12 @@ Written or edited by this session, so not re-read line by line; their state when
 | Document | Version | SHA-256 (12) | Note |
 |---|---|---|---|
 | `STATUS.md` | `e6427ef`, 2026-09-25 12:30 | `b3f516712b7c` | **Working copy modified, not committed**: the Animal Prosthetics 2 result |
-| `README.md` | `ca985d6`, 2026-09-13 01:34 | `9348a1f5653f` | Does not mention the Animal Prosthetics 2 compatibility yet |
-| `CHANGELOG.md` | `e6427ef`, 2026-09-25 12:30 | `14bf119ebca9` | Headings are `# 0.1.0` and `# 1.0.0 - unreleased`; the CI's documented mode reads `## [<version>]` |
-| `ATTRIBUTION.md` | `ca985d6`, 2026-09-13 01:34 | `f38af3d7f1b6` | Does not credit Animal Prosthetics 2 yet |
+| `README.md` | `ca985d6`, 2026-09-13 01:34 | `9348a1f5653f` | Gained the Animal Prosthetics 2 paragraph on 2026-09-25 (after this version) |
+| `CHANGELOG.md` | `e6427ef`, 2026-09-25 12:30 | `14bf119ebca9` | Headings follow the CI since 2026-09-25 (`## [1.0.0] - unreleased`, `## [0.1.0] - 2026-09-23`); the version listed is from before that edit |
+| `ATTRIBUTION.md` | `ca985d6`, 2026-09-13 01:34 | `f38af3d7f1b6` | Credits Animal Prosthetics 2, Pickle and RimLogging since 2026-09-25 (after this version) |
 | `LICENSE` | `c718af2`, 2026-09-20 11:15 | `d58493ff168b` | |
 | `TESTING.md` | `aa70b21`, 2026-09-24 20:47 | `a7b57f30976e` | 29 scenarios (block H added) |
-| `Mod/About/About.xml` | `aa70b21`, 2026-09-24 20:47 | `b57da0e04843` | Names Animal Prosthetics 2 with no Workshop link and no thanks |
+| `Mod/About/About.xml` | `aa70b21`, 2026-09-24 20:47 | `b57da0e04843` | Links and thanks Animal Prosthetics 2, links the original mod, thanks Pickle and RimLogging since 2026-09-25 (after this version) |
 | `Tests/Pickle/README.md` | `847f18b`, 2026-09-24 21:05 | `9604e5cbabb5` | |
 | `docs/runs/` | `e6427ef` (README) | `4ad6aab1efeb` | `2026-09-24.md`, `2026-09-25.md` |
 
@@ -54,16 +54,12 @@ Written or edited by this session, so not re-read line by line; their state when
 
 - **`PUBLICATION.md` is missing.** `AUDIT.md` requires it at `tested -> prepublished` (screenshot order, thanks comments,
   dependencies, adult-content answers, and the Steam change note under `### <version>` that the CI sends).
-- **Thanks and links for Animal Prosthetics 2** (`PUBLISHING.md`): every integration named or exercised is thanked by name and
-  linked to its Workshop page (3238353862, SamBucher), and its entry belongs in `ATTRIBUTION.md` and `WORKSHOP_COMMENTS.md`.
-  The `About.xml` description names it without either. The description is sent to Steam only at creation, so the page is
-  corrected by hand. Not edited now: `Mod/` stays as it is until the queued tickets are done.
-- **Changelog headings.** `AUDIT.md` writes `## [0.1.0]`; this repository uses `# 0.1.0`, which the owner asked for on
-  2026-09-24. The CI's documented mode needs `## [<version>]`. A question for her before the first publish, not a change.
-- **The engraved text may predate the 2026-09-25 charter of `STYLE_RIMWORLD.md`.** `Art/preview-palette.json` exists, as the
-  charter asks. But `Art/preview-layout.json` sets a 32 px title, a text block anchored 32 px from the left and 24 px from the
-  top, and a 330 px summary, where the charter gives a 46 px title (34 to 62), 50 px and 54 px margins, a 430 px summary, an
-  `(unofficial)` tag line under the title and a version badge in the top right corner. Compared on paper only, the picture not
-  reopened; a decision for the owner before the Preview is touched again.
-- **Queued requests carry no SHA.** The three requests in the queue when this was written (`5c23`, `fbf9`, `f2fd`) will stage
+- **Thanks and links for Animal Prosthetics 2: done 2026-09-25** in `About.xml`, `ATTRIBUTION.md` (both copies, identical)
+  and the README. Still to do: its entry in `WORKSHOP_COMMENTS.md`, and the description on the Steam page, edited by hand
+  because it is sent only at creation.
+- **Changelog headings: settled 2026-09-25.** The owner chose the CI's format over `# 0.1.0`: `## [1.0.0] - unreleased` and
+  `## [0.1.0] - 2026-09-23`, the CI reading the section that starts with `## [<version>]` (`changelog-section.sh`).
+- **The engraved text was engraved again on 2026-09-25** to the charter of `STYLE_RIMWORLD.md`: title 34 px, 50 px from the
+  left, two lines, the tag, the rule and the badge. Two deliberate deviations (top margin 24 px, summary 330 px, so the
+  text stays clear of the beast) are recorded in `Art/PREVIEW.md`.- **Queued requests carry no SHA.** The three requests in the queue when this was written (`5c23`, `fbf9`, `f2fd`) will stage
   the tree of the moment they are played. Future requests write the SHA in `-Label`.

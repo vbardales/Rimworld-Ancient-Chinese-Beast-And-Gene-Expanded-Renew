@@ -20,20 +20,23 @@ showcase:     complete
 tested_on:
 workshop:     prepublished 2026-09-23, item 3806709132, private, version 0.1.0
 remaining:
-  - unverified: Tests/Pickle is written - 14 features, 63 scenarios, nine manual exceptions (M1 to M9)
-      recorded in its README - and has never been run. Its phrases were checked, not its behavior; a
-      run waits for the owner's word, and the incompatibility pass for a download of the original mod
+  - unverified: Tests/Pickle - 14 features, 63 scenarios, nine manual exceptions (M1 to M9) recorded in its
+      README. First played in a real game on 2026-09-25 (English, no optional mods, and the Animal Prosthetics 2
+      pass), see docs/runs/. Green so far: features 01, 05, 07, 08, 10, 12 and 14, and 09 but for its blow
+      scenario. Submitted and not yet read: 02, 03, 04, 06, 09's blow, 11 and 13. No French pass has run and no
+      @review capture has been opened
   - unverified: the delivered assembly changed on 2026-09-25 (SHA-256 BE213D7D...9653A0, was 5F38C060...676769D): the
       debug action "Beast attack now" now forces its incident (Singleton.BeastApproach(forced)), because the first
       Pickle run showed both incidents refusing to fire unforced on a day-1 colony. Built, 26 assembly contracts
-      and 284 content checks green; the scenario that proves it is submitted, not run
-  - unverified: never seen running; TESTING.md is the protocol, 28 scenarios, none run
+      and 284 content checks green; the scenario that proves it passed on 2026-09-25 (request f2fd)
+  - unverified: no person has played the mod. What is known of it in a game is what Pickle showed on 2026-09-25
+      (above); TESTING.md remains the protocol, 29 scenarios
   - unverified: nine manual tests to validate (M1 to M9, Tests/Pickle/README.md), the cases the suite
       cannot play. `tested` waits for every one of them to be green
-  - defect: butchering a nian beast is promised to yield "nian beast fangs" (race description, README,
-      TESTING.md C8). It does not: the run of 2026-09-25 butchered one and the report lists a single product,
-      Meat_SZ_YearBeast x2800. No item def of that name ships and the race has no butcher product, so the
-      promise is inherited text. To decide: correct the three texts, or add the item. Not touched here
+  - unverified: the nian beast's description lost its butchery paragraph on 2026-09-25 (English, French,
+      Simplified Chinese; the promise of "nian beast fangs" was inherited text, a butchery yields meat only,
+      seen in the run of that day). The field paths are unchanged; the four PowerShell 7 translation scripts
+      that would confirm it have not been re-run, and the new text is in no in-game check yet
   - unverified: four offline scripts need PowerShell 7, which this machine lacks (Check-Translations,
       Test-ContentChecker, Test-TranslationChecker, Test-XmlExitCodes), so Tests/Run-All.ps1 as a whole
       has not run since Tests/Pickle/Source was added; every other step of it ran green on 2026-09-24
@@ -83,7 +86,7 @@ taken and nothing was published.
 | --- | --- | --- |
 | dansMonoRepo -> horsMonoRepo | Validated | Own repository, `origin` public on `main` at HEAD. STATUS present; licence `silent` with its four places named; packageId, repository and folder all spell the displayed name. README, ATTRIBUTION, LICENSE and CHANGELOG in English; the `Mod/` copies of ATTRIBUTION and LICENSE are byte-identical to the root ones (SHA-256 compared). |
 | ModIcon generated | Validated, one note | 128x128 PNG, 27059 bytes. The delivered DLL was rebuilt today and its SHA-256 is unchanged (`5F38C060...676769D`). Note: this session re-encoded the icon losslessly on 2026-09-11, pixel for pixel, before the rule that forbids a session to touch it; it was not redone. |
-| Preview generated | Validated | 896x504 PNG, 762904 bytes, under 1 MB; inspected at 896 px and at 268 px. Recomposed today, text now in the upper left. |
+| Preview generated | Validated | 896x504 PNG, 762904 bytes, under 1 MB; inspected at 896 px and at 268 px. Recomposed 2026-09-24 (text in the upper left) and engraved again on 2026-09-25 to the charter of that day: 734,072 bytes, title 34 px at 50 px from the left, two deliberate deviations recorded in `Art/PREVIEW.md` (top margin 24 px, summary 330 px). |
 | preOptions | Validated | Red accent and ochre secondary are distinct in the renderer's own report; English description; title hierarchy (`And`, `Renew`, the unofficial tag) rendered as specified. |
 | options | Not applicable, justified | The 74 source file names include no `Mod` subclass and no settings class; `Mod/Defs` has no MainButton folder. No page and no shortcut exist, so none is empty. Read from file names and the 2026-09-13 inventory, not a symbol search. |
 | l10n | Validated, on unchanged inputs | `.build/translation-coverage.log` and `translation-tests.log` (2026-09-13): 370 Def fields, 9 Keyed entries, 702 injection paths, 0 failures, negative controls passed. Git shows no change to `Mod/Defs`, `Mod/Languages`, `Source` or `Mod/Assemblies` since the l10n commit `ca985d6`. The four scripts that need PowerShell 7 could not be re-run here. |
@@ -103,15 +106,17 @@ taken and nothing was published.
 
 **Mandatory checks still open, for `done` -> `tested`.** None of these is a defect; each is unverified.
 
-- Pass 1 and pass 2 (English and French, without the optional mod): not run. Needs the owner's word for a ticket.
+- Pass 1 (English, without the optional mods): played in part on 2026-09-25, feature by feature, six requests still to
+  read. Pass 2 (French): not run.
 - Pass 3 (with `ninedaylongbow.ChineseComprehensiveExpansion`): not written, its Workshop id is not looked up.
-- Pass 4 (`13`): written, but the original mod is not downloaded into the WSL install.
+- Pass 4 (`13`): submitted (request f950); the original mod is a Windows subscription, nothing to download.
+- Pass 5 (Animal Prosthetics 2, `14`): green, 11 of 11, 2026-09-25.
 - The nine manual exceptions M1 to M9 (`Tests/Pickle/README.md`): to validate.
 - The `@review` captures: none exists yet, so none has been opened.
 
 **Recommendations, optional.** Install PowerShell 7 so that `Tests/Run-All.ps1` runs as one command. Look up the
-optional mod's Workshop id. `AUDIT.md` writes the prepublication entry as `## [0.1.0]`; the changelog here and
-in the sibling repositories uses `# 0.1.0`, which the owner asked for.
+optional mod's Workshop id. The changelog headings follow the CI (`## [1.0.0] — unreleased`, `## [0.1.0] — 2026-09-23`),
+which the owner chose on 2026-09-25 over the `# 0.1.0` she had asked for on 2026-09-24.
 
 **Left as it was, on purpose.** `.build/translation-inventory.json` was rewritten at 10:30 today by a partial
 run under Windows PowerShell 5.1 (370 entries, a different size). Regenerate it with PowerShell 7 before
@@ -122,7 +127,7 @@ relying on it. The preview on the Workshop item is the lower-right one it was up
 working folder: item 3806709132, private, version 0.1.0. `Mod/About/PublishedFileId.txt` is committed
 and pushed (`89a2575`) and the remote copy was read back with the same number. Steam froze the name,
 the description and the packageId at creation, and the About.xml it received was the one ending in
-the GitHub link. `CHANGELOG.md` opens on `# 0.1.0`. Publications from here go through GitHub
+the GitHub link. `CHANGELOG.md` holds that version as `## [0.1.0]`. Publications from here go through GitHub
 Actions: a dry-run for the exact commit first, and only Virginie approves `steam-production`.
 
 **What the upload probably carried that git does not.** 80 `.dds` files, 21 MB, written by the game
@@ -139,7 +144,7 @@ this is a consequence of the timestamps, not an observation.
 | Condition | This mod |
 | --- | --- |
 | No `@wip` | Holds for the thirteen features written: none carries the tag, they carry `@review` only |
-| Conditional scenarios have run | `13-original-mod-incompatibility` (`@requires:andery233xj.AncientChineseBeast`) is written with its pass map and has not run: the original mod has to be downloaded into the WSL install first. The pass with the optional mod `ninedaylongbow.ChineseComprehensiveExpansion` (`loadAfter`) is owed and not written |
+| Conditional scenarios have run | `13-original-mod-incompatibility` (`@requires:andery233xj.AncientChineseBeast`) is written with its pass map and submitted (request f950), not yet read; the original mod is a Windows subscription, so nothing has to be downloaded. `14-animal-prosthetics-2` (`@requires:SamBucher.ADogSaidAnimalProsthetics2`) has run and passed. The pass with the optional mod `ninedaylongbow.ChineseComprehensiveExpansion` (`loadAfter`) is owed and not written |
 | No manual test to validate | Not met. Nine manual exceptions (M1 to M9) are recorded in `Tests/Pickle/README.md`, each with why it is not automated and what to inspect. None has been done |
 
 Nothing counts until the suite has been run, so `tested_on` stays empty and a green static run does
@@ -183,7 +188,7 @@ about what the steps do: no line of it has run in a game.
 - `Tests/Tests.csproj` compiled every `.cs` under `Tests/`, including the net48 Pickle step sources, so
   the offline suite's `Build tests` step failed. Excluded in the project. `Tests/Run-All.ps1` had last run
   green before `Tests/Pickle/Source` existed.
-- The nian beast's fangs, above, and the debug labels: the four development actions are now exercised
+- The debug labels: the four development actions are now exercised
   through the Keyed key that names them, so a key untranslated in the language of the run fails the step.
 - The archite-capsule scenario would have failed on a NullReferenceException of the game's own:
   `GenRecipe.PostProcessProduct` reads `worker.Ideo` with no null check, and the recipe steps passed no

@@ -1,10 +1,18 @@
-# 1.0.0 — unreleased
+# Changelog
+
+Format inspired by [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). The release workflow reads the
+`## [<version>]` section of a version, so each one keeps that heading exactly. This file serves the repository and
+the writing of Steam patch notes; RimWorld does not display it in game.
+
+## [1.0.0] — unreleased
 
 Not on the Workshop yet. What changed in `Mod/` after the item was created at 0.1.0, and nothing else:
 
 - `Preview.png` moved its text to the upper left. The lower-right placement 0.1.0 shipped covered the three
   red firecrackers, the image's one vivid accent, and its veil dimmed the beast. The winged beast, the wind
-  sweep and the firecrackers are all in view now, and the title runs on two lines.
+  sweep and the firecrackers are all in view now, and the title runs on two lines. Engraved again to the
+  collection's charter of 2026-09-25 (title 34 px, 50 px from the left, the `(unofficial)` tag, the rule, the version
+  badge), with the veil held a little further so that every word reads at 4.5:1 or better.
 
 - Compatibility with **A Dog Said... Animal Prosthetics 2**
   ([3238353862](https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862)), built in and optional.
@@ -15,6 +23,9 @@ Not on the Workshop yet. What changed in `Mod/` after the item was created at 0.
   surgery recipes once and a mod that loads after it writes into lists nobody reads. Without the other mod
   the patch finds nothing to change and does nothing.
 
+- The nian beast's description no longer promises **nian beast fangs**. Butchering it yields meat and nothing else, and
+  no item of that name ever shipped: the paragraph is out of the English, French and Simplified Chinese descriptions (the
+  last is the authors' own text, cut at its last paragraph), and out of the README.
 - The development action **Beast attack now** forces its incident. It asked the game whether the incident could fire
   with ordinary, unforced parameters and, when the answer was no, did nothing at all and said nothing; on the Pickle
   test colony (day 1) both incidents answered no. The storyteller's own schedule still asks without forcing, as
@@ -23,7 +34,7 @@ Not on the Workshop yet. What changed in `Mod/` after the item was created at 0.
 Development-only work that never reaches `Mod/` (the Pickle scenarios under `Tests/Pickle/`, the offline test
 project, the evidence rules and `docs/runs/`) is recorded in `STATUS.md`, not here.
 
-# 0.1.0
+## [0.1.0] — 2026-09-23
 
 First version. RimWorld 1.6. Creation of the `PublishedFileId.txt` file (`Mod/About/PublishedFileId.txt`): the
 Workshop item, 3806709132, was created by the first upload on 2026-09-23 and is private until it is switched to

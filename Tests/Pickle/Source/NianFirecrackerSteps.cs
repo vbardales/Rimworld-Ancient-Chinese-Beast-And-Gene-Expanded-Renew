@@ -103,7 +103,7 @@ namespace AncientChineseBeast.PickleSteps
 
         // The butchery yields whatever the game decides for this race. What it yields is written into the
         // report, whether or not it is what a description promises: the description of the nian beast
-        // says "nian beast fangs", and no ThingDef of that name ships with the mod.
+        // used to say "nian beast fangs", and no ThingDef of that name ships with the mod (a butchery gives meat).
         [When("Ancient Chinese Beast: the corpse of a {string} at x={int} z={int} is butchered by a colonist")]
         public void Butcher(PickleContext ctx, string defName, int x, int z)
         {

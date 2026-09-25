@@ -3,7 +3,7 @@
   <ThingDef ParentName="SZBeastParent">
     <defName>SZ_YearBeast</defName>
     <label>nian beast</label>
-    <description>The nian beast is something close to a demon in traditional Chinese myth, and next to nothing is known about it. This one cannot be tamed. It is thickly armoured, and its fangs and claws alike do enormous damage to anything it hunts. On top of that it breathes deadly fire. \n\nAlmost nobody on the rim has seen the thing. Shenzhou traders say it attacks colonists often, and will break down a door to reach someone indoors. Its weakness is that it fears fire and loud noise, so firecrackers hold it in check. (Any weapon other than a firecracker does only 10% of its damage to it.) \n\nButchering a nian beast yields nian beast fangs, a prized collector's piece that sells to traders for a good price. Hence the Chinese saying: when the new year comes, wealth comes with it.</description>
+    <description>The nian beast is something close to a demon in traditional Chinese myth, and next to nothing is known about it. This one cannot be tamed. It is thickly armoured, and its fangs and claws alike do enormous damage to anything it hunts. On top of that it breathes deadly fire. \n\nAlmost nobody on the rim has seen the thing. Shenzhou traders say it attacks colonists often, and will break down a door to reach someone indoors. Its weakness is that it fears fire and loud noise, so firecrackers hold it in check. (Any weapon other than a firecracker does only 10% of its damage to it.)</description>
     <descriptionHyperlinks>
       <ThingDef>SZ_Firecracker</ThingDef>
     </descriptionHyperlinks>

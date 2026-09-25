@@ -8,6 +8,49 @@ the changelog instead, and anything that needs watching in play is in `TESTING.m
 
 ---
 
+## Decided 2026-09-25: the beasts sleep and breed. Proposal, awaiting the owner's go
+
+The owner's answer to the two entries below: yes to both. This is the proposal that follows from what was read in the
+game (the vanilla animal think tree pulls in `SatisfyBasicNeeds`, which holds `JobGiver_GetRest`, and has a mating node; a
+saved pawn whose race gains sexes keeps `Gender.None`, since `Pawn` fixes nothing up on load).
+
+**Scope: the six races a colony can own** (the five clones and the Pleiades star officer). The four hostile beasts are
+raid pawns and stay as they are: they never rest, and they never breed.
+
+**Sleep: small.**
+
+- `needsRest` back to true on the six, **set on each one, not on `SZBeastParent`**, which the hostile four inherit. The clones
+  are already on the vanilla `Animal` tree, so they lie down with no other change.
+- Rhythms, through Nocturnal Animals **when it is there** (a folder loaded only if `Mlie.XNDNocturnalAnimals` is active, since
+  the extension class kills a def when its mod is missing): qiongqi and sexie (both forms) nocturnal, mingshe and nian beast
+  crepuscular, the Pleiades star officer **crepuscular**, because it crows at 04:00 and the vanilla clock (asleep 22:00 to
+  06:00) would have it asleep at that hour. Without Nocturnal Animals they simply follow the vanilla clock.
+- To settle in the code: whether the 04:00 crow (`CompChickenAIExpansion`) still fires from a sleeping bird. A scenario
+  will say.
+
+**Breeding: medium.**
+
+- **Who.** Nian beast, qiongqi, mingshe and the chicken get two sexes (`hasGenders`). **Not the sexie**: its human form dies
+  into a scorpion, which no litter can carry, so both forms stay genderless and sterile.
+- **How.** Breeding among the same race only; one young per litter; a long gestation and a slow `mateMtbHours`, so a line
+  takes seasons while the bench still gives a beast today. The clone recipe already draws a sex at random, so a colony
+  clones twice to get a pair. The young are the same beast in the same colony faction.
+- **Life stages.** Today the race has one stage, adult from age 0, so a newborn would be born full size. Three stages, baby,
+  juvenile and adult, on **the same textures at a smaller `drawSize`** (no new art), with smaller body size and health.
+- **The mingshe lays an egg** (fertilised egg and a hatcher) instead of giving birth, being a snake. A later step.
+- **Saved clones stay genderless and sterile**, since nothing gives them a sex; only clones made after the change can breed.
+  That is stated in the changelog rather than fixed.
+- **Crossbreeding with Better Crossbreeding**, a later and optional step behind its own guard: only the chicken and the
+  qiongqi have a plausible partner (a hen; a big cat). Not part of the first version.
+
+**Tests.** Offline: the six races have the two fields and the hostile four do not; life stages ascend; the sexie has no
+sexes. Pickle: a rest window per rhythm, a forced pregnancy that gives a young of the right kind, faction and life stage, the
+crow at 04:00 with a bird that sleeps. **Risk:** balance, and the extra think-tree work for anything that has to wake a
+sleeping companion when it is attacked (vanilla animals do wake).
+
+**Order.** Sleep first, alone and small. Breeding second, the nian beast and the qiongqi before the chicken and the mingshe.
+---
+
 ## Nocturnal Animals: a body clock for the beasts
 
 Proposed 2026-09-25, on the owner's question whether the mod could handle it too. Read in the installed mod

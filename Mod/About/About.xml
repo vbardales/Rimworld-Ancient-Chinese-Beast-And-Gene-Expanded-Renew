@@ -9,11 +9,11 @@
   </supportedVersions>
   <description>UNOFFICIAL. This mod is published without the original author's explicit consent. If the original author contacts me to request its removal, I undertake to take it down promptly.
 
-Update of andery233xj, Frolg, DongFang and Ninedaylongbow's 山海志怪-华夏凶兽和基因扩展 - Ancient Chinese Beast And Gene Expanded to RimWorld 1.6.
+Update of andery233xj, Frolg, DongFang and Ninedaylongbow's [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3292446841]山海志怪-华夏凶兽和基因扩展 - Ancient Chinese Beast And Gene Expanded[/url] to RimWorld 1.6.
 
 I am not the author of this mod. The creatures, the art, the mechanics and the original code are theirs; all I did was the work needed to make it run on 1.6, and a pass over the English text. Credit goes to them; mistakes in the update are mine. If the original authors come back to it, or ask me to take this down, I will.
 
-Original mod: https://steamcommunity.com/sharedfiles/filedetails/?id=3292446841
+Original mod: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3292446841]Ancient Chinese Beast And Gene Expanded[/url]
 
 What it does
 
@@ -34,7 +34,7 @@ A fifth storyteller, Sexie, is included: it likes to cause trouble at random, an
 
 Requires Biotech. Requires Harmony.
 
-Works with A Dog Said... Animal Prosthetics 2 (optional): the five tame clones can receive its prosthetics and bionics like a wolf or a thrumbo, and the Pleiades star officer like a duck. Nothing changes without it.
+Works with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862]A Dog Said... Animal Prosthetics 2[/url] (optional): the five tame clones can receive its prosthetics and bionics like a wolf or a thrumbo, and the Pleiades star officer like a duck. Nothing changes without it.
 
 What changed in the 1.6 update
 
@@ -47,13 +47,13 @@ The mod's own logic is unchanged. What broke was where 1.6 moved the ground unde
 
 All nine Harmony patch targets were checked against the 1.6 assemblies before anything was compiled; all of them survived.
 
-The English text has been rewritten. The original was machine-translated from Chinese and had gone wrong in places - the qiongqi was called "Pauper", the sexie "Sex evil", the mingshe's tooth "Naruto-tooth" - and a number of weapon and body-part labels had never been translated at all and showed as Chinese in an English game. The Simplified Chinese translation is the authors' own and is untouched; it has been extended to cover the labels that used to be hard-coded.
+The English text has been rewritten. The original was machine-translated from Chinese and had gone wrong in places - the qiongqi was called "Pauper", the sexie "Sex evil", the mingshe's tooth "Naruto-tooth" - and a number of weapon and body-part labels had never been translated at all and showed as Chinese in an English game. The Simplified Chinese translation is the authors' own; it has been extended to cover the labels that used to be hard-coded, and the nian beast's description has lost its last paragraph, which promised nian beast fangs on butchering that the mod never supplied.
 
 Safe to add to an ongoing save. Removing it mid-save removes the beasts, their genes and the storyteller.
 
 Source, changelog and the list of defects inherited from the original: https://github.com/vbardales/Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 
-The update work was done with the help of an AI assistant (Claude, by Anthropic). Thanks to andery233xj, Frolg, DongFang and Ninedaylongbow for the mod, and to Andreas Pardeike for Harmony.
+The update work was done with the help of an AI assistant (Claude, by Anthropic). Thanks to andery233xj, Frolg, DongFang and Ninedaylongbow for the mod; to SamBucher for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862]A Dog Said... Animal Prosthetics 2[/url] and for saying how a mod is added to it; to Andreas Pardeike for Harmony; and to the authors of Pickle and RimLogging, the test tools this update was checked with (development only, never a dependency of the mod).
 
 If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.
 

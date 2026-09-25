@@ -46,10 +46,16 @@ angrier pawn that fires venomous tail-needles through walls and pincers anything
 **The nian beast** takes a tenth of the damage from anything that is not a firecracker, and a
 thousandfold multiplier from anything that is — the two together mean firecrackers are the only
 weapon that meaningfully hurts it. It breathes a cone of fire that spawns a wave of small flame
-projectiles. Butcher it for nian beast fangs.
+projectiles.
 
 Each of the four also exists as a tame version, cloned at the extractor — same abilities, on your
 side, with an AI that will use its ranged ability while it fights in melee.
+
+**Optional: A Dog Said... Animal Prosthetics 2** ([Workshop 3238353862](https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862)).
+With it, the five tame clones can receive its prosthetics and bionics like a wolf or a thrumbo, and the Pleiades star
+officer like a duck (no bionics). The hostile beasts, which a colony cannot own, are left out. The mod loads before it
+(`loadBefore` in `About.xml`) because it copies its category lists onto its surgery recipes once. Without it, nothing
+changes.
 
 ## The chicken
 

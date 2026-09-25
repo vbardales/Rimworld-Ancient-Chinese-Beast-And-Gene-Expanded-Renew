@@ -38,7 +38,7 @@ The disk is full and the runner's report folder is shared by every mod. For this
   scenarios `01-loads`, `03-save-reload`, `07-debug-actions`, `10-scheduler`, `12-recipes-and-clones`, the drought
   scenario of `04` and every scenario of `09` but the fire breath take no capture: their proof is the assertion, and
   `summary.md` holds it. Two things are written into the report as attachments and are worth a line in the day's file:
-  what butchering a nian beast yielded (the fangs question) and which mod's copy of a def the game kept in the
+  what butchering a nian beast yielded and which mod's copy of a def the game kept in the
   incompatibility pass.
 - **Keep, from the French pass:** `summary.md`, `junit.xml` and `log-check.txt`, and a picture only for a check whose
   subject is the French text itself. The pass exists to show the game boots and plays with the French UI; the beasts

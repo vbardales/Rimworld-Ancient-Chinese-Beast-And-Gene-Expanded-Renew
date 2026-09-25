@@ -24,7 +24,8 @@ setup. Record the exception, its reason and the exact evidence to inspect in `Te
 Evidence stays on disk and out of git. Which proofs of a run are worth keeping, in what form and for
 how long, is in `docs/runs/README.md`; read it before deleting or committing anything a run wrote.
 
-The companion suite exists (`Tests/Pickle/`, 14 features, 63 scenarios) and has never been run. Which of the
+The companion suite exists (`Tests/Pickle/`, 14 features, 63 scenarios) and was first run, in part, on 2026-09-25
+(`docs/runs/`). Which of the
 28 cases below each feature plays is the table in its README, and so are the nine manual exceptions (M1 to
 M9), the cases it does not play and why. Those nine are the only cases below that a person still has to do
 by hand, and they are manual tests to validate: until they are green the mod cannot be `tested`. The
@@ -63,8 +64,8 @@ yet on the passes alone: a pass that names an optional mod has not been defined 
   run at least. A second run inside the full modlist is worth doing afterwards, and any difference
   between the two runs is itself the finding.
 
-Every "expected" line below is read out of the code or the defs, not from having seen it happen.
-That is the point of the exercise: **nothing in this file has ever been observed.**
+Every "expected" line below is read out of the code or the defs. The Pickle runs of 2026-09-25 have shown some of
+them happening (`docs/runs/`); **no person has yet observed any of it.**
 
 ---
 
@@ -232,11 +233,12 @@ that matters here.
 **Also.** It breathes a cone of fire that spawns a wave of small flame projectiles, and it will
 break a door down to reach someone indoors.
 
-### C8. Butchering a nian beast gives fangs
+### C8. Butchering a nian beast gives meat, and only meat
 
 1. Butcher the corpse at a butcher table.
 
-**Expected.** Nian beast fangs among the products.
+**Expected.** Meat, and nothing else: the race carries no butcher product, and the original mod's promise of
+"nian beast fangs" has been taken out of the descriptions. Seen in the game on 2026-09-25: 2800 units of meat.
 
 ---
 

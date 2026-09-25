@@ -54,8 +54,9 @@ Feature: The nian beast and the firecracker
     And Ancient Chinese Beast: the flame target is hurt or burning within 30 seconds
     And no errors were logged
 
-  # What a butchery yields is written into the report either way. The race description promises "nian
-  # beast fangs" and no def of that name ships with the mod, so the report is where that is settled.
+  # What a butchery yields is written into the report either way. The descriptions used to promise "nian
+  # beast fangs", which no def ships; the first run showed meat and nothing else, the promise was taken out, and the
+  # report stays the place where anything else the race might one day yield would show.
   Scenario: butchering a nian beast yields meat, and the report lists everything else it yields
     Given the save "test-colony" is loaded
     And Ancient Chinese Beast: I spawn the pawn "SZ_YearBeast" at x=146 z=155

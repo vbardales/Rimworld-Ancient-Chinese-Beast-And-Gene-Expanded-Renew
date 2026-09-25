@@ -1,20 +1,26 @@
-{
-  "width": 896,
-  "height": 504,
-  "textPosition": "top-left",
-  "textLeft": 32,
-  "textTop": 24,
-  "titleSize": 32,
-  "titleWidth": 352,
-  "titleConnectors": ["And"],
-  "titleAffixes": ["Renew"],
-  "summaryWidth": 330,
-  "summary": "Four mythical beasts, their genes, and a divine rooster on the Rim.",
-  "veilMode": "dark",
-  "veilStartOpacity": 0.8,
-  "veilHoldOpacity": 0.6,
-  "veilHoldPercent": 22,
-  "veilFadePercent": 52,
-  "source": "Preview.png",
-  "about": "../Mod/About/About.xml"
+﻿{
+    "width":  896,
+    "height":  504,
+    "textPosition":  "top-left",
+    "textLeft":  50,
+    "textTop":  24,
+    "titleSize":  34,
+    "titleWidth":  372,
+    "titleConnectors":  [
+                            "And"
+                        ],
+    "titleAffixes":  [
+                         "Renew"
+                     ],
+    "summaryWidth":  330,
+    "summary":  "Four mythical beasts, their genes, and a divine rooster on the Rim.",
+    "veilMode":  "dark",
+    "veilStartOpacity":  0.8,
+    "veilHoldOpacity":  0.6,
+    "veilHoldPercent":  34,
+    "veilFadePercent":  56,
+    "source":  "Preview.png",
+    "about":  "../Mod/About/About.xml",
+    "textRight":  50,
+    "textBottom":  18
 }
