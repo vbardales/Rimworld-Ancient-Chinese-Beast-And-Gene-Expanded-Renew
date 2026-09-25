@@ -13,9 +13,16 @@
 # a tame clone is a category 3 animal (every kind of prosthesis), the chicken a category 2 one (no bionics),
 # and a hostile beast none at all. The recipe names are the concrete recipes of that mod's 1.6 folder.
 #
+# The pass map puts this mod before the other one on purpose (see wsl-deps.ads2.map): the staging does not
+# sort by loadBefore. The last scenario asserts that order, so a map that loses it fails there and not
+# obscurely in the recipe lists.
+#
+# Names are short on purpose: a screenshot's file name is built from the feature and scenario names, and the
+# launcher's copy of a report failed on a path over 260 characters in the first run.
+#
 # It needs no save: the recipe lists are settled while the defs load, by patches.
 @requires:SamBucher.ADogSaidAnimalProsthetics2
-Feature: Animal prosthetics from A Dog Said 2 reach the beasts a colony can own
+Feature: A Dog Said 2 prosthetics
 
   Scenario Outline: a tame clone is a category 3 animal
     Given the main menu is open
@@ -30,7 +37,7 @@ Feature: Animal prosthetics from A Dog Said 2 reach the beasts a colony can own
       | SZ_SeXie_Friendly       |
       | SZ_SeXieInsect_Friendly |
 
-  Scenario: the chicken is a category 2 animal, as a duck is: a simple prosthesis but no bionics
+  Scenario: the chicken is a category 2 animal, like a duck
     Given the main menu is open
     Then Ancient Chinese Beast: the race "SZ_Chicken" offers the recipes "InstallPegLegAnimal" and "InstallSimpleProstheticLegAnimal"
     And Ancient Chinese Beast: the race "SZ_Chicken" does not offer the recipe "InstallBionicLegAnimal"
@@ -48,8 +55,7 @@ Feature: Animal prosthetics from A Dog Said 2 reach the beasts a colony can own
       | SZ_MingShe   |
       | SZ_SeXie     |
 
-  Scenario: the other mod is loaded after this one, or the lists were copied before the beasts were on them
+  Scenario: this mod loads before the other one
     Given the main menu is open
     Then mod "SamBucher.ADogSaidAnimalProsthetics2" is loaded
-    And mod "nelim.ancientchinesebeastandgeneexpandedrenew" loads after "brrainz.harmony"
     And Ancient Chinese Beast: the mod "nelim.ancientchinesebeastandgeneexpandedrenew" loads before "SamBucher.ADogSaidAnimalProsthetics2"

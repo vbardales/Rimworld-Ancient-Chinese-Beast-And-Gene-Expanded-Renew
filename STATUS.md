@@ -36,7 +36,10 @@ remaining:
       loadBefore in About.xml, added 2026-09-24). Offline: the patch's paths and lists are checked against a
       stand-in of the other mod's category defs, negative control seen. In game: feature 14, pass 5
       (wsl-deps.ads2.map, Workshop 3238353862, a Windows subscription at 1.3.7), written and submitted to the
-      TicketDispatcher on 2026-09-24, not yet run. Its recipe names were checked against the local 1.6 files
+      TicketDispatcher. First run 2026-09-25: 4 of 11 passed, 7 failed, all seven because the staging loaded
+      this mod after ADS2 (it does not sort by loadBefore), which is what the mechanism predicts and not a defect of
+      the patch; the pass map now puts the mod first and the pass is resubmitted (request 8dd6), not yet run.
+      Its recipe names were checked against the local 1.6 files
   - unverified: pass 3, the pass with the optional mod ninedaylongbow.ChineseComprehensiveExpansion (the
       one mod About.xml names in loadAfter), is owed and not written: its Workshop id has not been looked up
   - unverified: what the 0.1.0 upload carried. It was made from the working folder, where 80 .dds

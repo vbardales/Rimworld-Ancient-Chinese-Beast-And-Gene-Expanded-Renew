@@ -7,4 +7,11 @@
 #
 # The item is a Windows subscription (version 1.3.7, 1.6 folder present, checked 2026-09-24), and staging
 # reads the Windows Workshop folder first, so nothing has to be downloaded into the WSL cache.
+#
+# ORDER. The staging does not sort by loadBefore: it activates the mods named here, in this order, and then
+# the mod under test. Left alone, ADS2 loads first, copies its category lists onto its surgery recipes before
+# this mod has added its races, and the first run of this pass failed for exactly that (the mod at position
+# 10, ADS2 at 9). A player's mod manager sorts by loadBefore; the staging has to be told. Naming the mod's
+# own packageId with a path: overlay puts it at this position and makes the staging skip its own copy of it.
+nelim.ancientchinesebeastandgeneexpandedrenew   path:AncientChineseBeastAndGeneExpandedRenew/Mod
 SamBucher.ADogSaidAnimalProsthetics2   3238353862
