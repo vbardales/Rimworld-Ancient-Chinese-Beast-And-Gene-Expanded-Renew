@@ -43,3 +43,7 @@ changelog) and the chicken and the mingshe lay eggs. What is left:
 - **The guard.** Better Crossbreeding's extension class kills a def when its mod is missing, so its `outcomes` go behind the same
   kind of guard as the Nocturnal Animals patch (`PatchOperationFindMod` on the display name).
 - **Cost.** A hybrid child should not undercut the bench: sterile, or weaker, or only the chicken.
+
+## At the first publication: the description has one source
+
+Decided by the CI session on 2026-09-25 (Rimworld-Release-Admin `docs/OPERATIONS.md`, "Changing where the Steam description comes from"). Nothing is forced now. When `PUBLICATION.md` is written (it does not exist yet), the Steam description goes in it once, in a ```markdown block under `## Steam description`, its last line `[Source code on GitHub](URL)`; the CI then generates the `<description>` of `Mod/About/About.xml` from it, and a dry-run stops if the two differ. The workflow (`.github/`) is not edited by hand; the change note's first line carries the version (`[b]1.0.0[/b]`).
