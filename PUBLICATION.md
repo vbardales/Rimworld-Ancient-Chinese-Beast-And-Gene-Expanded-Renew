@@ -77,3 +77,14 @@ section `## [1.0.0]`.
 [b]1.0.0[/b]
 See the changelog on GitHub for the full list.
 ```
+
+## Thank-you comment (not posted)
+
+Register: `WORKSHOP_COMMENTS.md`, row 3292446841 (the original mod). Post only after item 3806709132 is public,
+by the owner, on the original page. It is also the way the original authors can reach her to ask for a takedown.
+The pages of Harmony, Pickle, RimLogging, A Dog Said... Animal Prosthetics 2 and Nocturnal Animals already have
+their comment (or a draft) from another mod of the collection: only `Covers` was extended, nothing more to post.
+
+```
+Wanted to see the mingshe's wind wall on a 1.6 colony, so here's an unofficial update: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806709132]Ancient Chinese Beast And Gene Expanded Renew[/url]. The beasts are all yours, I only moved it over. Thank you for them :) If you'd rather it came down, just tell me here or on the page.
+```
