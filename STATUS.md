@@ -20,21 +20,23 @@ showcase:     complete
 tested_on:
 workshop:     prepublished 2026-09-23, item 3806709132, private, version 0.1.0
 remaining:
-  - unverified: Tests/Pickle - 14 features, 63 scenarios, nine manual exceptions (M1 to M9) recorded in its
-      README. First played in a real game on 2026-09-25 (English, no optional mods, and the Animal Prosthetics 2
-      pass), see docs/runs/. Green so far: features 01, 05, 07, 08, 10, 12 and 14, and 09 but for its blow
-      scenario. Submitted and not yet read: 02, 03, 04, 06, 09's blow, 11 and 13. No French pass has run and no
-      @review capture has been opened
+  - unverified: Tests/Pickle - 16 features, 91 scenarios, nine manual exceptions (M1 to M9) recorded in its
+      README, with a step sheet in docs/MANUAL-TESTS.md. Played in a real game on 2026-09-25 and 2026-09-26 (English,
+      no optional mods, then the Animal Prosthetics 2 and Nocturnal Animals passes), see docs/runs/. Green on the
+      current tree (2026-09-25 and 26): features 01 to 13, 15 and 16, and 14 on 2026-09-25; the French pass and the `@review` captures are unread. Not proven as one full run: no
+      initial/final pass with all scenarios has been played. The French pass (features 01, 05, 07, 08) is submitted
+      (request 4fc7) and not read
   - unverified: the delivered assembly changed on 2026-09-25 (SHA-256 BE213D7D...9653A0, was 5F38C060...676769D): the
       debug action "Beast attack now" now forces its incident (Singleton.BeastApproach(forced)), because the first
       Pickle run showed both incidents refusing to fire unforced on a day-1 colony. Built, 26 assembly contracts
       and 284 content checks green; the scenario that proves it passed on 2026-09-25 (request f2fd)
-  - unverified: the beasts rest and breed (2026-09-25, branch beasts-sleep-breed, merged after the queued runs): every beast
-      has a rest need and two sexes, the tame ones give birth (or lay eggs: mingshe and star officer) to babies that grow
-      through baby, juvenile and adult, and Nocturnal Animals gives each a body clock. Offline: 341 content checks green with
-      the negative controls seen, the XML classes, fields and references green, the four new French keys resolved. In
-      game: features 15 (17 scenarios) and 16 (11, pass 6, wsl-deps.nocturnal.map) are written and have not run. Saved
-      clones stay genderless and sterile
+  - unverified: the beasts rest and breed (2026-09-25, merged into main): every beast has a rest need and two sexes, the
+      tame ones give birth (or lay eggs: mingshe and star officer) to babies that grow through baby, juvenile and adult,
+      and Nocturnal Animals gives each a body clock. Offline: 341 content checks green, the XML classes, fields and
+      references green, the French keys resolved. In game, green on 2026-09-26: feature 15 (rest 11/11, eggs 2/2,
+      births 4/4) and feature 16 (11/11). Saved clones stay genderless and sterile. Not played: a long hostile raid, to
+      see whether a tired hostile beast lies down instead of attacking (its think trees put SatisfyBasicNeeds before the
+      attack; a fresh beast starts rested, so this is judged low risk, not measured)
   - unverified: no person has played the mod. What is known of it in a game is what Pickle showed on 2026-09-25
       (above); TESTING.md remains the protocol, 29 scenarios
   - unverified: nine manual tests to validate (M1 to M9, Tests/Pickle/README.md), the cases the suite
@@ -42,10 +44,11 @@ remaining:
   - unverified: the nian beast's description lost its butchery paragraph on 2026-09-25 (English, French,
       Simplified Chinese; the promise of "nian beast fangs" was inherited text, a butchery yields meat only,
       seen in the run of that day). The field paths are unchanged; the four PowerShell 7 translation scripts
-      that would confirm it have not been re-run, and the new text is in no in-game check yet
-  - unverified: four offline scripts need PowerShell 7, which this machine lacks (Check-Translations,
-      Test-ContentChecker, Test-TranslationChecker, Test-XmlExitCodes), so Tests/Run-All.ps1 as a whole
-      has not run since Tests/Pickle/Source was added; every other step of it ran green on 2026-09-24
+      were re-run 2026-09-26 and are green; the new text is in no in-game check yet
+  - verified 2026-09-26: Tests/Run-All.ps1 ran whole under PowerShell 7.6 (pwsh, installed on this machine): builds, 341
+      content checks, translation check (378 Def fields, 9 Keyed, 0 failure), configuration, XML checker exit codes, all
+      negative controls green. The content negative control for the repository URL was fixed the same day (the
+      description now carries the URL twice, so the mutation removes both)
   - unverified: A Dog Said... Animal Prosthetics 2 compatibility (Mod/Patches/ADogSaidAnimalProsthetics2.xml,
       loadBefore in About.xml, added 2026-09-24). Offline: the patch's paths and lists are checked against a
       stand-in of the other mod's category defs, negative control seen. In game: feature 14, pass 5

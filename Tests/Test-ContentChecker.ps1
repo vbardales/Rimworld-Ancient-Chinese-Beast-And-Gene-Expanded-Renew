@@ -26,5 +26,5 @@ Expect-Failure 'Defs/Recipe/ExtractGenes.xml' { param($s) $s + '<broken>' } 'Mal
 Expect-Failure 'Defs/Recipe/ExtractGenes.xml' { param($s) $s.Replace('<gene>SZGene_YearBeast_Flamethrower</gene>', '<gene>MissingGene</gene>') } 'Unknown extraction gene'
 Expect-Failure 'Defs/Recipe/ExtractGenes.xml' { param($s) $s.Replace('</Defs>', '<RecipeDef><defName>SZ_ExtractGene</defName></RecipeDef></Defs>') } 'Duplicate definition'
 Expect-Failure 'Defs/Recipe/CloneBeast.xml' { param($s) $s.Replace('<pawn>SZ_YearBeast_Friendly</pawn>', '<pawn>SZ_YearBeast</pawn>') } 'Clone must reference a friendly pawn kind'
-Expect-Failure 'About/About.xml' { param($s) $s.Replace('Source, changelog and the list of defects inherited from the original: https://github.com/vbardales/Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew', 'Source available on request.') } 'Description must include the repository URL'
+Expect-Failure 'About/About.xml' { param($s) [regex]::Replace($s, '(?s)<description>.*?</description>', { param($m) $m.Value.Replace('https://github.com/vbardales/Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew', 'Source available on request.') }) } 'Description must include the repository URL'
 Write-Host 'Five negative controls passed. Fixtures are retained under .build for inspection.'
