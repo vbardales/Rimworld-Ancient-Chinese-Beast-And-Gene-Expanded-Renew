@@ -34,6 +34,16 @@ namespace AncientChineseBeast.PickleSteps
             ctx.Assert(pawn.needs?.rest != null, $"{pawn.def.defName} has no rest need");
         }
 
+        // A beast that arrives for a raid must not arrive tired, or its think tree (SatisfyBasicNeeds before the
+        // attack) would send it to bed instead of at the colony.
+        [Then("Ancient Chinese Beast: pawn {int} has at least {float} of rest")]
+        public void HasRestOf(PickleContext ctx, int number, float level)
+        {
+            var pawn = Nth(ctx, number);
+            ctx.Assert(pawn.needs?.rest != null, $"{pawn.def.defName} has no rest need");
+            ctx.Assert(pawn.needs.rest.CurLevel >= level, $"{pawn.def.defName} has {pawn.needs.rest.CurLevel} of rest, under {level}");
+        }
+
         [When("Ancient Chinese Beast: the rest of pawn {int} is set to {float}")]
         public void SetRest(PickleContext ctx, int number, float level)
         {

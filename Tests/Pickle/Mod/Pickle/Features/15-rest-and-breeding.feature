@@ -35,6 +35,22 @@ Feature: The beasts rest and breed
       | SZ_SeXie       |
       | SZ_SeXieInsect |
 
+  # A hostile beast is not sent to bed on arrival: its think trees put the basic needs before the attack, so a
+  # beast that came in tired would sleep through its own raid.
+  Scenario Outline: a hostile beast arrives rested
+    Given the save "test-colony" is loaded
+    When Ancient Chinese Beast: I spawn the pawn "<kind>" at x=146 z=155
+    Then Ancient Chinese Beast: pawn 1 has at least 0.7 of rest
+    And no errors were logged
+
+    Examples:
+      | kind           |
+      | SZ_YearBeast   |
+      | SZ_QiongQi     |
+      | SZ_MingShe     |
+      | SZ_SeXie       |
+      | SZ_SeXieInsect |
+
   # A pair that gives birth: the male mates with the female through the real job, she is pregnant, and a pregnancy
   # brought to its end gives a baby of the same race, in the player's faction.
   Scenario Outline: a tame pair mates and the female gives birth
