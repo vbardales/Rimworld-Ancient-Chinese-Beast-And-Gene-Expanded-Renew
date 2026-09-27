@@ -61,7 +61,11 @@ remaining:
       unverified: what the Health tab's operation menu shows for a given body part, which is the other mod's own
       logic and is not asserted (TESTING.md, H1)
   - unverified: pass 3, the pass with the optional mod ninedaylongbow.ChineseComprehensiveExpansion (the
-      one mod About.xml names in loadAfter), is owed and not written: its Workshop id has not been looked up
+      one mod About.xml names in loadAfter). Its Workshop id (3221850511) was looked up 2026-09-28
+      (`Search-Workshop.sh` over the local corpus, by its packageId; a Windows subscription, 1.6 folder
+      present) and the pass is written (`17-chinese-comprehensive-expansion.feature`, `wsl-deps.cce.map`,
+      mirrors the ADS2 pass: no patch either way, only the loadAfter order and no def conflict). Submitted,
+      not yet read
   - unverified: what the 0.1.0 upload carried. It was made from the working folder, where 80 .dds
       files (21 MB) sat beside the PNGs, written by the game 18 minutes earlier. Check the item's
       file list; the first CI upload builds from a checkout and replaces it

@@ -84,17 +84,19 @@ README and `TESTING.md`. The scenario stays: it now proves that a butchery gives
 ## Passes
 
 There is no DLC-absent pass: Biotech is a hard dependency, so the mod does not load without it. About.xml does
-name one optional mod, in `loadAfter`: `ninedaylongbow.ChineseComprehensiveExpansion`. A pass with it is owed
-(`AUDIT.md`: a pass with the optional mods) and is **not written**, because its Workshop id has not been looked
-up; `TESTING.md`, "Passes", lists it as pass 3. The other optional mod, A Dog Said... Animal Prosthetics 2, is
-not in `loadAfter` (the mod loads *before* it) and its pass is written. The five passes below are written, and
-each is a separate launch of the shared runner, submitted as its own request (see "Before a ticket is taken").
+name one optional mod, in `loadAfter`: `ninedaylongbow.ChineseComprehensiveExpansion`, Workshop 3221850511
+(looked up 2026-09-28 by its packageId, `Search-Workshop.sh` over the local corpus). Pass 3 of `TESTING.md`,
+"Passes", is now written (`17-chinese-comprehensive-expansion.feature`, `wsl-deps.cce.map`); it has not yet run.
+The other optional mod, A Dog Said... Animal Prosthetics 2, is not in `loadAfter` (the mod loads *before* it)
+and its pass is written. The six passes below are written, and each is a separate launch of the shared runner,
+submitted as its own request (see "Before a ticket is taken").
 
 ```powershell
 powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod AncientChineseBeastAndGeneExpandedRenew -Language English
 powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod AncientChineseBeastAndGeneExpandedRenew -Language French
 powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod AncientChineseBeastAndGeneExpandedRenew -Language English -DepMap wsl-deps.incompat-original.map -Filter '13-original-mod-incompatibility'
 powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod AncientChineseBeastAndGeneExpandedRenew -Language English -DepMap wsl-deps.ads2.map -Filter '14-animal-prosthetics-2'
+powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod AncientChineseBeastAndGeneExpandedRenew -Language English -DepMap wsl-deps.cce.map -Filter '17-chinese-comprehensive-expansion'
 powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod AncientChineseBeastAndGeneExpandedRenew -Language English -DepMap wsl-deps.nocturnal.map -Filter '16-nocturnal-animals'
 ```
 

@@ -1,0 +1,11 @@
+# Pass "cce": Chinese Comprehensive Expansion beside this mod, and nothing else optional.
+#
+# ninedaylongbow.ChineseComprehensiveExpansion, Workshop 3221850511, supports 1.5 and 1.6. Its own hard
+# dependency is Harmony, already staged for this mod; VanillaExpanded.VFECore is only in its loadAfter
+# (order, not a requirement), so it loads without it. This pass plays 17-chinese-comprehensive-expansion,
+# which checks this mod loads after it and that nothing the two define collides.
+#
+# The item is a Windows subscription (1.6 folder present, checked 2026-09-28), and staging reads the
+# Windows Workshop folder first, so nothing has to be downloaded into the WSL cache.
+nelim.ancientchinesebeastandgeneexpanded   path:AncientChineseBeastAndGeneExpandedRenew/Mod
+ninedaylongbow.ChineseComprehensiveExpansion   3221850511
