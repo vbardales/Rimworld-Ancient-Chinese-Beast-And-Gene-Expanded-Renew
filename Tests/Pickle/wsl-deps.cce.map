@@ -7,5 +7,12 @@
 #
 # The item is a Windows subscription (1.6 folder present, checked 2026-09-28), and staging reads the
 # Windows Workshop folder first, so nothing has to be downloaded into the WSL cache.
-nelim.ancientchinesebeastandgeneexpanded   path:AncientChineseBeastAndGeneExpandedRenew/Mod
+#
+# ORDER. The staging does not sort by loadAfter: it activates the mods named here, in this order, and then
+# the mod under test would land last of all if left unnamed, same as any player's own load order once
+# loadAfter is honoured. This mod's own loadAfter names ninedaylongbow.ChineseComprehensiveExpansion, so it
+# must load first; naming this mod's own packageId with a path: overlay after it puts it at that position
+# and makes the staging skip its own copy of it (first run named this mod first instead and failed exactly
+# on the ordering assertion: request fbc7, 2026-09-28).
 ninedaylongbow.ChineseComprehensiveExpansion   3221850511
+nelim.ancientchinesebeastandgeneexpanded   path:AncientChineseBeastAndGeneExpandedRenew/Mod
