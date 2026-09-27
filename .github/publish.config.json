@@ -1,0 +1,20 @@
+{
+  "templateStamp": "a8ca11cdd9a3",
+  "workshopId": "3806709132",
+  "packageId": "nelim.ancientchinesebeastandgeneexpandedrenew",
+  "releaseTitle": "Ancient Chinese Beast And Gene Expanded Renew (unofficial) {version}",
+  "requirePaths": [
+    "Assemblies/AncientChineseBeast.dll"
+  ],
+  "forbidPaths": [],
+  "previewFile": "About/Preview.png",
+  "aboutFromDescription": true,
+  "build": {
+    "project": "Source/AncientChineseBeast.csproj"
+  },
+  "description": {
+    "file": "PUBLICATION.md",
+    "format": "markdown",
+    "heading": "^## Steam description$"
+  }
+}
