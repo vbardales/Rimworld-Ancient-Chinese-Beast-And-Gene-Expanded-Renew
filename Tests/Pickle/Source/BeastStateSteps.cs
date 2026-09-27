@@ -68,8 +68,12 @@ namespace AncientChineseBeast.PickleSteps
             var room = spawner.GetRoom();
             ctx.Assert(room != null, "the tunnel spawner stands in no room");
             float wealth = room.GetStat(RoomStatDefOf.Wealth);
-            float richest = map.regionGrid.AllRooms.Max(r => r.GetStat(RoomStatDefOf.Wealth));
-            ctx.Assert(wealth >= richest, $"the tunnel opened in a room worth {wealth}; the richest room on the map is worth {richest}");
+            bool home = room.Cells.Any(c => map.areaManager.Home[c]);
+            ctx.Assert(home, $"the tunnel opened in a room ({wealth} wealth) that touches no home-area cell");
+            float richest = map.regionGrid.AllRooms
+                .Where(r => r.ProperRoom && r.Cells.Any(c => map.areaManager.Home[c]))
+                .Max(r => r.GetStat(RoomStatDefOf.Wealth));
+            ctx.Assert(wealth >= richest, $"the tunnel opened in a room worth {wealth}; the richest room of the colony is worth {richest}");
         }
 
         // Evidence for a person, not an assertion: the errors the log holds when this scenario ends,
