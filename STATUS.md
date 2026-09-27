@@ -60,12 +60,13 @@ remaining:
       wooden and simple and no bionic, the four hostile beasts nothing, and the load order is the mod first. Still
       unverified: what the Health tab's operation menu shows for a given body part, which is the other mod's own
       logic and is not asserted (TESTING.md, H1)
-  - unverified: pass 3, the pass with the optional mod ninedaylongbow.ChineseComprehensiveExpansion (the
-      one mod About.xml names in loadAfter). Its Workshop id (3221850511) was looked up 2026-09-28
-      (`Search-Workshop.sh` over the local corpus, by its packageId; a Windows subscription, 1.6 folder
-      present) and the pass is written (`17-chinese-comprehensive-expansion.feature`, `wsl-deps.cce.map`,
-      mirrors the ADS2 pass: no patch either way, only the loadAfter order and no def conflict). Submitted,
-      not yet read
+  - verified 2026-09-28: pass 3, the optional mod ninedaylongbow.ChineseComprehensiveExpansion (the one
+      mod About.xml names in loadAfter). Its Workshop id (3221850511) was looked up (`Search-Workshop.sh`
+      over the local corpus, by its packageId; a Windows subscription, 1.6 folder present) and the pass
+      written (`17-chinese-comprehensive-expansion.feature`, `wsl-deps.cce.map`, mirrors the ADS2 pass: no
+      patch either way, only the loadAfter order and no def conflict). First run red, the map's order
+      copied from ads2 unadjusted (this mod before CCE instead of after); fixed and green, 1/1
+      (evidence `2026-09-28b-cce`)
   - checked 2026-09-28: what the 0.1.0 upload carried. The item's own cached copy
       (`steamapps/workshop/content/294100/3806709132`, since the owner is subscribed to her own item) still
       holds the 80 `.dds` files (28 MB total with the textures) that sat beside the PNGs at upload time,
