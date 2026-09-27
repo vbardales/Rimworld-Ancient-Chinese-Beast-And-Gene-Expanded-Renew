@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using RimWorld;
 using Verse;
 
@@ -30,7 +31,10 @@ public class IncidentWorker_TunnelBeastApproach : IncidentWorker
 
 	private bool TryFindEntryCell(Map map, out IntVec3 cell)
 	{
-		rooms.AddRange(map.regionGrid.AllRooms);
+		// AllRooms also carries the map's great outdoors as one giant, unenclosed "room": on a poor colony its
+		// scattered rocks and chunks can out-value every built room, and a random cell of it can land anywhere on
+		// the map, never seen by a colonist. ProperRoom (well enclosed) keeps this to a room of the colony.
+		rooms.AddRange(map.regionGrid.AllRooms.Where((Room r) => r.ProperRoom));
 		if (rooms.Count > 0)
 		{
 			rooms.SortBy((Room x) => x.GetStat(RoomStatDefOf.Wealth));
