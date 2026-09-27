@@ -9,11 +9,11 @@
   </supportedVersions>
   <description>UNOFFICIAL. This mod is published without the original author's explicit consent. If the original author contacts me to request its removal, I undertake to take it down promptly.
 
-Update of andery233xj, Frolg, DongFang and Ninedaylongbow's [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3292446841]山海志怪-华夏凶兽和基因扩展 - Ancient Chinese Beast And Gene Expanded[/url] to RimWorld 1.6.
+Update of andery233xj, Frolg, DongFang and Ninedaylongbow's 山海志怪-华夏凶兽和基因扩展 - Ancient Chinese Beast And Gene Expanded (https://steamcommunity.com/sharedfiles/filedetails/?id=3292446841) to RimWorld 1.6.
 
 I am not the author of this mod. The creatures, the art, the mechanics and the original code are theirs; all I did was the work needed to make it run on 1.6, and a pass over the English text. Credit goes to them; mistakes in the update are mine. If the original authors come back to it, or ask me to take this down, I will.
 
-Original mod: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3292446841]Ancient Chinese Beast And Gene Expanded[/url]
+Original mod: Ancient Chinese Beast And Gene Expanded (https://steamcommunity.com/sharedfiles/filedetails/?id=3292446841)
 
 What it does
 
@@ -34,9 +34,9 @@ A fifth storyteller, Sexie, is included: it likes to cause trouble at random, an
 
 Requires Biotech. Requires Harmony.
 
-Works with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862]A Dog Said... Animal Prosthetics 2[/url] (optional): the five tame clones can receive its prosthetics and bionics like a wolf or a thrumbo, and the Pleiades star officer like a duck. Nothing changes without it.
+Works with A Dog Said... Animal Prosthetics 2 (https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862) (optional): the five tame clones can receive its prosthetics and bionics like a wolf or a thrumbo, and the Pleiades star officer like a duck. Nothing changes without it.
 
-The beasts rest and breed like any animal: they lie down when tired, and a tame pair gives young that grow up (the mingshe and the Pleiades star officer lay eggs). Clones saved before this version have no sex and stay sterile. With [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2269731409]Nocturnal Animals[/url] (optional) each beast keeps its own hours: the qiongqi and the sexie hunt by night.
+The beasts rest and breed like any animal: they lie down when tired, and a tame pair gives young that grow up (the mingshe and the Pleiades star officer lay eggs). Clones saved before this version have no sex and stay sterile. With Nocturnal Animals (https://steamcommunity.com/sharedfiles/filedetails/?id=2269731409) (optional) each beast keeps its own hours: the qiongqi and the sexie hunt by night.
 
 What changed in the 1.6 update
 
@@ -55,11 +55,11 @@ Safe to add to an ongoing save. Removing it mid-save removes the beasts, their g
 
 Source, changelog and the list of defects inherited from the original: https://github.com/vbardales/Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 
-The update work was done with the help of an AI assistant (Claude, by Anthropic). Thanks to andery233xj, Frolg, DongFang and Ninedaylongbow for the mod; to SamBucher for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862]A Dog Said... Animal Prosthetics 2[/url] and for saying how a mod is added to it; to Mlie and XeoNovaDan for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2269731409]Nocturnal Animals[/url]; to Andreas Pardeike for Harmony; and to the authors of Pickle and RimLogging, the test tools this update was checked with (development only, never a dependency of the mod).
+The update work was done with the help of an AI assistant (Claude, by Anthropic). Thanks to andery233xj, Frolg, DongFang and Ninedaylongbow for the mod; to SamBucher for A Dog Said... Animal Prosthetics 2 (https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862) and for saying how a mod is added to it; to Mlie and XeoNovaDan for Nocturnal Animals (https://steamcommunity.com/sharedfiles/filedetails/?id=2269731409); to Andreas Pardeike for Harmony; and to the authors of Pickle and RimLogging, the test tools this update was checked with (development only, never a dependency of the mod).
 
 If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.
 
-[url=https://github.com/vbardales/Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew]Source code on GitHub[/url]</description>
+Source code on GitHub (https://github.com/vbardales/Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew)</description>
   <modDependencies>
     <li>
       <packageId>brrainz.harmony</packageId>
