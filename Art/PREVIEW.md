@@ -52,3 +52,25 @@ was rendered too and covers the three red firecrackers, the image's one vivid ac
 The veil holds its opacity a little further (`veilHoldPercent` 34, `veilFadePercent` 56) because "Renew", in the secondary
 ink, read 4.39:1 where the beast's fur begins; it now reads 5.17:1 and every text region is above 4.5:1. The image is
 896 x 504, 734,072 bytes, Segoe UI throughout (checked by Chrome's font API).
+
+## Regravure of 2026-09-27, moved to the bottom-left corner
+
+The owner flagged that the upper-left composition above did not sit in the illustration's largest empty area: it
+passed every contrast check, but "Renew" still visibly touched the beast's ear. Two alternatives were rendered and
+compared before touching anything: `bottom-right` (the collection's only other preset) put the title and summary
+squarely over the three red firecrackers, the image's one accent, and over the front paw; forcing a different title
+wrap (moving "And" to the first line, so "Renew" would clear the ear) moved the collision onto the eye instead, the
+illustration's one focal point. Neither improved on the original.
+
+The illustration's actual largest calm ground is below the beast and its paw, left of the firecrackers: the dust
+swirl and bare dirt spanning roughly x:0-420, y:280-504. Neither preset anchors there, so `Art/preview.html` gained
+a third, mod-local `bottom-left` position (`left`/`bottom` anchored, same as `bottom-right`'s pattern mirrored to the
+left edge; the shared collection guide is not touched, only this mod's own copy). `preview-layout.json` now carries
+`"textPosition": "bottom-left"` with the same `textLeft`/`textBottom` margins (50 / 18 px) the charter gives its two
+presets, unchanged `titleWidth` (372) and `summaryWidth` (330). The veil's radial gradient now anchors at
+`bottom left` instead of `top left`, following the text block as the palette rationale requires.
+
+Result: no text touches the beast, its paw, its eye or the firecrackers at any point; every contrast minimum rose
+(the lowest is now 5.03:1, the version badge, unchanged by this move). `Art/Preview.ico` was regenerated from the
+new `Mod/About/Preview.png` the same way as before (six sizes, transparent top/bottom margins keeping the 16:9
+frame). The image is 896 x 504, 736,202 bytes, Segoe UI throughout.
