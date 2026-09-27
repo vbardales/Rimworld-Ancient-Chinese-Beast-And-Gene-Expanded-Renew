@@ -66,9 +66,13 @@ remaining:
       present) and the pass is written (`17-chinese-comprehensive-expansion.feature`, `wsl-deps.cce.map`,
       mirrors the ADS2 pass: no patch either way, only the loadAfter order and no def conflict). Submitted,
       not yet read
-  - unverified: what the 0.1.0 upload carried. It was made from the working folder, where 80 .dds
-      files (21 MB) sat beside the PNGs, written by the game 18 minutes earlier. Check the item's
-      file list; the first CI upload builds from a checkout and replaces it
+  - checked 2026-09-28: what the 0.1.0 upload carried. The item's own cached copy
+      (`steamapps/workshop/content/294100/3806709132`, since the owner is subscribed to her own item) still
+      holds the 80 `.dds` files (28 MB total with the textures) that sat beside the PNGs at upload time,
+      written by the game. They are gitignored and untracked (`git ls-files` finds none, `git check-ignore`
+      confirms `*.dds`), so a checkout has none of them: the next publish, which the CI builds from a
+      checkout, replaces the item's content wholesale and drops them on its own, nothing to do by hand.
+      The item stays private and prepublished, so no one has downloaded the 0.1.0 copy
   - unverified: English and French display checks, generated names, debug actions and
       save/reload across languages have not been run; see TESTING.md, Translation checks
   - defect: Singleton.nextBeastTimeHours is incremented, reset, and read by nothing. Inherited,
