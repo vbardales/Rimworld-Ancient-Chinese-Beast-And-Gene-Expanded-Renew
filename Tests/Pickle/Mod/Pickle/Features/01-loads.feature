@@ -2,10 +2,10 @@
 Feature: Ancient Chinese Beast loads in the minimal set
 
   Scenario: its hard dependencies and principal content load without an error
-    Then mod "nelim.ancientchinesebeastandgeneexpandedrenew" is loaded
+    Then mod "nelim.ancientchinesebeastandgeneexpanded" is loaded
     And mod "brrainz.harmony" is loaded
     And mod "Ludeon.RimWorld.Biotech" is loaded
-    And mod "nelim.ancientchinesebeastandgeneexpandedrenew" loads after "brrainz.harmony"
+    And mod "nelim.ancientchinesebeastandgeneexpanded" loads after "brrainz.harmony"
     And def "SZ_MingShe" of type "PawnKindDef" exists
     And def "SZ_QiongQi" of type "PawnKindDef" exists
     And def "SZ_SeXie" of type "PawnKindDef" exists

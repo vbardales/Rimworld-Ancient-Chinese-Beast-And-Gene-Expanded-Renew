@@ -58,4 +58,4 @@ Feature: A Dog Said 2 prosthetics
   Scenario: this mod loads before the other one
     Given the main menu is open
     Then mod "SamBucher.ADogSaidAnimalProsthetics2" is loaded
-    And Ancient Chinese Beast: the mod "nelim.ancientchinesebeastandgeneexpandedrenew" loads before "SamBucher.ADogSaidAnimalProsthetics2"
+    And Ancient Chinese Beast: the mod "nelim.ancientchinesebeastandgeneexpanded" loads before "SamBucher.ADogSaidAnimalProsthetics2"

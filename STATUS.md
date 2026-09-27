@@ -5,7 +5,7 @@ translation_fr: complete
 settings_audit: not_applicable
 audit_revision: eeb57db (pushed, tree clean when the audit began) plus the commit that records the 2026-09-24 audit
 mod:          Ancient Chinese Beast And Gene Expanded Renew (unofficial)
-packageId:    nelim.ancientchinesebeastandgeneexpandedrenew
+packageId:    nelim.ancientchinesebeastandgeneexpanded
 repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 visibility:   public
 detached:     yes

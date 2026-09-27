@@ -13,5 +13,5 @@
 # this mod has added its races, and the first run of this pass failed for exactly that (the mod at position
 # 10, ADS2 at 9). A player's mod manager sorts by loadBefore; the staging has to be told. Naming the mod's
 # own packageId with a path: overlay puts it at this position and makes the staging skip its own copy of it.
-nelim.ancientchinesebeastandgeneexpandedrenew   path:AncientChineseBeastAndGeneExpandedRenew/Mod
+nelim.ancientchinesebeastandgeneexpanded   path:AncientChineseBeastAndGeneExpandedRenew/Mod
 SamBucher.ADogSaidAnimalProsthetics2   3238353862

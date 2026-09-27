@@ -19,7 +19,7 @@ Feature: Declared incompatibility with the original Ancient Chinese Beast
   Scenario: the two mods define the same beast and the game keeps one copy of it
     Given the main menu is open
     Then mod "andery233xj.AncientChineseBeast" is loaded
-    And mod "nelim.ancientchinesebeastandgeneexpandedrenew" is loaded
-    And Ancient Chinese Beast: the "ThingDef" "SZ_MingShe" is defined by both mods "andery233xj.AncientChineseBeast" and "nelim.ancientchinesebeastandgeneexpandedrenew"
-    And Ancient Chinese Beast: the game keeps one copy of the "ThingDef" "SZ_MingShe", from mod "andery233xj.AncientChineseBeast" or "nelim.ancientchinesebeastandgeneexpandedrenew"
+    And mod "nelim.ancientchinesebeastandgeneexpanded" is loaded
+    And Ancient Chinese Beast: the "ThingDef" "SZ_MingShe" is defined by both mods "andery233xj.AncientChineseBeast" and "nelim.ancientchinesebeastandgeneexpanded"
+    And Ancient Chinese Beast: the game keeps one copy of the "ThingDef" "SZ_MingShe", from mod "andery233xj.AncientChineseBeast" or "nelim.ancientchinesebeastandgeneexpanded"
     And Ancient Chinese Beast: I attach the logged errors to the report
