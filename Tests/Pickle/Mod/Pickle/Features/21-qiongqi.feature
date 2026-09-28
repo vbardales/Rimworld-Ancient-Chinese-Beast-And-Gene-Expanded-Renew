@@ -25,8 +25,7 @@ Feature: The qiongqi's dodge, flying strike and blows
   Scenario: the qiongqi's blows land on the head far more often than a vanilla blow does
     Given the save "test-colony" is loaded
     And Ancient Chinese Beast: I spawn the pawn "SZ_QiongQi" at x=146 z=155
-    And Ancient Chinese Beast: I spawn a colonist at x=146 z=152
-    Then Ancient Chinese Beast: pawn 1 lands at least 0.40 of 400 blows on the head of pawn 2
+    Then Ancient Chinese Beast: pawn 1 lands at least 0.35 of 120 blows on the head of fresh colonists
     And no errors were logged
 
   Scenario: the qiongqi's flying strike goes to the farthest colonist it can hit

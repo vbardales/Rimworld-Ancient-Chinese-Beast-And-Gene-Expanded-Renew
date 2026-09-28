@@ -53,34 +53,39 @@ namespace AncientChineseBeast.PickleSteps
         }
 
         // The qiongqi's bite and claws aim at the head half of the time (Verb_MeleeAttackDamage_HitHead), on top of
-        // whatever the vanilla roll gives, which is about a tenth for a human. The victim is healed between blows so
-        // that one colonist can take every sample.
-        [Then("Ancient Chinese Beast: pawn {int} lands at least {float} of {int} blows on the head of pawn {int}")]
-        public void HeadBias(PickleContext ctx, int attackerNumber, float minimum, int blows, int victimNumber)
+        // whatever the vanilla roll gives, which is about a tenth for a human. A head hit can destroy the head and kill
+        // the victim (the first run, 8be9, lost its one colonist that way), and a destroyed head is a missing part, not an
+        // injury; so every blow gets a fresh colonist, and a blow counts as landed on the head when it left an injury or
+        // a missing part in the head.
+        [Then("Ancient Chinese Beast: pawn {int} lands at least {float} of {int} blows on the head of fresh colonists")]
+        public void HeadBias(PickleContext ctx, int attackerNumber, float minimum, int blows)
         {
             var attacker = Nth(ctx, attackerNumber);
-            var victim = Nth(ctx, victimNumber);
+            var map = Stage.CurrentMap(ctx);
             var verb = attacker.meleeVerbs.GetUpdatedAvailableVerbsList(false).Select(entry => entry.verb).OfType<Verb_MeleeAttackDamage_HitHead>().FirstOrDefault();
             ctx.Assert(verb != null, $"{attacker.def.defName} has no head-biased melee verb");
             var apply = typeof(Verb_MeleeAttackDamage).GetMethod("ApplyMeleeDamageToTarget", BindingFlags.Instance | BindingFlags.NonPublic);
             ctx.Assert(apply != null, "Verb_MeleeAttackDamage.ApplyMeleeDamageToTarget was not found");
+            var cell = CellFinder.StandableCellNear(attacker.Position, map, 6f);
+            ctx.Assert(cell.IsValid, "no standable cell near the attacker");
             int landed = 0, head = 0;
             for (int i = 0; i < blows; i++)
             {
+                var victim = PawnGenerator.GeneratePawn(new PawnGenerationRequest(PawnKindDefOf.Colonist, Faction.OfPlayer, forceGenerateNewPawn: true));
+                GenSpawn.Spawn(victim, cell, map);
                 apply.Invoke(verb, new object[] { new LocalTargetInfo(victim) });
-                var injuries = victim.health.hediffSet.hediffs.OfType<Hediff_Injury>().ToList();
-                if (injuries.Count > 0)
+                var marks = victim.health.hediffSet.hediffs.Where(h => h is Hediff_Injury || h is Hediff_MissingPart).ToList();
+                if (marks.Count > 0)
                 {
                     landed++;
-                    if (injuries.Any(injury => InHead(injury.Part))) head++;
+                    if (marks.Any(mark => InHead(mark.Part))) head++;
                 }
-                foreach (var hediff in victim.health.hediffSet.hediffs.ToList())
-                    if (hediff is Hediff_Injury || hediff is Hediff_MissingPart) victim.health.RemoveHediff(hediff);
-                ctx.Assert(!victim.Dead, "the victim died between two samples");
+                if (victim.Spawned) victim.Destroy();
+                else if (victim.Corpse != null && !victim.Corpse.Destroyed) victim.Corpse.Destroy();
             }
-            ctx.Assert(landed >= blows / 2, $"only {landed} of {blows} blows left an injury");
+            ctx.Assert(landed >= blows / 2, $"only {landed} of {blows} blows left a mark");
             float share = head / (float)landed;
-            ctx.Attach("head share", $"{head} of {landed} injuring blows landed on the head ({share:P0})");
+            ctx.Attach("head share", $"{head} of {landed} blows that left a mark landed on the head ({share:P0})");
             ctx.Assert(share >= minimum, $"{share:P0} of {landed} blows landed on the head, under {minimum:P0}");
         }
 
