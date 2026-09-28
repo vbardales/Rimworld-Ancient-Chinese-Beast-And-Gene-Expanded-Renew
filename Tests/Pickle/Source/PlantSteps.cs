@@ -24,6 +24,7 @@ namespace AncientChineseBeast.PickleSteps
             if (thing is Plant plant) plant.Growth = 1f;
             GenSpawn.Spawn(thing, cell, map);
             ctx.Assert(thing.Spawned, $"{defName} did not spawn at x={x} z={z}");
+            ctx.Assert(thing.HitPoints > 0, $"{defName} has {thing.HitPoints} hit points at spawn, so a drought could not be seen on it");
         }
 
         private static Thing PlantAt(PickleContext ctx, int x, int z)

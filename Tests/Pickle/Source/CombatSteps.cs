@@ -94,18 +94,22 @@ namespace AncientChineseBeast.PickleSteps
             barrier.ticksTime = 900;
         }
 
-        // An item lying on the ground, at the standable cell nearest the one asked, remembered by number.
-        [When("Ancient Chinese Beast: I lay {string} near x={int} z={int}")]
-        public void LayItem(PickleContext ctx, string defName, int x, int z)
+        // A thing with hit points (steel walls stand for what a barrier can cut: an item such as steel has useHitPoints false
+        // and a HitPoints of -1 for ever, which made the first run of this scenario pass and fail on nothing), set up at
+        // the standable cell nearest the one asked and remembered by number.
+        [When("Ancient Chinese Beast: I set up {string} near x={int} z={int}")]
+        public void SetUp(PickleContext ctx, string defName, int x, int z)
         {
             var map = Stage.CurrentMap(ctx);
             var def = DefDatabase<ThingDef>.GetNamedSilentFail(defName);
             ctx.Assert(def != null, $"no ThingDef named {defName}");
             var cell = CellFinder.StandableCellNear(new IntVec3(x, 0, z), map, 8f);
             ctx.Assert(cell.IsValid, $"no standable cell near x={x} z={z}");
-            var thing = ThingMaker.MakeThing(def);
+            ctx.Assert(def.useHitPoints, $"{defName} does not use hit points, so nothing can cut it");
+            var thing = ThingMaker.MakeThing(def, def.MadeFromStuff ? ThingDefOf.Steel : null);
             GenSpawn.Spawn(thing, cell, map);
             ctx.Assert(thing.Spawned, $"{defName} did not spawn near x={x} z={z}");
+            ctx.Assert(thing.HitPoints > 0, $"{defName} has {thing.HitPoints} hit points at spawn");
             Placed(ctx).Add(thing);
         }
 
