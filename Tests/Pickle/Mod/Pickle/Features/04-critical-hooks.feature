@@ -18,6 +18,21 @@ Feature: Ancient Chinese Beast critical 1.6 callbacks
     And Ancient Chinese Beast: the plant at x=146 z=150 is untouched by the drought
     And no errors were logged
 
+  # M4 of Tests/Pickle/README.md's manual exceptions: the scorpion sexie's aura (CompSeXieExpansion.BerserkRing)
+  # sends humanlikes within 10.9 tiles berserk. Two colonists stand close, one far: who is berserk is what a
+  # person would watch, and what is asserted.
+  Scenario: the scorpion sexie's aura sends colonists within its ring berserk and spares the far one
+    Given the save "test-colony" is loaded
+    And Ancient Chinese Beast: I spawn the pawn "SZ_SeXieInsect" at x=146 z=155
+    And Ancient Chinese Beast: I spawn a colonist near x=146 z=150
+    And Ancient Chinese Beast: I spawn a colonist near x=150 z=152
+    And Ancient Chinese Beast: I spawn a colonist near x=118 z=155
+    Then Ancient Chinese Beast: pawn 4 is more than 12 tiles from pawn 1
+    And Ancient Chinese Beast: pawn 2 goes berserk within 30 seconds
+    And Ancient Chinese Beast: pawn 3 goes berserk within 30 seconds
+    And Ancient Chinese Beast: pawn 4 is not berserk
+    And no errors were logged
+
   Scenario: a mingshe drought ends when its causer dies
     Given the save "test-colony" is loaded
     And Ancient Chinese Beast: I spawn the pawn "SZ_MingShe" at x=142 z=155

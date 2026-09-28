@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using RimWorks.Pickle;
 using RimWorld;
+using RimWorld.Planet;
 using Verse;
 
 namespace AncientChineseBeast.PickleSteps
@@ -32,6 +33,45 @@ namespace AncientChineseBeast.PickleSteps
             var pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(PawnKindDefOf.Colonist, Faction.OfPlayer, forceGenerateNewPawn: true));
             GenSpawn.Spawn(pawn, cell, map);
             ctx.Assert(pawn.Spawned, $"the colonist did not spawn at x={x} z={z}");
+            Remember(ctx, pawn);
+        }
+
+        // A colonist who can do the work of a bench, for the scenarios that let a person work a bill: a generated
+        // colonist may have a backstory that disables a work type, so the step draws again until the type is open,
+        // then turns it on at the top priority. The cell is moved to the nearest standable one.
+        [When("Ancient Chinese Beast: I spawn a colonist who can do {string} work at x={int} z={int}")]
+        public void SpawnWorker(PickleContext ctx, string workTypeDefName, int x, int z)
+        {
+            var map = Stage.CurrentMap(ctx);
+            var workType = DefDatabase<WorkTypeDef>.GetNamedSilentFail(workTypeDefName);
+            ctx.Assert(workType != null, $"no WorkTypeDef named {workTypeDefName}");
+            var cell = CellFinder.StandableCellNear(new IntVec3(x, 0, z), map, 8f);
+            ctx.Assert(cell.IsValid, $"no standable cell near x={x} z={z}");
+            Pawn pawn = null;
+            for (int attempt = 0; attempt < 30 && pawn == null; attempt++)
+            {
+                var candidate = PawnGenerator.GeneratePawn(new PawnGenerationRequest(PawnKindDefOf.Colonist, Faction.OfPlayer, forceGenerateNewPawn: true));
+                if (!candidate.WorkTypeIsDisabled(workType)) pawn = candidate;
+                else Find.WorldPawns.PassToWorld(candidate, PawnDiscardDecideMode.Discard);
+            }
+            ctx.Assert(pawn != null, $"30 generated colonists all had {workTypeDefName} disabled");
+            GenSpawn.Spawn(pawn, cell, map);
+            pawn.workSettings.EnableAndInitialize();
+            pawn.workSettings.SetPriority(workType, 1);
+            ctx.Assert(pawn.Spawned, $"the colonist did not spawn near x={x} z={z}");
+            Remember(ctx, pawn);
+        }
+
+        // A colonist at the nearest standable cell to the one asked, for a spot the scenario cannot vouch for.
+        [When("Ancient Chinese Beast: I spawn a colonist near x={int} z={int}")]
+        public void SpawnColonistNear(PickleContext ctx, int x, int z)
+        {
+            var map = Stage.CurrentMap(ctx);
+            var cell = CellFinder.StandableCellNear(new IntVec3(x, 0, z), map, 8f);
+            ctx.Assert(cell.IsValid, $"no standable cell near x={x} z={z}");
+            var pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(PawnKindDefOf.Colonist, Faction.OfPlayer, forceGenerateNewPawn: true));
+            GenSpawn.Spawn(pawn, cell, map);
+            ctx.Assert(pawn.Spawned, $"the colonist did not spawn near x={x} z={z}");
             Remember(ctx, pawn);
         }
 
