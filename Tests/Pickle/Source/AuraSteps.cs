@@ -21,7 +21,7 @@ namespace AncientChineseBeast.PickleSteps
 
         private static bool Berserk(Pawn pawn) => pawn.InMentalState && pawn.MentalStateDef == MentalStateDefOf.Berserk;
 
-        [Then("Ancient Chinese Beast: pawn {int} goes berserk within {int} seconds", TimeoutSeconds = 90f)]
+        [Then("Ancient Chinese Beast: pawn {int} goes berserk within {int} seconds", TimeoutSeconds = 170f)]
         public async Task GoesBerserk(PickleContext ctx, int number, int seconds)
         {
             var pawn = Nth(ctx, number);

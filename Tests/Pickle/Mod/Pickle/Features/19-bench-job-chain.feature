@@ -14,6 +14,8 @@ Feature: A colonist works the beast gene extractor to the end
     And Ancient Chinese Beast: I kill "SZ_QiongQi" at x=150 z=146
     And Ancient Chinese Beast: I spawn a colonist who can do "Smithing" work at x=150 z=142
     When Ancient Chinese Beast: I put the bill "SZ_ExtractGene" on the "SZ_BeastGeneExtractor"
+    And Ancient Chinese Beast: the game runs for 5 seconds
+    Then Ancient Chinese Beast: I attach why pawn 2 is or is not working the bill on the "SZ_BeastGeneExtractor"
     Then Ancient Chinese Beast: at least 10 "ArchiteCapsule" lie on the map within 120 seconds
     And I zoom all the way in
     And I move the camera to (156, 146)

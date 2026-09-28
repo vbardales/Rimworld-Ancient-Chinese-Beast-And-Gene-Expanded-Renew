@@ -20,17 +20,19 @@ Feature: Ancient Chinese Beast critical 1.6 callbacks
 
   # M4 of Tests/Pickle/README.md's manual exceptions: the scorpion sexie's aura (CompSeXieExpansion.BerserkRing)
   # sends humanlikes within 10.9 tiles berserk. Two colonists stand close, one far: who is berserk is what a
-  # person would watch, and what is asserted.
+  # person would watch, and what is asserted. The colonists come first and the beast last: the ring looks at who
+  # is on the map when it first ticks and again every 1800 ticks, and the first run (2026-09-28) spawned the beast
+  # first, so the second colonist was not in the ring's list yet and the wait ended at 90 real seconds.
   Scenario: the scorpion sexie's aura sends colonists within its ring berserk and spares the far one
     Given the save "test-colony" is loaded
-    And Ancient Chinese Beast: I spawn the pawn "SZ_SeXieInsect" at x=146 z=155
     And Ancient Chinese Beast: I spawn a colonist near x=146 z=150
     And Ancient Chinese Beast: I spawn a colonist near x=150 z=152
     And Ancient Chinese Beast: I spawn a colonist near x=118 z=155
-    Then Ancient Chinese Beast: pawn 4 is more than 12 tiles from pawn 1
+    And Ancient Chinese Beast: I spawn the pawn "SZ_SeXieInsect" at x=146 z=155
+    Then Ancient Chinese Beast: pawn 3 is more than 12 tiles from pawn 4
+    And Ancient Chinese Beast: pawn 1 goes berserk within 30 seconds
     And Ancient Chinese Beast: pawn 2 goes berserk within 30 seconds
-    And Ancient Chinese Beast: pawn 3 goes berserk within 30 seconds
-    And Ancient Chinese Beast: pawn 4 is not berserk
+    And Ancient Chinese Beast: pawn 3 is not berserk
     And no errors were logged
 
   Scenario: a mingshe drought ends when its causer dies

@@ -1,8 +1,10 @@
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using RimWorks.Pickle;
 using RimWorld;
 using Verse;
+using Verse.AI;
 
 namespace AncientChineseBeast.PickleSteps
 {
@@ -52,6 +54,41 @@ namespace AncientChineseBeast.PickleSteps
             bill.repeatCount = 1;
             bench.BillStack.AddBill(bill);
             ctx.Assert(bench.BillStack.Count == 1, "the bill was not added to the bench");
+        }
+
+        // Let the game run a while with no condition, so that a scenario can look at a state part of the way through.
+        [When("Ancient Chinese Beast: the game runs for {int} seconds", TimeoutSeconds = 170f)]
+        public async Task GameRuns(PickleContext ctx, int seconds)
+        {
+            await Stage.WaitGameSeconds(ctx, () => false, seconds);
+        }
+
+        // Why a bill is not being worked, written into the report: every check the work giver makes, read off the
+        // bench, the bill, the colonist and the corpse. Attached, not asserted: it is there for the day a run is red.
+        [Then("Ancient Chinese Beast: I attach why pawn {int} is or is not working the bill on the {string}")]
+        public void AttachBillState(PickleContext ctx, int number, string benchDefName)
+        {
+            var map = Stage.CurrentMap(ctx);
+            var list = SpawnSteps.TryGet(ctx);
+            ctx.Assert(list != null && number >= 1 && number <= list.Pawns.Count, $"no pawn number {number}");
+            var pawn = list.Pawns[number - 1];
+            var bench = Stage.ThingsOfDef(map, benchDefName).OfType<Building_WorkTable>().FirstOrDefault();
+            ctx.Assert(bench != null, $"no {benchDefName} bench on the map");
+            var lines = new List<string>();
+            var power = bench.GetComp<CompPowerTrader>();
+            lines.Add($"bench at {bench.Position}, interaction cell {bench.InteractionCell}, power on {power?.PowerOn}, usable for bills {bench.CurrentlyUsableForBills()}");
+            var bill = bench.BillStack.Bills.FirstOrDefault();
+            if (bill == null) lines.Add("no bill on the bench");
+            else lines.Add($"bill {bill.recipe.defName}: should do now {bill.ShouldDoNow()}, recipe available now {bill.recipe.AvailableNow}, suspended {bill.suspended}");
+            var workType = DefDatabase<WorkTypeDef>.GetNamed("Smithing");
+            lines.Add($"pawn {pawn.LabelShort} at {pawn.Position}, job {pawn.CurJob?.def.defName ?? "none"}, awake {pawn.Awake()}, drafted {pawn.Drafted}, in mental state {pawn.InMentalState}");
+            lines.Add($"Smithing disabled {pawn.WorkTypeIsDisabled(workType)}, priority {pawn.workSettings?.GetPriority(workType)}, schedule {pawn.timetable?.CurrentAssignment?.defName}");
+            var giverDef = DefDatabase<WorkGiverDef>.GetNamedSilentFail("SZ_DoBeastGeneExtractor");
+            var giver = giverDef?.Worker as WorkGiver_Scanner;
+            lines.Add($"work giver {(giver == null ? "missing" : "found")}: has job {giver?.HasJobOnThing(pawn, bench, false)}, skips {giver?.ShouldSkip(pawn, false)}");
+            foreach (var corpse in map.listerThings.ThingsInGroup(ThingRequestGroup.Corpse).OfType<Corpse>())
+                lines.Add($"corpse {corpse.def.defName} at {corpse.Position}, forbidden {corpse.IsForbidden(pawn)}, reachable {pawn.CanReach(corpse, PathEndMode.Touch, Danger.Deadly)}, reservable {pawn.CanReserve(corpse)}");
+            ctx.Attach("bill diagnostic", string.Join("\n", lines));
         }
 
         [Then("Ancient Chinese Beast: at least {int} {string} lie on the map within {int} seconds", TimeoutSeconds = 170f)]
