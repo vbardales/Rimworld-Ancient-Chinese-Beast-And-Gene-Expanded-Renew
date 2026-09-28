@@ -29,10 +29,23 @@ Feature: Ancient Chinese Beast critical 1.6 callbacks
     And Ancient Chinese Beast: I spawn a colonist near x=150 z=152
     And Ancient Chinese Beast: I spawn a colonist near x=118 z=155
     And Ancient Chinese Beast: I spawn the pawn "SZ_SeXieInsect" at x=146 z=155
+    And Ancient Chinese Beast: the aura clock of pawn 4 is set to leave only the ring
     Then Ancient Chinese Beast: pawn 3 is more than 12 tiles from pawn 4
     And Ancient Chinese Beast: pawn 1 goes berserk within 30 seconds
     And Ancient Chinese Beast: pawn 2 goes berserk within 30 seconds
     And Ancient Chinese Beast: pawn 3 is not berserk
+    And no errors were logged
+
+  # The same comp also sends the most psychically sensitive colonist of the whole map berserk every 3600 ticks, wherever
+  # they stand (CompSeXieExpansion.BerserkPerMintutes): the first run of the ring scenario found its far colonist berserk
+  # for exactly that reason. With one colonist on the map, far from the beast, it is the only one that pick can name.
+  Scenario: the scorpion sexie also sends the most psychically sensitive colonist berserk from anywhere
+    Given the save "test-colony" is loaded
+    And Ancient Chinese Beast: I spawn a colonist near x=118 z=155
+    And Ancient Chinese Beast: I remove every colonist I did not spawn
+    And Ancient Chinese Beast: I spawn the pawn "SZ_SeXieInsect" at x=146 z=155
+    Then Ancient Chinese Beast: pawn 1 is more than 12 tiles from pawn 2
+    And Ancient Chinese Beast: pawn 1 goes berserk within 30 seconds
     And no errors were logged
 
   Scenario: a mingshe drought ends when its causer dies

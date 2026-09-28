@@ -69,7 +69,15 @@ namespace AncientChineseBeast.PickleSteps
             var map = Stage.CurrentMap(ctx);
             var cell = CellFinder.StandableCellNear(new IntVec3(x, 0, z), map, 8f);
             ctx.Assert(cell.IsValid, $"no standable cell near x={x} z={z}");
-            var pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(PawnKindDefOf.Colonist, Faction.OfPlayer, forceGenerateNewPawn: true));
+            // Psychically deaf colonists exist and no psychic effect can touch them: draw again until this one is sensitive.
+            Pawn pawn = null;
+            for (int attempt = 0; attempt < 30 && pawn == null; attempt++)
+            {
+                var candidate = PawnGenerator.GeneratePawn(new PawnGenerationRequest(PawnKindDefOf.Colonist, Faction.OfPlayer, forceGenerateNewPawn: true));
+                if (candidate.GetStatValue(StatDefOf.PsychicSensitivity) > 0f) pawn = candidate;
+                else Find.WorldPawns.PassToWorld(candidate, PawnDiscardDecideMode.Discard);
+            }
+            ctx.Assert(pawn != null, "30 generated colonists were all psychically deaf");
             GenSpawn.Spawn(pawn, cell, map);
             ctx.Assert(pawn.Spawned, $"the colonist did not spawn near x={x} z={z}");
             Remember(ctx, pawn);

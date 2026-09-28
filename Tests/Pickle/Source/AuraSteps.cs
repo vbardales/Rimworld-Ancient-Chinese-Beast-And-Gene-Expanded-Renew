@@ -29,6 +29,22 @@ namespace AncientChineseBeast.PickleSteps
             ctx.Assert(Berserk(pawn), $"pawn {number} is not berserk (state {pawn.MentalStateDef?.defName ?? "none"}, {pawn.Position}); {Stage.LastWaitReport}");
         }
 
+        // CompSeXieExpansion does two things: every tick it sends the humanlikes within 10.9 tiles berserk (a list it takes
+        // when its private counter is a multiple of 1800), and each time the counter passes 3600 it sends the most
+        // psychically sensitive colonist of the whole map berserk, wherever they stand. The counter starts at 3600, so
+        // both act on the first tick, and the second cannot tell a far colonist from the ring. Setting the counter to
+        // 1800 keeps the ring and puts the map-wide pick 1800 ticks off, which is what lets a scenario see the ring alone.
+        [When("Ancient Chinese Beast: the aura clock of pawn {int} is set to leave only the ring")]
+        public void ClockForRingOnly(PickleContext ctx, int number)
+        {
+            var beast = Nth(ctx, number);
+            var comp = beast.GetComp<CompSeXieExpansion>();
+            ctx.Assert(comp != null, $"{beast.def.defName} has no CompSeXieExpansion");
+            var field = typeof(CompSeXieExpansion).GetField("ticks", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic);
+            ctx.Assert(field != null, "CompSeXieExpansion.ticks was not found");
+            field.SetValue(comp, 1800);
+        }
+
         [Then("Ancient Chinese Beast: pawn {int} is not berserk")]
         public void IsNotBerserk(PickleContext ctx, int number)
         {
