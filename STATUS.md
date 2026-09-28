@@ -15,6 +15,7 @@ licence_at:   reviewed 2026-09-12 - original files and About.xml, English and Ch
             descriptions, all 68 public comments, and the four coauthors' Steam profiles;
             no explicit reuse permission or prohibition found, no source repository link found.
             Local MIT licence covers port additions only; abandonment is not established.
+upstream_mod_remotes: N/A
 dependencies: declared
 showcase:     complete
 tested_on:
