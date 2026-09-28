@@ -10,8 +10,11 @@ namespace AncientChineseBeast.PickleSteps
 {
     // M5 and the "furthest shooter" half of M3 of Tests/Pickle/README.md's manual exceptions: what the beasts' own AI
     // decides. The nian beast that cannot reach a colonist indoors attacks the building in its way
-    // (JobGiver_KillHuman_RangedAbility, FirstBlockingBuilding); the qiongqi's flying strike goes to the farthest
-    // colonist it can hit (CompQiongQiAIExpansion). Neither is forced: the pieces are placed, the AI plays.
+    // (JobGiver_KillHuman_RangedAbility, FirstBlockingBuilding), which is whichever wall or door FindPathNow's shortest
+    // path meets first, not necessarily the door: a colonist aligned with the door still saw a side wall attacked first
+    // (run e5b4, 2026-09-28), so the scenario checks that some piece of the enclosure gives, not that it is the door.
+    // The qiongqi's flying strike goes to the farthest colonist it can hit (CompQiongQiAIExpansion). Neither is forced:
+    // the pieces are placed, the AI plays.
     [PickleSteps]
     public sealed class SiegeSteps
     {
@@ -75,7 +78,6 @@ namespace AncientChineseBeast.PickleSteps
             var hit = enclosure.All().FirstOrDefault(t => t.Destroyed || t.HitPoints < t.MaxHitPoints);
             ctx.Attach("what was breached", hit == null ? "nothing" : $"{hit.def.defName} at {hit.Position}: {(hit.Destroyed ? "destroyed" : hit.HitPoints + "/" + hit.MaxHitPoints)}");
             ctx.Assert(hit != null, $"nothing of the enclosure was touched; {Stage.LastWaitReport}");
-            ctx.Assert(enclosure.Doors.Any(t => t.Destroyed || t.HitPoints < t.MaxHitPoints), $"the beast went for {hit?.def.defName} and not for the door: the wall was the way it found");
         }
 
         // The flying strike is decided on a one-second tick and queued as an ability job whose first target is the

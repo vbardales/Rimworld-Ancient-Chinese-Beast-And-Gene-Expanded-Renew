@@ -6,7 +6,7 @@
 # (2026-09-28) had them on the map.
 Feature: The nian beast breaks a door down to reach a colonist indoors
 
-  Scenario: the nian beast attacks the door of a walled-in colonist
+  Scenario: the nian beast attacks the enclosure of a walled-in colonist it cannot reach
     Given the save "test-colony" is loaded
     And Ancient Chinese Beast: I wall in a colonist behind a wooden door, centred at x=156 z=146
     And Ancient Chinese Beast: I remove every colonist I did not spawn
