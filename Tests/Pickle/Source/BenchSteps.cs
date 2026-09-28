@@ -86,6 +86,13 @@ namespace AncientChineseBeast.PickleSteps
             var giverDef = DefDatabase<WorkGiverDef>.GetNamedSilentFail("SZ_DoBeastGeneExtractor");
             var giver = giverDef?.Worker as WorkGiver_Scanner;
             lines.Add($"work giver {(giver == null ? "missing" : "found")}: has job {giver?.HasJobOnThing(pawn, bench, false)}, skips {giver?.ShouldSkip(pawn, false)}");
+            lines.Add($"bench: reservable {pawn.CanReserve(bench)}, forbidden {bench.IsForbidden(pawn)}, interaction cell standable {bench.InteractionCell.Standable(map)}, reach interaction cell {pawn.CanReach(bench, PathEndMode.InteractionCell, Danger.Some)}");
+            if (bill != null)
+            {
+                lines.Add($"bill: pawn allowed to start {bill.PawnAllowedToStartAnew(pawn)}, skill requirements met {bill.recipe.PawnSatisfiesSkillRequirements(pawn)}, radius {bill.ingredientSearchRadius}");
+                foreach (var corpse in map.listerThings.ThingsInGroup(ThingRequestGroup.Corpse).OfType<Corpse>())
+                    lines.Add($"corpse {corpse.def.defName}: fixed or allowed {bill.IsFixedOrAllowedIngredient(corpse)}, bill filter {bill.ingredientFilter.Allows(corpse)}, recipe fixed filter {bill.recipe.fixedIngredientFilter?.Allows(corpse)}, ingredient filter {bill.recipe.ingredients.Any(ig => ig.filter.Allows(corpse))}, distance to bench {(corpse.Position - bench.Position).LengthHorizontal:F1}");
+            }
             foreach (var corpse in map.listerThings.ThingsInGroup(ThingRequestGroup.Corpse).OfType<Corpse>())
                 lines.Add($"corpse {corpse.def.defName} at {corpse.Position}, forbidden {corpse.IsForbidden(pawn)}, reachable {pawn.CanReach(corpse, PathEndMode.Touch, Danger.Deadly)}, reservable {pawn.CanReserve(corpse)}");
             ctx.Attach("bill diagnostic", string.Join("\n", lines));
