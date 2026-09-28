@@ -96,6 +96,12 @@ namespace AncientChineseBeast.PickleSteps
             ctx.Assert(kind != null, $"no PawnKindDef named {kindDefName}");
             var cell = new IntVec3(x, 0, z);
             ctx.Assert(cell.InBounds(map), $"x={x} z={z} is outside the map");
+            if (!cell.Standable(map))
+            {
+                var near = CellFinder.StandableCellNear(cell, map, 6f);
+                ctx.Assert(near.IsValid, $"x={x} z={z} is not standable and nothing standable lies near it");
+                cell = near;
+            }
             var request = new PawnGenerationRequest(kind, faction, forceGenerateNewPawn: true, fixedGender: gender);
             var pawn = PawnGenerator.GeneratePawn(request);
             GenSpawn.Spawn(pawn, cell, map);

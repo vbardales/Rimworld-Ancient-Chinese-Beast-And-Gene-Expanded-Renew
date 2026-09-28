@@ -1,0 +1,12 @@
+# M5 of Tests/Pickle/README.md's manual exceptions: a nian beast that cannot reach a colonist indoors breaks what is in
+# its way (JobGiver_KillHuman_RangedAbility, FirstBlockingBuilding). A colonist is walled in by steel with one wooden
+# door, and the beast stands outside; the AI plays, nothing is forced. The door, the way of least resistance, is what
+# has to give.
+Feature: The nian beast breaks a door down to reach a colonist indoors
+
+  Scenario: the nian beast attacks the door of a walled-in colonist
+    Given the save "test-colony" is loaded
+    And Ancient Chinese Beast: I wall in a colonist behind a wooden door, centred at x=156 z=146
+    And Ancient Chinese Beast: I spawn the pawn "SZ_YearBeast" at x=156 z=134
+    Then Ancient Chinese Beast: the enclosure is breached within 120 seconds
+    And no errors were logged
