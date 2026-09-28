@@ -21,6 +21,20 @@ namespace AncientChineseBeast.PickleSteps
             Spawn(ctx, kindDefName, x, z, null, null);
         }
 
+        // A plain colonist of the player's faction, for what a gene does to a human: the genes of the beasts are
+        // implanted in a colonist, and PawnKindDefOf.Colonist is the game's own default one.
+        [When("Ancient Chinese Beast: I spawn a colonist at x={int} z={int}")]
+        public void SpawnColonist(PickleContext ctx, int x, int z)
+        {
+            var map = Stage.CurrentMap(ctx);
+            var cell = new IntVec3(x, 0, z);
+            ctx.Assert(cell.InBounds(map), $"x={x} z={z} is outside the map");
+            var pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(PawnKindDefOf.Colonist, Faction.OfPlayer, forceGenerateNewPawn: true));
+            GenSpawn.Spawn(pawn, cell, map);
+            ctx.Assert(pawn.Spawned, $"the colonist did not spawn at x={x} z={z}");
+            Remember(ctx, pawn);
+        }
+
         // A tame pawn of a chosen sex: the breeding scenarios need a male and a female, which the game draws at random.
         [When("Ancient Chinese Beast: I spawn the tame {string} of gender {word} at x={int} z={int}")]
         public void SpawnTame(PickleContext ctx, string kindDefName, string gender, int x, int z)
