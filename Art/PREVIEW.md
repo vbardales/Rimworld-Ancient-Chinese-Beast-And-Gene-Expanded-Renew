@@ -76,10 +76,12 @@ new `Mod/About/Preview.png` the same way as before (six sizes, transparent top/b
 frame). The image is 896 x 504, 736,202 bytes, Segoe UI throughout.
 ## The ModIcon, cut out and composed onto the corner (2026-09-29)
 
-`STYLE_RIMWORLD.md`, "Le ModIcon détouré sur la vitrine": `Preview.png` now also carries this mod's
-`ModIcon.png`, cut out and set in the corner on the same side as the text block, the opposite vertical
-corner (text bottom-left → icon top-left), touching the image edge, 0 px margin. Left corner rotates
-+15°, right corner -15°; this mod's text is bottom-left, so the icon sits top-left at +15°.
+`Preview.png` now also carries this mod's `ModIcon.png`, cut out and set sliding out of the bottom-right
+corner at -15°, the owner's own pick for this mod (validated 2026-09-28 against two mock-ups, a larger
+and a smaller one; the larger, 300 px tall, was chosen). A first pass placed it top-left, flush to the
+edge, following a rule a shared doc briefly carried attributing it to the owner ("same side as the
+text, opposite vertical corner, 0 px margin"); the owner said she never wrote that, so this mod keeps
+its own validated placement and does not follow that doc section.
 
 Cutout: `Art/compose-preview.cjs`, a border flood-fill (BFS on raw RGBA from `ModIcon-source.png`'s four
 corners, agreeing background colour required) — never a global colour-distance threshold, so the
@@ -88,8 +90,9 @@ the background colour. No intermediate cutout file is kept in `Art/`; the script
 writes straight into `Mod/About/Preview.png`. `Art/preview-qa/modicon-checker.png` is the checkerboard
 proof, checked before accepting the result: no hole shows in the interior black.
 
-Sized to 150 px a side before rotation, resized then rotated with a transparent background (the canvas
-grows, expected), composed flush into the corner. Clears the title, summary, rule and version badge.
+Sized to 300 px tall before rotation, resized then rotated with a transparent background (the canvas
+grows, expected), composed so its own right+bottom edge overflows about 22% past the canvas edge, as if
+sliding out of the frame. Clears the title, summary, rule and firecrackers, grazes one firecracker's tip.
 `Art/Preview.ico` regenerated from the new `Preview.png`. `Art/Workshop/00-preview.png` is the Workshop
 gallery's image 0, an unmodified copy of the delivered `Preview.png` (badge and icon included), so the
 gallery's first scroll confirms the storefront thumbnail instead of repeating it worse.

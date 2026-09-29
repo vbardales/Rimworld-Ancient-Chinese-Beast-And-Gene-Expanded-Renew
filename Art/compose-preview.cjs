@@ -1,17 +1,19 @@
 // Composites this mod's ModIcon (cut out from its near-black square background by a border flood-fill,
-// never a global colour-distance threshold) onto a corner of the delivered Preview.png, rotated, its
-// edge touching the image edge. STYLE_RIMWORLD.md, "Le ModIcon détouré sur la vitrine" (2026-09-29):
-// the corner is on the same side as the text block (left text -> left icon, right text -> right icon),
-// the opposite vertical corner; left = +15 deg, right = -15 deg. No intermediate file is kept in Art/.
+// never a global colour-distance threshold) onto a corner of the delivered Preview.png, rotated, sliding
+// out past the corner (the icon's own side+bottom, or side+top, edge overflows the canvas). Owner's own
+// pick for this mod, 2026-09-28: bottom-right, -15°, overflowing past the edge — not the (mistakenly
+// attributed) "same side as the text, flush to the edge" rule a shared doc briefly carried; the owner
+// said she never wrote that, so this mod keeps its own validated placement instead.
 //
-// Run from Art/: node compose-preview.cjs <left|right> <top|bottom> [sideBeforeRotation=150]
+// Run from Art/: node compose-preview.cjs <left|right> <top|bottom> [iconHeightBeforeRotation=300]
 const sharp = require('sharp');
 
 const CANVAS_W = 896, CANVAS_H = 504;
-const side = (process.argv[2] || 'left').toLowerCase();       // must match the text block's side
-const vpos = (process.argv[3] || 'top').toLowerCase();        // opposite corner from the text block
-const iconSide = Number(process.argv[4] || 150);
+const side = (process.argv[2] || 'right').toLowerCase();
+const vpos = (process.argv[3] || 'bottom').toLowerCase();
+const iconSide = Number(process.argv[4] || 300);
 const angle = side === 'left' ? 15 : -15;
+const overflow = Math.round(iconSide * 0.22); // how far the icon's own edge pushes past the canvas edge
 
 async function cutout(file) {
   const img = sharp(file).ensureAlpha();
@@ -64,12 +66,15 @@ async function cutout(file) {
     .png()
     .toFile('preview-qa/modicon-checker.png');
 
-  const resized = await sharp(cut).resize(iconSide, iconSide, { fit: 'inside' }).png().toBuffer();
+  const cutMetaH = (await sharp(cut).metadata()).height;
+  const scale = iconSide / cutMetaH;
+  const cutMetaW = (await sharp(cut).metadata()).width;
+  const resized = await sharp(cut).resize(Math.round(cutMetaW * scale), iconSide).png().toBuffer();
   const rotated = await sharp(resized).rotate(angle, { background: { r: 0, g: 0, b: 0, alpha: 0 } }).png().toBuffer();
   const rMeta = await sharp(rotated).metadata();
 
-  const left = side === 'left' ? 0 : CANVAS_W - rMeta.width;
-  const top = vpos === 'top' ? 0 : CANVAS_H - rMeta.height;
+  const left = side === 'left' ? -overflow : CANVAS_W - rMeta.width + overflow;
+  const top = vpos === 'top' ? -overflow : CANVAS_H - rMeta.height + overflow;
 
   const base = await sharp('../Mod/About/Preview.png').toBuffer();
   await sharp(base)
