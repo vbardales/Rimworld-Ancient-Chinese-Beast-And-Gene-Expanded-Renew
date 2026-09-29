@@ -77,6 +77,18 @@ namespace AncientChineseBeast.PickleSteps
             await Stage.WaitGameSeconds(ctx, Breached, seconds);
             var hit = enclosure.All().FirstOrDefault(t => t.Destroyed || t.HitPoints < t.MaxHitPoints);
             ctx.Attach("what was breached", hit == null ? "nothing" : $"{hit.def.defName} at {hit.Position}: {(hit.Destroyed ? "destroyed" : hit.HitPoints + "/" + hit.MaxHitPoints)}");
+            if (hit == null)
+            {
+                var map = Stage.CurrentMap(ctx);
+                var beast = map.mapPawns.AllPawnsSpawned.FirstOrDefault(p => p.def.defName == "SZ_YearBeast");
+                var colonist = map.mapPawns.FreeColonistsSpawned.FirstOrDefault();
+                string beastState = beast == null ? "no nian beast on the map"
+                    : $"nian at {beast.Position}, job {beast.CurJob?.def.defName ?? "none"}, mind target {beast.mindState.enemyTarget}, " +
+                      $"downed {beast.Downed}, dead {beast.Dead}, awake {beast.Awake()}";
+                string colonistState = colonist == null ? "no colonist on the map"
+                    : $"colonist at {colonist.Position}, spawned {colonist.Spawned}, reachable from beast {(beast != null && beast.CanReach(colonist.PositionHeld, PathEndMode.OnCell, Danger.Deadly, canBashDoors: false, canBashFences: false, TraverseMode.PassAllDestroyableThings))}";
+                ctx.Attach("beast diagnostic", beastState + "; " + colonistState);
+            }
             ctx.Assert(hit != null, $"nothing of the enclosure was touched; {Stage.LastWaitReport}");
         }
 
@@ -105,5 +117,6 @@ namespace AncientChineseBeast.PickleSteps
         public List<Thing> Walls = new List<Thing>();
         public List<Thing> Doors = new List<Thing>();
         public IEnumerable<Thing> All() => Walls.Concat(Doors);
+        public IEnumerable<IntVec3> Cells() => All().Select(t => t.Position);
     }
 }
