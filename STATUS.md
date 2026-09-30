@@ -166,7 +166,7 @@ this is a consequence of the timestamps, not an observation.
 | --- | --- |
 | No `@wip` | Holds for the thirteen features written: none carries the tag, they carry `@review` only |
 | Conditional scenarios have run | `13-original-mod-incompatibility` (`@requires:andery233xj.AncientChineseBeast`) is written with its pass map and submitted (request f950), not yet read; the original mod is a Windows subscription, so nothing has to be downloaded. `14-animal-prosthetics-2` (`@requires:SamBucher.ADogSaidAnimalProsthetics2`) has run and passed. The pass with the optional mod `ninedaylongbow.ChineseComprehensiveExpansion` (`loadAfter`) is owed and not written |
-| No manual test to validate | Not met. Nine manual exceptions (M1 to M9) are recorded in `Tests/Pickle/README.md`, each with why it is not automated and what to inspect. None has been done |
+| No manual test to validate | Not met. Nine manual exceptions (M1 to M9) are written up in `Tests/Pickle/README.md`; M1 to M7 are now also automated as Pickle scenarios (`Tests/Pickle/Mod/Pickle/Features/`). Green so far: M2 (wind barrier), M3 (dodge/head bias), M4 (berserk aura, ring and map-wide pick), M5 (nian AI reaching a walled-in colonist, `2026-09-29a-m5`). Still owed: M1 (drought rot) and M7 (gene effects) results unconfirmed since submission; M6 (bench job chain) still red, cause not found. M8 and M9 stay manual: Pickle cannot switch language or the active mod set inside one scenario run |
 
 Nothing counts until the suite has been run, so `tested_on` stays empty and a green static run does
 not move `stage`. The first run also has to be made twice, English and French.
