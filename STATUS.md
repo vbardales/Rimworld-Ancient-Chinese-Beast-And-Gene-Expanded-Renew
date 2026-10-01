@@ -1,7 +1,7 @@
 ---
 localization: complete
 translation_en: complete
-translation_fr: partial
+translation_fr: complete
 settings_audit: not_applicable
 audit_revision: 67a4b37 (HEAD, pushed, tree clean when the 2026-10-01 audit began). While it ran, another session regenerated `Art/` and `Mod/About/Preview.png` in the working tree: uncommitted, not touched and not audited here
 mod:          Ancient Chinese Beast And Gene Expanded Renew (unofficial)
@@ -23,8 +23,8 @@ showcase:     complete
 tested_on:
 workshop:     prepublished 2026-09-23, item 3806709132, private, version 0.1.0
 remaining:
-  - unverified: French review by Virginie (`FRENCH_REVIEW.md`, `../TRANSLATIONS.md` "Systematic
-      French review by Virginie"). `translation_fr` cannot become `complete` until she has read it
+  - verified 2026-10-01: French review by Virginie (see "Translation audit - 2026-10-01"). 11 source cells of
+      `FRENCH_REVIEW.md` stay marked unverified (fields inherited from vanilla parents, not read)
   - unverified: Tests/Pickle - 22 features, 111 scenarios once the outlines are expanded (counted 2026-10-01);
       `Check-Steps.ps1` green 2026-10-01 (105 patterns, 409 step lines). Played in a real game between 2026-09-24 and
       2026-09-29, feature by feature and never as one run (docs/runs/). Every feature passed at least once except
@@ -131,7 +131,7 @@ is kept as history, and what changed since is recorded here.
 | Preview generated | Validated on the committed file | HEAD's `Mod/About/Preview.png` is 896x504, 816119 bytes, inspected at full size: title, tag, rule, summary, version badge, ModIcon cutout at the bottom right at -15°. A regeneration is under way in the working tree (another session, 05:00 on 2026-10-01: `Mod/About/Preview.png` 644800 bytes, `Art/Gallery/0-preview.png`, `Art/ModIcon-redrawn.png`, new `Art/` files); it is uncommitted and was not audited. The gallery's image 0 is still `Art/Workshop/00-preview.png` at HEAD (the rule of 2026-09-29 is one digit, `0-`): that session's `Art/Gallery/` is the new place. |
 | preOptions | Validated | English description; ends with the `Source code on GitHub` link; `sync-about-description.mjs` reports `About.xml` is the plain text of `PUBLICATION.md`; `.github/publish.config.json` reads that Markdown block. |
 | options | Not applicable, justified | Read again: no `ModSettings`, `GetSettings`, `DoSettingsWindowContents`, `Mod` subclass or `MainButtonDef` in `Source/` or `Mod/` (searched by symbol, not only by file name). No page and no shortcut exist, so none is empty. |
-| l10n | Validated for what a session can check | 378 Def fields and 9 Keyed entries, 0 failures, four negative controls (`Tests/Run-All.ps1`, 2026-10-01). Plurals (rule of 2026-09-25): none of the nine Keyed entries takes a parameter, so no counted phrase exists and no `.One`/`.Many` is owed. French gender agreement (rule of 2026-09-30): all 19 French files read on 2026-09-30, no text agrees with a pawn, no switch needed. `FRENCH_REVIEW.md` (revision `f1c84fc`) is current: the French and English files last changed at `70feeae`, before it. `translation_fr` stays `partial` until Virginie has read it. |
+| l10n | Validated for what a session can check | 378 Def fields and 9 Keyed entries, 0 failures, four negative controls (`Tests/Run-All.ps1`, 2026-10-01). Plurals (rule of 2026-09-25): none of the nine Keyed entries takes a parameter, so no counted phrase exists and no `.One`/`.Many` is owed. French gender agreement (rule of 2026-09-30): all 19 French files read on 2026-09-30, no text agrees with a pawn, no switch needed. `FRENCH_REVIEW.md` (revision `f1c84fc`) is current: the French and English files last changed at `70feeae`, before it. `translation_fr` is `complete` since Virginie's review of 2026-10-01 (revision `16cb222`). |
 | preTest | Validated | `modDependencies` Harmony (with its Workshop URL) and Biotech; `loadAfter` the optional Chinese Comprehensive Expansion; `loadBefore` Animal Prosthetics 2; `incompatibleWith` the original; no `LoadFolders`. Two guarded patches: Animal Prosthetics 2 (`PatchOperationConditional` on `ADS_Cat1`, no `MayRequire` on an operation) and Nocturnal Animals (`PatchOperationFindMod` on its display name). The four animal integrations of `PUBLISHING.md` are treated, see below. |
 | done | Validated | Offline checks replayed, not read from an old report: `pwsh -NoProfile -File Tests/Run-All.ps1` (PowerShell 7.6.6), exit 0: 341 content checks and 5 negative controls, 26 assembly contracts against game 1.6.9676.17735, XML fields, classes, def references, external types, 137 of 137 configuration defs, the translation checks, both exit-code checks. The delivered assembly was rebuilt byte-identical (SHA-256 `042989FA...A1295F`). `Tests/Pickle/Check-Steps.ps1`: 105 patterns compile, none declared twice or ambiguous, every waiting step has a deadline, 409 step lines resolve. 22 features, 111 scenarios written; scope justified in `Tests/Pickle/README.md`. |
 | tested | Not met, unverified | See the three conditions below. |
@@ -495,6 +495,16 @@ So `stage: done` means done as far as a person without the game running can take
 mean the mod works, and `tested_on` being empty is the honest half of that sentence.
 
 ## What would move it
+
+### Translation audit - 2026-10-01
+
+**French review. Reviewer: Virginie. Date: 2026-10-01. Revision reviewed: `16cb222`.** She validated it in chat
+("je valide") after three rounds of corrections, all applied (commits `49f1c12`, `16cb222`): the crow thought
+label, the sexie description, the poison wording, and three wordings of the crow, the sound wave and the aura. The
+session recorded this on her word and did not review its own French. The 11 cells of `FRENCH_REVIEW.md` marked
+`unverified: inherited from a vanilla parent def` (`deathMessage` and `label` of the damage defs,
+`SZ_QQPawnFlyingStrike.label`) stand as she saw them. Any later change to a French file sets `translation_fr` back
+to `unchecked`.
 
 ### Translation audit — 2026-09-30
 
