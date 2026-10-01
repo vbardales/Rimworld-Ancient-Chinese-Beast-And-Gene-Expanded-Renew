@@ -39,6 +39,7 @@ Not on the Workshop yet. What changed in `Mod/` after the item was created at 0.
 - The nian beast's description no longer promises **nian beast fangs**. Butchering it yields meat and nothing else, and
   no item of that name ever shipped: the paragraph is out of the English, French and Simplified Chinese descriptions (the
   last is the authors' own text, cut at its last paragraph), and out of the README.
+- **The mingshe’s wind barrier no longer throws when it destroys a projectile twice.** It destroyed each captured shot with no check that the shot was still on the map, and a shot already gone (it hit something that tick, or sat twice in the barrier’s list) raised a null reference out of the game’s own thing lister and took the whole tick of the mingshe with it. Found by the first full Pickle pass (2026-10-01); the original has the same lines.
 - The development action **Beast attack now** forces its incident. It asked the game whether the incident could fire
   with ordinary, unforced parameters and, when the answer was no, did nothing at all and said nothing; on the Pickle
   test colony (day 1) both incidents answered no. The storyteller's own schedule still asks without forcing, as

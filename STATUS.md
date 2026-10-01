@@ -26,16 +26,16 @@ remaining:
   - verified 2026-10-01: French review by Virginie (see "Translation audit - 2026-10-01"). 11 source cells of
       `FRENCH_REVIEW.md` stay marked unverified (fields inherited from vanilla parents, not read)
   - unverified: Tests/Pickle - 23 features, 112 scenarios once the outlines are expanded (counted 2026-10-01);
-      `Check-Steps.ps1` green 2026-10-01 (107 patterns, 415 step lines). Played in a real game between 2026-09-24 and
-      2026-09-29, feature by feature and never as one run (docs/runs/). Every feature passed at least once except
-      `18` (M7, 2 of 2 red, 2026-09-28) and `19` (M6, red three times, last 2026-09-28). Not proven on the current
-      tree: no initial/final pass of all scenarios has been played, in English or in French (the French pass played
-      features 01, 05, 07 and 08 only, 2026-09-26, on an older tree). The current tree is the last `Source/` change
-      `ce5449c` (2026-09-27) plus the packageId change `19e649d`; the green reports older than that are on a
-      superseded build for what `Source/` changed since (rest and breeding, the tunnel fix)
-  - unverified: the delivered assembly changed three times in two days (forced "Beast attack now" 2026-09-25, rest
-      and breeding 2026-09-25, the sexie's tunnel 2026-09-27). Current SHA-256 `042989FA...A1295F`, rebuilt by
-      `Tests/Run-All.ps1` on 2026-10-01 and byte-identical to the delivered file. Offline: 26 assembly contracts and
+      Check-Steps.ps1 green 2026-10-01 (107 patterns, 415 step lines). **Pass 1 (English, every scenario, request b5b0,
+      2026-10-01, 78 min, xitReason failed): 83 passed, 5 failed, 24 skipped by requirement.** First full pass. Red: the
+      aura ring (clock), the chicken egg (wait), the barrier cut (the save did not load in 180 s), the barrier throw-back
+      (a real defect of the original, guarded in Source/), the qiongqi strike (wait). All fixed after the run and not yet
+      replayed. Passes 2 (French), 3, 4, 5 and 6 are queued (requests 71bc, 57f8, d047, 36bb, 2d38) and had not run when
+      this was written. Not proven on the current tree: the five replays and passes 2 to 6
+  - unverified: the delivered assembly changed four times in a week (forced "Beast attack now" 2026-09-25, rest
+      and breeding 2026-09-25, the sexie's tunnel 2026-09-27, the wind barrier's projectile guard 2026-10-01). Current
+      SHA-256 `40AA5903...A7BA74` (before the guard `042989FA...A1295F`), rebuilt by `Tests/Run-All.ps1` on 2026-10-01
+      and byte-identical to the delivered file. The guard is in no in-game run yet. Offline: 26 assembly contracts and
       341 content checks green. In game: green per feature, see above
   - unverified: the beasts rest and breed (2026-09-25, merged into main): every beast has a rest need and two sexes, the
       tame ones give birth (or lay eggs: mingshe and star officer) to babies that grow through baby, juvenile and adult,

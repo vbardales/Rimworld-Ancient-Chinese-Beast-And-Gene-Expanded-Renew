@@ -219,6 +219,10 @@ unambiguous, listed here either way.
   `TESTING.md` cannot be run at all.
 - **The friendly beasts' English descriptions were the hostile ones, word for word.** Fixed, from
   the Chinese.
+- **The wind barrier could destroy a projectile it no longer held.** `Ability_WindBarrier.AbilityTick`
+  called `Destroy()` on every captured shot without checking that it was still spawned; a shot already
+  gone raised a `NullReferenceException` inside the game's `ListerThings.Remove` and aborted the
+  mingshe's tick. Found by the first full Pickle pass (2026-10-01) and guarded.
 
 ## What was checked, and what still has not been
 

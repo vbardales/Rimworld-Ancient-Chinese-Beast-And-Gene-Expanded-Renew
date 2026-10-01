@@ -94,8 +94,13 @@ public class Ability_WindBarrier : Ability_Draw
 					projectile2.Launch(base.pawn, projectiles[0].DrawPos, usedTarget, projectiles[0].Launcher, ProjectileHitFlags.All, preventFriendlyFire: false, ThingMaker.MakeThing(projectiles[0].EquipmentDef));
 				}
 			}
-			projectiles[0].Destroy();
-			projectiles.Remove(projectiles[0]);
+			// A projectile can already be gone by now (it hit something in the same tick, or it is in the list twice): destroying
+			// it again threw a null reference out of ListerThings.Remove and the whole tick of the mingshe with it.
+			if (projectiles[0].Spawned && !projectiles[0].Destroyed)
+			{
+				projectiles[0].Destroy();
+			}
+			projectiles.RemoveAt(0);
 		}
 		static bool CollisionDetermination(Vector3 a, Vector3 b, float range)
 		{
