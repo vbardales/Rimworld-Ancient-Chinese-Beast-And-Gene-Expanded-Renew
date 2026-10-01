@@ -46,7 +46,7 @@ remaining:
       attack; a fresh beast starts rested, so this is judged low risk, not measured)
   - unverified: no person has played the mod. What is known of it in a game is what Pickle showed on 2026-09-25
       (above); TESTING.md remains the protocol, 29 scenarios
-  - unverified: the nine manual exceptions (M1 to M9, Tests/Pickle/README.md, docs/MANUAL-TESTS.md). 	ested waits
+  - unverified: the nine manual exceptions (M1 to M9, Tests/Pickle/README.md, docs/MANUAL-TESTS.md). `tested` waits
       for every one of them to be green or explicitly not applicable with its reason. State on 2026-10-01: M1 to M5
       automated and green (features 04, 20, 21, 22). M6 (feature 19) red three times on 2026-09-28; its cause was read
       in the diagnostic the runs attached (the extractor’s interaction cell was not standable) and the placement step
