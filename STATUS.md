@@ -3,19 +3,21 @@ localization: complete
 translation_en: complete
 translation_fr: partial
 settings_audit: not_applicable
-audit_revision: eeb57db (pushed, tree clean when the audit began) plus the commit that records the 2026-09-24 audit
+audit_revision: 67a4b37 (HEAD, pushed, tree clean when the 2026-10-01 audit began). While it ran, another session regenerated `Art/` and `Mod/About/Preview.png` in the working tree: uncommitted, not touched and not audited here
 mod:          Ancient Chinese Beast And Gene Expanded Renew (unofficial)
 packageId:    nelim.ancientchinesebeastandgeneexpanded
 repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 visibility:   public
 detached:     yes
 stage:        done
+workflow_stage: done
 licence:      silent
 licence_at:   reviewed 2026-09-12 - original files and About.xml, English and Chinese Workshop
             descriptions, all 68 public comments, and the four coauthors' Steam profiles;
             no explicit reuse permission or prohibition found, no source repository link found.
             Local MIT licence covers port additions only; abandonment is not established.
-upstream_mod_remotes: N/A
+upstream_mod_remotes:
+  - https://github.com/MonsterTower/AncientChineseBeast
 dependencies: declared
 showcase:     complete
 tested_on:
@@ -23,16 +25,18 @@ workshop:     prepublished 2026-09-23, item 3806709132, private, version 0.1.0
 remaining:
   - unverified: French review by Virginie (`FRENCH_REVIEW.md`, `../TRANSLATIONS.md` "Systematic
       French review by Virginie"). `translation_fr` cannot become `complete` until she has read it
-  - unverified: Tests/Pickle - 16 features, 91 scenarios, nine manual exceptions (M1 to M9) recorded in its
-      README, with a step sheet in docs/MANUAL-TESTS.md. Played in a real game on 2026-09-25 and 2026-09-26 (English,
-      no optional mods, then the Animal Prosthetics 2 and Nocturnal Animals passes), see docs/runs/. Green on the
-      current tree (2026-09-25 and 26): features 01 to 13, 15 and 16, and 14 on 2026-09-25; the French pass and the `@review` captures are unread. Not proven as one full run: no
-      initial/final pass with all scenarios has been played. The French pass (features 01, 05, 07, 08) is submitted
-      (request 4fc7) and not read
-  - unverified: the delivered assembly changed on 2026-09-25 (SHA-256 BE213D7D...9653A0, was 5F38C060...676769D): the
-      debug action "Beast attack now" now forces its incident (Singleton.BeastApproach(forced)), because the first
-      Pickle run showed both incidents refusing to fire unforced on a day-1 colony. Built, 26 assembly contracts
-      and 284 content checks green; the scenario that proves it passed on 2026-09-25 (request f2fd)
+  - unverified: Tests/Pickle - 22 features, 111 scenarios once the outlines are expanded (counted 2026-10-01);
+      `Check-Steps.ps1` green 2026-10-01 (105 patterns, 409 step lines). Played in a real game between 2026-09-24 and
+      2026-09-29, feature by feature and never as one run (docs/runs/). Every feature passed at least once except
+      `18` (M7, 2 of 2 red, 2026-09-28) and `19` (M6, red three times, last 2026-09-28). Not proven on the current
+      tree: no initial/final pass of all scenarios has been played, in English or in French (the French pass played
+      features 01, 05, 07 and 08 only, 2026-09-26, on an older tree). The current tree is the last `Source/` change
+      `ce5449c` (2026-09-27) plus the packageId change `19e649d`; the green reports older than that are on a
+      superseded build for what `Source/` changed since (rest and breeding, the tunnel fix)
+  - unverified: the delivered assembly changed three times in two days (forced "Beast attack now" 2026-09-25, rest
+      and breeding 2026-09-25, the sexie's tunnel 2026-09-27). Current SHA-256 `042989FA...A1295F`, rebuilt by
+      `Tests/Run-All.ps1` on 2026-10-01 and byte-identical to the delivered file. Offline: 26 assembly contracts and
+      341 content checks green. In game: green per feature, see above
   - unverified: the beasts rest and breed (2026-09-25, merged into main): every beast has a rest need and two sexes, the
       tame ones give birth (or lay eggs: mingshe and star officer) to babies that grow through baby, juvenile and adult,
       and Nocturnal Animals gives each a body clock. Offline: 341 content checks green, the XML classes, fields and
@@ -42,8 +46,23 @@ remaining:
       attack; a fresh beast starts rested, so this is judged low risk, not measured)
   - unverified: no person has played the mod. What is known of it in a game is what Pickle showed on 2026-09-25
       (above); TESTING.md remains the protocol, 29 scenarios
-  - unverified: nine manual tests to validate (M1 to M9, Tests/Pickle/README.md), the cases the suite
-      cannot play. `tested` waits for every one of them to be green
+  - unverified: the nine manual exceptions (M1 to M9, Tests/Pickle/README.md, docs/MANUAL-TESTS.md). `tested` waits
+      for every one of them to be green or explicitly not applicable with its reason. State on 2026-10-01: M1 to M5
+      are automated and green (features 04, 20, 21, 22); M6 (bench job chain, feature 19) red three times, cause not
+      found; M7 (gene effects, feature 18) red twice; M8 (language switch on a saved game) and M9 (adding and
+      removing the mod on a save) are neither automated nor played. Recommendation, not done: M8 is the game's
+      language switch (AUDIT.md, "On ne teste pas le jeu"), so what the mod answers for is the letter's language in a
+      pass run in French; M9 can use `-Then` with `-ThenWithout` for the removal half
+  - defect: two of the nine `@review` captures do not show their subject (opened 2026-10-01): `05-incidents` (the
+      Pleiades star officer is a few pixels at the top left of a base-wide view) and `11-tunnel` (the label under the
+      pointer reads "Tunnel", no tunnel is drawn on screen). The camera and the zoom are the scenarios' to set
+  - unverified: whether `MonsterTower/AncientChineseBeast` (the 1.5 source, see the 2026-10-01 audit) belongs to the
+      four credited authors: nothing links it to them. A fork and a pull request are public: they go out only with
+      Virginie's word (BACKLOG.md)
+  - verified 2026-10-01: Tests/Run-All.ps1 under PowerShell 7.6.6, exit 0: 341 content checks and five negative
+      controls, 26 assembly contracts, XML fields, classes, def references and external types, 137 of 137
+      configuration defs, 378 Def fields and 9 Keyed entries with four translation negative controls, both XML
+      exit-code checks. The delivered assembly came out byte-identical
   - unverified: the nian beast's description lost its butchery paragraph on 2026-09-25 (English, French,
       Simplified Chinese; the promise of "nian beast fangs" was inherited text, a butchery yields meat only,
       seen in the run of that day). The field paths are unchanged; the four PowerShell 7 translation scripts
@@ -85,8 +104,8 @@ remaining:
       branch is unreachable. Inherited, deliberate, costs nothing
   - defect: the keyed string SZ_CannotReachBuildingToExtractGene is referenced from neither the
       C# nor the defs. Inherited, left alone
-session:      local_2aa0146a-2f99-4b81-a9c8-6a3572719d9f
-updated:      2026-09-24
+session:      local_ecc57511-3350-4f1d-9e1d-979c259d1b6b
+updated:      2026-10-01
 ---
 
 # Ancient Chinese Beast And Gene Expanded Renew — status
@@ -96,7 +115,92 @@ root, never inside `Mod/`, so Steam never receives it.
 
 ## Where this one stands
 
+### Ordered workflow audit - 2026-10-01
+
+**Result: `done` -> `done`** (`stage: done`, `workflow_stage: done`; session title
+`ancientchinesebeastandgeneexpanded / done`). Audited revision `67a4b37` (HEAD, pushed; tree clean when the audit
+began). Against the current `AUDIT.md`, `PUBLISHING.md` (version of 2026-10-01 04:41), `TRANSLATIONS.md` (2026-09-30)
+and `MOD_SETTINGS.md`; the versions read are in `docs/PROTOCOLS-READ.md`. Nothing was launched in a game, no Pickle
+ticket was taken and nothing was published. The previous audit (2026-09-24, below) reached the same state; its table
+is kept as history, and what changed since is recorded here.
+
+| Transition | Result | Evidence and limits |
+| --- | --- | --- |
+| dansMonoRepo -> horsMonoRepo | Validated | Own repository, `origin` public on `main`, HEAD pushed. `upstream_mod_remotes` now lists the source repository found on 2026-10-01 (see below); it was `N/A`. `licence: silent` stays: a repository found is not a licence, and that one has none. `(unofficial)` suffix and the first paragraph of the description follow the rule. The `Mod/` copies of `LICENSE` and `ATTRIBUTION.md` are byte-identical to the root ones (SHA-256 compared). |
+| ModIcon generated | Validated | 128x128 PNG, 27059 bytes at HEAD; the 32 px reduction was inspected, the winking dragon head still reads. Not touched: the owner alone generates it. |
+| Preview generated | Validated on the committed file | HEAD's `Mod/About/Preview.png` is 896x504, 816119 bytes, inspected at full size: title, tag, rule, summary, version badge, ModIcon cutout at the bottom right at -15°. A regeneration is under way in the working tree (another session, 05:00 on 2026-10-01: `Mod/About/Preview.png` 644800 bytes, `Art/Gallery/0-preview.png`, `Art/ModIcon-redrawn.png`, new `Art/` files); it is uncommitted and was not audited. The gallery's image 0 is still `Art/Workshop/00-preview.png` at HEAD (the rule of 2026-09-29 is one digit, `0-`): that session's `Art/Gallery/` is the new place. |
+| preOptions | Validated | English description; ends with the `Source code on GitHub` link; `sync-about-description.mjs` reports `About.xml` is the plain text of `PUBLICATION.md`; `.github/publish.config.json` reads that Markdown block. |
+| options | Not applicable, justified | Read again: no `ModSettings`, `GetSettings`, `DoSettingsWindowContents`, `Mod` subclass or `MainButtonDef` in `Source/` or `Mod/` (searched by symbol, not only by file name). No page and no shortcut exist, so none is empty. |
+| l10n | Validated for what a session can check | 378 Def fields and 9 Keyed entries, 0 failures, four negative controls (`Tests/Run-All.ps1`, 2026-10-01). Plurals (rule of 2026-09-25): none of the nine Keyed entries takes a parameter, so no counted phrase exists and no `.One`/`.Many` is owed. French gender agreement (rule of 2026-09-30): all 19 French files read on 2026-09-30, no text agrees with a pawn, no switch needed. `FRENCH_REVIEW.md` (revision `f1c84fc`) is current: the French and English files last changed at `70feeae`, before it. `translation_fr` stays `partial` until Virginie has read it. |
+| preTest | Validated | `modDependencies` Harmony (with its Workshop URL) and Biotech; `loadAfter` the optional Chinese Comprehensive Expansion; `loadBefore` Animal Prosthetics 2; `incompatibleWith` the original; no `LoadFolders`. Two guarded patches: Animal Prosthetics 2 (`PatchOperationConditional` on `ADS_Cat1`, no `MayRequire` on an operation) and Nocturnal Animals (`PatchOperationFindMod` on its display name). The four animal integrations of `PUBLISHING.md` are treated, see below. |
+| done | Validated | Offline checks replayed, not read from an old report: `pwsh -NoProfile -File Tests/Run-All.ps1` (PowerShell 7.6.6), exit 0: 341 content checks and 5 negative controls, 26 assembly contracts against game 1.6.9676.17735, XML fields, classes, def references, external types, 137 of 137 configuration defs, the translation checks, both exit-code checks. The delivered assembly was rebuilt byte-identical (SHA-256 `042989FA...A1295F`). `Tests/Pickle/Check-Steps.ps1`: 105 patterns compile, none declared twice or ambiguous, every waiting step has a deadline, 409 step lines resolve. 22 features, 111 scenarios written; scope justified in `Tests/Pickle/README.md`. |
+| tested | Not met, unverified | See the three conditions below. |
+
+**The three conditions of `done -> tested`, checked on 2026-10-01.**
+
+| Condition | State |
+| --- | --- |
+| No scenario tagged `@wip` | **Holds.** None of the 22 features carries the tag (searched). |
+| Every conditional scenario has run | Four features carry `@requires`. `17` (Chinese Comprehensive Expansion) green 1/1 on 2026-09-28, on the current tree. `14` (Animal Prosthetics 2) green 11/11 and `16` (Nocturnal Animals) green 11/11, both on 2026-09-25, before the tunnel fix and the packageId change. `13` (the original mod) green 1/1 on 2026-09-25; the packageId run of 2026-09-27 skipped it, so it has no run on the current tree. Each report was read, suite and scenario names included (`junit.xml`, `summary.md`); the `13` one still records the packageId that carried `renew`, which confirms it predates the change. The `exitReason` and `setName` of every kept report lived in `summary.json`, which the trim of 2026-10-01 deleted before `WELCOME.md` was read again ("`summary.json` et `junit.xml` suffisent"): they cannot be re-read, the counts match the features played, and the final pass replaces these reports. All four are to be replayed in the final pass. |
+| No manual test left to validate | **Not met.** M1 to M5 green (automated), M6 and M7 red, M8 and M9 neither automated nor played: see `remaining`. |
+
+The nine `@review` captures kept were opened on 2026-10-01. Seven show what they claim (the four beasts and the
+rooster together, the scorpion form with its aura ring, the qiongqi after its landing, the rooster beside the
+scorpion form, the nian beast breathing fire at a muffalo, the friendly mingshe, the genepack named by the hover label).
+Two do not show their subject: see the defect in `remaining`. They are from builds before the tunnel fix, except the
+tunnel one; the final pass produces the captures of the current tree.
+
+**The source repository (`upstream_mod_remotes`).** The original's Steam page and its `About.xml` link no repository
+(read again 2026-10-01: the page, the first page of its comments, the local `About.xml`). A GitHub search by the mod's packageId and name
+finds **`MonsterTower/AncientChineseBeast`**: "山海志怪Mod 1.5版本源代码" (source of the 1.5 mod), public, created
+2025-09-10, one commit (`init`), no licence, forking allowed, issues open, no pull request and no issue. Its files
+are the original's source (the same class names as the 1.5 assembly this port was decompiled from, plus the
+firecracker debug comp that this port replaced). The account is `MonsterTower` ("旋风", a student and community modder,
+Xiamen); **none of the four creators listed on the Steam page** (FrolgHart, andery233xj, 瑞秋·克劳狄乌斯, 玖日长弓)
+**carries that name**, and nothing on either side links the two. So it is a source repository of the mod, owner
+unconfirmed; it carries no licence and does not change `licence: silent`. This port was started from the 1.5 assembly,
+not from that repository, so its history cannot be rebased onto it; what can be proposed is a pull request of the 1.6
+changes (`PawnFlyer.TickInterval`, `PostDeSpawn(Map, DestroyMode)`, the wildness stat, the `GenExplosion` call, the
+debug actions). `PUBLISHING.md` makes the pull request systematic once an origin repository exists and puts it in
+`BACKLOG.md` until done; it is public, so it waits for Virginie's word.
+
+**The four animal integrations (`PUBLISHING.md`, rule of 2026-09-28 completed 2026-10-01).** Read in the installed
+1.6 files of the other mods on 2026-10-01.
+
+| Mod | Treatment |
+| --- | --- |
+| A Dog Said... Animal Prosthetics 2 | Treated: `Patches/ADogSaidAnimalProsthetics2.xml`, `loadBefore`; played, feature 14. |
+| [XND] Nocturnal Animals (Continued) | Treated: `Patches/NocturnalAnimals.xml`; played, feature 16. |
+| Dogs mate (Continued) | **Not applicable.** Its 1.6 version uses the vanilla crossbreeding field and adds a "Can mate with" stat; its groups (`Revolus.DogsMate.AnimalGroupDef`: the canids, the felids, the rodents, the mammals, the platypus) list animals that share a species or a close relative with others. The beasts are unique species with no vanilla relative to mate with, and none of the 137 defs declares `canCrossBreedWith`. Nothing to add. |
+| Better Crossbreeding | **Not applicable as shipped.** It only acts through a `DZY.Crossbreeding.Extension` on a mother's `PawnKindDef` and the vanilla `canCrossBreedWith`; the beasts breed among their own race only (since 2026-09-25) and declare neither. A hybrid of a beast and an ordinary animal is the open idea of `BACKLOG.md`: if the owner builds it, both integrations are reopened with it. |
+
+This is a decision the owner can overturn: it is written here so that the absence of a patch is a recorded choice and
+not an oversight.
+
+**Evidence, 2026-10-01.** `Tests/Pickle/Evidence/` went from 198 MB to 2 MB, still on disk and out of git (`evidence/`
+and `Evidence/` are ignored; no report and no `.dds` is tracked: `git ls-files` finds none). Kept: the latest report of
+each scenario, as `summary.md` and `junit.xml`, and the nine English `@review` captures as 1280-pixel JPEGs. Deleted:
+the 11 folders superseded by a later report of the same scenarios, and `report.html`, `messages.ndjson`, `Player.log`,
+`summary.json` and the PNG captures of the rest. **Slip, owned:** `summary.json` should have stayed (it carries
+`exitReason` and `setName`; `WELCOME.md` keeps `summary.json` and `junit.xml`); it is gone from the 26 kept folders and
+`docs/runs/README.md` now says to keep it. No archive of this mod's runs remains in `pickle-reports-archive`
+(the nine folders there are other mods'); none was touched. `docs/runs/README.md` says what to keep in a run.
+
+**Work strictly needed for the next transition (`done -> tested`).** (1) Fix or justify M6 and M7, the two red
+scenarios, and decide M8 and M9 (automate, or list as not applicable with a reason). (2) Fix the camera of the two
+captures that miss their subject. (3) Play a final pass on the final tree: every scenario, in English, then in French,
+plus the passes for the four `@requires` features (`13`, `14`, `16`, `17`), one request each, the SHA written in the
+`-Label`, the tree left still until `RUN_DONE`; read `exitReason` first and open the captures. (4) Virginie's French
+review of `FRENCH_REVIEW.md` closes `translation_fr`.
+
+**Recommendations, optional.** The Workshop description and the gallery are the owner's steps in
+`PUBLICATION.md`; the `.github` workflow is stamped `289c71f74e3b` and `generate-publish-workflow.sh --check` says
+whether it is behind the template.
+
 ### Ordered workflow audit - 2026-09-24
+
+*History, kept. The state it reached (`done`) is confirmed by the audit above; where its table and the audit above
+differ, the audit above prevails.*
 
 **Result: `preTest` -> `done`.** Audited revision `eeb57db` (HEAD, pushed, tree clean when the audit began);
 the commit that records this audit follows it. The chain was checked in order against `AUDIT.md` and against

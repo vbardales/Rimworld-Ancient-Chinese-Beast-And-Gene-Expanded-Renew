@@ -7,15 +7,16 @@ capture for a person to open. **It was first run on 2026-09-25**, in part (`docs
 
 ## Present coverage
 
-Sixteen features, 91 scenarios once the outlines are expanded (68 in a minimal pass; `13`, `14` and `16` are
-skipped by requirement there).
+Twenty-two features, 111 scenarios once the outlines are expanded (counted 2026-10-01; 87 in a minimal pass: `13`,
+`14`, `16` and `17`, 24 scenarios, are skipped by requirement there). Features `17` to `22` and the manual
+exceptions' scenarios in `04` were added from 2026-09-28; see "The manual exceptions" for what each settles.
 
 | Feature | Scenarios | What it settles | `@review` capture |
 |---|---|---|---|
 | `01-loads` | 1 | the mod, Harmony and Biotech load in order; the principal defs exist; no warning from the mod, no error | none |
 | `02-beast-review` | 1 | the four beasts and the chicken render together on a clean map | one |
 | `03-save-reload` | 1 | four hostile beasts survive a real save and reload | none |
-| `04-critical-hooks` | 3 | the three hooks 1.6 silenced: the drought ends with its mingshe, the human sexie leaves its scorpion, the qiongqi lands its flight | two |
+| `04-critical-hooks` | 6 | the three hooks 1.6 silenced: the drought ends with its mingshe, the human sexie leaves its scorpion, the qiongqi lands its flight; and M1 (the drought rots plants hourly, four exceptions spared) and M4 (the scorpion's aura, two scenarios) | two |
 | `05-incidents` | 2 | the ordinary-beast incident and the chicken's incident fire and spawn | one |
 | `06-chicken-crow` | 4 | the crow kills a staged sexie, lifts a colonist's mood by twenty, kills exactly one of two sexies, and the bird crows by itself at four | one |
 | `07-debug-actions` | 1 | the nian action sets the flag the scheduler reads | none |
@@ -26,10 +27,18 @@ skipped by requirement there).
 | `12-recipes-and-clones` | 19 | all twelve gene recipes, all five clones, the archite capsules, and a tame mingshe that dies without a drought or an error | none |
 | `13-original-mod-incompatibility` | 1 | with the original mod staged, both define the same beast and the game keeps one copy (`@requires:andery233xj.AncientChineseBeast`) | none |
 | `14-animal-prosthetics-2` | 11 | with A Dog Said... Animal Prosthetics 2 staged, the recipe list the game holds on each race: the five clones offer bionics, the chicken a simple prosthesis and no bionics, the four hostile beasts nothing, and this mod loads before it (`@requires:SamBucher.ADogSaidAnimalProsthetics2`) | none |
-| `15-rest-and-breeding` | 17 | the beasts rest and breed: a tired tame beast lies down, a hostile one has the need, a tame pair mates and the female gives birth (four races) or lays an egg that hatches (mingshe, star officer) | none |
+| `15-rest-and-breeding` | 22 | the beasts rest and breed: a tired tame beast lies down (six races), a hostile one has the need (five) and arrives rested (five), a tame pair mates and the female gives birth (four races) or lays an egg that hatches (mingshe, star officer) | none |
 | `16-nocturnal-animals` | 11 | with Nocturnal Animals staged, each of the eleven races carries the body clock the patch gives it (`@requires:Mlie.XNDNocturnalAnimals`) | none |
+| `17-chinese-comprehensive-expansion` | 1 | with the one mod `About.xml` names in `loadAfter` staged, this mod loads after it and nothing collides (`@requires:ninedaylongbow.ChineseComprehensiveExpansion`) | none |
+| `18-gene-effects` | 2 | M7: monstrous strength doubles an unarmed colonist's melee damage; the nian horn adds hit points to its part | none |
+| `19-bench-job-chain` | 1 | M6: a colonist hauls a beast corpse to the extractor and works the bill to ten archite capsules | one, when it passes |
+| `20-wind-barrier` | 2 | M2: the mingshe's barrier cuts what stands inside and spares what is far; it throws back a shot fired from outside | none |
+| `21-qiongqi` | 5 | M3: the dodge near one half (hostile qiongqi and a colonist with the eye gene) and none without it; the blows land on the head; the flying strike goes to the farthest colonist | none |
+| `22-siege` | 1 | M5: the nian beast attacks the enclosure of a colonist it cannot reach (the enclosure, not the door specifically: the door is the way of least resistance, and the scenario asks only that something of the enclosure is breached) | none |
 
-Nine captures in all. `docs/runs/README.md` says which to keep and how small.
+Nine captures in all from the English pass, plus a tenth that `19` takes when it passes. `docs/runs/README.md` says
+which to keep and how small. Opened on 2026-10-01, the `05` capture (the star officer) and the `11` one (the tunnel)
+do not show their subject: the camera and the zoom are to be set in those scenarios.
 
 ### Where each of the 28 scenarios of `TESTING.md` is played
 
@@ -73,6 +82,20 @@ evidence to inspect. **They are manual tests to validate: `tested` waits for eve
 | M8 | G1 (part) | changing language on a saved game and sending the next letter: a language cannot be switched inside a scenario | the letter after the switch, in both directions |
 | M9 | G2 | adding the mod to an existing save and removing it from one that has beasts needs a different mod set between two launches | the save opens, with and without |
 
+**State on 2026-10-01.** Seven of the nine have been written as scenarios; the others cannot be automated as they stand.
+
+| | Scenario | State |
+|---|---|---|
+| M1 | `04`, the drought rots plants hourly | green, 2026-09-28 (`2026-09-28c-m1`) |
+| M2 | `20`, the wind barrier | green, 2026-09-28 (both scenarios, two runs) |
+| M3 | `21`, the qiongqi | green, 2026-09-28 (five scenarios, two runs) |
+| M4 | `04`, the scorpion's aura | green, 2026-09-28 (2 of 2) |
+| M5 | `22`, the siege | green, 2026-09-29, after several red runs that taught the scenario to remove the colony's own colonists and to ask for the enclosure rather than the door |
+| M6 | `19`, the bench job chain | **red**, three runs on 2026-09-28, cause not found (the scenario attaches why the colonist is not working the bill) |
+| M7 | `18`, the gene effects | **red**, 2026-09-28, both scenarios |
+| M8 | none | not automated: a language cannot be switched inside a scenario, and the switch is the game's (`AUDIT.md`, "On ne teste pas le jeu"); what the mod answers for is the letter's language in a pass run in French, which a scenario can assert |
+| M9 | none | not automated: adding the mod to a save is the game's; removing it from a save with beasts can use `-Then` with `-ThenWithout` (`PickleTools/Headless/README.md`) |
+
 ### A finding the suite settled
 
 The nian beast's description, the README and `TESTING.md` said butchering it yields **nian beast fangs**. The butchery
@@ -86,7 +109,7 @@ README and `TESTING.md`. The scenario stays: it now proves that a butchery gives
 There is no DLC-absent pass: Biotech is a hard dependency, so the mod does not load without it. About.xml does
 name one optional mod, in `loadAfter`: `ninedaylongbow.ChineseComprehensiveExpansion`, Workshop 3221850511
 (looked up 2026-09-28 by its packageId, `Search-Workshop.sh` over the local corpus). Pass 3 of `TESTING.md`,
-"Passes", is now written (`17-chinese-comprehensive-expansion.feature`, `wsl-deps.cce.map`); it has not yet run.
+"Passes", is written (`17-chinese-comprehensive-expansion.feature`, `wsl-deps.cce.map`) and ran green on 2026-09-28.
 The other optional mod, A Dog Said... Animal Prosthetics 2, is not in `loadAfter` (the mod loads *before* it)
 and its pass is written. The six passes below are written, and each is a separate launch of the shared runner,
 submitted as its own request (see "Before a ticket is taken").

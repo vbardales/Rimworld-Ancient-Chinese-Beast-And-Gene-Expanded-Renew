@@ -4,11 +4,12 @@ What the Steam Workshop page asks for and the repository holds nowhere else. Wor
 (`Mod/About/PublishedFileId.txt` holds the id and must never be lost). Publications go through the CI
 (see `Rimworld-Release-Admin/docs/OPERATIONS.md`); only Virginie approves the `steam-production` environment.
 
-Status: this file is the **single source** of the description, written once in Markdown. The CI is not yet
-set to read it (the workflow under `.github/` is not edited by hand): until the mod is moved to this source
-with `generate-publish-workflow.sh ... --description-markdown PUBLICATION.md`, `Mod/About/About.xml` keeps its
-hand-written BBCode description, and the two must be kept in step. Before the first publish that sends the
-description, the dry-run must print a text that reads the same as the one it replaces.
+Status: this file is the **single source** of the description, written once in Markdown. The workflow under
+`.github/` reads it (`.github/publish.config.json`: `description.file` `PUBLICATION.md`, `aboutFromDescription`), and
+`Mod/About/About.xml`'s `<description>` is generated from it: `node .github/scripts/sync-about-description.mjs`
+reports they agree (checked 2026-10-01). Before the first publish that sends the description, the dry-run must print
+a text that reads the same as the one on the Workshop page it replaces. The page is private and carries the
+description of the 0.1.0 upload.
 
 ## Steam description
 

@@ -21,6 +21,13 @@ feature list; it says nothing about reuse either way.
 That fourth check is there because of たたら製鉄, whose refusal of redistribution was buried in
 the prose of its `About.xml` description and not in any file. This one has no such clause.
 
+**A source repository exists, and carries no licence either.** Looked for again on 2026-10-01, a public GitHub
+repository holds the 1.5 source of this mod: [MonsterTower/AncientChineseBeast](https://github.com/MonsterTower/AncientChineseBeast)
+(one commit, 2025-09-10, no licence file, forking allowed). Neither the Workshop page nor the mod's `About.xml`
+links it, and the account is not one of the four credited creators, so nothing here shows who owns it. This port was
+made from the 1.5 assembly and not from that repository. A repository found is not a licence: the classification
+stays `silent`, and no permission is inferred from it.
+
 The source review recorded on 2026-09-12 found no explicit licence, reuse permission or
 prohibition for the original material. This is the basis for the `silent` classification;
 abandonment is not established. Silence is neither refusal nor permission.
@@ -233,10 +240,13 @@ now unwraps `Nullable<T>` and `SlateRef<T>` the same way, which also took vanill
 eighteen problems to none.
 
 What none of this covers: **no person has played the mod in a game.** Most of what this file
-describes is read out of the code. Since 2026-09-25 the Pickle suite (`Tests/Pickle/`) has played parts
-of it in a real game: the gene recipes and the clones, the schedule, the incidents, the firecracker damage
-and the compatibility with Animal Prosthetics 2. The sexie's second phase, the flyer's landing and the
-crow are queued and not yet seen; `STATUS.md` says where each stands.
+describes is read out of the code. Since 2026-09-25 the Pickle suite (`Tests/Pickle/`) has played most of
+it in a real game, feature by feature: the three hooks 1.6 silenced (the drought's end, the sexie's second phase,
+the flyer's landing), the crow, the gene recipes and the clones, the schedule, the incidents, the firecracker damage,
+the wind barrier, the qiongqi's dodge and blows, the nian beast's siege, and the compatibility with Animal
+Prosthetics 2, Nocturnal Animals and the Chinese Comprehensive Expansion. Not seen working: the genes' effects on a
+colonist and the extractor's job chain (both red), and the language and mod-set changes on a saved game;
+`STATUS.md` says where each stands.
 
 ## Credits
 

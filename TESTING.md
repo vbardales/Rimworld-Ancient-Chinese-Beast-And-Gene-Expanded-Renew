@@ -24,12 +24,19 @@ setup. Record the exception, its reason and the exact evidence to inspect in `Te
 Evidence stays on disk and out of git. Which proofs of a run are worth keeping, in what form and for
 how long, is in `docs/runs/README.md`; read it before deleting or committing anything a run wrote.
 
-The companion suite exists (`Tests/Pickle/`, 16 features, 91 scenarios) and was first run, in part, on 2026-09-25
-(`docs/runs/`). Which of the
+The companion suite exists (`Tests/Pickle/`, 22 features, 111 scenarios) and has been played, feature by feature,
+since 2026-09-25 (`docs/runs/`); it has not been played as one full run on the current tree. Which of the
 28 cases below each feature plays is the table in its README, and so are the nine manual exceptions (M1 to
-M9), the cases it does not play and why. Those nine are the only cases below that a person still has to do
-by hand, and they are manual tests to validate: until they are green the mod cannot be `tested`. The
-other cases are automation that has been written, not evidence that anything passed.
+M9). On 2026-10-01 M1 to M5 are automated and green, M6 and M7 are automated and red, M8 and M9 are neither
+automated nor played; until every one is green or explicitly not applicable with its reason, the mod cannot be
+`tested`. A written scenario is automation, not evidence that anything passed: the evidence is the report of a run
+on the current tree.
+
+**What `tested` asks for** (`AUDIT.md`, `done -> tested`), and where this mod stands on 2026-10-01: no scenario
+tagged `@wip` (holds); every `@requires` scenario has run on the current tree (not yet: `13`, `14`, `16` ran on older
+trees, `17` on the current one); no manual test left to validate (not met); the Pickle suites green with
+`exitReason` read first and the `@review` captures opened (two of the nine do not show their subject); the logs
+checked and the interface verified in English and French; a French review by the owner.
 
 28 scenarios, ordered so that each one leaves the save in the state the next one needs. The
 whole run is about an hour when performed manually. Pickle features should instead reload or
@@ -44,14 +51,17 @@ covers. This mod needs six launches:
 | --- | --- | --- | --- |
 | 1 | without the optional mods, English | the minimal set: Core, the DLCs, Harmony, RimLogging, Pickle, Biotech, the mod | every feature but `13` and `14`, which are skipped by requirement |
 | 2 | without the optional mods, French | the same set, `-Language French` | the same features, against the French files |
-| 3 | with the optional mod | the minimal set plus `ninedaylongbow.ChineseComprehensiveExpansion`, the one mod `About.xml` names in `loadAfter` | **not written**: it needs that mod's Workshop id, which has not been looked up, and it is where the fangs question (see `Tests/Pickle/README.md`) may be answered |
+| 3 | with the optional mod | the minimal set plus `ninedaylongbow.ChineseComprehensiveExpansion` (Workshop 3221850511), the one mod `About.xml` names in `loadAfter`, `wsl-deps.cce.map` | `17`: it loads after that mod with no conflict (green 1/1, 2026-09-28) |
 | 4 | declared incompatibility | the minimal set plus `andery233xj.AncientChineseBeast`, `wsl-deps.incompat-original.map` | `13`, which asserts the symptom the incompatibility is declared for |
 | 5 | with A Dog Said... Animal Prosthetics 2 | the minimal set plus `SamBucher.ADogSaidAnimalProsthetics2` (Workshop 3238353862), `wsl-deps.ads2.map` | `14`, block H below: the recipe lists on the races, and the load order |
 | 6 | with Nocturnal Animals | the minimal set plus `Mlie.XNDNocturnalAnimals` (Workshop 2269731409), `wsl-deps.nocturnal.map` | `16`, block I below: the body clock each race carries |
 
 There is no pass without a DLC (Biotech is a hard dependency, so the mod does not load without it) and no
-restart sequence (nothing here crosses a process boundary). Pass 3 is the reason `tested` cannot be reached
-yet on the passes alone: a pass that names an optional mod has not been defined for it.
+restart sequence (nothing here crosses a process boundary). All six passes are written. Passes 1 and 2 (every
+scenario, English then French) have never been played whole on the current tree; passes 3 to 6 each played green
+once, on trees that differ from the current one except pass 3. The final pass of a `tested` claim plays all six, one
+request each, with the SHA in the `-Label`. The two other optional mods the code does not name (Dogs mate and Better
+Crossbreeding) need no pass: see `STATUS.md`, "The four animal integrations".
 
 ## Manual fallback only
 

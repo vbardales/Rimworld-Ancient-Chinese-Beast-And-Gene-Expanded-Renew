@@ -44,6 +44,27 @@ changelog) and the chicken and the mingshe lay eggs. What is left:
   kind of guard as the Nocturnal Animals patch (`PatchOperationFindMod` on the display name).
 - **Cost.** A hybrid child should not undercut the bench: sterile, or weaker, or only the chicken.
 
-## At the first publication: the description has one source
+## A pull request to the source repository of the original
 
-Decided by the CI session on 2026-09-25 (Rimworld-Release-Admin `docs/OPERATIONS.md`, "Changing where the Steam description comes from"). Nothing is forced now. When `PUBLICATION.md` is written (it does not exist yet), the Steam description goes in it once, in a ```markdown block under `## Steam description`, its last line `[Source code on GitHub](URL)`; the CI then generates the `<description>` of `Mod/About/About.xml` from it, and a dry-run stops if the two differ. The workflow (`.github/`) is not edited by hand; the change note's first line carries the version (`[b]1.0.0[/b]`).
+Found 2026-10-01: **`MonsterTower/AncientChineseBeast`**, "山海志怪Mod 1.5版本源代码", public, one commit
+(2025-09-10), no licence, forking allowed, issues open. It is the original's 1.5 source; whether its owner is one of the
+four credited creators is not established (none of the four carries the account's name). `PUBLISHING.md` makes a pull
+request to an origin repository systematic, independent of the Workshop publication, and keeps it here until it is
+done. It is public, so **nothing is forked or proposed without Virginie's word**.
+
+What a pull request would carry: the 1.6 changes (`PawnFlyer.TickInterval`, `PostDeSpawn(Map, DestroyMode)`, the
+`Wildness` stat, the `GenExplosion.DoExplosion` and `PathFinder` calls, `RegionGrid.AllRooms`) and the fixes of
+defects the original had (the comp that threw on every destroy, the null reference on a player-faction mingshe, the
+beast incident that threw from the debug menu), each described in `ATTRIBUTION.md`. This port was decompiled from the
+1.5 assembly, not built from that repository, so the two trees differ in layout (the repository keeps a `Harmony`
+folder and the firecracker debug comp this port replaced; this port has `PatchMain.cs`, `DebugActions.cs`, one file
+per patch): compare file by file before proposing anything, and keep the original's own layout in the proposal. The
+Defs and textures live in the Workshop mod, not in that repository, so only the C# can be proposed there.
+
+## Done: the description has one source
+
+Decided by the CI session on 2026-09-25. `PUBLICATION.md` exists and holds the Steam description once, in a Markdown
+block under `## Steam description`, its last line `[Source code on GitHub](URL)`; `.github/publish.config.json` reads
+it and generates the `<description>` of `Mod/About/About.xml` from it (`sync-about-description.mjs` reports they
+agree, checked 2026-10-01). The workflow (`.github/`) is not edited by hand; the change note's first line carries the
+version (`[b]1.0.0[/b]`).
