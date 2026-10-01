@@ -31,36 +31,80 @@ function Get-Entries($path) {
     return $entries
 }
 
-function Resolve-DefField($defsRoot, [string]$key) {
-    # key looks like "DefName.field" or "DefName.stages.N.field" or "DefName.tools.N.label"
-    $parts = $key -split '\.'
-    $defName = $parts[0]
-    $rest = $parts[1..($parts.Length - 1)]
+function Get-DefNode([string]$defName) {
     if (-not $script:defCache.ContainsKey($defName)) {
-        $found = $null
+        # several defs of different types can share a defName (a SoundDef and a ThingDef): keep them all
+        $found = @()
         foreach ($f in $script:defFiles) {
             $x = [xml](Get-Content $f -Raw -Encoding UTF8)
-            $node = $x.SelectSingleNode("//*[defName='$defName']")
-            if ($node) { $found = $node; break }
+            $found += @($x.SelectNodes("//*[defName='$defName']"))
         }
         $script:defCache[$defName] = $found
     }
-    $node = $script:defCache[$defName]
-    if (-not $node) { return $null }
+    return $script:defCache[$defName]
+}
+
+function Get-ParentNode($node) {
+    $pn = $node.GetAttribute('ParentName')
+    if (-not $pn) { return $null }
+    if (-not $script:nameCache.ContainsKey($pn)) {
+        $found = $null
+        foreach ($f in $script:defFiles) {
+            $x = [xml](Get-Content $f -Raw -Encoding UTF8)
+            $n = $x.SelectSingleNode("//*[@Name='$pn']")
+            if ($n) { $found = $n; break }
+        }
+        $script:nameCache[$pn] = $found
+    }
+    return $script:nameCache[$pn]
+}
+
+# One step down a dotted path: a child element name, a list index, or a label handle (the translation
+# system names a list item by its label, spaces turned into underscores).
+function Step-Path($cur, [string]$p) {
+    $children = @($cur.ChildNodes | Where-Object { $_.NodeType -eq 'Element' })
+    if ($p -match '^\d+$') {
+        $idx = [int]$p
+        if ($idx -ge $children.Count) { return $null }
+        return $children[$idx]
+    }
+    $direct = $children | Where-Object { $_.Name -eq $p } | Select-Object -First 1
+    if ($direct) { return $direct }
+    foreach ($li in $children) {
+        foreach ($f in 'label','untranslatedCustomLabel','customLabel','def','defName') {
+            $v = $li.SelectSingleNode($f)
+            if ($v -and (($v.InnerText.Trim() -replace '\s+','_') -ieq $p)) { return $li }
+        }
+        $cls = $li.GetAttribute('Class')
+        # HediffCompProperties_VerbGiver is addressed as HediffComp_VerbGiver
+        if ($cls -and ((($cls -split '\.')[-1] -replace 'Properties','') -ieq ($p -replace 'Properties',''))) { return $li }
+    }
+    return $null
+}
+
+function Resolve-From($node, [string[]]$rest) {
     $cur = $node
     foreach ($p in $rest) {
-        if ($cur -eq $null) { return $null }
-        if ($p -match '^\d+$') {
-            $children = @($cur.ChildNodes | Where-Object { $_.NodeType -eq 'Element' })
-            $idx = [int]$p
-            if ($idx -ge $children.Count) { return $null }
-            $cur = $children[$idx]
-        } else {
-            $cur = $cur.$p
-        }
+        if ($null -eq $cur) { return $null }
+        $cur = Step-Path $cur $p
     }
     if ($cur -is [System.Xml.XmlElement]) { return $cur.InnerText }
-    if ($cur) { return [string]$cur }
+    return $null
+}
+
+function Resolve-DefField($defsRoot, [string]$key) {
+    # "DefName.field", "DefName.stages.N.field", "DefName.tools.fang.label" (a field the def does not
+    # set comes from its abstract parent)
+    $parts = $key -split '\.'
+    $rest = $parts[1..($parts.Length - 1)]
+    foreach ($start in @(Get-DefNode $parts[0])) {
+        $node = $start
+        while ($node) {
+            $r = Resolve-From $node $rest
+            if ($r) { return $r }
+            $node = Get-ParentNode $node
+        }
+    }
     return $null
 }
 
@@ -69,6 +113,7 @@ $englishRoot = Join-Path $Root 'Mod/Languages/English'
 $defsRoot = Join-Path $Root 'Mod/Defs'
 $script:defFiles = Get-ChildItem $defsRoot -Recurse -Filter *.xml | ForEach-Object { $_.FullName }
 $script:defCache = @{}
+$script:nameCache = @{}
 
 $frenchFiles = Get-ChildItem $frenchRoot -Recurse -Filter *.xml | Sort-Object FullName
 $out = New-Object System.Text.StringBuilder
@@ -101,7 +146,7 @@ foreach ($ff in $frenchFiles) {
         $en = $null
         if ($enEntries.Contains($key)) { $en = $enEntries[$key] }
         else { $en = Resolve-DefField $defsRoot $key }
-        if ($null -eq $en) { $en = '*(not found — check by hand)*' }
+        if ($null -eq $en) { $en = '*(unverified: inherited from a vanilla parent def, not read)*' }
         $orig = $en
         $flag = if ($fr -match '\?\?\?|TODO|\{PAWN_gender' -and $fr -notmatch '\{PAWN_gender \? ') { ' | ?' } else { '' }
         $origCell = ($orig -replace '\|', '\|') -replace "`n", ' '
