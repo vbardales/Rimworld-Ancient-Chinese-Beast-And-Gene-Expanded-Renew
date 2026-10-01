@@ -194,6 +194,10 @@ plus the passes for the four `@requires` features (`13`, `14`, `16`, `17`), one 
 `-Label`, the tree left still until `RUN_DONE`; read `exitReason` first and open the captures. (4) Virginie's French
 review of `FRENCH_REVIEW.md` closes `translation_fr`.
 
+**Gallery image 0.** Uploaded by the owner on 2026-10-01 (her word in chat): `Art/Gallery/0-preview.png`, SHA-256
+`4fe2d418e6dc...`, byte-identical to the committed `Mod/About/Preview.png` at that time. The other gallery images
+(the `@review` captures) are still to be chosen and uploaded after the final pass.
+
 **Recommendations, optional.** The Workshop description and the gallery are the owner's steps in
 `PUBLICATION.md`; the `.github` workflow is stamped `289c71f74e3b` and `generate-publish-workflow.sh --check` says
 whether it is behind the template.
