@@ -26,10 +26,10 @@ remaining:
   - verified 2026-10-01: French review by Virginie (see "Translation audit - 2026-10-01"). 11 source cells of
       `FRENCH_REVIEW.md` stay marked unverified (fields inherited from vanilla parents, not read)
   - unverified: Tests/Pickle - 23 features, 112 scenarios once the outlines are expanded (counted 2026-10-01);
-      Check-Steps.ps1 green 2026-10-01 (107 patterns, 415 step lines). **Pass 1 (English, every scenario, request b5b0,
-      2026-10-01, 78 min, xitReason failed): 83 passed, 5 failed, 24 skipped by requirement.** First full pass. Red: the
+      `Check-Steps.ps1` green 2026-10-01 (107 patterns, 415 step lines). **Pass 1 (English, every scenario, request b5b0,
+      2026-10-01, 78 min, `exitReason` failed): 83 passed, 5 failed, 24 skipped by requirement.** First full pass. Red: the
       aura ring (clock), the chicken egg (wait), the barrier cut (the save did not load in 180 s), the barrier throw-back
-      (a real defect of the original, guarded in Source/), the qiongqi strike (wait). All fixed after the run and not yet
+      (a real defect of the original, guarded in `Source/`), the qiongqi strike (wait). All fixed after the run and not yet
       replayed. Passes 2 (French), 3, 4, 5 and 6 are queued (requests 71bc, 57f8, d047, 36bb, 2d38) and had not run when
       this was written. Not proven on the current tree: the five replays and passes 2 to 6
   - unverified: the delivered assembly changed four times in a week (forced "Beast attack now" 2026-09-25, rest
