@@ -25,8 +25,8 @@ workshop:     prepublished 2026-09-23, item 3806709132, private, version 0.1.0
 remaining:
   - verified 2026-10-01: French review by Virginie (see "Translation audit - 2026-10-01"). 11 source cells of
       `FRENCH_REVIEW.md` stay marked unverified (fields inherited from vanilla parents, not read)
-  - unverified: Tests/Pickle - 22 features, 111 scenarios once the outlines are expanded (counted 2026-10-01);
-      `Check-Steps.ps1` green 2026-10-01 (105 patterns, 409 step lines). Played in a real game between 2026-09-24 and
+  - unverified: Tests/Pickle - 23 features, 112 scenarios once the outlines are expanded (counted 2026-10-01);
+      `Check-Steps.ps1` green 2026-10-01 (107 patterns, 415 step lines). Played in a real game between 2026-09-24 and
       2026-09-29, feature by feature and never as one run (docs/runs/). Every feature passed at least once except
       `18` (M7, 2 of 2 red, 2026-09-28) and `19` (M6, red three times, last 2026-09-28). Not proven on the current
       tree: no initial/final pass of all scenarios has been played, in English or in French (the French pass played
@@ -46,14 +46,15 @@ remaining:
       attack; a fresh beast starts rested, so this is judged low risk, not measured)
   - unverified: no person has played the mod. What is known of it in a game is what Pickle showed on 2026-09-25
       (above); TESTING.md remains the protocol, 29 scenarios
-  - unverified: the nine manual exceptions (M1 to M9, Tests/Pickle/README.md, docs/MANUAL-TESTS.md). `tested` waits
+  - unverified: the nine manual exceptions (M1 to M9, Tests/Pickle/README.md, docs/MANUAL-TESTS.md). 	ested waits
       for every one of them to be green or explicitly not applicable with its reason. State on 2026-10-01: M1 to M5
-      are automated and green (features 04, 20, 21, 22); M6 (bench job chain, feature 19) red three times, cause not
-      found; M7 (gene effects, feature 18) red twice; M8 (language switch on a saved game) and M9 (adding and
-      removing the mod on a save) are neither automated nor played. Recommendation, not done: M8 is the game's
-      language switch (AUDIT.md, "On ne teste pas le jeu"), so what the mod answers for is the letter's language in a
-      pass run in French; M9 can use `-Then` with `-ThenWithout` for the removal half
-  - defect: two of the nine `@review` captures do not show their subject (opened 2026-10-01): `05-incidents` (the
+      automated and green (features 04, 20, 21, 22). M6 (feature 19) red three times on 2026-09-28; its cause was read
+      in the diagnostic the runs attached (the extractor’s interaction cell was not standable) and the placement step
+      is fixed, replay owed. M7 (feature 18) red twice, "Accessing map pawns off main thread" while a colonist is
+      generated, cause not found; replay owed on the current tree. M8 automated as feature 23 (the part the mod owns),
+      written, not played. M9 not applicable: the game’s own behaviour, reason in Tests/Pickle/README.md; the owner can
+      overturn it
+  - defect (fixed in the features 2026-10-01, replay owed): two of the nine `@review` captures did not show their subject: `05-incidents` (the
       Pleiades star officer is a few pixels at the top left of a base-wide view) and `11-tunnel` (the label under the
       pointer reads "Tunnel", no tunnel is drawn on screen). The camera and the zoom are the scenarios' to set
   - unverified: whether `MonsterTower/AncientChineseBeast` (the 1.5 source, see the 2026-10-01 audit) belongs to the
@@ -133,14 +134,14 @@ is kept as history, and what changed since is recorded here.
 | options | Not applicable, justified | Read again: no `ModSettings`, `GetSettings`, `DoSettingsWindowContents`, `Mod` subclass or `MainButtonDef` in `Source/` or `Mod/` (searched by symbol, not only by file name). No page and no shortcut exist, so none is empty. |
 | l10n | Validated for what a session can check | 378 Def fields and 9 Keyed entries, 0 failures, four negative controls (`Tests/Run-All.ps1`, 2026-10-01). Plurals (rule of 2026-09-25): none of the nine Keyed entries takes a parameter, so no counted phrase exists and no `.One`/`.Many` is owed. French gender agreement (rule of 2026-09-30): all 19 French files read on 2026-09-30, no text agrees with a pawn, no switch needed. `FRENCH_REVIEW.md` (revision `f1c84fc`) is current: the French and English files last changed at `70feeae`, before it. `translation_fr` is `complete` since Virginie's review of 2026-10-01 (revision `16cb222`). |
 | preTest | Validated | `modDependencies` Harmony (with its Workshop URL) and Biotech; `loadAfter` the optional Chinese Comprehensive Expansion; `loadBefore` Animal Prosthetics 2; `incompatibleWith` the original; no `LoadFolders`. Two guarded patches: Animal Prosthetics 2 (`PatchOperationConditional` on `ADS_Cat1`, no `MayRequire` on an operation) and Nocturnal Animals (`PatchOperationFindMod` on its display name). The four animal integrations of `PUBLISHING.md` are treated, see below. |
-| done | Validated | Offline checks replayed, not read from an old report: `pwsh -NoProfile -File Tests/Run-All.ps1` (PowerShell 7.6.6), exit 0: 341 content checks and 5 negative controls, 26 assembly contracts against game 1.6.9676.17735, XML fields, classes, def references, external types, 137 of 137 configuration defs, the translation checks, both exit-code checks. The delivered assembly was rebuilt byte-identical (SHA-256 `042989FA...A1295F`). `Tests/Pickle/Check-Steps.ps1`: 105 patterns compile, none declared twice or ambiguous, every waiting step has a deadline, 409 step lines resolve. 22 features, 111 scenarios written; scope justified in `Tests/Pickle/README.md`. |
+| done | Validated | Offline checks replayed, not read from an old report: `pwsh -NoProfile -File Tests/Run-All.ps1` (PowerShell 7.6.6), exit 0: 341 content checks and 5 negative controls, 26 assembly contracts against game 1.6.9676.17735, XML fields, classes, def references, external types, 137 of 137 configuration defs, the translation checks, both exit-code checks. The delivered assembly was rebuilt byte-identical (SHA-256 `042989FA...A1295F`). `Tests/Pickle/Check-Steps.ps1`: 105 patterns compile, none declared twice or ambiguous, every waiting step has a deadline, 409 step lines resolve. 23 features, 112 scenarios written; scope justified in `Tests/Pickle/README.md`. |
 | tested | Not met, unverified | See the three conditions below. |
 
 **The three conditions of `done -> tested`, checked on 2026-10-01.**
 
 | Condition | State |
 | --- | --- |
-| No scenario tagged `@wip` | **Holds.** None of the 22 features carries the tag (searched). |
+| No scenario tagged `@wip` | **Holds.** None of the 23 features carries the tag (searched). |
 | Every conditional scenario has run | Four features carry `@requires`. `17` (Chinese Comprehensive Expansion) green 1/1 on 2026-09-28, on the current tree. `14` (Animal Prosthetics 2) green 11/11 and `16` (Nocturnal Animals) green 11/11, both on 2026-09-25, before the tunnel fix and the packageId change. `13` (the original mod) green 1/1 on 2026-09-25; the packageId run of 2026-09-27 skipped it, so it has no run on the current tree. Each report was read, suite and scenario names included (`junit.xml`, `summary.md`); the `13` one still records the packageId that carried `renew`, which confirms it predates the change. The `exitReason` and `setName` of every kept report lived in `summary.json`, which the trim of 2026-10-01 deleted before `WELCOME.md` was read again ("`summary.json` et `junit.xml` suffisent"): they cannot be re-read, the counts match the features played, and the final pass replaces these reports. All four are to be replayed in the final pass. |
 | No manual test left to validate | **Not met.** M1 to M5 green (automated), M6 and M7 red, M8 and M9 neither automated nor played: see `remaining`. |
 

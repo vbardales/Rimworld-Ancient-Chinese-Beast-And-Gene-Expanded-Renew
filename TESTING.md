@@ -24,7 +24,7 @@ setup. Record the exception, its reason and the exact evidence to inspect in `Te
 Evidence stays on disk and out of git. Which proofs of a run are worth keeping, in what form and for
 how long, is in `docs/runs/README.md`; read it before deleting or committing anything a run wrote.
 
-The companion suite exists (`Tests/Pickle/`, 22 features, 111 scenarios) and has been played, feature by feature,
+The companion suite exists (`Tests/Pickle/`, 23 features, 112 scenarios) and has been played, feature by feature,
 since 2026-09-25 (`docs/runs/`); it has not been played as one full run on the current tree. Which of the
 28 cases below each feature plays is the table in its README, and so are the nine manual exceptions (M1 to
 M9). On 2026-10-01 M1 to M5 are automated and green, M6 and M7 are automated and red, M8 and M9 are neither

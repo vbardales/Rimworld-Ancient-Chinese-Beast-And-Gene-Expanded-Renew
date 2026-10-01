@@ -28,7 +28,7 @@ evidence folder went from 198 MB to 2 MB):
   | `04-critical-hooks` | qiongqi after its flying strike lands |
   | `05-incidents` | Pleiades star officer after its incident |
   | `09-nian-and-firecracker` | nian beast breathing fire at a muffalo |
-  | `11-tunnel` | the tunnel opening in the richest room |
+  | `11-tunnel` | the sexie coming out of its tunnel in the richest room |
   | `06-chicken-crow` | Pleiades star officer crow after its real ability effect |
   | `08-recipes` | nian fire-breath genepack produced by the real recipe hook |
   | `08-recipes` | friendly mingshe produced by the real clone recipe hook |

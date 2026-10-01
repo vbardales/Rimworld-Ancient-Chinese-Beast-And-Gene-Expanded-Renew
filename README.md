@@ -163,7 +163,7 @@ The checks start no game and do not execute gameplay. A clean run validates stat
 it does not prove that the mod works in a colony.
 
 Whether it works is [TESTING.md](TESTING.md): the 28 scenarios of the behaviour inventory, written as a
-Pickle suite (`Tests/Pickle/`, 22 features, 111 scenarios) that plays them in a real game. The suite has been played
+Pickle suite (`Tests/Pickle/`, 23 features, 112 scenarios) that plays them in a real game. The suite has been played
 feature by feature since 2026-09-25 and has not yet been played as one full run; two cases are still red and two
 are not automated (`STATUS.md`, `docs/MANUAL-TESTS.md`). No person has played the mod.
 

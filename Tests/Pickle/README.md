@@ -7,7 +7,7 @@ capture for a person to open. **It was first run on 2026-09-25**, in part (`docs
 
 ## Present coverage
 
-Twenty-two features, 111 scenarios once the outlines are expanded (counted 2026-10-01; 87 in a minimal pass: `13`,
+Twenty-three features, 112 scenarios once the outlines are expanded (counted 2026-10-01; 88 in a minimal pass: `13`,
 `14`, `16` and `17`, 24 scenarios, are skipped by requirement there). Features `17` to `22` and the manual
 exceptions' scenarios in `04` were added from 2026-09-28; see "The manual exceptions" for what each settles.
 
@@ -35,6 +35,7 @@ exceptions' scenarios in `04` were added from 2026-09-28; see "The manual except
 | `20-wind-barrier` | 2 | M2: the mingshe's barrier cuts what stands inside and spares what is far; it throws back a shot fired from outside | none |
 | `21-qiongqi` | 5 | M3: the dodge near one half (hostile qiongqi and a colonist with the eye gene) and none without it; the blows land on the head; the flying strike goes to the farthest colonist | none |
 | `22-siege` | 1 | M5: the nian beast attacks the enclosure of a colonist it cannot reach (the enclosure, not the door specifically: the door is the way of least resistance, and the scenario asks only that something of the enclosure is breached) | none |
+| `23-letter-language` | 1 | M8: a beast chosen in a saved game with a letter of another language sends the letter of the Def in the language of the run (`Singleton.BeastFor`); played in the English pass and again in the French one | none |
 
 Nine captures in all from the English pass, plus a tenth that `19` takes when it passes. `docs/runs/README.md` says
 which to keep and how small. Opened on 2026-10-01, the `05` capture (the star officer) and the `11` one (the tunnel)
@@ -91,10 +92,10 @@ evidence to inspect. **They are manual tests to validate: `tested` waits for eve
 | M3 | `21`, the qiongqi | green, 2026-09-28 (five scenarios, two runs) |
 | M4 | `04`, the scorpion's aura | green, 2026-09-28 (2 of 2) |
 | M5 | `22`, the siege | green, 2026-09-29, after several red runs that taught the scenario to remove the colony's own colonists and to ask for the enclosure rather than the door |
-| M6 | `19`, the bench job chain | **red**, three runs on 2026-09-28, cause not found (the scenario attaches why the colonist is not working the bill) |
+| M6 | `19`, the bench job chain | **red**, three runs on 2026-09-28. Cause found 2026-10-01 in the diagnostic the runs attached: the extractor's interaction cell was not standable and unreachable at the chosen place. The placement step now takes the nearest place with a standable footprint and interaction cell; replay owed |
 | M7 | `18`, the gene effects | **red**, 2026-09-28, both scenarios |
-| M8 | none | not automated: a language cannot be switched inside a scenario, and the switch is the game's (`AUDIT.md`, "On ne teste pas le jeu"); what the mod answers for is the letter's language in a pass run in French, which a scenario can assert |
-| M9 | none | not automated: adding the mod to a save is the game's; removing it from a save with beasts can use `-Then` with `-ThenWithout` (`PickleTools/Headless/README.md`) |
+| M8 | `23`, the stale letter of a saved beast is replaced | written 2026-10-01, not yet played: the language switch itself is the game's (`AUDIT.md`, "On ne teste pas le jeu"), so the scenario asserts what the mod owns, the letter in the language of the run, in the English pass and in the French one |
+| M9 | none | **not applicable**: adding a mod to a save, and opening a save whose mod is gone, are the game's own behaviour (`AUDIT.md`, "On ne teste pas le jeu"). What the mod answers for is what it declares, checked in `About.xml` (the dependencies, `loadAfter`, `incompatibleWith`), and the survival of its own saved state, played by `03`. The owner can overturn this and ask for a `-Then` / `-ThenWithout` removal pass |
 
 ### A finding the suite settled
 

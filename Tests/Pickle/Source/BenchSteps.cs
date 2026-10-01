@@ -35,7 +35,26 @@ namespace AncientChineseBeast.PickleSteps
             ctx.Assert(def != null, $"no ThingDef named {defName}");
             var thing = ThingMaker.MakeThing(def);
             thing.SetFactionDirect(Faction.OfPlayer);
-            GenSpawn.Spawn(thing, new IntVec3(x, 0, z), map, Rot4.South);
+            var center = new IntVec3(x, 0, z);
+            // The first M6 runs (2026-09-28) placed the extractor at (156, 146): its interaction cell, three cells south of the
+            // centre, was not standable and the colonist could not reach it, so no job was ever offered. Take the nearest centre
+            // whose whole footprint and interaction cell are standable, and say which one was taken.
+            var found = false;
+            // RadialCellsAround lists the cells from the nearest to the farthest.
+            foreach (var c in GenRadial.RadialCellsAround(center, 30f, true))
+            {
+                if (!c.InBounds(map)) continue;
+                var rect = GenAdj.OccupiedRect(c, Rot4.South, def.size);
+                var interaction = ThingUtility.InteractionCellWhenAt(def, c, Rot4.South, map);
+                if (rect.Cells.All(cell => cell.InBounds(map) && cell.Standable(map) && cell.GetEdifice(map) == null)
+                    && interaction.InBounds(map) && interaction.Standable(map))
+                {
+                    center = c; found = true; break;
+                }
+            }
+            ctx.Assert(found, $"no place within 30 cells of x={x} z={z} holds a {defName} with a standable interaction cell");
+            ctx.Attach("bench placement", $"asked for ({x}, {z}), placed at {center}");
+            GenSpawn.Spawn(thing, center, map, Rot4.South);
             ctx.Assert(thing.Spawned, $"{defName} did not spawn at x={x} z={z}");
             var power = thing.TryGetComp<CompPowerTrader>();
             if (power != null) power.PowerOn = true;
