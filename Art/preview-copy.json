@@ -31,7 +31,8 @@
     "veil": false,
     "panelTop": 7,
     "panelRight": 1,
-    "panelWidth": 50
+    "panelWidth": 50,
+    "flipX": true
   },
   "iconBadge": {
     "file": "ModIcon-redrawn.png",
