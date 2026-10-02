@@ -1,0 +1,80 @@
+{
+  "title": "Ancient Chinese Beast And Gene Expanded Renew (unofficial)",
+  "titleSize": 34,
+  "titleParts": [
+    {
+      "text": "Ancient Chinese",
+      "scale": 1
+    },
+    {
+      "break": true
+    },
+    {
+      "text": "Beast ",
+      "scale": 1
+    },
+    {
+      "text": "And ",
+      "scale": 0.65
+    },
+    {
+      "text": "Gene",
+      "scale": 1
+    },
+    {
+      "break": true
+    },
+    {
+      "text": "Expanded ",
+      "scale": 1
+    },
+    {
+      "text": "Renew",
+      "scale": 0.65,
+      "font": "ui",
+      "color": "secondary"
+    }
+  ],
+  "suffix": "",
+  "tag": "(unofficial)",
+  "tagInline": true,
+  "copyLines": [
+    "Four mythical beasts, their genes, and a divine rooster on the Rim."
+  ],
+  "layout": "panel",
+  "panelAnchor": "bottom-left",
+  "backgroundFile": "Preview-source.png",
+  "backgroundPosition": "center",
+  "backgroundSize": "cover",
+  "echo": {
+    "file": "echo.png",
+    "mode": "alpha",
+    "preSized": true,
+    "color": "var(--accent)",
+    "width": 300,
+    "height": 260,
+    "opacity": 1,
+    "veil": false,
+    "panelTop": 7,
+    "panelRight": 1,
+    "panelWidth": 50,
+    "flipX": true
+  },
+  "iconBadge": {
+    "file": "ModIcon-source.png",
+    "corner": "bottom-right",
+    "width": 220,
+    "outline": false,
+    "veil": "radial",
+    "veilSize": 275,
+    "veilRight": -55,
+    "veilBottom": -61
+  },
+  "palette": {
+    "veil": "#35312D",
+    "inkPrimary": "#F2ECE1",
+    "inkSecondary": "#F5CF97",
+    "accent": "#EF4936",
+    "badgeInk": "#17120E"
+  }
+}
