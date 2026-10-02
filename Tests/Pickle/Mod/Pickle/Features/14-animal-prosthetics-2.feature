@@ -25,7 +25,7 @@
 Feature: A Dog Said 2 prosthetics
 
   Scenario Outline: a tame clone is a category 3 animal
-    Given the main menu is open
+    Given Ancient Chinese Beast: the main menu is open within 120 seconds
     Then Ancient Chinese Beast: the race "<race>" offers the recipes "InstallWoodenPawAnimal", "InstallSimpleProstheticLegAnimal" and "InstallBionicLegAnimal"
     And no errors were logged
 
@@ -38,13 +38,13 @@ Feature: A Dog Said 2 prosthetics
       | SZ_SeXieInsect_Friendly |
 
   Scenario: the chicken is a category 2 animal, like a duck
-    Given the main menu is open
+    Given Ancient Chinese Beast: the main menu is open within 120 seconds
     Then Ancient Chinese Beast: the race "SZ_Chicken" offers the recipes "InstallPegLegAnimal" and "InstallSimpleProstheticLegAnimal"
     And Ancient Chinese Beast: the race "SZ_Chicken" does not offer the recipe "InstallBionicLegAnimal"
     And no errors were logged
 
   Scenario Outline: a hostile beast is in no category
-    Given the main menu is open
+    Given Ancient Chinese Beast: the main menu is open within 120 seconds
     Then Ancient Chinese Beast: the race "<race>" does not offer the recipe "InstallPegLegAnimal"
     And Ancient Chinese Beast: the race "<race>" does not offer the recipe "InstallBionicLegAnimal"
 
@@ -56,6 +56,6 @@ Feature: A Dog Said 2 prosthetics
       | SZ_SeXie     |
 
   Scenario: this mod loads before the other one
-    Given the main menu is open
+    Given Ancient Chinese Beast: the main menu is open within 120 seconds
     Then mod "SamBucher.ADogSaidAnimalProsthetics2" is loaded
     And Ancient Chinese Beast: the mod "nelim.ancientchinesebeastandgeneexpanded" loads before "SamBucher.ADogSaidAnimalProsthetics2"

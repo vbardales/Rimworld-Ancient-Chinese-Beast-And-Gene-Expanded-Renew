@@ -15,7 +15,7 @@
 Feature: Chinese Comprehensive Expansion, the one optional mod named in loadAfter
 
   Scenario: loads after it, with no conflict
-    Given the main menu is open
+    Given Ancient Chinese Beast: the main menu is open within 120 seconds
     Then mod "ninedaylongbow.ChineseComprehensiveExpansion" is loaded
     And mod "nelim.ancientchinesebeastandgeneexpanded" is loaded
     And mod "nelim.ancientchinesebeastandgeneexpanded" loads after "ninedaylongbow.ChineseComprehensiveExpansion"

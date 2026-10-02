@@ -17,7 +17,7 @@
 Feature: Declared incompatibility with the original Ancient Chinese Beast
 
   Scenario: the two mods define the same beast and the game keeps one copy of it
-    Given the main menu is open
+    Given Ancient Chinese Beast: the main menu is open within 120 seconds
     Then mod "andery233xj.AncientChineseBeast" is loaded
     And mod "nelim.ancientchinesebeastandgeneexpanded" is loaded
     And Ancient Chinese Beast: the "ThingDef" "SZ_MingShe" is defined by both mods "andery233xj.AncientChineseBeast" and "nelim.ancientchinesebeastandgeneexpanded"

@@ -13,7 +13,7 @@
 Feature: Nocturnal Animals body clocks
 
   Scenario Outline: each beast has the body clock the patch gives it
-    Given the main menu is open
+    Given Ancient Chinese Beast: the main menu is open within 120 seconds
     Then mod "Mlie.XNDNocturnalAnimals" is loaded
     And Ancient Chinese Beast: the body clock of "<race>" is <clock>
 
