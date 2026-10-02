@@ -33,6 +33,7 @@ evidence folder went from 198 MB to 2 MB):
   | `08-recipes` | nian fire-breath genepack produced by the real recipe hook |
   | `08-recipes` | friendly mingshe produced by the real clone recipe hook |
 
+  These captures are test proof only, never gallery images: the gallery holds staged photographs (`Art/GALLERY.md`).
   A green `@review` scenario says the trajectory and its assertions ran, not that anybody looked at the picture. Open
   every capture before keeping it, and say in `STATUS.md` which ones do not show their subject (on 2026-10-01 two do:
   `05` and `11`).
