@@ -94,9 +94,11 @@ namespace AncientChineseBeast.PickleSteps
 
         // The flying strike is decided on a one-second tick and queued as an ability job whose first target is the
         // pawn chosen; the step reads that job rather than waiting for the landing, which a colonist can move under.
-        [Then("Ancient Chinese Beast: the qiongqi pawn {int} sets its flying strike on pawn {int} within {int} seconds", TimeoutSeconds = 90f)]
+        [Then("Ancient Chinese Beast: the qiongqi pawn {int} sets its flying strike on pawn {int} within {int} seconds", TimeoutSeconds = 170f)]
         public async Task StrikesFarthest(PickleContext ctx, int qiongqiNumber, int targetNumber, int seconds)
         {
+            // The wait below gives up after 150 real seconds (Stage.WaitGameSeconds); the step used to be cut by the
+            // runner at 90, before 40 game seconds had passed (run bd0f, 2026-10-02: "timed out after 90s").
             var qiongqi = Nth(ctx, qiongqiNumber);
             var expected = Nth(ctx, targetNumber);
             Thing Chosen()
@@ -106,6 +108,16 @@ namespace AncientChineseBeast.PickleSteps
             }
             await Stage.WaitGameSeconds(ctx, () => Chosen() != null, seconds);
             var chosen = Chosen();
+            if (chosen == null)
+            {
+                // What the AI comp needs: CanCast, and a target the verb accepts (range 30.9 and a line of sight).
+                var ability = qiongqi.abilities?.GetAbility(DefDatabase<AbilityDef>.GetNamedSilentFail("SZ_QiongQi_FlyingStrike"));
+                var sight = string.Join("; ", Nth(ctx, 1).Map.mapPawns.AllPawns.Where(p => p != qiongqi && !p.Downed).Select(p =>
+                    $"{p.LabelShort} at {p.Position} {qiongqi.Position.DistanceTo(p.Position):F1} tiles, can hit {(ability != null && ability.VerbTracker.PrimaryVerb.CanHitTarget(p))}"));
+                ctx.Attach("flying strike diagnostic", $"ability {(ability == null ? "missing" : "found")}, can cast {ability?.CanCast}, " +
+                    $"cooldown ticks left {ability?.CooldownTicksRemaining}, qiongqi at {qiongqi.Position}, faction {qiongqi.Faction?.Name ?? "none"}, " +
+                    $"job {qiongqi.CurJob?.def.defName ?? "none"}; {sight}");
+            }
             ctx.Assert(chosen != null, $"the qiongqi never started a flying strike; {Stage.LastWaitReport}");
             ctx.Attach("flying strike target", $"{chosen} at {chosen.Position}, {qiongqi.Position.DistanceTo(chosen.Position):F1} tiles from the qiongqi");
             ctx.Assert(chosen == expected, $"the qiongqi flew at {chosen}, not at the farthest colonist {expected}");

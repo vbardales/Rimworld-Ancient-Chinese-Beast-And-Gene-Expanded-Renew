@@ -30,9 +30,9 @@ Feature: The qiongqi's dodge, flying strike and blows
 
   Scenario: the qiongqi's flying strike goes to the farthest colonist it can hit
     Given the save "test-colony" is loaded
-    And Ancient Chinese Beast: I spawn the pawn "SZ_QiongQi" at x=146 z=155
-    And Ancient Chinese Beast: I spawn a colonist near x=146 z=150
-    And Ancient Chinese Beast: I spawn a colonist near x=146 z=136
+    And Ancient Chinese Beast: I spawn the pawn "SZ_QiongQi" on open ground
+    And Ancient Chinese Beast: I spawn a colonist 6 tiles north of pawn 1
+    And Ancient Chinese Beast: I spawn a colonist 18 tiles north of pawn 1
     Then Ancient Chinese Beast: pawn 3 is more than 12 tiles from pawn 1
     And Ancient Chinese Beast: the qiongqi pawn 1 sets its flying strike on pawn 3 within 40 seconds
     And no errors were logged

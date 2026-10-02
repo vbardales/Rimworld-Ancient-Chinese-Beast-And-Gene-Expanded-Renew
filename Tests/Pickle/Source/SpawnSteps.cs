@@ -22,6 +22,88 @@ namespace AncientChineseBeast.PickleSteps
             Spawn(ctx, kindDefName, x, z, null, null);
         }
 
+        // The sexie's counter (CompSeXieExpansion.ticks) starts at 3600, which sends the most psychically sensitive
+        // colonist of the whole map berserk on the first tick, wherever they stand. A step after the spawn can arrive
+        // one tick too late (run bd0f, 2026-10-02: the colonist 28 tiles away was berserk), so the counter is set
+        // on the pawn before it is spawned, and no tick can see 3600.
+        [When("Ancient Chinese Beast: I spawn the pawn {string} at x={int} z={int} with its aura clock at zero")]
+        public void SpawnPawnClockZero(PickleContext ctx, string kindDefName, int x, int z)
+        {
+            var map = Stage.CurrentMap(ctx);
+            var kind = DefDatabase<PawnKindDef>.GetNamedSilentFail(kindDefName);
+            ctx.Assert(kind != null, $"no PawnKindDef named {kindDefName}");
+            var cell = new IntVec3(x, 0, z);
+            ctx.Assert(cell.InBounds(map), $"x={x} z={z} is outside the map");
+            if (!cell.Standable(map))
+            {
+                var near = CellFinder.StandableCellNear(cell, map, 6f);
+                ctx.Assert(near.IsValid, $"x={x} z={z} is not standable and nothing standable lies near it");
+                cell = near;
+            }
+            var pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(kind, null, forceGenerateNewPawn: true));
+            var comp = pawn.GetComp<CompSeXieExpansion>();
+            ctx.Assert(comp != null, $"{kindDefName} has no CompSeXieExpansion");
+            var field = typeof(CompSeXieExpansion).GetField("ticks", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic);
+            ctx.Assert(field != null, "CompSeXieExpansion.ticks was not found");
+            field.SetValue(comp, 0);
+            GenSpawn.Spawn(pawn, cell, map);
+            ctx.Assert(pawn.Spawned, $"{kindDefName} did not spawn at x={x} z={z}");
+            Remember(ctx, pawn);
+        }
+
+        // Open ground, for a scenario whose subject needs a line of sight (the qiongqi's flying strike: the base's
+        // walls hid the colonists in run bd0f). The cell nearest to x=146 z=155 that is standable, unroofed, and has a
+        // clear line to two cells 6 and 18 north of it, which are standable too.
+        [When("Ancient Chinese Beast: I spawn the pawn {string} on open ground")]
+        public void SpawnPawnOnOpenGround(PickleContext ctx, string kindDefName)
+        {
+            var map = Stage.CurrentMap(ctx);
+            var kind = DefDatabase<PawnKindDef>.GetNamedSilentFail(kindDefName);
+            ctx.Assert(kind != null, $"no PawnKindDef named {kindDefName}");
+            var anchor = new IntVec3(146, 0, 155);
+            IntVec3 best = IntVec3.Invalid;
+            int bestDistance = int.MaxValue;
+            foreach (var c in map.AllCells)
+            {
+                int d = c.DistanceToSquared(anchor);
+                if (d >= bestDistance || !OpenLine(map, c)) continue;
+                best = c;
+                bestDistance = d;
+            }
+            ctx.Assert(best.IsValid, "the map has no open ground with 18 clear cells to the north");
+            ctx.Attach("open ground", $"{kindDefName} at {best}");
+            var pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(kind, null, forceGenerateNewPawn: true));
+            GenSpawn.Spawn(pawn, best, map);
+            ctx.Assert(pawn.Spawned, $"{kindDefName} did not spawn at {best}");
+            Remember(ctx, pawn);
+        }
+
+        private static bool OpenLine(Map map, IntVec3 c)
+        {
+            var near = c + new IntVec3(0, 0, 6);
+            var far = c + new IntVec3(0, 0, 18);
+            if (!far.InBounds(map)) return false;
+            foreach (var cell in new[] { c, near, far })
+                if (!cell.Standable(map) || cell.Roofed(map)) return false;
+            return GenSight.LineOfSight(c, near, map) && GenSight.LineOfSight(c, far, map);
+        }
+
+        // A colonist standing a given number of tiles north of a pawn spawned earlier, in its line of sight.
+        [When("Ancient Chinese Beast: I spawn a colonist {int} tiles north of pawn {int}")]
+        public void SpawnColonistNorthOf(PickleContext ctx, int tiles, int number)
+        {
+            var map = Stage.CurrentMap(ctx);
+            var list = TryGet(ctx);
+            ctx.Assert(list != null && number >= 1 && number <= list.Pawns.Count, $"no pawn number {number}");
+            var cell = list.Pawns[number - 1].Position + new IntVec3(0, 0, tiles);
+            ctx.Assert(cell.InBounds(map) && cell.Standable(map), $"{cell} is not standable");
+            ctx.Assert(GenSight.LineOfSight(list.Pawns[number - 1].Position, cell, map), $"{cell} is not in sight of pawn {number}");
+            var pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(PawnKindDefOf.Colonist, Faction.OfPlayer, forceGenerateNewPawn: true));
+            GenSpawn.Spawn(pawn, cell, map);
+            ctx.Assert(pawn.Spawned, $"the colonist did not spawn at {cell}");
+            Remember(ctx, pawn);
+        }
+
         // A plain colonist of the player's faction, for what a gene does to a human: the genes of the beasts are
         // implanted in a colonist, and PawnKindDefOf.Colonist is the game's own default one.
         [When("Ancient Chinese Beast: I spawn a colonist at x={int} z={int}")]

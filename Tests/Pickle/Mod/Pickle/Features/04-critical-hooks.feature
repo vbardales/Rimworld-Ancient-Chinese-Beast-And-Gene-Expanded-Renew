@@ -28,8 +28,7 @@ Feature: Ancient Chinese Beast critical 1.6 callbacks
     And Ancient Chinese Beast: I spawn a colonist near x=146 z=150
     And Ancient Chinese Beast: I spawn a colonist near x=150 z=152
     And Ancient Chinese Beast: I spawn a colonist near x=118 z=155
-    And Ancient Chinese Beast: I spawn the pawn "SZ_SeXieInsect" at x=146 z=155
-    And Ancient Chinese Beast: the aura clock of pawn 4 is set to leave only the ring
+    And Ancient Chinese Beast: I spawn the pawn "SZ_SeXieInsect" at x=146 z=155 with its aura clock at zero
     Then Ancient Chinese Beast: pawn 3 is more than 12 tiles from pawn 4
     And Ancient Chinese Beast: pawn 1 goes berserk within 30 seconds
     And Ancient Chinese Beast: pawn 2 goes berserk within 30 seconds
