@@ -63,6 +63,14 @@ a `wsl-deps.*.map` for the gallery run is to be written when the scenarios are.
 Inside a `.feature`, parentheses are written without a backslash. The missing items are asked of Pickle Tools again
 when the first scenario is written.
 
+The later and complete list is `PickleTools/docs/STAGING.md` (exact step texts, status, same "not played" caveat). It
+adds: `game speed is paused`, a lit torch or campfire, the roof taken off a rectangle, the other colonists moved out
+of frame, head type, body type, gender, an animal's coat. Still not available: a frozen pose or animation, clearing an
+area of every thing (only what the decor step placed comes off), a full-resolution capture (not known whether the
+launcher reduces the picture), and what the sky and lamps look like at a given hour. For this mod: the qiongqi in
+mid-jump is a pause at the right tick (`game speed is paused` after waiting for the strike), and the courtyard stands
+on open ground found by the same search as the flying-strike scenario, so nothing needs clearing.
+
 ## Order of work
 
 1. Pickle Tools says which steps exist and builds the missing ones.
