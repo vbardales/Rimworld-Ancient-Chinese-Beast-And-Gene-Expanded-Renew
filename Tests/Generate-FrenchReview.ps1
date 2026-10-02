@@ -129,6 +129,23 @@ $rev = (git -C $Root rev-parse --short HEAD 2>$null)
 [void]$out.AppendLine("Generated $(Get-Date -Format 'yyyy-MM-dd'), revision: $rev.")
 [void]$out.AppendLine()
 
+# Fields the mod's Def does not set: inherited from a vanilla parent, read in RimWorld 1.6 Data/Core/Defs on 2026-10-02
+# (DamageDefs/Damages_MeleeWeapon.xml: BluntBase, Bite; DamageDefs/Damages_Environmental.xml: Flame;
+# ThingDefs_Misc/Ethereal_Various.xml: PawnFlyerBase). Text shown is the vanilla English, "(vanilla <Parent>)" names the parent.
+$vanillaParent = @{
+    'SZ_ChelaBlunt.deathMessage'           = '{0} has been beaten to death. (vanilla BluntBase)'
+    'SZ_ChelaBlunt.label'                  = 'blunt (vanilla BluntBase)'
+    'SZ_Firecracker_Flame.deathMessage'    = '{0} has burned to death. (vanilla Flame)'
+    'SZ_Firecracker_Flame.label'           = 'flame (vanilla Flame)'
+    'SZ_Firecracker_FlameB.deathMessage'   = '{0} has burned to death. (vanilla Flame)'
+    'SZ_Firecracker_FlameB.label'          = 'flame (vanilla Flame)'
+    'SZ_Firecracker_FlameC.deathMessage'   = '{0} has burned to death. (vanilla Flame)'
+    'SZ_Firecracker_FlameC.label'          = 'flame (vanilla Flame)'
+    'SZ_MingSheToxicBite.deathMessage'     = '{0} has been bitten to death. (vanilla Bite)'
+    'SZ_SeXieToxicBite.deathMessage'       = '{0} has been bitten to death. (vanilla Bite)'
+    'SZ_QQPawnFlyingStrike.label'          = 'flying (vanilla PawnFlyerBase)'
+}
+
 foreach ($ff in $frenchFiles) {
     $rel = $ff.FullName.Substring($frenchRoot.Length + 1) -replace '\\', '/'
     $frEntries = Get-Entries $ff.FullName
@@ -146,6 +163,7 @@ foreach ($ff in $frenchFiles) {
         $en = $null
         if ($enEntries.Contains($key)) { $en = $enEntries[$key] }
         else { $en = Resolve-DefField $defsRoot $key }
+        if ($null -eq $en -and $vanillaParent.Contains($key)) { $en = $vanillaParent[$key] }
         if ($null -eq $en) { $en = '*(unverified: inherited from a vanilla parent def, not read)*' }
         $orig = $en
         $flag = if ($fr -match '\?\?\?|TODO|\{PAWN_gender' -and $fr -notmatch '\{PAWN_gender \? ') { ' | ?' } else { '' }

@@ -6,7 +6,7 @@ English (the native field holds English, not Chinese) and no separate Chinese-la
 exists in this repository (ATTRIBUTION.md: no source repository was found to read one from).
 English is the closest available original for every row.
 
-Generated 2026-10-01, revision: 49f1c12.
+Generated 2026-10-02, revision: 6b14edc.
 
 ## DefInjected/AbilityDef/Translations.xml
 
@@ -149,17 +149,17 @@ Generated 2026-10-01, revision: 49f1c12.
 |---|---|---|---|
 | AntiEvilBeastBullet.deathMessage | {0} has been shot to death. | {0} has been shot to death. | {0} a succombé aux tirs. |
 | AntiEvilBeastBullet.label | anti-beast round | anti-beast round | munition anti-bêtes |
-| SZ_ChelaBlunt.deathMessage | *(unverified: inherited from a vanilla parent def, not read)* | *(unverified: inherited from a vanilla parent def, not read)* | {0} a succombé aux coups. |
-| SZ_ChelaBlunt.label | *(unverified: inherited from a vanilla parent def, not read)* | *(unverified: inherited from a vanilla parent def, not read)* | choc |
-| SZ_Firecracker_Flame.deathMessage | *(unverified: inherited from a vanilla parent def, not read)* | *(unverified: inherited from a vanilla parent def, not read)* | {0} a péri dans les flammes. |
-| SZ_Firecracker_Flame.label | *(unverified: inherited from a vanilla parent def, not read)* | *(unverified: inherited from a vanilla parent def, not read)* | flamme |
-| SZ_Firecracker_FlameB.deathMessage | *(unverified: inherited from a vanilla parent def, not read)* | *(unverified: inherited from a vanilla parent def, not read)* | {0} a péri dans les flammes. |
-| SZ_Firecracker_FlameB.label | *(unverified: inherited from a vanilla parent def, not read)* | *(unverified: inherited from a vanilla parent def, not read)* | flamme |
-| SZ_Firecracker_FlameC.deathMessage | *(unverified: inherited from a vanilla parent def, not read)* | *(unverified: inherited from a vanilla parent def, not read)* | {0} a péri dans les flammes. |
-| SZ_Firecracker_FlameC.label | *(unverified: inherited from a vanilla parent def, not read)* | *(unverified: inherited from a vanilla parent def, not read)* | flamme |
-| SZ_MingSheToxicBite.deathMessage | *(unverified: inherited from a vanilla parent def, not read)* | *(unverified: inherited from a vanilla parent def, not read)* | {0} a succombé aux morsures. |
+| SZ_ChelaBlunt.deathMessage | {0} has been beaten to death. (vanilla BluntBase) | {0} has been beaten to death. (vanilla BluntBase) | {0} a succombé aux coups. |
+| SZ_ChelaBlunt.label | blunt (vanilla BluntBase) | blunt (vanilla BluntBase) | choc |
+| SZ_Firecracker_Flame.deathMessage | {0} has burned to death. (vanilla Flame) | {0} has burned to death. (vanilla Flame) | {0} a péri dans les flammes. |
+| SZ_Firecracker_Flame.label | flame (vanilla Flame) | flame (vanilla Flame) | flamme |
+| SZ_Firecracker_FlameB.deathMessage | {0} has burned to death. (vanilla Flame) | {0} has burned to death. (vanilla Flame) | {0} a péri dans les flammes. |
+| SZ_Firecracker_FlameB.label | flame (vanilla Flame) | flame (vanilla Flame) | flamme |
+| SZ_Firecracker_FlameC.deathMessage | {0} has burned to death. (vanilla Flame) | {0} has burned to death. (vanilla Flame) | {0} a péri dans les flammes. |
+| SZ_Firecracker_FlameC.label | flame (vanilla Flame) | flame (vanilla Flame) | flamme |
+| SZ_MingSheToxicBite.deathMessage | {0} has been bitten to death. (vanilla Bite) | {0} has been bitten to death. (vanilla Bite) | {0} a succombé aux morsures. |
 | SZ_MingSheToxicBite.label | toxic bite | toxic bite | morsure toxique |
-| SZ_SeXieToxicBite.deathMessage | *(unverified: inherited from a vanilla parent def, not read)* | *(unverified: inherited from a vanilla parent def, not read)* | {0} a succombé aux morsures. |
+| SZ_SeXieToxicBite.deathMessage | {0} has been bitten to death. (vanilla Bite) | {0} has been bitten to death. (vanilla Bite) | {0} a succombé aux morsures. |
 | SZ_SeXieToxicBite.label | toxic bite | toxic bite | morsure toxique |
 | SZ_SeXieToxicRangedStab.deathMessage | {0} has been stabbed to death. | {0} has been stabbed to death. | {0} a succombé aux blessures perforantes. |
 | SZ_SeXieToxicRangedStab.label | stab | stab | perforation |
@@ -190,11 +190,11 @@ Generated 2026-10-01, revision: 49f1c12.
 | SZGene_MingShe_WindWing.label | mingshe wind shield | mingshe wind shield | bouclier de vent de mingshe |
 | SZGene_MingShe_WindWing.symbolPack.wholeNameSymbols.0.symbol | Mingshe blessing | Mingshe blessing | bénédiction du mingshe |
 | SZGene_MingShe_WindWing.symbolPack.wholeNameSymbols.1.symbol | Mingshe gift | Mingshe gift | don du mingshe |
-| SZGene_QiongQi_Eyes.description | The qiongqi eye, extracted by gene engineering, gives its bearer the beast's sight - and with it a high chance of dodging melee and ranged attacks alike. | The qiongqi eye, extracted by gene engineering, gives its bearer the beast's sight - and with it a high chance of dodging melee and ranged attacks alike. | L'œil de qiongqi, extrait par génie génétique, confère au porteur la vision de la bête et de fortes chances d'esquiver les attaques au corps à corps comme à distance. |
+| SZGene_QiongQi_Eyes.description | The qiongqi eye, extracted by gene engineering, gives its bearer the beast's sight - and with it a high chance of dodging melee and ranged attacks alike. | The qiongqi eye, extracted by gene engineering, gives its bearer the beast's sight - and with it a high chance of dodging melee and ranged attacks alike. | L'œil de qiongqi, extrait par génie génétique, confère la vision de la bête et de fortes chances d'esquiver les attaques au corps à corps comme à distance. |
 | SZGene_QiongQi_Eyes.label | qiongqi eye | qiongqi eye | œil de qiongqi |
 | SZGene_QiongQi_Eyes.symbolPack.wholeNameSymbols.0.symbol | Qiongqi blessing | Qiongqi blessing | bénédiction du qiongqi |
 | SZGene_QiongQi_Eyes.symbolPack.wholeNameSymbols.1.symbol | Qiongqi gift | Qiongqi gift | don du qiongqi |
-| SZGene_QiongQi_FlyingStrike.description | The flying strike, extracted by gene engineering. The bearer can throw themselves at an enemy's back line the way a qiongqi does, tearing the line open. Usually hits the head. | The flying strike, extracted by gene engineering. The bearer can throw themselves at an enemy's back line the way a qiongqi does, tearing the line open. Usually hits the head. | L'assaut aérien, extrait par génie génétique. Le porteur peut se jeter sur l'arrière-garde ennemie à la manière d'un qiongqi et ouvrir une brèche dans ses lignes. Touche généralement la tête. |
+| SZGene_QiongQi_FlyingStrike.description | The flying strike, extracted by gene engineering. The bearer can throw themselves at an enemy's back line the way a qiongqi does, tearing the line open. Usually hits the head. | The flying strike, extracted by gene engineering. The bearer can throw themselves at an enemy's back line the way a qiongqi does, tearing the line open. Usually hits the head. | L'assaut aérien, extrait par génie génétique. Ce gène permet de se jeter sur l'arrière-garde ennemie à la manière d'un qiongqi et d'ouvrir une brèche dans ses lignes. Touche généralement la tête. |
 | SZGene_QiongQi_FlyingStrike.label | qiongqi flying strike | qiongqi flying strike | assaut aérien de qiongqi |
 | SZGene_QiongQi_FlyingStrike.symbolPack.wholeNameSymbols.0.symbol | Qiongqi blessing | Qiongqi blessing | bénédiction du qiongqi |
 | SZGene_QiongQi_FlyingStrike.symbolPack.wholeNameSymbols.1.symbol | Qiongqi gift | Qiongqi gift | don du qiongqi |
@@ -206,7 +206,7 @@ Generated 2026-10-01, revision: 49f1c12.
 | SZGene_SeXie_Ring.label | sexie heart-butchering aura | sexie heart-butchering aura | aura massacre-cœur de sexie |
 | SZGene_SeXie_Ring.symbolPack.wholeNameSymbols.0.symbol | Sexie blessing | Sexie blessing | bénédiction de la sexie |
 | SZGene_SeXie_Ring.symbolPack.wholeNameSymbols.1.symbol | Sexie gift | Sexie gift | don de la sexie |
-| SZGene_SeXie_Shoot.description | The sexie's sting gene. The bearer can kill at range with the same sharp venomous needles. | The sexie's sting gene. The bearer can kill at range with the same sharp venomous needles. | Le gène du dard de la sexie. Le porteur peut tuer à distance avec les mêmes aiguilles acérées et venimeuses. |
+| SZGene_SeXie_Shoot.description | The sexie's sting gene. The bearer can kill at range with the same sharp venomous needles. | The sexie's sting gene. The bearer can kill at range with the same sharp venomous needles. | Le gène du dard de la sexie. Confère la capacité de tuer à distance avec les mêmes aiguilles acérées et venimeuses. |
 | SZGene_SeXie_Shoot.label | sexie crystal spurs | sexie crystal spurs | aiguillons de cristal de sexie |
 | SZGene_SeXie_Shoot.symbolPack.wholeNameSymbols.0.symbol | Sexie blessing | Sexie blessing | bénédiction de la sexie |
 | SZGene_SeXie_Shoot.symbolPack.wholeNameSymbols.1.symbol | Sexie gift | Sexie gift | don de la sexie |
@@ -214,15 +214,15 @@ Generated 2026-10-01, revision: 49f1c12.
 | SZGene_SeXie_Strength.label | sexie monstrous strength | sexie monstrous strength | force monstrueuse de sexie |
 | SZGene_SeXie_Strength.symbolPack.wholeNameSymbols.0.symbol | Sexie blessing | Sexie blessing | bénédiction de la sexie |
 | SZGene_SeXie_Strength.symbolPack.wholeNameSymbols.1.symbol | Sexie gift | Sexie gift | don de la sexie |
-| SZGene_YearBeast_Flamethrower.description | The fire breath, taken from a nian beast. The bearer can breathe fire over a cone the way the beast does. | The fire breath, taken from a nian beast. The bearer can breathe fire over a cone the way the beast does. | Le souffle de feu d'une bête nian. Le porteur peut cracher du feu dans un cône, comme la bête elle-même. |
+| SZGene_YearBeast_Flamethrower.description | The fire breath, taken from a nian beast. The bearer can breathe fire over a cone the way the beast does. | The fire breath, taken from a nian beast. The bearer can breathe fire over a cone the way the beast does. | Le souffle de feu d'une bête nian. Confère la capacité de cracher du feu dans un cône, comme la bête elle-même. |
 | SZGene_YearBeast_Flamethrower.label | nian beast fire breath | nian beast fire breath | souffle de feu de bête nian |
 | SZGene_YearBeast_Flamethrower.symbolPack.wholeNameSymbols.0.symbol | Nian blessing | Nian blessing | bénédiction de la bête nian |
 | SZGene_YearBeast_Flamethrower.symbolPack.wholeNameSymbols.1.symbol | Nian gift | Nian gift | don de la bête nian |
-| SZGene_YearBeast_Horn.description | The bearer grows a horn like a nian beast's. It is extremely sharp. | The bearer grows a horn like a nian beast's. It is extremely sharp. | Le porteur développe une corne semblable à celle d'une bête nian, extrêmement acérée. |
+| SZGene_YearBeast_Horn.description | The bearer grows a horn like a nian beast's. It is extremely sharp. | The bearer grows a horn like a nian beast's. It is extremely sharp. | Fait pousser une corne extrêmement acérée, semblable à celle d'une bête nian. |
 | SZGene_YearBeast_Horn.label | nian beast horn | nian beast horn | corne de bête nian |
 | SZGene_YearBeast_Horn.symbolPack.wholeNameSymbols.0.symbol | Nian blessing | Nian blessing | bénédiction de la bête nian |
 | SZGene_YearBeast_Horn.symbolPack.wholeNameSymbols.1.symbol | Nian gift | Nian gift | don de la bête nian |
-| SZGene_YearBeast_Skin.description | The nian beast's armour gene. It raises defence enormously, but leaves the bearer extremely vulnerable to firecrackers. | The nian beast's armour gene. It raises defence enormously, but leaves the bearer extremely vulnerable to firecrackers. | Le gène d'armure de la bête nian. Il renforce considérablement les défenses, mais rend le porteur extrêmement vulnérable aux pétards. |
+| SZGene_YearBeast_Skin.description | The nian beast's armour gene. It raises defence enormously, but leaves the bearer extremely vulnerable to firecrackers. | The nian beast's armour gene. It raises defence enormously, but leaves the bearer extremely vulnerable to firecrackers. | Le gène d'armure de la bête nian. Il renforce considérablement les défenses, mais accroît fortement la vulnérabilité aux pétards. |
 | SZGene_YearBeast_Skin.label | nian beast scales | nian beast scales | écailles de bête nian |
 | SZGene_YearBeast_Skin.symbolPack.wholeNameSymbols.0.symbol | Nian blessing | Nian blessing | bénédiction de la bête nian |
 | SZGene_YearBeast_Skin.symbolPack.wholeNameSymbols.1.symbol | Nian gift | Nian gift | don de la bête nian |
@@ -241,7 +241,7 @@ Generated 2026-10-01, revision: 49f1c12.
 | SZ_QiongQi_Scratch.labelNoun | qiongqi claws | qiongqi claws | griffes de qiongqi |
 | SZ_ScorpionPoison.description | The venom a sexie carries. It drops an enemy to the ground in pain. | The venom a sexie carries. It drops an enemy to the ground in pain. | Le venin de la sexie. La douleur qu'il inflige fait s'effondrer les ennemis. |
 | SZ_ScorpionPoison.label | horse-felling venom | horse-felling venom | venin capable d'abattre un cheval |
-| SZ_Strength.description | Monstrous strength. It doubles the damage of the bearer's unarmed blows. | Monstrous strength. It doubles the damage of the bearer's unarmed blows. | Une force monstrueuse qui double les dégâts des coups à mains nues du porteur. |
+| SZ_Strength.description | Monstrous strength. It doubles the damage of the bearer's unarmed blows. | Monstrous strength. It doubles the damage of the bearer's unarmed blows. | Une force monstrueuse qui double les dégâts des coups à mains nues. |
 | SZ_Strength.label | monstrous strength | monstrous strength | force monstrueuse |
 | SZ_Year_Horn.comps.HediffComp_VerbGiver.tools.horn.label | horn | horn | corne |
 | SZ_Year_Horn.description | A very sharp nian beast horn. It goes through thick armour without trouble. | A very sharp nian beast horn. It goes through thick armour without trouble. | Une corne de bête nian très acérée. Elle transperce sans difficulté les armures épaisses. |
@@ -420,7 +420,7 @@ Generated 2026-10-01, revision: 49f1c12.
 | SZ_QiongQi.tools.right_claw.label | right claw | right claw | griffe droite |
 | SZ_QQAnimation.description | flying strike | flying strike | assaut aérien |
 | SZ_QQAnimation.label | flying strike | flying strike | assaut aérien |
-| SZ_QQPawnFlyingStrike.label | *(unverified: inherited from a vanilla parent def, not read)* | *(unverified: inherited from a vanilla parent def, not read)* | vol |
+| SZ_QQPawnFlyingStrike.label | flying (vanilla PawnFlyerBase) | flying (vanilla PawnFlyerBase) | vol |
 | SZ_SeXie_Friendly.description | A sexie grown by gene engineering. Its original mind has been wiped away and it fights for the colony now; the fiercest space pirate thinks twice on seeing those venomous claws. \n\n\n<color=#33ff00>[More]</color>\nWhen the gene engineers cloned a beast they took the DNA of the original, and most of that beast's abilities came through intact. \n\nA line from the Shenzhou settlers' history books runs: "Chinese learning for the substance, Western learning for the use". The same thinking went into breeding the beasts, and every part of a copied beast carries the traditional culture and colour of a Shenzhou settlement. | A sexie grown by gene engineering. Its original mind has been wiped away and it fights for the colony now; the fiercest space pirate thinks twice on seeing those venomous claws. \n\n\n<color=#33ff00>[More]</color>\nWhen the gene engineers cloned a beast they took the DNA of the original, and most of that beast's abilities came through intact. \n\nA line from the Shenzhou settlers' history books runs: "Chinese learning for the substance, Western learning for the use". The same thinking went into breeding the beasts, and every part of a copied beast carries the traditional culture and colour of a Shenzhou settlement. | Une sexie créée par génie génétique. Son esprit d'origine a été effacé et elle combat désormais pour la colonie ; même le plus féroce des pirates de l'espace hésite à la vue de ses pinces venimeuses. \n\n\n<color=#33ff00>[En savoir plus]</color>\nPour cloner une bête, les ingénieurs généticiens ont prélevé l'ADN de l'original, préservant ainsi la plupart de ses capacités. \n\nLes livres d'histoire des colons de Shenzhou citent cette maxime : « Le savoir chinois pour fondement, le savoir occidental pour application. » Cette même philosophie a guidé la création des bêtes, et chaque partie d'un clone porte la culture et les couleurs traditionnelles de Shenzhou. |
 | SZ_SeXie_Friendly.label | sexie (human form, friendly) | sexie (human form, friendly) | sexie (forme humaine, amicale) |
 | SZ_SeXie_Friendly.tools.bite.label | bite | bite | morsure |
