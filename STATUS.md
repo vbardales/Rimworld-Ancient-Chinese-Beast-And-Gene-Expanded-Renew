@@ -196,13 +196,11 @@ review of `FRENCH_REVIEW.md` closes `translation_fr`.
 
 **Gallery image 0.** Uploaded by the owner on 2026-10-01 (her word in chat): `Art/Gallery/0-preview.png`, SHA-256
 `4fe2d418e6dc...`, byte-identical to the committed `Mod/About/Preview.png` at that time. The other gallery images
-(the `@review` captures) were opened on 2026-10-02 from pass 1 (`2026-10-01a-p1-en`) and five placed in `Art/Gallery/`,
-in this order: `1` the four beasts and the star officer, `2` the scorpion sexie and its aura, `3` the qiongqi after its
-landing, `4` the cloned mingshe, `5` the nian beast breathing fire. Rejected: the star officer alone (a few pixels in a
-dark band), the tunnel (the sexie is tiny), the extractor (the machine alone on bare ground, no capsule), the crow (the
-bird reads as a blue ball), the genepack (a few pixels). They are 1280-pixel JPEGs of the kept evidence, not the PNGs
-(deleted): the owner may ask for sharper ones from the final pass. No image shows developer tools or a launcher panel; the
-usual game HUD is visible. All five are of the build before the barrier guard and need no new capture. Not yet uploaded.
+(the `@review` captures) were opened on 2026-10-02 from pass 1 (`2026-10-01a-p1-en`) and five looked usable, but
+**none is a gallery image**: they come from the Pickle test colony, not from the owner's colony `zenNelim`, which is the
+one the Workshop page must show. The five copies were removed from `Art/Gallery/` (untracked, never committed or
+uploaded). The captures stay in the evidence as test proof only. Gallery images 1 and up are to be taken by the owner in
+`zenNelim`.
 
 **Recommendations, optional.** The Workshop description and the gallery are the owner's steps in
 `PUBLICATION.md`; the `.github` workflow is stamped `289c71f74e3b` and `generate-publish-workflow.sh --check` says
