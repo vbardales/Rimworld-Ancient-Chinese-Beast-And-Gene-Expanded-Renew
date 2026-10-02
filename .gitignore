@@ -33,3 +33,6 @@ evidence/
 Evidence/
 *.webm
 node_modules/
+
+# Reproductible Preview diagnostics; generated locally by scripts/Render-Preview.cjs.
+Art/.render/

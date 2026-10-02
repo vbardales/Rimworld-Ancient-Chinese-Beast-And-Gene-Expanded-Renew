@@ -413,7 +413,7 @@ remain historical evidence; the following results describe this audit.
 | horsMonoRepo | Validated | `git rev-parse --show-toplevel` identifies this repository. `git ls-remote origin HEAD` returns the audited HEAD; `gh repo view` confirms PUBLIC and main on the configured GitHub repository. Names follow the Renew/unofficial convention without requiring literal equality. English documentation exists; root/distributed LICENSE and ATTRIBUTION copies have identical SHA-256 hashes. |
 | ModIcon generated | Validated | Development deliverables present; mod build succeeded with zero warnings/errors and the delivered DLL remained byte-identical. Icon directly inspected at 128 px and 32 px: PNG, 27059 bytes, single orange winking beast mascot, dark background, legible silhouette, no text. |
 | Preview generated | Validated | Delivered PNG directly inspected at 896x504 and 268 px; 612132 bytes. Overhead ground scene, restricted palette, winged beast and firecrackers, no concrete camera defect. A historical generation report or recorded comparison with a game screenshot is not required. |
-| preOptions | Validated | English description; exact title order/case, reduced And and Renew, separate unofficial tag and 1.6 badge. Red accent is visually distinct from the ochre secondary ink. Art/preview.html reads the saved palette and layout. Existing contrast/font measurements are retained, not claimed as rerun measurements. |
+| preOptions | Validated | English description; exact title order/case, reduced And and Renew, inline unofficial tag and 1.6 badge. Red accent is visually distinct from the ochre secondary ink. `Art/Preview.config.json` holds the saved palette and layout. Existing contrast measurements are retained, not claimed as rerun measurements. |
 | options | Not applicable, justified | Settings inventory and access checks below establish no relevant settings, empty page or shortcut. |
 | l10n | Validated, static | 370 Def fields and nine Keyed entries checked, zero failures; 702 injection paths checked, zero errors. Four translation negative controls passed. Source call sites, dynamic debug keys, incident fields and representative EN/FR wording reviewed. English Def source values provide native coverage where appropriate. |
 | preTest | Validated | Harmony and Biotech are used and declared, with appropriate loadAfter entries. The ChineseComprehensiveExpansion entry is optional ordering only: no source/Def dependency found. No LoadFolders, conditional content or mod patches. No missing Def/type reference found. No RIMMSQOL dependency is needed. |
@@ -622,6 +622,18 @@ beast. Those are the three hooks 1.6 silenced, and the three the port claims to 
 The development-mode entries under **Ancient Chinese Beast** in the debug menu exist for that run:
 a beast now, the nian beast within the hour, the sixty-day gate cleared, and the beast clock
 printed to the log.
+
+## Preview source migration — 2026-10-02
+
+The final text-free 896 x 504 crop is now the canonical `Art/Preview-source.png`; the accepted
+redrawn transparent badge remains `Art/ModIcon-source.png`, and the validated line art remains
+`Art/echo.png`. Copy, typography, layout and palette are consolidated in
+`Art/Preview.config.json`. Superseded source variants, the second gallery location, local
+renderers and committed QA intermediates were removed; all remain recoverable from Git history.
+The shared renderer writes diagnostics under ignored `Art/.render/`, regenerates both ICOs and
+keeps `Art/Gallery/0-preview.png` byte-for-byte equal to the delivered Preview. Compared with the
+pre-migration PNG, only 27 RGB channel values differ, each by one level; dimensions, composition
+and visual appearance are unchanged. Nothing published.
 
 ---
 
