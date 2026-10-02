@@ -36,11 +36,11 @@ namespace AncientChineseBeast.PickleSteps
             return plant;
         }
 
-        [When("Ancient Chinese Beast: the plant at x={int} z={int} takes drought damage within {int} seconds", TimeoutSeconds = 170f)]
+        [When("Ancient Chinese Beast: the plant at x={int} z={int} takes drought damage within {int} seconds", TimeoutSeconds = 450f)]
         public async Task TakesDroughtDamage(PickleContext ctx, int x, int z, int seconds)
         {
             var thing = PlantAt(ctx, x, z);
-            await Stage.WaitGameSeconds(ctx, () => thing.HitPoints < thing.MaxHitPoints, seconds);
+            await Stage.WaitGameSeconds(ctx, () => thing.HitPoints < thing.MaxHitPoints, seconds, 400);
             ctx.Assert(thing.HitPoints < thing.MaxHitPoints, $"the plant at x={x} z={z} took no damage; {Stage.LastWaitReport}");
         }
 

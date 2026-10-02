@@ -12,7 +12,7 @@ Feature: Ancient Chinese Beast critical 1.6 callbacks
     And Ancient Chinese Beast: I plant "Plant_TreePolux" at x=146 z=150
     And Ancient Chinese Beast: I spawn the pawn "SZ_MingShe" at x=142 z=155
     Then Ancient Chinese Beast: drought is active
-    When Ancient Chinese Beast: the plant at x=140 z=150 takes drought damage within 90 seconds
+    When Ancient Chinese Beast: the plant at x=140 z=150 takes drought damage within 60 seconds
     Then Ancient Chinese Beast: the plant at x=142 z=150 is untouched by the drought
     And Ancient Chinese Beast: the plant at x=144 z=150 is untouched by the drought
     And Ancient Chinese Beast: the plant at x=146 z=150 is untouched by the drought

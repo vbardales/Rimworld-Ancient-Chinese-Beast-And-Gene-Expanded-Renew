@@ -42,12 +42,14 @@ namespace AncientChineseBeast.PickleSteps
         // which says how many of the ticks it asked for the game really ran.
         internal static string LastWaitReport = "no wait yet";
 
-        internal static async System.Threading.Tasks.Task WaitGameSeconds(PickleContext ctx, System.Func<bool> condition, int seconds)
+        // maxRealSeconds is the cap on the real time spent: a machine busy with other runs played 1863 of 5400 ticks in
+        // 150 s (French chunk A, 2026-10-02), so a wait that needs a full game hour may ask for more.
+        internal static async System.Threading.Tasks.Task WaitGameSeconds(PickleContext ctx, System.Func<bool> condition, int seconds, int maxRealSeconds = 150)
         {
             const int step = 5;
             var clock = System.Diagnostics.Stopwatch.StartNew();
             int startTick = Find.TickManager.TicksGame;
-            for (int spent = 0; spent < seconds * 60 && !condition() && clock.Elapsed.TotalSeconds < 150; spent += step)
+            for (int spent = 0; spent < seconds * 60 && !condition() && clock.Elapsed.TotalSeconds < maxRealSeconds; spent += step)
                 await ctx.WaitTicks(step);
             LastWaitReport = $"the game advanced {Find.TickManager.TicksGame - startTick} ticks of the {seconds * 60} asked for in {clock.Elapsed.TotalSeconds:F1} real seconds";
         }
