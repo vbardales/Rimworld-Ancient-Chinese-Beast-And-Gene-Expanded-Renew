@@ -72,12 +72,12 @@ pass restores the rule.
 
 | Folder | Covers | Result |
 | --- | --- | --- |
-| `2026-09-25-ads2` | feature 14, Animal Prosthetics 2 | 11/11 |
+| `2026-10-01d-p5-14` | feature 14, Animal Prosthetics 2 | 11/11 |
 | `2026-09-25b-f04` | 04: the three hooks 1.6 silenced (+ 2 captures) | 3/3 |
 | `2026-09-25b-f06` | 06: the chicken's crow (+ 1 capture) | 4/4 |
 | `2026-09-25b-f13` | 13: the original mod's incompatibility (old packageId) | 1/1 |
 | `2026-09-25c-f0203` | 02 and 03: beasts render, save and reload (+ 1 capture) | 2/2 |
-| `2026-09-25c-na` | 16: Nocturnal Animals | 11/11 |
+| `2026-10-01e-p6-16` | 16: Nocturnal Animals | 11/11 |
 | `2026-09-25c-rest` | 15: a tired tame beast lies down, a hostile one has the need | 11/11 |
 | `2026-09-25e-birth`, `2026-09-25e-egg` | 15: births and eggs | 4/4, 2/2 |
 | `2026-09-26a-misc` | 01, 05, 07, 08 (+ 3 captures) | 6/6 |
