@@ -510,10 +510,11 @@ mean the mod works, and `tested_on` being empty is the honest half of that sente
 **French review. Reviewer: Virginie. Date: 2026-10-01. Revision reviewed: `16cb222`.** She validated it in chat
 ("je valide") after three rounds of corrections, all applied (commits `49f1c12`, `16cb222`): the crow thought
 label, the sexie description, the poison wording, and three wordings of the crow, the sound wave and the aura. The
-session recorded this on her word and did not review its own French. The 11 cells of `FRENCH_REVIEW.md` marked
-`unverified: inherited from a vanilla parent def` (`deathMessage` and `label` of the damage defs,
-`SZ_QQPawnFlyingStrike.label`) stand as she saw them. Any later change to a French file sets `translation_fr` back
-to `unchecked`.
+session recorded this on her word and did not review its own French. Her next round (2026-10-02) found two blockers:
+the 11 `unverified: inherited from a vanilla parent def` cells, and seven gene or hediff descriptions saying `le porteur`.
+Both fixed in `5fc4e94` (vanilla parents `BluntBase`, `Flame`, `Bite`, `PawnFlyerBase` read in the 1.6 game data and
+traced in `FRENCH_REVIEW.md`; the descriptions rewritten without agreement). She validated the result in chat on
+2026-10-02 ("Validé"); `translation_fr` stays `complete`. Any later change to a French file sets it back to `unchecked`.
 
 ### Translation audit — 2026-09-30
 
