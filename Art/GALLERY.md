@@ -44,6 +44,25 @@ so no hair-colour rule from a texture applies.
 - hide the interface for a capture (the bottom bar, the colonist bar, the letters), and the pawn labels and bars;
 - set the camera and zoom exactly (the suite has "move the camera to" and "zoom all the way in" only).
 
+## Answer of Pickle Tools (2026-10-02, relayed; steps compiled, **not played, not committed** when written)
+
+Prefix `Nelim's Pickle Tools:`, documented in `PickleTools/docs/steps.md`. Four extra mods enter the dependency map
+(`nelim.pickletools.colonistrace`, `.camerazoom`, `.coatsteps`, `.stagedecor`, each `path:PickleTools/<Folder>/Mod`);
+a `wsl-deps.*.map` for the gallery run is to be written when the scenarios are.
+
+| Need | Step available |
+| --- | --- |
+| complete colonist | place and face (`stands at (x, z) facing North`), remove, apparel (plain or dyed rgb), restore clothes, hairstyle, hair colour, face and body tattoo (Ideology) |
+| decor | place a named decor at a cell, lay a floor between two cells, remove the decor (also after the scenario) |
+| camera | root size, frame one cell at a zoom, frame a block of cells filling a percent of the screen |
+| animals | adults of a kind around a cell or in a row, food level |
+| hour, weather, camera move | native Pickle |
+| hidden interface | `PickleTools/ScreenshotMode` |
+| **missing** | frozen pose or animation, head type, clearing an area of every thing, full-resolution capture (unknown) |
+
+Inside a `.feature`, parentheses are written without a backslash. The missing items are asked of Pickle Tools again
+when the first scenario is written.
+
 ## Order of work
 
 1. Pickle Tools says which steps exist and builds the missing ones.
