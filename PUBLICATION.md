@@ -11,6 +11,21 @@ reports they agree (checked 2026-10-01). Before the first publish that sends the
 a text that reads the same as the one on the Workshop page it replaces. The page is private and carries the
 description of the 0.1.0 upload.
 
+**Publication mode: CI** (`PUBLISHING.md`, « Deux modes de publication »; checked 2026-10-08). The mod is meant to become
+public, so it is the GitHub Actions workflow, not `publish-local.sh`: green dry-run of the exact commit, `publish` with the
+40-character SHA, `steam-production` approved by Virginie alone, tag and release made by the CI. The item stays private
+until she turns it public by hand.
+
+## Gallery
+
+The Workshop gallery is the owner's manual upload of `Art/Gallery/` (SteamCMD sends only the header image). Rules
+checked 2026-10-08 against `PUBLISHING.md`, « Images »: numbered `0-`, `1-`, `2-`… on one digit, in page order, nothing else
+in the folder; `0-` is a byte copy of `Mod/About/Preview.png` (compared after the 2026-10-08 regeneration); every other
+image is a **staged photograph** of the shared Sanctuary location, not a test capture; each image under 2 MB, the folder
+under 8 MB. Candidates are named `<n>-candidate-<name>.png` until the owner accepts them (then `candidate` is dropped),
+a refused one is deleted. The story, the set and the shot list are in `GALLERY.md`. State: image 0 only; the scenarios that
+take the others are not played yet. A `prepublished` mark waits for the accepted images (`AUDIT.md`).
+
 ## Steam description
 
 ```markdown
