@@ -3,6 +3,7 @@ localization: complete
 translation_en: complete
 translation_fr: complete
 settings_audit: not_applicable
+code_review: 5ea69abaa45c4215235430f940192f618b91325a (2026-10-08, /code-review at low effort over 89a2575..5ea69ab, the 0.1.0 commit that tracked the PublishedFileId, limited to Source, Mod/Defs, Mod/Patches and Tests/Pickle/Source: 0 findings; low effort reads the diff once, no verify pass. First review of this mod, nothing earlier existed)
 audit_revision: 67a4b37 (HEAD, pushed, tree clean when the 2026-10-01 audit began). While it ran, another session regenerated `Art/` and `Mod/About/Preview.png` in the working tree: uncommitted, not touched and not audited here
 mod:          Ancient Chinese Beast And Gene Expanded Renew (unofficial)
 packageId:    nelim.ancientchinesebeastandgeneexpanded
