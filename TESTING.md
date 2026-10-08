@@ -63,6 +63,27 @@ once, on trees that differ from the current one except pass 3. The final pass of
 request each, with the SHA in the `-Label`. The two other optional mods the code does not name (Dogs mate and Better
 Crossbreeding) need no pass: see `STATUS.md`, "The four animal integrations".
 
+**Order of the passes** (`AUDIT.md`, rule of 2026-10-02). What has never run, and what is red, is played alone in small
+tickets (`-Filter` on the feature or on `::<scenario title>`), first. The non-regression passes, which replay what is
+already green (the whole suite, English then French, and the optional-mod passes), are all queued together at the end, on
+the final revision: queued earlier they occupy the machine to prove nothing new and are out of date at the next commit. A
+scenario is in non-regression as soon as it has a green run on the current logic; a change to the mod or to a step it
+uses makes it new again. On the 2026-10-08 tree: new or red are the aura ring, the flying strike, the drought wait (all
+corrected 2026-10-02), the French pass of features 18 to 23, and the French egg scenario; everything else with a green run
+is non-regression and waits for the end.
+
+**Not tested, on purpose** (`AUDIT.md`, rule of 2026-10-02): what this mod leaves as vanilla or as another mod defines it.
+Nothing of the vanilla `Flame`, `Bite`, `BluntBase` or `PawnFlyerBase` damage and flyer defs the beasts' own defs inherit
+from is exercised for itself; vanilla egg-laying (`CompEggLayer`), rest and mating are exercised only through the beasts'
+own values (feature `15`: the ten-day mating, the twenty-day gestation, the egg defs). The two optional mods are played
+only for what this mod's patches add to them (passes 5 and 6), not for their own behaviour. Not applicable, with that
+reason: the behaviour of Animal Prosthetics 2 once a recipe exists, and of Nocturnal Animals' body clock beyond the field
+this mod sets.
+
+**After the last Pickle ticket** (`AUDIT.md`): the mods that this mod's sessions downloaded into the WSL installation (the
+optional Workshop items of passes 3, 5 and 6) are removed under the machine lock, after listing what goes and what stays,
+and keeping any item another mod's `wsl-deps` still names; `STATUS.md` records what was removed. Not done yet.
+
 ## Manual fallback only
 
 - Development mode on: Options, then Development mode. Most scenarios use it.
