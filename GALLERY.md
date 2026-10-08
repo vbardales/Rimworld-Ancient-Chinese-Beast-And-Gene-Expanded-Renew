@@ -1,79 +1,53 @@
 # Gallery plan
 
-Rule of the owner (2026-10-02): every gallery picture is a **staged photograph**, except menus and interface
-windows, which are plain screenshots. Nothing stays at the game's defaults. The earlier captures of the test colony
-(`2026-10-01a-p1-en`) are test proof only and are not used.
-
-This mod has no settings page and no hairstyle, so every image is a staged scene. Image 0 stays the byte copy of
-`Mod/About/Preview.png`.
+Rules (`PUBLISHING.md`, « Images », read 2026-10-08): every gallery picture is a **staged photograph** of one story, shot
+on the shared Sanctuary location (`Nelims-tribe`, Nelim's Sanctuary Backlot), except menus, which are plain screenshots.
+This mod has no settings page, so there is no menu picture. Image `0-` is the byte copy of `Mod/About/Preview.png`; the
+others are numbered `1-`, `2-`… on one digit, in page order, each under 2 MB, the folder under 8 MB. A candidate is named
+`<n>-candidate-<name>.png` until the owner accepts it (`candidate` is then dropped); a refused one is deleted. The earlier
+captures of the test colony (`2026-10-01a-p1-en`) are test proof only and are never used.
 
 ## The story
 
-*The Pleiades star officer keeps a courtyard.* A retired officer of the old court keeps the four legendary beasts in a
-lantern-lit stone courtyard and a keeper looks after them. The series is one evening in that courtyard: the whole
-menagerie, then each beast showing what it does, then the keeper's workshop where their genes are taken.
+One day at Nelim's Sanctuary, told like a wildlife report on four beasts out of the Classic of Mountains and Seas that
+came with the New Year. Two keepers walk the day, chosen by hand (body, face, hair, clothes, eyes): **Lan** (black hair in a
+ponytail, a jade robe, golden eyes) and **Ren** (silver hair, a crimson duster over a cream shirt, crimson eyes). Each picture
+is an encounter, never a row of subjects.
 
-## The common set
+## Places, chosen on the places' own descriptions (`PickleTools/docs/GALERIE.md`, `SANCTUAIRE-LIEUX.md`)
 
-One courtyard for every image: flagstone floor cleared of everything else, a low stone wall behind, two or three
-lanterns or braziers, a few potted plants, a shelf with jars. Dusk light, clear weather, so the aura ring, the fire
-and the wind glow. Set built, photographed, removed, then the next image (same background throughout).
+All named places were read. Chosen: `statue-garden` (statues and flowers: a divine rooster among them), `enclosure-south`
+(the Backlot's advice for imposing animals and monsters), `gravel-yard` (35 x 25 of flat ground, emptied, for a flight and
+a shot that cross twenty cells), `bare-clearing` (earth, the vanometric cell hidden, for the fire), `water-garden` (a pond
+bank, for the red ring to read against green and water), `postindustrial-workshop` (powered, for the extractor). Not
+chosen: the house rooms (the thrumbo sleep there and the light is warm for a beast of fire), the smileys (a loud orange
+carpet), `exhibition-zone` (reserved for a full-screen window, which this mod does not have).
 
-## Shots
+## Shot list (feature `24-gallery`, one scenario = one image)
 
-| # | Subject | What it shows | Keeper |
+| # | Hour | Place | Subject |
 | --- | --- | --- | --- |
-| 1 | the four beasts and the star officer in a row | the whole mod | standing in the middle, red and gold |
-| 2 | scorpion sexie, aura ring drawn, berserk colonist at the ring's edge, keeper outside it | the aura and its reach | dark clothes, so the red ring stands out |
-| 3 | qiongqi in the air, mid flying strike | the wings and the jump | on the ground, looking up |
-| 4 | nian beast breathing fire at a string of firecrackers | the fire and the firecracker weakness | red, with the nian horn gene |
-| 5 | mingshe with its wind barrier and a shot turned back | the barrier | green, wind-blown hair |
-| 6 | the extractor with genepacks on the shelf, the keeper at work | the gene extraction | white coat, no beast |
+| 1 | 6 | statue-garden | the Pleiades star officer crows at dawn among the statues, a hen beside it, Lan listens |
+| 2 | 10 | enclosure-south | the four beasts, Ren at the gate |
+| 3 | 12 | gravel-yard | the qiongqi caught in the air, flying at Lan, the farthest |
+| 4 | 14 | bare-clearing | the nian beast breathes fire at a muffalo, Ren holds a firecracker |
+| 5 | 16 | gravel-yard | the mingshe's wind barrier throws back Lan's shot |
+| 6 | 18 | water-garden | the scorpion sexie and the red ring of its aura, Ren inside it, berserk |
+| 7 | 12 | postindustrial-workshop | the gene extractor, a qiongqi corpse beside it, archite capsules, Lan at the bench |
 
-Each keeper is chosen by hand: body, face, hair colour, clothes in a palette that suits the beast's colours, a tattoo
-where it means something (the nian beast's keeper, a fire mark). Never a random pawn. No hairstyle of this mod exists,
-so no hair-colour rule from a texture applies.
+## How it runs
 
-## Steps the suite does not have yet (to ask Pickle Tools)
+- Pass map `Tests/Pickle/wsl-deps.sanctuary.map` (a copy of the Backlot's minimum list, with its seeds in
+  `Tests/Pickle/config/sanctuary/`); the feature carries `@requires:nelim.sanctuarybacklot`, so every other pass skips it.
+- Steps: the Sanctuary and Pickle Tools steps for the place, the decor, the keepers' look and the camera; this suite's
+  `GallerySteps.cs` for a beast placed and turned on a cell, a qiongqi caught in its flight, the pause and the capture of
+  the map alone. A pose cannot be frozen (no step, verified negative by Pickle Tools): the pawn stays put because the game is paused.
+- A green run does not validate a picture: every capture is opened. What comes from the scene or from a shared tool is
+  described to Pickle Tools with the capture (via the Ticket Manager if it cannot be reached), never worked around here.
+- Captures are recompressed (palette or width) to stay under 2 MB each before they enter `Art/Gallery/` as candidates.
 
-- clear an area of every thing (plants, stones, filth, buildings) and put it back, or build the set on open ground;
-- place named decor (lantern, brazier, potted plant, shelf, flagstone floor) and remove it again;
-- set the hour of the day and the weather;
-- a colonist with a given body, head, hair colour, apparel list, tattoo (no random draw);
-- freeze a pawn in a pose or at a tick (the beast mid-jump);
-- hide the interface for a capture (the bottom bar, the colonist bar, the letters), and the pawn labels and bars;
-- set the camera and zoom exactly (the suite has "move the camera to" and "zoom all the way in" only).
+## State (2026-10-08)
 
-## Answer of Pickle Tools (2026-10-02, relayed; steps compiled, **not played, not committed** when written)
-
-Prefix `Nelim's Pickle Tools:`, documented in `PickleTools/docs/steps.md`. Four extra mods enter the dependency map
-(`nelim.pickletools.colonistrace`, `.camerazoom`, `.coatsteps`, `.stagedecor`, each `path:PickleTools/<Folder>/Mod`);
-a `wsl-deps.*.map` for the gallery run is to be written when the scenarios are.
-
-| Need | Step available |
-| --- | --- |
-| complete colonist | place and face (`stands at (x, z) facing North`), remove, apparel (plain or dyed rgb), restore clothes, hairstyle, hair colour, face and body tattoo (Ideology) |
-| decor | place a named decor at a cell, lay a floor between two cells, remove the decor (also after the scenario) |
-| camera | root size, frame one cell at a zoom, frame a block of cells filling a percent of the screen |
-| animals | adults of a kind around a cell or in a row, food level |
-| hour, weather, camera move | native Pickle |
-| hidden interface | `PickleTools/ScreenshotMode` |
-| **missing** | frozen pose or animation, head type, clearing an area of every thing, full-resolution capture (unknown) |
-
-Inside a `.feature`, parentheses are written without a backslash. The missing items are asked of Pickle Tools again
-when the first scenario is written.
-
-The later and complete list is `PickleTools/docs/STAGING.md` (exact step texts, status, same "not played" caveat). It
-adds: `game speed is paused`, a lit torch or campfire, the roof taken off a rectangle, the other colonists moved out
-of frame, head type, body type, gender, an animal's coat. Still not available: a frozen pose or animation, clearing an
-area of every thing (only what the decor step placed comes off), a full-resolution capture (not known whether the
-launcher reduces the picture), and what the sky and lamps look like at a given hour. For this mod: the qiongqi in
-mid-jump is a pause at the right tick (`game speed is paused` after waiting for the strike), and the courtyard stands
-on open ground found by the same search as the flying-strike scenario, so nothing needs clearing.
-
-## Order of work
-
-1. Pickle Tools says which steps exist and builds the missing ones.
-2. One scenario per shot, taking the capture at the end, evidence kept as `captures/gallery-N.png` (not minified: the
-   gallery wants the full picture, at the size the Workshop takes).
-3. The owner opens every image before it goes into `Art/Gallery/`, numbered `1-`, `2-`, ...
+Written and resolved by `Check-Steps.ps1` (all patterns compile, every line resolves against this suite, Pickle and both
+shared catalogues); first run requested, evidence `2026-10-08d-gallery-1`; no capture seen yet; `Art/Gallery/` holds
+`0-preview.png` only.

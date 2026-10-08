@@ -108,3 +108,5 @@ Deleted on 2026-10-01 as superseded: `2026-09-24-en`, `2026-09-25b-blow`, `2026-
 | `2026-09-26.md` | features 01 05 07 08, 09, 10 and 12, the French pass, the hostile beast's rest |
 | `2026-09-27.md` | the tunnel fix, pass 3, and the manual exceptions automated as scenarios (M1 to M7) |
 | `2026-10-01.md` | the audit: offline replay, the evidence trim |
+| `2026-10-02.md` | pass 1 results and the replays, the French chunks, the corrections of the tests, the filter written `::<title>` |
+| `2026-10-08.md` | requests lost to the dispatcher, the small tickets of the red and the never-played, the gallery on the Sanctuary |
