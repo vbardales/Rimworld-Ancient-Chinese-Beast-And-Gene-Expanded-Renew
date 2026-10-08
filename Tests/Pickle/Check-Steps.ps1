@@ -30,7 +30,10 @@
 #>
 param(
     [string]$PickleAssemblies = 'C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\3791648678\Assemblies',
-    [string]$Cecil = "$env:USERPROFILE\.nuget\packages\mono.cecil\0.11.5\lib\net40\Mono.Cecil.dll"
+    [string]$Cecil = "$env:USERPROFILE\.nuget\packages\mono.cecil\0.11.5\lib\net40\Mono.Cecil.dll",
+    # The step catalogues of the shared tools a pass map stages (Nelim's Pickle Tools, Nelim's Sanctuary): their patterns are read from the
+    # backticked texts of the generated steps.md, so a feature that uses them resolves. A missing one is skipped (its lines are then reported).
+    [string[]]$Catalogues = @((Join-Path $PSScriptRoot '..\..\..\PickleTools\docs\steps.md'), (Join-Path $PSScriptRoot '..\..\..\SanctuaryBacklot\docs\steps.md'))
 )
 $ErrorActionPreference = 'Stop'
 $suite = $PSScriptRoot
@@ -107,6 +110,13 @@ foreach ($p in 'the save {string} is loaded', 'I save and reload', 'I save and r
 $pickleExprs = @()
 foreach ($p in $pickle | Sort-Object -Unique) {
     try { $pickleExprs += [pscustomobject]@{ Source = 'pickle'; Pattern = $p; Regex = (New-Expr $p).Regex } } catch { }
+}
+
+foreach ($c in $Catalogues) {
+    if (-not (Test-Path $c)) { continue }
+    foreach ($m in [regex]::Matches((Get-Content $c -Raw -Encoding UTF8), '`(Nelim.s [^`]+)`')) {
+        try { $pickleExprs += [pscustomobject]@{ Source = 'catalogue'; Pattern = $m.Groups[1].Value; Regex = (New-Expr $m.Groups[1].Value).Regex } } catch { }
+    }
 }
 
 # --- every step line of every feature -----------------------------------------------------------
