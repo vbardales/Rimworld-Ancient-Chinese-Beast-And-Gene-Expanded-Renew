@@ -190,7 +190,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: all animals are removed
-    And a colonist "Ren" exists
+    And Ancient Chinese Beast: I spawn a colonist named "Ren" near x=146 z=171
     And Nelim's Pickle Tools: "Ren" gender is male
     And Nelim's Pickle Tools: "Ren" body type is Male
     And Nelim's Pickle Tools: "Ren" hairstyle is "Messy"
@@ -200,7 +200,6 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Ren" wears "Apparel_Duster" dyed rgb (176, 38, 42)
     And Nelim's Pickle Tools: "Ren" wears "Apparel_Pants" dyed rgb (44, 40, 48)
     And Nelim's Pickle Tools: "Ren" stands at (146, 171) facing East
-    And Ancient Chinese Beast: the colonist "Ren" is added to the pawns
     And Ancient Chinese Beast: I spawn the pawn "SZ_SeXieInsect" at (151, 172) with its aura clock at zero
     And Nelim's Pickle Tools: I frame the cell (150, 172) at zoom 11
     When Ancient Chinese Beast: pawn 1 goes berserk within 40 seconds

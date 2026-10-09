@@ -165,6 +165,15 @@ namespace AncientChineseBeast.PickleSteps
             Remember(ctx, pawn);
         }
 
+        // The same colonist, with the name the styling steps look a pawn up by. "a colonist X exists" draws any colonist, deaf or
+        // not, and the sexie's ring cannot touch a psychically deaf one (gallery 6, 2026-10-09: Ren never went berserk).
+        [When("Ancient Chinese Beast: I spawn a colonist named {string} near x={int} z={int}")]
+        public void SpawnColonistNamed(PickleContext ctx, string name, int x, int z)
+        {
+            SpawnColonistNear(ctx, x, z);
+            var pawn = TryGet(ctx).Pawns[TryGet(ctx).Pawns.Count - 1];
+            pawn.Name = new NameTriple(name, name, name);
+        }
         // A tame pawn of a chosen sex: the breeding scenarios need a male and a female, which the game draws at random.
         [When("Ancient Chinese Beast: I spawn the tame {string} of gender {word} at x={int} z={int}")]
         public void SpawnTame(PickleContext ctx, string kindDefName, string gender, int x, int z)
