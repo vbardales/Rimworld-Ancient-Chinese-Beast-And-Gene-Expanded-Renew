@@ -89,6 +89,21 @@ namespace AncientChineseBeast.PickleSteps
             ability.Activate(new LocalTargetInfo(target), new LocalTargetInfo(target));
         }
 
+        // The same breath, by the numbers the spawn steps gave: a pawn placed on a cell that was not standable is set
+        // on the nearest one that is (gallery 4, 2026-10-08d: no SZ_YearBeast at x=190 z=152), so a position is not a name.
+        [When("Ancient Chinese Beast: pawn {int} breathes fire at pawn {int}")]
+        public void BreatheFirePawns(PickleContext ctx, int beastNumber, int targetNumber)
+        {
+            var list = SpawnSteps.TryGet(ctx);
+            ctx.Assert(list != null && beastNumber >= 1 && beastNumber <= list.Pawns.Count && targetNumber >= 1 && targetNumber <= list.Pawns.Count,
+                $"no pawn number {beastNumber} or {targetNumber}: this scenario spawned {list?.Pawns.Count ?? 0}");
+            var beast = list.Pawns[beastNumber - 1];
+            var target = list.Pawns[targetNumber - 1];
+            var ability = beast.abilities?.GetAbility(DefDatabase<AbilityDef>.GetNamed("SZ_YearBeast_Flamethrower"));
+            ctx.Assert(ability != null, $"{beast.def.defName} has no SZ_YearBeast_Flamethrower ability");
+            ctx.Set(new BurntTarget { Pawn = target });
+            ability.Activate(new LocalTargetInfo(target), new LocalTargetInfo(target));
+        }
         // A wound, a fire on the body or death: any of the three says the flame reached the target. The
         // projectile lives for a few ticks only, so the outcome is what is checked, not the projectile.
         [Then("Ancient Chinese Beast: the flame target is hurt or burning within {int} seconds", TimeoutSeconds = 45f)]

@@ -3,7 +3,7 @@ localization: complete
 translation_en: complete
 translation_fr: complete
 settings_audit: not_applicable
-code_review: 5ea69abaa45c4215235430f940192f618b91325a (2026-10-08, /code-review at low effort over 89a2575..5ea69ab, the 0.1.0 commit that tracked the PublishedFileId, limited to Source, Mod/Defs, Mod/Patches and Tests/Pickle/Source: 0 findings; low effort reads the diff once, no verify pass. First review of this mod, nothing earlier existed)
+code_review_sha: 5ea69abaa45c4215235430f940192f618b91325a  # was `code_review`: <sha> (2026-10-08, /code-review at low effort over 89a2575..5ea69ab, the 0.1.0 commit that tracked the PublishedFileId, limited to Source, Mod/Defs, Mod/Patches and Tests/Pickle/Source: 0 findings; low effort reads the diff once, no verify pass. First review of this mod, nothing earlier existed)
 audit_revision: 67a4b37 (HEAD, pushed, tree clean when the 2026-10-01 audit began). While it ran, another session regenerated `Art/` and `Mod/About/Preview.png` in the working tree: uncommitted, not touched and not audited here
 mod:          Ancient Chinese Beast And Gene Expanded Renew (unofficial)
 packageId:    nelim.ancientchinesebeastandgeneexpanded
@@ -198,10 +198,10 @@ review of `FRENCH_REVIEW.md` closes `translation_fr`.
 **Gallery image 0.** Uploaded by the owner on 2026-10-01 (her word in chat): `Art/Gallery/0-preview.png`, SHA-256
 `4fe2d418e6dc...`, byte-identical to the committed `Mod/About/Preview.png` at that time. The other gallery images
 (the `@review` captures) were opened on 2026-10-02 from pass 1 (`2026-10-01a-p1-en`) and five looked usable, but
-**none is a gallery image**: they come from the Pickle test colony, not from the owner's colony `zenNelim`, which is the
-one the Workshop page must show. The five copies were removed from `Art/Gallery/` (untracked, never committed or
-uploaded). The captures stay in the evidence as test proof only. Gallery images 1 and up are to be taken by the owner in
-`zenNelim`.
+**none is a gallery image**: they come from the Pickle test colony. The owner's colony `zenNelim` no longer exists (owner,
+2026-10-09); every gallery image is now a staged photograph on the Sanctuary Backlot (`SB`, `nelim.sanctuarybacklot`), see
+`GALLERY.md`. The five copies were removed from `Art/Gallery/` (untracked, never committed or uploaded). The captures stay
+in the evidence as test proof only. Gallery images 1 and up come from feature `24-gallery`.
 
 **Recommendations, optional.** The Workshop description and the gallery are the owner's steps in
 `PUBLICATION.md`; the `.github` workflow is stamped `289c71f74e3b` and `generate-publish-workflow.sh --check` says

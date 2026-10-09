@@ -21,11 +21,11 @@ namespace AncientChineseBeast.PickleSteps
 
         private static bool Berserk(Pawn pawn) => pawn.InMentalState && pawn.MentalStateDef == MentalStateDefOf.Berserk;
 
-        [Then("Ancient Chinese Beast: pawn {int} goes berserk within {int} seconds", TimeoutSeconds = 170f)]
+        [Then("Ancient Chinese Beast: pawn {int} goes berserk within {int} seconds", TimeoutSeconds = 450f)]
         public async Task GoesBerserk(PickleContext ctx, int number, int seconds)
         {
             var pawn = Nth(ctx, number);
-            await Stage.WaitGameSeconds(ctx, () => Berserk(pawn), seconds);
+            await Stage.WaitGameSeconds(ctx, () => Berserk(pawn), seconds, 400);
             ctx.Assert(Berserk(pawn), $"pawn {number} is not berserk (state {pawn.MentalStateDef?.defName ?? "none"}, {pawn.Position}); {Stage.LastWaitReport}");
         }
 

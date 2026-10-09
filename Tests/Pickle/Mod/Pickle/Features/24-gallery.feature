@@ -142,7 +142,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Ren" stands at (192, 148) facing East
     And Nelim's Pickle Tools: "Ren" carries the item "SZ_Firecracker"
     And Nelim's Pickle Tools: I frame the cell (195, 151) at zoom 6
-    When Ancient Chinese Beast: the "SZ_YearBeast" at x=190 z=152 breathes fire at the "Muffalo" at x=199 z=152
+    When Ancient Chinese Beast: pawn 1 breathes fire at pawn 2
     And Nelim's Pickle Tools: I let 30 ticks pass
     Then Ancient Chinese Beast: a thing "SZ_YearBeastFlame" exists within 5 seconds
     And Ancient Chinese Beast: time is paused
