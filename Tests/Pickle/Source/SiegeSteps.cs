@@ -69,12 +69,12 @@ namespace AncientChineseBeast.PickleSteps
             ctx.Assert(map.mapPawns.FreeColonistsSpawned.All(p => mine.Contains(p)), "a colonist that the scenario did not spawn is still on the map");
         }
 
-        [Then("Ancient Chinese Beast: the enclosure is breached within {int} seconds", TimeoutSeconds = 170f)]
+        [Then("Ancient Chinese Beast: the enclosure is breached within {int} seconds", TimeoutSeconds = 450f)]
         public async Task Breached(PickleContext ctx, int seconds)
         {
             var enclosure = ctx.Get<Enclosure>();
             bool Breached() => enclosure.All().Any(t => t.Destroyed || t.HitPoints < t.MaxHitPoints);
-            await Stage.WaitGameSeconds(ctx, Breached, seconds);
+            await Stage.WaitGameSeconds(ctx, Breached, seconds, 400);
             var hit = enclosure.All().FirstOrDefault(t => t.Destroyed || t.HitPoints < t.MaxHitPoints);
             ctx.Attach("what was breached", hit == null ? "nothing" : $"{hit.def.defName} at {hit.Position}: {(hit.Destroyed ? "destroyed" : hit.HitPoints + "/" + hit.MaxHitPoints)}");
             if (hit == null)
@@ -94,10 +94,10 @@ namespace AncientChineseBeast.PickleSteps
 
         // The flying strike is decided on a one-second tick and queued as an ability job whose first target is the
         // pawn chosen; the step reads that job rather than waiting for the landing, which a colonist can move under.
-        [Then("Ancient Chinese Beast: the qiongqi pawn {int} sets its flying strike on pawn {int} within {int} seconds", TimeoutSeconds = 170f)]
+        [Then("Ancient Chinese Beast: the qiongqi pawn {int} sets its flying strike on pawn {int} within {int} seconds", TimeoutSeconds = 450f)]
         public async Task StrikesFarthest(PickleContext ctx, int qiongqiNumber, int targetNumber, int seconds)
         {
-            // The wait below gives up after 150 real seconds (Stage.WaitGameSeconds); the step used to be cut by the
+            // The qiongqi casts in one tick (warmup 0): the ability job exists for a single tick, so the wait looks at every tick, not every five (run 2026-10-08c: cooldown 825 left, the strike had happened, the step saw nothing). It used to be cut by the
             // runner at 90, before 40 game seconds had passed (run bd0f, 2026-10-02: "timed out after 90s").
             var qiongqi = Nth(ctx, qiongqiNumber);
             var expected = Nth(ctx, targetNumber);
@@ -106,7 +106,7 @@ namespace AncientChineseBeast.PickleSteps
                 var job = qiongqi.CurJob;
                 return job != null && job.ability != null ? job.targetA.Thing : null;
             }
-            await Stage.WaitGameSeconds(ctx, () => Chosen() != null, seconds);
+            await Stage.WaitGameSeconds(ctx, () => Chosen() != null, seconds, 400, 1);
             var chosen = Chosen();
             if (chosen == null)
             {

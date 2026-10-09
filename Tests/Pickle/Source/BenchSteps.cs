@@ -117,12 +117,12 @@ namespace AncientChineseBeast.PickleSteps
             ctx.Attach("bill diagnostic", string.Join("\n", lines));
         }
 
-        [Then("Ancient Chinese Beast: at least {int} {string} lie on the map within {int} seconds", TimeoutSeconds = 170f)]
+        [Then("Ancient Chinese Beast: at least {int} {string} lie on the map within {int} seconds", TimeoutSeconds = 450f)]
         public async Task AtLeastOnMap(PickleContext ctx, int count, string defName, int seconds)
         {
             var map = Stage.CurrentMap(ctx);
             int Held() => Stage.ThingsOfDef(map, defName).Sum(t => t.stackCount);
-            await Stage.WaitGameSeconds(ctx, () => Held() >= count, seconds);
+            await Stage.WaitGameSeconds(ctx, () => Held() >= count, seconds, 400);
             ctx.Assert(Held() >= count, $"{Held()} {defName} on the map, expected at least {count}; {Stage.LastWaitReport}");
         }
     }

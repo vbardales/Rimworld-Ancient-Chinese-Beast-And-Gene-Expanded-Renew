@@ -145,7 +145,7 @@ namespace AncientChineseBeast.PickleSteps
             qiongqi.jobs.ClearQueuedJobs();
             qiongqi.jobs.TryTakeOrderedJob(ability.GetJob(target, target.Position), JobTag.Misc);
             var flyer = ThingDef.Named("SZ_QQPawnFlyingStrike");
-            await Stage.WaitGameSeconds(ctx, () => map.listerThings.ThingsOfDef(flyer).Any(), seconds, 300);
+            await Stage.WaitGameSeconds(ctx, () => map.listerThings.ThingsOfDef(flyer).Any(), seconds, 300, 1);
             ctx.Assert(map.listerThings.ThingsOfDef(flyer).Any(), $"the qiongqi never took off; {Stage.LastWaitReport}");
             await ctx.WaitTicks(8);
             if (!paused) { savedSpeed = Find.TickManager.CurTimeSpeed; paused = true; }
