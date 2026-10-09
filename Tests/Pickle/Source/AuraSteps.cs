@@ -29,6 +29,15 @@ namespace AncientChineseBeast.PickleSteps
             ctx.Assert(Berserk(pawn), $"pawn {number} is not berserk (state {pawn.MentalStateDef?.defName ?? "none"}, {pawn.Position}); {Stage.LastWaitReport}");
         }
 
+        // Staging for a photograph: the aura itself is played by feature 04 (green). The gallery's scene cannot spend the
+        // 2400 ticks the ring needs, the launcher's watchdog stops a scenario after 300 real seconds (gallery 6, 2026-10-09,
+        // twice), so the colonist is sent berserk the way the ring does it and the picture shows the result.
+        [When("Ancient Chinese Beast: pawn {int} is sent berserk as the aura does")]
+        public void SentBerserk(PickleContext ctx, int number)
+        {
+            var pawn = Nth(ctx, number);
+            ctx.Assert(pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Berserk, null, forced: true), $"pawn {number} refused the berserk state");
+        }
         // The aura clock is set by the spawn step, before the first tick: "I spawn the pawn ... with its aura clock at zero" (SpawnSteps).
         [Then("Ancient Chinese Beast: pawn {int} is not berserk")]
         public void IsNotBerserk(PickleContext ctx, int number)
