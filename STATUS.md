@@ -10,8 +10,7 @@ packageId:    nelim.ancientchinesebeastandgeneexpanded
 repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 visibility:   public
 detached:     yes
-stage:        done
-workflow_stage: done
+workflow_stage: playTests[1.0.0]
 licence:      silent
 licence_at:   reviewed 2026-09-12 - original files and About.xml, English and Chinese Workshop
             descriptions, all 68 public comments, and the four coauthors' Steam profiles;
@@ -107,7 +106,8 @@ remaining:
   - defect: the keyed string SZ_CannotReachBuildingToExtractGene is referenced from neither the
       C# nor the defs. Inherited, left alone
 session:      local_ecc57511-3350-4f1d-9e1d-979c259d1b6b
-updated:      2026-10-01
+updated:      2026-10-10
+protocols_read_sha: 9f58f59d4c756c649e692d7501d531325cbefa74
 ---
 
 # Ancient Chinese Beast And Gene Expanded Renew — status
@@ -657,3 +657,19 @@ known fault left unfixed, `unverified` for what could not be checked.
   declared, `none` when the mod needs nothing. An undeclared dependency is not cosmetic: on
   2026-09-11 Reequilibrage animaux took 47 vanilla animals down with it, Muffalo included, because
   the class it injects belongs to a mod that was not declared and not loaded.
+
+## Audit - 2026-10-10 (stages up to playTests)
+
+Revision `c4edf71` (HEAD, main), working tree: `STATUS.md`, `docs/MANUAL-TESTS.md`, `FRENCH_REVIEW.md` modified, five gallery candidates untracked; `Source/` and `Mod/` clean. Old `done` maps to `playTests` (AUDIT.md, section 16): confirmed, no criterion from `code` to `writeTests` fails.
+
+- `code` (3): build identical (DLL SHA-256 `40AA5903...A7BA74`, rebuilt by `Tests/Run-All.ps1`); `CHANGELOG.md` has `## [1.0.0] - unreleased`; no `feature` left in `remaining`.
+- `declareDependencies` (4): `About.xml` declares Harmony and Biotech (hard), `loadAfter`, `loadBefore` ADS2, `incompatibleWith` the original; both optional patches guarded (`PatchOperationConditional`, `PatchOperationFindMod`), no `MayRequire` on an `Operation`. No `LoadFolders` (single 1.6 target).
+- `auditSettings` (5): no `ModSettings` in `Source/`, `settings_audit: not_applicable` holds.
+- `localize` (6): `translation_fr` complete (Virginie, validated 2026-10-02 after the last French text change `5fc4e94`; no French or English text changed since). `FRENCH_REVIEW.md` regenerated: only the new `Repository type` header line differs.
+- `writeTests` (7): `Tests/Run-All.ps1` replayed under pwsh, exit 0 (341 content checks, 26 assembly contracts, 137 of 137 config defs, 378 Def fields, XML exit codes). `Check-Steps.ps1` green: 122 patterns, 610 step lines. 23 features, 112 scenarios, six passes declared in `TESTING.md`. Naming note: scenarios live in `TESTING.md`, not `TEST_SCENARIOS.md`.
+- Protocols read in full and `Mark-ProtocolsRead.ps1` run the same day (`protocols_read_sha` `9f58f59d`). No game run by the audit itself. Nothing in `playTests` (5 fixes replay, passes 2 to 6, M6 to M8, `code_review_sha` 8.m) is claimed.
+- Lint: `STATUS.md` is 59 KB (limit 40): journal to move to `docs/runs/` at `followUp` cleanup.
+
+Pickle state read from `Tests/Pickle/Evidence/` on 2026-10-10 (tree `c4edf71`, only `Tests/` changed since the corrections): the five reds of pass 1 have a green run since (aura and drought `2026-10-08a-replay-reds`, egg `2026-10-08c-fr-egg-1`, barrier cut and throw-back `2026-10-08b-fr-18-23`, strike `2026-10-10f-strike`); M6, M7, M8 green in French (`2026-10-08b`, `2026-10-09a`). Still red: the siege (feature 22), failed on the real-time cap in French `2026-10-09a-fr-extractor-siege`. Requested 2026-10-10: `20261010-114915-875-8259` (English: siege and extractor, evidence `2026-10-10i-siege-extractor-en`), `20261010-114916-434-25f2` (French: siege, evidence `2026-10-10j-siege-fr`). Results not in.
+Result 2026-10-10: `20261010-114916-434-25f2` (French siege) exit 0, `exitReason` passed, 1 of 1, 133 s, `sans-facultatifs`, evidence `2026-10-10j-siege-fr`. English ticket `20261010-114915-875-8259` still open.
+Result 2026-10-10: `20261010-114915-875-8259` (English siege and extractor) exit 0, `exitReason` passed, 2 of 2 (extractor 103 s, siege 151 s), `sans-facultatifs`, evidence `2026-10-10i-siege-extractor-en`. No red scenario of `playTests` is left on the current tree. Gallery 2 and 7 redone in ticket `20261010-120655-655-65fd` (shootGallery work).
