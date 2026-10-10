@@ -4,7 +4,7 @@ Format inspired by [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). The
 `## [<version>]` section of a version, so each one keeps that heading exactly. This file serves the repository and
 the writing of Steam patch notes; RimWorld does not display it in game.
 
-## [1.0.0] - unreleased
+## [Unreleased]
 
 Not on the Workshop yet. What changed in `Mod/` after the item was created at 0.1.0, and nothing else:
 

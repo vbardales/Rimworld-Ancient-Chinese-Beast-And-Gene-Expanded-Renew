@@ -107,7 +107,7 @@ remaining:
       C# nor the defs. Inherited, left alone
 session:      local_ecc57511-3350-4f1d-9e1d-979c259d1b6b
 updated:      2026-10-10
-protocols_read_sha: 1bde9f1651ed5b18922db45de44b07bbcdd15593
+protocols_read_sha: b8724df210fd5f56dc9993fe3323ad4835c54004
 ---
 
 # Ancient Chinese Beast And Gene Expanded Renew: status
@@ -675,3 +675,5 @@ Result 2026-10-10: `20261010-114916-434-25f2` (French siege) exit 0, `exitReason
 Result 2026-10-10: `20261010-114915-875-8259` (English siege and extractor) exit 0, `exitReason` passed, 2 of 2 (extractor 103 s, siege 151 s), `sans-facultatifs`, evidence `2026-10-10i-siege-extractor-en`. No red scenario of `playTests` is left on the current tree. Gallery 2 and 7 redone in ticket `20261010-120655-655-65fd` (shootGallery work).
 
 Protocols read again 2026-10-10 (`protocols_read_sha` moved past `1bde9f1`). Owed at `writeDocs`, not before: `PUBLISHING.md` "Remerciements" (2026-10-10) asks that every integration named, claimed or exercised is thanked in `THANKS` and has a row in `WORKSHOP_COMMENTS.md`, `<loadAfter>`-only ones included. This mod's `About.xml` names `ninedaylongbow.ChineseComprehensiveExpansion` (Workshop 3221850511) in `loadAfter` and pass 3 (`wsl-deps.cce.map`, feature 17) exercises it: it is in neither the Steam description's `THANKS` nor the register. `Tests/Pickle/wsl-deps.sanctuary.map` stages PickleTools (development only, already covered by the PickleTools row). Publish: the session dispatches `publish` with `dispatch-publish.sh`, Virginie approves `steam-production`. Build intermediates now in `build/`.
+
+CHANGELOG heading is `## [Unreleased]` since 2026-10-10 (AUDIT 3.c, 11.f, 12.e): it becomes `## [1.0.0] - YYYY-MM-DD` in the commit whose SHA goes to the dry-run. At `publish` (13.b) add the `USE_THIS_INSTEAD.md` row (`drafted`) and, in `PUBLICATION.md`, the BBCode comment for Mlie's page 3396308787 for Virginie to post.
