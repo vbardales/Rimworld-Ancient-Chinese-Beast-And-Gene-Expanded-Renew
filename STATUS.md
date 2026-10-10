@@ -107,7 +107,7 @@ remaining:
       C# nor the defs. Inherited, left alone
 session:      local_ecc57511-3350-4f1d-9e1d-979c259d1b6b
 updated:      2026-10-10
-protocols_read_sha: 951bcc71db35d148e7b0df2d4c633f8eff34f6b0
+protocols_read_sha: 1bde9f1651ed5b18922db45de44b07bbcdd15593
 ---
 
 # Ancient Chinese Beast And Gene Expanded Renew: status
@@ -673,3 +673,5 @@ Revision `c4edf71` (HEAD, main), working tree: `STATUS.md`, `docs/MANUAL-TESTS.m
 Pickle state read from `Tests/Pickle/Evidence/` on 2026-10-10 (tree `c4edf71`, only `Tests/` changed since the corrections): the five reds of pass 1 have a green run since (aura and drought `2026-10-08a-replay-reds`, egg `2026-10-08c-fr-egg-1`, barrier cut and throw-back `2026-10-08b-fr-18-23`, strike `2026-10-10f-strike`); M6, M7, M8 green in French (`2026-10-08b`, `2026-10-09a`). Still red: the siege (feature 22), failed on the real-time cap in French `2026-10-09a-fr-extractor-siege`. Requested 2026-10-10: `20261010-114915-875-8259` (English: siege and extractor, evidence `2026-10-10i-siege-extractor-en`), `20261010-114916-434-25f2` (French: siege, evidence `2026-10-10j-siege-fr`). Results not in.
 Result 2026-10-10: `20261010-114916-434-25f2` (French siege) exit 0, `exitReason` passed, 1 of 1, 133 s, `sans-facultatifs`, evidence `2026-10-10j-siege-fr`. English ticket `20261010-114915-875-8259` still open.
 Result 2026-10-10: `20261010-114915-875-8259` (English siege and extractor) exit 0, `exitReason` passed, 2 of 2 (extractor 103 s, siege 151 s), `sans-facultatifs`, evidence `2026-10-10i-siege-extractor-en`. No red scenario of `playTests` is left on the current tree. Gallery 2 and 7 redone in ticket `20261010-120655-655-65fd` (shootGallery work).
+
+Protocols read again 2026-10-10 (`protocols_read_sha` moved past `1bde9f1`). Owed at `writeDocs`, not before: `PUBLISHING.md` "Remerciements" (2026-10-10) asks that every integration named, claimed or exercised is thanked in `THANKS` and has a row in `WORKSHOP_COMMENTS.md`, `<loadAfter>`-only ones included. This mod's `About.xml` names `ninedaylongbow.ChineseComprehensiveExpansion` (Workshop 3221850511) in `loadAfter` and pass 3 (`wsl-deps.cce.map`, feature 17) exercises it: it is in neither the Steam description's `THANKS` nor the register. `Tests/Pickle/wsl-deps.sanctuary.map` stages PickleTools (development only, already covered by the PickleTools row). Publish: the session dispatches `publish` with `dispatch-publish.sh`, Virginie approves `steam-production`. Build intermediates now in `build/`.
