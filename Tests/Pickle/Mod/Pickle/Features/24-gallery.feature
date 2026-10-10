@@ -6,7 +6,7 @@
 # (silver hair, a crimson duster over a cream shirt, crimson eyes). Each picture is an encounter, never a row:
 #   1  6 h   statue garden:    the Pleiades star officer crows at dawn among the statues, a hen beside it, Lan listens;
 #   2 10 h   south enclosure:  the four beasts, one beside the other, Ren at the gate;
-#   3 12 h   gravel yard:      the qiongqi caught in the air, in its flying strike at Lan, the farthest, Ren watching;
+#   3 12 h   gravel yard:      the qiongqi, wings folded, facing Lan, the farthest colonist it will fly at (the flight itself is proven by feature 21, a frame cannot catch it);
 #   4 14 h   bare clearing:    the nian beast breathes fire at a muffalo, Ren holding a firecracker;
 #   5 16 h   gravel yard:      the mingshe's wind barrier throws back Lan's shot;
 #   6 18 h   water garden:     the scorpion sexie and the red ring of its aura, Ren inside it, berserk;
@@ -89,7 +89,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     When I take a screenshot "gallery-2-four-beasts"
     And Ancient Chinese Beast: the interface is shown again
 
-  Scenario: gallery 3 - the qiongqi in its flying strike
+  Scenario: gallery 3 - the qiongqi picks out the farthest colonist
     Given I set the hour to 12
     And I set the weather to "Clear"
     And Nelim's Pickle Tools: the colonists are sent to the map corner
@@ -99,7 +99,8 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: all animals are removed
-    And Ancient Chinese Beast: I spawn the pawn "SZ_QiongQi" at (158, 143) facing East
+    And Ancient Chinese Beast: I spawn the pawn "SZ_QiongQi" at (166, 143) facing East
+    And Ancient Chinese Beast: time is paused
     And a colonist "Lan" exists
     And Nelim's Pickle Tools: "Lan" gender is female
     And Nelim's Pickle Tools: "Lan" body type is Female
@@ -111,10 +112,8 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Lan" stands at (182, 143) facing West
     And Nelim's Pickle Tools: "Lan" facial expression is "normal"
     And Ancient Chinese Beast: the colonist "Lan" is added to the pawns
-    And Nelim's Pickle Tools: I frame the cell (170, 143) at zoom 11
-    When Ancient Chinese Beast: the qiongqi pawn 1 is caught in flight at pawn 2 within 40 seconds
-    And Ancient Chinese Beast: time is paused
-    And Ancient Chinese Beast: the map is shown alone for a capture
+    And Nelim's Pickle Tools: I frame the cell (174, 143) at zoom 9
+    When Ancient Chinese Beast: the map is shown alone for a capture
     And I take a screenshot "gallery-3-flying-strike"
     And Ancient Chinese Beast: the interface is shown again
 
