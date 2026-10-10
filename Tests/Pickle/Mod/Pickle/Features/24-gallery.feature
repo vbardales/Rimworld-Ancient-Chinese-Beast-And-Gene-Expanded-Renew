@@ -113,6 +113,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Ancient Chinese Beast: the colonist "Lan" is added to the pawns
     And Nelim's Pickle Tools: I frame the cell (170, 143) at zoom 11
     When Ancient Chinese Beast: the qiongqi pawn 1 is caught in flight at pawn 2 within 40 seconds
+    And Ancient Chinese Beast: time is paused
     And Ancient Chinese Beast: the map is shown alone for a capture
     And I take a screenshot "gallery-3-flying-strike"
     And Ancient Chinese Beast: the interface is shown again
@@ -141,7 +142,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Ren" wears "Apparel_Pants" dyed rgb (44, 40, 48)
     And Nelim's Pickle Tools: "Ren" stands at (192, 148) facing East
     And Nelim's Pickle Tools: "Ren" carries the item "SZ_Firecracker"
-    And Nelim's Pickle Tools: I frame the cell (195, 151) at zoom 6
+    And Nelim's Pickle Tools: I frame the cell (195, 151) at zoom 9
     When Ancient Chinese Beast: pawn 1 breathes fire at pawn 2
     And Nelim's Pickle Tools: I let 30 ticks pass
     Then Ancient Chinese Beast: a thing "SZ_YearBeastFlame" exists within 5 seconds
@@ -220,6 +221,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: all animals are removed
     And Nelim's Sanctuary: the sanctuary "postindustrial-workshop" is emptied
+    And Ancient Chinese Beast: time is paused
     And Ancient Chinese Beast: I place a powered "SZ_BeastGeneExtractor" of the player's centred at x=229 z=214
     And Nelim's Pickle Tools: I place the decor "ArchiteCapsule" at (228, 211)
     And Nelim's Pickle Tools: I place the decor "ArchiteCapsule" at (229, 211)
@@ -234,7 +236,6 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Lan" wears "Apparel_Pants" dyed rgb (50, 50, 56)
     And Nelim's Pickle Tools: "Lan" stands at (232, 214) facing West
     And Nelim's Pickle Tools: I frame the cell (229, 214) at zoom 10
-    And Ancient Chinese Beast: time is paused
     And Ancient Chinese Beast: the map is shown alone for a capture
     When I take a screenshot "gallery-7-extractor"
     And Ancient Chinese Beast: the interface is shown again
