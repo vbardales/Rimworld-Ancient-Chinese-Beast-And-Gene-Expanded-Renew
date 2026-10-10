@@ -36,3 +36,7 @@ node_modules/
 
 # Reproductible Preview diagnostics; generated locally by scripts/Render-Preview.cjs.
 Art/.render/
+
+# Windows Explorer folder icons: local, never tracked. Steam sends Mod/ as is, so a Mod/desktop.ini
+# in git would reach every subscriber (WELCOME.md). The files stay on disk.
+desktop.ini
