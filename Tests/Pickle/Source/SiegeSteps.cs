@@ -110,7 +110,7 @@ namespace AncientChineseBeast.PickleSteps
             {
                 var job = qiongqi.CurJob;
                 if (job != null && job.ability != null) return job.targetA.Thing;
-                var flyer = Nth(ctx, 1).Map.listerThings.ThingsOfDef(flyerDef).OfType<PawnFlyer>().FirstOrDefault(f => f.FlyingPawn == qiongqi);
+                var flyer = Stage.CurrentMap(ctx).listerThings.ThingsOfDef(flyerDef).OfType<PawnFlyer>().FirstOrDefault(f => f.FlyingPawn == qiongqi);
                 if (flyer == null) return null;
                 var dest = (IntVec3)destField.GetValue(flyer);
                 return SpawnSteps.TryGet(ctx).Pawns.Where(p => p != qiongqi && !p.Dead).OrderBy(p => p.Position.DistanceToSquared(dest)).First();
@@ -121,7 +121,7 @@ namespace AncientChineseBeast.PickleSteps
             {
                 // What the AI comp needs: CanCast, and a target the verb accepts (range 30.9 and a line of sight).
                 var ability = qiongqi.abilities?.GetAbility(DefDatabase<AbilityDef>.GetNamedSilentFail("SZ_QiongQi_FlyingStrike"));
-                var sight = string.Join("; ", Nth(ctx, 1).Map.mapPawns.AllPawns.Where(p => p != qiongqi && !p.Downed).Select(p =>
+                var sight = string.Join("; ", Stage.CurrentMap(ctx).mapPawns.AllPawns.Where(p => p != qiongqi && !p.Downed).Select(p =>
                     $"{p.LabelShort} at {p.Position} {qiongqi.Position.DistanceTo(p.Position):F1} tiles, can hit {(ability != null && ability.VerbTracker.PrimaryVerb.CanHitTarget(p))}"));
                 ctx.Attach("flying strike diagnostic", $"ability {(ability == null ? "missing" : "found")}, can cast {ability?.CanCast}, " +
                     $"cooldown ticks left {ability?.CooldownTicksRemaining}, qiongqi at {qiongqi.Position}, faction {qiongqi.Faction?.Name ?? "none"}, " +

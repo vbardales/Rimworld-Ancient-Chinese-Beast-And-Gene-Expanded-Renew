@@ -201,6 +201,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Ren" wears "Apparel_Pants" dyed rgb (44, 40, 48)
     And Nelim's Pickle Tools: "Ren" stands at (146, 171) facing East
     And Ancient Chinese Beast: I spawn the pawn "SZ_SeXieInsect" at (151, 172) with its aura clock at zero
+    And Ancient Chinese Beast: time is paused
     And Nelim's Pickle Tools: I frame the cell (150, 172) at zoom 11
     When Ancient Chinese Beast: pawn 1 is sent berserk as the aura does
     And Ancient Chinese Beast: time is paused
