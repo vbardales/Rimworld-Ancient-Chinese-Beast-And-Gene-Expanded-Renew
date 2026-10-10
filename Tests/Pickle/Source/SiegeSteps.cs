@@ -110,10 +110,10 @@ namespace AncientChineseBeast.PickleSteps
             {
                 var job = qiongqi.CurJob;
                 if (job != null && job.ability != null) return job.targetA.Thing;
-                var flyer = qiongqi.Map?.listerThings.ThingsOfDef(flyerDef).OfType<PawnFlyer>().FirstOrDefault(f => f.FlyingPawn == qiongqi);
+                var flyer = Nth(ctx, 1).Map.listerThings.ThingsOfDef(flyerDef).OfType<PawnFlyer>().FirstOrDefault(f => f.FlyingPawn == qiongqi);
                 if (flyer == null) return null;
                 var dest = (IntVec3)destField.GetValue(flyer);
-                return Nth(ctx, 1).Map.mapPawns.AllPawnsSpawned.Where(p => p != qiongqi && !p.Dead).OrderBy(p => p.Position.DistanceToSquared(dest)).First();
+                return SpawnSteps.TryGet(ctx).Pawns.Where(p => p != qiongqi && !p.Dead).OrderBy(p => p.Position.DistanceToSquared(dest)).First();
             }
             await Stage.WaitGameSeconds(ctx, () => Chosen() != null, seconds, 400, 1);
             var chosen = Chosen();
