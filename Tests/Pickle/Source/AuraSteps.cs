@@ -37,7 +37,9 @@ namespace AncientChineseBeast.PickleSteps
         public void SentBerserk(PickleContext ctx, int number)
         {
             var pawn = Nth(ctx, number);
-            ctx.Assert(!pawn.Downed, $"pawn {number} is downed at {pawn.Position}: moving {pawn.health.capacities.GetLevel(PawnCapacityDefOf.Moving):F2}, consciousness {pawn.health.capacities.GetLevel(PawnCapacityDefOf.Consciousness):F2}, hediffs {string.Join(", ", pawn.health.hediffSet.hediffs.Select(h => h.def.defName))}, terrain {pawn.Position.GetTerrain(pawn.Map)?.defName}, job {pawn.CurJob?.def.defName ?? "none"}");            ctx.Assert(pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Berserk, null, forced: true), $"pawn {number} refused the berserk state");
+            ctx.Assert(!pawn.Downed, $"pawn {number} is downed at {pawn.Position}: moving {pawn.health.capacities.GetLevel(PawnCapacityDefOf.Moving):F2}, consciousness {pawn.health.capacities.GetLevel(PawnCapacityDefOf.Consciousness):F2}, hediffs {string.Join(", ", pawn.health.hediffSet.hediffs.Select(h => h.def.defName))}, terrain {pawn.Position.GetTerrain(pawn.Map)?.defName}, job {pawn.CurJob?.def.defName ?? "none"}");            // The ring may already have done it in the ticks before the pause: a pawn in a mental state refuses another.
+            if (Berserk(pawn)) return;
+            ctx.Assert(pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Berserk, null, forced: true), $"pawn {number} refused the berserk state");
         }
         // The aura clock is set by the spawn step, before the first tick: "I spawn the pawn ... with its aura clock at zero" (SpawnSteps).
         [Then("Ancient Chinese Beast: pawn {int} is not berserk")]
