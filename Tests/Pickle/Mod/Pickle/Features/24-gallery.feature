@@ -10,7 +10,7 @@
 #   4 14 h   bare clearing:    the nian beast breathes fire at a muffalo, Ren holding a firecracker;
 #   5 16 h   gravel yard:      the mingshe's wind barrier throws back Lan's shot;
 #   6 18 h   water garden:     the scorpion sexie and the red ring of its aura, Ren inside it, berserk;
-#   7 12 h   postindustrial workshop: the gene extractor, a qiongqi corpse beside it, archite capsules, Lan at the bench.
+#   7 12 h   postindustrial workshop, emptied first: the gene extractor alone, three archite capsules, Lan at the bench.
 # The size limit of the page (owner, 2026-10-06): any number of images, each under 2 MB, all together under 8 MB; the
 # captures are recompressed before they go to Art/Gallery/, as `<n>-candidate-<name>` until she accepts them.
 #
@@ -72,6 +72,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Ancient Chinese Beast: I spawn the pawn "SZ_QiongQi" at (145, 212) facing East
     And Ancient Chinese Beast: I spawn the pawn "SZ_YearBeast" at (154, 214) facing West
     And Ancient Chinese Beast: I spawn the pawn "SZ_SeXieInsect" at (162, 217) facing West
+    And Ancient Chinese Beast: time is paused
     And a colonist "Ren" exists
     And Nelim's Pickle Tools: "Ren" gender is male
     And Nelim's Pickle Tools: "Ren" body type is Male
@@ -84,7 +85,6 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Ren" stands at (158, 208) facing South
     And Nelim's Pickle Tools: "Ren" facial expression is "normal"
     And Nelim's Pickle Tools: I frame the cell (149, 214) at zoom 12
-    And Ancient Chinese Beast: time is paused
     And Ancient Chinese Beast: the map is shown alone for a capture
     When I take a screenshot "gallery-2-four-beasts"
     And Ancient Chinese Beast: the interface is shown again
@@ -219,9 +219,8 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: all animals are removed
+    And Nelim's Sanctuary: the sanctuary "postindustrial-workshop" is emptied
     And Ancient Chinese Beast: I place a powered "SZ_BeastGeneExtractor" of the player's centred at x=235 z=214
-    And Ancient Chinese Beast: I spawn the pawn "SZ_QiongQi" at x=235 z=218
-    And Ancient Chinese Beast: I kill "SZ_QiongQi" at x=235 z=218
     And Nelim's Pickle Tools: I place the decor "ArchiteCapsule" at (234, 211)
     And Nelim's Pickle Tools: I place the decor "ArchiteCapsule" at (235, 211)
     And Nelim's Pickle Tools: I place the decor "ArchiteCapsule" at (236, 211)
@@ -234,7 +233,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Lan" wears "Apparel_CollarShirt" dyed rgb (240, 240, 236)
     And Nelim's Pickle Tools: "Lan" wears "Apparel_Pants" dyed rgb (50, 50, 56)
     And Nelim's Pickle Tools: "Lan" stands at (237, 213) facing West
-    And Nelim's Pickle Tools: I frame the cell (235, 214) at zoom 6
+    And Nelim's Pickle Tools: I frame the cell (235, 213) at zoom 10
     And Ancient Chinese Beast: time is paused
     And Ancient Chinese Beast: the map is shown alone for a capture
     When I take a screenshot "gallery-7-extractor"
