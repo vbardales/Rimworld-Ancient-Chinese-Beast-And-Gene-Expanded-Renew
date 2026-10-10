@@ -157,7 +157,7 @@ Two more verify that unknown XML classes and parents produce failing validator e
 The six versioned validators in [Tests/Xml](Tests/Xml/README.md) check fields, classes, def
 references, external types, translation keys and configuration consistency. They need no files
 outside this repository except the installed game and Harmony. Type indexes and test fixtures
-stay in `.build/`, outside the published mod.
+stay in `build/`, outside the published mod.
 
 The checks start no game and do not execute gameplay. A clean run validates static contracts;
 it does not prove that the mod works in a colony.
@@ -183,7 +183,7 @@ AncientChineseBeastAndGeneExpandedRenew/
   Source/  C#, never published
   Tests/   content, reflection and XML checks, never published
   Art/     uncropped showcase art, the two oversized textures, and the script that letters the preview
-  .build/  compiler intermediates, git-ignored, deliberately outside Mod/
+  build/  compiler intermediates, git-ignored, deliberately outside Mod/
 ```
 
 ## Compatibility

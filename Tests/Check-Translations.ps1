@@ -3,7 +3,7 @@ param(
     [string]$SourcePath = "$PSScriptRoot/../Source",
     [string]$Managed = 'C:/Program Files (x86)/Steam/steamapps/common/RimWorld/RimWorldWin64_Data/Managed',
     [string]$GameData = 'C:/Program Files (x86)/Steam/steamapps/common/RimWorld/Data',
-    [string]$InventoryPath = "$PSScriptRoot/../.build/translation-inventory.json",
+    [string]$InventoryPath = "$PSScriptRoot/../build/translation-inventory.json",
     [switch]$UseExistingInventory
 )
 $ErrorActionPreference = 'Stop'

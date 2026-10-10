@@ -12,7 +12,7 @@
 # placement is not a matter of taste: SteamUGC.SetItemContent uploads the published folder as it
 # stands on disk with no filtering, so an obj/ inside Mod/ would publish the publicised
 # Assembly-CSharp.dll - the game's own code - to every subscriber.
-.build/
+build/
 
 # Art/ is NOT ignored. The uncropped showcase sources and the two oversized original textures are
 # tracked on purpose: ATTRIBUTION.md points at Art/textures-original/ as the record of what the

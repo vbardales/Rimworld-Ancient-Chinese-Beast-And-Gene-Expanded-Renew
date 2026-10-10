@@ -1,6 +1,6 @@
 param([string]$Managed, [string]$GameData, [string]$TypeList)
 $ErrorActionPreference = 'Stop'
-$fixture = Join-Path $PSScriptRoot "../.build/xml-negative-$([guid]::NewGuid().ToString('N'))"
+$fixture = Join-Path $PSScriptRoot "../build/xml-negative-$([guid]::NewGuid().ToString('N'))"
 New-Item -ItemType Directory -Path "$fixture/Defs" -Force | Out-Null
 '<Defs><ThingDef><defName>TestBadClass</defName><thingClass>Missing.TestClass</thingClass></ThingDef></Defs>' | Set-Content "$fixture/Defs/Fixture.xml"
 $output = & pwsh -NoProfile -File "$PSScriptRoot/Xml/Check-XmlClasses.ps1" -ModPath $fixture -TypeLists $TypeList 2>&1

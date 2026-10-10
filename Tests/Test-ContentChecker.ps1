@@ -1,7 +1,7 @@
 # Negative controls: each intentional fault must make the checker fail for the expected reason.
 $ErrorActionPreference = 'Stop'
 $root = Split-Path $PSScriptRoot -Parent
-$fixture = Join-Path $root ".build/content-fixture-$([guid]::NewGuid().ToString('N'))"
+$fixture = Join-Path $root "build/content-fixture-$([guid]::NewGuid().ToString('N'))"
 New-Item -ItemType Directory -Path $fixture -Force | Out-Null
 # Copy XML only; no game assemblies or artwork are needed by these tests.
 foreach ($file in Get-ChildItem "$root/Mod" -Recurse -Filter *.xml -File) {
@@ -27,4 +27,4 @@ Expect-Failure 'Defs/Recipe/ExtractGenes.xml' { param($s) $s.Replace('<gene>SZGe
 Expect-Failure 'Defs/Recipe/ExtractGenes.xml' { param($s) $s.Replace('</Defs>', '<RecipeDef><defName>SZ_ExtractGene</defName></RecipeDef></Defs>') } 'Duplicate definition'
 Expect-Failure 'Defs/Recipe/CloneBeast.xml' { param($s) $s.Replace('<pawn>SZ_YearBeast_Friendly</pawn>', '<pawn>SZ_YearBeast</pawn>') } 'Clone must reference a friendly pawn kind'
 Expect-Failure 'About/About.xml' { param($s) [regex]::Replace($s, '(?s)<description>.*?</description>', { param($m) $m.Value.Replace('https://github.com/vbardales/Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew', 'Source available on request.') }) } 'Description must include the repository URL'
-Write-Host 'Five negative controls passed. Fixtures are retained under .build for inspection.'
+Write-Host 'Five negative controls passed. Fixtures are retained under build for inspection.'

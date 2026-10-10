@@ -23,8 +23,8 @@ try {
     Invoke-Check 'Content checker negative controls' { & pwsh -NoProfile -File "$PSScriptRoot/Test-ContentChecker.ps1" }
     Invoke-Check 'Build mod' { & dotnet build "$root/Source" -p:UseSharedCompilation=false }
     Invoke-Check 'Build tests' { & dotnet build "$PSScriptRoot" -p:UseSharedCompilation=false -p:UseAppHost=false }
-    $types = Join-Path $root '.build/xml-types.txt'
-    Invoke-Check 'Assembly contracts' { & dotnet "$root/.build/bin-tests/Debug/net8.0/AncientChineseBeast.Tests.dll" $Managed $Harmony $types }
+    $types = Join-Path $root 'build/xml-types.txt'
+    Invoke-Check 'Assembly contracts' { & dotnet "$root/build/bin-tests/Debug/net8.0/AncientChineseBeast.Tests.dll" $Managed $Harmony $types }
     Invoke-Check 'XML classes' { & pwsh -NoProfile -File "$PSScriptRoot/Xml/Check-XmlClasses.ps1" -ModPath $mod -TypeLists "$types,$PSScriptRoot/Xml/optional-mod-types.txt" -Brief }
     Invoke-Check 'XML fields' { & pwsh -NoProfile -File "$PSScriptRoot/Xml/Check-XmlFields.ps1" -ModPath $mod -Managed $Managed -ExtraAssemblies $assembly }
     Invoke-Check 'Def references' { & pwsh -NoProfile -File "$PSScriptRoot/Xml/Check-DefRefs.ps1" -ModPath $mod -Managed $Managed -GameData $GameData -Brief }

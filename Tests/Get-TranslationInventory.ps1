@@ -1,6 +1,6 @@
 param(
     [string]$ModPath = "$PSScriptRoot/../Mod",
-    [string]$OutputPath = "$PSScriptRoot/../.build/translation-inventory.json",
+    [string]$OutputPath = "$PSScriptRoot/../build/translation-inventory.json",
     [string]$Managed = 'C:/Program Files (x86)/Steam/steamapps/common/RimWorld/RimWorldWin64_Data/Managed',
     [string]$GameData = 'C:/Program Files (x86)/Steam/steamapps/common/RimWorld/Data'
 )

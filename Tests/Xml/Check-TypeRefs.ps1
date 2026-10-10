@@ -241,7 +241,7 @@ function Own-Blob([string]$modRoot) {
     if ($ownBlobCache.ContainsKey($modRoot)) { return $ownBlobCache[$modRoot] }
     $sb = New-Object System.Text.StringBuilder
     foreach ($f in (Get-ChildItem $modRoot -Recurse -File -Include *.dll,*.cs -ErrorAction SilentlyContinue)) {
-        if ($f.FullName -match '[\\/](obj|bin|packages|\.build|\.claude)[\\/]') { continue }
+        if ($f.FullName -match '[\\/](obj|bin|packages|build|\.claude)[\\/]') { continue }
         try { [void]$sb.Append([Text.Encoding]::UTF8.GetString([IO.File]::ReadAllBytes($f.FullName))) } catch {}
     }
     $blob = $sb.ToString()
@@ -296,12 +296,12 @@ function Conditional-Folders([string]$modRoot) {
 # ---------------------------------------------------------------------------------------------
 # 4. the sweep
 # ---------------------------------------------------------------------------------------------
-# .claude holds session worktrees, which are whole copies of the repository; .build holds
+# .claude holds session worktrees, which are whole copies of the repository; build holds
 # compilation output, which is a second copy of every published folder; _mods-sources holds raw
 # Workshop copies of other people's mods, which are not ours to report on. Languages/ has no defs.
 $files = Get-ChildItem $ModPath -Recurse -Filter *.xml -File |
          Where-Object { $_.FullName -notmatch '[\\/]\.claude[\\/]' -and
-                        $_.FullName -notmatch '[\\/]\.build[\\/]' -and
+                        $_.FullName -notmatch '[\\/]build[\\/]' -and
                         $_.FullName -notmatch '[\\/]_mods-sources[\\/]' -and
                         $_.FullName -notmatch '[\\/](obj|bin)[\\/]' -and
                         $_.FullName -notmatch '[\\/]Languages[\\/]' }
@@ -502,7 +502,7 @@ if ($read -eq 0) {
         Write-Output "  The path is inside .claude, which is skipped on purpose. Point this at the"
         Write-Output "  copy that the game actually loads, under the repository root."
     } else {
-        Write-Output "  No XML under that path survived the filters (.claude, .build, _mods-sources,"
+        Write-Output "  No XML under that path survived the filters (.claude, build, _mods-sources,"
         Write-Output "  obj, bin, Languages), or none of it sits under a folder with About/About.xml."
     }
     exit 2

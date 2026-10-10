@@ -12,7 +12,7 @@ This builds the mod, runs the existing contract checks, then runs
 `Check-Translations.ps1` and `Test-TranslationChecker.ps1`. The translation check first
 calls `Get-TranslationInventory.ps1`, which reuses the versioned injection checker's
 reflection, XML inheritance and translation-handle rules. It writes
-`.build/translation-inventory.json`, then compares every inventoried field against French
+`build/translation-inventory.json`, then compares every inventoried field against French
 and against English source text or English injections. A successful comparison of two
 language directories alone would miss a key absent from both.
 
@@ -26,7 +26,7 @@ all other English values come from the Defs. French has an explicit entry for ev
 parameters, rich-text tags, line-break counts, untranslated CJK text and unreviewed identical
 translations. `mingshe`, `qiongqi`, `explosion` and `tunnel` are deliberately identical.
 The original `SZ_CannotReachBuildingToExtractGene` key is retained for compatibility, with
-no active call site. The four negative controls use isolated copies under `.build/` and
+no active call site. The four negative controls use isolated copies under `build/` and
 must detect omissions from French, a key omitted from both languages, duplicates and a
 changed parameter index. `-UseExistingInventory` is for those isolated resource fixtures;
 do not use it to certify changed Defs.

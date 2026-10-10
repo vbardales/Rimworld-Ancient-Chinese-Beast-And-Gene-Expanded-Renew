@@ -1,7 +1,7 @@
-param([string]$InventoryPath = "$PSScriptRoot/../.build/translation-inventory.json")
+param([string]$InventoryPath = "$PSScriptRoot/../build/translation-inventory.json")
 $ErrorActionPreference = 'Stop'
 $root = [IO.Path]::GetFullPath("$PSScriptRoot/..")
-$fixtures = Join-Path $root ".build/translation-negative-$([Guid]::NewGuid().ToString('N'))"
+$fixtures = Join-Path $root "build/translation-negative-$([Guid]::NewGuid().ToString('N'))"
 $cases = @('missing-def','missing-key-both','duplicate-key','parameter')
 foreach ($case in $cases) {
     $fixture = Join-Path $fixtures $case
