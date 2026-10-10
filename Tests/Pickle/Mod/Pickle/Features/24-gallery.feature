@@ -220,10 +220,10 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: all animals are removed
     And Nelim's Sanctuary: the sanctuary "postindustrial-workshop" is emptied
-    And Ancient Chinese Beast: I place a powered "SZ_BeastGeneExtractor" of the player's centred at x=235 z=214
-    And Nelim's Pickle Tools: I place the decor "ArchiteCapsule" at (234, 211)
-    And Nelim's Pickle Tools: I place the decor "ArchiteCapsule" at (235, 211)
-    And Nelim's Pickle Tools: I place the decor "ArchiteCapsule" at (236, 211)
+    And Ancient Chinese Beast: I place a powered "SZ_BeastGeneExtractor" of the player's centred at x=229 z=214
+    And Nelim's Pickle Tools: I place the decor "ArchiteCapsule" at (228, 211)
+    And Nelim's Pickle Tools: I place the decor "ArchiteCapsule" at (229, 211)
+    And Nelim's Pickle Tools: I place the decor "ArchiteCapsule" at (230, 211)
     And a colonist "Lan" exists
     And Nelim's Pickle Tools: "Lan" gender is female
     And Nelim's Pickle Tools: "Lan" body type is Female
@@ -232,8 +232,8 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Lan" has the gene "Eyes_Golden"
     And Nelim's Pickle Tools: "Lan" wears "Apparel_CollarShirt" dyed rgb (240, 240, 236)
     And Nelim's Pickle Tools: "Lan" wears "Apparel_Pants" dyed rgb (50, 50, 56)
-    And Nelim's Pickle Tools: "Lan" stands at (237, 213) facing West
-    And Nelim's Pickle Tools: I frame the cell (235, 213) at zoom 10
+    And Nelim's Pickle Tools: "Lan" stands at (232, 214) facing West
+    And Nelim's Pickle Tools: I frame the cell (229, 214) at zoom 10
     And Ancient Chinese Beast: time is paused
     And Ancient Chinese Beast: the map is shown alone for a capture
     When I take a screenshot "gallery-7-extractor"
