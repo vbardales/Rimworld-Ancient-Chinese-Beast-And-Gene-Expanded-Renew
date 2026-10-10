@@ -101,10 +101,19 @@ namespace AncientChineseBeast.PickleSteps
             // runner at 90, before 40 game seconds had passed (run bd0f, 2026-10-02: "timed out after 90s").
             var qiongqi = Nth(ctx, qiongqiNumber);
             var expected = Nth(ctx, targetNumber);
+            // The cast may finish inside the tick that orders it, so no job is ever seen (run 2026-10-10a: cooldown 158 left, the
+            // strike had happened, the step saw nothing). The flyer lives for the whole flight: its landing cell names the target.
+            var flyerDef = DefDatabase<ThingDef>.GetNamedSilentFail("SZ_QQPawnFlyingStrike");
+            var destField = typeof(PawnFlyer).GetField("destCell", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Public);
+            ctx.Assert(destField != null, "PawnFlyer has no destCell field: " + string.Join(", ", typeof(PawnFlyer).GetFields(System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Public).Select(f => f.Name)));
             Thing Chosen()
             {
                 var job = qiongqi.CurJob;
-                return job != null && job.ability != null ? job.targetA.Thing : null;
+                if (job != null && job.ability != null) return job.targetA.Thing;
+                var flyer = qiongqi.Map?.listerThings.ThingsOfDef(flyerDef).OfType<PawnFlyer>().FirstOrDefault(f => f.FlyingPawn == qiongqi);
+                if (flyer == null) return null;
+                var dest = (IntVec3)destField.GetValue(flyer);
+                return Nth(ctx, 1).Map.mapPawns.AllPawnsSpawned.Where(p => p != qiongqi && !p.Dead).OrderBy(p => p.Position.DistanceToSquared(dest)).First();
             }
             await Stage.WaitGameSeconds(ctx, () => Chosen() != null, seconds, 400, 1);
             var chosen = Chosen();
