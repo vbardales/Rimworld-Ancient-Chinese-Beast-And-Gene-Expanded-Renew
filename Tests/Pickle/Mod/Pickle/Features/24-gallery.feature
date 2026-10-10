@@ -10,7 +10,7 @@
 #   4 14 h   bare clearing:    the nian beast breathes fire at a muffalo, Ren holding a firecracker;
 #   5 16 h   gravel yard:      the mingshe's wind barrier throws back Lan's shot;
 #   6 18 h   water garden:     the scorpion sexie and the red ring of its aura, Ren inside it, berserk;
-#   7 12 h   postindustrial workshop, emptied first: the gene extractor alone, three archite capsules, Lan at the bench.
+#   7 12 h   postindustrial workshop, emptied first and roof removed (the sun lights the room): the gene extractor alone, three archite capsules, Lan at the bench.
 # The size limit of the page (owner, 2026-10-06): any number of images, each under 2 MB, all together under 8 MB; the
 # captures are recompressed before they go to Art/Gallery/, as `<n>-candidate-<name>` until she accepts them.
 #
@@ -220,6 +220,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: all animals are removed
     And Nelim's Sanctuary: the sanctuary "postindustrial-workshop" is emptied
+    And Nelim's Sanctuary: the roof is removed from the sanctuary "postindustrial-workshop"
     And Ancient Chinese Beast: time is paused
     And Ancient Chinese Beast: I place a powered "SZ_BeastGeneExtractor" of the player's centred at x=229 z=214
     And Nelim's Pickle Tools: I place the decor "ArchiteCapsule" at (228, 211)
