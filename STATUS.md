@@ -110,7 +110,7 @@ updated:      2026-10-10
 protocols_read_sha: 951bcc71db35d148e7b0df2d4c633f8eff34f6b0
 ---
 
-# Ancient Chinese Beast And Gene Expanded Renew — status
+# Ancient Chinese Beast And Gene Expanded Renew: status
 
 Read by a sweep across every mod, rather than by asking each thread in turn. It lives at the
 root, never inside `Mod/`, so Steam never receives it.
@@ -250,13 +250,13 @@ taken and nothing was published.
 - The `@review` captures: none exists yet, so none has been opened.
 
 **Recommendations, optional.** Install PowerShell 7 so that `Tests/Run-All.ps1` runs as one command. Look up the
-optional mod's Workshop id. The changelog headings follow the CI (`## [1.0.0] — unreleased`, `## [0.1.0] — 2026-09-23`),
+optional mod's Workshop id. The changelog headings follow the CI (`## [1.0.0] - unreleased`, `## [0.1.0] - 2026-09-23`),
 which the owner chose on 2026-09-25 over the `# 0.1.0` she had asked for on 2026-09-24.
 
 **Left as it was, on purpose.** `.build/translation-inventory.json` was rewritten at 10:30 today by a partial
 run under Windows PowerShell 5.1 (370 entries, a different size). Regenerate it with PowerShell 7 before
 relying on it. The preview on the Workshop item is the lower-right one it was uploaded with.
-### Prepublication, and what `tested` now requires — 2026-09-24
+### Prepublication, and what `tested` now requires: 2026-09-24
 
 **The Workshop item exists.** It was created by the first upload on 2026-09-23 at 14:30, from the
 working folder: item 3806709132, private, version 0.1.0. `Mod/About/PublishedFileId.txt` is committed
@@ -294,7 +294,7 @@ on its ticket. The suite is written and its phrases check, and it takes no ticke
 authorizes one (`PickleTools/TESTING.md`, after WSL's root filesystem went read-only on 2026-09-23).
 When it does, the launch is followed by a watcher and not polled.
 
-### The Pickle suite, finished — 2026-09-24
+### The Pickle suite, finished: 2026-09-24
 
 **What it is now.** `Tests/Pickle/` holds 13 features and 52 scenarios once the outlines are expanded,
 five step classes and a phrase checker. It plays the nian beast and the firecracker (real blows through
@@ -343,7 +343,7 @@ at 32 px, a 330 px summary and a smaller veil; `Art/render-preview.cjs` passed e
 throughout, title over two lines, contrast 8.9, 6.7, 8.1, 7.0 and 5.0 to 1, 763 KB) and the image was
 inspected at 896 px and at 268.
 
-### Ordered workflow audit — 2026-09-22
+### Ordered workflow audit: 2026-09-22
 
 **Result: `done` -> `preTest`.** The actual distributed `Mod/About/About.xml`
 now ends with the exact final
@@ -388,7 +388,7 @@ There are no optional integrations to add to a second pass, and the declared ups
 incompatibility needs its own documented review pass. Only after that suite is complete can
 `preTest -> done` be revalidated; its execution and media review remain `done -> tested` work.
 
-### Ordered workflow audit — 2026-09-13
+### Ordered workflow audit: 2026-09-13
 
 **Result: `done` -> `done`.** This is a fresh audit of the working tree, not an inference
 from the historical stage. The user's ordered workflow takes precedence over the parent
@@ -470,7 +470,7 @@ This classification records the evidence available, not permission or proven aba
   the final `[url=...]Source code on GitHub[/url]` required by PUBLISHING.md. Correct that
   before publication; it does not change the user's English-description/naming gate or
   constitute a failure of the gameplay-readiness stage. Nothing was published here.
-- **Documentation cleanup completed — 2026-09-13:** LICENSE/ATTRIBUTION now describe the
+- **Documentation cleanup completed, 2026-09-13:** LICENSE/ATTRIBUTION now describe the
   recorded 2026-09-12 review without implying abandonment or reuse permission. MIT remains
   limited to the listed port additions. Both distributed copies were synchronized and
   verified byte-identical to their root counterparts. This documentation-only follow-up
@@ -517,7 +517,7 @@ Both fixed in `5fc4e94` (vanilla parents `BluntBase`, `Flame`, `Bite`, `PawnFlye
 traced in `FRENCH_REVIEW.md`; the descriptions rewritten without agreement). She validated the result in chat on
 2026-10-02 ("Validé"); `translation_fr` stays `complete`. Any later change to a French file sets it back to `unchecked`.
 
-### Translation audit — 2026-09-30
+### Translation audit: 2026-09-30
 
 French gender agreement (`../TRANSLATIONS.md`, "French gender agreement"): read every French file
 of this mod, all 19 (18 `DefInjected` files + `Keyed/text.xml`, `Mod/Languages/French/**/*.xml`), no
@@ -542,7 +542,7 @@ Defs were ported straight to English (checked: `Mod/Defs/Pawn/QiongQi.xml`'s nat
 are done, but only Virginie reading `FRENCH_REVIEW.md` can mark it `complete`. `remaining` carries
 "French review by Virginie" as `unverified` until she has.
 
-### Translation audit — 2026-09-13
+### Translation audit: 2026-09-13
 
 The translation gate in `../PUBLISHING.md` and `../TRANSLATIONS.md` has been applied to
 the working tree based on `4871397`. The historical `stage: done` is preserved. The three
@@ -587,7 +587,7 @@ the working tree based on `4871397`. The historical `stage: done` is preserved. 
   English/French UI, generated text, clipping and language-switch save checks remain unverified
   until performed in game, as explicitly recorded in `remaining`.
 
-### Preview verification — 2026-09-12
+### Preview verification: 2026-09-12
 
 - Source: `Art/Preview.png`, copied without changes from the existing text-free
   `Art/Preview-untitled.png`. No illustration replacement; the existing originals remain
@@ -630,7 +630,7 @@ The development-mode entries under **Ancient Chinese Beast** in the debug menu e
 a beast now, the nian beast within the hour, the sixty-day gate cleared, and the beast clock
 printed to the log.
 
-## Preview source migration — 2026-10-02
+## Preview source migration: 2026-10-02
 
 The final text-free 896 x 504 crop is now the canonical `Art/Preview-source.png`; the accepted
 redrawn transparent badge remains `Art/ModIcon-source.png`, and the validated line art remains
@@ -648,11 +648,11 @@ and visual appearance are unchanged. Nothing published.
 `licence` vocabulary: `open` an explicit licence or permission, `silent` no explicit licence,
 reuse permission or prohibition found (does not establish abandonment),
 `alive` no licence but a source explicitly recorded as maintained, `forbidden` a written refusal, `original` owing nothing
-to anyone — not a name, not an idea traceable to one mod, not a value derived from its assets.
+to anyone: not a name, not an idea traceable to one mod, not a value derived from its assets.
 `remaining` in three kinds: `feature` for something missing from a first release, `defect` for a
 known fault left unfixed, `unverified` for what could not be checked.
 
-- **`dependencies`** — `declared` when every mod this one needs is named in the About's
+- **`dependencies`**: `declared` when every mod this one needs is named in the About's
   `modDependencies`, `to check` when a non-vanilla `loadAfter` suggests a dependency that is not
   declared, `none` when the mod needs nothing. An undeclared dependency is not cosmetic: on
   2026-09-11 Reequilibrage animaux took 47 vanilla animals down with it, Muffalo included, because

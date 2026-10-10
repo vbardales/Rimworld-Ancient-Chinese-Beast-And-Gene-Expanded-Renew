@@ -4,7 +4,7 @@ Format inspired by [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). The
 `## [<version>]` section of a version, so each one keeps that heading exactly. This file serves the repository and
 the writing of Steam patch notes; RimWorld does not display it in game.
 
-## [1.0.0] — unreleased
+## [1.0.0] - unreleased
 
 Not on the Workshop yet. What changed in `Mod/` after the item was created at 0.1.0, and nothing else:
 
@@ -48,7 +48,7 @@ Not on the Workshop yet. What changed in `Mod/` after the item was created at 0.
 Development-only work that never reaches `Mod/` (the Pickle scenarios under `Tests/Pickle/`, the offline test
 project, the evidence rules and `docs/runs/`) is recorded in `STATUS.md`, not here.
 
-## [0.1.0] — 2026-09-23
+## [0.1.0] - 2026-09-23
 
 First version. RimWorld 1.6. Creation of the `PublishedFileId.txt` file (`Mod/About/PublishedFileId.txt`): the
 Workshop item, 3806709132, was created by the first upload on 2026-09-23 and is private until it is switched to
@@ -56,15 +56,15 @@ public by hand. Nothing in this version has been seen running: the port is check
 `TESTING.md` is the inventory of what a game still has to show.
 
 Ported from andery233xj, Frolg, DongFang and Ninedaylongbow's
-**山海志怪-华夏凶兽和基因扩展 — Ancient Chinese Beast And Gene Expanded**, Workshop
+**山海志怪-华夏凶兽和基因扩展 - Ancient Chinese Beast And Gene Expanded**, Workshop
 [3292446841](https://steamcommunity.com/sharedfiles/filedetails/?id=3292446841), last supporting
 1.5. `ATTRIBUTION.md` records the whole of it; this is the summary.
 
-### Changed — to run on 1.6
+### Changed: to run on 1.6
 
 - **The qiongqi's flying strike flies again.** 1.6 moved `PawnFlyer`'s flight logic from `Tick()`
   to `TickInterval(int delta)`. The mod's flyer overrode `Tick()`, which in 1.6 overrides nothing
-  and reaches an empty base — the flyer would have hung in the air over its target. It now
+  and reaches an empty base: the flyer would have hung in the air over its target. It now
   overrides `TickInterval` and advances two ticks per game tick, as before.
 - **The sexie changes shape again.** `ThingComp.PostDeSpawn` gained a `DestroyMode`, so the hook
   that turns the broken human form into the scorpion quietly stopped overriding anything. The
@@ -80,7 +80,7 @@ Ported from andery233xj, Frolg, DongFang and Ninedaylongbow's
 - Every one of the nine Harmony patch targets was verified against the 1.6 assemblies by
   reflection before anything was compiled. All nine survived unchanged.
 
-### Added — French, translation gate and validation
+### Added: French, translation gate and validation
 
 - Complete French DefInjected coverage, including inherited jobs, anatomy, attacks, incident
   letters and generated gene names. English overrides for the remaining Chinese names and
@@ -98,7 +98,7 @@ Ported from andery233xj, Frolg, DongFang and Ninedaylongbow's
   references now fail the process; two negative controls verify those exit codes.
 - The recursive Workshop search for Harmony was replaced by a bounded lookup and an explicit path.
 
-### Added — a test suite and a test protocol
+### Added: a test suite and a test protocol
 
 - `TESTING.md` is 28 scenarios, ordered so each leaves the save in the state the next one needs,
   covering the four beasts, the chicken, the twelve genes, the bench, the schedule and the save.
@@ -119,11 +119,11 @@ Ported from andery233xj, Frolg, DongFang and Ninedaylongbow's
   now, the nian beast within the hour, the sixty-day interval cleared, and the beast clock printed
   to the log. `CompSZBeastDebug` and its def entry are gone.
 
-### Changed — English text
+### Changed: English text
 
 - **The beasts have their names.** The original English was machine-translated: the qiongqi was
   "Pauper", the sexie "Sex evil", and the mingshe was called "Ming Snake", "Snake Snake", "song
-  snake" and — in one recipe — "Naruto". They are now mingshe, qiongqi, sexie, nian beast and
+  snake" and (in one recipe) "Naruto". They are now mingshe, qiongqi, sexie, nian beast and
   Pleiades star officer.
 - Every label and description was rewritten. Content the Chinese carried and the English had lost
   is back: the tip about the Pleiades star officer, the five clone beasts' own descriptions (the
@@ -132,17 +132,17 @@ Ported from andery233xj, Frolg, DongFang and Ninedaylongbow's
 - **Labels that were Chinese in every language are now translatable.** 91 body-part names, every
   beast's melee tools, the firecracker's throw verb and the flame projectiles sat in the defs in
   Chinese, where no translation could reach them. They now hold vanilla's English wording, and
-  the authors' Chinese moved into `Languages/ChineseSimplified/DefInjected/` — including a
+  the authors' Chinese moved into `Languages/ChineseSimplified/DefInjected/`, including a
   `BodyDef/` folder the original did not have.
 
-### Fixed — defects present in the original
+### Fixed: defects present in the original
 
 - **A comp that threw on every destroy.** `CompCauseGameCondition_WithLetter` read a private
   field off a class it does not derive from, so its `PostDestroy` raised `ArgumentException` and
   its message never appeared. No def uses the comp, which is why it went unnoticed.
 - **A null reference on a player-faction mingshe.** The permanent-drought comp only creates its
   condition for non-player beasts, then ended it unconditionally on despawn.
-- **The mingshe's sound wave described itself as a flamethrower** — its description was a copy of
+- **The mingshe's sound wave described itself as a flamethrower**: its description was a copy of
   the nian beast's.
 - **The monstrous strength hediff described the opposite of what it does.** It claimed to weaken
   enemies; it doubles the bearer's unarmed melee damage, which is what the Chinese says.
@@ -150,7 +150,7 @@ Ported from andery233xj, Frolg, DongFang and Ninedaylongbow's
   index where RimWorld resolves it by label handle.
 - Two Chinese translation keys pointing at a research project that does not ship were removed.
 
-### Changed — packaging
+### Changed: packaging
 
 - `Storyteller.png` went from 2192×2343 and 5.6 MB to 1160×1240, twice the 580×620 the game draws
   it at; `BeastGeneExtractor.png` from 5334×5334 to 1344×1344. The mod is 6 MB instead of 13 MB.

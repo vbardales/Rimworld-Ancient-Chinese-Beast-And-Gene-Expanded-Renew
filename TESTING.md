@@ -16,8 +16,8 @@ can show.
 
 Some evidence remains inherently human: whether animation, particle effects, a sound, text
 clipping or a translated phrase looks or sounds right. Even then the Gherkin scenario must still
-prepare the exact moment — for example a sexie at its transformation, a qiongqi starting its
-flight, or a mingshe dying with drought active — and capture it. Manual play is an exception for a
+prepare the exact moment (for example a sexie at its transformation, a qiongqi starting its
+flight, or a mingshe dying with drought active) and capture it. Manual play is an exception for a
 missing automation capability or a private pre-existing save; it never substitutes for scenario
 setup. Record the exception, its reason and the exact evidence to inspect in `Tests/Pickle/README.md`.
 
@@ -101,7 +101,7 @@ them happening (`docs/runs/`); **no person has yet observed any of it.**
 
 ---
 
-## Block A — it loads at all
+## Block A: it loads at all
 
 ### A1. The mod loads without errors
 
@@ -124,7 +124,7 @@ ship; you are only checking that they are present, not each one.
 
 ---
 
-## Block B — the beasts arrive
+## Block B: the beasts arrive
 
 The incidents have `baseChance` zero: the storyteller never rolls them. They are fired by the mod's
 own clock (see block F), so the only practical way to see one is the development menu.
@@ -178,7 +178,7 @@ onto the scheduling state, and every claim in block F is a claim about that stat
 
 ---
 
-## Block C — each beast fights its own way
+## Block C: each beast fights its own way
 
 Spawn the beasts directly for these (debug "Spawn pawn"), rather than waiting for incidents. Use a
 throwaway save: several of these are meant to kill colonists.
@@ -274,7 +274,7 @@ break a door down to reach someone indoors.
 
 ---
 
-## Block D — the chicken
+## Block D: the chicken
 
 ### D1. The Pleiades star officer wanders past and can be tamed
 
@@ -302,7 +302,7 @@ break a door down to reach someone indoors.
 
 ---
 
-## Block E — genes, cloning and the bench
+## Block E: genes, cloning and the bench
 
 ### E1. The research is where it says it is
 
@@ -363,7 +363,7 @@ raider.
 
 ---
 
-## Block F — the schedule, which needs patience or a save editor
+## Block F: the schedule, which needs patience or a save editor
 
 These are the slowest and the least certain. Do them last, or not at all on a first pass.
 
@@ -394,7 +394,7 @@ Scenario B3 is the shortcut; this is the real thing, and worth one confirmation.
 
 ---
 
-## Block G — the save
+## Block G: the save
 
 ### G1. The mod's own state survives a save and reload
 
@@ -412,7 +412,7 @@ after a reload, or a drought that comes back without its causer, is a failure he
 
 ---
 
-## Block H — A Dog Said... Animal Prosthetics 2 (optional)
+## Block H: A Dog Said... Animal Prosthetics 2 (optional)
 
 ### H1. The tame clones and the chicken get its prosthetics, the hostile beasts do not
 
@@ -428,7 +428,7 @@ no such recipe on its race. Without the other mod, nothing in this block exists 
 
 ---
 
-## Block I — the beasts rest and breed (from 2026-09-25)
+## Block I: the beasts rest and breed (from 2026-09-25)
 
 ### I1. A tired tame beast lies down; a hostile one has the need
 

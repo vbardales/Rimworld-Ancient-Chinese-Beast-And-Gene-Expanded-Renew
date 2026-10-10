@@ -2,8 +2,8 @@
 
 UNOFFICIAL. This mod is published without the original author's explicit consent. If the original author contacts me to request its removal, I undertake to take it down promptly.
 
-A RimWorld 1.6 port of **山海志怪-华夏凶兽和基因扩展 — Ancient Chinese Beast And Gene Expanded**
-by **andery233xj, Frolg, DongFang and Ninedaylongbow** — Steam Workshop
+A RimWorld 1.6 port of **山海志怪-华夏凶兽和基因扩展 - Ancient Chinese Beast And Gene Expanded**
+by **andery233xj, Frolg, DongFang and Ninedaylongbow**, Steam Workshop
 [3292446841](https://steamcommunity.com/sharedfiles/filedetails/?id=3292446841), last supporting
 1.5.
 
@@ -31,7 +31,7 @@ Each one fights differently, and none of them fights like a vanilla animal.
 **The mingshe** will not attack. It brings a permanent drought instead: full sun, no rain, and
 every plant on the map taking rot damage every in-game hour until it is dead. Anima trees,
 Gauranlen trees and polux trees are spared. At range it screams a cone of sound that dazes; up
-close it bites with venom. Every so often it raises a wind shield — a ten-tile ring that cuts
+close it bites with venom. Every so often it raises a wind shield: a ten-tile ring that cuts
 anything inside it and throws every shot fired from outside straight back at whoever fired it.
 
 **The qiongqi** dodges half of everything, hunts the furthest shooter it can see rather than the
@@ -40,15 +40,15 @@ cutting everything within four tiles. It aims for the head.
 
 **The sexie** arrives as a person. That shape does not attack; it stands there and, every so
 often, sends out an aura that drives every psychically sensitive colonist within eleven tiles
-berserk against their own friends. Kill that shape and the scorpion crawls out of it — a second,
+berserk against their own friends. Kill that shape and the scorpion crawls out of it: a second,
 angrier pawn that fires venomous tail-needles through walls and pincers anything that closes.
 
 **The nian beast** takes a tenth of the damage from anything that is not a firecracker, and a
-thousandfold multiplier from anything that is — the two together mean firecrackers are the only
+thousandfold multiplier from anything that is, and the two together mean firecrackers are the only
 weapon that meaningfully hurts it. It breathes a cone of fire that spawns a wave of small flame
 projectiles.
 
-Each of the four also exists as a tame version, cloned at the extractor — same abilities, on your
+Each of the four also exists as a tame version, cloned at the extractor, with the same abilities, on your
 side, with an AI that will use its ranged ability while it fights in melee.
 
 **Optional: A Dog Said... Animal Prosthetics 2** ([Workshop 3238353862](https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862)).
@@ -75,8 +75,8 @@ Each crow also kills one sexie on the map outright. That is not a metaphor.
 
 ## The genes
 
-Kill a beast, keep the corpse, research **beast gene extraction** — 1000 points, Spacer,
-hi-tech bench plus multi-analyzer, after Archogenetics — and the **beast gene extractor** will
+Kill a beast, keep the corpse, research **beast gene extraction** (1000 points, Spacer,
+hi-tech bench plus multi-analyzer, after Archogenetics) and the **beast gene extractor** will
 pull one of twelve genes out of a corpse as a genepack:
 
 | beast | genes |
@@ -102,7 +102,7 @@ arrivals over big threats, and on top of her own schedule she sends a beast at y
 days regardless.
 
 Under any other storyteller the beasts still come, but rarely: one roll a day at 1%, and never
-within sixty days of the last one — so the first is unlikely before day 160 or so. (The beasts'
+within sixty days of the last one, so the first is unlikely before day 160 or so. (The beasts'
 own descriptions say "a year after the colony is established". That is the authors' flavour
 text, not the schedule the code runs.)
 

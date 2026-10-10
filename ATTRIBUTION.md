@@ -1,15 +1,15 @@
-# Ancient Chinese Beast And Gene Expanded — what was taken, and what was changed
+# Ancient Chinese Beast And Gene Expanded: what was taken, and what was changed
 
 ## Source
 
 | | |
 |---|---|
-| Mod | 山海志怪-华夏凶兽和基因扩展 — Ancient Chinese Beast And Gene Expanded |
+| Mod | 山海志怪-华夏凶兽和基因扩展 - Ancient Chinese Beast And Gene Expanded |
 | Authors | andery233xj (data and mechanics), Frolg (art), 玖日长弓 / Ninedaylongbow (creature events, item text, announcement), 东方 / DongFang (sponsor) |
 | Workshop | [3292446841](https://steamcommunity.com/sharedfiles/filedetails/?id=3292446841) |
 | `packageId` | `andery233xj.AncientChineseBeast` |
 | `supportedVersions` | 1.4, 1.5 |
-| Licence | **none declared** — see `LICENSE` for what that means here |
+| Licence | **none declared**: see `LICENSE` for what that means here |
 
 ### On the licence
 
@@ -71,8 +71,8 @@ The breakage was elsewhere. Five changes the compiler caught, and two it did not
 
 ### The compiler caught these
 
-- **`GenExplosion.DoExplosion`** gained two parameters in the middle of its list —
-  `postExplosionGasRadiusOverride` and `postExplosionGasAmount` — so both all-positional calls
+- **`GenExplosion.DoExplosion`** gained two parameters in the middle of its list
+  (`postExplosionGasRadiusOverride` and `postExplosionGasAmount`), so both all-positional calls
   landed two slots off from the fifteenth argument on. Rewritten with named arguments, which
   cannot slip again.
 - **`PathFinder.FindPath` → `FindPathNow`**, and the type moved from `Verse.AI` to `Verse`.
@@ -97,7 +97,7 @@ simply never runs.
 - **`ThingComp.PostDeSpawn(Map)` became `PostDeSpawn(Map, DestroyMode)`.** Two overrides went
   quiet:
   - `CompSeXieExpansion.PostDeSpawn` is the sexie's second phase. The human form would have died
-    without ever becoming the scorpion — half the boss fight, gone with no error message.
+    without ever becoming the scorpion: half the boss fight, gone with no error message.
   - `CompCausePermanentGameCondition.PostDeSpawn` ends the mingshe's drought. The condition would
     have outlived its causer with nothing left to end it.
 
@@ -148,7 +148,7 @@ at the end of the chicken's description.
 they sat in the defs where no translation could reach them: 91 body-part `customLabel`s across
 the four body defs, every melee tool on every beast, the firecracker's throw verb, and the flame
 and firecracker projectiles. These now hold vanilla's English wording, and the authors' Chinese
-was moved into `Languages/ChineseSimplified/DefInjected/`, where it belongs — including a
+was moved into `Languages/ChineseSimplified/DefInjected/`, where it belongs, including a
 `BodyDef/` folder the original did not have. Nothing was lost on the Chinese side; 302 injection
 keys resolve, checked with `scripts/Check-DefInjected.ps1`.
 
@@ -158,7 +158,7 @@ Two were rescaled; the originals are kept under `Art/textures-original/`.
 
 | | was | is | drawn at |
 |---|---|---|---|
-| `Storyteller.png` | 2192×2343, 5.6 MB | 1160×1240, 1.6 MB | 580×620 — `Storyteller.PortraitSizeLarge` |
+| `Storyteller.png` | 2192×2343, 5.6 MB | 1160×1240, 1.6 MB | 580×620 (`Storyteller.PortraitSizeLarge` |
 | `BeastGeneExtractor.png` | 5334×5334, 1.5 MB | 1344×1344, 293 KB | 10.5 cells |
 
 The mod went from 13 MB to 6 MB. Nothing else was touched.
@@ -169,32 +169,32 @@ None of these are 1.6 regressions; they are in the 1.5 mod as shipped. Fixed whe
 unambiguous, listed here either way.
 
 - **`CompCauseGameCondition_WithLetter.PostDestroy` threw every time it ran.** It read the private
-  `condition` field off `CompCausePermanentGameCondition` — a different class in the same mod,
-  which this comp does not derive from — so `FieldInfo.GetValue` raised `ArgumentException` and
+  `condition` field off `CompCausePermanentGameCondition` (a different class in the same mod,
+  which this comp does not derive from), so `FieldInfo.GetValue` raised `ArgumentException` and
   the message it exists to post never appeared. Nobody ever saw it, because **no def uses this
   comp**. Rewritten against its own base class's public `CausedConditions`.
 - **`CompCausePermanentGameCondition.PostDeSpawn` could throw a null reference.** The condition is
-  only created when the causer does not belong to the player, so a player-faction mingshe —
-  from the clone recipe, or from dev mode — had none to end. Guarded.
+  only created when the causer does not belong to the player, so a player-faction mingshe
+  (from the clone recipe, or from dev mode) had none to end. Guarded.
 - **The mingshe's sound wave described itself as a flamethrower.** `SZ_MingShe_SoundWave`'s
   description was a copy of `SZ_YearBeast_Flamethrower`'s, "Sprays flames in a fan-shaped area".
   Rewritten from the Chinese.
 - **The monstrous strength hediff described the opposite of what it does.** `SZ_Strength` said it
   confused enemies and cut their combat ability; its one stage gives the *bearer* a
-  `MeleeDamageFactor` of 2, and the Chinese agrees — 提高徒手搏斗能力, "improves unarmed fighting".
+  `MeleeDamageFactor` of 2, and the Chinese agrees: 提高徒手搏斗能力, "improves unarmed fighting".
   Rewritten to match the code.
 - **The Pleiades crow thought was never translated.** The Chinese keys addressed the thought's
   single stage as `stages.0`, and RimWorld resolves a stage by its label handle when it has one.
   Repointed at the real handle.
 - **A research project that does not exist.** The Chinese translation carries a label and a
   description for `SZ_AntiChineseBeastWeapon`, "research how to make anti-beast weapons". No such
-  def ships, and the two rifles have no recipe and no research gate — they are trade and reward
+  def ships, and the two rifles have no recipe and no research gate: they are trade and reward
   items only. The two orphan keys were removed; the missing research was not invented.
 - **A keyed string nothing uses.** `SZ_CannotReachBuildingToExtractGene`, in the English `Keyed`
   file, is referenced from neither the C# nor the defs. Left alone.
 - **A cache that never caches.** `CompAbilityEffect_SectorCells.GetSectorCells` compares against a
-  `radiusCache` it never assigns, and fills its result cache with `resultCache.AddRange(resultCache)`
-  — the list added to itself. The cache branch is unreachable and the cache is always empty. It
+  `radiusCache` it never assigns, and fills its result cache with `resultCache.AddRange(resultCache)`:
+  the list added to itself. The cache branch is unreachable and the cache is always empty. It
   costs nothing and was left as it is.
 - **Two of the three debug buttons did nothing.** `CompSZBeastDebug`, a comp on the firecracker,
   added 120 or 1 200 000 to `Singleton.nextBeastTimeHours`. That field is incremented every hour
@@ -231,7 +231,7 @@ against the 1.6 assemblies by reflection. All five came back clean:
 
 | | |
 |---|---|
-| `Check-XmlFields.ps1` | every element maps to a field on the 1.6 class — 52 files |
+| `Check-XmlFields.ps1` | every element maps to a field on the 1.6 class: 52 files |
 | `Check-XmlClasses.ps1` | all 83 types named from the XML resolve |
 | `Check-DefRefs.ps1` | 108 defs, 7 abstract parents; every reference resolves, to the right def type |
 | `Check-TypeRefs.ps1` | 49 references to types outside RimWorld, none of them to a third-party mod |
