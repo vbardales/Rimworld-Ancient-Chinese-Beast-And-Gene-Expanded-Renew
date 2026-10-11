@@ -27,6 +27,7 @@
 # Run under wsl-deps.sanctuary.map (the Backlot's minimum list), which makes the feature skip itself in every other pass.
 @review
 @requires:nelim.sanctuarybacklot
+@requires:nelim.pickletools.screenshotmode
 Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
 
   Background:
@@ -54,10 +55,10 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Lan" stands at (152, 96) facing East
     And Nelim's Pickle Tools: "Lan" facial expression is "normal"
     And Nelim's Pickle Tools: I frame the cell (155, 97) at zoom 6
-    And Ancient Chinese Beast: time is paused
-    And Ancient Chinese Beast: the map is shown alone for a capture
+    And Nelim's Pickle Tools: time is paused for the capture
+    And Nelim's Pickle Tools: the map is shown alone for a capture
     When I take a screenshot "gallery-1-dawn-crow"
-    And Ancient Chinese Beast: the interface is shown again
+    And Nelim's Pickle Tools: the interface is shown again
 
   Scenario: gallery 2 - the four beasts in the south enclosure
     Given I set the hour to 10
@@ -72,7 +73,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Ancient Chinese Beast: I spawn the pawn "SZ_QiongQi" at (145, 212) facing East
     And Ancient Chinese Beast: I spawn the pawn "SZ_YearBeast" at (154, 214) facing West
     And Ancient Chinese Beast: I spawn the pawn "SZ_SeXieInsect" at (162, 217) facing West
-    And Ancient Chinese Beast: time is paused
+    And Nelim's Pickle Tools: time is paused for the capture
     And a colonist "Ren" exists
     And Nelim's Pickle Tools: "Ren" gender is male
     And Nelim's Pickle Tools: "Ren" body type is Male
@@ -85,9 +86,9 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Ren" stands at (158, 208) facing South
     And Nelim's Pickle Tools: "Ren" facial expression is "normal"
     And Nelim's Pickle Tools: I frame the cell (149, 214) at zoom 12
-    And Ancient Chinese Beast: the map is shown alone for a capture
+    And Nelim's Pickle Tools: the map is shown alone for a capture
     When I take a screenshot "gallery-2-four-beasts"
-    And Ancient Chinese Beast: the interface is shown again
+    And Nelim's Pickle Tools: the interface is shown again
 
   Scenario: gallery 3 - the qiongqi picks out the farthest colonist
     Given I set the hour to 12
@@ -100,7 +101,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: all animals are removed
     And Ancient Chinese Beast: I spawn the pawn "SZ_QiongQi" at (166, 143) facing East
-    And Ancient Chinese Beast: time is paused
+    And Nelim's Pickle Tools: time is paused for the capture
     And a colonist "Lan" exists
     And Nelim's Pickle Tools: "Lan" gender is female
     And Nelim's Pickle Tools: "Lan" body type is Female
@@ -113,9 +114,9 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Lan" facial expression is "normal"
     And Ancient Chinese Beast: the colonist "Lan" is added to the pawns
     And Nelim's Pickle Tools: I frame the cell (171, 143) at zoom 11
-    When Ancient Chinese Beast: the map is shown alone for a capture
+    When Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-3-flying-strike"
-    And Ancient Chinese Beast: the interface is shown again
+    And Nelim's Pickle Tools: the interface is shown again
 
   Scenario: gallery 4 - the nian beast breathes fire at a muffalo
     Given I set the hour to 14
@@ -145,10 +146,10 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     When Ancient Chinese Beast: pawn 1 breathes fire at pawn 2
     And Nelim's Pickle Tools: I let 30 ticks pass
     Then Ancient Chinese Beast: a thing "SZ_YearBeastFlame" exists within 5 seconds
-    And Ancient Chinese Beast: time is paused
-    And Ancient Chinese Beast: the map is shown alone for a capture
+    And Nelim's Pickle Tools: time is paused for the capture
+    And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-4-fire-breath"
-    And Ancient Chinese Beast: the interface is shown again
+    And Nelim's Pickle Tools: the interface is shown again
 
   Scenario: gallery 5 - the wind barrier throws back a shot
     Given I set the hour to 16
@@ -176,10 +177,10 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     When Ancient Chinese Beast: the wind barrier of pawn 1 is raised
     And Ancient Chinese Beast: pawn 2 shoots at pawn 1
     Then Ancient Chinese Beast: a projectile launched by pawn 1 is in flight within 10 seconds
-    And Ancient Chinese Beast: time is paused
-    And Ancient Chinese Beast: the map is shown alone for a capture
+    And Nelim's Pickle Tools: time is paused for the capture
+    And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-5-wind-barrier"
-    And Ancient Chinese Beast: the interface is shown again
+    And Nelim's Pickle Tools: the interface is shown again
 
   Scenario: gallery 6 - the scorpion sexie and the ring of its aura
     Given I set the hour to 18
@@ -201,13 +202,13 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Ren" wears "Apparel_Pants" dyed rgb (44, 40, 48)
     And Nelim's Pickle Tools: "Ren" stands at (146, 171) facing East
     And Ancient Chinese Beast: I spawn the pawn "SZ_SeXieInsect" at (151, 172) with its aura clock at zero
-    And Ancient Chinese Beast: time is paused
+    And Nelim's Pickle Tools: time is paused for the capture
     And Nelim's Pickle Tools: I frame the cell (150, 172) at zoom 11
     When Ancient Chinese Beast: pawn 1 is sent berserk as the aura does
-    And Ancient Chinese Beast: time is paused
-    And Ancient Chinese Beast: the map is shown alone for a capture
+    And Nelim's Pickle Tools: time is paused for the capture
+    And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-6-sexie-aura"
-    And Ancient Chinese Beast: the interface is shown again
+    And Nelim's Pickle Tools: the interface is shown again
 
   Scenario: gallery 7 - the gene extractor in the postindustrial workshop
     Given I set the hour to 12
@@ -221,7 +222,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: all animals are removed
     And Nelim's Sanctuary: the sanctuary "postindustrial-workshop" is emptied
     And Nelim's Sanctuary: the roof is removed from the sanctuary "postindustrial-workshop"
-    And Ancient Chinese Beast: time is paused
+    And Nelim's Pickle Tools: time is paused for the capture
     And Ancient Chinese Beast: I place a powered "SZ_BeastGeneExtractor" of the player's centred at x=229 z=214
     And Nelim's Pickle Tools: I place the decor "ArchiteCapsule" at (228, 211)
     And Nelim's Pickle Tools: I place the decor "ArchiteCapsule" at (229, 211)
@@ -236,7 +237,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Lan" wears "Apparel_Pants" dyed rgb (50, 50, 56)
     And Nelim's Pickle Tools: "Lan" stands at (232, 214) facing West
     And Nelim's Pickle Tools: I frame the cell (229, 214) at zoom 10
-    And Ancient Chinese Beast: the map is shown alone for a capture
+    And Nelim's Pickle Tools: the map is shown alone for a capture
     When I take a screenshot "gallery-7-extractor"
-    And Ancient Chinese Beast: the interface is shown again
+    And Nelim's Pickle Tools: the interface is shown again
     And Nelim's Pickle Tools: the decor is removed

@@ -10,17 +10,10 @@ namespace AncientChineseBeast.PickleSteps
 {
     // Steps of the staged Workshop gallery (feature 24, played on the Sanctuary fixture). The place, the decor, the colonists'
     // look and the camera are Nelim's Sanctuary / Nelim's Pickle Tools steps; what is left here is what only this mod knows:
-    // a beast placed and turned on a cell, a qiongqi caught in its flight, and the capture helpers that animal-photograph
-    // suites share (written in Animal Ark's suite first, copied here and reported to Pickle Tools for Elsewhere/).
+    // a beast placed and turned on a cell.
     [PickleSteps]
     public sealed class GallerySteps
     {
-        private static readonly Dictionary<Window, bool> WindowFlags = new Dictionary<Window, bool>();
-        private static bool screenshotWasActive;
-        private static bool screenshotOn;
-        private static TimeSpeed savedSpeed = TimeSpeed.Normal;
-        private static bool paused;
-
         private static Pawn Nth(PickleContext ctx, int number)
         {
             var list = SpawnSteps.TryGet(ctx);
@@ -129,79 +122,6 @@ namespace AncientChineseBeast.PickleSteps
             ctx.Assert(weapon != null, $"{weaponDefName} is not a weapon with comps");
             pawn.equipment.AddEquipment(weapon);
             ctx.Assert(pawn.equipment.Primary != null, $"{pawn.LabelShort} holds no weapon after being armed");
-        }
-
-        // What the qiongqi's own AI does: the ability job, ordered at a pawn. The step lets the game run until the flying
-        // thing exists, a few ticks more so that it is between the two ends of its path, then pauses. The wait is the
-        // game's own ticks (Pickle drives them even paused) with a real-time cap, like Stage.WaitGameSeconds.
-        [When("Ancient Chinese Beast: the qiongqi pawn {int} is caught in flight at pawn {int} within {int} seconds", TimeoutSeconds = 330f)]
-        public async Task CaughtInFlight(PickleContext ctx, int qiongqiNumber, int targetNumber, int seconds)
-        {
-            var qiongqi = Nth(ctx, qiongqiNumber);
-            var target = Nth(ctx, targetNumber);
-            var map = Stage.CurrentMap(ctx);
-            var ability = qiongqi.abilities?.GetAbility(DefDatabase<AbilityDef>.GetNamedSilentFail("SZ_QiongQi_FlyingStrike"));
-            ctx.Assert(ability != null, $"{qiongqi.def.defName} has no flying strike ability");
-            qiongqi.jobs.ClearQueuedJobs();
-            qiongqi.jobs.TryTakeOrderedJob(ability.GetJob(target, target.Position), JobTag.Misc);
-            var flyer = ThingDef.Named("SZ_QQPawnFlyingStrike");
-            await Stage.WaitGameSeconds(ctx, () => map.listerThings.ThingsOfDef(flyer).Any(), seconds, 300, 1);
-            ctx.Assert(map.listerThings.ThingsOfDef(flyer).Any(), $"the qiongqi never took off; {Stage.LastWaitReport}");
-            await ctx.WaitTicks(8);
-            if (!paused) { savedSpeed = Find.TickManager.CurTimeSpeed; paused = true; }
-            Find.TickManager.CurTimeSpeed = TimeSpeed.Paused;
-            await ctx.WaitFrames(3);
-        }
-
-        // Freezes the beasts once placed, so that one does not eat its neighbour before the picture.
-        [When("Ancient Chinese Beast: time is paused", TimeoutSeconds = 30f)]
-        public async Task Pause(PickleContext ctx)
-        {
-            if (!paused) { savedSpeed = Find.TickManager.CurTimeSpeed; paused = true; }
-            Find.TickManager.CurTimeSpeed = TimeSpeed.Paused;
-            await ctx.WaitFrames(3);
-        }
-
-        // A capture of the map and nothing else: the game's own screenshot mode, with every open window (the Pickle
-        // launcher panel and the log viewer included) told not to draw in it.
-        [When("Ancient Chinese Beast: the map is shown alone for a capture", TimeoutSeconds = 30f)]
-        public async Task MapAlone(PickleContext ctx)
-        {
-            Restore();
-            var root = Find.UIRoot;
-            ctx.Require(root?.screenshotMode != null, "no UIRoot screenshot mode is available");
-            foreach (var window in Find.WindowStack.Windows.ToList())
-            {
-                WindowFlags[window] = window.drawInScreenshotMode;
-                window.drawInScreenshotMode = false;
-            }
-            screenshotWasActive = root.screenshotMode.Active;
-            root.screenshotMode.Active = true;
-            screenshotOn = true;
-            await ctx.WaitFrames(3);
-        }
-
-        [When("Ancient Chinese Beast: the interface is shown again")]
-        public void InterfaceBack(PickleContext ctx)
-        {
-            Restore();
-        }
-
-        [AfterScenario]
-        public void RestoreAfterScenario()
-        {
-            Restore();
-        }
-
-        private static void Restore()
-        {
-            foreach (var pair in WindowFlags)
-                if (pair.Key != null) pair.Key.drawInScreenshotMode = pair.Value;
-            WindowFlags.Clear();
-            if (screenshotOn && Find.UIRoot?.screenshotMode != null) Find.UIRoot.screenshotMode.Active = screenshotWasActive;
-            screenshotOn = false;
-            if (paused && Find.TickManager != null) Find.TickManager.CurTimeSpeed = savedSpeed;
-            paused = false;
         }
     }
 }
