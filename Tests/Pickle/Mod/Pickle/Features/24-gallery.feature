@@ -109,10 +109,10 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Lan" has the gene "Eyes_Golden"
     And Nelim's Pickle Tools: "Lan" wears "Apparel_Robe" dyed rgb (46, 125, 98)
     And Nelim's Pickle Tools: "Lan" wears "Apparel_Pants" dyed rgb (50, 50, 56)
-    And Nelim's Pickle Tools: "Lan" stands at (182, 143) facing West
+    And Nelim's Pickle Tools: "Lan" stands at (177, 143) facing West
     And Nelim's Pickle Tools: "Lan" facial expression is "normal"
     And Ancient Chinese Beast: the colonist "Lan" is added to the pawns
-    And Nelim's Pickle Tools: I frame the cell (174, 143) at zoom 9
+    And Nelim's Pickle Tools: I frame the cell (171, 143) at zoom 11
     When Ancient Chinese Beast: the map is shown alone for a capture
     And I take a screenshot "gallery-3-flying-strike"
     And Ancient Chinese Beast: the interface is shown again
