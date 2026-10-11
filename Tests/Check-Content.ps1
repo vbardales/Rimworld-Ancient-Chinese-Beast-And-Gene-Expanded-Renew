@@ -6,17 +6,15 @@ function Assert-Content([bool]$Condition, [string]$Message) {
     $script:checks++
     if (-not $Condition) { $failures.Add($Message) }
 }
+# The generic checks (XML well formed, no duplicate defName, About.xml shape and suffix, ATTRIBUTION/LICENSE, images,
+# PublishedFileId) live in the shared script; what follows is what only this mod knows.
+& pwsh -NoProfile -File "$PSScriptRoot/../../scripts/Check-ModBasics.ps1" -ModRoot (Resolve-Path "$PSScriptRoot/..").Path -Unofficial -OriginalWorkshopId 3292446841
+if ($LASTEXITCODE -ne 0) { exit 1 }
 $files = @(Get-ChildItem -LiteralPath $ModPath -Recurse -Filter *.xml -File)
-Assert-Content ($files.Count -gt 0) 'No XML files found.'
 $defs = @()
 foreach ($file in $files) {
-    try { $doc = [xml](Get-Content -LiteralPath $file.FullName -Raw) }
-    catch { Assert-Content $false "Malformed XML: $($file.FullName)"; continue }
-    Assert-Content $true "XML: $($file.Name)"
-    if ($doc.DocumentElement.Name -eq 'Defs') { $defs += @($doc.SelectNodes('/Defs/*[defName]')) }
-}
-foreach ($group in ($defs | Group-Object { "$($_.Name)/$($_.defName)" })) {
-    Assert-Content ($group.Count -eq 1) "Duplicate definition: $($group.Name)"
+    $doc = [xml](Get-Content -LiteralPath $file.FullName -Raw)
+    if ($doc.DocumentElement.Name -eq "Defs") { $defs += @($doc.SelectNodes("/Defs/*[defName]")) }
 }
 $genes = @($defs | Where-Object Name -eq GeneDef | ForEach-Object { [string]$_.defName })
 $recipes = @($defs | Where-Object { $_.Name -eq 'RecipeDef' -and $_.ParentName -eq 'SZ_ExtractGeneRecipe' })
@@ -41,7 +39,6 @@ $about = [xml](Get-Content -LiteralPath (Join-Path $ModPath 'About/About.xml') -
 $url = [string]$about.ModMetaData.url
 Assert-Content ($url -match '^https://github\.com/[^/]+/[^/]+/?$') 'Metadata must link to the GitHub repository.'
 Assert-Content ($url.Length -gt 0 -and $about.ModMetaData.description.Contains($url)) 'Description must include the repository URL.'
-Assert-Content ($about.ModMetaData.name.EndsWith('(unofficial)')) 'The unofficial continuation suffix is missing.'
 foreach ($dependency in 'brrainz.harmony','Ludeon.RimWorld.Biotech') {
     Assert-Content ($dependency -in @($about.ModMetaData.modDependencies.li.packageId)) "Missing dependency: $dependency"
 }
