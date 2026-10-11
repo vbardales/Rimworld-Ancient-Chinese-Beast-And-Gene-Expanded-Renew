@@ -1,7 +1,7 @@
 # Runtime behavior inventory and review contract
 
 Run `pwsh -NoProfile -File Tests/Run-All.ps1` first for the automated content, Harmony, override
-and XML checks. The six XML validators are versioned in `Tests/Xml/`; no monorepo is needed.
+and XML checks. Two XML validators are versioned in `Tests/Xml/`, the other four are run from the protocols repository `scripts/` (sibling folder of the mod).
 These static checks do not execute gameplay. The following scenarios require a running game.
 
 ## Automation first

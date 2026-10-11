@@ -1,18 +1,15 @@
-# XML validator snapshot
+# Local XML validators
 
-These six scripts were copied from the local `rimworld/scripts` collection on 2026-09-12.
-`upstream.json` records each source path and SHA-256 before local changes. They are versioned
-here so a fresh checkout has everything needed; no sibling checkout, symlink or download is used.
-They are development tools outside `Mod/`, so the Workshop upload does not include them.
+Two scripts stay here, copied from the shared `rimworld/scripts` collection on 2026-09-12 (`upstream.json` records
+their source and SHA-256): `Check-DefRefs.ps1` and `Check-XmlClasses.ps1`. They carry local changes the shared copies
+do not have, so this mod keeps them until Audit workflow merges those changes into `scripts/`:
 
-Local changes: `Check-XmlClasses.ps1` and `Check-DefRefs.ps1` now return exit code 1 when they
-report findings, and 0 on success. The original scripts printed findings without failing the
-process. `Run-All.ps1` runs each checker in its own PowerShell process and propagates failures.
-The class-name index is generated from the installed game and freshly built mod at each run,
-inside `build/`; no game assembly or stale type-name list is added to the repository.
+- both return exit code 1 when they report findings, and 0 on success (the shared ones print findings without failing
+  the process; `Test-XmlExitCodes.ps1` and `Run-All.ps1` depend on it);
+- `Check-XmlClasses.ps1` accepts a comma-separated `-TypeLists` (run through `-File`, an array arrives as one string).
 
-To update: obtain a reviewed version of the shared scripts, compare it to this snapshot, retain
-the exit-code fixes, update `upstream.json`, and run `Tests/Run-All.ps1`. Review validator changes
-against their documented limitations; a green static run cannot replace the in-game scenarios.
-For multiple consuming repositories, a dedicated shared-tool repository with pinned versions
-would avoid maintaining copies. Until that exists, this snapshot is the reproducible source.
+The shared copy of `Check-DefRefs.ps1` is newer on one point (it reads `ThingFilter` category lists); the local copy
+lacks it. The other four validators (`Check-ConfigErrors`, `Check-DefInjected`, `Check-TypeRefs`, `Check-XmlFields`)
+are run from `../../scripts/` since 2026-10-11 (owner rule on local scripts, `scripts/LOCAL_SCRIPTS.md`).
+`optional-mod-types.txt` lists the types of the optional mods for `Check-XmlClasses.ps1`. The class-name index is built at
+each run, inside `build/`.

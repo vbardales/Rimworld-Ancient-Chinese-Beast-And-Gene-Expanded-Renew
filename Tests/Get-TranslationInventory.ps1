@@ -7,7 +7,7 @@ param(
 $ErrorActionPreference = 'Stop'
 # Reuse the versioned checker's inheritance, reflection and handle rules. Its path
 # validation runs first; this inventory adds coverage, which that checker cannot prove.
-. "$PSScriptRoot/Xml/Check-DefInjected.ps1" -TransMod $ModPath -Managed $Managed -GameData $GameData -ExtraAssemblies "$ModPath/Assemblies/AncientChineseBeast.dll"
+. "$PSScriptRoot/../../scripts/Check-DefInjected.ps1" -TransMod $ModPath -Managed $Managed -GameData $GameData -ExtraAssemblies "$ModPath/Assemblies/AncientChineseBeast.dll"
 $inventory = [System.Collections.Generic.List[object]]::new()
 function Visit-Text($node, [Type]$type, [string]$path, [string]$defKind) {
     $type = Get-ElementType $node $type

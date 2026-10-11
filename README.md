@@ -154,9 +154,9 @@ genes, friendly clone targets, dependencies, the unofficial suffix and the descr
 link. Five negative controls inject defects into isolated XML copies and require their detection.
 Two more verify that unknown XML classes and parents produce failing validator exit codes.
 
-The six versioned validators in [Tests/Xml](Tests/Xml/README.md) check fields, classes, def
+The XML validators ([Tests/Xml](Tests/Xml/README.md) and the shared `scripts/` of the protocols repository) check fields, classes, def
 references, external types, translation keys and configuration consistency. They need no files
-outside this repository except the installed game and Harmony. Type indexes and test fixtures
+outside this repository except the installed game, Harmony and the sibling `scripts/` of the protocols repository. Type indexes and test fixtures
 stay in `build/`, outside the published mod.
 
 The checks start no game and do not execute gameplay. A clean run validates static contracts;
