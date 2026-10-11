@@ -140,7 +140,7 @@ on a value crossing a process boundary.
 
 1. `dotnet build Source` at the repository root, so the mod assembly the steps reference is current.
 2. `dotnet build Tests/Pickle/Source`, which writes the step DLL into `Mod/Pickle/Assemblies/`.
-3. `powershell.exe -ExecutionPolicy Bypass -File Tests/Pickle/Check-Steps.ps1`: every pattern compiles, none
+3. `pwsh -File ../../scripts/Check-Steps.ps1 -ModRoot .` (the shared script): every pattern compiles, none
    is declared twice or ambiguous, every step that waits declares its deadline, and every feature line
    resolves to exactly one expression. It read 56 patterns and 265 step lines when this was last run.
 4. The owner's word, then a request to the TicketDispatcher, not a launch by hand:

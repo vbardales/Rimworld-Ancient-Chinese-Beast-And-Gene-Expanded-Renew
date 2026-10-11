@@ -48,6 +48,6 @@ carpet), `exhibition-zone` (reserved for a full-screen window, which this mod do
 
 ## State (2026-10-08)
 
-Written and resolved by `Check-Steps.ps1` (all patterns compile, every line resolves against this suite, Pickle and both
+Written and resolved by the shared `scripts/Check-Steps.ps1` (all patterns compile, every line resolves against this suite, Pickle and both
 shared catalogues); first run requested, evidence `2026-10-08d-gallery-1`; no capture seen yet; `Art/Gallery/` holds
 `0-preview.png` only.
