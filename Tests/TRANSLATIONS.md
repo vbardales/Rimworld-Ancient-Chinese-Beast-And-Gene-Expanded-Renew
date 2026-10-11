@@ -8,28 +8,13 @@ to `unchecked` until revalidation. Historical stages do not bypass this gate.
 pwsh -NoProfile -File Tests/Run-All.ps1
 ```
 
-This builds the mod, runs the existing contract checks, then runs
-`Check-Translations.ps1` and `Test-TranslationChecker.ps1`. The translation check first
-calls `Get-TranslationInventory.ps1`, which reuses the versioned injection checker's
-reflection, XML inheritance and translation-handle rules. It writes
-`build/translation-inventory.json`, then compares every inventoried field against French
-and against English source text or English injections. A successful comparison of two
-language directories alone would miss a key absent from both.
+This builds the mod, runs the contract checks, then runs the shared
+`../../scripts/Check-Translations.ps1` (`-ModRoot` this mod). It checks that every Def text
+has a French injection, plus stale and duplicate entries, formatting tokens and Keyed use.
+The mod keeps no local translation checker or inventory since 2026-10-11 (owner rule on local scripts).
 
-The 2026-09-13 inventory contains 370 fields across 19 Def types. It includes nested
-anatomy, attack tools, thought stages, gene-name symbols, incident extensions and inherited
-recipe job strings. There are eight active Keyed entries and one unused legacy entry.
-English overrides are limited to 30 fields whose original values are Chinese or bilingual;
-all other English values come from the Defs. French has an explicit entry for every field.
-
-`Check-Translations.ps1` checks nonempty values, exact-case keys, duplicates, formatting
-parameters, rich-text tags, line-break counts, untranslated CJK text and unreviewed identical
-translations. `mingshe`, `qiongqi`, `explosion` and `tunnel` are deliberately identical.
 The original `SZ_CannotReachBuildingToExtractGene` key is retained for compatibility, with
-no active call site. The four negative controls use isolated copies under `build/` and
-must detect omissions from French, a key omitted from both languages, duplicates and a
-changed parameter index. `-UseExistingInventory` is for those isolated resource fixtures;
-do not use it to certify changed Defs.
+no active call site; `Run-All.ps1` passes it to `-AllowUnused`.
 
 ## Manual source audit
 
@@ -57,7 +42,7 @@ through helpers or parameters. In this version:
   repository documentation are outside the in-game text gate. The unused condition-letter
   comp already exposes a `[MustTranslate]` field and has no active XML instance.
 
-Inspect both the checker output and the inventory. Any `UNVERIFIED`, unknown type, unsupported
+Inspect the checker output. Any `UNVERIFIED`, unknown type, unsupported
 patch or unresolved target in the injection check prevents certifying the affected coverage,
 even if that checker's exit code is zero. Add explicit third-party targets if needed.
 
