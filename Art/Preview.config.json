@@ -53,7 +53,7 @@
     "preSized": true,
     "color": "var(--accent)",
     "width": 300,
-    "height": 260,
+    "height": 200,
     "opacity": 1,
     "veil": false,
     "panelTop": 7,
