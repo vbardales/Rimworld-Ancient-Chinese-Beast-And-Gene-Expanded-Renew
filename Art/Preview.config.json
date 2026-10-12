@@ -59,13 +59,14 @@
     "panelTop": 7,
     "panelRight": 1,
     "panelWidth": 50,
-    "flipX": true
+    "flipX": false
   },
   "iconBadge": {
     "file": "ModIcon-source.png",
     "corner": "bottom-right",
     "width": 220,
     "outline": false,
+    "translate": "12.5%,12.5%",
     "veil": "radial",
     "veilSize": 275,
     "veilRight": -55,
