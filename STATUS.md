@@ -10,7 +10,7 @@ packageId:    nelim.ancientchinesebeastandgeneexpanded
 repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 visibility:   public
 detached:     yes
-workflow_stage: followUp[1.0.0]
+workflow_stage: code[1.1.0]
 social_preview_sha256: d39149d2b12bf4a09c53fbeda175a8155c3cf61bf394c9309394e720496db79c
 echo_review_sha: aa3be1896d12bc22ee330dfeacec30ff9e1c5328  # 2026-10-13, 10.a: echo kept
 publication_changelog_review_sha: 5bed84a774984f2711ba3048ce90046038b30fcc
@@ -106,7 +106,7 @@ remaining:
       C# nor the defs. Inherited, left alone
 session:      local_ecc57511-3350-4f1d-9e1d-979c259d1b6b
 updated:      2026-10-10
-protocols_read_sha: c434483866a417b4b80e33a9bdc9a84361c23d77
+protocols_read_sha: 7280b730fd35c2d457469a630fb4011941188dfa
 ---
 
 # Ancient Chinese Beast And Gene Expanded Renew: status
@@ -146,6 +146,10 @@ Run [38369937487](https://github.com/vbardales/Rimworld-Ancient-Chinese-Beast-An
 ### Non-regression 1.0.0 (14.a) - 2026-10-13
 
 Item public (owner, 2026-10-13); the Steam API still answered `result 9` (not readable) a few minutes after, so the public page is not read yet. Gallery uploaded by the owner. Six requests filed on revision `ff3ecbd` (Mod and Source unchanged since): English `20261013-104025-715-5390` (`2026-10-13a-nr-en`), French `20261013-104026-466-9293` (`2026-10-13b-nr-fr`), ADS2 `...-e453` (`c`), Nocturnal `...-66be` (`d`), CCE `...-a2ea` (`e`), original mod `...-09c7` (`f`). Results not in.
+
+### Next version 1.1.0 - 2026-10-13
+
+Owner (2026-10-13): the description-form fix waits and is grouped with the RimWorld 1.7 pass; minor bump to 1.1.0, so the chain reopens at `code[1.1.0]` (AUDIT.md 14.e). Comments posted by the owner on 2026-10-13: the original mod page, Chinese Comprehensive Expansion, Use This Instead (registers updated). The six 1.0.0 non-regression tickets are still running on `ff3ecbd`. `tested_1_7` is absent: the 1.7 prerequisites (Pickle PR 63, NPT steps on net10.0) are not read here.
 
 ### Echo review - 2026-10-13
 

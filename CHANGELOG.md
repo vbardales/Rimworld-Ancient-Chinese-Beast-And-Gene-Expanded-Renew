@@ -4,9 +4,15 @@ Format inspired by [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). The
 `## [<version>]` section of a version, so each one keeps that heading exactly. This file serves the repository and
 the writing of Steam patch notes; RimWorld does not display it in game.
 
+## [Unreleased]
+
+Planned as 1.1.0, grouped with the RimWorld 1.7 pass (`tested_1_7`; no `1.7` in `supportedVersions` before a green 1.7 run). Since 1.0.0:
+
+- The Workshop description follows the documented structure: `IF I GO QUIET`, `AI-GENERATED`, `THANKS` (Chinese Comprehensive Expansion added), the `ATTRIBUTION.md` and `LICENSE` line, then the source link. It names no RimWorld version.
+
 ## [1.0.0] - 2026-10-13
 
-Not on the Workshop yet. What changed in `Mod/` after the item was created at 0.1.0, and nothing else:
+Published 2026-10-13. What changed in `Mod/` after the item was created at 0.1.0, and nothing else:
 
 - **The qiongqi's claw gene is no longer named after the nian beast.** Its two whole-name symbols read "Nian blessing" and
   "Nian gift" in every language, because the original's source said so (`年兽的祝福`, `年兽的恩赐`). They now read
