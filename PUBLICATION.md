@@ -38,9 +38,9 @@ None ticked. The mod holds no nudity, sexual content or gore beyond RimWorld's o
 ```markdown
 UNOFFICIAL. This mod is published without the original author's explicit consent. If the original author contacts me to request its removal, I undertake to take it down promptly.
 
-Update of andery233xj, Frolg, DongFang and Ninedaylongbow's [山海志怪-华夏凶兽和基因扩展 - Ancient Chinese Beast And Gene Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=3292446841) to RimWorld 1.6.
+Update of andery233xj, Frolg, DongFang and Ninedaylongbow's [山海志怪-华夏凶兽和基因扩展 - Ancient Chinese Beast And Gene Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=3292446841) to the latest RimWorld version.
 
-I am not the author of this mod. The creatures, the art, the mechanics and the original code are theirs; all I did was the work needed to make it run on 1.6, and a pass over the English text. Credit goes to them; mistakes in the update are mine. If the original authors come back to it, or ask me to take this down, I will.
+I am not the author of this mod. The creatures, the art, the mechanics and the original code are theirs; all I did was the work needed to make it run on the latest version, and a pass over the English text. Credit goes to them; mistakes in the update are mine. If the original authors come back to it, or ask me to take this down, I will.
 
 Original mod: [Ancient Chinese Beast And Gene Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=3292446841)
 
@@ -69,16 +69,16 @@ Loads after [Chinese Comprehensive Expansion](https://steamcommunity.com/sharedf
 
 The beasts rest and breed like any animal: they lie down when tired, and a tame pair gives young that grow up (the mingshe and the Pleiades star officer lay eggs). Clones saved before this version have no sex and stay sterile. With [Nocturnal Animals](https://steamcommunity.com/sharedfiles/filedetails/?id=2269731409) (optional) each beast keeps its own hours: the qiongqi and the sexie hunt by night.
 
-## What changed in the 1.6 update
+## What changed in the update
 
-The mod's own logic is unchanged. What broke was where 1.6 moved the ground under it:
+The mod's own logic is unchanged. What broke was where the new version moved the ground under it:
 
-- The tick refactor. RimWorld 1.6 split Thing.Tick() into Tick() and TickInterval(int delta), and PawnFlyer moved its flight logic into the latter. The qiongqi's flying strike would have hung in the air with nothing to advance it.
+- The tick refactor. RimWorld split Thing.Tick() into Tick() and TickInterval(int delta), and PawnFlyer moved its flight logic into the latter. The qiongqi's flying strike would have hung in the air with nothing to advance it.
 - ThingComp.PostDeSpawn gained a DestroyMode argument. Two overrides in the mod silently stopped overriding anything - and one of them is the sexie's second phase, so the human form would have died without ever becoming the scorpion.
 - Animal wildness stopped being a field of RaceProperties and became a stat. Left as it was, every beast would have tamed like a rat.
 - GenExplosion.DoExplosion, PathFinder.FindPath, JumpUtility.ValidJumpTarget and RegionGrid.allRooms all changed shape.
 
-All nine Harmony patch targets were checked against the 1.6 assemblies before anything was compiled; all of them survived.
+All nine Harmony patch targets were checked against the new game assemblies before anything was compiled; all of them survived.
 
 The English text has been rewritten. The original was machine-translated from Chinese and had gone wrong in places - the qiongqi was called "Pauper", the sexie "Sex evil", the mingshe's tooth "Naruto-tooth" - and a number of weapon and body-part labels had never been translated at all and showed as Chinese in an English game. The Simplified Chinese translation is the authors' own; it has been extended to cover the labels that used to be hard-coded, and the nian beast's description has lost its last paragraph, which promised nian beast fangs on butchering that the mod never supplied.
 
