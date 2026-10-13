@@ -3,7 +3,7 @@
   <AbilityDef>
     <defName>SZ_MingShe_SoundWave</defName>
     <label>Sound Wave</label>
-    <description>A sound-wave attack over a cone. Leaves the enemies it hits reeling.</description>
+    <description>A cone-shaped sound-wave attack. Leaves the enemies it hits reeling.</description>
     <iconPath>AncientChineseBeast/MingShe/SoundWaveIcon</iconPath>
     <writeCombatLog>True</writeCombatLog>
     <cooldownTicksRange>900</cooldownTicksRange>
