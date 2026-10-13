@@ -134,6 +134,10 @@ Seven staged photographs on the Sanctuary Backlot plus the Preview, all accepted
 
 She validated in chat ("validé") the French of revision `54eb9fb` (`FRENCH_REVIEW.md`, regenerated at `e50d33d`: crow song without the generic masculine, "rage meurtrière" for the three berserker uses, qiongqi claw gene names, sound-wave wording), then `PUBLICATION.md` and `CHANGELOG.md` at `e50d33d`. The review-line table of `FRENCH_REVIEW.md` stays blank: the shared script never writes it (hers), so her word is recorded here.
 
+### Dry-run 1.0.0 - 2026-10-13
+
+Run `38369174343` (https://github.com/vbardales/Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew/actions/runs/38369174343), `publish-tag.yml`, mode dry-run, ref `ff3ecbd8d5aebf1ae9ed741c0287567ef20a91ce`, version 1.0.0, options `update_preview=true update_description=true update_title=false update_tags=false`, template `ef2f76993832`. Success; log read: 189 files, 6.64 MB staged (Textures 80 files, no `.dds`, `Assemblies/` 1 file), change note `[b]1.0.0[/b]`, preview `d39149d2...` 625361 bytes (equals the committed Preview), description 6786 characters converted to BBCode (names no RimWorld version, carries the Chinese Comprehensive Expansion thanks), tag-and-release skipped as expected. The item is private, so no comparison with a public page. The gallery (`Art/Gallery/` 0 to 7) is the owner's manual upload.
+
 ### Echo review - 2026-10-13
 
 Kept. `Art/echo-source.png` is the line art of the winged qiongqi; gallery 2 (four beasts) and 3 (qiongqi far from Lan) show that same beast, so echo and gallery agree and the subject has not moved. The Preview rendered from it (`ccf028b`, flipped echo, cropped badge) is 896x504, opened at full size: title, rule, summary, red echo under the panel text, ModIcon at the bottom right, 1.6 badge top right, nothing cut. `Mod/About/Preview.png` sha256 `d39149d2...` equals `social_preview_sha256`: the social preview on GitHub is current (repository public). `Art/` holds the minimal set plus `textures-original/` (kept, owner decision 2026-10-11).
