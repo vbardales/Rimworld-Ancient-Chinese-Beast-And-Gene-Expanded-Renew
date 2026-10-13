@@ -121,3 +121,11 @@ One more recipient: Chinese Comprehensive Expansion (3221850511, by ninedaylongb
 ```
 I had your Chinese Comprehensive Expansion load beside an unofficial 1.6 update of Ancient Chinese Beast And Gene Expanded to check that the two get along, and they do: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806709132]Ancient Chinese Beast And Gene Expanded Renew[/url] simply loads after yours. Thank you for the expansion :)
 ```
+
+## Use This Instead comment (not posted)
+
+Register: `USE_THIS_INSTEAD.md`, row 3292446841. Post only after item 3806709132 is public, by the owner, on the [Use This Instead](https://steamcommunity.com/sharedfiles/filedetails/?id=3396308787) page.
+
+```
+A replacement for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3292446841]山海志怪-华夏凶兽和基因扩展 Ancient Chinese Beast And Gene Expanded[/url] (andery233xj, Frolg, DongFang, Ninedaylongbow; packageId andery233xj.AncientChineseBeast; RimWorld 1.4 and 1.5): [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806709132]Ancient Chinese Beast And Gene Expanded Renew (unofficial)[/url], packageId nelim.ancientchinesebeastandgeneexpanded, for the latest RimWorld version. It is declared incompatible with the original. Thank you for keeping this list :)
+```

@@ -10,7 +10,7 @@ packageId:    nelim.ancientchinesebeastandgeneexpanded
 repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 visibility:   public
 detached:     yes
-workflow_stage: publish[1.0.0]
+workflow_stage: followUp[1.0.0]
 social_preview_sha256: d39149d2b12bf4a09c53fbeda175a8155c3cf61bf394c9309394e720496db79c
 echo_review_sha: aa3be1896d12bc22ee330dfeacec30ff9e1c5328  # 2026-10-13, 10.a: echo kept
 publication_changelog_review_sha: 5bed84a774984f2711ba3048ce90046038b30fcc
@@ -24,7 +24,7 @@ upstream_mod_remotes:
 dependencies: declared
 showcase:     complete
 tested_on: 2026-10-10 (1.6, tree c4edf71 for Source and Mod; last red scenarios green)
-workshop:     prepublished 2026-09-23, item 3806709132, private, version 0.1.0
+workshop:     published 2026-10-13, item 3806709132, private (the owner turns it public), version 1.0.0, tag v1.0.0, run 38369937487 (publish and tag-and-release green)
 remaining:
   - verified 2026-10-01: French review by Virginie (see "Translation audit - 2026-10-01"). 11 source cells of
       `FRENCH_REVIEW.md` stay marked unverified (fields inherited from vanilla parents, not read)
@@ -105,7 +105,7 @@ remaining:
       C# nor the defs. Inherited, left alone
 session:      local_ecc57511-3350-4f1d-9e1d-979c259d1b6b
 updated:      2026-10-10
-protocols_read_sha: 990a7ae732f2d6e9757c7ecf9163d4b869052701
+protocols_read_sha: c434483866a417b4b80e33a9bdc9a84361c23d77
 ---
 
 # Ancient Chinese Beast And Gene Expanded Renew: status
@@ -137,6 +137,10 @@ She validated in chat ("validé") the French of revision `54eb9fb` (`FRENCH_REVI
 ### Dry-run 1.0.0 - 2026-10-13
 
 Run `38369174343` (https://github.com/vbardales/Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew/actions/runs/38369174343), `publish-tag.yml`, mode dry-run, ref `ff3ecbd8d5aebf1ae9ed741c0287567ef20a91ce`, version 1.0.0, options `update_preview=true update_description=true update_title=false update_tags=false`, template `ef2f76993832`. Success; log read: 189 files, 6.64 MB staged (Textures 80 files, no `.dds`, `Assemblies/` 1 file), change note `[b]1.0.0[/b]`, preview `d39149d2...` 625361 bytes (equals the committed Preview), description 6786 characters converted to BBCode (names no RimWorld version, carries the Chinese Comprehensive Expansion thanks), tag-and-release skipped as expected. The item is private, so no comparison with a public page. The gallery (`Art/Gallery/` 0 to 7) is the owner's manual upload.
+
+### Publication 1.0.0 - 2026-10-13
+
+Run [38369937487](https://github.com/vbardales/Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew/actions/runs/38369937487): dispatched by this session with `dispatch-publish.sh` on `ff3ecbd8d5aebf1ae9ed741c0287567ef20a91ce` (same options as the dry-run), approved by Virginie on `steam-production`; `publish` and `tag-and-release` green. Tag `v1.0.0` on `ff3ecbd` and the GitHub release exist. `About/PublishedFileId.txt` still reads 3806709132, committed. The item stays private (visibility is never sent): the owner turns it public and uploads the gallery by hand. Not read yet: the item page, which a private item does not show to a session. `USE_THIS_INSTEAD.md` row drafted, comment drafted in `PUBLICATION.md`; thank-you comments (Chinese Comprehensive Expansion row in `WORKSHOP_COMMENTS.md`) wait for the public switch (14.b).
 
 ### Echo review - 2026-10-13
 
