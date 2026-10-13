@@ -8,6 +8,13 @@ the writing of Steam patch notes; RimWorld does not display it in game.
 
 Not on the Workshop yet. What changed in `Mod/` after the item was created at 0.1.0, and nothing else:
 
+- **The qiongqi's claw gene is no longer named after the nian beast.** Its two whole-name symbols read "Nian blessing" and
+  "Nian gift" in every language, because the original's source said so (`年兽的祝福`, `年兽的恩赐`). They now read
+  `穷奇的祝福` and `穷奇的恩赐`, "qiongqi's blessing" and "qiongqi's gift", "bénédiction du qiongqi" and "don du qiongqi".
+  French and English wording touched up: the crow's song gives heart to "quiconque l'entend" (not "chaque colon"), the sexie's
+  aura and its scorpion form put living things in "une rage meurtrière" (no more "berserkers"), and the mingshe's sound
+  wave reads "A cone-shaped sound-wave attack."
+
 - `Preview.png` redrawn: the text panel sits at the lower left so the beast's ear stays clear (0.1.0 had it at the lower
   right, over the firecrackers), the qiongqi's line-art echo shows under the panel, and the new ModIcon slides out of the
   bottom-right corner. Every word reads at 4.5:1 or better.
