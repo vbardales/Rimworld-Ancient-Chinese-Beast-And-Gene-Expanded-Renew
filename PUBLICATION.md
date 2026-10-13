@@ -84,11 +84,25 @@ The English text has been rewritten. The original was machine-translated from Ch
 
 Safe to add to an ongoing save. Removing it mid-save removes the beasts, their genes and the storyteller.
 
-Source, changelog and the list of defects inherited from the original: https://github.com/vbardales/Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
-
-The update work was done with the help of an AI assistant (Claude, by Anthropic). Thanks to andery233xj, Frolg, DongFang and Ninedaylongbow for the mod; to SamBucher for [A Dog Said... Animal Prosthetics 2](https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862) and for saying how a mod is added to it; to Mlie and XeoNovaDan for [Nocturnal Animals](https://steamcommunity.com/sharedfiles/filedetails/?id=2269731409); to ninedaylongbow and Frolg for [Chinese Comprehensive Expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=3221850511), the optional companion this one loads after; to Andreas Pardeike for Harmony; and to the authors of Pickle and RimLogging, the test tools this update was checked with (development only, never a dependency of the mod).
+## IF I GO QUIET
 
 If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.
+
+## AI-GENERATED
+
+The update to the latest RimWorld version, its tests and its documentation were written with Claude Code (Anthropic). The preview background and the icon are AI-generated artwork, and the preview was lettered afterwards in HTML. Working with these tools is part of how I make mods.
+
+## THANKS
+
+andery233xj, Frolg, DongFang and Ninedaylongbow, for the mod: the beasts, the art, the mechanics and the original code are theirs.
+SamBucher, for [A Dog Said... Animal Prosthetics 2](https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862), and for saying how a mod is added to it.
+Mlie and XeoNovaDan, for [Nocturnal Animals](https://steamcommunity.com/sharedfiles/filedetails/?id=2269731409), whose body clocks this mod plugs into.
+ninedaylongbow and Frolg, for [Chinese Comprehensive Expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=3221850511), the optional companion this one loads after.
+Andreas Pardeike, for Harmony.
+
+Tested with Pickle, RimLogging and Nelim's Pickle Tools, thanks to their authors: development only, never a dependency of this mod.
+
+What is reused and how it differs is detailed in ATTRIBUTION.md, and LICENSE says what the MIT grant covers. The changelog and the list of defects inherited from the original are in the repository.
 
 [Source code on GitHub](https://github.com/vbardales/Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew)
 ```
