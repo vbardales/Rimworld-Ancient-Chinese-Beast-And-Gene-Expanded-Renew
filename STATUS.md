@@ -10,7 +10,7 @@ packageId:    nelim.ancientchinesebeastandgeneexpanded
 repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 visibility:   public
 detached:     yes
-workflow_stage: shootGallery[1.0.0]
+workflow_stage: mountPreview[1.0.0]
 social_preview_sha256: d39149d2b12bf4a09c53fbeda175a8155c3cf61bf394c9309394e720496db79c
 licence:      silent
 licence_at:   reviewed 2026-09-12 - original files and About.xml, English and Chinese Workshop
@@ -112,6 +112,21 @@ Read by a sweep across every mod, rather than by asking each thread in turn. It 
 root, never inside `Mod/`, so Steam never receives it.
 
 ## Where this one stands
+
+### Gallery - 2026-10-13
+
+Seven staged photographs on the Sanctuary Backlot plus the Preview, all accepted by the owner (commits `54945a2`, `f41a79e`, `09577d4`, `35ba34e`, `1a91870`); `Art/Gallery/` holds nothing else. Opened again 2026-10-13. Order: the four beasts together come second (the most demonstrative), the dawn crow opens the story.
+
+| Index | File | Shows |
+| --- | --- | --- |
+| 0 | `0-preview.png` | Preview, byte copy |
+| 1 | `1-dawn-crow.png` | rooster and hen among statues (green overlay lines at the edges, accepted as is) |
+| 2 | `2-four-beasts.png` | the four beasts together |
+| 3 | `3-qiongqi-far.png` | the qiongqi far from Lan |
+| 4 | `4-nian-fire.png` | the nian beast breathing fire |
+| 5 | `5-wind-barrier.png` | the mingshe inside its wind barrier |
+| 6 | `6-sexie-aura.png` | the sexie scorpion form in its aura |
+| 7 | `7-extractor.png` | the gene extractor in the sunlit workshop |
 
 ### Ordered workflow audit - 2026-10-01
 

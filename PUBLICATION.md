@@ -23,8 +23,7 @@ checked 2026-10-08 against `PUBLISHING.md`, « Images »: numbered `0-`, `1-`, `
 in the folder; `0-` is a byte copy of `Mod/About/Preview.png` (compared after the 2026-10-08 regeneration); every other
 image is a **staged photograph** of the shared Sanctuary location, not a test capture; each image under 2 MB, the folder
 under 8 MB. Candidates are named `<n>-candidate-<name>.png` until the owner accepts them (then `candidate` is dropped),
-a refused one is deleted. The story, the set and the shot list are in `GALLERY.md`. State: image 0 only; the scenarios that
-take the others are not played yet. A `prepublished` mark waits for the accepted images (`AUDIT.md`).
+a refused one is deleted. The story, the set and the shot list are in `GALLERY.md`. State 2026-10-13: images 0 to 7 accepted by the owner, indexes contiguous, 7.4 MB in all, each under 2 MB (table in `STATUS.md`).
 
 ## Steam description
 
