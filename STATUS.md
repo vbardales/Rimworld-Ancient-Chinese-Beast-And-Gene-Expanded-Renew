@@ -56,8 +56,9 @@ remaining:
       the Pleiades star officer fills the view; the sexie (label "Sexie (human form)") stands in the red-carpeted room, red figure with spear.
       Both show their subject. The other seven were opened 2026-10-01
   - unverified: whether `MonsterTower/AncientChineseBeast` (the 1.5 source, see the 2026-10-01 audit) belongs to the
-      four credited authors: nothing links it to them. A fork and a pull request are public: they go out only with
-      Virginie's word (BACKLOG.md)
+      four credited authors: nothing links it to them. The pull request exists: [MonsterTower/AncientChineseBeast#1](https://github.com/MonsterTower/AncientChineseBeast/pull/1)
+      (from `vbardales/AncientChineseBeast`, opened 2026-10-09, open on 2026-10-13, one commit, no comment, no reply). The C# has not
+      changed since it was opened (`git log --since=2026-10-09 -- Source` holds only the `build/` path), so it is current
   - verified 2026-10-01: Tests/Run-All.ps1 under PowerShell 7.6.6, exit 0: 341 content checks and five negative
       controls, 26 assembly contracts, XML fields, classes, def references and external types, 137 of 137
       configuration defs, 378 Def fields and 9 Keyed entries with four translation negative controls, both XML
