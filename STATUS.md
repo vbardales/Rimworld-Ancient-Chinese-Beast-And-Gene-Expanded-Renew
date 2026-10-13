@@ -143,6 +143,10 @@ Run `38369174343` (https://github.com/vbardales/Rimworld-Ancient-Chinese-Beast-A
 
 Run [38369937487](https://github.com/vbardales/Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew/actions/runs/38369937487): dispatched by this session with `dispatch-publish.sh` on `ff3ecbd8d5aebf1ae9ed741c0287567ef20a91ce` (same options as the dry-run), approved by Virginie on `steam-production`; `publish` and `tag-and-release` green. Tag `v1.0.0` on `ff3ecbd` and the GitHub release exist. `About/PublishedFileId.txt` still reads 3806709132, committed. The item stays private (visibility is never sent): the owner turns it public and uploads the gallery by hand. Not read yet: the item page, which a private item does not show to a session. `USE_THIS_INSTEAD.md` row drafted, comment drafted in `PUBLICATION.md`; thank-you comments (Chinese Comprehensive Expansion row in `WORKSHOP_COMMENTS.md`) wait for the public switch (14.b).
 
+### Non-regression 1.0.0 (14.a) - 2026-10-13
+
+Item public (owner, 2026-10-13); the Steam API still answered `result 9` (not readable) a few minutes after, so the public page is not read yet. Gallery uploaded by the owner. Six requests filed on revision `ff3ecbd` (Mod and Source unchanged since): English `20261013-104025-715-5390` (`2026-10-13a-nr-en`), French `20261013-104026-466-9293` (`2026-10-13b-nr-fr`), ADS2 `...-e453` (`c`), Nocturnal `...-66be` (`d`), CCE `...-a2ea` (`e`), original mod `...-09c7` (`f`). Results not in.
+
 ### Echo review - 2026-10-13
 
 Kept. `Art/echo-source.png` is the line art of the winged qiongqi; gallery 2 (four beasts) and 3 (qiongqi far from Lan) show that same beast, so echo and gallery agree and the subject has not moved. The Preview rendered from it (`ccf028b`, flipped echo, cropped badge) is 896x504, opened at full size: title, rule, summary, red echo under the panel text, ModIcon at the bottom right, 1.6 badge top right, nothing cut. `Mod/About/Preview.png` sha256 `d39149d2...` equals `social_preview_sha256`: the social preview on GitHub is current (repository public). `Art/` holds the minimal set plus `textures-original/` (kept, owner decision 2026-10-11).
