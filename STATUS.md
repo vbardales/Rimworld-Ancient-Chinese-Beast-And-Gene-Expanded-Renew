@@ -10,7 +10,7 @@ packageId:    nelim.ancientchinesebeastandgeneexpanded
 repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 visibility:   public
 detached:     yes
-workflow_stage: playTests[1.0.0]
+workflow_stage: shootGallery[1.0.0]
 social_preview_sha256: d39149d2b12bf4a09c53fbeda175a8155c3cf61bf394c9309394e720496db79c
 licence:      silent
 licence_at:   reviewed 2026-09-12 - original files and About.xml, English and Chinese Workshop
@@ -21,18 +21,18 @@ upstream_mod_remotes:
   - https://github.com/MonsterTower/AncientChineseBeast
 dependencies: declared
 showcase:     complete
-tested_on:
+tested_on: 2026-10-10 (1.6, tree c4edf71 for Source and Mod; last red scenarios green)
 workshop:     prepublished 2026-09-23, item 3806709132, private, version 0.1.0
 remaining:
   - verified 2026-10-01: French review by Virginie (see "Translation audit - 2026-10-01"). 11 source cells of
       `FRENCH_REVIEW.md` stay marked unverified (fields inherited from vanilla parents, not read)
-  - unverified: Tests/Pickle - 23 features, 112 scenarios once the outlines are expanded (counted 2026-10-01);
-      `Check-Steps.ps1` green 2026-10-01 (107 patterns, 415 step lines). **Pass 1 (English, every scenario, request b5b0,
-      2026-10-01, 78 min, `exitReason` failed): 83 passed, 5 failed, 24 skipped by requirement.** First full pass. Red: the
-      aura ring (clock), the chicken egg (wait), the barrier cut (the save did not load in 180 s), the barrier throw-back
-      (a real defect of the original, guarded in `Source/`), the qiongqi strike (wait). All fixed after the run and not yet
-      replayed. Passes 2 (French), 3, 4, 5 and 6 are queued (requests 71bc, 57f8, d047, 36bb, 2d38) and had not run when
-      this was written. Not proven on the current tree: the five replays and passes 2 to 6
+  - verified 2026-10-13: Pickle on the 1.6 tree, read from the kept reports (`summary.json` `exitReason` first). Pass 1
+      (English, 2026-10-01): 83 passed, 5 red (aura ring, egg, barrier cut, barrier throw-back, strike), all five green since
+      (`2026-10-08a-replay-reds`, `2026-10-08c-fr-egg-1`, `2026-10-08b-fr-18-23`, `2026-10-10f-strike`). Pass 2 (French, 2026-10-02):
+      chunks a, b, c ran (drought and egg red, both green since); chunk d left no report, features 18 to 23 re-run in French
+      `2026-10-08b-fr-18-23` and the siege `2026-10-10i/j`. Passes 3 (`2026-10-02g-p3-17-replay`), 4 (`2026-10-02f-p4-13-replay`),
+      5 (`2026-10-01d-p5-14`, 11/11) and 6 (`2026-10-01e-p6-16`, 11/11) passed. No red scenario is left. No full pass is owed
+      before publish (AGENTS.md, rule of 2026-10-13): non-regression after the commit, at `followUp`
   - unverified: the delivered assembly changed four times in a week (forced "Beast attack now" 2026-09-25, rest
       and breeding 2026-09-25, the sexie's tunnel 2026-09-27, the wind barrier's projectile guard 2026-10-01). Current
       SHA-256 `40AA5903...A7BA74` (before the guard `042989FA...A1295F`), rebuilt by `Tests/Run-All.ps1` on 2026-10-01
@@ -47,17 +47,12 @@ remaining:
       attack; a fresh beast starts rested, so this is judged low risk, not measured)
   - unverified: no person has played the mod. What is known of it in a game is what Pickle showed on 2026-09-25
       (above); TESTING.md remains the protocol, 29 scenarios
-  - unverified: the nine manual exceptions (M1 to M9, Tests/Pickle/README.md, docs/MANUAL-TESTS.md). `tested` waits
-      for every one of them to be green or explicitly not applicable with its reason. State on 2026-10-01: M1 to M5
-      automated and green (features 04, 20, 21, 22). M6 (feature 19) red three times on 2026-09-28; its cause was read
-      in the diagnostic the runs attached (the extractor’s interaction cell was not standable) and the placement step
-      is fixed, replay owed. M7 (feature 18) red twice, "Accessing map pawns off main thread" while a colonist is
-      generated, cause not found; replay owed on the current tree. M8 automated as feature 23 (the part the mod owns),
-      written, not played. M9 not applicable: the game’s own behaviour, reason in Tests/Pickle/README.md; the owner can
-      overturn it
-  - defect (fixed in the features 2026-10-01, replay owed): two of the nine `@review` captures did not show their subject: `05-incidents` (the
-      Pleiades star officer is a few pixels at the top left of a base-wide view) and `11-tunnel` (the label under the
-      pointer reads "Tunnel", no tunnel is drawn on screen). The camera and the zoom are the scenarios' to set
+  - verified 2026-10-13: the nine manual exceptions. M1 to M5 automated and green (features 04, 20, 21, 22). M6 (feature 19),
+      M7 (feature 18) and M8 (feature 23) green in French (`2026-10-08b`, `2026-10-09a`). M9 not applicable: the game’s own
+      behaviour, reason in Tests/Pickle/README.md; the owner can overturn it
+  - verified 2026-10-13: the two `@review` captures that missed their subject were retaken (`2026-10-09a-review-captures`) and opened:
+      the Pleiades star officer fills the view; the sexie (label "Sexie (human form)") stands in the red-carpeted room, red figure with spear.
+      Both show their subject. The other seven were opened 2026-10-01
   - unverified: whether `MonsterTower/AncientChineseBeast` (the 1.5 source, see the 2026-10-01 audit) belongs to the
       four credited authors: nothing links it to them. A fork and a pull request are public: they go out only with
       Virginie's word (BACKLOG.md)
