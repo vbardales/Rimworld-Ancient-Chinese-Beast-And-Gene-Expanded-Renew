@@ -1,7 +1,7 @@
 ---
 localization: complete
 translation_en: complete
-translation_fr: unchecked
+translation_fr: complete
 settings_audit: not_applicable
 code_review_sha: 54eb9fb922345f2e79d8498b04a57f8c589ffb1c  # 2026-10-13, 8.m (moved past the French and gene-name text edits of this commit, Defs QiongQi.xml and MingShe.xml read, no code; and past two description-only edits of About.xml, no code): 5ea69ab..HEAD over Source and Mod holds no code change (only Source/Directory.Build.props intermediates path build/, ATTRIBUTION.md, Preview.png, desktop.ini removed): 0 findings. Earlier review, was `code_review`: <sha> (2026-10-08, /code-review at low effort over 89a2575..5ea69ab, the 0.1.0 commit that tracked the PublishedFileId, limited to Source, Mod/Defs, Mod/Patches and Tests/Pickle/Source: 0 findings; low effort reads the diff once, no verify pass. First review of this mod, nothing earlier existed)
 audit_revision: 67a4b37 (HEAD, pushed, tree clean when the 2026-10-01 audit began). While it ran, another session regenerated `Art/` and `Mod/About/Preview.png` in the working tree: uncommitted, not touched and not audited here
@@ -10,9 +10,10 @@ packageId:    nelim.ancientchinesebeastandgeneexpanded
 repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 visibility:   public
 detached:     yes
-workflow_stage: writeDocs[1.0.0]
+workflow_stage: prepareRelease[1.0.0]
 social_preview_sha256: d39149d2b12bf4a09c53fbeda175a8155c3cf61bf394c9309394e720496db79c
 echo_review_sha: aa3be1896d12bc22ee330dfeacec30ff9e1c5328  # 2026-10-13, 10.a: echo kept
+publication_changelog_review_sha: e50d33d477c8afecdfdb018760ddbdad2bb14ae6
 licence:      silent
 licence_at:   reviewed 2026-09-12 - original files and About.xml, English and Chinese Workshop
             descriptions, all 68 public comments, and the four coauthors' Steam profiles;
@@ -104,7 +105,7 @@ remaining:
       C# nor the defs. Inherited, left alone
 session:      local_ecc57511-3350-4f1d-9e1d-979c259d1b6b
 updated:      2026-10-10
-protocols_read_sha: b1a713a1f6ec6d967734d6a92488778787bb40d5
+protocols_read_sha: 990a7ae732f2d6e9757c7ecf9163d4b869052701
 ---
 
 # Ancient Chinese Beast And Gene Expanded Renew: status
@@ -128,6 +129,10 @@ Seven staged photographs on the Sanctuary Backlot plus the Preview, all accepted
 | 5 | `5-wind-barrier.png` | the mingshe inside its wind barrier |
 | 6 | `6-sexie-aura.png` | the sexie scorpion form in its aura |
 | 7 | `7-extractor.png` | the gene extractor in the sunlit workshop |
+
+### Reviews by Virginie - 2026-10-13
+
+She validated in chat ("validé") the French of revision `54eb9fb` (`FRENCH_REVIEW.md`, regenerated at `e50d33d`: crow song without the generic masculine, "rage meurtrière" for the three berserker uses, qiongqi claw gene names, sound-wave wording), then `PUBLICATION.md` and `CHANGELOG.md` at `e50d33d`. The review-line table of `FRENCH_REVIEW.md` stays blank: the shared script never writes it (hers), so her word is recorded here.
 
 ### Echo review - 2026-10-13
 
