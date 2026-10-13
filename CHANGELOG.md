@@ -9,6 +9,7 @@ the writing of Steam patch notes; RimWorld does not display it in game.
 Planned as 1.1.0, grouped with the RimWorld 1.7 pass (`tested_1_7`; no `1.7` in `supportedVersions` before a green 1.7 run). Since 1.0.0:
 
 - The Workshop description follows the documented structure: `IF I GO QUIET`, `AI-GENERATED`, `THANKS` (Chinese Comprehensive Expansion added), the `ATTRIBUTION.md` and `LICENSE` line, then the source link. It names no RimWorld version.
+- `Art/textures-original/` removed (the two oversized original textures, 14 MB); `ATTRIBUTION.md` now points at the original mod for them.
 
 ## [1.0.0] - 2026-10-13
 

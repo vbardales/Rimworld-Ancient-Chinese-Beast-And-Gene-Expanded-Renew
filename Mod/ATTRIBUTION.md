@@ -154,7 +154,7 @@ keys resolve, checked with `scripts/Check-DefInjected.ps1`.
 
 ## Textures
 
-Two were rescaled; the originals are kept under `Art/textures-original/`.
+Two were rescaled; the originals are the files of the original mod (Workshop 3292446841), no longer kept in this repository.
 
 | | was | is | drawn at |
 |---|---|---|---|
