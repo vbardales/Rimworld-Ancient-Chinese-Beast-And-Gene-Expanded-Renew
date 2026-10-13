@@ -10,8 +10,9 @@ packageId:    nelim.ancientchinesebeastandgeneexpanded
 repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 visibility:   public
 detached:     yes
-workflow_stage: mountPreview[1.0.0]
+workflow_stage: writeDocs[1.0.0]
 social_preview_sha256: d39149d2b12bf4a09c53fbeda175a8155c3cf61bf394c9309394e720496db79c
+echo_review_sha: aa3be1896d12bc22ee330dfeacec30ff9e1c5328  # 2026-10-13, 10.a: echo kept
 licence:      silent
 licence_at:   reviewed 2026-09-12 - original files and About.xml, English and Chinese Workshop
             descriptions, all 68 public comments, and the four coauthors' Steam profiles;
@@ -127,6 +128,10 @@ Seven staged photographs on the Sanctuary Backlot plus the Preview, all accepted
 | 5 | `5-wind-barrier.png` | the mingshe inside its wind barrier |
 | 6 | `6-sexie-aura.png` | the sexie scorpion form in its aura |
 | 7 | `7-extractor.png` | the gene extractor in the sunlit workshop |
+
+### Echo review - 2026-10-13
+
+Kept. `Art/echo-source.png` is the line art of the winged qiongqi; gallery 2 (four beasts) and 3 (qiongqi far from Lan) show that same beast, so echo and gallery agree and the subject has not moved. The Preview rendered from it (`ccf028b`, flipped echo, cropped badge) is 896x504, opened at full size: title, rule, summary, red echo under the panel text, ModIcon at the bottom right, 1.6 badge top right, nothing cut. `Mod/About/Preview.png` sha256 `d39149d2...` equals `social_preview_sha256`: the social preview on GitHub is current (repository public). `Art/` holds the minimal set plus `textures-original/` (kept, owner decision 2026-10-11).
 
 ### Ordered workflow audit - 2026-10-01
 
