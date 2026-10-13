@@ -95,6 +95,8 @@ If I do not answer within a reasonable time after being contacted, anyone may fr
 
 ## Change note
 
+### 1.0.0
+
 Steam change note of the next publish; its first line carries the version. The full list is `CHANGELOG.md`,
 section `## [1.0.0]`.
 
