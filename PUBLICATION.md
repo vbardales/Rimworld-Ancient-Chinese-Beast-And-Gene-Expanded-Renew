@@ -25,6 +25,14 @@ image is a **staged photograph** of the shared Sanctuary location, not a test ca
 under 8 MB. Candidates are named `<n>-candidate-<name>.png` until the owner accepts them (then `candidate` is dropped),
 a refused one is deleted. The story, the set and the shot list are in `GALLERY.md`. State 2026-10-13: images 0 to 7 accepted by the owner, indexes contiguous, 7.4 MB in all, each under 2 MB (table in `STATUS.md`).
 
+## Dependencies and DLC
+
+Hard: Harmony (`brrainz.harmony`, Workshop 2009463077) and Biotech (`Ludeon.RimWorld.Biotech`), both in `modDependencies`. Optional, never required: Chinese Comprehensive Expansion (`loadAfter`), A Dog Said... Animal Prosthetics 2 (`loadBefore`, patch), Nocturnal Animals (patch). Incompatible: the original mod (`incompatibleWith`). No other DLC. Read from `About.xml`, 2026-10-13.
+
+## Adult content boxes
+
+None ticked. The mod holds no nudity, sexual content or gore beyond RimWorld's own combat. All eight gallery images (0 to 7) were opened on 2026-10-13 and show creatures, a rooster, a colonist and a workshop only.
+
 ## Steam description
 
 ```markdown
@@ -57,6 +65,8 @@ Requires Biotech. Requires Harmony.
 
 Works with [A Dog Said... Animal Prosthetics 2](https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862) (optional): the five tame clones can receive its prosthetics and bionics like a wolf or a thrumbo, and the Pleiades star officer like a duck. Nothing changes without it.
 
+Loads after [Chinese Comprehensive Expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=3221850511) (optional), by two of the same authors: no patch, only the load order, so the two sit together without a conflict.
+
 The beasts rest and breed like any animal: they lie down when tired, and a tame pair gives young that grow up (the mingshe and the Pleiades star officer lay eggs). Clones saved before this version have no sex and stay sterile. With [Nocturnal Animals](https://steamcommunity.com/sharedfiles/filedetails/?id=2269731409) (optional) each beast keeps its own hours: the qiongqi and the sexie hunt by night.
 
 ## What changed in the 1.6 update
@@ -76,7 +86,7 @@ Safe to add to an ongoing save. Removing it mid-save removes the beasts, their g
 
 Source, changelog and the list of defects inherited from the original: https://github.com/vbardales/Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 
-The update work was done with the help of an AI assistant (Claude, by Anthropic). Thanks to andery233xj, Frolg, DongFang and Ninedaylongbow for the mod; to SamBucher for [A Dog Said... Animal Prosthetics 2](https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862) and for saying how a mod is added to it; to Mlie and XeoNovaDan for [Nocturnal Animals](https://steamcommunity.com/sharedfiles/filedetails/?id=2269731409); to Andreas Pardeike for Harmony; and to the authors of Pickle and RimLogging, the test tools this update was checked with (development only, never a dependency of the mod).
+The update work was done with the help of an AI assistant (Claude, by Anthropic). Thanks to andery233xj, Frolg, DongFang and Ninedaylongbow for the mod; to SamBucher for [A Dog Said... Animal Prosthetics 2](https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862) and for saying how a mod is added to it; to Mlie and XeoNovaDan for [Nocturnal Animals](https://steamcommunity.com/sharedfiles/filedetails/?id=2269731409); to ninedaylongbow and Frolg for [Chinese Comprehensive Expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=3221850511), the optional companion this one loads after; to Andreas Pardeike for Harmony; and to the authors of Pickle and RimLogging, the test tools this update was checked with (development only, never a dependency of the mod).
 
 If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.
 
@@ -102,4 +112,10 @@ their comment (or a draft) from another mod of the collection: only `Covers` was
 
 ```
 Wanted to see the mingshe's wind wall on a 1.6 colony, so here's an unofficial update: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806709132]Ancient Chinese Beast And Gene Expanded Renew[/url]. The beasts are all yours, I only moved it over. Thank you for them :) If you'd rather it came down, just tell me here or on the page.
+```
+
+One more recipient: Chinese Comprehensive Expansion (3221850511, by ninedaylongbow and Frolg), the optional `loadAfter` mod exercised by pass 3. Register row drafted 2026-10-13. Post after item 3806709132 is public, by the owner, on that page:
+
+```
+I had your Chinese Comprehensive Expansion load beside an unofficial 1.6 update of Ancient Chinese Beast And Gene Expanded to check that the two get along, and they do: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806709132]Ancient Chinese Beast And Gene Expanded Renew[/url] simply loads after yours. Thank you for the expansion :)
 ```

@@ -8,11 +8,9 @@ the writing of Steam patch notes; RimWorld does not display it in game.
 
 Not on the Workshop yet. What changed in `Mod/` after the item was created at 0.1.0, and nothing else:
 
-- `Preview.png` moved its text to the upper left. The lower-right placement 0.1.0 shipped covered the three
-  red firecrackers, the image's one vivid accent, and its veil dimmed the beast. The winged beast, the wind
-  sweep and the firecrackers are all in view now, and the title runs on two lines. Engraved again to the
-  collection's charter of 2026-09-25 (title 34 px, 50 px from the left, the `(unofficial)` tag, the rule, the version
-  badge), with the veil held a little further so that every word reads at 4.5:1 or better.
+- `Preview.png` redrawn: the text panel sits at the lower left so the beast's ear stays clear (0.1.0 had it at the lower
+  right, over the firecrackers), the qiongqi's line-art echo shows under the panel, and the new ModIcon slides out of the
+  bottom-right corner. Every word reads at 4.5:1 or better.
 
 - Compatibility with **A Dog Said... Animal Prosthetics 2**
   ([3238353862](https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862)), built in and optional.
