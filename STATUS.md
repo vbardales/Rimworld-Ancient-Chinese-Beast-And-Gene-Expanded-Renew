@@ -24,7 +24,7 @@ upstream_mod_remotes:
 dependencies: declared
 showcase:     complete
 tested_on: 2026-10-10 (1.6, tree c4edf71 for Source and Mod; last red scenarios green)
-workshop:     published 2026-10-13, item 3806709132, private (the owner turns it public), version 1.0.0, tag v1.0.0, run 38369937487 (publish and tag-and-release green)
+workshop:     published 2026-10-13, item 3806709132, public since 2026-10-13 (the owner switched it, after the upload), version 1.0.0, tag v1.0.0, run 38369937487 (publish and tag-and-release green)
 remaining:
   - verified 2026-10-01: French review by Virginie (see "Translation audit - 2026-10-01"). 11 source cells of
       `FRENCH_REVIEW.md` stay marked unverified (fields inherited from vanilla parents, not read)
