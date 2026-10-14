@@ -26,6 +26,10 @@
   <ItemGroup>
     <Compile Remove="Pickle\**" />
     <None Remove="Pickle\**" />
+    <!-- Tests/build/ holds the intermediates of the Pickle step build (ignored by git); its generated
+         AssemblyAttributes.cs carries a second TargetFrameworkAttribute (CS0579). -->
+    <Compile Remove="build\**" />
+    <None Remove="build\**" />
   </ItemGroup>
 
 </Project>
