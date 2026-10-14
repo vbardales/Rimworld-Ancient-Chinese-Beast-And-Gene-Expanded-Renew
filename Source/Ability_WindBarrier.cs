@@ -13,10 +13,6 @@ public class Ability_WindBarrier : Ability_Draw
 {
 	public int ticksTime;
 
-	private static List<Projectile> projectiles = new List<Projectile>();
-
-	private static List<Thing> targets = new List<Thing>();
-
 	private static readonly Material WindA = MaterialPool.MatFrom("AncientChineseBeast/MingShe/WindA", ShaderDatabase.Transparent);
 
 	private static readonly Material WindB = MaterialPool.MatFrom("AncientChineseBeast/MingShe/WindB", ShaderDatabase.Transparent);
@@ -45,6 +41,10 @@ public class Ability_WindBarrier : Ability_Draw
 			return;
 		}
 		ticksTime--;
+		// Both lists are local to the tick. They used to be static and shared by every barrier: an exception in the middle of a loop left
+		// entries behind that the next tick of any barrier (on any map) met again.
+		List<Thing> targets = new List<Thing>();
+		List<Projectile> projectiles = new List<Projectile>();
 		if (ticksTime % 30 == 0)
 		{
 			int num = GenRadial.NumCellsInRadius(Range - 0.5f);
@@ -96,11 +96,20 @@ public class Ability_WindBarrier : Ability_Draw
 			}
 			// A projectile can already be gone by now (it hit something in the same tick, or it is in the list twice): destroying
 			// it again threw a null reference out of ListerThings.Remove and the whole tick of the mingshe with it.
-			if (projectiles[0].Spawned && !projectiles[0].Destroyed)
-			{
-				projectiles[0].Destroy();
-			}
+			// The entry leaves the list before anything that can throw, so a failure costs one projectile and never the next ticks.
+			Projectile captured = projectiles[0];
 			projectiles.RemoveAt(0);
+			if (captured.Spawned && !captured.Destroyed && captured.Map == base.pawn.Map)
+			{
+				try
+				{
+					captured.Destroy();
+				}
+				catch (Exception ex)
+				{
+					Log.Warning("Ancient Chinese Beast: the wind barrier could not destroy a captured projectile (" + captured.def.defName + "): " + ex.Message);
+				}
+			}
 		}
 		static bool CollisionDetermination(Vector3 a, Vector3 b, float range)
 		{
