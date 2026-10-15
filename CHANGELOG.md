@@ -8,7 +8,7 @@ the writing of Steam patch notes; RimWorld does not display it in game.
 
 Planned as 1.1.0, grouped with the RimWorld 1.7 pass (`tested_1_7`; no `1.7` in `supportedVersions` before a green 1.7 run). Since 1.0.0:
 
-- The Workshop description reads "a tame pair has offspring that grow up". It follows the documented structure: `IF I GO QUIET`, `AI-GENERATED`, `THANKS` (Chinese Comprehensive Expansion added), the `ATTRIBUTION.md` and `LICENSE` line, then the source link. It names no RimWorld version.
+- The Workshop description reads "a tame pair has offspring that grow up" and names DALL-E as the source of the preview background and the icon (owner, 2026-10-15). It follows the documented structure: `IF I GO QUIET`, `AI-GENERATED`, `THANKS` (Chinese Comprehensive Expansion added), the `ATTRIBUTION.md` and `LICENSE` line, then the source link. It names no RimWorld version.
 - **The mingshe’s wind barrier no longer repeats an error tick after tick.** Its two working lists were static and shared by every barrier, so one exception inside the capture loop left a projectile in front of the list and the same null reference (in `ListerThings.Remove`) came back on every following tick. The lists are now local to the tick, a captured projectile leaves the list before it is destroyed, it is destroyed only on the barrier’s own map, and a failure is logged as one warning. Seen once in the English non-regression pass of 1.0.0, not reproduced when the two barrier scenarios ran alone.
 - `Art/textures-original/` removed (the two oversized original textures, 14 MB); `ATTRIBUTION.md` now points at the original mod for them.
 

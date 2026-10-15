@@ -90,7 +90,7 @@ If I do not answer within a reasonable time after being contacted, anyone may fr
 
 ## AI-GENERATED
 
-The update to the latest RimWorld version, its tests and its documentation were written with Claude Code (Anthropic). The preview background and the icon are AI-generated artwork, and the preview was lettered afterwards in HTML. Working with these tools is part of how I make mods.
+The update to the latest RimWorld version, its tests and its documentation were written with Claude Code (Anthropic). The preview background and the icon are artwork generated with DALL-E (OpenAI), and the preview was lettered afterwards in HTML. Working with these tools is part of how I make mods.
 
 ## THANKS
 

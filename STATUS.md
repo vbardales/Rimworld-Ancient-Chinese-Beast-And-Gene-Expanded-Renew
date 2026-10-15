@@ -159,3 +159,6 @@ Kept. `Art/echo-source.png` is the line art of the winged qiongqi; gallery 2 (fo
 ## History
 
 Older dated sections (workflow audits 2026-09-13 to 2026-10-11, translation audits, preview verification and migration, in-game verification notes) moved to `docs/runs/2026-10-13-status-history.md` on 2026-10-13.
+
+
+AI-GENERATED claim (owner, 2026-10-15): the preview background and the icon were generated with DALL-E (OpenAI). The description of 1.1.0 now names it (PUBLICATION.md, About.xml regenerated); the 1.0.0 page still says "AI-generated artwork" until 1.1.0 is published.
