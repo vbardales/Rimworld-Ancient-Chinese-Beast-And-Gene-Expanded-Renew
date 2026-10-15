@@ -164,3 +164,5 @@ Older dated sections (workflow audits 2026-09-13 to 2026-10-11, translation audi
 AI-GENERATED claim (owner, 2026-10-15): the preview background and the icon were generated with DALL-E (OpenAI). The description of 1.1.0 now names it (PUBLICATION.md, About.xml regenerated); the 1.0.0 page still says "AI-generated artwork" until 1.1.0 is published.
 
 Workshop page "Required items" (owner, 2026-10-15): Harmony is listed (and Biotech is a DLC, not an item). Page only, nothing to publish.
+
+Non-regression refiled 2026-10-15 on the 1.1.0 tree (HEAD with the wind-barrier hardening, DLL rebuilt): the five tickets b to f of 2026-10-13 left no evidence folder and are in no queue (lost after the dispatcher stall), only 5390 (red, 2 barrier) and e0b4 (green replay) ran. New set: English full 20261015-211635-942-2bf2 (2026-10-15a-en), French full ...-ccb7 (b-fr), ADS2 ...-aa6e (c), Nocturnal ...-ecd6 (d), CCE ...-7c4a (e), original mod ...-4ddf (f). They test the hardened build, not ff3ecbd; the 1.0.0 published build is covered by the 5390 result only. Results not in.
