@@ -7,12 +7,9 @@ others are numbered `1-`, `2-`… on one digit, in page order, each under 2 MB, 
 `<n>-candidate-<name>.png` until the owner accepts it (`candidate` is then dropped); a refused one is deleted. The earlier
 captures of the test colony (`2026-10-01a-p1-en`) are test proof only and are never used.
 
-## The story
+## The story (restaged 2026-10-15)
 
-One day at Nelim's Sanctuary, told like a wildlife report on four beasts out of the Classic of Mountains and Seas that
-came with the New Year. Two keepers walk the day, chosen by hand (body, face, hair, clothes, eyes): **Lan** (black hair in a
-ponytail, a jade robe, golden eyes) and **Ren** (silver hair, a crimson duster over a cream shirt, crimson eyes). Each picture
-is an encounter, never a row of subjects.
+One day at Nelim’s Sanctuary, told like a wildlife report on four beasts out of the Classic of Mountains and Seas that came with the New Year, and the rooster that announces the day. **Nelim is the protagonist** (owner rule 2026-10-14) and is in every image: she wears what the fixture gives her plus a Taoist hat of Chinese Comprehensive Expansion (the theme), her own face and a cheerful expression. **Ren** (silver hair, crimson duster, crimson eyes) is the only guest, in the two images that need a shooter or a victim. Camera at zoom 5 to 9, time paused before any pawn is placed, beasts facing South. The first series (Lan and Ren, zoom 6 to 12) is replaced; see STATUS.md, "Gallery review 2026-10-15".
 
 ## Places, chosen on the places' own descriptions (`PickleTools/docs/GALERIE.md`, `SANCTUAIRE-LIEUX.md`)
 
@@ -27,13 +24,13 @@ carpet), `exhibition-zone` (reserved for a full-screen window, which this mod do
 
 | # | Hour | Place | Subject |
 | --- | --- | --- | --- |
-| 1 | 6 | statue-garden | the Pleiades star officer crows at dawn among the statues, a hen beside it, Lan listens |
-| 2 | 10 | enclosure-south | the four beasts, Ren at the gate |
-| 3 | 12 | gravel-yard | the qiongqi caught in the air, flying at Lan, the farthest |
-| 4 | 14 | bare-clearing | the nian beast breathes fire at a muffalo, Ren holds a firecracker |
-| 5 | 16 | gravel-yard | the mingshe's wind barrier throws back Lan's shot |
-| 6 | 18 | water-garden | the scorpion sexie and the red ring of its aura, Ren inside it, berserk |
-| 7 | 12 | postindustrial-workshop | the gene extractor, a qiongqi corpse beside it, archite capsules, Lan at the bench |
+| 1 | 6 | statue-garden | Nelim listens to the Pleiades star officer crowing at dawn among the statues, a hen beside it |
+| 2 | 10 | enclosure-south | the four beasts in a loose arc, Nelim at the gate |
+| 3 | 12 | gravel-yard | the qiongqi faces the camera behind Nelim |
+| 4 | 14 | bare-clearing | the nian beast breathes fire at a muffalo, Nelim holds a firecracker |
+| 5 | 16 | gravel-yard | Ren fires, the mingshe’s wind barrier throws the shot back, Nelim watches |
+| 6 | 18 | water-garden | the scorpion sexie and its red ring, Ren inside it, berserk, Nelim at the edge |
+| 7 | 12 | postindustrial-workshop | the gene extractor, three archite capsules, Nelim at the bench |
 
 ## How it runs
 

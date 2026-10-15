@@ -40,3 +40,9 @@ Moshii.NLFA.InitFix 3609895011
 ccj.nlfaloadfix 3721489042
 # Show Hair Under Stuff (Raccoon Cuddler): hair stays visible under hats and helmets; only hard dependency is Harmony (owner, 2026-10-08).
 RaccoonCuddler.ShowHair 3255379190
+#
+# Chinese Comprehensive Expansion (3221850511, a Windows subscription): its Taoist hats dress Nelim in the gallery (2026-10-15 restaging).
+# It must load BEFORE this mod (this mod's loadAfter), and the staging does not sort by loadAfter: this mod's own packageId with a path:
+# overlay comes right after it, which also makes the staging skip its own copy (same recipe as wsl-deps.cce.map).
+ninedaylongbow.ChineseComprehensiveExpansion 3221850511
+nelim.ancientchinesebeastandgeneexpanded path:AncientChineseBeastAndGeneExpandedRenew/Mod
