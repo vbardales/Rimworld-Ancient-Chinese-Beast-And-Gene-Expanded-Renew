@@ -162,3 +162,5 @@ Older dated sections (workflow audits 2026-09-13 to 2026-10-11, translation audi
 
 
 AI-GENERATED claim (owner, 2026-10-15): the preview background and the icon were generated with DALL-E (OpenAI). The description of 1.1.0 now names it (PUBLICATION.md, About.xml regenerated); the 1.0.0 page still says "AI-generated artwork" until 1.1.0 is published.
+
+Workshop page "Required items" (owner, 2026-10-15): Harmony is listed (and Biotech is a DLC, not an item). Page only, nothing to publish.
