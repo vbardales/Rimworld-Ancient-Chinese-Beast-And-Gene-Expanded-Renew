@@ -16,6 +16,10 @@ The mod keeps no local translation checker or inventory since 2026-10-11 (owner 
 The original `SZ_CannotReachBuildingToExtractGene` key is retained for compatibility, with
 no active call site; `Run-All.ps1` passes it to `-AllowUnused`.
 
+`TextMote_Dodge` is a vanilla RimWorld Keyed key that `Source/ProjectileImpact_Patch.cs` calls
+with `.Translate()`; the game supplies its text, so this mod ships no entry for it.
+`Run-All.ps1` passes it to `-VanillaKeyed`.
+
 ## Manual source audit
 
 Automated checks are safeguards, not a general proof of localization. Reinspect every

@@ -29,7 +29,7 @@ try {
     Invoke-Check 'XML fields' { & pwsh -NoProfile -File "$PSScriptRoot/../../scripts/Check-XmlFields.ps1" -ModPath $mod -Managed $Managed -ExtraAssemblies $assembly }
     Invoke-Check 'Def references' { & pwsh -NoProfile -File "$PSScriptRoot/../../scripts/Check-DefRefs.ps1" -ModPath $mod -Managed $Managed -GameData $GameData -Brief }
     Invoke-Check 'External types' { & pwsh -NoProfile -File "$PSScriptRoot/../../scripts/Check-TypeRefs.ps1" -ModPath $mod -Managed $Managed }
-    Invoke-Check 'Translations and EN/FR coverage' { & pwsh -NoProfile -File "$PSScriptRoot/../../scripts/Check-Translations.ps1" -ModRoot (Resolve-Path "$PSScriptRoot/..").Path -AllowUnused SZ_CannotReachBuildingToExtractGene }
+    Invoke-Check 'Translations and EN/FR coverage' { & pwsh -NoProfile -File "$PSScriptRoot/../../scripts/Check-Translations.ps1" -ModRoot (Resolve-Path "$PSScriptRoot/..").Path -AllowUnused SZ_CannotReachBuildingToExtractGene -VanillaKeyed TextMote_Dodge }
     Invoke-Check 'Configuration' { & pwsh -NoProfile -File "$PSScriptRoot/../../scripts/Check-ConfigErrors.ps1" -ModPath $mod -Managed $Managed -GameData $GameData -ExtraAssemblies $assembly }
     Write-Host "`nAll automated checks passed. In-game scenarios remain manual."
 } finally { Pop-Location }
