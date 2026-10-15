@@ -33,6 +33,20 @@ Hard: Harmony (`brrainz.harmony`, Workshop 2009463077) and Biotech (`Ludeon.RimW
 
 None ticked. The mod holds no nudity, sexual content or gore beyond RimWorld's own combat. All eight gallery images (0 to 7) were opened on 2026-10-13 and show creatures, a rooster, a colonist and a workshop only.
 
+## Gallery subtitles
+
+One line of English at the bottom of each gallery scene without an interface window (owner rule of 2026-10-15, `GALLERY.md`, "Sous-titres"): `0-` (the Preview) has none, and this mod has no interface capture. The clean originals go to `Art/Gallery-clean/` under the same names; `Art/Gallery/` holds the subtitled images, set with `scripts/Add-Subtitle.ps1`. Written 2026-10-15 to say what each image of the 2026-10-13 gallery actually shows; the gallery is to be restaged (keeper, faces and framing, see `STATUS.md`), and these lines are then rewritten against the new images. Not set on the images yet.
+
+| Index | File | Line |
+| --- | --- | --- |
+| 1 | `1-dawn-crow.png` | At dawn the Pleiades star officer crows among the statues, a hen at its side. |
+| 2 | `2-four-beasts.png` | Four beasts of the Classic of Mountains and Seas share one enclosure, and a keeper waits at the gate. |
+| 3 | `3-qiongqi-far.png` | The qiongqi singles out the colonist standing farthest away. |
+| 4 | `4-nian-fire.png` | The nian beast breathes fire at a muffalo, and a firecracker answers. |
+| 5 | `5-wind-barrier.png` | The mingshe raises its wind barrier, and a shot fired from outside is thrown back. |
+| 6 | `6-sexie-aura.png` | The sexie's red aura sends a colonist into a berserk rage. |
+| 7 | `7-extractor.png` | At the gene extractor, three archite capsules wait for what the beasts leave behind. |
+
 ## Steam description
 
 ```markdown
