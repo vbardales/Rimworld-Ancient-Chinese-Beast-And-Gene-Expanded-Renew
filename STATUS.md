@@ -106,7 +106,7 @@ remaining:
       C# nor the defs. Inherited, left alone
 session:      local_ecc57511-3350-4f1d-9e1d-979c259d1b6b
 updated:      2026-10-10
-protocols_read_sha: 65e09838c8023b798d4ba0ff04df04284a96f11e
+protocols_read_sha: 1397cf3608b1a670fceaf0050eda16021b805fde
 ---
 
 # Ancient Chinese Beast And Gene Expanded Renew: status
@@ -168,3 +168,5 @@ Workshop page "Required items" (owner, 2026-10-15): Harmony is listed (and Biote
 Non-regression refiled 2026-10-15 on the 1.1.0 tree (HEAD with the wind-barrier hardening, DLL rebuilt): the five tickets b to f of 2026-10-13 left no evidence folder and are in no queue (lost after the dispatcher stall), only 5390 (red, 2 barrier) and e0b4 (green replay) ran. New set: English full 20261015-211635-942-2bf2 (2026-10-15a-en), French full ...-ccb7 (b-fr), ADS2 ...-aa6e (c), Nocturnal ...-ecd6 (d), CCE ...-7c4a (e), original mod ...-4ddf (f). They test the hardened build, not ff3ecbd; the 1.0.0 published build is covered by the 5390 result only. Results not in.
 
 1.7 reading (2026-10-15, metadata of ~/rimworld17/Assembly-CSharp.dll read with System.Reflection.Metadata, no game run; ilspycmd 8.2 cannot open that assembly): the two private reflections of the DLL still resolve by name. `Verse.Projectile.origin` exists (protected field, caught by Instance|NonPublic) and `RimWorld.Verb_MeleeAttackDamage.DamageInfosToApply` exists (private, a single method of that name). This says the lookups will not return null; it does not say the calls behave the same. `tested_1_7` stays absent until a 1.7 run.
+
+Audit replay 2026-10-15 (protocols re-read from 65e09838: AGENTS, AUDIT, CICD, GALLERY, README, scripts.md, LOCAL_SCRIPTS, USE_THIS_INSTEAD). Changes that touch this mod: (1) the session name carries no marker any more (Workflow Board computes the colour), name is `ancientchinesebeasta... / code[1.1.0]`; (2) gallery subtitles rule of 2026-10-15 (GALLERY.md, "Sous-titres"): scenes without a UI window carry one English line, originals in `Art/Gallery-clean/`, table "Gallery subtitles" in PUBLICATION.md, tool `scripts/Add-Subtitle.ps1`; the gallery of this mod (images 1 to 7, uploaded 2026-10-13) predates it; (3) post-publish tag check and 14.c cleanup message with Workshop links: noted for 1.1.0 and the cleanup. Run-All translations step: 6 findings down to 1 after the shared Check-Translations fix (1ae53af); the last one, vanilla key TextMote_Dodge called in Source, needs an exemption in the shared script, requested from the Audit session.
