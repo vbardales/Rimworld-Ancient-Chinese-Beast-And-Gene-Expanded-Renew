@@ -1,103 +1,52 @@
 # Runtime behavior inventory and review contract
 
-Run `pwsh -NoProfile -File Tests/Run-All.ps1` first for the automated content, Harmony, override
-and XML checks. Two XML validators are versioned in `Tests/Xml/`, the other four are run from the protocols repository `scripts/` (sibling folder of the mod).
-These static checks do not execute gameplay. The following scenarios require a running game.
+Run `pwsh -NoProfile -File Tests/Run-All.ps1` first for automated content, Harmony, override and XML checks. Two XML validators versioned in `Tests/Xml/`, other four run from protocols repository `scripts/` (sibling folder of mod).
+Static checks do not execute gameplay. Scenarios below need running game.
 
 ## Automation first
 
-This file is the behavior inventory from which the Pickle companion suite must be written; it is
-**not** an instruction to make a tester set up and play every case by hand. For each applicable
-scenario, the suite must load or create its fixture, spawn the relevant beast/pawn/corpse/item,
-apply the action through the real game path, assert every observable state it can, and then save a
-bounded screenshot or film tagged `@review`. A green run proves that the trajectory and its
-assertions completed; a person only opens the resulting evidence to judge what an image or sound
-can show.
+This file = behavior inventory from which Pickle companion suite must be written; **not** instruction to make tester set up and play every case by hand. For each applicable scenario, suite must load or create fixture, spawn relevant beast/pawn/corpse/item, apply action through real game path, assert every observable state possible, then save bounded screenshot or film tagged `@review`. Green run proves trajectory and assertions completed; person only opens resulting evidence to judge what image or sound can show.
 
-Some evidence remains inherently human: whether animation, particle effects, a sound, text
-clipping or a translated phrase looks or sounds right. Even then the Gherkin scenario must still
-prepare the exact moment (for example a sexie at its transformation, a qiongqi starting its
-flight, or a mingshe dying with drought active) and capture it. Manual play is an exception for a
-missing automation capability or a private pre-existing save; it never substitutes for scenario
-setup. Record the exception, its reason and the exact evidence to inspect in `Tests/Pickle/README.md`.
+Some evidence inherently human: whether animation, particle effects, sound, text clipping or translated phrase looks or sounds right. Even then Gherkin scenario must prepare exact moment (e.g. sexie at transformation, qiongqi starting flight, mingshe dying with drought active) and capture it. Manual play = exception for missing automation capability or private pre-existing save; never substitutes for scenario setup. Record exception, reason, exact evidence to inspect in `Tests/Pickle/README.md`.
 
-Evidence stays on disk and out of git. Which proofs of a run are worth keeping, in what form and for
-how long, is in `docs/runs/README.md`; read it before deleting or committing anything a run wrote.
+Evidence stays on disk, out of git. Which proofs of run worth keeping, in what form, how long, is in `docs/runs/README.md`; read before deleting or committing anything run wrote.
 
-The companion suite exists (`Tests/Pickle/`, 23 features, 112 scenarios) and has been played, feature by feature,
-since 2026-09-25 (`docs/runs/`); it has not been played as one full run on the current tree. Which of the
-28 cases below each feature plays is the table in its README, and so are the nine manual exceptions (M1 to
-M9). On 2026-10-01 M1 to M5 are automated and green, M6 and M7 are automated and red, M8 and M9 are neither
-automated nor played; until every one is green or explicitly not applicable with its reason, the mod cannot be
-`tested`. A written scenario is automation, not evidence that anything passed: the evidence is the report of a run
-on the current tree.
+Companion suite exists (`Tests/Pickle/`, 23 features, 112 scenarios), played feature by feature since 2026-09-25 (`docs/runs/`); not played as one full run on current tree. Which of 28 cases below each feature plays = table in its README, so are nine manual exceptions (M1 to M9). On 2026-10-01 M1 to M5 automated and green, M6 and M7 automated and red, M8 and M9 neither automated nor played; until every one green or explicitly not applicable with reason, mod cannot be `tested`. Written scenario = automation, not evidence anything passed: evidence = report of run on current tree.
 
-**What `tested` asks for** (`AUDIT.md`, `done -> tested`), and where this mod stands on 2026-10-01: no scenario
-tagged `@wip` (holds); every `@requires` scenario has run on the current tree (not yet: `13`, `14`, `16` ran on older
-trees, `17` on the current one); no manual test left to validate (not met); the Pickle suites green with
-`exitReason` read first and the `@review` captures opened (two of the nine do not show their subject); the logs
-checked and the interface verified in English and French; a French review by the owner.
+**What `tested` asks for** (`AUDIT.md`, `done -> tested`), and where mod stands 2026-10-01: no scenario tagged `@wip` (holds); every `@requires` scenario has run on current tree (not yet: `13`, `14`, `16` ran on older trees, `17` on current one); no manual test left to validate (not met); Pickle suites green with `exitReason` read first and `@review` captures opened (two of nine do not show subject); logs checked and interface verified in English and French; French review by owner.
 
-28 scenarios, ordered so that each one leaves the save in the state the next one needs. The
-whole run is about an hour when performed manually. Pickle features should instead reload or
-construct their own state, except for deliberate documented `@same-world` sequences.
+28 scenarios, ordered so each leaves save in state next needs. Whole run about an hour when performed manually. Pickle features should instead reload or construct own state, except deliberate documented `@same-world` sequences.
 
 ## Passes
 
-`AUDIT.md` names three families of Pickle passes and asks each mod to say here how many it needs and what each
-covers. This mod needs six launches:
+`AUDIT.md` names three families of Pickle passes, asks each mod to say here how many needed and what each covers. This mod needs six launches:
 
 | # | Pass | Set | Covers |
 | --- | --- | --- | --- |
-| 1 | without the optional mods, English | the minimal set: Core, the DLCs, Harmony, RimLogging, Pickle, Biotech, the mod | every feature but `13` and `14`, which are skipped by requirement |
+| 1 | without the optional mods, English | the minimal set: Core, the DLCs, Harmony, RimLogging, Pickle, Biotech, the mod | every feature but `13` and `14`, skipped by requirement |
 | 2 | without the optional mods, French | the same set, `-Language French` | the same features, against the French files |
-| 3 | with the optional mod | the minimal set plus `ninedaylongbow.ChineseComprehensiveExpansion` (Workshop 3221850511), the one mod `About.xml` names in `loadAfter`, `wsl-deps.cce.map` | `17`: it loads after that mod with no conflict (green 1/1, 2026-09-28) |
-| 4 | declared incompatibility | the minimal set plus `andery233xj.AncientChineseBeast`, `wsl-deps.incompat-original.map` | `13`, which asserts the symptom the incompatibility is declared for |
-| 5 | with A Dog Said... Animal Prosthetics 2 | the minimal set plus `SamBucher.ADogSaidAnimalProsthetics2` (Workshop 3238353862), `wsl-deps.ads2.map` | `14`, block H below: the recipe lists on the races, and the load order |
-| 6 | with Nocturnal Animals | the minimal set plus `Mlie.XNDNocturnalAnimals` (Workshop 2269731409), `wsl-deps.nocturnal.map` | `16`, block I below: the body clock each race carries |
+| 3 | with the optional mod | the minimal set plus `ninedaylongbow.ChineseComprehensiveExpansion` (Workshop 3221850511), the one mod `About.xml` names in `loadAfter`, `wsl-deps.cce.map` | `17`: loads after that mod with no conflict (green 1/1, 2026-09-28) |
+| 4 | declared incompatibility | the minimal set plus `andery233xj.AncientChineseBeast`, `wsl-deps.incompat-original.map` | `13`, asserts symptom the incompatibility is declared for |
+| 5 | with A Dog Said... Animal Prosthetics 2 | the minimal set plus `SamBucher.ADogSaidAnimalProsthetics2` (Workshop 3238353862), `wsl-deps.ads2.map` | `14`, block H below: recipe lists on races, load order |
+| 6 | with Nocturnal Animals | the minimal set plus `Mlie.XNDNocturnalAnimals` (Workshop 2269731409), `wsl-deps.nocturnal.map` | `16`, block I below: body clock each race carries |
 
-There is no pass without a DLC (Biotech is a hard dependency, so the mod does not load without it) and no
-restart sequence (nothing here crosses a process boundary). All six passes are written. Passes 1 and 2 (every
-scenario, English then French) have never been played whole on the current tree; passes 3 to 6 each played green
-once, on trees that differ from the current one except pass 3. The final pass of a `tested` claim plays all six, one
-request each, with the SHA in the `-Label`. The two other optional mods the code does not name (Dogs mate and Better
-Crossbreeding) need no pass: see `STATUS.md`, "The four animal integrations".
+No pass without DLC (Biotech hard dependency, mod does not load without it), no restart sequence (nothing crosses process boundary). All six passes written. Passes 1 and 2 (every scenario, English then French) never played whole on current tree; passes 3 to 6 each played green once, on trees differing from current except pass 3. Final pass of `tested` claim plays all six, one request each, SHA in `-Label`. Two other optional mods code does not name (Dogs mate, Better Crossbreeding) need no pass: see `STATUS.md`, "The four animal integrations".
 
-**Order of the passes** (`AUDIT.md`, rule of 2026-10-02). What has never run, and what is red, is played alone in small
-tickets (`-Filter` on the feature or on `::<scenario title>`), first. The non-regression passes, which replay what is
-already green (the whole suite, English then French, and the optional-mod passes), are all queued together at the end, on
-the final revision: queued earlier they occupy the machine to prove nothing new and are out of date at the next commit. A
-scenario is in non-regression as soon as it has a green run on the current logic; a change to the mod or to a step it
-uses makes it new again. On the 2026-10-08 tree: new or red are the aura ring, the flying strike, the drought wait (all
-corrected 2026-10-02), the French pass of features 18 to 23, and the French egg scenario; everything else with a green run
-is non-regression and waits for the end.
+**Order of the passes** (`AUDIT.md`, rule of 2026-10-02). What never ran, and what is red, played alone in small tickets (`-Filter` on feature or on `::<scenario title>`), first. Non-regression passes, replaying what already green (whole suite, English then French, optional-mod passes), all queued together at end, on final revision: queued earlier they occupy machine to prove nothing new and are out of date at next commit. Scenario in non-regression as soon as it has green run on current logic; change to mod or to step it uses makes it new again. On 2026-10-08 tree: new or red are aura ring, flying strike, drought wait (all corrected 2026-10-02), French pass of features 18 to 23, French egg scenario; everything else with green run is non-regression, waits for end.
 
-**Not tested, on purpose** (`AUDIT.md`, rule of 2026-10-02): what this mod leaves as vanilla or as another mod defines it.
-Nothing of the vanilla `Flame`, `Bite`, `BluntBase` or `PawnFlyerBase` damage and flyer defs the beasts' own defs inherit
-from is exercised for itself; vanilla egg-laying (`CompEggLayer`), rest and mating are exercised only through the beasts'
-own values (feature `15`: the ten-day mating, the twenty-day gestation, the egg defs). The two optional mods are played
-only for what this mod's patches add to them (passes 5 and 6), not for their own behaviour. Not applicable, with that
-reason: the behaviour of Animal Prosthetics 2 once a recipe exists, and of Nocturnal Animals' body clock beyond the field
-this mod sets.
+**Not tested, on purpose** (`AUDIT.md`, rule of 2026-10-02): what mod leaves as vanilla or as another mod defines. Nothing of vanilla `Flame`, `Bite`, `BluntBase` or `PawnFlyerBase` damage and flyer defs beasts' own defs inherit from exercised for itself; vanilla egg-laying (`CompEggLayer`), rest, mating exercised only through beasts' own values (feature `15`: ten-day mating, twenty-day gestation, egg defs). Two optional mods played only for what this mod's patches add (passes 5 and 6), not their own behaviour. Not applicable, with reason: behaviour of Animal Prosthetics 2 once recipe exists, and Nocturnal Animals' body clock beyond field this mod sets.
 
-**After the last Pickle ticket** (`AUDIT.md`): the mods that this mod's sessions downloaded into the WSL installation (the
-optional Workshop items of passes 3, 5 and 6) are removed under the machine lock, after listing what goes and what stays,
-and keeping any item another mod's `wsl-deps` still names; `STATUS.md` records what was removed. Not done yet.
+**After the last Pickle ticket** (`AUDIT.md`): mods this mod's sessions downloaded into WSL installation (optional Workshop items of passes 3, 5, 6) removed under machine lock, after listing what goes and stays, keeping any item another mod's `wsl-deps` still names; `STATUS.md` records what removed. Not done yet.
 
 ## Manual fallback only
 
 - Development mode on: Options, then Development mode. Most scenarios use it.
-- A colony on a temperate map, a handful of colonists, and a stockpile. Growing crops matters for
-  scenario 4 and nothing else.
-- **Keep `Player.log` after the session** (`%USERPROFILE%\AppData\LocalLow\Ludeon Studios\RimWorld
-  by Ludeon Studios\Player.log`). A red error there is a result even when the scenario looked fine
-  on screen.
-- Expect this mod to be **the only one loaded** beyond Harmony, Biotech and the DLCs, for the first
-  run at least. A second run inside the full modlist is worth doing afterwards, and any difference
-  between the two runs is itself the finding.
+- Colony on temperate map, handful of colonists, stockpile. Growing crops matters for scenario 4 only.
+- **Keep `Player.log` after session** (`%USERPROFILE%\AppData\LocalLow\Ludeon Studios\RimWorld
+  by Ludeon Studios\Player.log`). Red error there = result even when scenario looked fine on screen.
+- Expect this mod **only one loaded** beyond Harmony, Biotech, DLCs, for first run at least. Second run inside full modlist worth doing afterwards; any difference between two runs is itself finding.
 
-Every "expected" line below is read out of the code or the defs. The Pickle runs of 2026-09-25 have shown some of
-them happening (`docs/runs/`); **no person has yet observed any of it.**
+Every "expected" line below read out of code or defs. Pickle runs of 2026-09-25 showed some happening (`docs/runs/`); **no person yet observed any of it.**
 
 ---
 
@@ -105,172 +54,140 @@ them happening (`docs/runs/`); **no person has yet observed any of it.**
 
 ### A1. The mod loads without errors
 
-1. Start the game with the mod active.
-2. Open the log (`~` key, or Development mode then "Open the log").
+1. Start game with mod active.
+2. Open log (`~` key, or Development mode then "Open the log").
 
-**Expected.** No red. In particular, nothing saying a type could not be found, nothing about a
-missing field, and nothing from Harmony about a patch it could not apply. The nine patches apply at
-startup, in `PatchMain`'s static constructor.
+**Expected.** No red. Nothing saying type not found, nothing about missing field, nothing from Harmony about patch it could not apply. Nine patches apply at startup, in `PatchMain`'s static constructor.
 
-**If it fails here, stop.** Everything below assumes the assembly loaded.
+**If fails here, stop.** Everything below assumes assembly loaded.
 
 ### A2. The content is in the game
 
-1. Development mode, then the debug actions menu (the icon with the tools).
-2. Search for `SZ_` in "Spawn thing".
+1. Development mode, then debug actions menu (icon with tools).
+2. Search `SZ_` in "Spawn thing".
 
-**Expected.** The beasts, the firecracker, the two rifles and the extractor all appear. 127 defs
-ship; you are only checking that they are present, not each one.
+**Expected.** Beasts, firecracker, two rifles, extractor all appear. 127 defs ship; only checking present, not each one.
 
 ---
 
 ## Block B: the beasts arrive
 
-The incidents have `baseChance` zero: the storyteller never rolls them. They are fired by the mod's
-own clock (see block F), so the only practical way to see one is the development menu.
+Incidents have `baseChance` zero: storyteller never rolls them. Fired by mod's own clock (see block F), so only practical way to see one = development menu.
 
 ### B1. The qiongqi or the mingshe walks in
 
 1. Debug actions, "Execute incident", pick `SZ_BeastApproach`.
 
-**Expected.** A letter, in the mod's own wording, and a beast spawned near a map edge. Which of the
-two you get is random. No error in the log.
+**Expected.** Letter, in mod's own wording, and beast spawned near map edge. Which of two random. No error in log.
 
-> This is the scenario that made a code change necessary. The incident worker read the chosen beast
-> out of a field that only the mod's own clock ever set, so firing it from this menu threw a null
-> reference before anything spawned. It now picks one from the incident's own list when the field is
-> empty. If you see a beast, that fix works.
+> This scenario made code change necessary. Incident worker read chosen beast from field only mod's own clock ever set, so firing from this menu threw null reference before anything spawned. Now picks one from incident's own list when field empty. If you see beast, fix works.
 
 ### B2. The sexie digs up through the floor
 
-1. Build or find a room with some wealth in it. The spawner picks **the richest room on the map**.
+1. Build or find room with some wealth. Spawner picks **richest room on map**.
 2. Debug actions, "Execute incident", `SZ_BeastApproachTunnel`.
 
-**Expected.** A tunnel appears **inside that room**, not at a map edge, and after the usual
-tunnel delay a sexie comes out of it. Check it chose the room you expected: that ordering is
-`RegionGrid.AllRooms` sorted by wealth, and `AllRooms` is one of the members 1.6 changed.
+**Expected.** Tunnel appears **inside that room**, not at map edge, and after usual tunnel delay sexie comes out. Check it chose expected room: ordering is `RegionGrid.AllRooms` sorted by wealth, and `AllRooms` is one of members 1.6 changed.
 
 ### B3. The nian beast comes on New Year
 
 1. Debug actions, category **Ancient Chinese Beast**, then **Nian beast next hour**.
 2. Let an hour of game time pass.
 
-**Expected.** A message saying so, then the nian beast incident fires within the hour, whatever the
-date.
+**Expected.** Message saying so, then nian beast incident fires within hour, whatever date.
 
-> The original put this on a `ThingComp` on the firecracker: you had to spawn one, drop it and
-> select it to see three buttons labelled in Chinese, of which **two did nothing at all** - they
-> added to a counter no code reads. The comp is gone and the four entries below replaced it.
+> Original put this on `ThingComp` on firecracker: had to spawn one, drop it, select it to see three buttons labelled in Chinese, of which **two did nothing at all** - added to counter no code reads. Comp gone, four entries below replaced it.
 
 ### B4. The development entries do what they say
 
-All four are under **Ancient Chinese Beast** in the debug actions menu.
+All four under **Ancient Chinese Beast** in debug actions menu.
 
 | entry | expected |
 |---|---|
-| **Beast attack now** | one of the four beasts arrives immediately, by whichever of the two incidents suits it |
+| **Beast attack now** | one of four beasts arrives immediately, by whichever of two incidents suits it |
 | **Nian beast next hour** | scenario B3 |
-| **Clear the sixty-day gate** | a message; no beast yet. It only lifts the interval, leaving the 1% daily roll to fire on its own, which is what makes F1 testable in an evening |
-| **Report the beast clock** | a line in the log giving the tick, the ticks since the last beast, the storyteller and its schedule, the beast currently chosen, and how many kinds of corpse are held |
+| **Clear the sixty-day gate** | message; no beast yet. Only lifts interval, leaving 1% daily roll to fire on own, which makes F1 testable in an evening |
+| **Report the beast clock** | line in log giving tick, ticks since last beast, storyteller and its schedule, beast currently chosen, how many kinds of corpse held |
 
-**Run "Report the beast clock" before and after each of the other three.** It is the only window
-onto the scheduling state, and every claim in block F is a claim about that state.
+**Run "Report the beast clock" before and after each of other three.** Only window onto scheduling state, and every claim in block F is claim about that state.
 
 ---
 
 ## Block C: each beast fights its own way
 
-Spawn the beasts directly for these (debug "Spawn pawn"), rather than waiting for incidents. Use a
-throwaway save: several of these are meant to kill colonists.
+Spawn beasts directly (debug "Spawn pawn"), rather than waiting for incidents. Use throwaway save: several meant to kill colonists.
 
 ### C1. The mingshe brings a drought and does not attack
 
-1. Spawn `SZ_MingShe` on a map with a grown crop field.
-2. Watch it for an in-game hour.
+1. Spawn `SZ_MingShe` on map with grown crop field.
+2. Watch it for in-game hour.
 
 **Expected.**
-- A permanent game condition appears in the top-right bar, and the weather turns to clear sun.
-- **The beast does not attack.** It moves, it defends itself, it does not hunt colonists.
-- Every plant on the map takes damage each in-game hour, and eventually dies.
-- **Anima trees, Gauranlen trees and polux trees are spared.** Plant one of each first if you can;
-  this is an exception list in the code and a list is exactly what rots.
+- Permanent game condition appears in top-right bar, weather turns clear sun.
+- **Beast does not attack.** Moves, defends itself, does not hunt colonists.
+- Every plant on map takes damage each in-game hour, eventually dies.
+- **Anima trees, Gauranlen trees, polux trees spared.** Plant one of each first if possible; exception list in code and list is exactly what rots.
 
 ### C2. The mingshe's wind shield throws shots back
 
-1. With the mingshe alive, shoot at it from more than ten tiles away, repeatedly.
-2. Wait for it to raise the shield: a visible ring about ten tiles across.
+1. With mingshe alive, shoot at it from more than ten tiles away, repeatedly.
+2. Wait for it to raise shield: visible ring about ten tiles across.
 
-**Expected.** While the ring is up, a shot fired **from outside it** is thrown back at whoever
-fired it. Anything standing **inside** the ring is cut. Try both: a colonist inside the ring and a
-colonist outside shooting in.
+**Expected.** While ring up, shot fired **from outside it** thrown back at whoever fired. Anything **inside** ring is cut. Try both: colonist inside ring and colonist outside shooting in.
 
 ### C3. The mingshe's drought ends when it dies
 
-1. Kill the mingshe.
+1. Kill mingshe.
 
-**Expected.** The condition disappears from the bar and the weather is free to change again.
+**Expected.** Condition disappears from bar, weather free to change again.
 
-> This one is worth care. The hook that ends the condition is one of the two that had silently
-> stopped overriding anything on 1.6. If the drought outlives the beast, that is the bug back.
+> Worth care. Hook ending condition is one of two that silently stopped overriding anything on 1.6. If drought outlives beast, that is bug back.
 
 ### C4. A tame mingshe does not crash
 
-1. Development mode, spawn `SZ_MingShe_Friendly` as a player-faction pawn.
+1. Development mode, spawn `SZ_MingShe_Friendly` as player-faction pawn.
 2. Let it live an hour, then kill it.
 
-**Expected.** No error either way, and no drought: the condition is only created for a beast that
-is not yours. The original threw a null reference here, because it created the condition
-conditionally and ended it unconditionally.
+**Expected.** No error either way, no drought: condition only created for beast not yours. Original threw null reference here, because created condition conditionally and ended it unconditionally.
 
 ### C5. The qiongqi dodges, picks the far shooter, and flies
 
 1. Spawn `SZ_QiongQi`. Put two colonists with ranged weapons at different distances.
 
 **Expected.**
-- Roughly **half** of the shots aimed at it miss with a "dodge" text mote. Fire twenty and count.
-- It goes for **the furthest shooter it can see**, not the nearest target.
-- To close the distance it **flies**: an animation spawns, it leaves the ground, and it lands
-  cutting everything within four tiles.
-- Wounds land on the head more often than chance would give.
+- Roughly **half** of shots aimed at it miss with "dodge" text mote. Fire twenty, count.
+- Goes for **furthest shooter it can see**, not nearest target.
+- To close distance it **flies**: animation spawns, leaves ground, lands cutting everything within four tiles.
+- Wounds land on head more often than chance gives.
 
-> The flight is the other thing 1.6 broke. If the qiongqi rises and then hangs in the air over its
-> target without ever landing, the flyer is not being ticked.
+> Flight is other thing 1.6 broke. If qiongqi rises then hangs in air over target without landing, flyer not being ticked.
 
 ### C6. The sexie changes shape
 
-1. Spawn `SZ_SeXie` - the human-shaped one.
+1. Spawn `SZ_SeXie` - human-shaped one.
 
 **Expected.**
-- **It does not attack.** It stands there.
-- Every so often it sends out an aura, about eleven tiles across, that drives the psychically
-  sensitive colonists inside it berserk against their own side. A colonist with high psychic
-  sensitivity makes this easier to see.
-- **Kill it, and a scorpion (`SZ_SeXieInsect`) comes out of the corpse**, angrier: it fires
-  venomous tail-needles **through walls** and uses pincers up close.
+- **Does not attack.** Stands there.
+- Every so often sends out aura, about eleven tiles across, driving psychically sensitive colonists inside berserk against own side. Colonist with high psychic sensitivity makes this easier to see.
+- **Kill it, and scorpion (`SZ_SeXieInsect`) comes out of corpse**, angrier: fires venomous tail-needles **through walls**, uses pincers up close.
 
-> The shape change is the first of the two overrides 1.6 silenced. If the human form simply dies
-> and nothing comes out, that is the bug back, and it is the single most important line in this
-> file.
+> Shape change is first of two overrides 1.6 silenced. If human form simply dies and nothing comes out, that is bug back, and single most important line in this file.
 
 ### C7. The nian beast is only hurt by firecrackers
 
 1. Spawn `SZ_YearBeast`.
-2. Shoot it with an ordinary weapon and watch the damage numbers.
-3. Craft or spawn firecrackers and throw them at it.
+2. Shoot with ordinary weapon, watch damage numbers.
+3. Craft or spawn firecrackers, throw at it.
 
-**Expected.** Everything that is not a firecracker does **a tenth** of its damage. A firecracker
-does **a thousand times** its damage. The two together are why firecrackers are the only weapon
-that matters here.
+**Expected.** Everything not firecracker does **a tenth** of its damage. Firecracker does **a thousand times** its damage. Together why firecrackers only weapon that matters here.
 
-**Also.** It breathes a cone of fire that spawns a wave of small flame projectiles, and it will
-break a door down to reach someone indoors.
+**Also.** Breathes cone of fire spawning wave of small flame projectiles, and breaks door down to reach someone indoors.
 
 ### C8. Butchering a nian beast gives meat, and only meat
 
-1. Butcher the corpse at a butcher table.
+1. Butcher corpse at butcher table.
 
-**Expected.** Meat, and nothing else: the race carries no butcher product, and the original mod's promise of
-"nian beast fangs" has been taken out of the descriptions. Seen in the game on 2026-09-25: 2800 units of meat.
+**Expected.** Meat, nothing else: race carries no butcher product, original mod's promise of "nian beast fangs" taken out of descriptions. Seen in game 2026-09-25: 2800 units of meat.
 
 ---
 
@@ -281,24 +198,22 @@ break a door down to reach someone indoors.
 1. Debug actions, "Execute incident", `SZ_ChickenPasses`.
 2. Tame it.
 
-**Expected.** A letter, and a bird you can tame like any animal.
+**Expected.** Letter, and bird tameable like any animal.
 
 ### D2. Its crow lifts the colony and kills a sexie
 
-1. With the tamed bird on the map, select it and use its crow ability by hand.
+1. With tamed bird on map, select it, use crow ability by hand.
 
 **Expected.**
-- A sound plays.
-- **Every colonist and every allied pawn on the map** gains "heartened by the Pleiades star
-  officer", **+20 mood for one day**. Check an ally too, not only your own colonists.
-- If a sexie or a sexie scorpion is on the map, **one of them dies outright**. Put two on the map
-  and check exactly one dies.
+- Sound plays.
+- **Every colonist and every allied pawn on map** gains "heartened by the Pleiades star officer", **+20 mood for one day**. Check an ally too, not only own colonists.
+- If sexie or sexie scorpion on map, **one of them dies outright**. Put two on map, check exactly one dies.
 
 ### D3. It crows on its own at four in the morning
 
-1. Leave the bird on the map and let the clock reach 04:00.
+1. Leave bird on map, let clock reach 04:00.
 
-**Expected.** The same thing happens without being asked.
+**Expected.** Same thing happens without being asked.
 
 ---
 
@@ -306,25 +221,23 @@ break a door down to reach someone indoors.
 
 ### E1. The research is where it says it is
 
-1. Open the research tab.
+1. Open research tab.
 
-**Expected.** A tab called **Chinese items**, holding **beast gene extraction**: 1000 points,
-spacer tech, needing a **hi-tech research bench** and a **multi-analyzer**, after **Archogenetics**.
+**Expected.** Tab called **Chinese items**, holding **beast gene extraction**: 1000 points, spacer tech, needing **hi-tech research bench** and **multi-analyzer**, after **Archogenetics**.
 
 ### E2. The extractor can be built and takes a corpse
 
-1. Finish the research (debug: finish it instantly).
-2. Build the **beast gene extractor**.
-3. Bring a beast corpse to it - keep one from block C, or spawn `Corpse_SZ_QiongQi`.
+1. Finish research (debug: finish instantly).
+2. Build **beast gene extractor**.
+3. Bring beast corpse to it - keep one from block C, or spawn `Corpse_SZ_QiongQi`.
 
-**Expected.** The bench offers its recipes, and a colonist hauls the corpse and works on it.
+**Expected.** Bench offers its recipes, colonist hauls corpse and works on it.
 
 ### E3. Each of the twelve genes comes out as a genepack
 
-1. Run the extraction recipes, one per gene.
+1. Run extraction recipes, one per gene.
 
-**Expected.** Twelve distinct genes across four beasts, each arriving **as a genepack**, not as a
-loose gene:
+**Expected.** Twelve distinct genes across four beasts, each arriving **as genepack**, not loose gene:
 
 | beast | genes |
 |---|---|
@@ -333,27 +246,21 @@ loose gene:
 | sexie | crystal spurs, heart-butchering aura, monstrous strength |
 | nian beast | fire breath, scales, horn |
 
-The recipe that produces them is a vanilla one with a postfix on it, so a genepack arriving with
-nothing in it, or a wrong gene, points at that patch.
+Recipe producing them is vanilla one with postfix, so genepack arriving empty, or wrong gene, points at that patch.
 
 ### E4. The genes work on a colonist
 
-Implant them and check the three that are measurable rather than cosmetic:
+Implant them, check three measurable rather than cosmetic:
 
-- **the qiongqi's eye**: the colonist dodges about half of incoming shots, with the same text mote
-  the beast gets.
-- **monstrous strength**: unarmed melee damage **doubled**. The label used to claim it weakened
-  enemies, which is the opposite of what it does; check the description reads the right way round.
-- **the nian beast's horn**: extra head health. Look at the head's hit points on the health tab.
+- **qiongqi's eye**: colonist dodges about half of incoming shots, same text mote beast gets.
+- **monstrous strength**: unarmed melee damage **doubled**. Label used to claim it weakened enemies, opposite of what it does; check description reads right way round.
+- **nian beast's horn**: extra head health. Look at head's hit points on health tab.
 
 ### E5. A clone comes out alive and on your side
 
-1. Run a clone recipe on a corpse.
+1. Run clone recipe on corpse.
 
-**Expected.** A tame beast of that kind, **in your faction**, with the same abilities as the wild
-one, and an AI that uses its ranged ability while fighting in melee. Check its description is its
-own: the English used to reuse the hostile beast's text, so a tame beast described itself as a
-raider.
+**Expected.** Tame beast of that kind, **in your faction**, same abilities as wild one, and AI using its ranged ability while fighting in melee. Check description is its own: English used to reuse hostile beast's text, so tame beast described itself as raider.
 
 ### E6. A corpse renders into archite capsules
 
@@ -365,32 +272,26 @@ raider.
 
 ## Block F: the schedule, which needs patience or a save editor
 
-These are the slowest and the least certain. Do them last, or not at all on a first pass.
+Slowest and least certain. Do last, or not at all on first pass.
 
 ### F1. Under an ordinary storyteller the beasts are rare
 
-The code rolls **once a game day**, at **1%**, and refuses if **less than sixty days** have passed
-since the last beast. So the first one is unlikely before roughly day 160.
+Code rolls **once a game day**, at **1%**, refuses if **less than sixty days** passed since last beast. First unlikely before roughly day 160.
 
-**How to test it without waiting.** Let a colony run at high speed for a few in-game years and
-count the beasts. The number should be small and the gaps never shorter than sixty days.
+**How to test without waiting.** Let colony run at high speed few in-game years, count beasts. Number should be small, gaps never shorter than sixty days.
 
-> The beasts' own descriptions say they come "a year after the colony is established". That is the
-> authors' flavour text; the schedule above is what the code does. Do not treat the description as
-> the expected result.
+> Beasts' own descriptions say they come "a year after the colony is established". Authors' flavour text; schedule above is what code does. Do not treat description as expected result.
 
 ### F2. Under Sexie the beasts come every fifteen days
 
-1. Start a colony with the storyteller **Sexie, the Venomous Mist**.
+1. Start colony with storyteller **Sexie, the Venomous Mist**.
 2. Run past day 1, then watch.
 
-**Expected.** A beast every fifteen days, on top of whatever she sends otherwise, and independent
-of the 1% roll above.
+**Expected.** Beast every fifteen days, on top of whatever she sends otherwise, independent of 1% roll above.
 
 ### F3. The nian beast comes on the first day of the year
 
-**Expected.** At the first hour of day 0 of the year, whatever the storyteller, without any roll.
-Scenario B3 is the shortcut; this is the real thing, and worth one confirmation.
+**Expected.** At first hour of day 0 of year, whatever storyteller, without any roll. Scenario B3 is shortcut; this is real thing, worth one confirmation.
 
 ---
 
@@ -398,17 +299,14 @@ Scenario B3 is the shortcut; this is the real thing, and worth one confirmation.
 
 ### G1. The mod's own state survives a save and reload
 
-1. Get a beast to arrive, then save, quit to the menu, and reload.
+1. Get beast to arrive, then save, quit to menu, reload.
 
-**Expected.** The chosen beast, the clock's last-beast time and the corpse list all come back. They
-are saved through a patch on `Game.ExposeSmallComponents`. A beast that forgets which beast it is
-after a reload, or a drought that comes back without its causer, is a failure here.
+**Expected.** Chosen beast, clock's last-beast time, corpse list all come back. Saved through patch on `Game.ExposeSmallComponents`. Beast forgetting which beast it is after reload, or drought returning without causer, = failure here.
 
 ### G2. Adding and removing mid-save
 
-1. Add the mod to an existing save: it should load with no error.
-2. Remove it from a save that has beasts in it: the beasts, their genes, the storyteller and the
-   extractor go, and the save should still open.
+1. Add mod to existing save: should load with no error.
+2. Remove it from save with beasts in it: beasts, genes, storyteller, extractor go, save should still open.
 
 ---
 
@@ -416,15 +314,12 @@ after a reload, or a drought that comes back without its causer, is a failure he
 
 ### H1. The tame clones and the chicken get its prosthetics, the hostile beasts do not
 
-1. Load the mod with `SamBucher.ADogSaidAnimalProsthetics2` after it.
-2. Open a tame `SZ_YearBeast_Friendly` in the Health tab and add a bill.
+1. Load mod with `SamBucher.ADogSaidAnimalProsthetics2` after it.
+2. Open tame `SZ_YearBeast_Friendly` in Health tab, add bill.
 
-**Expected.** The operations menu offers the wooden, simple and bionic replacements that fit the parts the
-beast has. The Pleiades star officer is offered wooden and simple ones and no bionic. A hostile beast has
-no such recipe on its race. Without the other mod, nothing in this block exists and the log stays clean.
+**Expected.** Operations menu offers wooden, simple, bionic replacements fitting parts beast has. Pleiades star officer offered wooden and simple, no bionic. Hostile beast has no such recipe on race. Without other mod, nothing in this block exists, log stays clean.
 
-> Scenario `14` plays the recipe lists and the load order; which operation the tab offers for which body
-> part is the other mod's own logic, and is not asserted.
+> Scenario `14` plays recipe lists and load order; which operation tab offers for which body part is other mod's own logic, not asserted.
 
 ---
 
@@ -432,62 +327,40 @@ no such recipe on its race. Without the other mod, nothing in this block exists 
 
 ### I1. A tired tame beast lies down; a hostile one has the need
 
-1. Tame a beast (or spawn a tame clone), lower its rest need in development mode, and watch.
+1. Tame beast (or spawn tame clone), lower rest need in development mode, watch.
 
-**Expected.** It lies down where it stands and gets up when rested. The hostile beasts have a rest need too (they lie down
-between hunts). With Nocturnal Animals, the sleeping hours follow its clock: the qiongqi and the sexie are up at night, the
-star officer is awake at four in the morning and crows.
+**Expected.** Lies down where it stands, gets up when rested. Hostile beasts have rest need too (lie down between hunts). With Nocturnal Animals, sleeping hours follow its clock: qiongqi and sexie up at night, star officer awake at four in morning and crows.
 
 ### I2. A tame pair breeds
 
-1. Clone two of the same beast (the recipe draws the sex at random: clone until there is a pair), keep them together.
-2. Wait, or use the development tools to bring on a mating.
+1. Clone two of same beast (recipe draws sex at random: clone until pair), keep together.
+2. Wait, or use development tools to bring on mating.
 
-**Expected.** A pregnancy in the female (a **fertilised egg** in the mingshe and the star officer), a **baby** at term, then a
-juvenile, then an adult, on the same textures at a smaller size; the young are in your faction. A clone saved before this
-version has no sex and cannot breed.
+**Expected.** Pregnancy in female (**fertilised egg** in mingshe and star officer), **baby** at term, then juvenile, then adult, same textures at smaller size; young in your faction. Clone saved before this version has no sex, cannot breed.
 
 ### I3. Nocturnal Animals (optional)
 
-**Expected.** Without the other mod, nothing in the log and the vanilla clock. With it, each race carries the clock of the
-patch (`Patches/NocturnalAnimals.xml`) on its info card.
+**Expected.** Without other mod, nothing in log and vanilla clock. With it, each race carries clock of patch (`Patches/NocturnalAnimals.xml`) on info card.
 
-> Scenarios `15` and `16` play the wiring of all three: the need, the Mate job, the pregnancy, the egg and its hatching, and
-> the extension on each race. Real hours of sleep, real gestations and the look of the young stay for a person.
+> Scenarios `15` and `16` play wiring of all three: need, Mate job, pregnancy, egg and hatching, extension on each race. Real hours of sleep, real gestations, look of young stay for person.
 
 ---
 
 ## Translation checks
 
-Apply these checks while running the 28 scenarios in **English and French**. Static coverage
-passes as of 2026-09-13, but none of these display checks has been performed in game.
+Apply while running 28 scenarios in **English and French**. Static coverage passes as of 2026-09-13, but none of these display checks performed in game.
 
-- During blocks A, C, D and E, inspect beasts in both forms, friendly clones, anatomy, melee
-  tools, weapons, firecrackers, abilities, genes, research, the extractor and its recipe bills.
-  Check labels, descriptions, tooltips and current job reports. Include generated corpse,
-  meat and crafting recipe names, and a generated xenotype using the beast gene-name symbols.
-- During blocks B and C, read every arrival letter, the drought notification, the chicken's
-  mood thought and combat reports. Trigger a qiongqi dodge and verify `Dodge` / `Esquive`.
-  Rich-text markers and `{0}` parameters must be rendered, with no raw keys or English/Chinese
-  fallback in French. Chinese proper names transliterated as `mingshe` and `qiongqi` are intended.
-- During block F, check the category `Ancient Chinese Beast` / `Bêtes chinoises antiques`,
-  all four development actions and their three notification messages. Technical log entries
-  deliberately remain English. Check the action labels again after changing language.
-- During block G, save after a beast has been selected, change language, reload and trigger
-  its matching arrival incident. The newly sent letter must use the new language and still
-  describe the selected beast. Repeat in the other direction and, if available, with a save
-  from before this translation update. Existing historical letters keep their saved wording.
+- During blocks A, C, D, E, inspect beasts in both forms, friendly clones, anatomy, melee tools, weapons, firecrackers, abilities, genes, research, extractor and recipe bills. Check labels, descriptions, tooltips, current job reports. Include generated corpse, meat, crafting recipe names, and generated xenotype using beast gene-name symbols.
+- During blocks B and C, read every arrival letter, drought notification, chicken's mood thought, combat reports. Trigger qiongqi dodge, verify `Dodge` / `Esquive`. Rich-text markers and `{0}` parameters must render, no raw keys or English/Chinese fallback in French. Chinese proper names transliterated as `mingshe` and `qiongqi` intended.
+- During block F, check category `Ancient Chinese Beast` / `Bêtes chinoises antiques`, all four development actions and three notification messages. Technical log entries deliberately remain English. Check action labels again after changing language.
+- During block G, save after beast selected, change language, reload, trigger matching arrival incident. Newly sent letter must use new language and still describe selected beast. Repeat other direction and, if available, with save from before this translation update. Existing historical letters keep saved wording.
 
 Look for clipped buttons/tooltips and malformed line breaks as well as incorrect words.
-Record each language, game version, outcome and any screenshot/log evidence in `STATUS.md`.
-Keep the runtime entry in `remaining` until both languages have been checked.
+Record each language, game version, outcome, any screenshot/log evidence in `STATUS.md`.
+Keep runtime entry in `remaining` until both languages checked.
 
 ## What to send back
 
-For each manual exception: its scenario number, why Pickle could not cover it, and **seen** or
-**not seen**, plus what happened instead. A scenario that could not be reached matters as much as
-one that failed, and so does the log.
+For each manual exception: scenario number, why Pickle could not cover it, **seen** or **not seen**, plus what happened instead. Scenario that could not be reached matters as much as one that failed, so does log.
 
-The three that decide whether the port worked, if there is only time for three: **C6** (the sexie
-changes shape), **C5** (the qiongqi lands its flight) and **C3** (the drought ends with its beast).
-Those are the three hooks 1.6 broke.
+Three deciding whether port worked, if time for only three: **C6** (sexie changes shape), **C5** (qiongqi lands flight), **C3** (drought ends with beast). Those are three hooks 1.6 broke.
