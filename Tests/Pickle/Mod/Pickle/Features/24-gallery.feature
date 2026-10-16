@@ -20,6 +20,7 @@
 # Looks (owner, 2026-10-16: any mod that serves the theme): RimImmortal (Core, Living, Hairstyle) dresses the cast in the Chinese register: Nelim in a
 # jade middle robe (RI_Apparel_BasicMiddleClothes) under the Taoist hat, hair in a bun (RI_HairStyle_FemaleBun, set after her own face so that it stays);
 # Ren keeps the crimson duster and takes a man's bun (RI_HairStyle_ChineseManBun_A), silver.
+# Faces (Nals Facial Animation names, FACIAL-ANIMATIONS.md): Nelim cheerful by default, watchful in 3 (WaitCombat), wary in 6 (FleeAndCower); Ren hard-eyed when he shoots in 5 (AttackStatic) and with slanted brows in 6 (AttackMelee2).
 # Each pawn is placed AFTER the time is paused, then the face, then the frame, then the capture, at once. The size limit of the page (owner,
 # 2026-10-06): each image under 2 MB, all together under 8 MB; the captures are recompressed before they go to Art/Gallery/. Subtitles:
 # PUBLICATION.md, "Gallery subtitles".
@@ -112,7 +113,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Nelim" stands at (172, 141) facing South
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" hairstyle is "RI_HairStyle_FemaleBun"
-    And Nelim's Pickle Tools: "Nelim" facial expression is "normal+moodCheerful"
+    And Nelim's Pickle Tools: "Nelim" facial expression is "normal+WaitCombat"
     And Nelim's Pickle Tools: I frame the cell (170, 143) at zoom 6
     When Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-3-qiongqi-behind-nelim"
@@ -181,6 +182,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" hairstyle is "RI_HairStyle_FemaleBun"
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+moodCheerful"
+    And Nelim's Pickle Tools: "Ren" facial expression is "normal+AttackStatic"
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-5-wind-barrier"
     And Nelim's Pickle Tools: the interface is shown again
@@ -214,7 +216,8 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Nelim" stands at (137, 169) facing South
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" hairstyle is "RI_HairStyle_FemaleBun"
-    And Nelim's Pickle Tools: "Nelim" facial expression is "normal+moodCheerful"
+    And Nelim's Pickle Tools: "Nelim" facial expression is "normal+FleeAndCower"
+    And Nelim's Pickle Tools: "Ren" facial expression is "normal+AttackMelee2"
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-6-sexie-aura"
     And Nelim's Pickle Tools: the interface is shown again
