@@ -17,6 +17,9 @@
 #   5 16 h   gravel yard:      Ren fires at the mingshe, its wind barrier throws the shot back, Nelim watches beside him;
 #   6 18 h   water garden:     the scorpion sexie and the red ring of its aura, Ren inside it, berserk, Nelim at the edge of the ring;
 #   7 12 h   postindustrial workshop, emptied first and roof removed: the gene extractor, three archite capsules, Nelim at the bench.
+# Looks (owner, 2026-10-16: any mod that serves the theme): RimImmortal (Core, Living, Hairstyle) dresses the cast in the Chinese register: Nelim in a
+# jade middle robe (RI_Apparel_BasicMiddleClothes) under the Taoist hat, hair in a bun (RI_HairStyle_FemaleBun, set after her own face so that it stays);
+# Ren keeps the crimson duster and takes a man's bun (RI_HairStyle_ChineseManBun_A), silver.
 # Each pawn is placed AFTER the time is paused, then the face, then the frame, then the capture, at once. The size limit of the page (owner,
 # 2026-10-06): each image under 2 MB, all together under 8 MB; the captures are recompressed before they go to Art/Gallery/. Subtitles:
 # PUBLICATION.md, "Gallery subtitles".
@@ -37,6 +40,8 @@
 @requires:nelim.pickletools.screenshotstudio
 @requires:nelim.pickletools.stagedecor
 @requires:ninedaylongbow.ChineseComprehensiveExpansion
+@requires:RI.RimImmortal.Living
+@requires:RI.RimImmortals.Hairstyle
 Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
 
   Background:
@@ -55,8 +60,10 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Ancient Chinese Beast: I spawn the female pawn "SZ_Chicken" at (159, 96) facing South
     And Nelim's Pickle Tools: time is paused for the capture
     And Nelim's Pickle Tools: "Nelim" wears "HXApparel_TaoistHat_A"
+    And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_BasicMiddleClothes" dyed rgb (64, 118, 104)
     And Nelim's Pickle Tools: "Nelim" stands at (152, 97) facing South
     And Nelim's Sanctuary: Nelim has her own face
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "RI_HairStyle_FemaleBun"
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+moodCheerful"
     And Nelim's Pickle Tools: I frame the cell (155, 97) at zoom 5
     And Nelim's Pickle Tools: the map is shown alone for a capture
@@ -78,8 +85,10 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Ancient Chinese Beast: I spawn the pawn "SZ_SeXieInsect" at (162, 216) facing South
     And Nelim's Pickle Tools: time is paused for the capture
     And Nelim's Pickle Tools: "Nelim" wears "HXApparel_TaoistHat_A"
+    And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_BasicMiddleClothes" dyed rgb (64, 118, 104)
     And Nelim's Pickle Tools: "Nelim" stands at (158, 208) facing South
     And Nelim's Sanctuary: Nelim has her own face
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "RI_HairStyle_FemaleBun"
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+moodCheerful"
     And Nelim's Pickle Tools: I frame the cell (151, 213) at zoom 9
     And Nelim's Pickle Tools: the map is shown alone for a capture
@@ -99,8 +108,10 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Ancient Chinese Beast: I spawn the pawn "SZ_QiongQi" at (169, 146) facing South
     And Nelim's Pickle Tools: time is paused for the capture
     And Nelim's Pickle Tools: "Nelim" wears "HXApparel_TaoistHat_A"
+    And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_BasicMiddleClothes" dyed rgb (64, 118, 104)
     And Nelim's Pickle Tools: "Nelim" stands at (172, 141) facing South
     And Nelim's Sanctuary: Nelim has her own face
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "RI_HairStyle_FemaleBun"
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+moodCheerful"
     And Nelim's Pickle Tools: I frame the cell (170, 143) at zoom 6
     When Nelim's Pickle Tools: the map is shown alone for a capture
@@ -125,9 +136,11 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     Then Ancient Chinese Beast: a thing "SZ_YearBeastFlame" exists within 5 seconds
     And Nelim's Pickle Tools: time is paused for the capture
     And Nelim's Pickle Tools: "Nelim" wears "HXApparel_TaoistHat_A"
+    And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_BasicMiddleClothes" dyed rgb (64, 118, 104)
     And Nelim's Pickle Tools: "Nelim" stands at (190, 147) facing South
     And Nelim's Pickle Tools: "Nelim" carries the item "SZ_Firecracker"
     And Nelim's Sanctuary: Nelim has her own face
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "RI_HairStyle_FemaleBun"
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+moodCheerful"
     And Nelim's Pickle Tools: I frame the cell (194, 150) at zoom 7
     And Nelim's Pickle Tools: the map is shown alone for a capture
@@ -148,7 +161,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And a colonist "Ren" exists
     And Nelim's Pickle Tools: "Ren" gender is male
     And Nelim's Pickle Tools: "Ren" body type is Male
-    And Nelim's Pickle Tools: "Ren" hairstyle is "Messy"
+    And Nelim's Pickle Tools: "Ren" hairstyle is "RI_HairStyle_ChineseManBun_A"
     And Nelim's Pickle Tools: "Ren" hair colour is rgb (232, 232, 238)
     And Nelim's Pickle Tools: "Ren" has the gene "Eyes_Crimson"
     And Nelim's Pickle Tools: "Ren" wears "Apparel_CollarShirt" dyed rgb (236, 226, 200)
@@ -163,8 +176,10 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     Then Ancient Chinese Beast: a projectile launched by pawn 1 is in flight within 10 seconds
     And Nelim's Pickle Tools: time is paused for the capture
     And Nelim's Pickle Tools: "Nelim" wears "HXApparel_TaoistHat_A"
+    And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_BasicMiddleClothes" dyed rgb (64, 118, 104)
     And Nelim's Pickle Tools: "Nelim" stands at (177, 140) facing South
     And Nelim's Sanctuary: Nelim has her own face
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "RI_HairStyle_FemaleBun"
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+moodCheerful"
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-5-wind-barrier"
@@ -182,7 +197,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Ancient Chinese Beast: I spawn a colonist named "Ren" near x=146 z=171
     And Nelim's Pickle Tools: "Ren" gender is male
     And Nelim's Pickle Tools: "Ren" body type is Male
-    And Nelim's Pickle Tools: "Ren" hairstyle is "Messy"
+    And Nelim's Pickle Tools: "Ren" hairstyle is "RI_HairStyle_ChineseManBun_A"
     And Nelim's Pickle Tools: "Ren" hair colour is rgb (232, 232, 238)
     And Nelim's Pickle Tools: "Ren" has the gene "Eyes_Crimson"
     And Nelim's Pickle Tools: "Ren" wears "Apparel_CollarShirt" dyed rgb (236, 226, 200)
@@ -195,8 +210,10 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     When Ancient Chinese Beast: pawn 1 is sent berserk as the aura does
     And Nelim's Pickle Tools: time is paused for the capture
     And Nelim's Pickle Tools: "Nelim" wears "HXApparel_TaoistHat_A"
+    And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_BasicMiddleClothes" dyed rgb (64, 118, 104)
     And Nelim's Pickle Tools: "Nelim" stands at (137, 169) facing South
     And Nelim's Sanctuary: Nelim has her own face
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "RI_HairStyle_FemaleBun"
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+moodCheerful"
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-6-sexie-aura"
@@ -220,8 +237,10 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: I place the decor "ArchiteCapsule" at (229, 211)
     And Nelim's Pickle Tools: I place the decor "ArchiteCapsule" at (230, 211)
     And Nelim's Pickle Tools: "Nelim" wears "HXApparel_TaoistHat_A"
+    And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_BasicMiddleClothes" dyed rgb (64, 118, 104)
     And Nelim's Pickle Tools: "Nelim" stands at (232, 212) facing South
     And Nelim's Sanctuary: Nelim has her own face
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "RI_HairStyle_FemaleBun"
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+moodCheerful"
     And Nelim's Pickle Tools: I frame the cell (230, 213) at zoom 7
     And Nelim's Pickle Tools: the map is shown alone for a capture

@@ -45,4 +45,9 @@ RaccoonCuddler.ShowHair 3255379190
 # It must load BEFORE this mod (this mod's loadAfter), and the staging does not sort by loadAfter: this mod's own packageId with a path:
 # overlay comes right after it, which also makes the staging skip its own copy (same recipe as wsl-deps.cce.map).
 ninedaylongbow.ChineseComprehensiveExpansion 3221850511
+# RimImmortal (xianxia, Chinese style; Windows subscriptions, 1.6 listed, owner 2026-10-16: any mod serving the theme): Core (Harmony, Royalty, Ideology) is the
+# base of Living (robes: RI_Apparel_BasicMiddleClothes, RI_Apparel_DragonRobe) and of Hairstyle (buns: RI_HairStyle_FemaleBun, RI_HairStyle_ChineseManBun_A).
+RI.RimImmortal.Core 3296476341
+RI.RimImmortal.Living 3326145525
+RI.RimImmortals.Hairstyle 3265157569
 nelim.ancientchinesebeastandgeneexpanded path:AncientChineseBeastAndGeneExpandedRenew/Mod

@@ -9,7 +9,7 @@ captures of the test colony (`2026-10-01a-p1-en`) are test proof only and are ne
 
 ## The story (restaged 2026-10-15)
 
-One day at Nelim’s Sanctuary, told like a wildlife report on four beasts out of the Classic of Mountains and Seas that came with the New Year, and the rooster that announces the day. **Nelim is the protagonist** (owner rule 2026-10-14) and is in every image: she wears what the fixture gives her plus a Taoist hat of Chinese Comprehensive Expansion (the theme), her own face and a cheerful expression. **Ren** (silver hair, crimson duster, crimson eyes) is the only guest, in the two images that need a shooter or a victim. Camera at zoom 5 to 9, time paused before any pawn is placed, beasts facing South. The first series (Lan and Ren, zoom 6 to 12) is replaced; see STATUS.md, "Gallery review 2026-10-15".
+One day at Nelim’s Sanctuary, told like a wildlife report on four beasts out of the Classic of Mountains and Seas that came with the New Year, and the rooster that announces the day. **Nelim is the protagonist** (owner rule 2026-10-14) and is in every image: she wears a jade middle robe of RimImmortal-Living and a Taoist hat of Chinese Comprehensive Expansion (the theme), her hair in a RimImmortal-Hairstyle bun, her own face and a cheerful expression. Ren takes a man's bun of the same mod. **Ren** (silver hair, crimson duster, crimson eyes) is the only guest, in the two images that need a shooter or a victim. Camera at zoom 5 to 9, time paused before any pawn is placed, beasts facing South. The first series (Lan and Ren, zoom 6 to 12) is replaced; see STATUS.md, "Gallery review 2026-10-15".
 
 ## Places, chosen on the places' own descriptions (`PickleTools/docs/GALERIE.md`, `SANCTUAIRE-LIEUX.md`)
 
