@@ -10,7 +10,7 @@ packageId:    nelim.ancientchinesebeastandgeneexpanded
 repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 visibility:   public
 detached:     yes
-workflow_stage: code[1.1.0]
+workflow_stage: playTests[1.1.0]
 social_preview_sha256: d39149d2b12bf4a09c53fbeda175a8155c3cf61bf394c9309394e720496db79c
 echo_review_sha: aa3be1896d12bc22ee330dfeacec30ff9e1c5328  # 2026-10-13, 10.a: echo kept
 publication_changelog_review_sha: 5bed84a774984f2711ba3048ce90046038b30fcc
@@ -106,7 +106,7 @@ remaining:
       C# nor the defs. Inherited, left alone
 session:      local_ecc57511-3350-4f1d-9e1d-979c259d1b6b
 updated:      2026-10-10
-protocols_read_sha: d2280dc98ecc4ee19d5f08ee64fa6b17d450752a
+protocols_read_sha: c1e50cb293d0b4026a8dc2279536023746a2b744
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -177,3 +177,5 @@ Gallery restaged 2026-10-15 (owner: "oui, refais"): `24-gallery.feature` rewritt
 Run-All 2026-10-17 (code[1.1.0], -Harmony set to the NuGet lib.harmony 2.3.3 net472 DLL: the workshop 2009463077 copy is not installed): all steps green, content checks, assembly contracts, translations (203 source texts, 5 Keyed calls, TextMote_Dodge exemption now passed), config. Barrier hardening of 1.1.0 not played yet.
 
 Ticket 2026-10-17: `20261017-165629-008-18a3` (`2026-10-17a-barrier-18-23-en`, English, features 18 to 23 in order, tree b3bf415): tests the 1.1.0 barrier hardening in the order suspected of the 2026-10-13 red. Keep Mod and Source frozen until RUN_DONE. French replay and `tested_1_7` follow.
+
+Stage replay 2026-10-17, code[1.1.0] to playTests[1.1.0] (AUDIT 3 to 7; owner asked to advance). Diff ff3ecbd..HEAD over Mod and Source: Ability_WindBarrier.cs (hardening), About.xml (description text only: no dependency, no version, no LoadFolders change), ATTRIBUTION.md, the rebuilt DLL. 3: no feature left in remaining, DLL rebuilt after the last Source edit (2026-10-14 16:12), CHANGELOG [Unreleased] lists the three changes. 4: dependencies unchanged since 1.0.0 (declared 1.0.0, no new reference in the barrier fix). 5: settings_audit not_applicable stands, no settings added. 6: no new text, translations step green 2026-10-17 (203 source texts, French injections), French review of 1.0.0 stands. 7: Run-All green 2026-10-17 (content, contracts, XML, translations, config), Pickle suites unchanged, one ticket filed (18a3). Not a full pass: only features 18 to 23, English, for the barrier.
