@@ -183,3 +183,5 @@ Stage replay 2026-10-17, code[1.1.0] to playTests[1.1.0] (AUDIT 3 to 7; owner as
 French no tu/vous pass 2026-10-17 (AUDIT 6.d): 5 clone recipes (no "Vous obtiendrez", no "laisse-le"), BeastGene research note ("Il faut conserver"), Sexie storyteller ("la vôtre" gone), nian letter label ("cliquer"). Kept: "Quel beau coq tu fais." in the crow description (a character's quoted words to the rooster, not the player). FRENCH_REVIEW.md regenerated, Run-All green. Virginie's review of these 8 changed lines pending; no code change. Ticket 18a3 is English, unaffected.
 
 French no nous either (Virginie, 2026-10-17): the four letters of IncidentDef rewritten without nous, notre, nos, soyons (qiongqi, mingshe, sexie tunnel, crow). Her review of these lines, and of the eight above, pending.
+
+French: "éventrent" to "perforent" in the qiongqi claw gene description, confirmed by Virginie 2026-10-17 (ChatGPT review).
