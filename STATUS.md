@@ -191,3 +191,5 @@ ChatGPT review 2026-10-17 (third), Virginie: 'corrige ce qu'il faut'. Applied: c
 Fourth ChatGPT review 2026-10-17: 'à soi' removed from the mingshe, qiongqi and nian clone recipes (Virginie: apply recommended). Storyteller 'fâcheux' kept. Truncated-report remark is the review plugin's, not the mod's.
 
 Fifth ChatGPT review 2026-10-17: PUBLICATION.md "meant to become public" now "is public" (applied); "of/at the shared Sanctuary location" not applied.
+
+French validated by Virginie in chat 2026-10-17 ("validé"), revision 45aa221: all French lines changed today (no tu/vous/nous pass, crow, storyteller, letters, clone recipes, qiongqi claw gene). FRENCH_REVIEW.md review-line table stays blank (her word recorded here).
