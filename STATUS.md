@@ -187,3 +187,5 @@ French no nous either (Virginie, 2026-10-17): the four letters of IncidentDef re
 French: "éventrent" to "perforent" in the qiongqi claw gene description, confirmed by Virginie 2026-10-17 (ChatGPT review).
 
 ChatGPT review 2026-10-17 (third), Virginie: 'corrige ce qu'il faut'. Applied: crow label and letter label 'de passage', storyteller 'fâcheux'; PUBLICATION.md (published state, change note now 1.1.0), CHANGELOG.md (preview position wording). Not applied: generator header remark (shared script, Audit). Her review of the French lines changed today is pending.
+
+Fourth ChatGPT review 2026-10-17: 'à soi' removed from the mingshe, qiongqi and nian clone recipes (Virginie: apply recommended). Storyteller 'fâcheux' kept. Truncated-report remark is the review plugin's, not the mod's.
