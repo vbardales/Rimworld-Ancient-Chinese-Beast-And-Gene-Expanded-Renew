@@ -10,7 +10,7 @@ Status: this file is the **single source** of the description, written once in M
 reports they agree (checked 2026-10-01). The 1.0.0 publish (2026-10-13) sent the description; the dry-run of any later publish that changes it must print
 a text that reads the same as the one on the Workshop page it replaces.
 
-**Publication mode: CI** (`PUBLISHING.md`, « Deux modes de publication »; checked 2026-10-08). The mod is meant to become
+**Publication mode: CI** (`PUBLISHING.md`, « Deux modes de publication »; checked 2026-10-08). The mod is
 public, so it is the GitHub Actions workflow, not `publish-local.sh`: green dry-run of the exact commit, `publish` with the
 40-character SHA, `steam-production` approved by Virginie alone, tag and release made by the CI. Published 2026-10-13 (run 38369937487);
 the owner turned the item public by hand the same day.
