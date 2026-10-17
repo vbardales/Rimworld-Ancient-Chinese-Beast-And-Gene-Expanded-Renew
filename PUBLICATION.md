@@ -7,14 +7,13 @@ What the Steam Workshop page asks for and the repository holds nowhere else. Wor
 Status: this file is the **single source** of the description, written once in Markdown. The workflow under
 `.github/` reads it (`.github/publish.config.json`: `description.file` `PUBLICATION.md`, `aboutFromDescription`), and
 `Mod/About/About.xml`'s `<description>` is generated from it: `node .github/scripts/sync-about-description.mjs`
-reports they agree (checked 2026-10-01). Before the first publish that sends the description, the dry-run must print
-a text that reads the same as the one on the Workshop page it replaces. The page is private and carries the
-description of the 0.1.0 upload.
+reports they agree (checked 2026-10-01). The 1.0.0 publish (2026-10-13) sent the description; the dry-run of any later publish that changes it must print
+a text that reads the same as the one on the Workshop page it replaces.
 
 **Publication mode: CI** (`PUBLISHING.md`, « Deux modes de publication »; checked 2026-10-08). The mod is meant to become
 public, so it is the GitHub Actions workflow, not `publish-local.sh`: green dry-run of the exact commit, `publish` with the
-40-character SHA, `steam-production` approved by Virginie alone, tag and release made by the CI. The item stays private
-until she turns it public by hand.
+40-character SHA, `steam-production` approved by Virginie alone, tag and release made by the CI. Published 2026-10-13 (run 38369937487);
+the owner turned the item public by hand the same day.
 
 ## Gallery
 
@@ -123,13 +122,13 @@ What is reused and how it differs is detailed in ATTRIBUTION.md, and LICENSE say
 
 ## Change note
 
-### 1.0.0
+### 1.1.0
 
 Steam change note of the next publish; its first line carries the version. The full list is `CHANGELOG.md`,
-section `## [1.0.0]`.
+section `## [1.1.0]` (still `## [Unreleased]` until the publish). 1.0.0 went out on 2026-10-13 with `[b]1.0.0[/b]`.
 
 ```
-[b]1.0.0[/b]
+[b]1.1.0[/b]
 See the changelog on GitHub for the full list.
 ```
 

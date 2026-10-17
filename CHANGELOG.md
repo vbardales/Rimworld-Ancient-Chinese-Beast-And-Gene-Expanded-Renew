@@ -168,7 +168,7 @@ Ported from andery233xj, Frolg, DongFang and Ninedaylongbow's
 - `Storyteller.png` went from 2192×2343 and 5.6 MB to 1160×1240, twice the 580×620 the game draws
   it at; `BeastGeneExtractor.png` from 5334×5334 to 1344×1344. The mod is 6 MB instead of 13 MB.
   Both originals are kept under `Art/textures-original/`.
-- `Preview.png` carries the mod's name, set in the lower right. The layout, the renderer and the QA report
+- `Preview.png` carries the mod's name, set in the lower right (redrawn at 1.0.0, see above). The layout, the renderer and the QA report
   are under `Art/`.
 - The two showcase images were re-encoded, losslessly: neither needed the alpha channel it
   carried, and both had been written with a fixed row filter where PNG allows one per row.

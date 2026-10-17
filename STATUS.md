@@ -185,3 +185,5 @@ French no tu/vous pass 2026-10-17 (AUDIT 6.d): 5 clone recipes (no "Vous obtiend
 French no nous either (Virginie, 2026-10-17): the four letters of IncidentDef rewritten without nous, notre, nos, soyons (qiongqi, mingshe, sexie tunnel, crow). Her review of these lines, and of the eight above, pending.
 
 French: "éventrent" to "perforent" in the qiongqi claw gene description, confirmed by Virginie 2026-10-17 (ChatGPT review).
+
+ChatGPT review 2026-10-17 (third), Virginie: 'corrige ce qu'il faut'. Applied: crow label and letter label 'de passage', storyteller 'fâcheux'; PUBLICATION.md (published state, change note now 1.1.0), CHANGELOG.md (preview position wording). Not applied: generator header remark (shared script, Audit). Her review of the French lines changed today is pending.
