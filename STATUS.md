@@ -175,3 +175,5 @@ Gallery restaged 2026-10-15 (owner: "oui, refais"): `24-gallery.feature` rewritt
 
 - 2026-10-15: Check-Translations.ps1 gate green with `-AllowUnused SZ_CannotReachBuildingToExtractGene -VanillaKeyed TextMote_Dodge` (Run-All.ps1; reasons in Tests/TRANSLATIONS.md). Audit added -VanillaKeyed.
 Run-All 2026-10-17 (code[1.1.0], -Harmony set to the NuGet lib.harmony 2.3.3 net472 DLL: the workshop 2009463077 copy is not installed): all steps green, content checks, assembly contracts, translations (203 source texts, 5 Keyed calls, TextMote_Dodge exemption now passed), config. Barrier hardening of 1.1.0 not played yet.
+
+Ticket 2026-10-17: `20261017-165629-008-18a3` (`2026-10-17a-barrier-18-23-en`, English, features 18 to 23 in order, tree b3bf415): tests the 1.1.0 barrier hardening in the order suspected of the 2026-10-13 red. Keep Mod and Source frozen until RUN_DONE. French replay and `tested_1_7` follow.
