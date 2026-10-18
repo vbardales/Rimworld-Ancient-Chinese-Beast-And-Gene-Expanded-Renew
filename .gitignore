@@ -30,6 +30,7 @@ build/
 evidence/
 Evidence/
 Inbox/
+Parked/
 *.webm
 node_modules/
 
