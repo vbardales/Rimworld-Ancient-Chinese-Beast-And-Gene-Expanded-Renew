@@ -58,15 +58,17 @@ namespace AncientChineseBeast.PickleSteps
         // JobGiver_KillHuman.FindPawnTarget looks at the colonists the beast can reach and only when there is none does it
         // fall back to the unreachable ones, so with the colony's own colonists on the map a walled-in colonist is never the
         // target and nothing is ever broken (run be5e, 2026-09-28: nothing touched in 3261 ticks). The scenario removes every
-        // colonist but the ones it spawned, which is the situation the door-breaking branch exists for.
+        // colonist but the ones it spawned, which is the situation the door-breaking branch exists for. The colony's animals
+        // and other pawns go too: runs 2026-10-09, 10-15 and 10-17 had the beast chase a colony animal (Macaw, Shaper,
+        // Firefly) in melee and touch nothing of the enclosure, a reachable target being preferred to the walled-in one.
         [When("Ancient Chinese Beast: I remove every colonist I did not spawn")]
         public void RemoveOtherColonists(PickleContext ctx)
         {
             var map = Stage.CurrentMap(ctx);
             var mine = SpawnSteps.TryGet(ctx)?.Pawns ?? new List<Pawn>();
-            foreach (var pawn in map.mapPawns.FreeColonistsSpawned.Where(p => !mine.Contains(p)).ToList())
+            foreach (var pawn in map.mapPawns.PawnsInFaction(Faction.OfPlayer).Where(p => p.Spawned && !mine.Contains(p)).ToList())
                 pawn.Destroy(DestroyMode.Vanish);
-            ctx.Assert(map.mapPawns.FreeColonistsSpawned.All(p => mine.Contains(p)), "a colonist that the scenario did not spawn is still on the map");
+            ctx.Assert(map.mapPawns.PawnsInFaction(Faction.OfPlayer).All(p => !p.Spawned || mine.Contains(p)), "a pawn of the colony that the scenario did not spawn is still on the map");
         }
 
         [Then("Ancient Chinese Beast: the enclosure is breached within {int} seconds", TimeoutSeconds = 450f)]
