@@ -44,7 +44,7 @@ namespace AncientChineseBeast.PickleSteps
 
         // maxRealSeconds is the cap on the real time spent: a machine busy with other runs played 1863 of 5400 ticks in
         // 150 s (French chunk A, 2026-10-02), so a wait that needs a full game hour may ask for more.
-        internal static async System.Threading.Tasks.Task WaitGameSeconds(PickleContext ctx, System.Func<bool> condition, int seconds, int maxRealSeconds = 150, int tickStep = 5)
+        internal static async System.Threading.Tasks.Task WaitGameSeconds(PickleContext ctx, System.Func<bool> condition, int seconds, int maxRealSeconds = 300, int tickStep = 5)
         {
             int step = tickStep;
             var clock = System.Diagnostics.Stopwatch.StartNew();
