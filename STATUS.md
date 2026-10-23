@@ -11,8 +11,8 @@ repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 visibility:   public
 detached:     yes
 workflow_stage: playTests[1.1.0]
-social_preview_sha256: 77ee5e09f7c477a3ad0d1a47f785d0fc7743cf4d39ae37f50e8adcae8844559c
-echo_review_sha: e375f699a3f06b2063b47e5116fd4ad2ec0d6589  # 2026-10-23, 10.a: echo kept (echo-source.png, Preview regenerated, validated by Virginie in chat)
+social_preview_sha256: 9bb0241125d628bb2f097bee504eaaa1b966eb1cb3ae20e3d2fb2cf1b8d34faa
+echo_review_sha: d4409fa79443f95e80e837fc4941245708106090  # 2026-10-23, 10.a: echo kept (echo-source.png, Preview panel bottom-left, validated by Virginie in chat)
 publication_changelog_review_sha: 5bed84a774984f2711ba3048ce90046038b30fcc
 licence:      silent
 licence_at:   reviewed 2026-09-12 - original files and About.xml, English and Chinese Workshop
