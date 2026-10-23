@@ -104,8 +104,8 @@ remaining:
       branch is unreachable. Inherited, deliberate, costs nothing
   - defect: the keyed string SZ_CannotReachBuildingToExtractGene is referenced from neither the
       C# nor the defs. Inherited, left alone
-session:      local_ecc57511-3350-4f1d-9e1d-979c259d1b6b
-updated:      2026-10-10
+session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
+updated:      2026-10-23
 protocols_read_sha: b08c1315abc7369296b6456f460e266731c95817
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
@@ -203,3 +203,5 @@ Results of the three tickets of 2026-10-18 read 2026-10-19 (`bfb0` siege, `84fc`
 Results of the three tickets of 2026-10-19 read 2026-10-20 (`b4f9` siege, `1d12` English and `dd12` French rest and breeding, folders `2026-10-19b-*`, tree ecf6758). All three ran feature 15 scenarios (the siege ticket too: no siege scenario ran, siege stays unproven). Feature 15: rest need, hostile rest need and arrives-rested green 5/5 in each run; tired beast lies down 5/6, mating and birth 3/4 or 2/3; the egg scenario red once in two English runs. Every red is a real-time cut, not the mod: the game ran 1026 to 1952 ticks of the 2700 to 3600 asked in 150 s (about 7 to 13 ticks per second), the step timeout of 100 s fired on the tired beast, and the mating step had made only 2 to 4 matings at one chance in two each. Test cap too tight for a slow game; mod and Source untouched. Kept in `Evidence/`: `2026-10-19b-rest-breeding-en` (summary, junit, `RELEASE.md`). Rest deleted. Protocols moved to `docs/` (2026-10-20): re-read, only the Markers rule changed (pastille none when working with no ticket). Open: siege replay, and a green feature 15 (cap raised or game speed).
 
 Ticket 2026-10-20 (tree a40e0f2, Mod and Source frozen until RUN_DONE): game-wait cap raised 150 to 300 real seconds (`Stage.cs`), rest and breeding step timeouts to 320 s. Filed on feature filters without spaces: siege `20261020-231625-639-a8ce` (`22-siege`), rest and breeding English `20261020-231633-147-ce6f` (`15-rest-and-breeding`). French rest and breeding follows if English is green.
+
+Preview 2026-10-23 (owner validated in chat): regenerated from the new Preview.config.json schema (`panel.panelAnchor` bottom-left, echo.file `echo-source.png`), echo kept, `echo_review_sha` d4409fa, `social_preview_sha256` 9bb02411..., uploaded as GitHub social preview by Claude in Chrome (seen on the settings page; no og:image hash read). Tickets a8ce (22-siege) and ce6f (15-rest-and-breeding) wait, owner rerouted by TM to session local_f1e4cc35 (code ACBaGE); on RUN_DONE read summary.json, replay French rest and breeding if English green. Mod and Source frozen at a40e0f2 until then.
