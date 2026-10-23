@@ -50,7 +50,7 @@
     "width": 260,
     "height": 260
   },
-  "iconBadge": {
+  "icon": {
     "file": "ModIcon-source.png",
     "corner": "bottom-right"
   },

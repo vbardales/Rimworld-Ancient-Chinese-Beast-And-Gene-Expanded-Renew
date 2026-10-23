@@ -11,7 +11,7 @@ repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 visibility:   public
 detached:     yes
 workflow_stage: playTests[1.1.0]
-social_preview_sha256: 9bb0241125d628bb2f097bee504eaaa1b966eb1cb3ae20e3d2fb2cf1b8d34faa
+social_preview_sha256: 0624de6f725d33981f86f084d8303f397d3202812f135bef81c64817f6f6135b
 echo_review_sha: d4409fa79443f95e80e837fc4941245708106090  # 2026-10-23, 10.a: echo kept (echo-source.png, Preview panel bottom-left, validated by Virginie in chat)
 publication_changelog_review_sha: 5bed84a774984f2711ba3048ce90046038b30fcc
 licence:      silent
@@ -213,3 +213,5 @@ Sleep 2026-10-23: waiting on a8ce (22-siege) and ce6f (15-rest-and-breeding, Eng
 Resume 2026-10-23: protocols re-read (MODELS.md, GALLERY.md rules of 2026-10-23), protocols_read_sha 2be537a, TM registered, a8ce and ce6f still queued. Open: GALLERY.md rule 2026-10-23 (d, outfit continuity within a story day) clashes with the plan of `24-gallery.feature` (Nelim changes outfit every shot): fix the plan before shootGallery, no capture at playTests.
 
 Resume 2026-10-23 (2): protocols_read_sha 78da1160 (only Render-Preview.cjs changed, not used here), TM registered, a8ce and ce6f no result yet. Open items unchanged.
+
+Preview 2026-10-23 (2): regenerated after shared Render-Preview veil change (icon veil 275 to 150 px), Art/Preview.config.json iconBadge key renamed icon, owner validated in chat ("oui"). social_preview_sha256 0624de6f725d33981f86f084d8303f397d3202812f135bef81c64817f6f6135b. GitHub social preview upload pending.
