@@ -106,7 +106,7 @@ remaining:
       C# nor the defs. Inherited, left alone
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
 updated:      2026-10-23
-protocols_read_sha: 2be537a70be1b40fd555b6fe1d8bb1e0dd280524
+protocols_read_sha: 78da1160
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -211,3 +211,5 @@ Gallery plan rewritten 2026-10-23 after /rate-gallery (series mean 1.6, not play
 Sleep 2026-10-23: waiting on a8ce (22-siege) and ce6f (15-rest-and-breeding, English); TM relays RUN_DONE here. On result: read summary.json, conclude 8.g, replay French rest and breeding if English green. Open: 18a3 (barrier 18-23, exit 1, evidence deleted) unproven, refile only if owner agrees; 8.m code review (code_review_sha f809e47 predates barrier hardening); gallery plan rewritten cbf21ab, not played, no capture before shootGallery.
 
 Resume 2026-10-23: protocols re-read (MODELS.md, GALLERY.md rules of 2026-10-23), protocols_read_sha 2be537a, TM registered, a8ce and ce6f still queued. Open: GALLERY.md rule 2026-10-23 (d, outfit continuity within a story day) clashes with the plan of `24-gallery.feature` (Nelim changes outfit every shot): fix the plan before shootGallery, no capture at playTests.
+
+Resume 2026-10-23 (2): protocols_read_sha 78da1160 (only Render-Preview.cjs changed, not used here), TM registered, a8ce and ce6f no result yet. Open items unchanged.
