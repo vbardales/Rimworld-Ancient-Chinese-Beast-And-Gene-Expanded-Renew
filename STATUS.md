@@ -214,4 +214,4 @@ Resume 2026-10-23: protocols re-read (MODELS.md, GALLERY.md rules of 2026-10-23)
 
 Resume 2026-10-23 (2): protocols_read_sha 78da1160 (only Render-Preview.cjs changed, not used here), TM registered, a8ce and ce6f no result yet. Open items unchanged.
 
-Preview 2026-10-23 (2): regenerated after shared Render-Preview veil change (icon veil 275 to 150 px), Art/Preview.config.json iconBadge key renamed icon, owner validated in chat ("oui"). social_preview_sha256 0624de6f725d33981f86f084d8303f397d3202812f135bef81c64817f6f6135b. GitHub social preview upload pending.
+Preview 2026-10-23 (2): regenerated after shared Render-Preview veil change (icon veil 275 to 150 px), Art/Preview.config.json iconBadge key renamed icon, owner validated in chat ("oui"). social_preview_sha256 0624de6f725d33981f86f084d8303f397d3202812f135bef81c64817f6f6135b. GitHub social preview uploaded by Claude in Chrome (settings page shows the new image, no og:image hash read).
