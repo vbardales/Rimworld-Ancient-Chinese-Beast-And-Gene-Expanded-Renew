@@ -106,7 +106,7 @@ remaining:
       C# nor the defs. Inherited, left alone
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
 updated:      2026-10-23
-protocols_read_sha: 1293bff327dd5e5e24df923406d20f23fb45acee
+protocols_read_sha: 2be537a70be1b40fd555b6fe1d8bb1e0dd280524
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
