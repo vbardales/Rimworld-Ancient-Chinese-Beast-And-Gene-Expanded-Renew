@@ -44,7 +44,7 @@ One line of English at the bottom of each gallery scene without an interface win
 | 4 | `4-nian-fire.png` | The nian beast breathes fire at a muffalo. Nelim holds the one thing it fears: a firecracker. |
 | 5 | `5-wind-barrier.png` | Ren fires at the mingshe, and its wind barrier throws the shot back. |
 | 6 | `6-sexie-aura.png` | The sexie's red aura drives Ren berserk, and Nelim keeps to the edge of the ring. |
-| 7 | `7-extractor.png` | At the extractor, three archite capsules wait for what the beasts leave behind. |
+| 7 | `7-extractor.png` | At the extractor, three archite capsules wait for what the beasts leave behind, and a hen minds the bench. |
 
 ## Steam description
 

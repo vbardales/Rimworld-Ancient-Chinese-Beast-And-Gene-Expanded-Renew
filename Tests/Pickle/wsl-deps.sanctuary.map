@@ -50,4 +50,7 @@ ninedaylongbow.ChineseComprehensiveExpansion 3221850511
 RI.RimImmortal.Core 3296476341
 RI.RimImmortal.Living 3326145525
 RI.RimImmortals.Hairstyle 3265157569
+# Roo's HD Hairstyles (continued, 3559870636; Windows subscription): Roo_Royal_LongHD (long loose hair, worn under a hat) and Roo_HD_Hair_Highpony
+# (her canon ponytail without a hat), SanctuaryBacklot/docs/NELIM-PROFIL.md, 2026-10-21; added to the gallery pass 2026-10-23. Not yet played in this pass.
+rooboid.hdhair.continued 3559870636
 nelim.ancientchinesebeastandgeneexpanded path:AncientChineseBeastAndGeneExpandedRenew/Mod
