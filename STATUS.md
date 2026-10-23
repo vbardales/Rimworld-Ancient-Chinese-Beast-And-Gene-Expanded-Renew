@@ -106,7 +106,7 @@ remaining:
       C# nor the defs. Inherited, left alone
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
 updated:      2026-10-23
-protocols_read_sha: 78da1160
+protocols_read_sha: 0a40a584e83bd432e59375dbe1be39822f7b10c3
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -215,3 +215,5 @@ Resume 2026-10-23: protocols re-read (MODELS.md, GALLERY.md rules of 2026-10-23)
 Resume 2026-10-23 (2): protocols_read_sha 78da1160 (only Render-Preview.cjs changed, not used here), TM registered, a8ce and ce6f no result yet. Open items unchanged.
 
 Preview 2026-10-23 (2): regenerated after shared Render-Preview veil change (icon veil 275 to 150 px), Art/Preview.config.json iconBadge key renamed icon, owner validated in chat ("oui"). social_preview_sha256 0624de6f725d33981f86f084d8303f397d3202812f135bef81c64817f6f6135b. GitHub social preview uploaded by Claude in Chrome (settings page shows the new image, no og:image hash read).
+
+Resume 2026-10-23 (3): protocols_read_sha 0a40a584 (GALLERY scoring in points, AGENTS clear threshold: no effect on playTests), TM registered. Inbox holds two results not yet relayed by TM: `2026-10-20a-siege-en-1` (siege, exitReason passed, 1/1: nian attacks the enclosure) and `2026-10-20a-siege-en` (rest and breeding English, watchdog-timeout, 18 of 21: reds are one tired beast lies down, one mating and birth, the egg scenario; read after RUN_DONE, 8.g). Open items unchanged.
