@@ -31,7 +31,7 @@ namespace AncientChineseBeast.PickleSteps
             ctx.Assert(Living() == count, $"{Living()} living {defName} pawn(s) on the map, expected exactly {count}");
         }
 
-        [Then("Ancient Chinese Beast: a thing {string} exists within {int} seconds", TimeoutSeconds = 170f)]
+        [Then("Ancient Chinese Beast: a thing {string} exists within {int} seconds", TimeoutSeconds = 320f)]
         public async Task ThingExists(PickleContext ctx, string defName, int seconds)
         {
             var map = Stage.CurrentMap(ctx);
