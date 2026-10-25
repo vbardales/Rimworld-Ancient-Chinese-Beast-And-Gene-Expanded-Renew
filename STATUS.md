@@ -106,7 +106,7 @@ remaining:
       C# nor the defs. Inherited, left alone
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
 updated:      2026-10-23
-protocols_read_sha: 0a40a584e83bd432e59375dbe1be39822f7b10c3
+protocols_read_sha: 709f94c1383b5e32138ef80caf13ef1057a42d1f
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -227,3 +227,5 @@ Cause of the ce6f 150 s cap found 2026-10-23: `Tests/Pickle/Mod/Pickle/Assemblie
 Ticket ca51 read 2026-10-25 (`15-rest-and-breeding`, English, tree fe03f4a, rebuilt step DLL, RUN_DONE exit=3 stall guard, summary.json exitReason watchdog-timeout, 20 of 21 passed): tired beast lies down 6/6, hostile rest need 5/5, arrives rested 5/5, mating and birth 4/4 all green (first green of these on the 1.1.0 tree, the 300 s cap fixed the real-time cuts). One red: "a tame pair mates and the female lays an egg that hatches", step "a thing SZ_MingSheEggFertilized exists within 45 seconds" timed out after 170 s, scenario 277 s. Cause not studied (ticks reached not read). Folder kept in `Tests/Pickle/Inbox/2026-10-23a-rest-breeding-en` until studied. Next: study egg red (Player.log ticks, step timeout of the egg step), replay the egg scenario alone; French replay owed only after English green. Mod and Source frozen at fe03f4a.
 
 Egg red of ca51 studied 2026-10-25: matings reported 1 per race (mating and birth green), `pawn 2 is fertilised` step passed, the red step is `a thing "SZ_MingSheEggFertilized" exists within 45 seconds`, whose real-time cap (`BeastStateSteps.cs`, `TimeoutSeconds`) was 170 s: at 7 to 13 ticks per second 45 game seconds need about 200 to 380 s. Same real-time cut as before, not the mod. Cap raised to 320 s, step DLL rebuilt, commit 660047d. Replay filed: `20261025-012427-860-c567` (`2026-10-25a-egg-en`, filter `15-rest-and-breeding::egg`, English, tree 660047d). Mod and Source frozen until RUN_DONE. `Inbox/2026-10-23a-rest-breeding-en` kept until c567 is read (green proof of 20 scenarios, then minify to Evidence).
+
+Resume 2026-10-25: protocols_read_sha 709f94c1 (GALLERY.md rules of 2026-10-25 on dressed animals, mouths, smiling colonists: no effect at playTests), TM registered (session local_5bc1b5af, title carries no code: owner asked to confirm). Replay c567 (egg, English) queued, no RUN_DONE yet. Open: GALLERY.md rule d (outfit continuity) vs plan of `24-gallery.feature` (last edit cbf21ab, outfit still changes each shot): fix before shootGallery, no capture at playTests; 8.m code review after c567.
