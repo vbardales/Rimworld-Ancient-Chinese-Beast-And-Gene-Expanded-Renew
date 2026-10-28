@@ -105,8 +105,8 @@ remaining:
   - defect: the keyed string SZ_CannotReachBuildingToExtractGene is referenced from neither the
       C# nor the defs. Inherited, left alone
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
-updated:      2026-10-23
-protocols_read_sha: 709f94c1383b5e32138ef80caf13ef1057a42d1f
+updated:      2026-10-28
+protocols_read_sha: cc1f93006ee3756009054a0389731cff310d8784
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -229,3 +229,5 @@ Ticket ca51 read 2026-10-25 (`15-rest-and-breeding`, English, tree fe03f4a, rebu
 Egg red of ca51 studied 2026-10-25: matings reported 1 per race (mating and birth green), `pawn 2 is fertilised` step passed, the red step is `a thing "SZ_MingSheEggFertilized" exists within 45 seconds`, whose real-time cap (`BeastStateSteps.cs`, `TimeoutSeconds`) was 170 s: at 7 to 13 ticks per second 45 game seconds need about 200 to 380 s. Same real-time cut as before, not the mod. Cap raised to 320 s, step DLL rebuilt, commit 660047d. Replay filed: `20261025-012427-860-c567` (`2026-10-25a-egg-en`, filter `15-rest-and-breeding::egg`, English, tree 660047d). Mod and Source frozen until RUN_DONE. `Inbox/2026-10-23a-rest-breeding-en` kept until c567 is read (green proof of 20 scenarios, then minify to Evidence).
 
 Resume 2026-10-25: protocols_read_sha 709f94c1 (GALLERY.md rules of 2026-10-25 on dressed animals, mouths, smiling colonists: no effect at playTests), TM registered (session local_5bc1b5af, title carries no code: owner asked to confirm). Replay c567 (egg, English) queued, no RUN_DONE yet. Open: GALLERY.md rule d (outfit continuity) vs plan of `24-gallery.feature` (last edit cbf21ab, outfit still changes each shot): fix before shootGallery, no capture at playTests; 8.m code review after c567.
+
+Resume 2026-10-28: protocols_read_sha cc1f9300 (diffs of PICKLE, TEST-EVIDENCE, AUDIT read: Inbox belongs to the mod, TESTING.md rename, Preview config format, mod root closed list; no effect on playTests), TM registered. Replay c567 (egg, English, tree 660047d) result read: summary.json 0 scenarios, exitReason watchdog-timeout; Player.log: "watchdog tripped after 300s in scenario 'a tame pair mates and the female lays an egg that hatches'". The launcher watchdog (300 s per scenario) cuts before the step cap (320 s): fertilisation step then 45 game seconds do not fit in 300 real seconds at 7 to 13 ticks per second. Not the mod. Folder deleted (no passing scenario). Asked NPT whether the watchdog can be set per scenario or the game sped up; no local workaround step (AGENTS.md). `Inbox/2026-10-23a-rest-breeding-en` (20 of 21 green) kept until egg scenario green, then minify to Evidence. Open: NPT answer, egg replay, 8.m code review (barrier hardening), GALLERY rule d vs `24-gallery.feature` plan.
