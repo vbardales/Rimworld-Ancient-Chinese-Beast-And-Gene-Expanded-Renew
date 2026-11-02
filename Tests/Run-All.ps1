@@ -8,7 +8,7 @@ $root = Split-Path $PSScriptRoot -Parent
 $mod = Join-Path $root 'Mod'
 $assembly = Join-Path $mod 'Assemblies/AncientChineseBeast.dll'
 if (-not $GameData) { $GameData = [IO.Path]::GetFullPath((Join-Path $Managed '../../Data')) }
-if (-not $Harmony) { $Harmony = [IO.Path]::GetFullPath((Join-Path $Managed '../../../../workshop/content/294100/2009463077/Current/Assemblies/0Harmony.dll')) }
+if (-not $Harmony) { $Harmony = [IO.Path]::GetFullPath((Join-Path $Managed '../../../../workshop/content/294100/2009463077/1.6/Assemblies/0Harmony.dll')) }
 foreach ($path in @((Join-Path $Managed 'Assembly-CSharp.dll'), $Harmony, $GameData)) {
     if (-not (Test-Path -LiteralPath $path)) { throw "Missing prerequisite: $path. Set -Managed, -Harmony or -GameData explicitly." }
 }
