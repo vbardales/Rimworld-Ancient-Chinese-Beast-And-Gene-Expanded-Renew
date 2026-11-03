@@ -106,7 +106,7 @@ remaining:
       C# nor the defs. Inherited, left alone
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
 updated:      2026-10-28
-protocols_read_sha: cc1f93006ee3756009054a0389731cff310d8784
+protocols_read_sha: d17469c9c6e799a503821573de9ce2aa18e057d6
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -235,3 +235,5 @@ Resume 2026-10-28: protocols_read_sha cc1f9300 (diffs of PICKLE, TEST-EVIDENCE, 
 NPT answer 2026-10-28: the watchdog is Pickle's, set per run with `-Extra "-pickle-scenario-timeout=<s>"`; no step speeds the game (machine CPU bound, 7 to 13 ticks per second). Egg replay refiled: `20261028-225539-558-8d2f` (`2026-10-28a-egg-en`, filter `15-rest-and-breeding::egg`, English, `-pickle-scenario-timeout=600`, tree 1e9daa2, Mod and Source unchanged since 660047d). Mod and Source frozen until RUN_DONE. On green: minify `Inbox/2026-10-23a-rest-breeding-en` and the new folder into `Evidence/`; French replay owed only after English green.
 
 Audit replay 2026-10-29 (dry, no write): sections 1 to 7 fulfilled (4 weak proofs: STATUS.md only), first unfulfilled 8.c, stage stays playTests[1.1.0]. Open: 8.c egg scenario (ticket 8d2f queued, `-pickle-scenario-timeout=600`); 8.c and 8.g barrier hardening of 1.1.0 unproven (18a3 lost): file features 18 to 23 or `20-wind-barrier` English if owner agrees; 8.f feature 13 (original mod) no green on the 1.1.0 tree: file; 8.i French pass on the 1.1.0 tree: file after egg green; 8.l `tested_on` stale (2026-10-10, c4edf71); 8.m code review (code_review_sha f809e47 predates barrier hardening, Opus sub-agent). Run-UnitTests.ps1 n/a (no Tests/*.Tests.csproj; Tests/Run-All.ps1 is the runner); Check-Translations needs `-AllowUnused SZ_CannotReachBuildingToExtractGene -VanillaKeyed TextMote_Dodge`.
+
+Resume 2026-11-03: protocols_read_sha d17469c9 (diffs of AGENTS.md, scripts.md, AUDIT.md skimmed: no effect at playTests), TM registered (session local_f1e4cc35). Ticket 8d2f read: exit 3 stall guard came AFTER the run; filter `15-rest-and-breeding::egg` selects 1 scenario (messages.ndjson holds 1 pickle, summary.json total 1), egg scenario PASSED (286 s, tree 1e9daa2): the "tests=70" of the ticket header is the unfiltered suite, nothing was cut. Egg green: feature 15 English fully green on the 1.1.0 tree (20/21 in `2026-10-23a-rest-breeding-en` + egg in `2026-10-28a-egg-en`), both minified into `Evidence/` with `RELEASE.md`, Inbox empty. French replay of feature 15 now owed (8.i). Open: 8.c/8.g barrier hardening (features 18 to 23 or `20-wind-barrier` English), 8.f feature 13, 8.i French pass, 8.l `tested_on`, 8.m code review.
