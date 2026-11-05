@@ -106,7 +106,7 @@ remaining:
       C# nor the defs. Inherited, left alone
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
 updated:      2026-10-28
-protocols_read_sha: d17469c9c6e799a503821573de9ce2aa18e057d6
+protocols_read_sha: 1cee56b1a192943da20c28b289f5ea28a7be9150
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -239,3 +239,5 @@ Audit replay 2026-10-29 (dry, no write): sections 1 to 7 fulfilled (4 weak proof
 Resume 2026-11-03: protocols_read_sha d17469c9 (diffs of AGENTS.md, scripts.md, AUDIT.md skimmed: no effect at playTests), TM registered (session local_f1e4cc35). Ticket 8d2f read: exit 3 stall guard came AFTER the run; filter `15-rest-and-breeding::egg` selects 1 scenario (messages.ndjson holds 1 pickle, summary.json total 1), egg scenario PASSED (286 s, tree 1e9daa2): the "tests=70" of the ticket header is the unfiltered suite, nothing was cut. Egg green: feature 15 English fully green on the 1.1.0 tree (20/21 in `2026-10-23a-rest-breeding-en` + egg in `2026-10-28a-egg-en`), both minified into `Evidence/` with `RELEASE.md`, Inbox empty. French replay of feature 15 now owed (8.i). Open: 8.c/8.g barrier hardening (features 18 to 23 or `20-wind-barrier` English), 8.f feature 13, 8.i French pass, 8.l `tested_on`, 8.m code review.
 
 French replay of feature 15 filed 2026-11-03: `20261103-084658-743-febe` (`2026-11-03a-rest-breeding-fr`, filter `15-rest-and-breeding`, French, `-pickle-scenario-timeout=600`, tree 8a2b8f9). Mod and Source frozen until RUN_DONE. On green: minify into `Evidence/`.
+
+Resume 2026-11-05: protocols_read_sha 1cee56b1 (diffs of AUDIT, PICKLE skimmed: 6.g review now needed to leave localize, `mod.json` manifest, Preview config key `background`: no effect at playTests; `-Force` used, dirty `docs/registre/summary.md` is not a stage doc), TM registered (session local_ab115c2b). No archived session of this mod. Preview regenerated (echo.width/height removed 2026-11-03): opened, echo red beside the panel text, nothing cut, no overlap with title; committed. Mod tests conversion (AGENTS.md "Mod tests shape", owner 2026-11-05) deferred: ticket febe (French feature 15) still running, Mod and Source frozen. Open: febe result, then conversion to `Tests/Rule-OwnValues.ps1` (ask CI/CD for `--regenerate`), 8.c/8.g barrier hardening, 8.f feature 13, 8.i French pass, 8.l `tested_on`, 8.m code review. STATUS.md over 40 KB: journal to `docs/runs/` at next cut.
