@@ -20,3 +20,12 @@ jobs:
       # The project is build.project of .github/publish.config.json, the files to find afterwards are its requirePaths.
       - name: Build from scratch and check what the mod ships
         run: bash .github/scripts/build-check.sh --ci
+  mod-tests:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Shared checks and own values
+        shell: powershell
+        run: ./Tests/Test-Mod.ps1
