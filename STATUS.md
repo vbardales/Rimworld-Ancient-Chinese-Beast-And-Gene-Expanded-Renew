@@ -11,7 +11,7 @@ repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 visibility:   public
 detached:     yes
 workflow_stage: playTests[1.1.0]
-social_preview_sha256: bed19bf6a75a979b82a8c54c3287435f9f6782b0ba810a65e8de34a707c38673
+social_preview_sha256: ef4033f58e512d0f5eaff4384e2ca7d1c0c5e0a2142fb371a5569a324223052c
 echo_review_sha: d4409fa79443f95e80e837fc4941245708106090  # 2026-10-23, 10.a: echo kept (echo-source.png, Preview panel bottom-left, validated by Virginie in chat)
 publication_changelog_review_sha: 5bed84a774984f2711ba3048ce90046038b30fcc
 licence:      silent
@@ -165,3 +165,5 @@ Preview 2026-11-05: regenerated from the config migrated by Virginie (no titleSi
 Sleep 2026-11-05: tests converted and pushed (Rule-OwnValues.ps1 stamped by Audit; generated Test-Mod.ps1 and build.yml with the windows mod-tests job, CI green on b11b949; PatchEngine now on the runner, patch rules run there; never hand-edit build.yml, ask CI/CD to regenerate). Preview regenerated, validated and uploaded as GitHub social preview. TM order "map is shown alone" already done (feature uses the shared Nelim's Pickle Tools steps, no local copy). Waiting: ticket febe (French feature 15, queued behind NSB/NPT, TM relays RUN_DONE; on green minify into `Evidence/`). Open: 8.c/8.g barrier hardening, 8.f feature 13, 8.i French pass after febe, 8.l tested_on, 8.m code review (Opus sub-agent), GALLERY rule d vs 24-gallery plan, STATUS.md over 40 KB (journal to docs/runs/).
 
 Resume 2026-11-05 (2): protocols_read_sha 95f9ae9b (diffs of AGENTS, GALLERY, STYLE_RIMWORLD, scripts.md skimmed: no effect at playTests), TM registered (local_ab115c2b), no archived session of this mod, sleep marker deleted. Preview.png committed 2026-11-05 so no re-render owed, but `Art/Preview.config.json` has an uncommitted edit by another hand (title now `Expanded` 0.65 + `Renew (unofficial)` suffix): not mine, Preview.png not re-rendered from it, owner to say. Ticket febe (French feature 15) no RUN_DONE yet. STATUS.md journal moved to `docs/runs/2026-11-05-status-history.md`.
+
+Preview 2026-11-05 (2): regenerated from the edited config (Expanded 0.65 + suffix Renew (unofficial), titleSize 39, three title lines), opened, echo clear of text, nothing cut; validated by Virginie in chat ("je valide"). social_preview_sha256 ef4033f58e512d0f5eaff4384e2ca7d1c0c5e0a2142fb371a5569a324223052c. GitHub social preview not uploaded yet (waits her go).
