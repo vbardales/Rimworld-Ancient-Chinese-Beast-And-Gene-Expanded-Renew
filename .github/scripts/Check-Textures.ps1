@@ -60,6 +60,14 @@ $errors = New-Object System.Collections.Generic.List[string]
 $warns = New-Object System.Collections.Generic.List[string]
 function Rel([string]$p) { if ($p.StartsWith($ModRoot)) { $p.Substring($ModRoot.Length + 1) } else { $p } }
 
+# ---- files git ignores are not shipped (a diagnostic Defs file kept out of the repository, 2026-11-05, VenusTouchWaistlines): neither read nor counted
+$ignored = New-Object System.Collections.Generic.HashSet[string] ([StringComparer]::OrdinalIgnoreCase)
+$inGit = $false
+try { $inGit = (& git -C $ModRoot rev-parse --is-inside-work-tree 2>$null) -eq 'true' } catch { }
+if ($inGit) {
+  foreach ($rel in (& git -C $ModRoot -c core.quotePath=false ls-files -o -i --exclude-standard 2>$null)) { if ($rel) { [void]$ignored.Add((Join-Path $ModRoot ($rel -replace '/', '\'))) } }
+}
+
 # ---- content roots
 $roots = New-Object System.Collections.Generic.HashSet[string]
 foreach ($d in Get-ChildItem -LiteralPath $mod -Directory -Recurse -Depth 3 -ErrorAction SilentlyContinue) {
@@ -86,6 +94,7 @@ function Add-TextureDir($ix, [string]$dir) {
   $n = 0
   foreach ($f in Get-ChildItem -LiteralPath $dir -Recurse -File -ErrorAction SilentlyContinue) {
     if ($imgExt -notcontains $f.Extension.ToLowerInvariant()) { continue }
+    if ($ignored.Contains($f.FullName)) { continue }
     $rel = $f.FullName.Substring($dir.Length + 1).Replace('\', '/')
     $key = $rel.Substring(0, $rel.Length - $f.Extension.Length)
     Add-Key $ix $key
@@ -104,7 +113,7 @@ foreach ($r in $roots) {
   if (Test-Path -LiteralPath $t) { [void](Add-TextureDir $own $t); [void](Add-TextureDir $all $t) }
   foreach ($sub in 'Defs', 'Patches') {
     $p = Join-Path $r $sub
-    if (Test-Path -LiteralPath $p) { foreach ($f in Get-ChildItem -LiteralPath $p -Recurse -Filter *.xml -File) { $xmlFiles.Add($f.FullName) } }
+    if (Test-Path -LiteralPath $p) { foreach ($f in Get-ChildItem -LiteralPath $p -Recurse -Filter *.xml -File) { if (-not $ignored.Contains($f.FullName)) { $xmlFiles.Add($f.FullName) } } }
   }
 }
 foreach ($a in $AlsoScan) {
