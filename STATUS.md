@@ -11,7 +11,7 @@ repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 visibility:   public
 detached:     yes
 workflow_stage: playTests[1.1.0]
-social_preview_sha256: 0624de6f725d33981f86f084d8303f397d3202812f135bef81c64817f6f6135b
+social_preview_sha256: bed19bf6a75a979b82a8c54c3287435f9f6782b0ba810a65e8de34a707c38673
 echo_review_sha: d4409fa79443f95e80e837fc4941245708106090  # 2026-10-23, 10.a: echo kept (echo-source.png, Preview panel bottom-left, validated by Virginie in chat)
 publication_changelog_review_sha: 5bed84a774984f2711ba3048ce90046038b30fcc
 licence:      silent
@@ -241,3 +241,5 @@ Resume 2026-11-03: protocols_read_sha d17469c9 (diffs of AGENTS.md, scripts.md, 
 French replay of feature 15 filed 2026-11-03: `20261103-084658-743-febe` (`2026-11-03a-rest-breeding-fr`, filter `15-rest-and-breeding`, French, `-pickle-scenario-timeout=600`, tree 8a2b8f9). Mod and Source frozen until RUN_DONE. On green: minify into `Evidence/`.
 
 Resume 2026-11-05: protocols_read_sha 1cee56b1 (diffs of AUDIT, PICKLE skimmed: 6.g review now needed to leave localize, `mod.json` manifest, Preview config key `background`: no effect at playTests; `-Force` used, dirty `docs/registre/summary.md` is not a stage doc), TM registered (session local_ab115c2b). No archived session of this mod. Preview regenerated (echo.width/height removed 2026-11-03): opened, echo red beside the panel text, nothing cut, no overlap with title; committed. Mod tests conversion (AGENTS.md "Mod tests shape", owner 2026-11-05) deferred: ticket febe (French feature 15) still running, Mod and Source frozen. Open: febe result, then conversion to `Tests/Rule-OwnValues.ps1` (ask CI/CD for `--regenerate`), 8.c/8.g barrier hardening, 8.f feature 13, 8.i French pass, 8.l `tested_on`, 8.m code review. STATUS.md over 40 KB: journal to `docs/runs/` at next cut.
+
+Preview 2026-11-05: regenerated from the config migrated by Virginie (no titleSize, tag as words, Fit-Title of protocols a93cc18: titleSize 38, two title lines, tag on two lines below), opened, echo clear of all text, nothing cut; validated by Virginie in chat ("validé"). Mod tests converted (Tests/Rule-OwnValues.ps1, generated Test-Mod.ps1, windows mod-tests job in build.yml, Audit stamped). social_preview_sha256 bed19bf6a75a979b82a8c54c3287435f9f6782b0ba810a65e8de34a707c38673: GitHub social preview not uploaded yet.

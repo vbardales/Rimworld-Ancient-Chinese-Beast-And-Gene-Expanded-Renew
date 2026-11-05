@@ -2,51 +2,17 @@
   "panel": {
     "panelAnchor": "bottom-left",
     "title": "Ancient Chinese Beast And Gene Expanded Renew (unofficial)",
-    "titleSize": 34,
     "titleParts": [
-      {
-        "text": "Ancient Chinese",
-        "scale": 1
-      },
-      {
-        "break": true
-      },
-      {
-        "text": "Beast ",
-        "scale": 1
-      },
-      {
-        "text": "And ",
-        "scale": 0.65
-      },
-      {
-        "text": "Gene",
-        "scale": 1
-      },
-      {
-        "break": true
-      },
-      {
-        "text": "Expanded ",
-        "scale": 1
-      },
-      {
-        "text": "Renew",
-        "scale": 0.65,
-        "font": "ui",
-        "color": "secondary"
-      }
+      { "text": "Ancient Chinese" },
+      { "text": "Beast" },
+      { "text": "And", "scale": 0.65 },
+      { "text": "Gene" },
+      { "text": "Expanded Renew (unofficial)", "tag": true }
     ],
-    "tag": "(unofficial)",
-    "tagInline": true,
-    "copyLines": [
-      "Four mythical beasts, their genes, and a divine rooster on the Rim."
-    ]
+    "description": "Four mythical beasts, their genes, and a divine rooster on the Rim."
   },
-  "backgroundFile": "Preview-source.png",
-  "echo": {
-    "file": "echo-source.png"
-  },
+  "background": { "file": "Preview-source.png" },
+  "echo": { "file": "echo-source.png" },
   "icon": {
     "file": "ModIcon-source.png",
     "corner": "bottom-right"
