@@ -1,13 +1,24 @@
-param([string]$ModPath = "$PSScriptRoot/../Mod")
+param([Parameter(Mandatory)][string]$ModRoot, [string]$SharedDir)
+
+# Own values and facts of this mod's content: 12 beast genes and extraction recipes, friendly clone races, 11 beast races (rest, sexes, three
+# life stages, eggs), the A Dog Said 2 and Nocturnal Animals patches run on stand-ins, the About.xml links and load order. One consumer,
+# nothing shareable; Tests/Test-Mod.ps1 (generated) runs it after the shared checks. Prints findings, exit 1 on any.
+# The generic checks (XML well formed, duplicate defNames, About shape, images, def references, XML fields, translations) live in the shared scripts.
 $ErrorActionPreference = 'Stop'
-$protocols = Resolve-Path "$PSScriptRoot/../../scripts"
-. "$protocols/lib/TestRunner.ps1"
-. "$protocols/lib/PatchEngine.ps1"
-# What the shared scripts already check (well formed XML, duplicate defName, About.xml shape and suffix, ATTRIBUTION and
-# LICENSE, images, PublishedFileId; def references, XML fields, translations) is not repeated here. What follows is
-# what only this mod knows: its counts, its patch results and its beast contract.
-& pwsh -NoProfile -File "$protocols/Check-ModBasics.ps1" -ModRoot (Resolve-Path "$PSScriptRoot/..").Path -Unofficial -OriginalWorkshopId 3292446841
-if ($LASTEXITCODE -ne 0) { exit 1 }
+$root = (Resolve-Path -LiteralPath $ModRoot).Path
+$ModPath = Join-Path $root 'Mod'
+$script:findings = @()
+$engine = @($SharedDir, (Join-Path $root '../scripts')) | Where-Object { $_ } | ForEach-Object { Join-Path $_ 'lib/PatchEngine.ps1' } | Where-Object { Test-Path -LiteralPath $_ } | Select-Object -First 1
+if (-not $engine) { Write-Warning 'lib/PatchEngine.ps1 not found (needs the protocols checkout): the patch rules are SKIPPED here, not passed (every local run has it).' } else { . $engine }
+
+# One rule: the block returns its problems; each is printed under the rule name. A test that returns $false is a problem too.
+function It([string]$name, [scriptblock]$body) {
+    try { $problems = @(& $body | Where-Object { $_ }) } catch { $problems = @("threw: $($_.Exception.GetBaseException().Message)") }
+    foreach ($p in $problems) { $script:findings += "[$name] $p" }
+}
+function Test-That([string]$TrName, [scriptblock]$TrBody) {
+    It $TrName { $r = & $TrBody; if ($r -ne $true) { "failed" } }
+}
 function Read-Xml([string]$Path) { $d = New-Object System.Xml.XmlDocument; $d.Load($Path); $d }
 $defs = @()
 foreach ($file in Get-ChildItem -LiteralPath $ModPath -Recurse -Filter *.xml -File) {
@@ -41,6 +52,11 @@ It 'each clone recipe references a friendly pawn kind' {
 $url = [string]$about.ModMetaData.url
 Test-That 'metadata links to the GitHub repository' { $url -match '^https://github\.com/[^/]+/[^/]+/?$' }
 Test-That 'description includes the repository URL' { $url.Length -gt 0 -and $about.ModMetaData.description.Contains($url) }
+It 'About.xml: unofficial title and own published id (not the original 3292446841)' {
+    if (-not ([string]$about.ModMetaData.name).EndsWith('(unofficial)')) { 'The title must end with (unofficial).' }
+    $idFile = Join-Path $ModPath 'About/PublishedFileId.txt'
+    if ((Test-Path -LiteralPath $idFile) -and ((Get-Content -LiteralPath $idFile -Raw).Trim() -eq '3292446841')) { 'PublishedFileId.txt holds the ORIGINAL mod id.' }
+}
 It 'About.xml names the dependencies' { foreach ($d in 'brrainz.harmony', 'Ludeon.RimWorld.Biotech') { if ($d -notin @($about.ModMetaData.modDependencies.li.packageId)) { "Missing dependency: $d" } } }
 
 # A Dog Said... Animal Prosthetics 2. The other mod's data is not in this repository: the patch runs through the shared
@@ -52,6 +68,7 @@ $standIn = '<Defs><RecipeDef Name="ADS_Cat1" Abstract="True"><recipeUsers><li>Hu
 Test-That 'five friendly clone races' { $friendly.Count -eq 5 }
 Test-That 'the A Dog Said 2 patch exists' { Test-Path -LiteralPath $adsPatch }
 It 'the patch gives each category exactly the animals a colony can own' {
+    if (-not $engine) { return }
     $doc = New-Object System.Xml.XmlDocument; $doc.LoadXml($standIn)
     Invoke-PatchFile $adsPatch $doc -RequireMatch
     $expected = @{ ADS_Cat3 = $friendly; ADS_Cat2 = $friendly + 'SZ_Chicken'; ADS_Cat1 = $friendly + 'SZ_Chicken' }
@@ -62,12 +79,14 @@ It 'the patch gives each category exactly the animals a colony can own' {
     if (@($doc.SelectNodes('/Defs/RecipeDef[defName="Decoy"]/recipeUsers/li')).Count -ne 1) { 'The decoy recipe must stay untouched.' }
 }
 It 'without the other mod the patch changes nothing' {
+    if (-not $engine) { return }
     $doc = New-Object System.Xml.XmlDocument; $doc.LoadXml('<Defs><RecipeDef><defName>Decoy</defName></RecipeDef></Defs>')
     $before = $doc.OuterXml
     Invoke-PatchFile $adsPatch $doc -RequireMatch
     if ($doc.OuterXml -ne $before) { 'The patch edited a document without the category defs.' }
 }
 It 'a hostile beast is given no prosthetics' {
+    if (-not $engine) { return }
     $hostile = @($defs | Where-Object { $_.Name -eq 'ThingDef' -and $_.ParentName -eq 'SZBeastParent' -and ([string]$_.defName) -notlike '*_Friendly' -and $_.defName -ne 'SZ_Chicken' } | ForEach-Object { [string]$_.defName })
     if ($hostile.Count -lt 4) { 'Expected at least four hostile beasts.' }
     $doc = New-Object System.Xml.XmlDocument; $doc.LoadXml($standIn)
@@ -120,6 +139,7 @@ $clocks = @{ Nocturnal = 'SZ_QiongQi', 'SZ_QiongQi_Friendly', 'SZ_SeXie', 'SZ_Se
 function New-BeastDoc { $d = New-Object System.Xml.XmlDocument; [void]$d.AppendChild($d.CreateElement('Defs')); foreach ($r in $beastRaces) { [void]$d.DocumentElement.AppendChild($d.ImportNode($r, $true)) }; $d }
 Test-That 'the Nocturnal Animals patch exists' { Test-Path -LiteralPath $naPatch }
 It 'with either name active each race gets its clock' {
+    if (-not $engine) { return }
     foreach ($name in '[XND] Nocturnal Animals (Continued)', '[XND] Nocturnal Animals') {
         $doc = New-BeastDoc
         Invoke-PatchFile $naPatch $doc -ActiveMods @($name) -RequireMatch
@@ -132,9 +152,12 @@ It 'with either name active each race gets its clock' {
     }
 }
 It 'without either name nothing is added' {
+    if (-not $engine) { return }
     $doc = New-BeastDoc; $before = $doc.OuterXml
     Invoke-PatchFile $naPatch $doc -ActiveMods @('Some other mod')
     if ($doc.OuterXml -ne $before) { 'The patch edited the defs without Nocturnal Animals.' }
 }
 Test-That 'no operation relies on MayRequire' { $null -eq (Read-Xml $naPatch).SelectSingleNode('//*[@MayRequire]') -and $null -eq (Read-Xml $adsPatch).SelectSingleNode('//*[@MayRequire]') }
-Complete-Tests
+
+if ($script:findings.Count) { $script:findings; exit 1 }
+Write-Output "PASS: Rule-OwnValues ($($defs.Count) defs, $($beastRaces.Count) beast races)"

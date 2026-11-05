@@ -19,8 +19,7 @@ function Invoke-Check([string]$Name, [scriptblock]$Action) {
 }
 Push-Location $root
 try {
-    Invoke-Check 'Content contracts' { & pwsh -NoProfile -File "$PSScriptRoot/Check-Content.ps1" -ModPath $mod }
-    Invoke-Check 'Content checker negative controls' { & pwsh -NoProfile -File "$PSScriptRoot/Test-ContentChecker.ps1" }
+    Invoke-Check 'Own values of the mod' { & pwsh -NoProfile -File "$PSScriptRoot/Rule-OwnValues.ps1" -ModRoot $root -SharedDir (Resolve-Path "$root/../scripts").Path }
     Invoke-Check 'Build mod' { & dotnet build "$root/Source" -p:UseSharedCompilation=false }
     Invoke-Check 'Build tests' { & dotnet build "$PSScriptRoot" -p:UseSharedCompilation=false -p:UseAppHost=false }
     $types = Join-Path $root 'build/xml-types.txt'
