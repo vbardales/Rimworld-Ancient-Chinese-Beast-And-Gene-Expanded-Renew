@@ -106,7 +106,7 @@ remaining:
       C# nor the defs. Inherited, left alone
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
 updated:      2026-10-28
-protocols_read_sha: 376006577a6ad5c648da7de9efd0c570f3d2e560
+protocols_read_sha: 89aa1bb1ab43f08fd0abb39881df7439d9dfa0a6
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -171,3 +171,5 @@ Preview 2026-11-05 (2): regenerated from the edited config (Expanded 0.65 + suff
 Sleep 2026-11-05 (2): Preview regenerated, validated, committed (a4cfb8b) and uploaded as GitHub social preview (194ecbe). Waiting: ticket febe (French feature 15, TM relays RUN_DONE; on green minify into `Evidence/`). Open: 8.c/8.g barrier hardening, 8.f feature 13, 8.i French pass after febe, 8.l tested_on, 8.m code review (Opus sub-agent), GALLERY rule d vs 24-gallery plan.
 
 Resume 2026-11-06: protocols_read_sha 37600657 (diffs of AGENTS, GALLERY, STYLE_RIMWORLD skimmed: Preview auto-regen rule, nothing changed in Preview inputs; gallery rewrite-deletes rule n/a at playTests), TM registered (local_ab115c2b), no archived session, marker deleted. TM backlog digest (118 runs): newest 12 all already digested (8d2f egg green 11-03, ca51 20/21, a8ce siege green, others old watchdog exit=3 read at the time); Inbox and Parked empty. Still waiting: ticket febe (French feature 15), queue paused by Virginie.
+
+Resume 2026-11-06 (2): protocols_read_sha 89aa1bb1 (log since 37600657: AUDIT-STATUS, LOCAL_SCRIPTS rows, Run-PickleWsl remote: no effect at playTests; -Force, dirty scripts/Run-PickleWsl.ps1 not read), TM registered (session local_5bc1b5af), no archived session of this mod, Preview.png committed 2026-11-05 so no re-render owed. Still waiting: ticket febe (French feature 15). Open: 8.c/8.g barrier hardening, 8.f feature 13, 8.i French pass after febe, 8.l tested_on, 8.m code review.
