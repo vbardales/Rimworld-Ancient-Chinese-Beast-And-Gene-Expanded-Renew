@@ -106,7 +106,7 @@ remaining:
       C# nor the defs. Inherited, left alone
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
 updated:      2026-10-28
-protocols_read_sha: 95f9ae9be72e607e03bbe62ae2db81add3ab0684
+protocols_read_sha: 376006577a6ad5c648da7de9efd0c570f3d2e560
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -169,3 +169,5 @@ Resume 2026-11-05 (2): protocols_read_sha 95f9ae9b (diffs of AGENTS, GALLERY, ST
 Preview 2026-11-05 (2): regenerated from the edited config (Expanded 0.65 + suffix Renew (unofficial), titleSize 39, three title lines), opened, echo clear of text, nothing cut; validated by Virginie in chat ("je valide"). social_preview_sha256 ef4033f58e512d0f5eaff4384e2ca7d1c0c5e0a2142fb371a5569a324223052c. GitHub social preview uploaded by Claude in Chrome after her "oui" (settings page shows the new image, no og:image hash read).
 
 Sleep 2026-11-05 (2): Preview regenerated, validated, committed (a4cfb8b) and uploaded as GitHub social preview (194ecbe). Waiting: ticket febe (French feature 15, TM relays RUN_DONE; on green minify into `Evidence/`). Open: 8.c/8.g barrier hardening, 8.f feature 13, 8.i French pass after febe, 8.l tested_on, 8.m code review (Opus sub-agent), GALLERY rule d vs 24-gallery plan.
+
+Resume 2026-11-06: protocols_read_sha 37600657 (diffs of AGENTS, GALLERY, STYLE_RIMWORLD skimmed: Preview auto-regen rule, nothing changed in Preview inputs; gallery rewrite-deletes rule n/a at playTests), TM registered (local_ab115c2b), no archived session, marker deleted. TM backlog digest (118 runs): newest 12 all already digested (8d2f egg green 11-03, ca51 20/21, a8ce siege green, others old watchdog exit=3 read at the time); Inbox and Parked empty. Still waiting: ticket febe (French feature 15), queue paused by Virginie.
