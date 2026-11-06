@@ -41,6 +41,10 @@ public class Ability_WindBarrier : Ability_Draw
 			return;
 		}
 		ticksTime--;
+		if (!base.pawn.Spawned)
+		{
+			return;
+		}
 		// Both lists are local to the tick. They used to be static and shared by every barrier: an exception in the middle of a loop left
 		// entries behind that the next tick of any barrier (on any map) met again.
 		List<Thing> targets = new List<Thing>();
@@ -70,8 +74,14 @@ public class Ability_WindBarrier : Ability_Draw
 				targets.RemoveAt(targets.Count - 1);
 			}
 		}
-		foreach (Projectile item in StoreProjectiles.projectiles.Where((Projectile projectile) => projectile.Spawned && !projectile.Destroyed))
+		// The projectiles come from the lister of this map, not from the static StoreProjectiles list: that list is never pruned on load
+		// or map removal, so a stale entry could report the pawn's map and be destroyed through a lister that never held it.
+		foreach (Thing thing3 in base.pawn.Map.listerThings.ThingsInGroup(ThingRequestGroup.Projectile).ToList())
 		{
+			if (!(thing3 is Projectile item) || !item.Spawned || item.Destroyed)
+			{
+				continue;
+			}
 			if (item.Map == base.pawn.Map && item.Launcher != base.pawn && CollisionDetermination(item.ExactPosition, base.pawn.TrueCenter(), Math.Max(Range, Range * item.def.projectile.SpeedTilesPerTick)))
 			{
 				projectiles.Add(item);
@@ -107,7 +117,7 @@ public class Ability_WindBarrier : Ability_Draw
 				}
 				catch (Exception ex)
 				{
-					Log.Warning("Ancient Chinese Beast: the wind barrier could not destroy a captured projectile (" + captured.def.defName + "): " + ex.Message);
+					Log.WarningOnce("Ancient Chinese Beast: the wind barrier could not destroy a captured projectile (" + captured.def.defName + "): " + ex, captured.thingIDNumber ^ 0x57494E44);
 				}
 			}
 		}
