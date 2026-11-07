@@ -183,3 +183,5 @@ Code review 8.m 2026-11-06 (Opus sub-agent, f809e47f..0962a7e): 4 findings in Ab
 RUN_DONE 2026-11-06 (read at resume 2026-11-07, Inbox): f878 feature 20 wind barrier English, exitReason passed, 2/2, 0 NullReference in Player.log, tree 6589e5f; bacf feature 13 original mod English, exitReason passed, 1/1, tree 6589e5f. Minified to Evidence/ with RELEASE.md. 8.c/8.g barrier and 8.f feature 13 done; code_review_sha and tested_on set. Open: 8.i French pass for the French text changed since f809e47f (features 05, 08, 12, 18, 19, 23), then 8.n. Scenario D: no `*-addition.feature` here, nothing to remove.
 
 Resume 2026-11-07: protocols_read_sha 18f8db99 (diffs of AGENTS, AUDIT, GALLERY, PICKLE read: `tested_on` never empty, scenario D not applicable, mod contacts Virginie directly; no effect on this stage), TM registered (local_dd8cdcd8), no archived session of this mod, marker deleted.
+
+Ticket 30ce filed 2026-11-07 (French features 05, 08, 12, 18, 19, 23, tree 6589e5f, Inbox 2026-11-07a-french-text). On RUN_DONE: read summary.json and junit.xml, sort per TEST-EVIDENCE.md; green: 8.i done, then 8.n to shootGallery[1.1.0]. Mod and Source frozen until RUN_DONE.
