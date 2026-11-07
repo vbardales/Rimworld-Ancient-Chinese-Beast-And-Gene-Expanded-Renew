@@ -185,3 +185,5 @@ RUN_DONE 2026-11-06 (read at resume 2026-11-07, Inbox): f878 feature 20 wind bar
 Resume 2026-11-07: protocols_read_sha 18f8db99 (diffs of AGENTS, AUDIT, GALLERY, PICKLE read: `tested_on` never empty, scenario D not applicable, mod contacts Virginie directly; no effect on this stage), TM registered (local_dd8cdcd8), no archived session of this mod, marker deleted.
 
 Ticket 30ce filed 2026-11-07 (French features 05, 08, 12, 18, 19, 23, tree 6589e5f, Inbox 2026-11-07a-french-text). On RUN_DONE: read summary.json and junit.xml, sort per TEST-EVIDENCE.md; green: 8.i done, then 8.n to shootGallery[1.1.0]. Mod and Source frozen until RUN_DONE.
+
+OptionalCompat 2026-11-07 (TM order, Audit 4.b/4.e): Check-OptionalCompat OK, 1 patched target, 1 declared: Mlie.XNDNocturnalAnimals (workshopId 2269731409, patch), commit 40690e7. ADS2 loadBefore and CCE loadAfter are order-only, not declared. Audit told. File added while ticket 30ce waits: no code change, no relaunch.
