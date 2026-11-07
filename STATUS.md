@@ -3,7 +3,7 @@ localization: complete
 translation_en: complete
 translation_fr: complete
 settings_audit: not_applicable
-code_review_sha: f809e47f4cd07d3a34b67b1d9c119e762a478f31  # 2026-10-13, 8.m exceptions: reviewed diff 54eb9fb..HEAD over Mod and Source (git diff --stat): only Mod/About/About.xml (description text, nothing else) and Mod/ATTRIBUTION.md (one sentence about the removed Art/textures-original), no code: revue du diff : images et texte seuls. Previous: 54eb9fb, 2026-10-13, 8.m (moved past the French and gene-name text edits of this commit, Defs QiongQi.xml and MingShe.xml read, no code; and past two description-only edits of About.xml, no code): 5ea69ab..HEAD over Source and Mod holds no code change (only Source/Directory.Build.props intermediates path build/, ATTRIBUTION.md, Preview.png, desktop.ini removed): 0 findings. Earlier review, was `code_review`: <sha> (2026-10-08, /code-review at low effort over 89a2575..5ea69ab, the 0.1.0 commit that tracked the PublishedFileId, limited to Source, Mod/Defs, Mod/Patches and Tests/Pickle/Source: 0 findings; low effort reads the diff once, no verify pass. First review of this mod, nothing earlier existed)
+code_review_sha: 6589e5f5ef5c4b560b62bd1ccfa9b74f6241b2ce  # 2026-11-07, 8.m: Opus review f809e47f..0962a7e (4 findings in Ability_WindBarrier.cs), fixed in 6589e5f, diff 0962a7e..HEAD re-read (only that fix, Source and the rebuilt DLL), barrier replay f878 green. Previous: f809e47f4cd07d3a34b67b1d9c119e762a478f31  # 2026-10-13, 8.m exceptions: reviewed diff 54eb9fb..HEAD over Mod and Source (git diff --stat): only Mod/About/About.xml (description text, nothing else) and Mod/ATTRIBUTION.md (one sentence about the removed Art/textures-original), no code: revue du diff : images et texte seuls. Previous: 54eb9fb, 2026-10-13, 8.m (moved past the French and gene-name text edits of this commit, Defs QiongQi.xml and MingShe.xml read, no code; and past two description-only edits of About.xml, no code): 5ea69ab..HEAD over Source and Mod holds no code change (only Source/Directory.Build.props intermediates path build/, ATTRIBUTION.md, Preview.png, desktop.ini removed): 0 findings. Earlier review, was `code_review`: <sha> (2026-10-08, /code-review at low effort over 89a2575..5ea69ab, the 0.1.0 commit that tracked the PublishedFileId, limited to Source, Mod/Defs, Mod/Patches and Tests/Pickle/Source: 0 findings; low effort reads the diff once, no verify pass. First review of this mod, nothing earlier existed)
 audit_revision: 67a4b37 (HEAD, pushed, tree clean when the 2026-10-01 audit began). While it ran, another session regenerated `Art/` and `Mod/About/Preview.png` in the working tree: uncommitted, not touched and not audited here
 mod:          Ancient Chinese Beast And Gene Expanded Renew (unofficial)
 packageId:    nelim.ancientchinesebeastandgeneexpanded
@@ -23,7 +23,7 @@ upstream_mod_remotes:
   - https://github.com/MonsterTower/AncientChineseBeast
 dependencies: declared
 showcase:     complete
-tested_on: 2026-10-10 (1.6, tree c4edf71 for Source and Mod; last red scenarios green)
+tested_on: 2026-11-06 pickle 6589e5f (1.6, English: feature 20 wind barrier 2/2 and feature 13 original mod 1/1 green; French feature 15 22/22 green 2026-11-03)
 workshop:     published 2026-10-13, item 3806709132, public since 2026-10-13 (the owner switched it, after the upload), version 1.0.0, tag v1.0.0, run 38369937487 (publish and tag-and-release green)
 remaining:
   - verified 2026-10-01: French review by Virginie (see "Translation audit - 2026-10-01"). 11 source cells of
@@ -106,7 +106,7 @@ remaining:
       C# nor the defs. Inherited, left alone
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
 updated:      2026-10-28
-protocols_read_sha: 2eac65149980c52963036a11b453867138dc1dc7
+protocols_read_sha: 18f8db99dbcc5fc5da8c66dfb5cc7eb31b150f5a
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -179,3 +179,7 @@ Resume 2026-11-06 (3): protocols_read_sha 2eac6514 (new doc docs/LOCAL-SCRIPTS-C
 RUN_DONE 2026-11-06: ticket febe (French feature 15 rest-breeding-fr, run 2026-11-03a): exitReason passed, 22/22, 0 failed, 0 skipped, lane hetzner. Minified to Evidence/ with RELEASE.md (older en rest/egg folders deleted by Prune-Evidence). Inbox empty. Mod and Source unfrozen: next 8.c/8.g barrier hardening, 8.f feature 13, 8.i French pass remainder, 8.l tested_on, 8.m code review. TM note: replay-audit now runs from zero (claude-plugins 70d7e16), ledger .replays/<Mod>-<date>.tsv, then REPLAY to Audit; not started here.
 
 Code review 8.m 2026-11-06 (Opus sub-agent, f809e47f..0962a7e): 4 findings in Ability_WindBarrier.cs (stale static StoreProjectiles list could pass the same-map check and crash Destroy; reflect ran before the validity check; catch logged no stack and no once-guard; no spawned check on the pawn). Fixed in 6589e5f: projectiles read from pawn.Map.listerThings, early return when pawn not spawned, Log.WarningOnce with full exception. Run-All.ps1 green, DLL rebuilt. code_review_sha NOT set yet: set it to the sha reviewed after the replay is green (re-read the diff 0962a7e..HEAD first). Tickets filed on 6589e5f: f878 (feature 20 wind barrier, English, Inbox 2026-11-06a-barrier-en), bacf (feature 13 original mod, Inbox 2026-11-06b-original-en); older 0cb9 and 2596 cancelled. On RUN_DONE: read summary.json and junit.xml, sort per TEST-EVIDENCE.md; if green: 8.c/8.g barrier and 8.f feature 13 done, then 8.i French pass remainder, 8.l tested_on, 8.m code_review_sha, 8.n. Mod and Source frozen until both RUN_DONE.
+
+RUN_DONE 2026-11-06 (read at resume 2026-11-07, Inbox): f878 feature 20 wind barrier English, exitReason passed, 2/2, 0 NullReference in Player.log, tree 6589e5f; bacf feature 13 original mod English, exitReason passed, 1/1, tree 6589e5f. Minified to Evidence/ with RELEASE.md. 8.c/8.g barrier and 8.f feature 13 done; code_review_sha and tested_on set. Open: 8.i French pass for the French text changed since f809e47f (features 05, 08, 12, 18, 19, 23), then 8.n. Scenario D: no `*-addition.feature` here, nothing to remove.
+
+Resume 2026-11-07: protocols_read_sha 18f8db99 (diffs of AGENTS, AUDIT, GALLERY, PICKLE read: `tested_on` never empty, scenario D not applicable, mod contacts Virginie directly; no effect on this stage), TM registered (local_dd8cdcd8), no archived session of this mod, marker deleted.
