@@ -106,7 +106,7 @@ remaining:
       C# nor the defs. Inherited, left alone
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
 updated:      2026-10-28
-protocols_read_sha: 18f8db99dbcc5fc5da8c66dfb5cc7eb31b150f5a
+protocols_read_sha: a0f6044495ba4f1c59f199258a8881a56818b9d5
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -187,3 +187,5 @@ Resume 2026-11-07: protocols_read_sha 18f8db99 (diffs of AGENTS, AUDIT, GALLERY,
 Ticket 30ce filed 2026-11-07 (French features 05, 08, 12, 18, 19, 23, tree 6589e5f, Inbox 2026-11-07a-french-text). On RUN_DONE: read summary.json and junit.xml, sort per TEST-EVIDENCE.md; green: 8.i done, then 8.n to shootGallery[1.1.0]. Mod and Source frozen until RUN_DONE.
 
 OptionalCompat 2026-11-07 (TM order, Audit 4.b/4.e): Check-OptionalCompat OK, 1 patched target, 1 declared: Mlie.XNDNocturnalAnimals (workshopId 2269731409, patch), commit 40690e7. ADS2 loadBefore and CCE loadAfter are order-only, not declared. Audit told. File added while ticket 30ce waits: no code change, no relaunch.
+
+RUN_DONE 2026-11-07: ticket 30ce (French features 05, 08, 12, 18, 19, 23, tree 6589e5f): exitReason passed, 27/27, 0 skipped, 0 exception in Player.log, lane azure. Minified to Evidence/2026-11-07a-french-text with RELEASE.md, Inbox empty. 8.i done. FRENCH_REVIEW.md regenerated as TRANSLATION_REVIEW.md (new name, AUDIT 6.f); protocols_read_sha a0f60444. Mod and Source unfrozen. Next: 8.n to shootGallery[1.1.0].
