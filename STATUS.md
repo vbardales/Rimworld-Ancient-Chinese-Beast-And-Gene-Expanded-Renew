@@ -105,7 +105,7 @@ remaining:
   - defect: the keyed string SZ_CannotReachBuildingToExtractGene is referenced from neither the
       C# nor the defs. Inherited, left alone
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
-updated:      2026-10-28
+updated:      2026-11-08
 protocols_read_sha: 6e1f76dfd8a201085e01aa7faff8b5ed6631b5fd
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
@@ -191,3 +191,5 @@ OptionalCompat 2026-11-07 (TM order, Audit 4.b/4.e): Check-OptionalCompat OK, 1 
 RUN_DONE 2026-11-07: ticket 30ce (French features 05, 08, 12, 18, 19, 23, tree 6589e5f): exitReason passed, 27/27, 0 skipped, 0 exception in Player.log, lane azure. Minified to Evidence/2026-11-07a-french-text with RELEASE.md, Inbox empty. 8.i done. FRENCH_REVIEW.md regenerated as TRANSLATION_REVIEW.md (new name, AUDIT 6.f); protocols_read_sha a0f60444. Mod and Source unfrozen. Next: 8.n to shootGallery[1.1.0].
 
 Resume 2026-11-08: protocols_read_sha 6e1f76df (diffs of AGENTS, AUDIT, PICKLE skimmed: AUDIT 9.e bis gallery subtitles applies at shootGallery, rest wording; `-Force`, dirty files are docs not read for this stage), TM registered (local_ab115c2b), no archived session of this mod, marker deleted. Preview.png committed 2026-11-05 so no re-render owed; `Art/Preview.config.json` still has an uncommitted edit by another hand (not mine). Open: 8.n to shootGallery[1.1.0].
+
+Replay 2026-11-08 (from zero, ledger ../.replays/AncientChineseBeastAndGeneExpandedRenew-20261108.tsv, Check-Replay OK): sections 1 to 8 read, 60 done, 8 n/a, 8.m and 8.n open, stage stays playTests[1.1.0]. 8.m: 40690e7 changed Mod/About/OptionalCompat.xml after code_review_sha 6589e5f; the game ignores the file but AUDIT 8.m exceptions do not list it, so Audit to confirm the exception (then set code_review_sha to HEAD) or ask a review. Run-All.ps1 green now (exit 0); Run-UnitTests.ps1 n/a (no Tests.exe at root, script defect); Check-DefInjected 12 NO FIELD on modExtensions list paths (unverified, script limit); Check-Translations default run flags SZ_CannotReachBuildingToExtractGene (mod allowance in Run-All, inherited). Then 8.n to shootGallery[1.1.0].
