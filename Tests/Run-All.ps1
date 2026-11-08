@@ -24,7 +24,6 @@ try {
     Invoke-Check 'Build tests' { & dotnet build "$PSScriptRoot" -p:UseSharedCompilation=false -p:UseAppHost=false }
     $types = Join-Path $root 'build/xml-types.txt'
     Invoke-Check 'Assembly contracts' { & dotnet "$root/build/bin-tests/Debug/net8.0/AncientChineseBeast.Tests.dll" $Managed $Harmony $types }
-    Invoke-Check 'XML classes' { & pwsh -NoProfile -File "$PSScriptRoot/../../scripts/Check-XmlClasses.ps1" -ModPath $mod -TypeLists "$types,$PSScriptRoot/Xml/optional-mod-types.txt" -Brief }
-    Invoke-Check 'Shared offline checks' { & pwsh -NoProfile -File "$PSScriptRoot/../../scripts/Run-OfflineChecks.ps1" -ModRoot $root -Skip DefInjected,SettingsContract,XmlClasses -ExtraAssemblies $assembly -Brief -TranslationsArgs '-AllowUnused,SZ_CannotReachBuildingToExtractGene,-VanillaKeyed,TextMote_Dodge' }
+    Invoke-Check 'Shared offline checks' { & pwsh -NoProfile -File "$PSScriptRoot/../../scripts/Run-OfflineChecks.ps1" -ModRoot $root -Skip DefInjected,SettingsContract -TypeLists "$types,$PSScriptRoot/Xml/optional-mod-types.txt" -ExtraAssemblies $assembly -Brief -TranslationsArgs '-AllowUnused,SZ_CannotReachBuildingToExtractGene,-VanillaKeyed,TextMote_Dodge' }
     Write-Host "`nAll automated checks passed. In-game scenarios remain manual."
 } finally { Pop-Location }
