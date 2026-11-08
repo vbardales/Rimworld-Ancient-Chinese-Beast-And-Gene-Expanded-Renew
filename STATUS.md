@@ -229,3 +229,20 @@ Places read: 2026-11-08 (`SANCTUAIRE-LIEUX.md` sections 11 and 12 and the place 
 | `SZ_SeXieInsect` (scorpion form) | 2, 6 | shown |
 | `SZ_SeXie` (human form) | none | MISSING: add to a shot in `write-shotlist` |
 | friendly clones (`SZ_MingShe_Friendly`, `SZ_QiongQi_Friendly`, `SZ_YearBeast_Friendly`, `SZ_SeXie_Friendly`, `SZ_SeXieInsect_Friendly`) | none | MISSING: add one shot (or one grouped shot saying how they differ from the hostile ones) in `write-shotlist` |
+
+### Shotlist - 2026-11-08 (plan, no capture rated)
+
+Written in the header of `Tests/Pickle/Mod/Pickle/Features/24-gallery.feature` (8 shots, one story: New Year's day at the Sanctuary, 6 h to 20 h). Changes today: Ryu "Blue" Sai (NSB colonist, roster properties, nothing changed) replaces the invented Ren in shots 5 and 6 (owner question on Ren still open, Ryu is the default); shot 8 added (rule 5: five tame clones, `SZ_SeXie_Friendly` among them); outfits kept per story stage (emerald dragon robe 1 to 2, brown robe and SanShan hat 3 to 6, beige 7 to 8); shot 7 moved to 19 h (the extractor causes shot 8); shot 1 zoom 6 and shot 7 zoom 5 for variety; decor, instant and "how obtained" written for every shot. Opus director pass kept: outfit continuity, order of 7 and 8, zoom variety, hay on the ground, a target for the qiongqi, ring readable by pose. Not kept (no step or a validated place): the burning-ground effect of shot 4, zen rocks of shot 3, a melee weapon raised in shot 6, hen kibble thrown in the air. `SZ_SeXie` hostile human form is still in no shot (the scorpion form is in 2 and 6, the tame human form in 8): to add or to justify at the owner's call. Existing `Art/Gallery/1-` to `7-` (accepted 2026-10-13) belong to the old plan: the new candidates replace them by index.
+
+| shot | a time | b decor | c living | d pawns | e action | f frame | g subject | j mod | plan |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 dawn crow | 6 h Clear | daylily x2, TorchLamp lit, Kibble x2 | rooster, hen | dragon robe, ponytail, cheerful | throws kibble, hens run | zoom 6 (155,97) | feeds hens, rooster crows | rooster at 268 px | 5 |
+| 2 four beasts | 10 h Clear | 2 braziers, Hay x2, bambooBundle | 4 beasts | dragon robe, ponytail, cheerful | opens gate, nian eats | zoom 9 (153,213) | beasts at the gate | 4 beasts | 5 |
+| 3 qiongqi | 12 h Clear | 4 Sandbags, TorchLamp lit | qiongqi front, hen target | brown robe, SanShan hat, loose hair, WaitCombat | rifle, moment before strike | zoom 6 (170,143) | picked its target | qiongqi | 5 |
+| 4 nian fire | 14 h Clear | daylily x4, Sandbags x2, bambooBundle | nian beast, muffalo | brown robe, SanShan hat, cheerful | firecracker out, flame | zoom 7 (194,150) | fire breath | flame and beast | 5 |
+| 5 wind barrier | 16 h Clear | Sandbags x4, TorchLamp lit | mingshe, Ryu | brown robe, SanShan hat, wary | watches with MedicineHerbal | zoom 8 (173,143) | barrier throws shot back | barrier and projectile | 5 |
+| 6 sexie aura | 18 h Clear | daylily x2, 2 TorchLamp lit | scorpion sexie, Ryu | brown robe, SanShan hat, afraid | backs away, Ryu lunges | zoom 8 (147,171) | aura drives Ryu berserk | scorpion and ring | 5 |
+| 7 extractor | 19 h Clear | 3 capsules, daylily x2, 4 torches lit | hen | beige, Taoist hat, cheerful | slides capsule in | zoom 5 (230,213) | gene extractor at work | machine | 5 |
+| 8 tame clones | 20 h Clear | 2 braziers, 2 torches, Hay x2, bambooBundle | 5 tame clones | beige, no hat, ponytail, cheerful | empties hay | zoom 9 (166,235) | tame clones come home | 5 clones | 4.5 (g: tame looks like hostile, malus assumed) |
+
+Series k: ok (one story, rhythm 6 h to 20 h, wide opening shot 1 and 2, close shot 7, closing night shot 8). Mean plan 4.94. Risks: `enclosure-south` flower logo (no object on it) for shot 2; `gravel-yard` may become a zen garden; friendly kinds may spawn hostile (check faction in the first run); total gallery under 8 MB (subtitled jpg). No ticket filed yet.
