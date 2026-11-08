@@ -246,3 +246,5 @@ Written in the header of `Tests/Pickle/Mod/Pickle/Features/24-gallery.feature` (
 | 8 tame clones | 20 h Clear | 2 braziers, 2 torches, Hay x2, bambooBundle | 5 tame clones | beige, no hat, ponytail, cheerful | empties hay | zoom 9 (166,235) | tame clones come home | 5 clones | 4.5 (g: tame looks like hostile, malus assumed) |
 
 Series k: ok (one story, rhythm 6 h to 20 h, wide opening shot 1 and 2, close shot 7, closing night shot 8). Mean plan 4.94. Risks: `enclosure-south` flower logo (no object on it) for shot 2; `gravel-yard` may become a zen garden; friendly kinds may spawn hostile (check faction in the first run); total gallery under 8 MB (subtitled jpg). No ticket filed yet.
+
+Owner decision 2026-11-08 (Virginie, in chat: "prend Blue"): the guest of shots 5 and 6 is Ryu "Blue" Sai (NSB colonist, roster properties, nothing changed). The invented Ren is dropped, no validation owed. Shotlist unchanged.
