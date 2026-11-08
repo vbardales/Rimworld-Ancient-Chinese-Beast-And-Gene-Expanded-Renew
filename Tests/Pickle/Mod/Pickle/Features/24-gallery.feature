@@ -24,7 +24,7 @@
 #          beasts. Decor: Brazier lit at (146,207) and (162,207), the New Year fires of the gate. Nelim: emerald gilded dragon robe (RI_Apparel_DragonRobe),
 #          no hat, ponytail. Action: carries Hay, offering it over the gate, facing East. Face cheerful.
 #          Risk: the four bodies overlap or one leaves the frame. Plan: the offsets of 3 to 8 cells are measured on the empty enclosure photograph.
-#          v2: Hay on the ground at (150,209) and (152,210), bambooBundle at (157,208) by the gate (cells to check against the Nelim flower logo, no object on its flowers). Instant: Nelim has just opened the gate, the nian beast already eats, the other three turn toward her; obtained by the spawn facings and the pause right after.
+#          v2: Hay on the ground at (150,209) and (152,210), TorchLamp lit at (157,208) by the gate (cells to check against the Nelim flower logo, no object on its flowers). Instant: Nelim has just opened the gate, the nian beast already eats, the other three turn toward her; obtained by the spawn facings and the pause right after.
 #   3. 12h gravel yard. Subject: the qiongqi, face to the camera, has picked its target; Nelim braces behind sandbags. Composition: zoom 6, cell (170,143),
 #          qiongqi at the back, sandbags at the front, Nelim off-centre. Living: qiongqi. Decor: Sandbags at (171,143) and (172,143). Nelim: brown
 #          middle robe (122,84,52), SanShan hat, long loose hair. Action: carries Gun_BoltActionRifle, watchful. Face WaitCombat.
@@ -34,7 +34,7 @@
 #          across the frame, Nelim at the left edge. Living: nian beast, muffalo. Decor: Plant_Daylily fully grown at (188,146), (189,147). Nelim:
 #          brown middle robe (122,84,52), SanShan hat, long loose hair. Action: carries SZ_Firecracker. Face cheerful.
 #          Risk: the flame is gone at the capture. Plan: the step asserts SZ_YearBeastFlame, then pauses.
-#          v2: Plant_Daylily more at (192,146) and (195,147), Sandbags at (196,152) and (197,152) as a firebreak, bambooBundle at (186,148). Instant: the flame has just left the beast, Nelim holds the firecracker out; obtained by the step that asserts SZ_YearBeastFlame, then the pause.
+#          v2: Plant_Daylily more at (192,146) and (195,147), Sandbags at (196,152) and (197,152) as a firebreak, Plant_Daylily at (186,148). Instant: the flame has just left the beast, Nelim holds the firecracker out; obtained by the step that asserts SZ_YearBeastFlame, then the pause.
 #   5. 16h gravel yard. Subject: the mingshe's wind barrier throws back Ryu's shot, Nelim watches with a medicine kit. Composition: zoom 8, cell
 #          (173,143), the projectile in flight between Ryu and the mingshe. Living: mingshe, Ryu. Decor: Sandbags at (181,143) as Ryu's cover.
 #          Nelim: brown middle robe (122,84,52), SanShan hat, long loose hair. Action: carries MedicineHerbal. Face wary. Ryu: hard-eyed.
@@ -56,7 +56,7 @@
 #          at the front facing the camera, the tame nian beast and the tame mingshe at mid-ground, the tame scorpion sexie and the tame human sexie at the back
 #          (the tame ones read as owned: hay at their feet, Nelim offers hay at the front, no berserk, no fire, no aura), Nelim at the left edge.
 #          Living: SZ_QiongQi_Friendly, SZ_YearBeast_Friendly, SZ_MingShe_Friendly, SZ_SeXieInsect_Friendly, SZ_SeXie_Friendly. Decor: Brazier lit at (156,233)
-#          and (176,233), TorchLamp lit at (160,238) and (172,238), hay and a manger, bambooBundle at (150,231). Nelim: beige inside-shirt (230,218,190) with long pants as in shot 7,
+#          and (176,233), TorchLamp lit at (160,238) and (172,238), hay and a manger, Hay at (150,231). Nelim: beige inside-shirt (230,218,190) with long pants as in shot 7,
 #          no hat, ponytail (the day is ending, the hat is off: the plan says it). Action: carries Hay, offering it. Face cheerful.
 #          What this shot says: a tame clone is the same beast as the hostile one but lives with a colonist. Risk: the friendly kinds spawn hostile or wander off.
 #          Plan: spawn after the pause, check the faction in the first run; if a kind spawns hostile, report to the mod (a defect), do not cut the shot.
@@ -145,7 +145,8 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: I frame the cell (153, 213) at zoom 9
     And Nelim's Pickle Tools: I place the decor "Hay" at (150, 209)
     And Nelim's Pickle Tools: I place the decor "Hay" at (152, 210)
-    And Nelim's Pickle Tools: I place the decor "bambooBundle" at (157, 208)
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (157, 208)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (157, 208) is lit
     And Nelim's Pickle Tools: the map is shown alone for a capture
     When I take a screenshot "gallery-2-four-beasts"
     And Nelim's Pickle Tools: the interface is shown again
@@ -214,7 +215,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (195, 147) fully grown
     And Nelim's Pickle Tools: I place the decor "Sandbags" at (196, 152)
     And Nelim's Pickle Tools: I place the decor "Sandbags" at (197, 152)
-    And Nelim's Pickle Tools: I place the decor "bambooBundle" at (186, 148)
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (186, 148) fully grown
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-4-fire-breath"
     And Nelim's Pickle Tools: the interface is shown again
@@ -386,7 +387,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: the decor "TorchLamp" at (160, 238) is lit
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (172, 238)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (172, 238) is lit
-    And Nelim's Pickle Tools: I place the decor "bambooBundle" at (150, 231)
+    And Nelim's Pickle Tools: I place the decor "Hay" at (150, 231)
     And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_InsideApparel" dyed rgb (230, 218, 190)
     And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_LongPants" dyed rgb (122, 84, 52)
     And Nelim's Pickle Tools: "Nelim" stands at (163, 236) facing East
