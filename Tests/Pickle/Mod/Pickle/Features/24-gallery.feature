@@ -390,7 +390,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: I place the decor "Hay" at (150, 231)
     And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_InsideApparel" dyed rgb (230, 218, 190)
     And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_LongPants" dyed rgb (122, 84, 52)
-    And Nelim's Pickle Tools: "Nelim" stands at (163, 236) facing East
+    And Nelim's Pickle Tools: "Nelim" stands at (164, 234) facing East
     And Nelim's Pickle Tools: "Nelim" carries the item "Hay"
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
