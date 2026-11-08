@@ -20,6 +20,7 @@
 				<category>Normal_Pants</category>
 				<keyWord>
 					<li>Pants</li>
+					<li>pants</li>
 				</keyWord>
 				<TargetApparel IsNull="True" />
 				<ingoreApparel IsNull="True" />
@@ -62,6 +63,8 @@
 				<keyWord>
 					<li>Shorts_Pants</li>
 					<li>shortsPants</li>
+					<li>shorts</li>
+					<li>Shorts</li>
 				</keyWord>
 				<TargetApparel IsNull="True" />
 				<ingoreApparel IsNull="True" />

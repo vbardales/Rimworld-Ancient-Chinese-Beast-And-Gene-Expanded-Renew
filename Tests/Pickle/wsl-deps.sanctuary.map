@@ -12,6 +12,13 @@ nelim.pickletools.coatsteps path:PickleTools/CoatSteps/Mod
 nelim.pickletools.clearscreen path:PickleTools/ClearScreen/Mod
 nelim.pickletools.colonistrace path:PickleTools/ColonistRace/Mod
 nelim.pickletools.clickdiagnostics path:PickleTools/ClickDiagnostics/Mod
+# Wardrobe canon of the Backlot (2026-11-08 resync with SanctuaryBacklot/Tests/Pickle/wsl-deps.sanctuary.map): FashionRIMsta, VAE, Fairycore; Harmony and VFE.
+brrainz.harmony 2009463077
+OskarPotocki.VanillaFactionsExpanded.Core 2023507013
+VanillaExpanded.VAPPE 1814987817
+VanillaExpanded.VHE 1888705256
+Mlie.FashionRIMsta 3592569869
+homebrew.fairycoreapparel2 3812924898
 # Minimum list, 2026-10-07/08 (owner). The staging activates in file order, then sorts by loadAfter/dependencies.
 # Bodies and trousers, as proven by Venus Touch Waistlines' gallery pass WITHOUT TailorMade (VenusTouchWaistlines/docs/runs/2026-10-08_gallery-no-tailormade-1):
 # Female Body Variants and Female Apparel Variants load BEFORE WDI (else their Naked_*_Female textures shadow WDI's); AB's Visible Pants is indispensable (without it Venus does nothing).
@@ -38,8 +45,8 @@ SleepyFrieren.beautygenefa 3685072616
 ria.cuterkidsforfacialanimation 3807706870
 Moshii.NLFA.InitFix 3609895011
 ccj.nlfaloadfix 3721489042
-# Show Hair Under Stuff (Raccoon Cuddler): hair stays visible under hats and helmets; only hard dependency is Harmony (owner, 2026-10-08).
-RaccoonCuddler.ShowHair 3255379190
+# Hat Hair Control (lordfelix, owner 2026-10-20, as in the Backlot map): hair under the hats named in the seed Tests/Pickle/config/sanctuary/Mod_3760821540_HatHairControlMod.xml (Taoist hat of CCE and SanShan hat of RimImmortal added there).
+lordfelix.HatHairControl 3760821540
 #
 # Chinese Comprehensive Expansion (3221850511, a Windows subscription): its Taoist hats dress Nelim in the gallery (2026-10-15 restaging).
 # It must load BEFORE this mod (this mod's loadAfter), and the staging does not sort by loadAfter: this mod's own packageId with a path:
@@ -53,4 +60,6 @@ RI.RimImmortals.Hairstyle 3265157569
 # Roo's HD Hairstyles (continued, 3559870636; Windows subscription): Roo_Royal_LongHD (long loose hair, worn under a hat) and Roo_HD_Hair_Highpony
 # (her canon ponytail without a hat), SanctuaryBacklot/docs/NELIM-PROFIL.md, 2026-10-21; added to the gallery pass 2026-10-23. Not yet played in this pass.
 rooboid.hdhair.continued 3559870636
+# Let's Have a Cat! Continued (as in the Backlot map; kept so the save's animals draw the same).
+akairo.LetsHaveaCat 3682940618
 nelim.ancientchinesebeastandgeneexpanded path:AncientChineseBeastAndGeneExpandedRenew/Mod

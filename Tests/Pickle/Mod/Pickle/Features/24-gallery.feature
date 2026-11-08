@@ -3,7 +3,7 @@
 # one outfit in all seven shots), b (no decor named), e (Nelim only standing), h (no risk written), i (shot 2 was an arc of beasts facing the camera)
 # and c (shot 7 had no living thing). Now: Nelim, the protagonist (owner rule 2026-10-14), changes outfit, hair and action in every shot; hair under
 # a hat is long and loose (Roo_Royal_LongHD, her "under a hat" hair in SanctuaryBacklot/docs/NELIM-PROFIL.md, never a bun), hair without a hat is her
-# canon high ponytail (Roo_HD_Hair_Highpony); Show Hair Under Stuff (in the pass map) keeps the hair visible under the Taoist hat; every shot places
+# canon high ponytail (Roo_HD_Hair_Highpony); Hat Hair Control (in the pass map, seeded for the two hats) keeps the hair visible under the Taoist hat; every shot places
 # named decor that is removed after it; every shot writes its risk and the plan against it.
 #
 # THE STORY. One New Year's day at Nelim's Sanctuary, told like a wildlife report on four beasts out of the Classic of Mountains and Seas that came
