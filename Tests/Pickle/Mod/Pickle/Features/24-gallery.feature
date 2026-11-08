@@ -40,7 +40,7 @@
 #          Nelim: brown middle robe (122,84,52), SanShan hat, long loose hair. Action: carries MedicineHerbal. Face wary. Ryu: hard-eyed.
 #          Risk: the barrier or the projectile fails (the 2026-10-13 red). Plan: the step asserts the projectile in flight; replay of feature 20 first.
 #          v2: Sandbags at (181,144) and (182,143), TorchLamp lit at (178,138). Instant: Ryu has just fired, the shot is thrown back; obtained by the step that asserts the projectile in flight, then the pause.
-#   6. 18h water garden. Subject: the sexie's red aura drives Ryu berserk, Nelim at the edge of the ring. Composition: zoom 8, cell (147,171), the ring
+#   6. 18h water garden. Subject: the sexie's red aura drives Ryu berserk, Nelim at the edge of the ring. Composition: zoom 5, cell (151,172), the ring
 #          around the beast, Ryu inside. Living: sexie, Ryu. Decor: TorchLamp lit at (139,166) and (141,175), the dusk light. Nelim: brown middle robe (122,84,52),  SanShan hat, long loose hair. Action: backs away. Face afraid.
 #          Risk: the cell where Nelim stands is not standable (the 2026-10-18 red at (137,169)). Plan: she stands at (141,170); if the step fails the
 #          log names the cell, move her one cell, do not cut the shot.
@@ -314,7 +314,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Ryu" stands at (146, 171) facing South
     And Ancient Chinese Beast: I spawn the pawn "SZ_SeXieInsect" at (151, 172) with its aura clock at zero
     And Nelim's Pickle Tools: time is paused for the capture
-    And Nelim's Pickle Tools: I frame the cell (147, 171) at zoom 8
+    And Nelim's Pickle Tools: I frame the cell (151, 172) at zoom 5
     When Ancient Chinese Beast: pawn 1 is sent berserk as the aura does
     And Nelim's Pickle Tools: time is paused for the capture
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (139, 166)
