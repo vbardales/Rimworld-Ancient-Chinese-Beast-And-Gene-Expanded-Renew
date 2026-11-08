@@ -106,7 +106,7 @@ remaining:
       C# nor the defs. Inherited, left alone
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
 updated:      2026-11-08
-protocols_read_sha: 4a8adf7a7bb475f5c71adb085c54a7ad0ebe214c
+protocols_read_sha: 4efde0ab867ce4597e5df67ba847746cb940d010
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -252,3 +252,5 @@ Owner decision 2026-11-08 (Virginie, in chat: "prend Blue"): the guest of shots 
 Gallery tickets 2026-11-08 (map `wsl-deps.sanctuary.map` resynced with the Backlot: Hat Hair Control with a seed for the two hats, wardrobe mods, Let's Have a Cat, Tribal Tattoos; commits 6909a9a and the Tribal Tattoos one): `20261108-211537-571-31aa` scenes 1 to 4 (Inbox `2026-11-08a-gallery-1-4`), `20261108-211622-602-abd5` scenes 5 to 7 (Inbox `2026-11-08b-gallery-5-7`). Scene 8 held (plan 4.5, owner call pending). Tree frozen on Mod and Source until RUN_DONE. On RUN_DONE: read summary.json and junit.xml, open every capture, `score-gallery` (image, adequacy, understanding, decoration, REDO under 4), recompose REDO alone; one review for the owner at the very end (GALLERY.md rule of 2026-11-08).
 
 Owner decision 2026-11-08 (Virginie, in chat: "je valide la scène 8"): scene 8 accepted at plan 4.5 (malus on g assumed). Tickets refiled after replacing `bambooBundle` (not in the pass map) by TorchLamp, Plant_Daylily and Hay in scenes 2, 4 and 8 (commit after 6909a9a): `20261108-212232-447-a4be` scenes 1 to 4 (Inbox `2026-11-08a-gallery-1-4`; the first submit of this set was refused by the def check, the cancelled `31aa` is void), `20261108-211622-602-abd5` scenes 5 to 7 (Inbox `2026-11-08b-gallery-5-7`), `20261108-212214-550-4dcf` scene 8 (Inbox `2026-11-08c-gallery-8`). Def check once warned on `Sandbags` and the face animations `moodCheerful` and `WaitCombat`: if a scene fails on them, read junit.xml and fix the name or ask NPT.
+
+Resume 2026-11-08 (2): protocols_read_sha 4efde0ab (diffs of docs/scripts.md, scripts/README.md, scripts/Tests/README.md skimmed: Add-Subtitle and Crop-SettingsShot now tested, no effect at shootGallery), TM registered (local_ab115c2b), no archived session of this mod, marker deleted. Inbox: abd5 summary.json already there (scenes 5 and 6 passed, scene 7 failed: cell (227, 215) already holds SZ_BeastGeneExtractor at the Plant_Daylily placement), RUN_DONE not received yet, not digested. a4be and 4dcf not in Inbox yet. Tree frozen until RUN_DONE.
