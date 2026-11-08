@@ -112,7 +112,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+moodCheerful"
     And Nelim's Pickle Tools: I frame the cell (155, 97) at zoom 6
     And Nelim's Pickle Tools: I place the decor "Kibble" at (154, 98)
-    And Nelim's Pickle Tools: I place the decor "Kibble" at (155, 99)
+    And Nelim's Pickle Tools: I place the decor "Kibble" at (156, 97)
     And Nelim's Pickle Tools: the map is shown alone for a capture
     When I take a screenshot "gallery-1-dawn-crow"
     And Nelim's Pickle Tools: the interface is shown again
@@ -134,8 +134,8 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: time is paused for the capture
     And Nelim's Pickle Tools: I place the decor "Brazier" at (146, 207)
     And Nelim's Pickle Tools: the decor "Brazier" at (146, 207) is lit
-    And Nelim's Pickle Tools: I place the decor "Brazier" at (162, 207)
-    And Nelim's Pickle Tools: the decor "Brazier" at (162, 207) is lit
+    And Nelim's Pickle Tools: I place the decor "Brazier" at (161, 209)
+    And Nelim's Pickle Tools: the decor "Brazier" at (161, 209) is lit
     And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_DragonRobe"
     And Nelim's Pickle Tools: "Nelim" stands at (147, 209) facing East
     And Nelim's Pickle Tools: "Nelim" carries the item "Hay"
