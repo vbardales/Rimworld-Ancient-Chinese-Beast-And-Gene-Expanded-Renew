@@ -174,11 +174,17 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+WaitCombat"
-    And Nelim's Pickle Tools: I frame the cell (170, 143) at zoom 6
+    And Nelim's Pickle Tools: I frame the cell (170, 146) at zoom 6
     And Nelim's Pickle Tools: I place the decor "Sandbags" at (170, 143)
     And Nelim's Pickle Tools: I place the decor "Sandbags" at (173, 143)
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (168, 141)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (168, 141) is lit
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (166, 148) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (174, 148) fully grown
+    And Nelim's Pickle Tools: I place the decor "Hay" at (167, 151)
+    And Nelim's Pickle Tools: I place the decor "Hay" at (172, 152)
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (174, 140)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (174, 140) is lit
     When Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-3-qiongqi-behind-nelim"
     And Nelim's Pickle Tools: the interface is shown again
@@ -251,7 +257,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Ryu" stands at (180, 143) facing West
     And Ancient Chinese Beast: the colonist "Ryu" is added to the pawns
     And Ancient Chinese Beast: pawn 2 is armed with "Gun_BoltActionRifle"
-    And Nelim's Pickle Tools: I frame the cell (173, 143) at zoom 8
+    And Nelim's Pickle Tools: I frame the cell (174, 143) at zoom 7
     When Ancient Chinese Beast: the wind barrier of pawn 1 is raised
     And Ancient Chinese Beast: pawn 2 shoots at pawn 1
     Then Ancient Chinese Beast: a projectile launched by pawn 1 is in flight within 10 seconds
@@ -269,6 +275,12 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: I place the decor "Sandbags" at (182, 143)
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (178, 138)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (178, 138) is lit
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (170, 146) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (176, 146) fully grown
+    And Nelim's Pickle Tools: I place the decor "Hay" at (172, 140)
+    And Nelim's Pickle Tools: I place the decor "Hay" at (179, 146)
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (168, 140)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (168, 140) is lit
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-5-wind-barrier"
     And Nelim's Pickle Tools: the interface is shown again
