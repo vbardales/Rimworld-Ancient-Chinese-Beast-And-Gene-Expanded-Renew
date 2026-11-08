@@ -195,3 +195,37 @@ Resume 2026-11-08: protocols_read_sha 6e1f76df (diffs of AGENTS, AUDIT, PICKLE s
 Replay 2026-11-08 (from zero, ledger ../.replays/AncientChineseBeastAndGeneExpandedRenew-20261108.tsv, Check-Replay OK): sections 1 to 8 read, 60 done, 8 n/a, 8.m and 8.n open, stage stays playTests[1.1.0]. 8.m: 40690e7 changed Mod/About/OptionalCompat.xml after code_review_sha 6589e5f; the game ignores the file but AUDIT 8.m exceptions do not list it, so Audit to confirm the exception (then set code_review_sha to HEAD) or ask a review. Run-All.ps1 green now (exit 0); Run-UnitTests.ps1 n/a (no Tests.exe at root, script defect); Check-DefInjected 12 NO FIELD on modExtensions list paths (unverified, script limit); Check-Translations default run flags SZ_CannotReachBuildingToExtractGene (mod allowance in Run-All, inherited). Then 8.n to shootGallery[1.1.0].
 
 Stage 2026-11-08: 8.n done, workflow_stage shootGallery[1.1.0]. Audit ruling: a commit touching only Mod/About/OptionalCompat.xml (40690e7) does not reopen 8.m (written into AUDIT.md 8.m); code_review_sha stays 6589e5f. protocols_read_sha refreshed. Next: 9.0 shotlist (skill write-shotlist, sync-nsb-npt first), Art/Gallery holds 0 to 7 accepted 2026-10-13; AUDIT 9.e bis subtitles (Art/Gallery-clean/, Add-Subtitle.ps1) apply before publication.
+
+### NSB - 2026-11-08
+
+First sync (no earlier one). NSB changed a lot since the 2026-10-23 feature (170 commits of `docs/` since 2026-10-13): a decorated Sanctuary is being built (the fixture `Nelims-tribe` is still the old undecorated one), `gravel-yard` is to become a zen dry garden, `enclosure-south` already carries a Nelim logo in flowers (zones 3 to 15, "sans objet dessus", VALIDE 2026-11-08), NSB roster holds no "Ren" (the guest is now Ryu "Blue" Sai, "formerly Ren in older documents"). Shotlist files not rewritten here: `write-shotlist` is next and takes these into account. Rules said back (owner 2026-11-05 and 2026-11-07): everything in NSB is free; a colonist or domestic animal outside NSB needs the owner's express validation (an animal the mod adds is authorised by default); a colonist's properties change only with her words; every outfit is free; every animal the mod includes must be in the gallery.
+
+Places read: 2026-11-08 (`SANCTUAIRE-LIEUX.md` sections 11 and 12 and the place table, grep of `VALIDE.md` and `EMBELLISSEMENT-LIEUX.md`; `SANCTUAIRE-CASES.md` not opened). Tribe read: 2026-11-08 (`CATALOGUE-ANIMAUX.md`, `NELIM-PROFIL.md` first 40 lines, `GALERIE-HISTOIRE.md` cast, grep of `NSB-ROSTER.md`, `VALIDE.md`, `AVANCEMENT.md`; the other profiles not opened). Steps read: 2026-11-08 (`PickleTools/docs/steps.md` StageDecor section and greps, git log since 2026-10-23; the rest of the 217 KB file and the catalogues not read).
+
+| Place | Shots | Changes for the gallery | Last read |
+| --- | --- | --- | --- |
+| `statue-garden` | 1 | daylilies and a lit torch, removed after; NSB validated 2026-11-06 | 2026-11-08 |
+| `enclosure-south` | 2 | two lit braziers; NSB now has the Nelim flower logo there, check the brazier cells (146,207) and (162,207) against it | 2026-11-08 |
+| `gravel-yard` | 3, 5 | sandbags; NSB marks it "à embellir" (zen dry garden planned), cells may change | 2026-11-08 |
+| `bare-clearing` (via `emerald-clearing`) | 4 | daylilies; free shooting zone, stays | 2026-11-08 |
+| `water-garden` | 6 | two lit torches; NSB validated 2026-11-06 | 2026-11-08 |
+| `postindustrial-workshop` | 7 | capsules, daylilies, four lit torches; validated 2026-11-07; new NPT step "the light of the map is lifted to at least" fits the dark-room risk | 2026-11-08 |
+
+| Colonist | Shots | Outfit per shot (garment, why) | Last read | Exceptions |
+| --- | --- | --- | --- | --- |
+| Nelim | 1 to 7 | as in `24-gallery.feature` (Taoist hat and blue middle robe, dragon robe, SanShan hat, burnt-orange robe, crimson robe, beige shirt); outfits are free | 2026-11-08 (first 40 lines) | none; hair `Roo_HD_Hair_Highpony` and `Roo_Royal_LongHD` under a hat are her validated canon |
+| Ren | 5, 6 | `Apparel_CollarShirt`, `Apparel_Duster` crimson, `Apparel_Pants` | not in NSB | outside NSB, silver hair, `Eyes_Crimson`, bun: PENDING. NSB alternative: Ryu "Blue" Sai (short black hair, dark-green eyes, water tattoos, `Colonist` kind), no property change |
+
+| Animal | Shots | Outfit | Last read | Exceptions |
+| --- | --- | --- | --- | --- |
+| Muffalo | 4 | none | `CATALOGUE-ANIMAUX.md` (not a named animal) | anonymous fauna: NSB says every other animal is decor ("Faune anonyme"), so no validation asked; the save holds no muffalo (the step spawns it) |
+
+| Animal the mod includes | Shot(s) | Status |
+| --- | --- | --- |
+| `SZ_Chicken` (rooster and hen, "Pleiades star officer") | 1 | shown |
+| `SZ_MingShe` | 2, 5 | shown |
+| `SZ_QiongQi` | 2, 3 | shown |
+| `SZ_YearBeast` | 2, 4 | shown |
+| `SZ_SeXieInsect` (scorpion form) | 2, 6 | shown |
+| `SZ_SeXie` (human form) | none | MISSING: add to a shot in `write-shotlist` |
+| friendly clones (`SZ_MingShe_Friendly`, `SZ_QiongQi_Friendly`, `SZ_YearBeast_Friendly`, `SZ_SeXie_Friendly`, `SZ_SeXieInsect_Friendly`) | none | MISSING: add one shot (or one grouped shot saying how they differ from the hostile ones) in `write-shotlist` |
