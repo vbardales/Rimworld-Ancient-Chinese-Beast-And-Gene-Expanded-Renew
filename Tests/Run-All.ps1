@@ -25,10 +25,6 @@ try {
     $types = Join-Path $root 'build/xml-types.txt'
     Invoke-Check 'Assembly contracts' { & dotnet "$root/build/bin-tests/Debug/net8.0/AncientChineseBeast.Tests.dll" $Managed $Harmony $types }
     Invoke-Check 'XML classes' { & pwsh -NoProfile -File "$PSScriptRoot/../../scripts/Check-XmlClasses.ps1" -ModPath $mod -TypeLists "$types,$PSScriptRoot/Xml/optional-mod-types.txt" -Brief }
-    Invoke-Check 'XML fields' { & pwsh -NoProfile -File "$PSScriptRoot/../../scripts/Check-XmlFields.ps1" -ModPath $mod -Managed $Managed -ExtraAssemblies $assembly }
-    Invoke-Check 'Def references' { & pwsh -NoProfile -File "$PSScriptRoot/../../scripts/Check-DefRefs.ps1" -ModPath $mod -Managed $Managed -GameData $GameData -Brief }
-    Invoke-Check 'External types' { & pwsh -NoProfile -File "$PSScriptRoot/../../scripts/Check-TypeRefs.ps1" -ModPath $mod -Managed $Managed }
-    Invoke-Check 'Translations and EN/FR coverage' { & pwsh -NoProfile -File "$PSScriptRoot/../../scripts/Check-Translations.ps1" -ModRoot (Resolve-Path "$PSScriptRoot/..").Path -AllowUnused SZ_CannotReachBuildingToExtractGene -VanillaKeyed TextMote_Dodge }
-    Invoke-Check 'Configuration' { & pwsh -NoProfile -File "$PSScriptRoot/../../scripts/Check-ConfigErrors.ps1" -ModPath $mod -Managed $Managed -GameData $GameData -ExtraAssemblies $assembly }
+    Invoke-Check 'Shared offline checks' { & pwsh -NoProfile -File "$PSScriptRoot/../../scripts/Run-OfflineChecks.ps1" -ModRoot $root -Skip DefInjected,SettingsContract,XmlClasses -ExtraAssemblies $assembly -Brief -TranslationsArgs '-AllowUnused,SZ_CannotReachBuildingToExtractGene,-VanillaKeyed,TextMote_Dodge' }
     Write-Host "`nAll automated checks passed. In-game scenarios remain manual."
 } finally { Pop-Location }
