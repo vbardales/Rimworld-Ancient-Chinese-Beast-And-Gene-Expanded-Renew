@@ -10,7 +10,7 @@ packageId:    nelim.ancientchinesebeastandgeneexpanded
 repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 visibility:   public
 detached:     yes
-workflow_stage: playTests[1.1.0]
+workflow_stage: shootGallery[1.1.0]
 social_preview_sha256: ef4033f58e512d0f5eaff4384e2ca7d1c0c5e0a2142fb371a5569a324223052c
 echo_review_sha: d4409fa79443f95e80e837fc4941245708106090  # 2026-10-23, 10.a: echo kept (echo-source.png, Preview panel bottom-left, validated by Virginie in chat)
 publication_changelog_review_sha: 5bed84a774984f2711ba3048ce90046038b30fcc
@@ -106,7 +106,7 @@ remaining:
       C# nor the defs. Inherited, left alone
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
 updated:      2026-11-08
-protocols_read_sha: 6e1f76dfd8a201085e01aa7faff8b5ed6631b5fd
+protocols_read_sha: 4a8adf7a7bb475f5c71adb085c54a7ad0ebe214c
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -193,3 +193,5 @@ RUN_DONE 2026-11-07: ticket 30ce (French features 05, 08, 12, 18, 19, 23, tree 6
 Resume 2026-11-08: protocols_read_sha 6e1f76df (diffs of AGENTS, AUDIT, PICKLE skimmed: AUDIT 9.e bis gallery subtitles applies at shootGallery, rest wording; `-Force`, dirty files are docs not read for this stage), TM registered (local_ab115c2b), no archived session of this mod, marker deleted. Preview.png committed 2026-11-05 so no re-render owed; `Art/Preview.config.json` still has an uncommitted edit by another hand (not mine). Open: 8.n to shootGallery[1.1.0].
 
 Replay 2026-11-08 (from zero, ledger ../.replays/AncientChineseBeastAndGeneExpandedRenew-20261108.tsv, Check-Replay OK): sections 1 to 8 read, 60 done, 8 n/a, 8.m and 8.n open, stage stays playTests[1.1.0]. 8.m: 40690e7 changed Mod/About/OptionalCompat.xml after code_review_sha 6589e5f; the game ignores the file but AUDIT 8.m exceptions do not list it, so Audit to confirm the exception (then set code_review_sha to HEAD) or ask a review. Run-All.ps1 green now (exit 0); Run-UnitTests.ps1 n/a (no Tests.exe at root, script defect); Check-DefInjected 12 NO FIELD on modExtensions list paths (unverified, script limit); Check-Translations default run flags SZ_CannotReachBuildingToExtractGene (mod allowance in Run-All, inherited). Then 8.n to shootGallery[1.1.0].
+
+Stage 2026-11-08: 8.n done, workflow_stage shootGallery[1.1.0]. Audit ruling: a commit touching only Mod/About/OptionalCompat.xml (40690e7) does not reopen 8.m (written into AUDIT.md 8.m); code_review_sha stays 6589e5f. protocols_read_sha refreshed. Next: 9.0 shotlist (skill write-shotlist, sync-nsb-npt first), Art/Gallery holds 0 to 7 accepted 2026-10-13; AUDIT 9.e bis subtitles (Art/Gallery-clean/, Add-Subtitle.ps1) apply before publication.
