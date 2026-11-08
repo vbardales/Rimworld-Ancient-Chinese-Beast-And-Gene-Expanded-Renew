@@ -341,7 +341,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: I place the decor "ArchiteCapsule" at (229, 211)
     And Nelim's Pickle Tools: I place the decor "ArchiteCapsule" at (230, 211)
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (225, 215) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (235, 215) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (233, 215) fully grown
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (226, 211)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (226, 211) is lit
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (233, 211)
