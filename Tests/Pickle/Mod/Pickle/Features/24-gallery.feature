@@ -343,6 +343,9 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Ryu" facial expression is "normal+AttackMelee2"
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (143, 172) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (149, 168) fully grown
+    And Nelim's Pickle Tools: the eclipse of the map is ended
+    And Nelim's Pickle Tools: the render nodes of "Ryu" are logged
+    And Nelim's Pickle Tools: the body texture of "Ryu" is logged
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-6-sexie-aura"
     And Nelim's Pickle Tools: the interface is shown again
