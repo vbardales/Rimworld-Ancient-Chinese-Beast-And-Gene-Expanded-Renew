@@ -112,7 +112,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+moodCheerful"
     And Nelim's Pickle Tools: I frame the cell (155, 97) at zoom 6
     And Nelim's Pickle Tools: I place the decor "Kibble" at (154, 98)
-    And Nelim's Pickle Tools: I place the decor "Kibble" at (156, 97)
+    And Nelim's Pickle Tools: I place the decor "Kibble" at (155, 99)
     And Nelim's Pickle Tools: the map is shown alone for a capture
     When I take a screenshot "gallery-1-dawn-crow"
     And Nelim's Pickle Tools: the interface is shown again

@@ -105,7 +105,7 @@ remaining:
   - defect: the keyed string SZ_CannotReachBuildingToExtractGene is referenced from neither the
       C# nor the defs. Inherited, left alone
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
-updated:      2026-11-08
+updated:      2026-11-09
 protocols_read_sha: ae6bc8a0f43a31e22df7e41cc17c26a1a5300dac
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
@@ -268,3 +268,5 @@ Rate 2026-11-09 (rate-gallery run, GALLERY.md read): tickets 929b (scenes 1, 2),
 Resume 2026-11-09: protocols_read_sha ae6bc8a0 (diffs of scripts READMEs skimmed: no effect at shootGallery), TM registered (local_ab115c2b), no archived session checked beyond marker (session was asleep), marker deleted. TM relay: queue open, tickets 929b, 069a, ad70, 0706 RUNNING on azure, not refiled. NPT (local_17b2e3d8) has something for scene 6 pink emblem: asked it to send. Open: RUN_DONE of the four tickets, then open captures, score-gallery, recompose REDO, one review for the owner.
 
 NPT 2026-11-09: nothing ready for scene 6 (TM relayed an old point). NPT can write a step on request: A `the motes of def {string} are hidden` or B `the ability {string} of {string} is stopped`. Declined for now: the ring is the subject of scene 6. If ticket 0706 still shows a veil hiding the pawns, ask NPT (local_17b2e3d8) for A with the exact mote defName. Pending: 929b, 069a, ad70, 0706 RUNNING on azure. On RUN_DONE: open captures, score-gallery, recompose REDO, one review for the owner.
+
+RUN_DONE 2026-11-09: 929b (scenes 1, 2) exit 1: scene 2 passed (64 s, capture not yet opened, Inbox 2026-11-08f-gallery-1-2-1); scene 1 failed at the Kibble placement, "the cell (156, 97) already holds SZ_Chicken". Kibble moved to (155, 99) (the header already said so), Check-ShotlistVsScenario OK, scene 1 refiled alone: a1bf (Inbox 2026-11-09a-gallery-1). Pending: 069a, ad70, 0706, a1bf. Next: open scene 2 capture, score-gallery.
