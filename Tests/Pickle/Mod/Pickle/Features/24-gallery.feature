@@ -318,7 +318,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Ryu" stands at (146, 171) facing South
     And Ancient Chinese Beast: I spawn the pawn "SZ_SeXieInsect" at (151, 172) with its aura clock at zero
     And Nelim's Pickle Tools: time is paused for the capture
-    And Nelim's Pickle Tools: I frame the cell (151, 172) at zoom 5
+    And Nelim's Pickle Tools: I frame the cell (147, 171) at zoom 6
     When Ancient Chinese Beast: pawn 1 is sent berserk as the aura does
     And Nelim's Pickle Tools: time is paused for the capture
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (139, 166)
@@ -328,6 +328,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_SanShanHat"
     And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_BasicMiddleClothes" dyed rgb (122, 84, 52)
     And Nelim's Pickle Tools: "Nelim" stands at (141, 170) facing South
+    And Nelim's Pickle Tools: "Ryu" stands at (146, 171) facing East
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+FleeAndCower"
