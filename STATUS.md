@@ -106,7 +106,7 @@ remaining:
       C# nor the defs. Inherited, left alone
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
 updated:      2026-11-09
-protocols_read_sha: b1463127f5a02e208ce0dc75d3b7bbc5957ef0e9
+protocols_read_sha: 03b4bc449016311a8b3ad16ed85234135342f4f1
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -248,3 +248,5 @@ RUN_DONE 2026-11-09: 645a (scene 6 v3, zoom 6) exit 0, 1/1. Capture opened: same
 RUN_DONE 2026-11-09: 871a (scene 1 v4) exit 0, 1/1. Capture opened: rooster and hen large and readable, Nelim carries Kibble, daylilies, torches, statues around; weak: a "Z" sleep mote on the rooster (it sleeps instead of crowing), hens do not run, green ghost box top left (accepted earlier). Image 4, adequacy 3.5: REDO unless NPT's mote step removes the Z (same request as scene 6, addendum sent to PiT). Capture kept in Inbox/2026-11-09e-gallery-1 as fallback until then. Pending: 0bf8 (2), NPT answer (scenes 1, 6). Candidates: 3, 4, 7, 8.
 
 NPT answer 2026-11-09 (PiT, steps written and built, not played before this ticket): scene 6 `the drawing of the class "Ability_BerserkRing" is skipped` (hides the whole ring, no outline); scene 1 `the flecks of def "SleepZ" / "SleepZ_Small" / "SleepZ_Tiny" are not thrown` (a FleckDef in 1.6, not a mote). Both added to `24-gallery.feature` (scene 1 before the pause, scene 6 after studio mode), Check-ShotlistVsScenario OK, scenes 1 and 6 refiled together as b165 (Inbox 2026-11-09g-gallery-1-6, NoBatch; first play of the new steps: on a step error, send NPT the exact text). Ryu absence after the pause: NPT has no step that despawns colonists, cause unknown. Scene 6 trade-off: with the ring hidden, the shot reads by the scorpion, the berserk Ryu and Nelim, not by the ring; if the capture looks empty, fall back to a wider zoom with the ring drawn or ask NPT for a thin-outline step. Fallback capture of scene 1 (Z mote) deleted. Pending: 0bf8 (2), b165 (1, 6). Candidates: 3, 4, 7, 8. Scene 5 to recompose.
+
+RUN_DONE 2026-11-09: 0bf8 (scene 2 v4) exit 0, 1/1. Capture opened (268 px check): four beasts readable (mingshe, qiongqi, nian, scorpion sexie), braziers and bamboo, Nelim visible left but small; weak: hay only two tan bits beside the nian beast, no gate, nian not eating, sexie ring veil over the right half. Image 4, adequacy 3.5: REDO under 4 by the rule, but third try on this scene. Capture kept in Inbox/2026-11-09f-gallery-2 as fallback. Pending: b165 (1, 6). Candidates: 3, 4, 7, 8. Scene 5 to recompose.
