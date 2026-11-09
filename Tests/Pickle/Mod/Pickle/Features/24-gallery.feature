@@ -18,7 +18,7 @@
 #          Decor: Plant_Daylily fully grown at (153,99) and (157,99), TorchLamp lit at (151,95) as the one warm light of the dawn.
 #          Nelim: emerald gilded dragon robe (RI_Apparel_DragonRobe), no hat, ponytail. Action: carries Kibble, feeding. Face cheerful.
 #          Risk: the chickens wander off the cell. Plan: they are spawned after the pause, so nothing moves.
-#          v2 (2026-11-08): zoom 6 so the birds read at 268 px; Kibble on the ground at (154,98) and (155,99) where the hens run; instant: Nelim has just thrown a handful, the hens run to it, the rooster crows; obtained by spawning both chickens facing South after the pause and pausing the game at once.
+#          v2 (2026-11-08): zoom 6 so the birds read at 268 px; Kibble on the ground at (154,98) and (155,98) where the hens run; instant: Nelim has just thrown a handful, the hens run to it, the rooster crows; obtained by spawning both chickens facing South after the pause and pausing the game at once.
 #   2. 10h south enclosure. Subject: the four beasts at the gate for the New Year. Composition: zoom 9, cell (151,213), the beasts at four different
 #          depths (z 212 to 219) and facings (three South, the nian beast West), not a row and not an arc, Nelim in the left foreground. Living: four
 #          beasts. Decor: Brazier lit at (146,207) and (162,207), the New Year fires of the gate. Nelim: emerald gilded dragon robe (RI_Apparel_DragonRobe),
@@ -115,7 +115,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+moodCheerful"
     And Nelim's Pickle Tools: I frame the cell (155, 97) at zoom 6
     And Nelim's Pickle Tools: I place the decor "Kibble" at (154, 98)
-    And Nelim's Pickle Tools: I place the decor "Kibble" at (155, 99)
+    And Nelim's Pickle Tools: I place the decor "Kibble" at (155, 98)
     And Nelim's Pickle Tools: the map is shown alone for a capture
     When I take a screenshot "gallery-1-dawn-crow"
     And Nelim's Pickle Tools: the interface is shown again
