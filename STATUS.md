@@ -106,7 +106,7 @@ remaining:
       C# nor the defs. Inherited, left alone
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
 updated:      2026-11-09
-protocols_read_sha: 26283d93d4e6b601128a3906b4ea6fe6a5a964cf
+protocols_read_sha: 239c919636c8198d41382e67de2b112138b844e7
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -258,3 +258,5 @@ Resume 2026-11-09 (6): protocols_read_sha 26283d93 (AGENTS.md read whole, TOOLIN
 RUN_DONE 2026-11-09: b165 (scenes 1, 6) exit 0, 2/2. Scene 1 v5 opened: SleepZ flecks gone, rooster and hen large and readable, Nelim carries Kibble, daylilies, torches; weak: hens do not run, no crow. Image 4.5, adequacy 4: candidate, Art/Gallery-clean/1-candidate-dawn-crow.jpg (436 KB). Scene 6 v4: skipped ring step ran but the same brown-green veil with big swirl pattern remains (not drawn by Ability_BerserkRing.Draw); Ryu floating head with red cape; image 3.5, adequacy 2.5, REDO. Asked PiT (local_03a66e9e) what draws the veil and for a step to hide it. Scene 6 capture kept in Inbox/2026-11-09g-gallery-1-6/screenshots. Candidates: 1, 3, 4, 7, 8 (2.8 MB). Pending: PiT answer (scene 6). Scene 2 v4 accept or recompose; scene 5 to recompose.
 
 PiT answer 2026-11-09: veil drawn twice, Ability_BerserkRing.Draw and CompSeXieExpansion.PostDraw (always, SeXie/Ring MoteGlow, plane 22.89). Step now skips PostDraw too (not played). Added line `the drawing of the class "CompSeXieExpansion" is skipped` to scene 6 of 24-gallery.feature, Check-ShotlistVsScenario OK. Scene 6 v5 refiled 2a21 (Inbox 2026-11-09h-gallery-6, NoBatch, map wsl-deps.sanctuary.map); old scene 6 capture deleted. Pending: 2a21 (6). Candidates: 1, 3, 4, 7, 8. Scene 2 v4 accept or recompose; scene 5 to recompose.
+
+Resume 2026-11-09 (7): protocols_read_sha 239c9196 (STYLE_RIMWORLD diff: Preview mode special, preview.psd allowed, no effect at shootGallery), TM registered, no archived session of this mod, marker deleted. RUN_DONE found in Inbox: 2a21 (scene 6 v5, both Draw and PostDraw skipped, Inbox 2026-11-09h-gallery-6) exit 0, 1/1. Capture opened: scorpion readable (j ok), Nelim, two torches and daylilies visible, Ryu still a floating head with red cape, brown-green cloudy veil still covers the frame (not the ring: both ring draws skipped). Image 3.5, adequacy 2.5: REDO. Capture kept in Inbox as fallback. Next: ask PiT what else draws the veil (fog, weather, map lighting at 18 h, terrain of water-garden?) and why Ryu has no body. Pending: nothing filed. Candidates: 1, 3, 4, 7, 8. Scene 2 v4 accept or recompose; scene 5 to recompose.
