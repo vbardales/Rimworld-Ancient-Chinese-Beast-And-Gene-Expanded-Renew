@@ -106,7 +106,7 @@ remaining:
       C# nor the defs. Inherited, left alone
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
 updated:      2026-11-09
-protocols_read_sha: 03b4bc449016311a8b3ad16ed85234135342f4f1
+protocols_read_sha: 26283d93d4e6b601128a3906b4ea6fe6a5a964cf
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -252,3 +252,5 @@ NPT answer 2026-11-09 (PiT, steps written and built, not played before this tick
 RUN_DONE 2026-11-09: 0bf8 (scene 2 v4) exit 0, 1/1. Capture opened (268 px check): four beasts readable (mingshe, qiongqi, nian, scorpion sexie), braziers and bamboo, Nelim visible left but small; weak: hay only two tan bits beside the nian beast, no gate, nian not eating, sexie ring veil over the right half. Image 4, adequacy 3.5: REDO under 4 by the rule, but third try on this scene. Capture kept in Inbox/2026-11-09f-gallery-2 as fallback. Pending: b165 (1, 6). Candidates: 3, 4, 7, 8. Scene 5 to recompose.
 
 Preview config 2026-11-09 (Audit order via TM): `panel.panelAnchor` restored to "bottom-left" (old: absent, dropped by 7ae7a32 on 2026-11-08; why: panel rendered top-left, unlike the committed Preview.png). Render now byte-identical to Mod/About/Preview.png (sha256 ef4033f5...3052c); commit 05275dc, Preview.png unchanged. Virginie told in reply; TM told. Pending: b165 (1, 6). Candidates: 3, 4, 7, 8. Scene 2 v4 (0bf8) image 4 / adequacy 3.5, fallback capture in Inbox/2026-11-09f-gallery-2: accept or recompose (hay, Nelim small). Scene 5 to recompose (projectile in frame, zoom 6 on (172,143)).
+
+Resume 2026-11-09 (6): protocols_read_sha 26283d93 (AGENTS.md read whole, TOOLING-PITFALLS diff 6 lines skimmed, no effect at shootGallery), TM registered, no archived session of this mod, marker deleted. Pending: b165 (1, 6). Candidates: 3, 4, 7, 8. Scene 2 v4 accept or recompose; scene 5 to recompose.
