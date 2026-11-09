@@ -24,6 +24,7 @@
 #          beasts. Decor: Brazier lit at (146,207) and (162,207), the New Year fires of the gate. Nelim: emerald gilded dragon robe (RI_Apparel_DragonRobe),
 #          no hat, ponytail. Action: carries Hay, offering it over the gate, facing East. Face cheerful.
 #          Risk: the four bodies overlap or one leaves the frame. Plan: the offsets of 3 to 8 cells are measured on the empty enclosure photograph.
+#          v3 (2026-11-09, capture of 929b read: Nelim tiny, nian not eating, adequacy about 2): zoom 7 on cell (153,214), Nelim at (149,211) bigger and nearer the beasts, Hay on the ground at (155,212) and (156,212) right in front of the nian beast so that it reads as eating; instant unchanged.
 #          v2: Hay on the ground at (150,209) and (152,210), TorchLamp lit at (157,208) by the gate (cells to check against the Nelim flower logo, no object on its flowers). Instant: Nelim has just opened the gate, the nian beast already eats, the other three turn toward her; obtained by the spawn facings and the pause right after.
 #   3. 12h gravel yard. Subject: the qiongqi, face to the camera, has picked its target; Nelim braces behind sandbags. Composition: zoom 6, cell (170,143),
 #          qiongqi at the back, sandbags at the front, Nelim off-centre. Living: qiongqi. Decor: Sandbags at (171,143) and (172,143). Nelim: brown
@@ -137,14 +138,14 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: I place the decor "Brazier" at (161, 209)
     And Nelim's Pickle Tools: the decor "Brazier" at (161, 209) is lit
     And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_DragonRobe"
-    And Nelim's Pickle Tools: "Nelim" stands at (147, 209) facing East
+    And Nelim's Pickle Tools: "Nelim" stands at (149, 211) facing East
     And Nelim's Pickle Tools: "Nelim" carries the item "Hay"
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+moodCheerful"
-    And Nelim's Pickle Tools: I frame the cell (153, 213) at zoom 9
-    And Nelim's Pickle Tools: I place the decor "Hay" at (150, 209)
-    And Nelim's Pickle Tools: I place the decor "Hay" at (152, 210)
+    And Nelim's Pickle Tools: I frame the cell (153, 214) at zoom 7
+    And Nelim's Pickle Tools: I place the decor "Hay" at (155, 212)
+    And Nelim's Pickle Tools: I place the decor "Hay" at (156, 212)
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (157, 208)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (157, 208) is lit
     And Nelim's Pickle Tools: the map is shown alone for a capture
