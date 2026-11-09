@@ -19,6 +19,7 @@
 #          Nelim: emerald gilded dragon robe (RI_Apparel_DragonRobe), no hat, ponytail. Action: carries Kibble, feeding. Face cheerful.
 #          Risk: the chickens wander off the cell. Plan: they are spawned after the pause, so nothing moves.
 #          v2 (2026-11-08): zoom 6 so the birds read at 268 px; Kibble on the ground at (154,98) and (155,98) where the hens run; instant: Nelim has just thrown a handful, the hens run to it, the rooster crows; obtained by spawning both chickens facing South after the pause and pausing the game at once.
+#          v5 (2026-11-09, capture of 871a: a Z sleep mote on the rooster): NPT steps "the flecks of def SleepZ, SleepZ_Small, SleepZ_Tiny are not thrown" before the pause; Kibble at (154,98) and (155,98).
 #   2. 10h south enclosure. Subject: the four beasts at the gate for the New Year. Composition: zoom 9, cell (151,213), the beasts at four different
 #          depths (z 212 to 219) and facings (three South, the nian beast West), not a row and not an arc, Nelim in the left foreground. Living: four
 #          beasts. Decor: Brazier lit at (146,207) and (162,207), the New Year fires of the gate. Nelim: emerald gilded dragon robe (RI_Apparel_DragonRobe),
@@ -49,6 +50,7 @@
 #          Risk: the cell where Nelim stands is not standable (the 2026-10-18 red at (137,169)). Plan: she stands at (141,170); if the step fails the
 #          log names the cell, move her one cell, do not cut the shot.
 #          v2: Plant_Daylily fully grown at (143,172) and (149,168). Subject read in the image: Ryu lunges (AttackMelee2) toward Nelim who cowers (FleeAndCower), the scorpion with its red ring behind him. Instant: the ring has just closed on Ryu; obtained by the step that sends him berserk, then the pause.
+#          v4 (2026-11-09, captures 0706 and 645a: the ring drew a brown-green veil over the whole frame at zoom 5 and 6): NPT step "the drawing of the class Ability_BerserkRing is skipped" hides the ring; the shot now reads by the scorpion, the berserk Ryu and Nelim, the ring is no longer in the frame (owner call open: ring as subject vs readable pawns).
 #   7. 19h postindustrial workshop. Subject: Nelim at the gene extractor, three archite capsules, a hen under the bench. Composition: zoom 5, cell
 #          (230,213), the machine in the centre, capsules in a row of the machine itself (props, not subjects). Living: a hen, daylilies. Decor: three
 #          ArchiteCapsule, Plant_Daylily at (227,215) and (233,215), four TorchLamp lit around the bench (the roof stays: GALLERY.md, "Éclairer un lieu
@@ -98,6 +100,9 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: the temperature of the map is 18 degrees
     And Nelim's Sanctuary: I am at the sanctuary "statue-garden"
     And Nelim's Pickle Tools: studio presentation mode is enabled
+    And Nelim's Pickle Tools: the flecks of def "SleepZ" are not thrown
+    And Nelim's Pickle Tools: the flecks of def "SleepZ_Small" are not thrown
+    And Nelim's Pickle Tools: the flecks of def "SleepZ_Tiny" are not thrown
     And Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: all animals are removed
     And Ancient Chinese Beast: I spawn the male pawn "SZ_Chicken" at (156, 97) facing South
@@ -298,6 +303,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: the temperature of the map is 20 degrees
     And Nelim's Sanctuary: I am at the sanctuary "water-garden"
     And Nelim's Pickle Tools: studio presentation mode is enabled
+    And Nelim's Pickle Tools: the drawing of the class "Ability_BerserkRing" is skipped
     And Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: all animals are removed
     And Ancient Chinese Beast: I spawn a colonist named "Ryu" near x=146 z=171
