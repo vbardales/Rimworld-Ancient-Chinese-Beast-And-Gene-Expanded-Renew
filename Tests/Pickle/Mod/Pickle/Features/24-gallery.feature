@@ -304,6 +304,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Sanctuary: I am at the sanctuary "water-garden"
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: the drawing of the class "Ability_BerserkRing" is skipped
+    And Nelim's Pickle Tools: the drawing of the class "CompSeXieExpansion" is skipped
     And Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: all animals are removed
     And Ancient Chinese Beast: I spawn a colonist named "Ryu" near x=146 z=171
