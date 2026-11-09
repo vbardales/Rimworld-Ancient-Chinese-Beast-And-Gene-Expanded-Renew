@@ -106,7 +106,7 @@ remaining:
       C# nor the defs. Inherited, left alone
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
 updated:      2026-11-09
-protocols_read_sha: ae6bc8a0f43a31e22df7e41cc17c26a1a5300dac
+protocols_read_sha: 99cad513f92e5e2574544a4484ee0fd068505df7
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -272,3 +272,11 @@ NPT 2026-11-09: nothing ready for scene 6 (TM relayed an old point). NPT can wri
 RUN_DONE 2026-11-09: 929b (scenes 1, 2) exit 1: scene 2 passed (64 s, capture not yet opened, Inbox 2026-11-08f-gallery-1-2-1); scene 1 failed at the Kibble placement, "the cell (156, 97) already holds SZ_Chicken". Kibble moved to (155, 99) (the header already said so), Check-ShotlistVsScenario OK, scene 1 refiled alone: a1bf (Inbox 2026-11-09a-gallery-1). Pending: 069a, ad70, 0706, a1bf. Next: open scene 2 capture, score-gallery.
 
 Rate 2026-11-09 (score-gallery, scene 2 capture of 929b opened): REDO. Seen: four beasts readable at 268 px, braziers and bamboo, but Nelim tiny bottom-left (outfit, smile, gesture unreadable), no gate visible, hay barely visible, nian not eating. Image 4, adequacy 2, understanding 3.5, decoration 4.5. Capture deleted from the two old Inbox runs (2026-11-08f-gallery-1-2 and -1-1; Inbox untracked). Recomposed v3: zoom 7 on (153,214), Nelim (149,211), Hay (155,212) and (156,212) before the nian beast, Check-ShotlistVsScenario OK, refiled 6a09 (Inbox 2026-11-09b-gallery-2). Pending: 069a, ad70, 0706, a1bf, 6a09. Candidates so far: 4, 8.
+
+Resume 2026-11-09 (2): protocols_read_sha 99cad513 (GALLERY: candidates live in Art/Gallery-clean/ only, criterion j weak = REDO, check at 268 px; PICKLE: PAUSE line in -List = queue closed), TM registered (local_ab115c2b), no archived session of this mod, marker deleted. NSB and NPT changed 2026-11-09 after the 2026-11-08 reads: sync-nsb-npt owed before the next shotlist change.
+
+RUN_DONE 2026-11-09: 069a (scene 7, Inbox 2026-11-08g-gallery-7): exit 0, 1/1. Capture opened, resized to 268 px: green extractor tube readable (j ok), Nelim holding a capsule, three capsules and torches, daylilies; weak: rooster overlaps the machine, hour 19 looks bright, Nelim small. Image 4.5, adequacy 4, understanding 4, decoration 4.5: candidate, saved as Art/Gallery-clean/7-candidate-extractor.jpg (307 KB). Candidates so far: 4 (capture still in Inbox), 7, 8. Pending: ad70 (3, 5, RUNNING hetzner), 0706 (6), a1bf (1), 6a09 (2).
+
+RUN_DONE 2026-11-09: ad70 (scenes 3, 5, Inbox 2026-11-08h-gallery-3-5) exit 0, 2/2. Captures opened. Scene 3 REDO (image 4, adequacy 3.5, understanding 3.5: hen stood behind the qiongqi, Nelim tiny at the bottom edge). Scene 5 REDO (image 4, adequacy 3, understanding 3: Ryu absent from the frame, barrier clipped at the left, over-exposed ring). Captures deleted. Recomposed v3: scene 3 zoom 7 on (170,144), hen at (168,144); scene 5 zoom 6 on (172,143), Ryu re-stood at (179,143) after the pause (cause of his absence unknown: if still absent, ask NPT). Check-ShotlistVsScenario OK, refiled 8df2 (Inbox 2026-11-09c-gallery-3-5, -NoBatch). Candidates: 4, 7, 8. Pending: 0706 (6), a1bf (1), 6a09 (2), 8df2 (3, 5).
+
+Rate 2026-11-09 (rate-gallery run): queue on PAUSE (Virginie at physio, set 2026-11-09T12:19): 0706 (6), a1bf (1), 6a09 (2), 8df2 (3, 5) wait, not refiled. Candidates saved in Art/Gallery-clean/ (jpg, q2, 268 px check j ok): 4-candidate-nian-fire (726 KB), 7-candidate-extractor (307 KB), 8-candidate-tame-clones (1021 KB); Art/Gallery/ still holds the old 0 to 7 of 2026-10-13 (to replace at burn step). Next on RUN_DONE: open captures, score-gallery, recompose REDO; one review for the owner at the end.

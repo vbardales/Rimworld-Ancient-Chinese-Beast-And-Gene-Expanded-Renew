@@ -31,6 +31,7 @@
 #          middle robe (122,84,52), SanShan hat, long loose hair. Action: carries Gun_BoltActionRifle, watchful. Face WaitCombat.
 #          Risk: the flight cannot be caught in a frame (feature 21 proves it). Plan: the shot is the moment before, as the subtitle says.
 #          v2: two more Sandbags at (170,143) and (173,143), TorchLamp lit at (168,141); target: a hen SZ_Chicken bolting at (169,150) in the qiongqi's line, so the image says what it has picked. Instant: the moment before the strike; obtained by facing South at spawn and the pause.
+#          v3 (2026-11-09, capture of ad70 read: the hen stood behind the qiongqi, Nelim tiny at the bottom edge, adequacy about 3.5): zoom 7 on cell (170,144), the hen bolting at (168,144) in front of the qiongqi, between it and the sandbags, so the beast looks at its target and Nelim stays in frame.
 #   4. 14h bare clearing. Subject: the nian beast breathes fire at a muffalo, Nelim holds the firecracker. Composition: zoom 7, cell (194,150), flame
 #          across the frame, Nelim at the left edge. Living: nian beast, muffalo. Decor: Plant_Daylily fully grown at (188,146), (189,147). Nelim:
 #          brown middle robe (122,84,52), SanShan hat, long loose hair. Action: carries SZ_Firecracker. Face cheerful.
@@ -41,6 +42,7 @@
 #          Nelim: brown middle robe (122,84,52), SanShan hat, long loose hair. Action: carries MedicineHerbal. Face wary. Ryu: hard-eyed.
 #          Risk: the barrier or the projectile fails (the 2026-10-13 red). Plan: the step asserts the projectile in flight; replay of feature 20 first.
 #          v2: Sandbags at (181,144) and (182,143), TorchLamp lit at (178,138). Instant: Ryu has just fired, the shot is thrown back; obtained by the step that asserts the projectile in flight, then the pause.
+#          v3 (2026-11-09, capture of ad70 read: Ryu absent from the frame, barrier clipped at the left edge, adequacy about 3): zoom 6 on cell (172,143) so the whole ring is in frame, Ryu put back at (179,143) facing West after the pause, so the shooter is seen.
 #   6. 18h water garden. Subject: the sexie's red aura drives Ryu berserk, Nelim at the edge of the ring. Composition: zoom 5, cell (151,172), the ring
 #          around the beast, Ryu inside. Living: sexie, Ryu. Decor: TorchLamp lit at (139,166) and (141,175), the dusk light. Nelim: brown middle robe (122,84,52),  SanShan hat, long loose hair. Action: backs away. Face afraid.
 #          Risk: the cell where Nelim stands is not standable (the 2026-10-18 red at (137,169)). Plan: she stands at (141,170); if the step fails the
@@ -165,7 +167,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: all animals are removed
     And Ancient Chinese Beast: I spawn the pawn "SZ_QiongQi" at (169, 146) facing South
     And Nelim's Pickle Tools: time is paused for the capture
-    And Ancient Chinese Beast: I spawn the female pawn "SZ_Chicken" at (169, 150) facing South
+    And Ancient Chinese Beast: I spawn the female pawn "SZ_Chicken" at (168, 144) facing South
     And Nelim's Pickle Tools: I place the decor "Sandbags" at (171, 143)
     And Nelim's Pickle Tools: I place the decor "Sandbags" at (172, 143)
     And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_SanShanHat"
@@ -175,7 +177,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+WaitCombat"
-    And Nelim's Pickle Tools: I frame the cell (170, 146) at zoom 6
+    And Nelim's Pickle Tools: I frame the cell (170, 144) at zoom 7
     And Nelim's Pickle Tools: I place the decor "Sandbags" at (170, 143)
     And Nelim's Pickle Tools: I place the decor "Sandbags" at (173, 143)
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (168, 141)
@@ -258,11 +260,12 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Ryu" stands at (180, 143) facing West
     And Ancient Chinese Beast: the colonist "Ryu" is added to the pawns
     And Ancient Chinese Beast: pawn 2 is armed with "Gun_BoltActionRifle"
-    And Nelim's Pickle Tools: I frame the cell (174, 143) at zoom 7
+    And Nelim's Pickle Tools: I frame the cell (172, 143) at zoom 6
     When Ancient Chinese Beast: the wind barrier of pawn 1 is raised
     And Ancient Chinese Beast: pawn 2 shoots at pawn 1
     Then Ancient Chinese Beast: a projectile launched by pawn 1 is in flight within 10 seconds
     And Nelim's Pickle Tools: time is paused for the capture
+    And Nelim's Pickle Tools: "Ryu" stands at (179, 143) facing West
     And Nelim's Pickle Tools: I place the decor "Sandbags" at (181, 143)
     And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_SanShanHat"
     And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_BasicMiddleClothes" dyed rgb (122, 84, 52)
