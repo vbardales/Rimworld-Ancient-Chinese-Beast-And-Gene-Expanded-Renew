@@ -106,7 +106,7 @@ remaining:
       C# nor the defs. Inherited, left alone
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
 updated:      2026-11-08
-protocols_read_sha: 4efde0ab867ce4597e5df67ba847746cb940d010
+protocols_read_sha: ae6bc8a0f43a31e22df7e41cc17c26a1a5300dac
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -264,3 +264,5 @@ Recompose 2026-11-08: scenes 3 and 5 rewritten (3: frame (170,146), two daylilie
 Scene 6 2026-11-08: NPT answer: the pink disc is not an NSB or tool anomaly, it is most likely the mod own aura effect (the ring is the subject of the scene), cause not checked in the defs. Recomposed: frame (151,172) zoom 5 so the whole disc reads as a ring (header line 43 updated, Check-ShotlistVsScenario OK), ticket 0706 filed (Inbox 2026-11-08i-gallery-6, a 4th ticket: TM said the cap of 3 is gone). Pending: 929b, 069a, ad70, 0706.
 
 Rate 2026-11-09 (rate-gallery run, GALLERY.md read): tickets 929b (scenes 1, 2), 069a (7), ad70 (3, 5), 0706 (6) still in dispatcher `requests/`, none running (762c of another mod holds the worker), so no new capture to open. Scene 6 pink disc: not a def, drawn in C# (`Ability_BerserkRing.Draw`, 22.9-tile plane, `AncientChineseBeast/SeXie/Ring`, MoteGlow): nothing to hide, ring kept as subject; fallback if 0706 still shows a veil: wider zoom or less glow in the scenario (Source frozen). TM told. Candidates so far: 4, 8. Next on RUN_DONE: open captures, score-gallery, recompose REDO, one review for the owner at the end.
+
+Resume 2026-11-09: protocols_read_sha ae6bc8a0 (diffs of scripts READMEs skimmed: no effect at shootGallery), TM registered (local_ab115c2b), no archived session checked beyond marker (session was asleep), marker deleted. TM relay: queue open, tickets 929b, 069a, ad70, 0706 RUNNING on azure, not refiled. NPT (local_17b2e3d8) has something for scene 6 pink emblem: asked it to send. Open: RUN_DONE of the four tickets, then open captures, score-gallery, recompose REDO, one review for the owner.
