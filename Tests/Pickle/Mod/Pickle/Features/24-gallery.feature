@@ -51,6 +51,7 @@
 #          log names the cell, move her one cell, do not cut the shot.
 #          v2: Plant_Daylily fully grown at (143,172) and (149,168). Subject read in the image: Ryu lunges (AttackMelee2) toward Nelim who cowers (FleeAndCower), the scorpion with its red ring behind him. Instant: the ring has just closed on Ryu; obtained by the step that sends him berserk, then the pause.
 #          v4 (2026-11-09, captures 0706 and 645a: the ring drew a brown-green veil over the whole frame at zoom 5 and 6): NPT step "the drawing of the class Ability_BerserkRing is skipped" hides the ring; the shot now reads by the scorpion, the berserk Ryu and Nelim, the ring is no longer in the frame (owner call open: ring as subject vs readable pawns).
+#          v7 (2026-11-10, capture of 82e7: veil kept after the eclipse step, Ryu a floating head with a red cape, Body and apparel nodes tex empty): Ryu body type Male instead of Thin (suspect: no WDI Thin body for a male pawn); NPT step "the sky, weather and map layers are logged" before the capture to name the veil. Not a final composition, a diagnostic run.
 #   7. 19h postindustrial workshop. Subject: Nelim at the gene extractor, three archite capsules, a hen under the bench. Composition: zoom 5, cell
 #          (230,213), the machine in the centre, capsules in a row of the machine itself (props, not subjects). Living: a hen, daylilies. Decor: three
 #          ArchiteCapsule, Plant_Daylily at (227,215) and (233,215), four TorchLamp lit around the bench (the roof stays: GALLERY.md, "Éclairer un lieu
@@ -311,7 +312,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Ryu" loses all genes
     And Nelim's Pickle Tools: "Ryu" gender is Male
     And "Ryu" is 43 years old
-    And Nelim's Pickle Tools: "Ryu" body type is Thin
+    And Nelim's Pickle Tools: "Ryu" body type is Male
     And Nelim's Pickle Tools: "Ryu" head type is "Male_NarrowPointy"
     And Nelim's Pickle Tools: "Ryu" has the gene "Skin_Melanin4"
     And Nelim's Pickle Tools: "Ryu" has the gene "Hair_InkBlack"
@@ -346,6 +347,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: the eclipse of the map is ended
     And Nelim's Pickle Tools: the render nodes of "Ryu" are logged
     And Nelim's Pickle Tools: the body texture of "Ryu" is logged
+    And Nelim's Pickle Tools: the sky, weather and map layers are logged
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-6-sexie-aura"
     And Nelim's Pickle Tools: the interface is shown again
