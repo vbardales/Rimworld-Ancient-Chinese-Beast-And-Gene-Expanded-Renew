@@ -123,3 +123,7 @@ PROPER NOUNS: nothing left to decide. Applied (3): French `SZ_Chicken` "son chan
 ## 2026-11-13, twenty-second pass
 
 PROPER NOUNS: nothing to decide. Applied (2): English "Breathes fire in a cone." (`SZ_YearBeast_Flamethrower`) and "can breathe fire in a cone" (`SZGene_YearBeast_Flamethrower`) in `Mod/Defs` (Audit rule of 2026-11-12, to go upstream with the rest).
+
+## 2026-11-13, twenty-third pass
+
+PROPER NOUNS: Dragon, Pleiades star officer, Tianbing were listed as TO DECIDE but are already decided, nothing to ask. Applied (3): Chinese little finger labels `左小指` and `右小指` (`SZ_Human_SeXie`); Chinese `SZ_BeastGeneExtractor.description` last sentence without the repeated `但` (`；不过每一位初次见到它的科技访客…`, the first clause kept).
