@@ -105,3 +105,7 @@ Applied (2): French `SZ_YearBeast_Friendly.label` in `PawnKindDef` and `ThingDef
 Applied (3): French `50 %`, `10 %` and `1 %` with the space before the percent sign (ThingDef, Keyed); English "Pleiades star officer" in lower case in `PUBLICATION.md` and `Mod/About/About.xml` (kept identical, as every other occurrence).
 
 Not applied: the two PROPER NOUNS items (the Chinese title in a citation, "Use This Instead"), sent to Virginie.
+
+## 2026-11-13, nineteenth pass
+
+Applied (1): French `SZ_BeastApproach` beast 0: "une bête décrite seulement dans le Shanhaijing". Not applied: Longbow (the only PROPER NOUNS item, kept, sent to Virginie).
