@@ -18,7 +18,7 @@ the owner turned the item public by hand the same day.
 ## Gallery
 
 The Workshop gallery is the owner's manual upload of `Art/Gallery/` (SteamCMD sends only the header image). Rules
-checked 2026-10-08 against `PUBLISHING.md`, « Images »: numbered `0-`, `1-`, `2-`… on one digit, in page order, nothing else
+checked 2026-10-08 against `PUBLISHING.md`, « Images »: numbered `0-`, `1-`, `2-`… with single-digit prefixes, in page order, nothing else
 in the folder; `0-` is a byte copy of `Mod/About/Preview.png` (compared after the 2026-10-08 regeneration); every other
 image is a **staged photograph** of the shared Sanctuary location, not a test capture; each image under 2 MB, the folder
 under 8 MB. Candidates are named `<n>-candidate-<name>.png` until the owner accepts them (then `candidate` is dropped),
