@@ -7,6 +7,6 @@
   <SZ_DebugClearCooldown>Réinitialiser le délai de soixante jours</SZ_DebugClearCooldown>
   <SZ_DebugReportClock>Consigner le calendrier des bêtes</SZ_DebugReportClock>
   <SZ_DebugNianScheduled>Le Nian arrivera dans l'heure de jeu.</SZ_DebugNianScheduled>
-  <SZ_DebugCooldownCleared>Le délai entre les attaques de bêtes est réinitialisé. Le tirage quotidien à 1% peut se déclencher dès le prochain jour de jeu.</SZ_DebugCooldownCleared>
+  <SZ_DebugCooldownCleared>Le délai entre les attaques de bêtes est réinitialisé. Le tirage quotidien à 1 % peut se déclencher dès le prochain jour de jeu.</SZ_DebugCooldownCleared>
   <SZ_DebugClockLogged>Le calendrier des bêtes a été consigné dans le journal technique.</SZ_DebugClockLogged>
 </LanguageData>

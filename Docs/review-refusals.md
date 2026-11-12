@@ -99,3 +99,9 @@ Not applied (2), waiting for Virginie: the French form of the mod title (registr
 ## 2026-11-13, seventeenth pass
 
 Applied (2): French `SZ_YearBeast_Friendly.label` in `PawnKindDef` and `ThingDef`: `Nian (amical)` (Nian is masculine, my agreement miss). The PROPER NOUNS TO DECIDE items (the upstream title and three third-party mod names) are sent to Virginie in the report and, for mod titles, to Audit with TITLE? first (rule 26).
+
+## 2026-11-13, eighteenth pass
+
+Applied (3): French `50 %`, `10 %` and `1 %` with the space before the percent sign (ThingDef, Keyed); English "Pleiades star officer" in lower case in `PUBLICATION.md` and `Mod/About/About.xml` (kept identical, as every other occurrence).
+
+Not applied: the two PROPER NOUNS items (the Chinese title in a citation, "Use This Instead"), sent to Virginie.
