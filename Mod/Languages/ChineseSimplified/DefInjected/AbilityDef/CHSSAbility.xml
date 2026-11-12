@@ -5,7 +5,7 @@
     <SZ_MingShe_SoundWave.description>一个扇形区域内的声波攻击。会眩晕敌人。</SZ_MingShe_SoundWave.description>
 
     <SZ_MingShe_WindWing.label>风盾</SZ_MingShe_WindWing.label>
-    <SZ_MingShe_WindWing.description>切割处于风盾范围内的敌人并反弹飞行道具（包括子弹和抛射物）</SZ_MingShe_WindWing.description>
+    <SZ_MingShe_WindWing.description>切割风盾内的一切，并反弹所有从风盾外部飞来的物体，包括子弹和投掷物。</SZ_MingShe_WindWing.description>
 
     <SZ_QiongQi_FlyingStrike.label>冲刺</SZ_QiongQi_FlyingStrike.label>
     <SZ_QiongQi_FlyingStrike.description>向目标冲刺，造成巨额伤害。</SZ_QiongQi_FlyingStrike.description>

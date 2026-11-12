@@ -52,3 +52,7 @@ Nothing refused. Applied (3): Chinese `SZ_Clone_MingShe.description` adds the dr
 ## 2026-11-12, ninth pass
 
 Nothing refused. Applied (2): Chinese `SZGene_QiongQi_Eyes.description` (attacks, not skills) and `SZGene_QiongQi_Scratch.description` (armour, armour penetration), both as the English.
+
+## 2026-11-12, tenth pass
+
+Nothing refused. Applied (2): Chinese `SZ_MingShe_WindWing.description` (anything inside the shield, objects from outside, as the English); Chinese `SZ_YearBeast.description` `巨响` for "loud noise".
