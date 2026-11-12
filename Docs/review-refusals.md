@@ -109,3 +109,9 @@ Not applied: the two PROPER NOUNS items (the Chinese title in a citation, "Use T
 ## 2026-11-13, nineteenth pass
 
 Applied (1): French `SZ_BeastApproach` beast 0: "une bête décrite seulement dans le Shanhaijing". Not applied: Longbow (the only PROPER NOUNS item, kept, sent to Virginie).
+
+## 2026-11-13, twentieth pass
+
+Applied (2): Chinese `SZ_YearBeastApproach.letterText` `出现在殖民地附近`; Chinese `SZ_Storyteller_Sexie.description` `色邪偏好变化不断的故事`.
+
+Refused (1): Chinese `SZ_ChickenPasses.letterText` compaction (`加入殖民地`): the `我们` and the longer phrase are the fictional voice of the original, a matter of taste.
