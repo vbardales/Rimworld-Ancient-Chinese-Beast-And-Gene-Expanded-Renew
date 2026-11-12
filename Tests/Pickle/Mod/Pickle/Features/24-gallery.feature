@@ -63,6 +63,8 @@
 #          v16 (2026-11-12, b379: pawn data normal (Human, adult, size 1.0, on screen at the centre where head and cape show), no overlay, no greenish glower, only warm TorchLamps; VEF and fairycoreapparel2 patch the CanDrawNow of the body workers): hide the section layer named TerrainScatter (marsh scatter drawn as clouds?) to test the veil. Diagnostic run.
 #          v16 result: 6367 green, veil unchanged with TerrainScatter hidden too.
 #          v17 (2026-11-12): NPT step "the draw requests of Ryu are logged" AFTER the screenshot (the game has drawn many frames; a node present in the draw state but absent from the requests was dropped by a prefix: VEF, HatHairControl, fairycoreapparel2); the draw-state step now reads the opacity of each texture (GPU copy). TerrainScatter hide removed. Diagnostic run.
+#          v17 result: cfc2 green: textures opaque, the body IS requested at y 8.42, duster 8.43, head 8.44; the veil covers a plane between 8.42 and 8.43.
+#          v18 (2026-11-12): NPT step "the things drawn at an altitude from 8.40 to 8.50 are logged" (names the AltitudeLayer at 8.42-8.43 and the things in the band) AND the nine remaining section layers hidden at once (Snow, Sand, Darkness, EdgeShadows, IndoorMask, FogOfWar, LightingOverlay, SunShadows, Resource); if the veil goes, halve the list next run. Diagnostic run.
 #   7. 19h postindustrial workshop. Subject: Nelim at the gene extractor, three archite capsules, a hen under the bench. Composition: zoom 5, cell
 #          (230,213), the machine in the centre, capsules in a row of the machine itself (props, not subjects). Living: a hen, daylilies. Decor: three
 #          ArchiteCapsule, Plant_Daylily at (227,215) and (233,215), four TorchLamp lit around the bench (the roof stays: GALLERY.md, "Éclairer un lieu
@@ -361,6 +363,16 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: the draw state of the render nodes of "Ryu" is logged
     And Nelim's Pickle Tools: the draw position of "Ryu" is logged
     And Nelim's Pickle Tools: what draws over the map is logged
+    And Nelim's Pickle Tools: the things drawn at an altitude from 8.40 to 8.50 are logged
+    And Nelim's Pickle Tools: the section layers named "Snow" are hidden
+    And Nelim's Pickle Tools: the section layers named "Sand" are hidden
+    And Nelim's Pickle Tools: the section layers named "Darkness" are hidden
+    And Nelim's Pickle Tools: the section layers named "EdgeShadows" are hidden
+    And Nelim's Pickle Tools: the section layers named "IndoorMask" are hidden
+    And Nelim's Pickle Tools: the section layers named "FogOfWar" are hidden
+    And Nelim's Pickle Tools: the section layers named "LightingOverlay" are hidden
+    And Nelim's Pickle Tools: the section layers named "SunShadows" are hidden
+    And Nelim's Pickle Tools: the section layers named "Resource" are hidden
     And Nelim's Pickle Tools: the render nodes of "Ryu" are logged
     And Nelim's Pickle Tools: the body texture of "Ryu" is logged
     And Nelim's Pickle Tools: the sky, weather and map layers are logged
