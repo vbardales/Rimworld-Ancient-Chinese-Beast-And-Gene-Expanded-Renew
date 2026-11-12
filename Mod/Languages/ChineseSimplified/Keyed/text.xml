@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <SZ_CannotReachBuildingToExtractGene>无法到达建筑以提取基因。</SZ_CannotReachBuildingToExtractGene>
+  <SZ_DebugCategory>古代中国凶兽</SZ_DebugCategory>
+  <SZ_DebugBeastNow>立即发生凶兽袭击</SZ_DebugBeastNow>
+  <SZ_DebugNianNextHour>年兽将在下一游戏小时到来</SZ_DebugNianNextHour>
+  <SZ_DebugClearCooldown>清除六十天间隔</SZ_DebugClearCooldown>
+  <SZ_DebugReportClock>将凶兽时钟写入日志</SZ_DebugReportClock>
+  <SZ_DebugNianScheduled>年兽将在本游戏小时内到达。</SZ_DebugNianScheduled>
+  <SZ_DebugCooldownCleared>凶兽冷却已清除。自下一个游戏日起，每日 1% 的掷骰即可触发。</SZ_DebugCooldownCleared>
+  <SZ_DebugClockLogged>凶兽时钟已写入日志。</SZ_DebugClockLogged>
+</LanguageData>

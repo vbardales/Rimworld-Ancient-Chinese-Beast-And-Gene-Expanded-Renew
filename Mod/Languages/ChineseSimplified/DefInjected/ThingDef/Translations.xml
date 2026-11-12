@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <SZ_MingSheEggUnfertilized.label>鸣蛇蛋（未受精）</SZ_MingSheEggUnfertilized.label>
+  <SZ_MingSheEggUnfertilized.description>未受精的鸣蛇蛋。可生食，但烹饪后更美味。</SZ_MingSheEggUnfertilized.description>
+  <SZ_MingSheEggFertilized.label>鸣蛇蛋（受精）</SZ_MingSheEggFertilized.label>
+  <SZ_MingSheEggFertilized.description>受精的鸣蛇蛋。如果一切顺利，会孵化出幼年鸣蛇。可生食，但烹饪后更美味。</SZ_MingSheEggFertilized.description>
+  <SZ_ChickenEggUnfertilized.label>昴日星官蛋（未受精）</SZ_ChickenEggUnfertilized.label>
+  <SZ_ChickenEggUnfertilized.description>未受精的昴日星官蛋。可生食，但烹饪后更美味。</SZ_ChickenEggUnfertilized.description>
+  <SZ_ChickenEggFertilized.label>昴日星官蛋（受精）</SZ_ChickenEggFertilized.label>
+  <SZ_ChickenEggFertilized.description>受精的昴日星官蛋。如果一切顺利，会孵化出神鸟的雏鸟。可生食，但烹饪后更美味。</SZ_ChickenEggFertilized.description>
+</LanguageData>
