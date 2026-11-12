@@ -11,6 +11,7 @@ repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 visibility:   public
 detached:     yes
 workflow_stage: shootGallery[1.1.0]
+french_review_pending: true
 social_preview_sha256: ef4033f58e512d0f5eaff4384e2ca7d1c0c5e0a2142fb371a5569a324223052c
 echo_review_sha: d4409fa79443f95e80e837fc4941245708106090  # 2026-10-23, 10.a: echo kept (echo-source.png, Preview panel bottom-left, validated by Virginie in chat)
 publication_changelog_review_sha: 5bed84a774984f2711ba3048ce90046038b30fcc
@@ -223,3 +224,5 @@ RUN_DONE 2026-11-10: 82e7 (scene 6 v6, eclipse ended, render-node logs) exit 0, 
 PiT answer 2026-11-10 (commit 5697c5d): new steps "the sky, weather and map layers are logged" (names the veil) and "the sky overlays are hidden" (not used yet); Ryu body: suspects (a) Thin body missing for a male pawn in WDI, (b) graphics not rebuilt, (c) missing texture (Player.log of 82e7: no "Could not load texture" nor "Failed to find" line, (c) ruled out). Scene 6 v7 diagnostic: Ryu body type Male instead of Thin, sky log before the capture, Check-ShotlistVsScenario OK, filed ede4 (Inbox 2026-11-10a-gallery-6, NoBatch, sanctuary map). Next on RUN_DONE: read [sky] lines in Player.log, open capture, tell PiT the result of (a). Pending: ede4 (6). Candidates: 1, 3, 4, 7, 8.
 
 RUN_DONE ede4 read 2026-11-12 (resume, delivered via relay note, no wake): exit 0, 1/1. Capture opened: Ryu still a floating head with red cape, no body, with body type Male too, so suspect (a) is out; veil unchanged. [sky] log: weather Clear, sky glow 0.45, condition `PsychicSoothe` (GameCondition_PsychicEmanation, map, 39188 ticks left), overlays none found. Image 3 (veil, no body), adequacy 2: REDO. Sent to PiT through the TM: PsychicSoothe tint suspect, ask for a step ending the condition or rebuilding pawn graphics. Protocols read 2026-11-12 (fd4f8885): nothing for shootGallery (Art/ closed set gained `Work/`). Pending: PiT answer (scene 6). Candidates: 1, 3, 4, 7, 8. Scene 2 v4 accept or recompose; scene 5 to recompose. Scene 2 v4 accept or recompose; scene 5 to recompose (Ryu absent there too: same body suspect).
+
+NPT answer 2026-11-12: steps "the game condition PsychicSoothe is ended" and "the graphics of Ryu are refreshed" added (compiled, not played). Scene 6 v8 filed: ticket 20261112-204940-143-97df (Inbox 2026-11-12a-gallery-6, NoBatch, sanctuary map, commit a3aa151). On RUN_DONE: open capture (veil gone? Ryu body?), if the body is still missing send Player.log lines about Ryu's body graphic to NPT. Pending: 97df (6), ChatGPT review page 1/1 (french_review_pending). Candidates: 1, 3, 4, 7, 8.
