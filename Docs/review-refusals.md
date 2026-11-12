@@ -56,3 +56,7 @@ Nothing refused. Applied (2): Chinese `SZGene_QiongQi_Eyes.description` (attacks
 ## 2026-11-12, tenth pass
 
 Nothing refused. Applied (2): Chinese `SZ_MingShe_WindWing.description` (anything inside the shield, objects from outside, as the English); Chinese `SZ_YearBeast.description` `巨响` for "loud noise".
+
+## 2026-11-12, eleventh pass
+
+Nothing refused. The proper-noun table asked for nothing (all forms deliberate). Applied (2): "she likes to cause trouble" for the fifth storyteller in `PUBLICATION.md` and `Mod/About/About.xml` (kept identical); `CHANGELOG.md` `[Unreleased]` wind barrier bullet, comma splices turned into semicolons.
