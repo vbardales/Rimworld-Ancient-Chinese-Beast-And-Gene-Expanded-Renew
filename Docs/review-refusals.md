@@ -127,3 +127,7 @@ PROPER NOUNS: nothing to decide. Applied (2): English "Breathes fire in a cone."
 ## 2026-11-13, twenty-third pass
 
 PROPER NOUNS: Dragon, Pleiades star officer, Tianbing were listed as TO DECIDE but are already decided, nothing to ask. Applied (3): Chinese little finger labels `左小指` and `右小指` (`SZ_Human_SeXie`); Chinese `SZ_BeastGeneExtractor.description` last sentence without the repeated `但` (`；不过每一位初次见到它的科技访客…`, the first clause kept).
+
+## 2026-11-13, twenty-fourth pass
+
+Nothing applied. Refused (1): Chinese `SZ_Chicken.description` `“长弓”` to `“Longbow”`: the Chinese text is the original language, the nickname is written 长弓 there; "Longbow" is the English and French form. A Chinese reader keeps the Chinese name. PROPER NOUNS TO DECIDE (the Chinese title in credits, Use This Instead): same two items as the previous passes, my proposals stand, waiting for Virginie.
