@@ -61,6 +61,8 @@
 #          v14 (2026-11-12, NOT USED: the real roster Blue is not in the sanctuary save, which holds only Nelim: b279 red "no free colonist called Blue; the colonists are: Nelim"; the local step and its DLL were reverted)
 #          v15 (2026-11-12): Ryu spawned and edited as in v13 again, with NPT logs "the draw position of Ryu is logged" ([pawn-draw]: race, kind, humanlike, life stage, body size, screen point) and "what draws over the map is logged" ([draw-over-map]). Diagnostic run.
 #          v16 (2026-11-12, b379: pawn data normal (Human, adult, size 1.0, on screen at the centre where head and cape show), no overlay, no greenish glower, only warm TorchLamps; VEF and fairycoreapparel2 patch the CanDrawNow of the body workers): hide the section layer named TerrainScatter (marsh scatter drawn as clouds?) to test the veil. Diagnostic run.
+#          v16 result: 6367 green, veil unchanged with TerrainScatter hidden too.
+#          v17 (2026-11-12): NPT step "the draw requests of Ryu are logged" AFTER the screenshot (the game has drawn many frames; a node present in the draw state but absent from the requests was dropped by a prefix: VEF, HatHairControl, fairycoreapparel2); the draw-state step now reads the opacity of each texture (GPU copy). TerrainScatter hide removed. Diagnostic run.
 #   7. 19h postindustrial workshop. Subject: Nelim at the gene extractor, three archite capsules, a hen under the bench. Composition: zoom 5, cell
 #          (230,213), the machine in the centre, capsules in a row of the machine itself (props, not subjects). Living: a hen, daylilies. Decor: three
 #          ArchiteCapsule, Plant_Daylily at (227,215) and (233,215), four TorchLamp lit around the bench (the roof stays: GALLERY.md, "Éclairer un lieu
@@ -359,12 +361,12 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: the draw state of the render nodes of "Ryu" is logged
     And Nelim's Pickle Tools: the draw position of "Ryu" is logged
     And Nelim's Pickle Tools: what draws over the map is logged
-    And Nelim's Pickle Tools: the section layers named "TerrainScatter" are hidden
     And Nelim's Pickle Tools: the render nodes of "Ryu" are logged
     And Nelim's Pickle Tools: the body texture of "Ryu" is logged
     And Nelim's Pickle Tools: the sky, weather and map layers are logged
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-6-sexie-aura"
+    And Nelim's Pickle Tools: the draw requests of "Ryu" are logged
     And Nelim's Pickle Tools: the interface is shown again
     And Nelim's Pickle Tools: the decor is removed
 
