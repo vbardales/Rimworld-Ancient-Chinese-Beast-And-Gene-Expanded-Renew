@@ -36,16 +36,16 @@
   <SZGene_SeXie_Strength.label>force monstrueuse de sexie</SZGene_SeXie_Strength.label>
   <SZGene_SeXie_Strength.symbolPack.wholeNameSymbols.0.symbol>bénédiction de la sexie</SZGene_SeXie_Strength.symbolPack.wholeNameSymbols.0.symbol>
   <SZGene_SeXie_Strength.symbolPack.wholeNameSymbols.1.symbol>don de la sexie</SZGene_SeXie_Strength.symbolPack.wholeNameSymbols.1.symbol>
-  <SZGene_YearBeast_Flamethrower.description>Le souffle de feu d'une bête nian. Confère la capacité de cracher du feu dans un cône, comme la bête elle-même.</SZGene_YearBeast_Flamethrower.description>
-  <SZGene_YearBeast_Flamethrower.label>souffle de feu de bête nian</SZGene_YearBeast_Flamethrower.label>
-  <SZGene_YearBeast_Flamethrower.symbolPack.wholeNameSymbols.0.symbol>bénédiction de la bête nian</SZGene_YearBeast_Flamethrower.symbolPack.wholeNameSymbols.0.symbol>
-  <SZGene_YearBeast_Flamethrower.symbolPack.wholeNameSymbols.1.symbol>don de la bête nian</SZGene_YearBeast_Flamethrower.symbolPack.wholeNameSymbols.1.symbol>
-  <SZGene_YearBeast_Horn.description>Fait pousser une corne extrêmement acérée, semblable à celle d'une bête nian.</SZGene_YearBeast_Horn.description>
-  <SZGene_YearBeast_Horn.label>corne de bête nian</SZGene_YearBeast_Horn.label>
-  <SZGene_YearBeast_Horn.symbolPack.wholeNameSymbols.0.symbol>bénédiction de la bête nian</SZGene_YearBeast_Horn.symbolPack.wholeNameSymbols.0.symbol>
-  <SZGene_YearBeast_Horn.symbolPack.wholeNameSymbols.1.symbol>don de la bête nian</SZGene_YearBeast_Horn.symbolPack.wholeNameSymbols.1.symbol>
-  <SZGene_YearBeast_Skin.description>Le gène d'armure de la bête nian. Il renforce considérablement les défenses, mais accroît fortement la vulnérabilité aux pétards.</SZGene_YearBeast_Skin.description>
-  <SZGene_YearBeast_Skin.label>écailles de bête nian</SZGene_YearBeast_Skin.label>
-  <SZGene_YearBeast_Skin.symbolPack.wholeNameSymbols.0.symbol>bénédiction de la bête nian</SZGene_YearBeast_Skin.symbolPack.wholeNameSymbols.0.symbol>
-  <SZGene_YearBeast_Skin.symbolPack.wholeNameSymbols.1.symbol>don de la bête nian</SZGene_YearBeast_Skin.symbolPack.wholeNameSymbols.1.symbol>
+  <SZGene_YearBeast_Flamethrower.description>Le souffle de feu d'un Nian. Confère la capacité de cracher du feu dans un cône, comme le monstre lui-même.</SZGene_YearBeast_Flamethrower.description>
+  <SZGene_YearBeast_Flamethrower.label>souffle de feu de Nian</SZGene_YearBeast_Flamethrower.label>
+  <SZGene_YearBeast_Flamethrower.symbolPack.wholeNameSymbols.0.symbol>bénédiction du Nian</SZGene_YearBeast_Flamethrower.symbolPack.wholeNameSymbols.0.symbol>
+  <SZGene_YearBeast_Flamethrower.symbolPack.wholeNameSymbols.1.symbol>don du Nian</SZGene_YearBeast_Flamethrower.symbolPack.wholeNameSymbols.1.symbol>
+  <SZGene_YearBeast_Horn.description>Fait pousser une corne extrêmement acérée, semblable à celle d'un Nian.</SZGene_YearBeast_Horn.description>
+  <SZGene_YearBeast_Horn.label>corne de Nian</SZGene_YearBeast_Horn.label>
+  <SZGene_YearBeast_Horn.symbolPack.wholeNameSymbols.0.symbol>bénédiction du Nian</SZGene_YearBeast_Horn.symbolPack.wholeNameSymbols.0.symbol>
+  <SZGene_YearBeast_Horn.symbolPack.wholeNameSymbols.1.symbol>don du Nian</SZGene_YearBeast_Horn.symbolPack.wholeNameSymbols.1.symbol>
+  <SZGene_YearBeast_Skin.description>Le gène d'armure du Nian. Il renforce considérablement les défenses, mais accroît fortement la vulnérabilité aux pétards.</SZGene_YearBeast_Skin.description>
+  <SZGene_YearBeast_Skin.label>écailles de Nian</SZGene_YearBeast_Skin.label>
+  <SZGene_YearBeast_Skin.symbolPack.wholeNameSymbols.0.symbol>bénédiction du Nian</SZGene_YearBeast_Skin.symbolPack.wholeNameSymbols.0.symbol>
+  <SZGene_YearBeast_Skin.symbolPack.wholeNameSymbols.1.symbol>don du Nian</SZGene_YearBeast_Skin.symbolPack.wholeNameSymbols.1.symbol>
 </LanguageData>

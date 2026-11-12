@@ -13,7 +13,7 @@
   <SZ_Strength.description>Une force monstrueuse qui double les dégâts des coups à mains nues.</SZ_Strength.description>
   <SZ_Strength.label>force monstrueuse</SZ_Strength.label>
   <SZ_Year_Horn.comps.HediffComp_VerbGiver.tools.horn.label>corne</SZ_Year_Horn.comps.HediffComp_VerbGiver.tools.horn.label>
-  <SZ_Year_Horn.description>Une corne de bête nian très acérée. Elle transperce sans difficulté les armures épaisses.</SZ_Year_Horn.description>
-  <SZ_Year_Horn.label>corne de bête nian</SZ_Year_Horn.label>
-  <SZ_Year_Horn.labelNoun>corne de bête nian</SZ_Year_Horn.labelNoun>
+  <SZ_Year_Horn.description>Une corne de Nian très acérée. Elle transperce sans difficulté les armures épaisses.</SZ_Year_Horn.description>
+  <SZ_Year_Horn.label>corne de Nian</SZ_Year_Horn.label>
+  <SZ_Year_Horn.labelNoun>corne de Nian</SZ_Year_Horn.labelNoun>
 </LanguageData>
