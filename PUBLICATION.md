@@ -51,7 +51,7 @@ One line of English at the bottom of each gallery scene without an interface win
 ```markdown
 UNOFFICIAL. This mod is published without the original authors' explicit consent. If any original author contacts me to request its removal, I undertake to take it down promptly.
 
-Update of andery233xj, Frolg, DongFang and Ninedaylongbow's [山海志怪-华夏凶兽和基因扩展 - Ancient Chinese Beast And Gene Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=3292446841) to the latest RimWorld version.
+An update of andery233xj, Frolg, DongFang and Ninedaylongbow's [山海志怪-华夏凶兽和基因扩展 - Ancient Chinese Beast And Gene Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=3292446841) to the latest RimWorld version.
 
 I am not the author of this mod. The creatures, the art, the mechanics and the original code are theirs; all I did was the work needed to make it run on the latest version, and a pass over the English text. Credit goes to them; mistakes in the update are mine. If the original authors come back to it, or ask me to take this down, I will.
 

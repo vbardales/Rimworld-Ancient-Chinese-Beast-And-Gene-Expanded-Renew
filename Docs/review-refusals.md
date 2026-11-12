@@ -76,3 +76,16 @@ Nothing refused. The proper-noun table asked for nothing. Applied (2): Chinese `
 Applied (1): Chinese `SZ_QiongQi.description` `以…为原型` construction.
 
 Kept as is (2 proper-noun questions, no change): `Shenzhou` as `华夏` in `SZ_QiongQi.description` while other texts use `神州` (the original Chinese uses both, `华夏` for the settlements, `神州` for the land; left as the original has it); `Longbow` as `长弓` in `SZ_Chicken.description` (the original author's nickname, an intended wink).
+
+## 2026-11-12, fifteenth pass
+
+Applied (1): "An update of andery233xj, ..." in `PUBLICATION.md` and `Mod/About/About.xml` (kept identical).
+
+Refused (2):
+
+| Key or text | Proposal | Reason |
+|---|---|---|
+| French `SZ_DebugCategory` | `Ancient Chinese Beast (Bêtes chinoises antiques)` | A label of the debug menu, shown to nobody who plays; no rule of `docs/TRANSLATIONS.md` asks for the English name beside the French one there. Left as is. |
+| `Mod/About/About.xml` `<name>` and the Workshop title | add a French form | Changes the published title of the item; an owner decision, not a translation fix. |
+
+The proper-noun "to decide" lists (creature names, Shenzhou, Longbow, Egret, Sexie title) repeat choices already kept in earlier passes; nothing changed.
