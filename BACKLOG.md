@@ -41,3 +41,12 @@ What a pull request would carry: 1.6 changes (`PawnFlyer.TickInterval`, `PostDeS
 ## Done: the description has one source
 
 Decided by CI session on 2026-09-25. `PUBLICATION.md` exists and hold Steam description once, in Markdown block under `## Steam description`, its last line `[Source code on GitHub](URL)`; `.github/publish.config.json` read it and generate `<description>` of `Mod/About/About.xml` from it (`sync-about-description.mjs` report they agree, checked 2026-10-01). Workflow (`.github/`) not edited by hand; change note's first line carry version (`[b]1.0.0[/b]`).
+---
+
+## TODO: upstream pull requests (MonsterTower/AncientChineseBeast)
+
+Upstream synced 2026-11-12: one commit, `f6d3d19` "init" (2025-09-10, the 1.5 source), no shared history with this repository, nothing new since the port. Each pull request below needs Virginie's go for that PR, goes through the fork branch `vbardales/AncientChineseBeast`, and stays here until opened. The earlier PR #1 was closed for inactivity on 2026-11-11.
+
+- Text corrections (Chinese, English storyteller line, Original messages of `Mod/Defs/Incident/Beasts.xml`): after her French validation (owner, 2026-11-12).
+- 1.6 update (supportedVersions, compatibility fixes, new dependencies): after a green playTests on 1.6.
+- 1.7 update: only after a green 1.7 run (`tested_1_7: yes`).

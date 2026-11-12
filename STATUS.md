@@ -106,6 +106,7 @@ remaining:
       C# nor the defs. Inherited, left alone
 session:      local_5bc1b5af-5a8d-4b9e-98fa-5f1f54777aa6
 updated:      2026-11-12
+upstream_synced: 2026-11-12 MonsterTower/AncientChineseBeast@f6d3d19
 protocols_read_sha: fd4f8885d84a91c2b46f234f4461d41416c94534
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
