@@ -70,3 +70,9 @@ Refused (1): Chinese `SZ_MingSheDrought.letterText`, `持续` repeated: the repe
 ## 2026-11-12, thirteenth pass
 
 Nothing refused. The proper-noun table asked for nothing. Applied (2): Chinese `SZ_ExtractGene.jobString` `正在从凶兽中提取基因。` (as the English and French job string); Chinese gun descriptions `反凶兽步枪`, in line with the labels changed in the twelfth pass (descriptions only where the phrase `反凶兽突击步枪` stood).
+
+## 2026-11-12, fourteenth pass
+
+Applied (1): Chinese `SZ_QiongQi.description` `以…为原型` construction.
+
+Kept as is (2 proper-noun questions, no change): `Shenzhou` as `华夏` in `SZ_QiongQi.description` while other texts use `神州` (the original Chinese uses both, `华夏` for the settlements, `神州` for the land; left as the original has it); `Longbow` as `长弓` in `SZ_Chicken.description` (the original author's nickname, an intended wink).
