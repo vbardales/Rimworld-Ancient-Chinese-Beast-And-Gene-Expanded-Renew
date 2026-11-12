@@ -15,3 +15,7 @@ Applied the same day: French `pied` to `patte` for the four paw labels of `SZ_Qu
 ## 2026-11-12, second pass (same revision line, after the first corrections)
 
 Nothing refused. Applied: `ChineseSimplified` `SZ_Insect_SeXie` left and right elytra `左鞘翅` / `右鞘翅`; `ChineseBeast_Gun_Dragon.tools.handle.label` `握把` (handle, as the English and French "poignée").
+
+## 2026-11-12, third pass
+
+Nothing refused. Applied: English `SZ_Storyteller_Sexie.description` "left on the rim" (Mod/Defs/StoryTeller/storyteller.xml; the upstream wording, local edit under the Audit rule of 2026-11-12); French `SZ_SeXie_Friendly.description` `griffes venimeuses` (human form; `SZ_SeXieInsect_Friendly` keeps `pinces`); Chinese `SZ_MingShe.description` colon before the wind shield clause and `SZ_YearBeast_Friendly.description` punctuation and `在面对`; duplicate `SZ_QQAnimation.label` and `.description` removed from `ChineseSimplified/DefInjected/ThingDef/CHSSPawn.xml` (same value twice, one kept).

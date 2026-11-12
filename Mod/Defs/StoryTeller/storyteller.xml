@@ -3,7 +3,7 @@
   <StorytellerDef ParentName="BaseStoryteller">
     <defName>SZ_Storyteller_Sexie</defName>
     <label>Sexie, the Venomous Mist</label>
-    <description>The sexie is the ultimate weapon the old Tianbing mechanoid clan's gene engineering produced. Countless Shenzhou settlements went down under her claws, and all she left the rim were ruins and stories about her venom and her two shapes. \n\nSexie likes a story that keeps changing: awkward random events of every kind will be the theme of yours. On top of that she arranges an attack by a Shenzhou beast every fifteen days, to satisfy her appetite for killing.</description>
+    <description>The sexie is the ultimate weapon the old Tianbing mechanoid clan's gene engineering produced. Countless Shenzhou settlements went down under her claws, and all she left on the rim were ruins and stories about her venom and her two shapes. \n\nSexie likes a story that keeps changing: awkward random events of every kind will be the theme of yours. On top of that she arranges an attack by a Shenzhou beast every fifteen days, to satisfy her appetite for killing.</description>
     <portraitLarge>AncientChineseBeast/Storyteller</portraitLarge>
     <portraitTiny>AncientChineseBeast/StorytellerIcon</portraitTiny><!-- 蝾螈小小的-->
     <listOrder>120</listOrder>
