@@ -48,3 +48,7 @@ Refused (1): `CHANGELOG.md` `[Unreleased]`, wind barrier bullet, "in front of th
 ## 2026-11-12, eighth pass (the seventh failed: no credits)
 
 Nothing refused. Applied (3): Chinese `SZ_Clone_MingShe.description` adds the drought (`同样会带来干旱`, wind flavour kept); Chinese `SZ_Firecracker.description` adds the tenth-damage rule; "original authors'" and "If any original author" in `PUBLICATION.md`, `Mod/About/About.xml` and `README.md` (four authors are credited).
+
+## 2026-11-12, ninth pass
+
+Nothing refused. Applied (2): Chinese `SZGene_QiongQi_Eyes.description` (attacks, not skills) and `SZGene_QiongQi_Scratch.description` (armour, armour penetration), both as the English.
