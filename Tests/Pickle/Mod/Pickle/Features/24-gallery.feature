@@ -65,6 +65,8 @@
 #          v17 (2026-11-12): NPT step "the draw requests of Ryu are logged" AFTER the screenshot (the game has drawn many frames; a node present in the draw state but absent from the requests was dropped by a prefix: VEF, HatHairControl, fairycoreapparel2); the draw-state step now reads the opacity of each texture (GPU copy). TerrainScatter hide removed. Diagnostic run.
 #          v17 result: cfc2 green: textures opaque, the body IS requested at y 8.42, duster 8.43, head 8.44; the veil covers a plane between 8.42 and 8.43.
 #          v18 (2026-11-12): NPT step "the things drawn at an altitude from 8.40 to 8.50 are logged" (names the AltitudeLayer at 8.42-8.43 and the things in the band) AND the nine remaining section layers hidden at once (Snow, Sand, Darkness, EdgeShadows, IndoorMask, FogOfWar, LightingOverlay, SunShadows, Resource); if the veil goes, halve the list next run. Diagnostic run.
+#          v18 result: df7a green: nine layers hidden, veil unchanged; band 8.40 to 8.50 holds only the pawns; Ryu body is under his crimson duster (coat covers body, shirt, pants).
+#          v19 (2026-11-12): TWO scenarios in one ticket, each one question. (gallery 6) water-garden: no duster so Ryu reads as a person (shirt and pants show), plus NPT step "the cameras and the flecks of the map are logged" to name the veil. (diagnostic control, last scenario of the file, outside the gallery numbering) the same shot on the dry gravel-yard (Ryu (176,143), sexie (181,144), Nelim (171,142), no decor): does the veil follow the water-garden. Diagnostic run.
 #   7. 19h postindustrial workshop. Subject: Nelim at the gene extractor, three archite capsules, a hen under the bench. Composition: zoom 5, cell
 #          (230,213), the machine in the centre, capsules in a row of the machine itself (props, not subjects). Living: a hen, daylilies. Decor: three
 #          ArchiteCapsule, Plant_Daylily at (227,215) and (233,215), four TorchLamp lit around the bench (the roof stays: GALLERY.md, "Éclairer un lieu
@@ -335,7 +337,6 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Ryu" face tattoo is "none"
     And Nelim's Pickle Tools: "Ryu" body tattoo is "STribalTat_Body_SacredWater"
     And Nelim's Pickle Tools: "Ryu" wears "Apparel_CollarShirt" dyed rgb (236, 226, 200)
-    And Nelim's Pickle Tools: "Ryu" wears "Apparel_Duster" dyed rgb (176, 38, 42)
     And Nelim's Pickle Tools: "Ryu" wears "Apparel_Pants" dyed rgb (44, 40, 48)
     And Nelim's Pickle Tools: "Ryu" stands at (146, 171) facing South
     And Ancient Chinese Beast: I spawn the pawn "SZ_SeXieInsect" at (151, 172) with its aura clock at zero
@@ -359,28 +360,12 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (149, 168) fully grown
     And Nelim's Pickle Tools: the eclipse of the map is ended
     And Nelim's Pickle Tools: the game condition "PsychicSoothe" is ended
-    And Nelim's Pickle Tools: the graphics of "Ryu" are refreshed
-    And Nelim's Pickle Tools: the draw state of the render nodes of "Ryu" is logged
-    And Nelim's Pickle Tools: the draw position of "Ryu" is logged
-    And Nelim's Pickle Tools: what draws over the map is logged
-    And Nelim's Pickle Tools: the things drawn at an altitude from 8.40 to 8.50 are logged
-    And Nelim's Pickle Tools: the section layers named "Snow" are hidden
-    And Nelim's Pickle Tools: the section layers named "Sand" are hidden
-    And Nelim's Pickle Tools: the section layers named "Darkness" are hidden
-    And Nelim's Pickle Tools: the section layers named "EdgeShadows" are hidden
-    And Nelim's Pickle Tools: the section layers named "IndoorMask" are hidden
-    And Nelim's Pickle Tools: the section layers named "FogOfWar" are hidden
-    And Nelim's Pickle Tools: the section layers named "LightingOverlay" are hidden
-    And Nelim's Pickle Tools: the section layers named "SunShadows" are hidden
-    And Nelim's Pickle Tools: the section layers named "Resource" are hidden
-    And Nelim's Pickle Tools: the render nodes of "Ryu" are logged
-    And Nelim's Pickle Tools: the body texture of "Ryu" is logged
-    And Nelim's Pickle Tools: the sky, weather and map layers are logged
+    And Nelim's Pickle Tools: the cameras and the flecks of the map are logged
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-6-sexie-aura"
-    And Nelim's Pickle Tools: the draw requests of "Ryu" are logged
     And Nelim's Pickle Tools: the interface is shown again
     And Nelim's Pickle Tools: the decor is removed
+
 
   Scenario: gallery 7 - the gene extractor in the postindustrial workshop
     Given I set the hour to 19
@@ -461,3 +446,53 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     When I take a screenshot "gallery-8-tame-clones"
     And Nelim's Pickle Tools: the interface is shown again
     And Nelim's Pickle Tools: the decor is removed
+
+  Scenario: diagnostic control - the shot of gallery 6 on the dry gravel yard
+    Given I set the hour to 18
+    And I set the weather to "Clear"
+    And Nelim's Pickle Tools: the colonists are sent to the map corner
+    And Nelim's Pickle Tools: the temperature of the map is 20 degrees
+    And Nelim's Sanctuary: the sanctuary "gravel-yard" is emptied
+    And Nelim's Sanctuary: I am at the sanctuary "gravel-yard"
+    And Nelim's Pickle Tools: studio presentation mode is enabled
+    And Nelim's Pickle Tools: the drawing of the class "Ability_BerserkRing" is skipped
+    And Nelim's Pickle Tools: the drawing of the class "CompSeXieExpansion" is skipped
+    And Nelim's Pickle Tools: I let 60 ticks pass
+    And Nelim's Pickle Tools: all animals are removed
+    And Ancient Chinese Beast: I spawn a colonist named "Ryu" near x=176 z=143
+    And Nelim's Pickle Tools: "Ryu" loses all genes
+    And Nelim's Pickle Tools: "Ryu" gender is Male
+    And "Ryu" is 43 years old
+    And Nelim's Pickle Tools: "Ryu" body type is Male
+    And Nelim's Pickle Tools: "Ryu" head type is "Male_NarrowPointy"
+    And Nelim's Pickle Tools: "Ryu" has the gene "Skin_Melanin4"
+    And Nelim's Pickle Tools: "Ryu" has the gene "Hair_InkBlack"
+    And Nelim's Pickle Tools: "Ryu" has the gene "Eyes_SkyBlue"
+    And Nelim's Pickle Tools: "Ryu" hair colour is taken from its genes
+    And Nelim's Pickle Tools: "Ryu" hairstyle is "Roo_Royal_CleancutHD"
+    And Nelim's Pickle Tools: "Ryu" face tattoo is "none"
+    And Nelim's Pickle Tools: "Ryu" body tattoo is "STribalTat_Body_SacredWater"
+    And Nelim's Pickle Tools: "Ryu" wears "Apparel_CollarShirt" dyed rgb (236, 226, 200)
+    And Nelim's Pickle Tools: "Ryu" wears "Apparel_Pants" dyed rgb (44, 40, 48)
+    And Nelim's Pickle Tools: "Ryu" stands at (176, 143) facing South
+    And Ancient Chinese Beast: I spawn the pawn "SZ_SeXieInsect" at (181, 144) with its aura clock at zero
+    And Nelim's Pickle Tools: time is paused for the capture
+    And Nelim's Pickle Tools: I frame the cell (177, 143) at zoom 6
+    When Ancient Chinese Beast: pawn 1 is sent berserk as the aura does
+    And Nelim's Pickle Tools: time is paused for the capture
+    And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_SanShanHat"
+    And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_BasicMiddleClothes" dyed rgb (122, 84, 52)
+    And Nelim's Pickle Tools: "Nelim" stands at (171, 142) facing South
+    And Nelim's Pickle Tools: "Ryu" stands at (176, 143) facing East
+    And Nelim's Sanctuary: Nelim has her own face
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
+    And Nelim's Pickle Tools: "Nelim" facial expression is "normal+FleeAndCower"
+    And Nelim's Pickle Tools: "Ryu" facial expression is "normal+AttackMelee2"
+    And Nelim's Pickle Tools: the eclipse of the map is ended
+    And Nelim's Pickle Tools: the game condition "PsychicSoothe" is ended
+    And Nelim's Pickle Tools: the cameras and the flecks of the map are logged
+    And Nelim's Pickle Tools: the map is shown alone for a capture
+    And I take a screenshot "gallery-6-sexie-aura"
+    And Nelim's Pickle Tools: the interface is shown again
+    And Nelim's Pickle Tools: the decor is removed
+
