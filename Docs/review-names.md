@@ -35,3 +35,4 @@ Names decided by Virginie. A decided name is applied and never raised again by t
 | Biotech | Kept: `Biotech` | TM/Virginie rule (2026-11-12): Biotech stays Biotech; it is the official DLC name. | 2026-11-13 |
 | Use This Instead | Kept in English (a Workshop page name); if a French text cites it, TITLE? to Audit first. | Proposed by me, pending Virginie. | 2026-11-13 |
 | Use This Instead | DECIDED: `Use This Instead (À utiliser à la place)`. Not cited in any French text today. | Virginie, 2026-11-13: "À utiliser à la place validé". Impersonal form, no address to the player; her first idea "utilisable à la place de" lacked a complement. | 2026-11-13 |
+| 山海志怪-华夏凶兽和基因扩展 (the Chinese title of the upstream mod, in the credits) | No decision needed, dropped from TO DECIDE | Virginie, 2026-11-13: "si pas besoin pas besoin". The credits quote the original page name as it is; no French text cites it. | 2026-11-13 |
