@@ -51,7 +51,7 @@
   <SZ_ExtractGene_YearC.description>Extraire le gène d'un cadavre de bête nian pour obtenir sa corne.</SZ_ExtractGene_YearC.description>
   <SZ_ExtractGene_YearC.jobString>extraction d'un gène de bête</SZ_ExtractGene_YearC.jobString>
   <SZ_ExtractGene_YearC.label>extraire le gène de la corne de bête nian</SZ_ExtractGene_YearC.label>
-  <SZ_ExtractGene.description>Utiliser les facteurs particuliers présents dans les cadavres des bêtes de la Chine antique pour extraire des capsules d'archites.</SZ_ExtractGene.description>
+  <SZ_ExtractGene.description>Utiliser les facteurs particuliers présents dans les cadavres des bêtes de la Chine Antique pour extraire des capsules d'archites.</SZ_ExtractGene.description>
   <SZ_ExtractGene.jobString>extraction d'un gène de bête</SZ_ExtractGene.jobString>
   <SZ_ExtractGene.label>extraire des capsules d'archites</SZ_ExtractGene.label>
 </LanguageData>
