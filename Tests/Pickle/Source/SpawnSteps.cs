@@ -174,24 +174,6 @@ namespace AncientChineseBeast.PickleSteps
             var pawn = TryGet(ctx).Pawns[TryGet(ctx).Pawns.Count - 1];
             pawn.Name = new NameTriple(name, name, name);
         }
-        // A roster colonist already in the save (the gallery uses the real Sanctuary pawns): the scenario takes it as its next
-        // numbered pawn, so "pawn 1 is sent berserk" reaches it. Nothing is spawned, nothing is destroyed at the end.
-        [When("Ancient Chinese Beast: I take the colonist named {string} as a pawn of the scenario")]
-        public void TakeColonist(PickleContext ctx, string name)
-        {
-            var map = Stage.CurrentMap(ctx);
-            Pawn found = null;
-            var names = new List<string>();
-            foreach (var colonist in map.mapPawns.FreeColonists)
-            {
-                var shortName = colonist.Name?.ToStringShort ?? "(no name)";
-                names.Add(shortName);
-                if (found == null && shortName == name) found = colonist;
-            }
-            ctx.Assert(found != null, $"no free colonist called {name}; the colonists are: {string.Join(", ", names)}");
-            Remember(ctx, found);
-        }
-
         // A tame pawn of a chosen sex: the breeding scenarios need a male and a female, which the game draws at random.
         [When("Ancient Chinese Beast: I spawn the tame {string} of gender {word} at x={int} z={int}")]
         public void SpawnTame(PickleContext ctx, string kindDefName, string gender, int x, int z)

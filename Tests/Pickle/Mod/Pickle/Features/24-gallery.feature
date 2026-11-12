@@ -58,7 +58,8 @@
 #          v11 (2026-11-12, b326 red on the NPT layer step, now fixed by NPT: all declared DrawLayer methods and the Visible getter; the draw-state step now draws with the Clothes and Headgear flags and logs transform, scale and mesh bounds per node): refiled with PollutionCloud and Gas both hidden. Diagnostic run.
 #          v12 (2026-11-12, e16c: PollutionCloud and Gas hidden, veil and Ryu body unchanged; all of Ryu's nodes canDrawNow True with offset 0 and scale 1): NPT suspect for a veil only at 18h on one place is the dusk sky and sun glow: step "the sun glow of the map is held at 1.0" before the capture (veil gone = dusk glow), plus the light and section-layer logs; the draw-state step now also logs material, texture and visible pixels per node (read Body). Diagnostic run, the held glow is not the final look.
 #          v13 (2026-11-12, cb9f: glow held at 1.0 changed the light but the veil stayed, so it is not the dusk; node materials normal (skin shader, texture 512x512), transforms normal; the veil covers the whole frame except the dirt patch and the lily pads sit on it: it is the WATER terrain, and the water layer is probably drawn above the low nodes of Ryu (body, shirt, pants) and below his head and duster, which is why only head and cape show): hide the section layer named Watergen, glow hold removed (dusk back). Diagnostic run.
-#          v14 (2026-11-12, v13: Watergen hidden, capture unchanged; Ryu has no body in scene 5 either, while Nelim draws in full, so the suspect is the spawned and edited pawn): the REAL roster colonist "Blue" (Ryu "Blue" Sai, NSB roster, nothing of his properties set) is taken as pawn 1 by the new local step "I take the colonist named Blue as a pawn of the scenario"; the spawn and every property step are removed (roster canon); apparel kept; NPT logs "the draw position of Blue is logged" and "what draws over the map is logged" for the veil. Diagnostic run.
+#          v14 (2026-11-12, NOT USED: the real roster Blue is not in the sanctuary save, which holds only Nelim: b279 red "no free colonist called Blue; the colonists are: Nelim"; the local step and its DLL were reverted)
+#          v15 (2026-11-12): Ryu spawned and edited as in v13 again, with NPT logs "the draw position of Ryu is logged" ([pawn-draw]: race, kind, humanlike, life stage, body size, screen point) and "what draws over the map is logged" ([draw-over-map]). Diagnostic run.
 #   7. 19h postindustrial workshop. Subject: Nelim at the gene extractor, three archite capsules, a hen under the bench. Composition: zoom 5, cell
 #          (230,213), the machine in the centre, capsules in a row of the machine itself (props, not subjects). Living: a hen, daylilies. Decor: three
 #          ArchiteCapsule, Plant_Daylily at (227,215) and (233,215), four TorchLamp lit around the bench (the roof stays: GALLERY.md, "Éclairer un lieu
@@ -315,11 +316,23 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: the drawing of the class "CompSeXieExpansion" is skipped
     And Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: all animals are removed
-    And Ancient Chinese Beast: I take the colonist named "Blue" as a pawn of the scenario
-    And Nelim's Pickle Tools: "Blue" wears "Apparel_CollarShirt" dyed rgb (236, 226, 200)
-    And Nelim's Pickle Tools: "Blue" wears "Apparel_Duster" dyed rgb (176, 38, 42)
-    And Nelim's Pickle Tools: "Blue" wears "Apparel_Pants" dyed rgb (44, 40, 48)
-    And Nelim's Pickle Tools: "Blue" stands at (146, 171) facing South
+    And Ancient Chinese Beast: I spawn a colonist named "Ryu" near x=146 z=171
+    And Nelim's Pickle Tools: "Ryu" loses all genes
+    And Nelim's Pickle Tools: "Ryu" gender is Male
+    And "Ryu" is 43 years old
+    And Nelim's Pickle Tools: "Ryu" body type is Male
+    And Nelim's Pickle Tools: "Ryu" head type is "Male_NarrowPointy"
+    And Nelim's Pickle Tools: "Ryu" has the gene "Skin_Melanin4"
+    And Nelim's Pickle Tools: "Ryu" has the gene "Hair_InkBlack"
+    And Nelim's Pickle Tools: "Ryu" has the gene "Eyes_SkyBlue"
+    And Nelim's Pickle Tools: "Ryu" hair colour is taken from its genes
+    And Nelim's Pickle Tools: "Ryu" hairstyle is "Roo_Royal_CleancutHD"
+    And Nelim's Pickle Tools: "Ryu" face tattoo is "none"
+    And Nelim's Pickle Tools: "Ryu" body tattoo is "STribalTat_Body_SacredWater"
+    And Nelim's Pickle Tools: "Ryu" wears "Apparel_CollarShirt" dyed rgb (236, 226, 200)
+    And Nelim's Pickle Tools: "Ryu" wears "Apparel_Duster" dyed rgb (176, 38, 42)
+    And Nelim's Pickle Tools: "Ryu" wears "Apparel_Pants" dyed rgb (44, 40, 48)
+    And Nelim's Pickle Tools: "Ryu" stands at (146, 171) facing South
     And Ancient Chinese Beast: I spawn the pawn "SZ_SeXieInsect" at (151, 172) with its aura clock at zero
     And Nelim's Pickle Tools: time is paused for the capture
     And Nelim's Pickle Tools: I frame the cell (147, 171) at zoom 6
@@ -332,21 +345,21 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_SanShanHat"
     And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_BasicMiddleClothes" dyed rgb (122, 84, 52)
     And Nelim's Pickle Tools: "Nelim" stands at (141, 170) facing South
-    And Nelim's Pickle Tools: "Blue" stands at (146, 171) facing East
+    And Nelim's Pickle Tools: "Ryu" stands at (146, 171) facing East
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+FleeAndCower"
-    And Nelim's Pickle Tools: "Blue" facial expression is "normal+AttackMelee2"
+    And Nelim's Pickle Tools: "Ryu" facial expression is "normal+AttackMelee2"
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (143, 172) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (149, 168) fully grown
     And Nelim's Pickle Tools: the eclipse of the map is ended
     And Nelim's Pickle Tools: the game condition "PsychicSoothe" is ended
-    And Nelim's Pickle Tools: the graphics of "Blue" are refreshed
-    And Nelim's Pickle Tools: the draw state of the render nodes of "Blue" is logged
-    And Nelim's Pickle Tools: the draw position of "Blue" is logged
+    And Nelim's Pickle Tools: the graphics of "Ryu" are refreshed
+    And Nelim's Pickle Tools: the draw state of the render nodes of "Ryu" is logged
+    And Nelim's Pickle Tools: the draw position of "Ryu" is logged
     And Nelim's Pickle Tools: what draws over the map is logged
-    And Nelim's Pickle Tools: the render nodes of "Blue" are logged
-    And Nelim's Pickle Tools: the body texture of "Blue" is logged
+    And Nelim's Pickle Tools: the render nodes of "Ryu" are logged
+    And Nelim's Pickle Tools: the body texture of "Ryu" is logged
     And Nelim's Pickle Tools: the sky, weather and map layers are logged
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-6-sexie-aura"
