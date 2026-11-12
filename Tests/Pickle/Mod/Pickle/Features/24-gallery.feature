@@ -53,6 +53,7 @@
 #          v4 (2026-11-09, captures 0706 and 645a: the ring drew a brown-green veil over the whole frame at zoom 5 and 6): NPT step "the drawing of the class Ability_BerserkRing is skipped" hides the ring; the shot now reads by the scorpion, the berserk Ryu and Nelim, the ring is no longer in the frame (owner call open: ring as subject vs readable pawns).
 #          v7 (2026-11-10, capture of 82e7: veil kept after the eclipse step, Ryu a floating head with a red cape, Body and apparel nodes tex empty): Ryu body type Male instead of Thin (suspect: no WDI Thin body for a male pawn); NPT step "the sky, weather and map layers are logged" before the capture to name the veil. Not a final composition, a diagnostic run.
 #          v8 (2026-11-12, capture of ede4: veil kept, Ryu still a floating head with body type Male, [sky] names the condition PsychicSoothe, GameCondition_PsychicEmanation, a map-wide sky tint): NPT steps (PickleTools, compiled not played) "the game condition PsychicSoothe is ended" before the capture, and "the graphics of Ryu are refreshed" after every body, gene, apparel and expression change. Ryu body type stays Male. Still a diagnostic run: if the body stays missing, the Player.log lines about Ryu's body graphic go to NPT.
+#          v9 (2026-11-12, capture of 97df: PsychicSoothe ended (no condition logged any more) and graphics refreshed, veil and floating head unchanged; Player.log: Ryu body node draws Naked_Male by the log yet Body, shirt, pants nodes show no texture and only the duster is seen; section layers list holds Verse.SectionLayer_PollutionCloud and Verse.SectionLayer_Gas, suspects for the veil): NPT step "the sky overlays are hidden" tried before the capture. Diagnostic run.
 #   7. 19h postindustrial workshop. Subject: Nelim at the gene extractor, three archite capsules, a hen under the bench. Composition: zoom 5, cell
 #          (230,213), the machine in the centre, capsules in a row of the machine itself (props, not subjects). Living: a hen, daylilies. Decor: three
 #          ArchiteCapsule, Plant_Daylily at (227,215) and (233,215), four TorchLamp lit around the bench (the roof stays: GALLERY.md, "Éclairer un lieu
@@ -351,6 +352,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: the render nodes of "Ryu" are logged
     And Nelim's Pickle Tools: the body texture of "Ryu" is logged
     And Nelim's Pickle Tools: the sky, weather and map layers are logged
+    And Nelim's Pickle Tools: the sky overlays are hidden
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-6-sexie-aura"
     And Nelim's Pickle Tools: the interface is shown again
