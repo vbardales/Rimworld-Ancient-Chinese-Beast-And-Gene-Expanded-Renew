@@ -45,12 +45,14 @@
 #          Risk: the barrier or the projectile fails (the 2026-10-13 red). Plan: the step asserts the projectile in flight; replay of feature 20 first.
 #          v2: Sandbags at (181,144) and (182,143), TorchLamp lit at (178,138). Instant: Ryu has just fired, the shot is thrown back; obtained by the step that asserts the projectile in flight, then the pause.
 #          v3 (2026-11-09, capture of ad70 read: Ryu absent from the frame, barrier clipped at the left edge, adequacy about 3): zoom 6 on cell (172,143) so the whole ring is in frame, Ryu put back at (179,143) facing West after the pause, so the shooter is seen.
-#   6. 18h gravel yard. Subject: the sexie's red aura drives Ryu berserk, Nelim at the edge of the ring. Composition: zoom 5, cell (177,143), the ring
-#          around the beast, Ryu inside. Living: sexie, Ryu. Decor: TorchLamp lit at (178,138) and (168,140), the dusk light. Nelim: brown middle robe (122,84,52),  SanShan hat, long loose hair. Action: backs away. Face afraid.
+#   6. 18h gravel yard. Subject: the sexie's red aura drives Ryu berserk, Nelim at the edge of the ring. Composition: zoom 7, cell (177,143), the ring
+#          around the beast, Ryu inside. Living: sexie, Ryu. Decor: TorchLamp lit at (178,138) and (168,140), the dusk light, Hay at (172,140) and (179,146). Nelim: brown middle robe (122,84,52),  SanShan hat, long loose hair. Action: backs away. Face afraid.
 #          v2: Plant_Daylily fully grown at (170,146) and (176,146). Subject read in the image: Ryu lunges (AttackMelee2) toward Nelim who cowers (FleeAndCower), the scorpion with its red ring behind him. Instant: the ring has just closed on Ryu; obtained by the step that sends him berserk, then the pause.
-#          v4 (2026-11-09, captures 0706 and 645a: the ring drew a brown-green veil over the whole frame at zoom 5 and 6): NPT step "the drawing of the class Ability_BerserkRing is skipped" hides the ring; the shot now reads by the scorpion, the berserk Ryu and Nelim, the ring is no longer in the frame (owner call open: ring as subject vs readable pawns).
+#          v4 (2026-11-09, captures 0706 and 645a: the ring drew a brown-green veil over the whole frame at zoom 5 and 6): NPT step "the drawing of the class the ring ability class is skipped" hides the ring; the shot now reads by the scorpion, the berserk Ryu and Nelim, the ring is no longer in the frame (owner call open: ring as subject vs readable pawns).
 #          v7 to v19 (2026-11-10 to 2026-11-12, thirteen diagnostic runs; full log in STATUS.md): a brown-green veil over the whole frame and a Ryu that looked like a head with a red cape. Every sky, weather, condition and section layer test failed to move the veil. The last run on the dry gravel-yard (control) showed no veil: the veil is the WATER of the water-garden. Ryu was never broken: his crimson duster, a long coat, covers his body, shirt and pants.
 #          v20 (2026-11-12): scene 6 MOVED to the dry gravel-yard (Ryu (176,143), sexie (181,144), Nelim (171,142), frame (177,143) zoom 6, decor: TorchLamp lit at (178,138) and (168,140), Plant_Daylily at (170,146) and (176,146), cells of scene 5), Ryu without the duster (shirt and pants), no diagnostic step left. First candidate run.
+#          v20 result: 0cb6 green, capture judged REDO (image 3.5, understanding 2.5, decoration 2.5, adequacy 3): no veil and Ryu reads as a person, but bare gravel, scattered props, the aura ring not drawn so nothing says "berserk", Ryu calm.
+#          v21 (2026-11-12): the two "drawing is skipped" steps removed so the red ring of the aura draws (the veil of v4 was the water, not the ring: to confirm), zoom 7, decor grouped around the pair: Hay at (172,140) and (179,146), a third Plant_Daylily at (173,146). One question: does the ring read on the gravel yard?
 #   7. 19h postindustrial workshop. Subject: Nelim at the gene extractor, three archite capsules, a hen under the bench. Composition: zoom 5, cell
 #          (230,213), the machine in the centre, capsules in a row of the machine itself (props, not subjects). Living: a hen, daylilies. Decor: three
 #          ArchiteCapsule, Plant_Daylily at (227,215) and (233,215), four TorchLamp lit around the bench (the roof stays: GALLERY.md, "Éclairer un lieu
@@ -304,8 +306,6 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Sanctuary: the sanctuary "gravel-yard" is emptied
     And Nelim's Sanctuary: I am at the sanctuary "gravel-yard"
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: the drawing of the class "Ability_BerserkRing" is skipped
-    And Nelim's Pickle Tools: the drawing of the class "CompSeXieExpansion" is skipped
     And Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: all animals are removed
     And Ancient Chinese Beast: I spawn a colonist named "Ryu" near x=176 z=143
@@ -326,7 +326,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Ryu" stands at (176, 143) facing South
     And Ancient Chinese Beast: I spawn the pawn "SZ_SeXieInsect" at (181, 144) with its aura clock at zero
     And Nelim's Pickle Tools: time is paused for the capture
-    And Nelim's Pickle Tools: I frame the cell (177, 143) at zoom 6
+    And Nelim's Pickle Tools: I frame the cell (177, 143) at zoom 7
     When Ancient Chinese Beast: pawn 1 is sent berserk as the aura does
     And Nelim's Pickle Tools: time is paused for the capture
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (178, 138)
@@ -335,6 +335,9 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: the decor "TorchLamp" at (168, 140) is lit
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (170, 146) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (176, 146) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (173, 146) fully grown
+    And Nelim's Pickle Tools: I place the decor "Hay" at (172, 140)
+    And Nelim's Pickle Tools: I place the decor "Hay" at (179, 146)
     And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_SanShanHat"
     And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_BasicMiddleClothes" dyed rgb (122, 84, 52)
     And Nelim's Pickle Tools: "Nelim" stands at (171, 142) facing South
