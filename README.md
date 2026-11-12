@@ -1,6 +1,6 @@
 # Ancient Chinese Beast And Gene Expanded Renew (unofficial)
 
-UNOFFICIAL. This mod is published without the original author's explicit consent. If the original author contacts me to request its removal, I undertake to take it down promptly.
+UNOFFICIAL. This mod is published without the original authors' explicit consent. If any original author contacts me to request its removal, I undertake to take it down promptly.
 
 A RimWorld 1.6 port of **山海志怪-华夏凶兽和基因扩展 - Ancient Chinese Beast And Gene Expanded**
 by **andery233xj, Frolg, DongFang and Ninedaylongbow**, Steam Workshop

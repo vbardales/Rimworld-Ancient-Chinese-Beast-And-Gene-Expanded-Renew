@@ -44,3 +44,7 @@ Refused (7):
 Applied (2): Original (Chinese) message of `SZ_BeastApproach` beast 1 in `Mod/Defs/Incident/Beasts.xml` (word order and comma, to go upstream with the rest); `PUBLICATION.md` gallery note "with single-digit prefixes".
 
 Refused (1): `CHANGELOG.md` `[Unreleased]`, wind barrier bullet, "in front of the list" to "in the list" and "following" to "subsequent": the projectile sat at the head of the list, which is the cause of the repeated error, so "in front of" is meant; "following tick" is plain English.
+
+## 2026-11-12, eighth pass (the seventh failed: no credits)
+
+Nothing refused. Applied (3): Chinese `SZ_Clone_MingShe.description` adds the drought (`同样会带来干旱`, wind flavour kept); Chinese `SZ_Firecracker.description` adds the tenth-damage rule; "original authors'" and "If any original author" in `PUBLICATION.md`, `Mod/About/About.xml` and `README.md` (four authors are credited).

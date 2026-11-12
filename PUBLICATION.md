@@ -49,7 +49,7 @@ One line of English at the bottom of each gallery scene without an interface win
 ## Steam description
 
 ```markdown
-UNOFFICIAL. This mod is published without the original author's explicit consent. If the original author contacts me to request its removal, I undertake to take it down promptly.
+UNOFFICIAL. This mod is published without the original authors' explicit consent. If any original author contacts me to request its removal, I undertake to take it down promptly.
 
 Update of andery233xj, Frolg, DongFang and Ninedaylongbow's [山海志怪-华夏凶兽和基因扩展 - Ancient Chinese Beast And Gene Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=3292446841) to the latest RimWorld version.
 
