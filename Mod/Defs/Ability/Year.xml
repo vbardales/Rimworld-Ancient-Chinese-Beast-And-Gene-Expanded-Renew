@@ -3,7 +3,7 @@
   <AbilityDef>
     <defName>SZ_YearBeast_Flamethrower</defName>
     <label>fire breath</label>
-    <description>Breathes fire over a cone.</description>
+    <description>Breathes fire in a cone.</description>
     <iconPath>AncientChineseBeast/YearBeast/FlameIcon</iconPath>
     <writeCombatLog>True</writeCombatLog>
     <cooldownTicksRange>900</cooldownTicksRange>

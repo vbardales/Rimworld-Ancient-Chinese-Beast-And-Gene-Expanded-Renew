@@ -119,3 +119,7 @@ Refused (1): Chinese `SZ_ChickenPasses.letterText` compaction (`加入殖民地`
 ## 2026-11-13, twenty-first pass
 
 PROPER NOUNS: nothing left to decide. Applied (3): French `SZ_Chicken` "son chant peut aussi être déclenché manuellement" (no implicit address); `SZ_SeXie` "parmi les colons" and "fait s'effondrer un colon" (the English names a colonist). `SZ_SeXieInsect` carries no such passage in the French (checked), nothing to change.
+
+## 2026-11-13, twenty-second pass
+
+PROPER NOUNS: nothing to decide. Applied (2): English "Breathes fire in a cone." (`SZ_YearBeast_Flamethrower`) and "can breathe fire in a cone" (`SZGene_YearBeast_Flamethrower`) in `Mod/Defs` (Audit rule of 2026-11-12, to go upstream with the rest).

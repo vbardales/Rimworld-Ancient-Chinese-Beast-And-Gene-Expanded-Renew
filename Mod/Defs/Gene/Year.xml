@@ -4,7 +4,7 @@
   <GeneDef>
     <defName>SZGene_YearBeast_Flamethrower</defName>
     <label>nian beast fire breath</label>
-    <description>The fire breath, taken from a nian beast. The bearer can breathe fire over a cone the way the beast does.</description>
+    <description>The fire breath, taken from a nian beast. The bearer can breathe fire in a cone the way the beast does.</description>
     <iconPath>AncientChineseBeast/YearBeast/FlameIcon</iconPath>
     <displayCategory>Archite</displayCategory>
     <marketValueFactor>1.5</marketValueFactor>
