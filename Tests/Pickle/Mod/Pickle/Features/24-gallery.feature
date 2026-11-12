@@ -45,6 +45,7 @@
 #          Risk: the barrier or the projectile fails (the 2026-10-13 red). Plan: the step asserts the projectile in flight; replay of feature 20 first.
 #          v2: Sandbags at (181,144) and (182,143), TorchLamp lit at (178,138). Instant: Ryu has just fired, the shot is thrown back; obtained by the step that asserts the projectile in flight, then the pause.
 #          v3 (2026-11-09, capture of ad70 read: Ryu absent from the frame, barrier clipped at the left edge, adequacy about 3): zoom 6 on cell (172,143) so the whole ring is in frame, Ryu put back at (179,143) facing West after the pause, so the shooter is seen.
+#          v4 (2026-11-13): Ryu without the crimson duster (shirt and pants only): the long coat covered his body and made him look like a head with a red cape (found on scene 6). One question: is Ryu in frame and readable?
 #   6. 18h gravel yard. Subject: the sexie's red aura drives Ryu berserk, Nelim at the edge of the ring. Composition: zoom 7, cell (177,143), the ring
 #          around the beast, Ryu inside. Living: sexie, Ryu. Decor: TorchLamp lit at (178,138) and (168,140), the dusk light, Hay at (172,146) and (178,147), Plant_Daylily at (169,145), (173,140) and (174,147), Sandbags at (168,143) and (168,144). Nelim: brown middle robe (122,84,52),  SanShan hat, long loose hair. Action: backs away. Face afraid.
 #          v2: Plant_Daylily fully grown at (170,146) and (176,146). Subject read in the image: Ryu lunges (AttackMelee2) toward Nelim who cowers (FleeAndCower), the scorpion with its red ring behind him. Instant: the ring has just closed on Ryu; obtained by the step that sends him berserk, then the pause.
@@ -265,7 +266,6 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Ryu" face tattoo is "none"
     And Nelim's Pickle Tools: "Ryu" body tattoo is "STribalTat_Body_SacredWater"
     And Nelim's Pickle Tools: "Ryu" wears "Apparel_CollarShirt" dyed rgb (236, 226, 200)
-    And Nelim's Pickle Tools: "Ryu" wears "Apparel_Duster" dyed rgb (176, 38, 42)
     And Nelim's Pickle Tools: "Ryu" wears "Apparel_Pants" dyed rgb (44, 40, 48)
     And Nelim's Pickle Tools: "Ryu" stands at (180, 143) facing West
     And Ancient Chinese Beast: the colonist "Ryu" is added to the pawns
