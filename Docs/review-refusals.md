@@ -23,3 +23,18 @@ Nothing refused. Applied: English `SZ_Storyteller_Sexie.description` "left on th
 ## 2026-11-12, fourth pass
 
 Nothing refused. Applied (5): Chinese clone recipe openings (`从…的尸体中…花些时间加入合适的培养液`, five recipes); `SZ_BeastGene.description` closing parenthesis; the two Original (Chinese) beast messages of `Mod/Defs/Incident/Beasts.xml` (`若放任其肆虐`, `为了让庄稼能够顺利生长`, local edit under the Audit rule of 2026-11-12, to go upstream with the rest); French `SZ_SeXie.description` last sentence (venom and pain).
+
+## 2026-11-12, fifth pass
+
+Applied (5): French `SZ_Chicken.description` quote (`Quel beau coq ! »`, no `tu`); French `SZ_SeXie.description` `contre ses compagnons` (English: against their own companions); Chinese `SZ_SeXieInsect_Friendly.description` names the scorpion form; Chinese `SZ_ExtractGene_QiongQiB.label` `提取穷奇-眼基因` (the gene is the eye, not compound eyes); English thought `SZ_ChickenCrow` stage "fighting spirit" and "clouds" (Mod/Defs/Thought/thoughts.xml, Audit rule of 2026-11-12, to go upstream).
+
+Refused (7):
+
+| Key or text | Proposal | Reason |
+|---|---|---|
+| `TRANSLATION_REVIEW.md` header revision `5bd5cad` against `40690e7` | regenerate from the audited revision | The header always carries the current commit; the review is regenerated after each pass, `40690e7` in the first log line is only the revision of the first pass. |
+| French `ChineseBeast_Gun_egret.label` | keep « Egret » | A weapon name is translated (白鹭 is the egret); « Aigrette » is a choice of wording, left as is. |
+| English `SZ_Storyteller_Sexie.description` "Awkward random events" | rewording | Taste; the upstream wording reads fine in context. |
+| Chinese incident labels `SZ_YearBeastApproach.label`, `SZ_BeastApproach.label`, `SZ_BeastApproachTunnel.label` | drop the click hint | The hint is the original design (the same hint is in the letter labels); no truncation seen in the captures. |
+| `PUBLICATION.md` adult content line | reorder words | Already grammatical. |
+| `PUBLICATION.md` nian bullet | full sentence | A list item in a bullet list, fragment on purpose like its siblings. |
