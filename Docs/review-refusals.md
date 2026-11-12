@@ -19,3 +19,7 @@ Nothing refused. Applied: `ChineseSimplified` `SZ_Insect_SeXie` left and right e
 ## 2026-11-12, third pass
 
 Nothing refused. Applied: English `SZ_Storyteller_Sexie.description` "left on the rim" (Mod/Defs/StoryTeller/storyteller.xml; the upstream wording, local edit under the Audit rule of 2026-11-12); French `SZ_SeXie_Friendly.description` `griffes venimeuses` (human form; `SZ_SeXieInsect_Friendly` keeps `pinces`); Chinese `SZ_MingShe.description` colon before the wind shield clause and `SZ_YearBeast_Friendly.description` punctuation and `在面对`; duplicate `SZ_QQAnimation.label` and `.description` removed from `ChineseSimplified/DefInjected/ThingDef/CHSSPawn.xml` (same value twice, one kept).
+
+## 2026-11-12, fourth pass
+
+Nothing refused. Applied (5): Chinese clone recipe openings (`从…的尸体中…花些时间加入合适的培养液`, five recipes); `SZ_BeastGene.description` closing parenthesis; the two Original (Chinese) beast messages of `Mod/Defs/Incident/Beasts.xml` (`若放任其肆虐`, `为了让庄稼能够顺利生长`, local edit under the Audit rule of 2026-11-12, to go upstream with the rest); French `SZ_SeXie.description` last sentence (venom and pain).

@@ -28,12 +28,12 @@
           <li>
             <pawn>SZ_QiongQi</pawn>
             <label>穷奇！(qiongqi)</label>
-            <text>没想到这种只存在于山海经中的凶兽竟然真的出现在了边缘世界上！据可靠情报透露，穷奇有着一对极其敏锐的双眼，如果放任它肆虐不管的话，我们的殖民地最终也只会成为它的囊中之物！\n\nWe never thought a beast that exists only in the Classic of Mountains and Seas would really turn up on the rim! Reliable word has it that the qiongqi has a pair of extraordinarily sharp eyes. Let it rampage unchecked and our colony ends up in its jaws.</text>
+            <text>没想到这种只存在于山海经中的凶兽竟然真的出现在了边缘世界上！据可靠情报透露，穷奇有着一对极其敏锐的双眼，若放任其肆虐，我们的殖民地最终也只会成为它的囊中之物！\n\nWe never thought a beast that exists only in the Classic of Mountains and Seas would really turn up on the rim! Reliable word has it that the qiongqi has a pair of extraordinarily sharp eyes. Let it rampage unchecked and our colony ends up in its jaws.</text>
           </li>
           <li>
             <pawn>SZ_MingShe</pawn>
             <label>鸣蛇！(mingshe)</label>
-            <text>造成华夏据点多处发生旱灾的凶兽——鸣蛇已经出现在了我们的殖民地！为了保卫我们的庄稼能够顺利生长，我们有必要迅速找到应对它的方法并将它送去见阎王老爷。\n\nThe beast behind the droughts across so many Shenzhou settlements - the mingshe - has appeared in our colony! If our crops are to grow at all, we had better find a way to deal with it quickly, and send it to Lord Yama.</text>
+            <text>造成华夏据点多处发生旱灾的凶兽——鸣蛇已经出现在了我们的殖民地！为了让庄稼能够顺利生长，我们有必要迅速找到应对它的方法并将它送去见阎王老爷。\n\nThe beast behind the droughts across so many Shenzhou settlements - the mingshe - has appeared in our colony! If our crops are to grow at all, we had better find a way to deal with it quickly, and send it to Lord Yama.</text>
           </li>
         </beasts>
       </li>
