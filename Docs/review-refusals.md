@@ -89,3 +89,9 @@ Refused (2):
 | `Mod/About/About.xml` `<name>` and the Workshop title | add a French form | Changes the published title of the item; an owner decision, not a translation fix. |
 
 The proper-noun "to decide" lists (creature names, Shenzhou, Longbow, Egret, Sexie title) repeat choices already kept in earlier passes; nothing changed.
+
+## 2026-11-12, sixteenth pass
+
+Applied (1): English `SZGene_QiongQi_Scratch.description` "Usually hit the head." (plural subject, `Mod/Defs/Gene/QiongQi.xml`, to go upstream with the rest).
+
+Not applied (2), waiting for Virginie: the French form of the mod title (registry empty, Audit 2026-11-12); everything in the PROPER NOUNS section (decision table sent to her). The Chinese long descriptions: ChatGPT proposes nothing, nothing to apply.

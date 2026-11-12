@@ -75,7 +75,7 @@
   <GeneDef>
     <defName>SZGene_QiongQi_Scratch</defName>
     <label>qiongqi claws</label>
-    <description>The qiongqi's sharp claws. They open an enemy's armour easily and greatly raise armour penetration in melee. Usually hits the head.</description>
+    <description>The qiongqi's sharp claws. They open an enemy's armour easily and greatly raise armour penetration in melee. Usually hit the head.</description>
     <iconPath>AncientChineseBeast/QiongQi/ScratchIcon</iconPath>
     <displayCategory>Archite</displayCategory>
     <marketValueFactor>1.5</marketValueFactor>
