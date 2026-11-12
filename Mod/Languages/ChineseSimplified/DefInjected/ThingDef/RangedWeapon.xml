@@ -13,7 +13,7 @@
          indexed keys had them the other way round, so 刀尖 (blade point) was aimed at the
          blunt handle. It now names the tool it describes, and the blunt part takes 枪托,
          the same word the egret above uses for its stock. -->
-    <ChineseBeast_Gun_Dragon.tools.handle.label>枪托</ChineseBeast_Gun_Dragon.tools.handle.label>
+    <ChineseBeast_Gun_Dragon.tools.handle.label>握把</ChineseBeast_Gun_Dragon.tools.handle.label>
     <ChineseBeast_Gun_Dragon.tools.point.label>刀尖</ChineseBeast_Gun_Dragon.tools.point.label>
     <Bullet_Dragon.label>反凶兽弹</Bullet_Dragon.label>
 

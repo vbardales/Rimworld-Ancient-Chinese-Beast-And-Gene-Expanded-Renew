@@ -11,3 +11,7 @@ Every ChatGPT suggestion refused, with the reason. Format: key or text, proposal
 | `ChineseSimplified` `SZ_Clone_MingShe`, `SZ_Clone_QiongQi`, `SZ_Clone_YearBeast` `.description` | restore the corpse cloning mechanism | The Chinese already says it (DNA taken from the corpse, copied, culture medium, device, clone for the colony); nothing omitted. Only the two sexie forms were distinguished (applied). |
 
 Applied the same day: French `pied` to `patte` for the four paw labels of `SZ_QuadrupedAnimalWithPawsTailWings`; the 22 missing `ChineseSimplified` keys filled (Keyed and DefInjected); after the Audit rule of the same day (source column corrected whatever the licence), the `ChineseSimplified` corrections of `SZ_MingShe`, `SZ_SeXie`, `SZ_Chicken`, `SZ_Strength`, `SZ_Clone_SeXieA` and `SZ_Clone_SeXieB` (human form, scorpion form), `SZ_BeastGeneExtractor` and `SZ_YearBeast_Friendly` (PawnKindDef label).
+
+## 2026-11-12, second pass (same revision line, after the first corrections)
+
+Nothing refused. Applied: `ChineseSimplified` `SZ_Insect_SeXie` left and right elytra `左鞘翅` / `右鞘翅`; `ChineseBeast_Gun_Dragon.tools.handle.label` `握把` (handle, as the English and French "poignée").

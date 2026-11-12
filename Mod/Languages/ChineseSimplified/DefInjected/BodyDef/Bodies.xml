@@ -153,9 +153,9 @@
   <SZ_Human_SeXie.corePart.parts.right_leg.parts.right_foot.parts.right_big_toe.customLabel>右大拇趾</SZ_Human_SeXie.corePart.parts.right_leg.parts.right_foot.parts.right_big_toe.customLabel>
 
   <!-- EN: left elytra -->
-  <SZ_Insect_SeXie.corePart.parts.left_elytra.customLabel>左鞘</SZ_Insect_SeXie.corePart.parts.left_elytra.customLabel>
+  <SZ_Insect_SeXie.corePart.parts.left_elytra.customLabel>左鞘翅</SZ_Insect_SeXie.corePart.parts.left_elytra.customLabel>
   <!-- EN: right elytra -->
-  <SZ_Insect_SeXie.corePart.parts.right_elytra.customLabel>右鞘</SZ_Insect_SeXie.corePart.parts.right_elytra.customLabel>
+  <SZ_Insect_SeXie.corePart.parts.right_elytra.customLabel>右鞘翅</SZ_Insect_SeXie.corePart.parts.right_elytra.customLabel>
   <!-- EN: left eye -->
   <SZ_Insect_SeXie.corePart.parts.Pronotum.parts.InsectHead.parts.left_eye.customLabel>左眼</SZ_Insect_SeXie.corePart.parts.Pronotum.parts.InsectHead.parts.left_eye.customLabel>
   <!-- EN: right eye -->
