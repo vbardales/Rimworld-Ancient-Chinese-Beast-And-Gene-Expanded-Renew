@@ -3,7 +3,7 @@
 
     <SZ_ExtractGene.label>提取超凡胶囊</SZ_ExtractGene.label>
     <SZ_ExtractGene.description>利用神州凶兽的尸体中含有的特殊因子提取超凡胶囊。</SZ_ExtractGene.description>
-    <SZ_ExtractGene.jobString>正在从凶兽尸体中提取超凡胶囊。</SZ_ExtractGene.jobString>
+    <SZ_ExtractGene.jobString>正在从凶兽中提取基因。</SZ_ExtractGene.jobString>
 
     <SZ_ExtractGene_YearA.label>提取年兽-喷火基因</SZ_ExtractGene_YearA.label>
     <SZ_ExtractGene_YearA.description>从年兽的尸体中提取基因并获得年兽的喷火能力。</SZ_ExtractGene_YearA.description>

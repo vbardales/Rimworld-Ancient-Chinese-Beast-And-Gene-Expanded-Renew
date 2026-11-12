@@ -66,3 +66,7 @@ Nothing refused. The proper-noun table asked for nothing (all forms deliberate).
 The proper-noun table asked for nothing. Applied (3 groups): French `RecipeDef` descriptions in the infinitive (18 keys, `Prélever et copier`, `faire fonctionner`, `Extraire`, `Utiliser`); Chinese `ChineseBeast_Gun_egret.label` and `_Dragon.label` `反凶兽步枪` (rifle, as the English label); Chinese `SZGene_QiongQi_FlyingStrike` label and description `冲刺`, the word of the ability.
 
 Refused (1): Chinese `SZ_MingSheDrought.letterText`, `持续` repeated: the repetition is the original's emphasis (the sun that keeps on), a matter of taste, kept.
+
+## 2026-11-12, thirteenth pass
+
+Nothing refused. The proper-noun table asked for nothing. Applied (2): Chinese `SZ_ExtractGene.jobString` `正在从凶兽中提取基因。` (as the English and French job string); Chinese gun descriptions `反凶兽步枪`, in line with the labels changed in the twelfth pass (descriptions only where the phrase `反凶兽突击步枪` stood).
