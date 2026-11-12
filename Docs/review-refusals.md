@@ -60,3 +60,9 @@ Nothing refused. Applied (2): Chinese `SZ_MingShe_WindWing.description` (anythin
 ## 2026-11-12, eleventh pass
 
 Nothing refused. The proper-noun table asked for nothing (all forms deliberate). Applied (2): "she likes to cause trouble" for the fifth storyteller in `PUBLICATION.md` and `Mod/About/About.xml` (kept identical); `CHANGELOG.md` `[Unreleased]` wind barrier bullet, comma splices turned into semicolons.
+
+## 2026-11-12, twelfth pass
+
+The proper-noun table asked for nothing. Applied (3 groups): French `RecipeDef` descriptions in the infinitive (18 keys, `Prélever et copier`, `faire fonctionner`, `Extraire`, `Utiliser`); Chinese `ChineseBeast_Gun_egret.label` and `_Dragon.label` `反凶兽步枪` (rifle, as the English label); Chinese `SZGene_QiongQi_FlyingStrike` label and description `冲刺`, the word of the ability.
+
+Refused (1): Chinese `SZ_MingSheDrought.letterText`, `持续` repeated: the repetition is the original's emphasis (the sun that keeps on), a matter of taste, kept.
