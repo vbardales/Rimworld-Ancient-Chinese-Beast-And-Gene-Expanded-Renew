@@ -50,3 +50,5 @@ Upstream synced 2026-11-12: one commit, `f6d3d19` "init" (2025-09-10, the 1.5 so
 - Text corrections (Chinese, English storyteller line, Original messages of `Mod/Defs/Incident/Beasts.xml`): after her French validation (owner, 2026-11-12).
 - 1.6 update (supportedVersions, compatibility fixes, new dependencies): after a green playTests on 1.6.
 - 1.7 update: only after a green 1.7 run (`tested_1_7: yes`).
+
+Check 2026-11-13: the upstream repository `MonsterTower/AncientChineseBeast` holds the C# source only (`.cs`, `.csproj`, `.sln`, IDE folders), no `Defs`, no `Languages`, no XML text. The text corrections (Chinese, English) therefore have no file to land on there: that pull request is not possible as written. What can go upstream is C# and the version updates (1.6 then 1.7), each with Virginie's go.
