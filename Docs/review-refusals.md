@@ -115,3 +115,7 @@ Applied (1): French `SZ_BeastApproach` beast 0: "une bête décrite seulement da
 Applied (2): Chinese `SZ_YearBeastApproach.letterText` `出现在殖民地附近`; Chinese `SZ_Storyteller_Sexie.description` `色邪偏好变化不断的故事`.
 
 Refused (1): Chinese `SZ_ChickenPasses.letterText` compaction (`加入殖民地`): the `我们` and the longer phrase are the fictional voice of the original, a matter of taste.
+
+## 2026-11-13, twenty-first pass
+
+PROPER NOUNS: nothing left to decide. Applied (3): French `SZ_Chicken` "son chant peut aussi être déclenché manuellement" (no implicit address); `SZ_SeXie` "parmi les colons" and "fait s'effondrer un colon" (the English names a colonist). `SZ_SeXieInsect` carries no such passage in the French (checked), nothing to change.
