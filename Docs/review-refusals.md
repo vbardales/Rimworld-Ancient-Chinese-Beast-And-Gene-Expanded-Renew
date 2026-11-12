@@ -95,3 +95,7 @@ The proper-noun "to decide" lists (creature names, Shenzhou, Longbow, Egret, Sex
 Applied (1): English `SZGene_QiongQi_Scratch.description` "Usually hit the head." (plural subject, `Mod/Defs/Gene/QiongQi.xml`, to go upstream with the rest).
 
 Not applied (2), waiting for Virginie: the French form of the mod title (registry empty, Audit 2026-11-12); everything in the PROPER NOUNS section (decision table sent to her). The Chinese long descriptions: ChatGPT proposes nothing, nothing to apply.
+
+## 2026-11-13, seventeenth pass
+
+Applied (2): French `SZ_YearBeast_Friendly.label` in `PawnKindDef` and `ThingDef`: `Nian (amical)` (Nian is masculine, my agreement miss). The PROPER NOUNS TO DECIDE items (the upstream title and three third-party mod names) are sent to Virginie in the report and, for mod titles, to Audit with TITLE? first (rule 26).

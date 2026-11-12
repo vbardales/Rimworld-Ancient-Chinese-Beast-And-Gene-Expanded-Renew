@@ -68,7 +68,7 @@
   <SZ_SeXiePoisonousThorn.label>dard</SZ_SeXiePoisonousThorn.label>
   <SZ_SeXieTunnelSpawner.label>tunnel</SZ_SeXieTunnelSpawner.label>
   <SZ_YearBeast_Friendly.description>Un Nian créé par génie génétique. Son esprit d'origine a été effacé et il combat désormais pour la colonie ; aussi nombreux et serrés que soient les insectes, son souffle de feu transforme l'essaim en un « délicieux » barbecue. \n\n\n&lt;color=#33ff00&gt;[En savoir plus]&lt;/color&gt;\nPour cloner une bête, les ingénieurs généticiens ont prélevé l'ADN de l'original, préservant ainsi la plupart de ses capacités. \n\nLes livres d'histoire des colons de la Chine Antique citent cette maxime : « Le savoir chinois pour fondement, le savoir occidental pour application. » Cette même philosophie a guidé la création des bêtes, et chaque partie d'un clone porte la culture et les couleurs traditionnelles de la Chine Antique.</SZ_YearBeast_Friendly.description>
-  <SZ_YearBeast_Friendly.label>Nian (amicale)</SZ_YearBeast_Friendly.label>
+  <SZ_YearBeast_Friendly.label>Nian (amical)</SZ_YearBeast_Friendly.label>
   <SZ_YearBeast_Friendly.tools.bite.label>morsure</SZ_YearBeast_Friendly.tools.bite.label>
   <SZ_YearBeast_Friendly.tools.horn.label>corne</SZ_YearBeast_Friendly.tools.horn.label>
   <SZ_YearBeast_Friendly.tools.left_claw.label>griffe gauche</SZ_YearBeast_Friendly.tools.left_claw.label>
