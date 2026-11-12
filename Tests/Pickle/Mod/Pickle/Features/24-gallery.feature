@@ -45,28 +45,12 @@
 #          Risk: the barrier or the projectile fails (the 2026-10-13 red). Plan: the step asserts the projectile in flight; replay of feature 20 first.
 #          v2: Sandbags at (181,144) and (182,143), TorchLamp lit at (178,138). Instant: Ryu has just fired, the shot is thrown back; obtained by the step that asserts the projectile in flight, then the pause.
 #          v3 (2026-11-09, capture of ad70 read: Ryu absent from the frame, barrier clipped at the left edge, adequacy about 3): zoom 6 on cell (172,143) so the whole ring is in frame, Ryu put back at (179,143) facing West after the pause, so the shooter is seen.
-#   6. 18h water garden. Subject: the sexie's red aura drives Ryu berserk, Nelim at the edge of the ring. Composition: zoom 5, cell (151,172), the ring
-#          around the beast, Ryu inside. Living: sexie, Ryu. Decor: TorchLamp lit at (139,166) and (141,175), the dusk light. Nelim: brown middle robe (122,84,52),  SanShan hat, long loose hair. Action: backs away. Face afraid.
-#          Risk: the cell where Nelim stands is not standable (the 2026-10-18 red at (137,169)). Plan: she stands at (141,170); if the step fails the
-#          log names the cell, move her one cell, do not cut the shot.
-#          v2: Plant_Daylily fully grown at (143,172) and (149,168). Subject read in the image: Ryu lunges (AttackMelee2) toward Nelim who cowers (FleeAndCower), the scorpion with its red ring behind him. Instant: the ring has just closed on Ryu; obtained by the step that sends him berserk, then the pause.
+#   6. 18h gravel yard. Subject: the sexie's red aura drives Ryu berserk, Nelim at the edge of the ring. Composition: zoom 5, cell (177,143), the ring
+#          around the beast, Ryu inside. Living: sexie, Ryu. Decor: TorchLamp lit at (178,138) and (168,140), the dusk light. Nelim: brown middle robe (122,84,52),  SanShan hat, long loose hair. Action: backs away. Face afraid.
+#          v2: Plant_Daylily fully grown at (170,146) and (176,146). Subject read in the image: Ryu lunges (AttackMelee2) toward Nelim who cowers (FleeAndCower), the scorpion with its red ring behind him. Instant: the ring has just closed on Ryu; obtained by the step that sends him berserk, then the pause.
 #          v4 (2026-11-09, captures 0706 and 645a: the ring drew a brown-green veil over the whole frame at zoom 5 and 6): NPT step "the drawing of the class Ability_BerserkRing is skipped" hides the ring; the shot now reads by the scorpion, the berserk Ryu and Nelim, the ring is no longer in the frame (owner call open: ring as subject vs readable pawns).
-#          v7 (2026-11-10, capture of 82e7: veil kept after the eclipse step, Ryu a floating head with a red cape, Body and apparel nodes tex empty): Ryu body type Male instead of Thin (suspect: no WDI Thin body for a male pawn); NPT step "the sky, weather and map layers are logged" before the capture to name the veil. Not a final composition, a diagnostic run.
-#          v8 (2026-11-12, capture of ede4: veil kept, Ryu still a floating head with body type Male, [sky] names the condition PsychicSoothe, GameCondition_PsychicEmanation, a map-wide sky tint): NPT steps (PickleTools, compiled not played) "the game condition PsychicSoothe is ended" before the capture, and "the graphics of Ryu are refreshed" after every body, gene, apparel and expression change. Ryu body type stays Male. Still a diagnostic run: if the body stays missing, the Player.log lines about Ryu's body graphic go to NPT.
-#          v9 (2026-11-12, capture of 97df: PsychicSoothe ended (no condition logged any more) and graphics refreshed, veil and floating head unchanged; Player.log: Ryu body node draws Naked_Male by the log yet Body, shirt, pants nodes show no texture and only the duster is seen; section layers list holds Verse.SectionLayer_PollutionCloud and Verse.SectionLayer_Gas, suspects for the veil): NPT step "the sky overlays are hidden" tried before the capture. Diagnostic run.
-#          v10 (2026-11-12, v9 not played: NPT said "the sky overlays are hidden" does not touch section layers): replaced by NPT step "the section layers named PollutionCloud are hidden" (PollutionCloud first, Gas next if the veil stays), and NPT step "the draw state of the render nodes of Ryu is logged" after the graphics refresh (read canDrawNow and graphics count of Body, shirt, pants). Diagnostic run.
-#          v11 (2026-11-12, b326 red on the NPT layer step, now fixed by NPT: all declared DrawLayer methods and the Visible getter; the draw-state step now draws with the Clothes and Headgear flags and logs transform, scale and mesh bounds per node): refiled with PollutionCloud and Gas both hidden. Diagnostic run.
-#          v12 (2026-11-12, e16c: PollutionCloud and Gas hidden, veil and Ryu body unchanged; all of Ryu's nodes canDrawNow True with offset 0 and scale 1): NPT suspect for a veil only at 18h on one place is the dusk sky and sun glow: step "the sun glow of the map is held at 1.0" before the capture (veil gone = dusk glow), plus the light and section-layer logs; the draw-state step now also logs material, texture and visible pixels per node (read Body). Diagnostic run, the held glow is not the final look.
-#          v13 (2026-11-12, cb9f: glow held at 1.0 changed the light but the veil stayed, so it is not the dusk; node materials normal (skin shader, texture 512x512), transforms normal; the veil covers the whole frame except the dirt patch and the lily pads sit on it: it is the WATER terrain, and the water layer is probably drawn above the low nodes of Ryu (body, shirt, pants) and below his head and duster, which is why only head and cape show): hide the section layer named Watergen, glow hold removed (dusk back). Diagnostic run.
-#          v14 (2026-11-12, NOT USED: the real roster Blue is not in the sanctuary save, which holds only Nelim: b279 red "no free colonist called Blue; the colonists are: Nelim"; the local step and its DLL were reverted)
-#          v15 (2026-11-12): Ryu spawned and edited as in v13 again, with NPT logs "the draw position of Ryu is logged" ([pawn-draw]: race, kind, humanlike, life stage, body size, screen point) and "what draws over the map is logged" ([draw-over-map]). Diagnostic run.
-#          v16 (2026-11-12, b379: pawn data normal (Human, adult, size 1.0, on screen at the centre where head and cape show), no overlay, no greenish glower, only warm TorchLamps; VEF and fairycoreapparel2 patch the CanDrawNow of the body workers): hide the section layer named TerrainScatter (marsh scatter drawn as clouds?) to test the veil. Diagnostic run.
-#          v16 result: 6367 green, veil unchanged with TerrainScatter hidden too.
-#          v17 (2026-11-12): NPT step "the draw requests of Ryu are logged" AFTER the screenshot (the game has drawn many frames; a node present in the draw state but absent from the requests was dropped by a prefix: VEF, HatHairControl, fairycoreapparel2); the draw-state step now reads the opacity of each texture (GPU copy). TerrainScatter hide removed. Diagnostic run.
-#          v17 result: cfc2 green: textures opaque, the body IS requested at y 8.42, duster 8.43, head 8.44; the veil covers a plane between 8.42 and 8.43.
-#          v18 (2026-11-12): NPT step "the things drawn at an altitude from 8.40 to 8.50 are logged" (names the AltitudeLayer at 8.42-8.43 and the things in the band) AND the nine remaining section layers hidden at once (Snow, Sand, Darkness, EdgeShadows, IndoorMask, FogOfWar, LightingOverlay, SunShadows, Resource); if the veil goes, halve the list next run. Diagnostic run.
-#          v18 result: df7a green: nine layers hidden, veil unchanged; band 8.40 to 8.50 holds only the pawns; Ryu body is under his crimson duster (coat covers body, shirt, pants).
-#          v19 (2026-11-12): TWO scenarios in one ticket, each one question. (gallery 6) water-garden: no duster so Ryu reads as a person (shirt and pants show), plus NPT step "the cameras and the flecks of the map are logged" to name the veil. (diagnostic control, last scenario of the file, outside the gallery numbering) the same shot on the dry gravel-yard (Ryu (176,143), sexie (181,144), Nelim (171,142), no decor): does the veil follow the water-garden. Diagnostic run.
+#          v7 to v19 (2026-11-10 to 2026-11-12, thirteen diagnostic runs; full log in STATUS.md): a brown-green veil over the whole frame and a Ryu that looked like a head with a red cape. Every sky, weather, condition and section layer test failed to move the veil. The last run on the dry gravel-yard (control) showed no veil: the veil is the WATER of the water-garden. Ryu was never broken: his crimson duster, a long coat, covers his body, shirt and pants.
+#          v20 (2026-11-12): scene 6 MOVED to the dry gravel-yard (Ryu (176,143), sexie (181,144), Nelim (171,142), frame (177,143) zoom 6, decor: TorchLamp lit at (178,138) and (168,140), Plant_Daylily at (170,146) and (176,146), cells of scene 5), Ryu without the duster (shirt and pants), no diagnostic step left. First candidate run.
 #   7. 19h postindustrial workshop. Subject: Nelim at the gene extractor, three archite capsules, a hen under the bench. Composition: zoom 5, cell
 #          (230,213), the machine in the centre, capsules in a row of the machine itself (props, not subjects). Living: a hen, daylilies. Decor: three
 #          ArchiteCapsule, Plant_Daylily at (227,215) and (233,215), four TorchLamp lit around the bench (the roof stays: GALLERY.md, "Éclairer un lieu
@@ -317,13 +301,14 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And I set the weather to "Clear"
     And Nelim's Pickle Tools: the colonists are sent to the map corner
     And Nelim's Pickle Tools: the temperature of the map is 20 degrees
-    And Nelim's Sanctuary: I am at the sanctuary "water-garden"
+    And Nelim's Sanctuary: the sanctuary "gravel-yard" is emptied
+    And Nelim's Sanctuary: I am at the sanctuary "gravel-yard"
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: the drawing of the class "Ability_BerserkRing" is skipped
     And Nelim's Pickle Tools: the drawing of the class "CompSeXieExpansion" is skipped
     And Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: all animals are removed
-    And Ancient Chinese Beast: I spawn a colonist named "Ryu" near x=146 z=171
+    And Ancient Chinese Beast: I spawn a colonist named "Ryu" near x=176 z=143
     And Nelim's Pickle Tools: "Ryu" loses all genes
     And Nelim's Pickle Tools: "Ryu" gender is Male
     And "Ryu" is 43 years old
@@ -338,34 +323,32 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Ryu" body tattoo is "STribalTat_Body_SacredWater"
     And Nelim's Pickle Tools: "Ryu" wears "Apparel_CollarShirt" dyed rgb (236, 226, 200)
     And Nelim's Pickle Tools: "Ryu" wears "Apparel_Pants" dyed rgb (44, 40, 48)
-    And Nelim's Pickle Tools: "Ryu" stands at (146, 171) facing South
-    And Ancient Chinese Beast: I spawn the pawn "SZ_SeXieInsect" at (151, 172) with its aura clock at zero
+    And Nelim's Pickle Tools: "Ryu" stands at (176, 143) facing South
+    And Ancient Chinese Beast: I spawn the pawn "SZ_SeXieInsect" at (181, 144) with its aura clock at zero
     And Nelim's Pickle Tools: time is paused for the capture
-    And Nelim's Pickle Tools: I frame the cell (147, 171) at zoom 6
+    And Nelim's Pickle Tools: I frame the cell (177, 143) at zoom 6
     When Ancient Chinese Beast: pawn 1 is sent berserk as the aura does
     And Nelim's Pickle Tools: time is paused for the capture
-    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (139, 166)
-    And Nelim's Pickle Tools: the decor "TorchLamp" at (139, 166) is lit
-    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (141, 175)
-    And Nelim's Pickle Tools: the decor "TorchLamp" at (141, 175) is lit
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (178, 138)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (178, 138) is lit
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (168, 140)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (168, 140) is lit
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (170, 146) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (176, 146) fully grown
     And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_SanShanHat"
     And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_BasicMiddleClothes" dyed rgb (122, 84, 52)
-    And Nelim's Pickle Tools: "Nelim" stands at (141, 170) facing South
-    And Nelim's Pickle Tools: "Ryu" stands at (146, 171) facing East
+    And Nelim's Pickle Tools: "Nelim" stands at (171, 142) facing South
+    And Nelim's Pickle Tools: "Ryu" stands at (176, 143) facing East
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+FleeAndCower"
     And Nelim's Pickle Tools: "Ryu" facial expression is "normal+AttackMelee2"
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (143, 172) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (149, 168) fully grown
     And Nelim's Pickle Tools: the eclipse of the map is ended
     And Nelim's Pickle Tools: the game condition "PsychicSoothe" is ended
-    And Nelim's Pickle Tools: the cameras and the flecks of the map are logged
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-6-sexie-aura"
     And Nelim's Pickle Tools: the interface is shown again
     And Nelim's Pickle Tools: the decor is removed
-
 
   Scenario: gallery 7 - the gene extractor in the postindustrial workshop
     Given I set the hour to 19
@@ -444,55 +427,6 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: I place the decor "Hay" at (165, 237)
     And Nelim's Pickle Tools: the map is shown alone for a capture
     When I take a screenshot "gallery-8-tame-clones"
-    And Nelim's Pickle Tools: the interface is shown again
-    And Nelim's Pickle Tools: the decor is removed
-
-  Scenario: diagnostic control - the shot of gallery 6 on the dry gravel yard
-    Given I set the hour to 18
-    And I set the weather to "Clear"
-    And Nelim's Pickle Tools: the colonists are sent to the map corner
-    And Nelim's Pickle Tools: the temperature of the map is 20 degrees
-    And Nelim's Sanctuary: the sanctuary "gravel-yard" is emptied
-    And Nelim's Sanctuary: I am at the sanctuary "gravel-yard"
-    And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: the drawing of the class "Ability_BerserkRing" is skipped
-    And Nelim's Pickle Tools: the drawing of the class "CompSeXieExpansion" is skipped
-    And Nelim's Pickle Tools: I let 60 ticks pass
-    And Nelim's Pickle Tools: all animals are removed
-    And Ancient Chinese Beast: I spawn a colonist named "Ryu" near x=176 z=143
-    And Nelim's Pickle Tools: "Ryu" loses all genes
-    And Nelim's Pickle Tools: "Ryu" gender is Male
-    And "Ryu" is 43 years old
-    And Nelim's Pickle Tools: "Ryu" body type is Male
-    And Nelim's Pickle Tools: "Ryu" head type is "Male_NarrowPointy"
-    And Nelim's Pickle Tools: "Ryu" has the gene "Skin_Melanin4"
-    And Nelim's Pickle Tools: "Ryu" has the gene "Hair_InkBlack"
-    And Nelim's Pickle Tools: "Ryu" has the gene "Eyes_SkyBlue"
-    And Nelim's Pickle Tools: "Ryu" hair colour is taken from its genes
-    And Nelim's Pickle Tools: "Ryu" hairstyle is "Roo_Royal_CleancutHD"
-    And Nelim's Pickle Tools: "Ryu" face tattoo is "none"
-    And Nelim's Pickle Tools: "Ryu" body tattoo is "STribalTat_Body_SacredWater"
-    And Nelim's Pickle Tools: "Ryu" wears "Apparel_CollarShirt" dyed rgb (236, 226, 200)
-    And Nelim's Pickle Tools: "Ryu" wears "Apparel_Pants" dyed rgb (44, 40, 48)
-    And Nelim's Pickle Tools: "Ryu" stands at (176, 143) facing South
-    And Ancient Chinese Beast: I spawn the pawn "SZ_SeXieInsect" at (181, 144) with its aura clock at zero
-    And Nelim's Pickle Tools: time is paused for the capture
-    And Nelim's Pickle Tools: I frame the cell (177, 143) at zoom 6
-    When Ancient Chinese Beast: pawn 1 is sent berserk as the aura does
-    And Nelim's Pickle Tools: time is paused for the capture
-    And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_SanShanHat"
-    And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_BasicMiddleClothes" dyed rgb (122, 84, 52)
-    And Nelim's Pickle Tools: "Nelim" stands at (171, 142) facing South
-    And Nelim's Pickle Tools: "Ryu" stands at (176, 143) facing East
-    And Nelim's Sanctuary: Nelim has her own face
-    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
-    And Nelim's Pickle Tools: "Nelim" facial expression is "normal+FleeAndCower"
-    And Nelim's Pickle Tools: "Ryu" facial expression is "normal+AttackMelee2"
-    And Nelim's Pickle Tools: the eclipse of the map is ended
-    And Nelim's Pickle Tools: the game condition "PsychicSoothe" is ended
-    And Nelim's Pickle Tools: the cameras and the flecks of the map are logged
-    And Nelim's Pickle Tools: the map is shown alone for a capture
-    And I take a screenshot "gallery-6-sexie-aura"
     And Nelim's Pickle Tools: the interface is shown again
     And Nelim's Pickle Tools: the decor is removed
 
