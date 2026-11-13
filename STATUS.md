@@ -107,7 +107,7 @@ remaining:
 session:      local_5bc1b5af-5a8d-4b9e-98fa-5f1f54777aa6
 updated:      2026-11-13
 upstream_synced: 2026-11-12 MonsterTower/AncientChineseBeast@f6d3d19
-protocols_read_sha: ffe51fdb66913d517ac064cbece7ec6ca05a6eb0
+protocols_read_sha: 0888eac46c71476a812d67245a830b3d9c57b6db
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -207,3 +207,5 @@ STATE 2026-11-13 (before sleep): names and mod titles CLOSED (Docs/review-names.
 Translation audit 2026-11-13: Virginie validated the French review ("je valide la relecture"). `translation_fr` stays `complete`. The French of this revision is hers, validated; after 24 /review-translation passes and the names closed (Docs/review-names.md). The upstream pull request with the text corrections (BACKLOG TODO) may now be proposed to her for its go.
 
 STATE 2026-11-13 (second sleep): Longbow decided (kept); every name and title decided; French review validated by Virginie. Only open: ticket 20261113-001509-818-0a63 (scene 5 v4, WAITING position 1/2): on RUN_DONE open the capture, score-gallery, then ONE final review message for Virginie with ALL candidates (1, 2, 3, 4, 6, 7, 8 in Art/Gallery-clean, plus 5 if candidate), then replay-audit (REPLAY line to the TM). Upstream PR with texts impossible (upstream holds C# only, BACKLOG).
+
+STATE 2026-11-13 (resumed): ticket 20261113-001509-818-0a63 (scene 5 v4) DONE, passed 1/1, capture opened and rated: REDO (image 3, adequacy 3, understanding 3, decoration 3; mingshe cut by the bottom edge, thrown-back shot not visible, Ryu and Nelim tiny, ground bare on the right). Capture deleted. Next: recompose scene 5 in `24-gallery.feature` (tighter frame on barrier plus Ryu, shot visible, more decor), refile one ticket, then ONE final review message for Virginie with candidates 1, 2, 3, 4, 6, 7, 8 of Art/Gallery-clean (plus 5 when candidate), then replay-audit (REPLAY line to the TM).
