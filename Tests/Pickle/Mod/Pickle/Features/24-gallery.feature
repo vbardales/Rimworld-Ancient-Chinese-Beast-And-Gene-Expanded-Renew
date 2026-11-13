@@ -268,7 +268,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Ryu" body tattoo is "STribalTat_Body_SacredWater"
     And Nelim's Pickle Tools: "Ryu" wears "Apparel_CollarShirt" dyed rgb (236, 226, 200)
     And Nelim's Pickle Tools: "Ryu" wears "Apparel_Pants" dyed rgb (44, 40, 48)
-    And Nelim's Pickle Tools: "Ryu" stands at (180, 143) facing West
+    And Nelim's Pickle Tools: "Ryu" stands at (177, 143) facing West
     And Ancient Chinese Beast: the colonist "Ryu" is added to the pawns
     And Ancient Chinese Beast: pawn 2 is armed with "Gun_BoltActionRifle"
     And Nelim's Pickle Tools: I frame the cell (175, 142) at zoom 10
@@ -276,7 +276,6 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Ancient Chinese Beast: pawn 2 shoots at pawn 1
     Then Ancient Chinese Beast: a projectile launched by pawn 1 is in flight within 10 seconds
     And Nelim's Pickle Tools: time is paused for the capture
-    And Nelim's Pickle Tools: "Ryu" stands at (177, 143) facing West
     And Nelim's Pickle Tools: I place the decor "Sandbags" at (179, 143)
     And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_SanShanHat"
     And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_BasicMiddleClothes" dyed rgb (122, 84, 52)
