@@ -271,7 +271,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Ryu" stands at (180, 143) facing West
     And Ancient Chinese Beast: the colonist "Ryu" is added to the pawns
     And Ancient Chinese Beast: pawn 2 is armed with "Gun_BoltActionRifle"
-    And Nelim's Pickle Tools: I frame the cell (173, 142) at zoom 8
+    And Nelim's Pickle Tools: I frame the cell (175, 142) at zoom 10
     When Ancient Chinese Beast: the wind barrier of pawn 1 is raised
     And Ancient Chinese Beast: pawn 2 shoots at pawn 1
     Then Ancient Chinese Beast: a projectile launched by pawn 1 is in flight within 10 seconds
@@ -304,6 +304,11 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (177, 145) fully grown
     And Nelim's Pickle Tools: I place the decor "Hay" at (171, 144)
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (181, 146) fully grown
+    And Nelim's Pickle Tools: I place the decor "Hay" at (178, 145)
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (179, 141) fully grown
+    And Nelim's Pickle Tools: I place the decor "Hay" at (176, 144)
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (173, 144) fully grown
+    And Nelim's Pickle Tools: I place the decor "Sandbags" at (181, 142)
     And Nelim's Pickle Tools: I place the decor "Sandbags" at (180, 144)
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (184, 141)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (184, 141) is lit
