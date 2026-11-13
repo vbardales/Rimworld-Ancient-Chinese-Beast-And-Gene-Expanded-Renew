@@ -154,6 +154,9 @@ Owner (2026-10-13): description-form fix waits, grouped with RimWorld 1.7 pass; 
 
 Kept. `Art/echo-source.png` is line art of winged qiongqi; gallery 2 (four beasts) and 3 (qiongqi far from Lan) show same beast, so echo and gallery agree, subject not moved. Preview rendered from it (`ccf028b`, flipped echo, cropped badge) is 896x504, opened full size: title, rule, summary, red echo under panel text, ModIcon bottom right, 1.6 badge top right, nothing cut. `Mod/About/Preview.png` sha256 `d39149d2...` equals `social_preview_sha256`: GitHub social preview current (repository public). `Art/` holds minimal set plus `textures-original/` (kept, owner decision 2026-10-11).
 
+### Ecosystem - 2026-11-13
+
+AUDIT 1.a, run from this session (candidate mode on the original `andery233xj.AncientChineseBeast`, 3292446841, not on disk; then `same-pattern --mod`). Corpus read 5302/5306 folders (4 hold no XML). Patch, retexture, translation, link of the original or of our port: none found (2 hits, our own `About.xml`). Same-defName pass: one `fork-or-rewrite`, 17 `weak` (generic labels such as "sting", "pincer", "fire breath": not the same subject, dropped). The fork: [SZ] New Chinese Divine Beasts And Attack Expansion Expanded, `andery233xj.ChiTeaditional.AncientChineseBeast.NoGene`, 3047055011, authors Diamond.J, DongFang, Naia, andery233xj, Frolg, 21 defNames and 3 labels shared, `supportedVersions` 1.4 only, `About.xml` dated 2026-09-05, no 1.6 folder: dead for the current game, not a living replacement, no verdict change. Licence not read. Nothing to add to `Check-OptionalCompat.ps1`, no combined pass owed at 8.f.
 
 ## History
 
