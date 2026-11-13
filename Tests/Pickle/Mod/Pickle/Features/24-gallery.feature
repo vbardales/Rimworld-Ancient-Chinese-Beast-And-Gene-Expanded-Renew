@@ -46,6 +46,7 @@
 #          v2: Sandbags at (181,144) and (182,143), TorchLamp lit at (178,138). Instant: Ryu has just fired, the shot is thrown back; obtained by the step that asserts the projectile in flight, then the pause.
 #          v3 (2026-11-09, capture of ad70 read: Ryu absent from the frame, barrier clipped at the left edge, adequacy about 3): zoom 6 on cell (172,143) so the whole ring is in frame, Ryu put back at (179,143) facing West after the pause, so the shooter is seen.
 #          v4 (2026-11-13): Ryu without the crimson duster (shirt and pants only): the long coat covered his body and made him look like a head with a red cape (found on scene 6). One question: is Ryu in frame and readable?
+#          v5 (2026-11-13, capture of 0a63 read, REDO: image 3, adequacy 3, understanding 3, decoration 3; the mingshe cut by the bottom edge, bare ground on the right, Ryu and Nelim tiny): frame moved from cell (172,143) to (172,141), same zoom 6, so the whole mingshe and its ring stay in frame; decor grouped around Ryu and Nelim: Plant_Daylily at (181,140) and (183,145), Hay at (180,147) and (176,142), Sandbags at (183,144), TorchLamp lit at (184,141). Pawns, outfits, expressions and instant unchanged. Question: is the mingshe whole and the right side no longer bare?
 #   6. 18h gravel yard. Subject: the sexie's red aura drives Ryu berserk, Nelim at the edge of the ring. Composition: zoom 7, cell (177,143), the ring
 #          around the beast, Ryu inside. Living: sexie, Ryu. Decor: TorchLamp lit at (178,138) and (168,140), the dusk light, Hay at (172,146) and (178,147), Plant_Daylily at (169,145), (173,140) and (174,147), Sandbags at (168,143) and (168,144). Nelim: brown middle robe (122,84,52),  SanShan hat, long loose hair. Action: backs away. Face afraid.
 #          v2: Plant_Daylily fully grown at (170,146) and (176,146). Subject read in the image: Ryu lunges (AttackMelee2) toward Nelim who cowers (FleeAndCower), the scorpion with its red ring behind him. Instant: the ring has just closed on Ryu; obtained by the step that sends him berserk, then the pause.
@@ -270,7 +271,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Ryu" stands at (180, 143) facing West
     And Ancient Chinese Beast: the colonist "Ryu" is added to the pawns
     And Ancient Chinese Beast: pawn 2 is armed with "Gun_BoltActionRifle"
-    And Nelim's Pickle Tools: I frame the cell (172, 143) at zoom 6
+    And Nelim's Pickle Tools: I frame the cell (172, 141) at zoom 6
     When Ancient Chinese Beast: the wind barrier of pawn 1 is raised
     And Ancient Chinese Beast: pawn 2 shoots at pawn 1
     Then Ancient Chinese Beast: a projectile launched by pawn 1 is in flight within 10 seconds
@@ -295,6 +296,13 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: I place the decor "Hay" at (179, 146)
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (168, 140)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (168, 140) is lit
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (181, 140) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (183, 145) fully grown
+    And Nelim's Pickle Tools: I place the decor "Hay" at (180, 147)
+    And Nelim's Pickle Tools: I place the decor "Hay" at (176, 142)
+    And Nelim's Pickle Tools: I place the decor "Sandbags" at (183, 144)
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (184, 141)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (184, 141) is lit
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-5-wind-barrier"
     And Nelim's Pickle Tools: the interface is shown again
