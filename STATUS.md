@@ -107,7 +107,7 @@ remaining:
 session:      local_5bc1b5af-5a8d-4b9e-98fa-5f1f54777aa6
 updated:      2026-11-13
 upstream_synced: 2026-11-12 MonsterTower/AncientChineseBeast@f6d3d19
-protocols_read_sha: 0888eac46c71476a812d67245a830b3d9c57b6db
+protocols_read_sha: b6b4486d8e3585fdcf9b1f3e9066c87cf694e7c1
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -211,3 +211,5 @@ STATE 2026-11-13 (second sleep): Longbow decided (kept); every name and title de
 STATE 2026-11-13 (resumed): ticket 20261113-001509-818-0a63 (scene 5 v4) DONE, passed 1/1, capture opened and rated: REDO (image 3, adequacy 3, understanding 3, decoration 3; mingshe cut by the bottom edge, thrown-back shot not visible, Ryu and Nelim tiny, ground bare on the right). Capture deleted. Next: recompose scene 5 in `24-gallery.feature` (tighter frame on barrier plus Ryu, shot visible, more decor), refile one ticket, then ONE final review message for Virginie with candidates 1, 2, 3, 4, 6, 7, 8 of Art/Gallery-clean (plus 5 when candidate), then replay-audit (REPLAY line to the TM).
 
 STATE 2026-11-13 (scene 5 v5 filed): scene 5 recomposed (frame (172,141), decor grouped, commit 35878e8, drift check OK). Ticket 20261113-182912-722-d899 (d899, filter 24-gallery::gallery 5 - the wind barrier, map wsl-deps.sanctuary.map, Inbox 2026-11-13b-gallery-5) WAITING. On RUN_DONE: read summary.json, open capture, score-gallery, then ONE final review message for Virginie with candidates 1, 2, 3, 4, 6, 7, 8 of Art/Gallery-clean (plus 5 if candidate), then replay-audit (REPLAY line to the TM). Plan score of scene 5 not rerun (only frame and decor changed, no new step).
+
+STATE 2026-11-13 (resumed, v5 read): ticket 20261113-182912-722-d899 (d899) DONE, passed 1/1, capture opened and rated: REDO (image 3.5, adequacy 4, understanding 3.5, decoration 4; mingshe and barrier whole, torches, flowers and sandbags in frame, Nelim holds the medicine kit; but Ryu is a tiny head by the sandbags with no visible rifle gesture, the thrown-back shot is a 3 px streak, ground still bare at the bottom). Capture and Inbox folder deleted. Next: recompose scene 5 in `24-gallery.feature` (zoom in, Ryu in profile mid-shot with rifle raised, bolt visible and bigger, more ground decor), refile one ticket, then ONE final review message for Virginie with candidates 1, 2, 3, 4, 6, 7, 8 of Art/Gallery-clean (plus 5 when candidate), then replay-audit (REPLAY line to the TM).
