@@ -107,7 +107,7 @@ remaining:
 session:      local_5bc1b5af-5a8d-4b9e-98fa-5f1f54777aa6
 updated:      2026-11-13
 upstream_synced: 2026-11-12 MonsterTower/AncientChineseBeast@f6d3d19
-protocols_read_sha: b6b4486d8e3585fdcf9b1f3e9066c87cf694e7c1
+protocols_read_sha: 0ee69017f242dc5306be754ef91bc910700fb029
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -219,3 +219,5 @@ STATE 2026-11-13 (scene 5 v6 filed): scene 5 recomposed (zoom 8 on (173,142), Ry
 STATE 2026-11-13 (scene 5 v6 read): ticket 20261113-205256-372-1007 (1007) DONE, passed 1/1, capture opened: image 4, adequacy 4, understanding 3.5, decoration 3.5 (mingshe and barrier large, Ryu face visible, Nelim at barrier edge with kit, flowers, torches, sandbags; thrown-back shot still a thin streak, no rifle drawn on Ryu, ground bare right and bottom). By the 4/5 rule: REDO, but fourth refile of the same shot would change nothing (rendering limit). Kept as `Art/Gallery-clean/5-candidate-wind-barrier.jpg` (372 KB) and put to Virginie with my opinion: near-candidate. Inbox folder deleted. Next: her word on 5; then ONE final review message with candidates 1, 2, 3, 4, 6, 7, 8 (+5 if she accepts), then replay-audit (REPLAY line to the TM).
 
 STATE 2026-11-13 (scene 5 v7 filed): Virginie does not validate partially: scene 5 must reach 4/5 first. v7 = zoom 10 on (175,142) (shot streak bigger), five more ground props (commit 3d0c545). Ticket 20261113-212525-204-29fd (29fd, filter 24-gallery::gallery 5 - the wind barrier, map wsl-deps.sanctuary.map, Inbox 2026-11-13d-gallery-5). On RUN_DONE: read summary.json, open capture, score-gallery. All eight candidates must be OK before the ONE final review message; v6 jpg stays in Art/Gallery-clean as fallback. Then replay-audit (REPLAY line to the TM).
+
+STATE 2026-11-13 (scene 5 v7 read): ticket 20261113-212525-204-29fd (29fd) DONE, passed 1/1, capture opened and 268 px check opened (j ok: barrier and dragon identifiable). Image 4, adequacy 4, understanding 3.5, decoration 4: REDO by the under-4 rule. Mingshe and barrier large, Nelim at the barrier edge with kit, torches, flowers, sandbags in frame; Ryu still a small head and shirt, no rifle visible, thrown-back shot a thin streak near the lower torch, hay not visible. Fifth capture of the same shot: no lever left in frame, zoom or decor to raise understanding (rendering limit). Capture and Inbox folder deleted. v6 jpg stays in Art/Gallery-clean as fallback. Next: Virginie's word on 5 (accept v6 or v7-class as is, or change the scene concept), then ONE final review message, then replay-audit (REPLAY line to the TM). protocols_read_sha 0ee69017.
