@@ -270,12 +270,13 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Ryu" wears "Apparel_Pants" dyed rgb (44, 40, 48)
     And Nelim's Pickle Tools: "Ryu" stands at (177, 143) facing West
     And Ancient Chinese Beast: the colonist "Ryu" is added to the pawns
-    And Nelim's Pickle Tools: "Ryu" wields "Gun_BoltActionRifle"
+    And Ancient Chinese Beast: pawn 2 is armed with "Gun_BoltActionRifle"
     And Nelim's Pickle Tools: I frame the cell (175, 142) at zoom 10
     When Ancient Chinese Beast: the wind barrier of pawn 1 is raised
     And Ancient Chinese Beast: pawn 2 shoots at pawn 1
     Then Ancient Chinese Beast: a projectile launched by pawn 1 is in flight within 10 seconds
     And Nelim's Pickle Tools: time is paused for the capture
+    And Nelim's Pickle Tools: "Ryu" wields "Gun_BoltActionRifle"
     And Nelim's Pickle Tools: "Ryu" stands at (177, 143) facing West
     And Nelim's Pickle Tools: "Ryu" aims at the cell (166, 143)
     And Nelim's Pickle Tools: I place the decor "Sandbags" at (179, 143)
