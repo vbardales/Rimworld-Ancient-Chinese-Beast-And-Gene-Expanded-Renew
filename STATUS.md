@@ -107,7 +107,7 @@ remaining:
 session:      local_5bc1b5af-5a8d-4b9e-98fa-5f1f54777aa6
 updated:      2026-11-13
 upstream_synced: 2026-11-12 MonsterTower/AncientChineseBeast@f6d3d19
-protocols_read_sha: 0ee69017f242dc5306be754ef91bc910700fb029
+protocols_read_sha: ea0dabb39f34efbd66a413c43b3cd36c0c230fe1
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -223,3 +223,5 @@ STATE 2026-11-13 (scene 5 v7 filed): Virginie does not validate partially: scene
 STATE 2026-11-13 (scene 5 v7 read): ticket 20261113-212525-204-29fd (29fd) DONE, passed 1/1, capture opened and 268 px check opened (j ok: barrier and dragon identifiable). Image 4, adequacy 4, understanding 3.5, decoration 4: REDO by the under-4 rule. Mingshe and barrier large, Nelim at the barrier edge with kit, torches, flowers, sandbags in frame; Ryu still a small head and shirt, no rifle visible, thrown-back shot a thin streak near the lower torch, hay not visible. Fifth capture of the same shot: no lever left in frame, zoom or decor to raise understanding (rendering limit). Capture and Inbox folder deleted. v6 jpg stays in Art/Gallery-clean as fallback. Next: Virginie's word on 5 (accept v6 or v7-class as is, or change the scene concept), then ONE final review message, then replay-audit (REPLAY line to the TM). protocols_read_sha 0ee69017.
 
 STATE 2026-11-13 (scene 5 v8 filed): Virginie reviews only when ALL scenes are ready (all at 4/5), so no partial question. Lever for understanding: Ryu was moved after the pause, which erased his aiming pose. v8: Ryu starts at his final cell (177,143), no move after the pause (commit 8c17391). Ticket 20261113-230306-945-c136 (c136, filter 24-gallery::gallery 5 - the wind barrier, map wsl-deps.sanctuary.map, Inbox 2026-11-13e-gallery-5). On RUN_DONE: read summary.json, open capture, score-gallery. All eight candidates must be OK before the ONE final review message; v6 jpg stays as fallback. Then replay-audit (REPLAY line to the TM).
+
+STATE 2026-11-14 (resumed, v8 read): ticket 20261113-230306-945-c136 (c136) DONE, passed 1/1, capture opened: REDO (image 3.5, adequacy 3, understanding 3, decoration 4). Mingshe, barrier, Nelim with kit, torches, sandbags, flowers good; thrown-back shot a thin streak next to Nelim. Ryu walked away during the 10 s wait and stands as a tiny head at the bottom right corner, far from the sandbags, not aiming: worse than v7. Without a move after the pause he leaves his cell (AI); with a move (v7) the pose is erased. Inbox folder deleted. Next: keep Ryu in place without a move (ask NPT for a hold-position or drafted-aiming step, AGENTS.md rule) or re-stand him after the pause and accept the pose; refile one ticket; all eight candidates OK before the ONE final review message; then replay-audit (REPLAY line to the TM). protocols_read_sha ea0dabb3. Steps read: NPT changed 2026-11-14, sync-nsb-npt (NPT part) still owed.
