@@ -1,6 +1,7 @@
 {
   "panel": {
     "panelAnchor": "bottom-left",
+    "panelBare": true,
     "title": "Ancient Chinese Beast And Gene Expanded Renew (unofficial)",
     "titleParts": [
       { "text": "Ancient Chinese Beast" },
@@ -13,7 +14,7 @@
   },
   "background": { "file": "Preview-source.png" },
   "echo": { "file": "echo-source.png" },
-  "icon": { "file": "ModIcon-source.png" },
+  "icon": { "file": "ModIcon-source.png", "corner": "top-left" },
   "palette": {
     "veil": "#613522",
     "inkPrimary": "#F2ECE1",
