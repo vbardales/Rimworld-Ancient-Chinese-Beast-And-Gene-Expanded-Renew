@@ -10,7 +10,7 @@ packageId:    nelim.ancientchinesebeastandgeneexpanded
 repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 visibility:   public
 detached:     yes
-workflow_stage: shootGallery[1.1.0]
+workflow_stage: mountPreview[1.1.0]
 social_preview_sha256: ef4033f58e512d0f5eaff4384e2ca7d1c0c5e0a2142fb371a5569a324223052c
 echo_review_sha: d4409fa79443f95e80e837fc4941245708106090  # 2026-10-23, 10.a: echo kept (echo-source.png, Preview panel bottom-left, validated by Virginie in chat)
 publication_changelog_review_sha: 5bed84a774984f2711ba3048ce90046038b30fcc
@@ -107,7 +107,7 @@ remaining:
 session:      local_5bc1b5af-5a8d-4b9e-98fa-5f1f54777aa6
 updated:      2026-11-13
 upstream_synced: 2026-11-12 MonsterTower/AncientChineseBeast@f6d3d19
-protocols_read_sha: ea0dabb39f34efbd66a413c43b3cd36c0c230fe1
+protocols_read_sha: 1fa8659d18ca2adf12fb05a80946271dc5d14fc0
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -115,20 +115,21 @@ Read by sweep across every mod, not by asking each thread in turn. Lives at root
 
 ## Where this one stands
 
-### Gallery - 2026-10-13
+### Gallery - 2026-11-15
 
-Seven staged photos on Sanctuary Backlot plus Preview, all accepted by owner (commits `54945a2`, `f41a79e`, `09577d4`, `35ba34e`, `1a91870`); `Art/Gallery/` holds nothing else. Opened again 2026-10-13. Order: four beasts together second (most demonstrative), dawn crow opens story.
+Eight staged scenes (one day at Nelim's Sanctuary, Blue the only guest) plus Preview, all ACCEPTED by Virginie in chat on 2026-11-15 ("je valide"), subtitled, final names, contiguous indexes. `Art/Gallery/` holds the subtitled images (4.4 MB for 1 to 8, each under 2 MB), `Art/Gallery-clean/` the eight originals. Subtitle lines in `PUBLICATION.md`. The 2026-10-13 set is replaced (old png deleted). `0-preview.png` is the old Preview copy: regenerated at `mountPreview`.
 
 | Index | File | Shows |
 | --- | --- | --- |
-| 0 | `0-preview.png` | Preview, byte copy |
-| 1 | `1-dawn-crow.png` | rooster and hen among statues (green overlay lines at edges, accepted as is) |
-| 2 | `2-four-beasts.png` | the four beasts together |
-| 3 | `3-qiongqi-far.png` | the qiongqi far from Lan |
-| 4 | `4-nian-fire.png` | the nian beast breathing fire |
-| 5 | `5-wind-barrier.png` | the mingshe inside its wind barrier |
-| 6 | `6-sexie-aura.png` | the sexie scorpion form in its aura |
-| 7 | `7-extractor.png` | the gene extractor in sunlit workshop |
+| 0 | `0-preview.png` | Preview, byte copy (to redo at mountPreview) |
+| 1 | `1-dawn-crow.jpg` | dawn, Nelim feeds the hens, the star officer crows |
+| 2 | `2-four-beasts.jpg` | the four beasts at the south enclosure gate |
+| 3 | `3-qiongqi.jpg` | the qiongqi picks its prey, Nelim braces behind sandbags |
+| 4 | `4-nian-fire.jpg` | the nian beast breathes fire, Nelim holds a firecracker |
+| 5 | `5-wind-barrier.jpg` | Blue fires, the mingshe's wind barrier throws the shot back (aim fixed by NPT 2a21050) |
+| 6 | `6-sexie-aura.jpg` | the sexie's red aura drives Blue berserk |
+| 7 | `7-extractor.jpg` | three archite capsules at the gene extractor, a hen on the bench |
+| 8 | `8-tame-clones.jpg` | night, Nelim feeds the five tamed clones |
 
 ### Reviews by Virginie - 2026-10-13
 
@@ -239,3 +240,5 @@ STATE 2026-11-15 (review sent): subtitle lines rewritten for the eight scenes (P
 STATE 2026-11-15 (owner order: no more candidate method): `Art/Gallery/` holds only the ready-to-ship set, 0-preview.png plus 1 to 8 subtitled jpg under final names (no `candidate` in any name); `Art/Gallery-clean/` holds the same eight unsubtitled; old pngs 1 to 7 deleted. Awaiting Virginie's review of the eight; a refused image is recomposed and replaced under the same name. protocols (GALLERY.md, rate-gallery) still describe the candidate naming: told to Audit.
 
 NOTE 2026-11-15 (owner, scene 1, applies to every scene): if the same animal appears twice in an image (two hens), one faces the camera and the other is in profile; for three, add one seen from behind. Apply if scene 1 is ever redone, and when any scene is recomposed. Raised to Audit.
+
+STATE 2026-11-15 (gallery accepted): Virginie accepted the eight subtitled images ("je valide"). workflow_stage moved to mountPreview[1.1.0] (AUDIT 9.f), protocols_read_sha 1fa8659d. Open at mountPreview: echo decision (echo_review_sha d4409fa7 stale, gallery images changed; keep or redo from the new gallery, AUDIT 10.a), Preview-source illustration decision (10.a bis), config and render (10.b to 10.d). Also owed: `/sync-nsb-npt` NPT part (NPT changed 2026-11-15), replay-audit (REPLAY line to the TM), DLC names by sense in the French texts (TM rule 2026-11-14), Check-Status gallery-subtitles passes.
