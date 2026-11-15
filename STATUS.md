@@ -12,7 +12,7 @@ visibility:   public
 detached:     yes
 workflow_stage: mountPreview[1.1.0]
 social_preview_sha256: ef4033f58e512d0f5eaff4384e2ca7d1c0c5e0a2142fb371a5569a324223052c
-echo_review_sha: d4409fa79443f95e80e837fc4941245708106090  # 2026-10-23, 10.a: echo kept (echo-source.png, Preview panel bottom-left, validated by Virginie in chat)
+echo_review_sha: 9d5b8f0b962db7260d3622a85774d6cad1044006  # 2026-11-15, 10.a: echo kept (echo-source.png, winged qiongqi line art, Preview panel bottom-left); the new gallery shows the same beast (images 2, 3, 8), subject unchanged; Preview.png unchanged, still equals 0-preview.png and social_preview_sha256
 publication_changelog_review_sha: 5bed84a774984f2711ba3048ce90046038b30fcc
 licence:      silent
 licence_at:   reviewed 2026-09-12 - original files and About.xml, English and Chinese Workshop
