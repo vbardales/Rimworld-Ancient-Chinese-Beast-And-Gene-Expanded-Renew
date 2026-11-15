@@ -21,8 +21,8 @@ The Workshop gallery is the owner's manual upload of `Art/Gallery/` (SteamCMD se
 checked 2026-10-08 against `PUBLISHING.md`, « Images »: numbered `0-`, `1-`, `2-`… with single-digit prefixes, in page order, nothing else
 in the folder; `0-` is a byte copy of `Mod/About/Preview.png` (compared after the 2026-10-08 regeneration); every other
 image is a **staged photograph** of the shared Sanctuary location, not a test capture; each image under 2 MB, the folder
-under 8 MB. Candidates are named `<n>-candidate-<name>.png` until the owner accepts them (then `candidate` is dropped),
-a refused one is deleted. The story, the set and the shot list are in `GALLERY.md`. State 2026-10-13: images 0 to 7 accepted by the owner, indexes contiguous, 7.4 MB in all, each under 2 MB (table in `STATUS.md`).
+under 8 MB. `Art/Gallery/` holds only the ready-to-ship set (final names, subtitled),
+a refused image is recomposed and replaced. The story, the set and the shot list are in `GALLERY.md`. State 2026-11-15: images 0 to 8, indexes contiguous, subtitled, awaiting the owner's review.
 
 ## Dependencies and DLC
 
@@ -34,7 +34,7 @@ None ticked. The mod holds no nudity, sexual content or gore beyond RimWorld's o
 
 ## Gallery subtitles
 
-One line of English at the bottom of each gallery scene without an interface window (owner rule of 2026-10-15, `GALLERY.md`, "Sous-titres"): `0-` (the Preview) has none, and this mod has no interface capture. The clean originals go to `Art/Gallery-clean/`; `Art/Gallery/` holds the subtitled images, set with `scripts/Add-Subtitle.ps1`. Rewritten 2026-11-15 for the eight scenes of the restaged story (`24-gallery.feature`): one day at Nelim's Sanctuary, Nelim the protagonist in every image, Ryu the only guest (images 5 and 6). Burned on the eight candidates (`<n>-candidate-<name>.jpg`) before the review; the file names below are the final ones, taken at the reindex after acceptance.
+One line of English at the bottom of each gallery scene without an interface window (owner rule of 2026-10-15, `GALLERY.md`, "Sous-titres"): `0-` (the Preview) has none, and this mod has no interface capture. The clean originals go to `Art/Gallery-clean/`; `Art/Gallery/` holds the subtitled images, set with `scripts/Add-Subtitle.ps1`. Rewritten 2026-11-15 for the eight scenes of the restaged story (`24-gallery.feature`): one day at Nelim's Sanctuary, Nelim the protagonist in every image, Ryu the only guest (images 5 and 6). Burned on the eight images of `Art/Gallery/` (final names, below).
 
 | Index | File | Line |
 | --- | --- | --- |
