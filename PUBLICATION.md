@@ -34,17 +34,18 @@ None ticked. The mod holds no nudity, sexual content or gore beyond RimWorld's o
 
 ## Gallery subtitles
 
-One line of English at the bottom of each gallery scene without an interface window (owner rule of 2026-10-15, `GALLERY.md`, "Sous-titres"): `0-` (the Preview) has none, and this mod has no interface capture. The clean originals go to `Art/Gallery-clean/` under the same names; `Art/Gallery/` holds the subtitled images, set with `scripts/Add-Subtitle.ps1`. Rewritten 2026-10-16 for the restaged story (`GALLERY.md`, "The story"; `24-gallery.feature`): one day at Nelim's Sanctuary, Nelim the protagonist in every image, Ren the only guest (images 5 and 6). The file names are those of the old series; each line is set on the matching new capture once the owner accepts it. Not set on the images yet.
+One line of English at the bottom of each gallery scene without an interface window (owner rule of 2026-10-15, `GALLERY.md`, "Sous-titres"): `0-` (the Preview) has none, and this mod has no interface capture. The clean originals go to `Art/Gallery-clean/`; `Art/Gallery/` holds the subtitled images, set with `scripts/Add-Subtitle.ps1`. Rewritten 2026-11-15 for the eight scenes of the restaged story (`24-gallery.feature`): one day at Nelim's Sanctuary, Nelim the protagonist in every image, Ryu the only guest (images 5 and 6). Burned on the eight candidates (`<n>-candidate-<name>.jpg`) before the review; the file names below are the final ones, taken at the reindex after acceptance.
 
 | Index | File | Line |
 | --- | --- | --- |
-| 1 | `1-dawn-crow.png` | At dawn, Nelim stops among the statues: the Pleiades star officer is crowing. |
-| 2 | `2-four-beasts.png` | Four beasts out of the Classic of Mountains and Seas have come to the Sanctuary for the New Year. |
-| 3 | `3-qiongqi-far.png` | Behind Nelim, the qiongqi has picked out its prey, and she stands her ground. |
-| 4 | `4-nian-fire.png` | The nian beast breathes fire at a muffalo. Nelim holds the one thing it fears: a firecracker. |
-| 5 | `5-wind-barrier.png` | Ren fires at the mingshe, and its wind barrier throws the shot back. |
-| 6 | `6-sexie-aura.png` | The sexie's red aura drives Ren berserk, and Nelim keeps to the edge of the ring. |
-| 7 | `7-extractor.png` | At the extractor, three archite capsules wait for what the beasts leave behind, and a hen minds the bench. |
+| 1 | `1-dawn-crow.jpg` | At dawn, Nelim feeds the hens while the Pleiades star officer crows among the statues. |
+| 2 | `2-four-beasts.jpg` | Four beasts out of the Classic of Mountains and Seas have come to the Sanctuary for the New Year. |
+| 3 | `3-qiongqi.jpg` | The qiongqi has picked its prey, and Nelim braces behind the sandbags. |
+| 4 | `4-nian-fire.jpg` | The nian beast breathes fire at a muffalo. Nelim holds the one thing it fears: a firecracker. |
+| 5 | `5-wind-barrier.jpg` | Ryu fires at the mingshe, and its wind barrier throws the shot back. |
+| 6 | `6-sexie-aura.jpg` | The sexie's red aura drives Ryu berserk, and Nelim keeps to the edge of the ring. |
+| 7 | `7-extractor.jpg` | Three archite capsules wait at the extractor, and a hen minds the bench. |
+| 8 | `8-tame-clones.jpg` | After the day, Nelim feeds the five tamed clones that came out of the extractor. |
 
 ## Steam description
 
