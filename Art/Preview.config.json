@@ -15,10 +15,10 @@
   "echo": { "file": "echo-source.png" },
   "icon": { "file": "ModIcon-source.png" },
   "palette": {
-    "veil": "#35312D",
+    "veil": "#613522",
     "inkPrimary": "#F2ECE1",
     "inkSecondary": "#F5CF97",
-    "accent": "#EF4936",
+    "accent": "#F2701E",
     "badgeInk": "#17120E"
   }
 }
