@@ -10,7 +10,7 @@ packageId:    nelim.ancientchinesebeastandgeneexpanded
 repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 visibility:   public
 detached:     yes
-workflow_stage: mountPreview[1.1.0]
+workflow_stage: writeReleaseDocs[1.1.0]
 social_preview_sha256: 394a74e01465952f456c84ce7069270661b750f73df85d53730a465c6c0e2626
 echo_review_sha: acf8b487c6fd413a3fd6f7dea299232702f466d6  # 2026-11-16, 10.a: echo kept again, echo-source.png and gallery 1 to 8 unchanged since 2026-11-15; only 0-preview.png (our own render of the new Preview) and Preview.config.json changed. Previous: 9d5b8f0b962db7260d3622a85774d6cad1044006  # 2026-11-15, 10.a: echo kept (echo-source.png, winged qiongqi line art, Preview panel bottom-left); the new gallery shows the same beast (images 2, 3, 8), subject unchanged; Preview.png unchanged, still equals 0-preview.png and social_preview_sha256
 publication_changelog_review_sha: 5bed84a774984f2711ba3048ce90046038b30fcc
@@ -110,7 +110,7 @@ remaining:
 session:      local_5bc1b5af-5a8d-4b9e-98fa-5f1f54777aa6
 updated:      2026-11-16
 upstream_synced: 2026-11-12 MonsterTower/AncientChineseBeast@f6d3d19
-protocols_read_sha: d08ea1e719bcdd38ad9b7f1fc86283aaaacffb2e
+protocols_read_sha: 8e7e91a59ad6e51d9889105c58dffd44fa8cae66
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
