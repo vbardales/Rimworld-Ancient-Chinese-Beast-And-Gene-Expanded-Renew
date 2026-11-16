@@ -109,7 +109,7 @@ remaining:
       C# nor the defs. Inherited, left alone
 session:      local_5bc1b5af-5a8d-4b9e-98fa-5f1f54777aa6
 updated:      2026-11-16
-upstream_synced: 2026-11-12 MonsterTower/AncientChineseBeast@f6d3d19
+upstream_synced: 2026-11-16 MonsterTower/AncientChineseBeast@f6d3d19
 protocols_read_sha: 70263f7abedb6f58a8a477e803c19bd877a406cf
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
@@ -256,3 +256,5 @@ STATE 2026-11-16 (back to code[1.2.0]): owner order, the 1.7 pass restarts the c
 STATE 2026-11-16 (14.b/14.h comments): Virginie says the three comments (original 3292446841, Chinese Comprehensive Expansion 3221850511, Use This Instead 3396308787) were already posted earlier; nothing more to post. Tags: not verified (Steam page answered 429), the CI sent none (update_tags=false at 1.0.0 and 1.1.0); to check on the page, the `1.7` tag comes with `update_tags=true` at 1.2.0. Collection 3815982565 membership still to confirm.
 
 STATE 2026-11-16 (checks by Virginie): Steam tags are set and the item is in the collection 3815982565 (her word in chat). Git tags v1.0.0 (ff3ecbd) and v1.1.0 (c42180d) and their releases exist on origin. No Version Warning id asked to PiI.
+
+STATE 2026-11-16 (3.0 and 1.7 ticket): 3.0 upstream sync: `MonsterTower/AncientChineseBeast` holds no commit after f6d3d19 (fetched 2026-11-16), `upstream_synced` updated. 1.7 diagnostic filed: ticket 20261116-211244-709-a8a1 (a8a1), English, `-Game /home/nelim/rimworld17`, `-DepMap wsl-deps.v17.map` (No Version Warning 2599504692 test-only, id from PiI), `-Filter '!24-gallery'` (the gallery set is not a 1.7 matter), evidence `Tests/Pickle/Inbox/2026-11-16a-v17-en`, tree frozen at c180a81 (current net472 DLL, no 1.7 folder). WAITING position 4/4. On RUN_DONE: read summary.json (exitReason first) and junit.xml, then `tested_1_7` (yes or no with the log error in docs/runs/; a tool-caused red is a tool defect, never `no`).
