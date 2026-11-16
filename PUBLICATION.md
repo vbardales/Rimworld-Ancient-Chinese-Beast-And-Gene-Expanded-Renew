@@ -132,7 +132,14 @@ section `## [1.1.0]`. 1.0.0 went out on 2026-10-13 with `[b]1.0.0[/b]`.
 
 ```
 [b]1.1.0[/b]
-See the changelog on GitHub for the full list.
+[list]
+[*] The mingshe's wind barrier no longer repeats the same error on every tick.
+[*] English and French wording corrected after a full translation review; the French was proofread by a native speaker.
+[*] The description now says which language was completed with AI: Simplified Chinese, extended with Claude and reviewed by ChatGPT, not checked by a native speaker.
+[*] New gallery and preview.
+[*] Smaller download: two oversized original textures removed.
+[/list]
+[url=https://github.com/vbardales/Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew/blob/main/CHANGELOG.md]Full changelog on GitHub[/url]
 ```
 
 ## Thank-you comment (not posted)
