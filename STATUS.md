@@ -28,7 +28,7 @@ tested_on: 2026-11-06 pickle 6589e5f (1.6, English: feature 20 wind barrier 2/2 
 workshop:     published 2026-10-13, item 3806709132, public since 2026-10-13 (the owner switched it, after the upload), version 1.0.0, tag v1.0.0, run 38369937487 (publish and tag-and-release green)
 remaining:
   - open 2026-11-16 (replay 4.b, 4.e): Mod/About/OptionalCompat.xml lacks XeoNovaDan.NocturnalAnimals (Patches/NocturnalAnimals.xml targets it); Check-OptionalCompat exit 1. Add the entry (kind patch), rerun the check, replay
-  - open 2026-11-16 (replay 10.f): Preview.png upload to the repo Social preview not confirmed (social_preview_sha256 equals current Preview.png)
+  - verified 2026-11-16 (replay 10.f): Preview.png uploaded to the repo Social preview (owner, in chat); social_preview_sha256 equals the current Preview.png
   - verified 2026-10-01: French review by Virginie (see "Translation audit - 2026-10-01"). 11 source cells of
       `FRENCH_REVIEW.md` stay marked unverified (fields inherited from vanilla parents, not read)
   - verified 2026-10-13: Pickle on the 1.6 tree, read from the kept reports (`summary.json` `exitReason` first). Pass 1
@@ -164,6 +164,8 @@ AUDIT 1.a, Steam search done by PiI (2026-11-13), full study in `docs/inventory/
 
 Summary: Steam searches `Ancient Chinese Beast`, `Chinese mythology beasts`, `Chinese creature genes`. Found: original 3292446841 (2024-08, protected); NoGene sibling 3047055011 (fork-or-rewrite, same author's variant without the genes, not a competitor); link 3293695725 "Remove Ancient Chinese Beast Gene textures" (patch of the original, 1.6); name only 3313313985 "Ancient amorphous threat". PiI subscribed to the two small ones for study and unsubscribed them. Nothing else Chinese-themed holds our `SZ_*` defNames. Local scan from this session agrees (corpus 5302/5306 folders, 2 hits, our own `About.xml`). Gap settled 2026-11-13 (Steam API `GetPublishedFileDetails`, local `About.xml` files): 3047055011 created 2023-10-07, last updated 2023-11-27, `supportedVersions` 1.4 only, 1486 subscribers: dead for 1.6 (PiI's "alive 1.6" is wrong; the 2026-09-05 date is the local download). Upstream 3292446841 created 2024-07-19, last updated 2024-08-14, `supportedVersions` 1.4 and 1.5, folders `1.4/` `1.5/`, no 1.6, 3167 subscribers: not updated since our port. Licence not read. Nothing to add to `Check-OptionalCompat.ps1`, no combined pass owed at 8.f.
 
+
+Owner decision 2026-11-16: no action on the patch 3293695725 (Remove Ancient Chinese Beast Gene textures) nor on the twin 3047055011 (NoGene, 1.4 only). Like every patch of an original, they wait for the release or the RTI pass; nothing asked of their authors, no own patch, no incompatibility declared now.
 ## History
 
 Older dated sections moved to `docs/runs/2026-10-13-status-history.md` (until 2026-10-13), `docs/runs/2026-11-05-status-history.md` (2026-10-15 to 2026-11-03) and `docs/runs/2026-11-09-status-history.md` (2026-11-05 to 2026-11-08) and `docs/runs/2026-11-10-status-history.md` (2026-11-09 gallery tickets, scenes 1 to 8 up to scene 6 v5).
