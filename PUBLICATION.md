@@ -30,7 +30,7 @@ Hard: Harmony (`brrainz.harmony`, Workshop 2009463077) and Biotech (`Ludeon.RimW
 
 ## Adult content boxes
 
-None ticked. The mod holds no nudity, sexual content or gore beyond RimWorld's own combat. All eight gallery images (0 to 7) were opened on 2026-10-13 and show creatures, a rooster, a colonist and a workshop only.
+None ticked. The mod holds no nudity, sexual content or gore beyond RimWorld's own combat. All nine gallery images (0 to 8) were opened on 2026-11-15 and show creatures, a rooster, colonists and a workshop only.
 
 ## Gallery subtitles
 
