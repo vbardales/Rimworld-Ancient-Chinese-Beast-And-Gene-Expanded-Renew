@@ -40,6 +40,8 @@ Loads after Chinese Comprehensive Expansion (https://steamcommunity.com/sharedfi
 
 The beasts rest and breed like any animal: they lie down when tired, and a tame pair has offspring that grow up (the mingshe and the Pleiades star officer lay eggs). Clones saved before this version have no sex and stay sterile. With Nocturnal Animals (https://steamcommunity.com/sharedfiles/filedetails/?id=2269731409) (optional) each beast keeps its own hours: the qiongqi and the sexie hunt by night.
 
+Languages: English and French, and Simplified Chinese. French: proofread by a native speaker. Simplified Chinese: the authors' own text; what was added (the labels that used to be hard-coded) was completed with Claude (Anthropic) and reviewed by ChatGPT (OpenAI), and has not been checked by a native speaker.
+
 What changed in the update
 
 The mod's own logic is unchanged. What broke was where the new version moved the ground under it:
@@ -66,7 +68,7 @@ The update to the latest RimWorld version, its tests and its documentation were 
 THANKS
 
 andery233xj, Frolg, DongFang and Ninedaylongbow, for the mod: the beasts, the art, the mechanics and the original code are theirs.
-SamBucher, for A Dog Said... Animal Prosthetics 2 (https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862), and for saying how a mod is added to it.
+SamBucher, for A Dog Said... Animal Prosthetics 2 (https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862), and for explaining how to add a mod to it.
 Mlie and XeoNovaDan, for Nocturnal Animals (https://steamcommunity.com/sharedfiles/filedetails/?id=2269731409), whose body clocks this mod plugs into.
 ninedaylongbow and Frolg, for Chinese Comprehensive Expansion (https://steamcommunity.com/sharedfiles/filedetails/?id=3221850511), the optional companion this one loads after.
 Andreas Pardeike, for Harmony.

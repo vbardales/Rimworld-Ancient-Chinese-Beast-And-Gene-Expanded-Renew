@@ -22,7 +22,7 @@ checked 2026-10-08 against `PUBLISHING.md`, « Images »: numbered `0-`, `1-`, `
 in the folder; `0-` is a byte copy of `Mod/About/Preview.png` (compared after the 2026-10-08 regeneration); every other
 image is a **staged photograph** of the shared Sanctuary location, not a test capture; each image under 2 MB, the folder
 under 8 MB. `Art/Gallery/` holds only the ready-to-ship set (final names, subtitled),
-a refused image is recomposed and replaced. The story, the set and the shot list are in `GALLERY.md`. State 2026-11-15: images 0 to 8, indexes contiguous, subtitled, awaiting the owner's review.
+a refused image is recomposed and replaced. The story, the set and the shot list are in `GALLERY.md`. State 2026-11-15: images 0 to 8, indexes contiguous, subtitled, accepted by the owner on 2026-11-15.
 
 ## Dependencies and DLC
 
@@ -82,6 +82,8 @@ Works with [A Dog Said... Animal Prosthetics 2](https://steamcommunity.com/share
 Loads after [Chinese Comprehensive Expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=3221850511) (optional), by two of the same authors: no patch, only the load order, so the two sit together without a conflict.
 
 The beasts rest and breed like any animal: they lie down when tired, and a tame pair has offspring that grow up (the mingshe and the Pleiades star officer lay eggs). Clones saved before this version have no sex and stay sterile. With [Nocturnal Animals](https://steamcommunity.com/sharedfiles/filedetails/?id=2269731409) (optional) each beast keeps its own hours: the qiongqi and the sexie hunt by night.
+
+Languages: English and French, and Simplified Chinese. French: proofread by a native speaker. Simplified Chinese: the authors' own text; what was added (the labels that used to be hard-coded) was completed with Claude (Anthropic) and reviewed by ChatGPT (OpenAI), and has not been checked by a native speaker.
 
 ## What changed in the update
 
