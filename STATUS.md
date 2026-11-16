@@ -10,7 +10,7 @@ packageId:    nelim.ancientchinesebeastandgeneexpanded
 repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 visibility:   public
 detached:     yes
-workflow_stage: startWatch[1.1.0]
+workflow_stage: postOnSteam[1.1.0]
 social_preview_sha256: 394a74e01465952f456c84ce7069270661b750f73df85d53730a465c6c0e2626
 echo_review_sha: acf8b487c6fd413a3fd6f7dea299232702f466d6  # 2026-11-16, 10.a: echo kept again, echo-source.png and gallery 1 to 8 unchanged since 2026-11-15; only 0-preview.png (our own render of the new Preview) and Preview.config.json changed. Previous: 9d5b8f0b962db7260d3622a85774d6cad1044006  # 2026-11-15, 10.a: echo kept (echo-source.png, winged qiongqi line art, Preview panel bottom-left); the new gallery shows the same beast (images 2, 3, 8), subject unchanged; Preview.png unchanged, still equals 0-preview.png and social_preview_sha256
 publication_changelog_review_sha: d7493d64d8c270087bd8ab943ce3044d6f67a59b
@@ -240,3 +240,5 @@ Virginie validated in chat the French and English wording changed after 2026-11-
 STATE 2026-11-16 (published): run 43945169309 green (`publish` and `tag-and-release`), approved by Virginie on `steam-production`. Tag `v1.1.0` and GitHub release exist; `About/PublishedFileId.txt` unchanged (3806709132, committed). Item already public (switched 2026-10-13). 13.b: SUBSCRIBE-TEST? sent to PiI, answer awaited. workflow_stage `startWatch[1.1.0]`.
 
 STATE 2026-11-16 (13.b done): PiI SUBSCRIBE-TEST OK on 3806709132 (re-downloaded, item updated 20:01 UTC): 195 files, About.xml byte-identical to Mod/About/About.xml with the Languages paragraph, DLL identical (cmp), Languages ChineseSimplified, English, French. About.xml has no modVersion tag, so the version is not readable from the folder (tag v1.1.0 and the run prove it). Next: 14.f and 14.g watch, then postOnSteam.
+
+STATE 2026-11-16 (14.f done): GitHub repo watch set (`gh api PUT subscription`, subscribed true); Steam comment notifications are Virginie's; collection 3815982565 membership to confirm with her. workflow_stage `postOnSteam[1.1.0]`: Virginie posts the drafts of PUBLICATION.md (original page 3292446841, Chinese Comprehensive Expansion 3221850511, Use This Instead 3396308787) and uploads the new gallery `Art/Gallery/0..8` by hand (gallery changed since the 1.0.0 upload).
