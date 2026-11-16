@@ -10,7 +10,7 @@ packageId:    nelim.ancientchinesebeastandgeneexpanded
 repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 visibility:   public
 detached:     yes
-workflow_stage: declareDependencies[1.1.0]
+workflow_stage: mountPreview[1.1.0]
 social_preview_sha256: 394a74e01465952f456c84ce7069270661b750f73df85d53730a465c6c0e2626
 echo_review_sha: 9d5b8f0b962db7260d3622a85774d6cad1044006  # 2026-11-15, 10.a: echo kept (echo-source.png, winged qiongqi line art, Preview panel bottom-left); the new gallery shows the same beast (images 2, 3, 8), subject unchanged; Preview.png unchanged, still equals 0-preview.png and social_preview_sha256
 publication_changelog_review_sha: 5bed84a774984f2711ba3048ce90046038b30fcc
@@ -27,7 +27,7 @@ showcase:     complete
 tested_on: 2026-11-06 pickle 6589e5f (1.6, English: feature 20 wind barrier 2/2 and feature 13 original mod 1/1 green; French feature 15 22/22 green 2026-11-03)
 workshop:     published 2026-10-13, item 3806709132, public since 2026-10-13 (the owner switched it, after the upload), version 1.0.0, tag v1.0.0, run 38369937487 (publish and tag-and-release green)
 remaining:
-  - open 2026-11-16 (replay 4.b, 4.e): Mod/About/OptionalCompat.xml lacks XeoNovaDan.NocturnalAnimals (Patches/NocturnalAnimals.xml targets it); Check-OptionalCompat exit 1. Add the entry (kind patch), rerun the check, replay
+  - verified 2026-11-16 (replay 4.b, 4.e): Mod/About/OptionalCompat.xml declares XeoNovaDan.NocturnalAnimals (workshop 2004368312, patch) beside Mlie.XNDNocturnalAnimals; Check-OptionalCompat exit 0
   - verified 2026-11-16 (replay 10.f): Preview.png uploaded to the repo Social preview (owner, in chat); social_preview_sha256 equals the current Preview.png
   - verified 2026-10-01: French review by Virginie (see "Translation audit - 2026-10-01"). 11 source cells of
       `FRENCH_REVIEW.md` stay marked unverified (fields inherited from vanilla parents, not read)
@@ -110,7 +110,7 @@ remaining:
 session:      local_5bc1b5af-5a8d-4b9e-98fa-5f1f54777aa6
 updated:      2026-11-16
 upstream_synced: 2026-11-12 MonsterTower/AncientChineseBeast@f6d3d19
-protocols_read_sha: e45e80921139f7d8d13efb8b77600cbb6b220146
+protocols_read_sha: d08ea1e719bcdd38ad9b7f1fc86283aaaacffb2e
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
