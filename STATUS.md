@@ -10,10 +10,10 @@ packageId:    nelim.ancientchinesebeastandgeneexpanded
 repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 visibility:   public
 detached:     yes
-workflow_stage: writeReleaseDocs[1.1.0]
+workflow_stage: publish[1.1.0]
 social_preview_sha256: 394a74e01465952f456c84ce7069270661b750f73df85d53730a465c6c0e2626
 echo_review_sha: acf8b487c6fd413a3fd6f7dea299232702f466d6  # 2026-11-16, 10.a: echo kept again, echo-source.png and gallery 1 to 8 unchanged since 2026-11-15; only 0-preview.png (our own render of the new Preview) and Preview.config.json changed. Previous: 9d5b8f0b962db7260d3622a85774d6cad1044006  # 2026-11-15, 10.a: echo kept (echo-source.png, winged qiongqi line art, Preview panel bottom-left); the new gallery shows the same beast (images 2, 3, 8), subject unchanged; Preview.png unchanged, still equals 0-preview.png and social_preview_sha256
-publication_changelog_review_sha: 4b6a2e6795c4ed4c5156f3bfe932a74bececca51
+publication_changelog_review_sha: d7493d64d8c270087bd8ab943ce3044d6f67a59b
 licence:      silent
 licence_at:   reviewed 2026-09-12 - original files and About.xml, English and Chinese Workshop
             descriptions, all 68 public comments, and the four coauthors' Steam profiles;
@@ -110,7 +110,7 @@ remaining:
 session:      local_5bc1b5af-5a8d-4b9e-98fa-5f1f54777aa6
 updated:      2026-11-16
 upstream_synced: 2026-11-12 MonsterTower/AncientChineseBeast@f6d3d19
-protocols_read_sha: 873c7b9b27b7847b456dc963ecc33b9c91d6b159
+protocols_read_sha: a7f8c05ba5d9d62f8f2ec9f52f0b5944a2f4c92c
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -226,3 +226,5 @@ STATE 2026-11-16 (writeReleaseDocs, 11.a to 11.k read): 11.a description complet
 STATE 2026-11-16 (11.j done): Virginie read PUBLICATION.md and CHANGELOG.md of this revision and validated ("je valide, relu", chat). `publication_changelog_review_sha` set to the commit read. 11.a to 11.k closed.
 
 STATE 2026-11-16 (12.a to 12.d): 12.a `code_review_sha` refreshed (only About.xml description text since the last read, revue du diff : texte seul); 12.b dependencies and OptionalCompat.xml unchanged since declareDependencies (XeoNovaDan declaration added and checked 2026-11-16); 12.c `Check-Status -Strict` 0 ERROR 0 WARN; 12.c bis Docs/GALLERY.md, MANUAL-TESTS.md, PROTOCOLS-READ.md and Tests/Pickle/README.md minified, identifiers checked unchanged (BACKLOG, TESTING, STATUS, README were minified 2026-10-16; review-names.md and review-refusals.md left whole, ChatGPT reads them; PROMPT_*.md left whole, it is a prompt); 12.d tree clean after the commit, Run-All 9 of 9 and Source and DLL unchanged since 6589e5f. NEXT 12.e: date the CHANGELOG `[1.1.0]`, dry-run on that SHA. Open question for the owner: publish 1.1.0 now or wait for the 1.7 pass (CHANGELOG says "grouped with the 1.7 pass").
+
+STATE 2026-11-16 (12.e to 12.h): owner "oui" to publishing 1.1.0 now (without waiting for the 1.7 pass; 1.7 comes later). CHANGELOG `## [1.1.0] - 2026-11-16`. Rollback target (12.f): tag v1.0.0, commit ff3ecbd, last known good. 12.f text gate: Virginie reads before the send the French and Chinese wording changed after her 2026-11-13 validation (review passes 24 to 29: sexie sound, gene provenance, quadruped leg labels, scorpion poison, PUBLICATION thanks wording); pending her word in chat. `publication_changelog_review_sha` = the commit that dates [1.1.0] (her 11.j reading covered the same content, only the heading changed). workflow_stage `publish[1.1.0]` set before the dry-run (12.h).
