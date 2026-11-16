@@ -109,7 +109,7 @@ The update to the latest RimWorld version, its tests and its documentation were 
 ## THANKS
 
 andery233xj, Frolg, DongFang and Ninedaylongbow, for the mod: the beasts, the art, the mechanics and the original code are theirs.
-SamBucher, for [A Dog Said... Animal Prosthetics 2](https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862), and for saying how a mod is added to it.
+SamBucher, for [A Dog Said... Animal Prosthetics 2](https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862), and for explaining how to add a mod to it.
 Mlie and XeoNovaDan, for [Nocturnal Animals](https://steamcommunity.com/sharedfiles/filedetails/?id=2269731409), whose body clocks this mod plugs into.
 ninedaylongbow and Frolg, for [Chinese Comprehensive Expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=3221850511), the optional companion this one loads after.
 Andreas Pardeike, for Harmony.
