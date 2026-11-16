@@ -22,6 +22,7 @@ licence_at:   reviewed 2026-09-12 - original files and About.xml, English and Ch
 upstream_mod_remotes:
   - https://github.com/MonsterTower/AncientChineseBeast
 dependencies: declared
+workshop_required_items: done, 2026-11-16 (read on the Steam page: Harmony 2009463077, Biotech DLC 1826140)
 showcase:     complete
 tested_on: 2026-11-06 pickle 6589e5f (1.6, English: feature 20 wind barrier 2/2 and feature 13 original mod 1/1 green; French feature 15 22/22 green 2026-11-03)
 workshop:     published 2026-10-13, item 3806709132, public since 2026-10-13 (the owner switched it, after the upload), version 1.0.0, tag v1.0.0, run 38369937487 (publish and tag-and-release green)
