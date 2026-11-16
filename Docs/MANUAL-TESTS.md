@@ -1,29 +1,28 @@
 # Manual tests M1 to M9
 
-What the Pickle suite does not play on its own. The reason for each is in `Tests/Pickle/README.md`, "The manual
-exceptions", which also holds their state. `tested` waits for every one of them to be green, or to be listed as not
-applicable with its reason (`AUDIT.md`, `done -> tested`). The owner does the ones that stay manual.
+What Pickle suite not play alone. Reason for each in `Tests/Pickle/README.md`, "The manual
+exceptions", which also holds their state. `tested` wait for every one green, or listed as not
+applicable with reason (`AUDIT.md`, `done -> tested`). Owner do ones that stay manual.
 
-Rewritten in English on 2026-10-01 (this file was in French: everything the repository holds is in English,
+Rewritten in English on 2026-10-01 (file was French: everything repository holds is English,
 `PUBLISHING.md`, "Dépôt").
 
-**Where each stands on 2026-10-01.** M1 to M5 are automated and green (features 04, 20, 21, 22): nothing to do by
-hand. M6 and M7 are automated and red (features 19 and 18): the scenario or the mod is to be fixed, or the case done
-by hand below. M8 and M9 are not automated.
+**Where each stands on 2026-10-01.** M1 to M5 automated, green (features 04, 20, 21, 22): nothing to do by
+hand. M6 and M7 automated, red (features 19 and 18): fix scenario or mod, or do case by hand below. M8 and M9 not automated.
 
-Common setup: a test game in developer mode, the mod active with Biotech and Harmony. The debug menu has a category
+Common setup: test game in developer mode, mod active with Biotech and Harmony. Debug menu has category
 **Ancient Chinese Beast** ("Bêtes chinoises antiques" in French): *Beast attack now*, *Nian beast next hour*,
-*Clear the sixty-day gate*, *Report the beast clock*. Read `Player.log` with the console key or in the game's folder.
-For each test note: green, red, and what was seen.
+*Clear the sixty-day gate*, *Report the beast clock*. Read `Player.log` with console key or in game folder.
+For each test note: green, red, what seen.
 
 | # | To do | Expected |
 |---|---|---|
-| M1 | A crop field and one tree of each kind (anima, Gauranlen, polux among them). Run *Beast attack now* until the mingshe arrives, wait one game hour. | Plants rot every hour while the beast lives; anima, Gauranlen and polux are spared. The drought ends when it dies. (Automated, green.) |
-| M2 | A hostile mingshe, a shooter outside its wind ring, a colonist inside the ring. | Shots from outside are thrown back, the colonist inside is cut. (Automated, green.) |
-| M3 | A hostile qiongqi facing twenty shots, then two shooters at different distances. | About half of the shots dodged (dodge motes); it flies at the farthest shooter; wounds land on the head more often. (Automated, green.) |
-| M4 | A sexie in human form, several colonists of whom one is very psychically sensitive, within eleven tiles. | Colonists in the ring turn on each other at the aura's pace. (Automated, green.) |
-| M5 | A nian beast, a colonist shut behind a door. | The beast breaks the enclosure down to reach them. (Automated, green.) |
-| M6 | Research tab **Chinese items** ("Objets chinois"); build the extractor, have a corpse carried to it, start the bill. | The tab displays; the bill runs to its end and gives the genes or the clone. (Automated, **red**.) |
-| M7 | A colonist with each of three genes: the qiongqi's eye (dodge), the sexie's monstrous strength (doubled unarmed damage), the nian beast's horn (tougher head). | Effects visible in the health tab and the combat log. (Automated for two of the three, **red**; the dodge is in feature 21, green.) |
-| M8 | Save, change the language (English to French, then back), reload, send the next beast letter. | The letter is in the new language, in both directions. (Automated for what the mod owns, feature 23, written 2026-10-01, not yet played.) |
-| M9 | Add the mod to an existing save; then, on a save that has beasts, remove it. | The save opens in both cases. **Adding** needs no test of its own: any basic scenario already loads the mod into a game that never had it (owner, 2026-10-09). **Removing** is automated by a `-Then` / `-ThenWithout nelim.ancientchinesebeastandgeneexpanded` request: save with beasts, reload without the mod (written after the queue is empty, see `Tests/Pickle/README.md`). |
+| M1 | Crop field and one tree of each kind (anima, Gauranlen, polux among them). Run *Beast attack now* until mingshe arrives, wait one game hour. | Plants rot every hour while beast lives; anima, Gauranlen, polux spared. Drought ends when it dies. (Automated, green.) |
+| M2 | Hostile mingshe, shooter outside its wind ring, colonist inside ring. | Shots from outside thrown back, colonist inside cut. (Automated, green.) |
+| M3 | Hostile qiongqi facing twenty shots, then two shooters at different distances. | About half shots dodged (dodge motes); flies at farthest shooter; wounds land on head more often. (Automated, green.) |
+| M4 | Sexie in human form, several colonists, one very psychically sensitive, within eleven tiles. | Colonists in ring turn on each other at aura's pace. (Automated, green.) |
+| M5 | Nian beast, colonist shut behind door. | Beast breaks enclosure down to reach them. (Automated, green.) |
+| M6 | Research tab **Chinese items** ("Objets chinois"); build extractor, have corpse carried to it, start bill. | Tab displays; bill runs to end, gives genes or clone. (Automated, **red**.) |
+| M7 | Colonist with each of three genes: qiongqi's eye (dodge), sexie's monstrous strength (doubled unarmed damage), nian beast's horn (tougher head). | Effects visible in health tab and combat log. (Automated for two of three, **red**; dodge in feature 21, green.) |
+| M8 | Save, change language (English to French, then back), reload, send next beast letter. | Letter in new language, both directions. (Automated for what mod owns, feature 23, written 2026-10-01, not yet played.) |
+| M9 | Add mod to existing save; then, on save that has beasts, remove it. | Save opens in both cases. **Adding** needs no own test: any basic scenario already loads mod into game that never had it (owner, 2026-10-09). **Removing** automated by `-Then` / `-ThenWithout nelim.ancientchinesebeastandgeneexpanded` request: save with beasts, reload without mod (written after queue empty, see `Tests/Pickle/README.md`). |

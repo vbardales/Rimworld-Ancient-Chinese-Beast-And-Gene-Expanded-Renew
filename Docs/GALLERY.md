@@ -1,50 +1,34 @@
 # Gallery plan
 
-Rules (`PUBLISHING.md`, « Images », read 2026-10-08): every gallery picture is a **staged photograph** of one story, shot
-on the shared Sanctuary location (`Nelims-tribe`, Nelim's Sanctuary Backlot), except menus, which are plain screenshots.
-This mod has no settings page, so there is no menu picture. Image `0-` is the byte copy of `Mod/About/Preview.png`; the
-others are numbered `1-`, `2-`… on one digit, in page order, each under 2 MB, the folder under 8 MB. A candidate is named
-`<n>-candidate-<name>.png` until the owner accepts it (`candidate` is then dropped); a refused one is deleted. The earlier
-captures of the test colony (`2026-10-01a-p1-en`) are test proof only and are never used.
+Rules (`PUBLISHING.md`, « Images », read 2026-10-08): every gallery picture = **staged photograph** of one story, shot on shared Sanctuary location (`Nelims-tribe`, Nelim's Sanctuary Backlot). Exception: menus = plain screenshots. Mod has no settings page → no menu picture. Image `0-` = byte copy of `Mod/About/Preview.png`; others numbered `1-`, `2-`… one digit, page order, each <2 MB, folder <8 MB. Candidate named `<n>-candidate-<name>.png` until owner accepts (then drop `candidate`); refused → deleted. Earlier test colony captures (`2026-10-01a-p1-en`) = test proof only, never used.
 
 ## The story (restaged 2026-10-15)
 
-One day at Nelim’s Sanctuary, told like a wildlife report on four beasts out of the Classic of Mountains and Seas that came with the New Year, and the rooster that announces the day. **Nelim is the protagonist** (owner rule 2026-10-14) and is in every image: she wears a jade middle robe of RimImmortal-Living and a Taoist hat of Chinese Comprehensive Expansion (the theme), her hair in a RimImmortal-Hairstyle bun, her own face and a cheerful expression. Ren takes a man's bun of the same mod. **Ren** (silver hair, crimson duster, crimson eyes) is the only guest, in the two images that need a shooter or a victim. Camera at zoom 5 to 9, time paused before any pawn is placed, beasts facing South. The first series (Lan and Ren, zoom 6 to 12) is replaced; see STATUS.md, "Gallery review 2026-10-15".
+One day at Nelim’s Sanctuary, told as wildlife report on four beasts from Classic of Mountains and Seas that came with New Year, plus rooster announcing day. **Nelim is the protagonist** (owner rule 2026-10-14), in every image: jade middle robe (RimImmortal-Living), Taoist hat (Chinese Comprehensive Expansion, the theme), RimImmortal-Hairstyle bun, own face, cheerful expression. Ren takes man's bun, same mod. **Ren** (silver hair, crimson duster, crimson eyes) = only guest, in two images needing shooter or victim. Camera zoom 5–9, time paused before any pawn placed, beasts face South. First series (Lan and Ren, zoom 6–12) replaced; see STATUS.md, "Gallery review 2026-10-15".
 
 ## Places, chosen on the places' own descriptions (`PickleTools/docs/GALERIE.md`, `SANCTUAIRE-LIEUX.md`)
 
-All named places were read. Chosen: `statue-garden` (statues and flowers: a divine rooster among them), `enclosure-south`
-(the Backlot's advice for imposing animals and monsters), `gravel-yard` (35 x 25 of flat ground, emptied, for a flight and
-a shot that cross twenty cells), `bare-clearing` (earth, the vanometric cell hidden, for the fire), `water-garden` (a pond
-bank, for the red ring to read against green and water), `postindustrial-workshop` (powered, for the extractor). Not
-chosen: the house rooms (the thrumbo sleep there and the light is warm for a beast of fire), the smileys (a loud orange
-carpet), `exhibition-zone` (reserved for a full-screen window, which this mod does not have).
+All named places read. Chosen: `statue-garden` (statues + flowers: divine rooster among them), `enclosure-south` (Backlot advice for imposing animals/monsters), `gravel-yard` (35 x 25 flat ground, emptied, for flight and shot crossing twenty cells), `bare-clearing` (earth, vanometric cell hidden, for fire), `water-garden` (pond bank, red ring reads against green + water), `postindustrial-workshop` (powered, for extractor). Not chosen: house rooms (thrumbo sleep there, warm light wrong for fire beast), smileys (loud orange carpet), `exhibition-zone` (reserved for full-screen window, mod has none).
 
 ## Shot list (feature `24-gallery`, one scenario = one image)
 
 | # | Hour | Place | Subject |
 | --- | --- | --- | --- |
-| 1 | 6 | statue-garden | Nelim listens to the Pleiades star officer crowing at dawn among the statues, a hen beside it |
-| 2 | 10 | enclosure-south | the four beasts in a loose arc, Nelim at the gate |
-| 3 | 12 | gravel-yard | the qiongqi faces the camera behind Nelim |
-| 4 | 14 | bare-clearing | the nian beast breathes fire at a muffalo, Nelim holds a firecracker |
-| 5 | 16 | gravel-yard | Ren fires, the mingshe’s wind barrier throws the shot back, Nelim watches |
-| 6 | 18 | water-garden | the scorpion sexie and its red ring, Ren inside it, berserk, Nelim at the edge |
-| 7 | 12 | postindustrial-workshop | the gene extractor, three archite capsules, Nelim at the bench |
+| 1 | 6 | statue-garden | Nelim listens to Pleiades star officer crowing at dawn among statues, hen beside |
+| 2 | 10 | enclosure-south | four beasts in loose arc, Nelim at gate |
+| 3 | 12 | gravel-yard | qiongqi faces camera behind Nelim |
+| 4 | 14 | bare-clearing | nian beast breathes fire at muffalo, Nelim holds firecracker |
+| 5 | 16 | gravel-yard | Ren fires, mingshe’s wind barrier throws shot back, Nelim watches |
+| 6 | 18 | water-garden | scorpion sexie + red ring, Ren inside, berserk, Nelim at edge |
+| 7 | 12 | postindustrial-workshop | gene extractor, three archite capsules, Nelim at bench |
 
 ## How it runs
 
-- Pass map `Tests/Pickle/wsl-deps.sanctuary.map` (a copy of the Backlot's minimum list, with its seeds in
-  `Tests/Pickle/config/sanctuary/`); the feature carries `@requires:nelim.sanctuarybacklot`, so every other pass skips it.
-- Steps: the Sanctuary and Pickle Tools steps for the place, the decor, the keepers' look and the camera; this suite's
-  `GallerySteps.cs` for a beast placed and turned on a cell, a qiongqi caught in its flight, the pause and the capture of
-  the map alone. A pose cannot be frozen (no step, verified negative by Pickle Tools): the pawn stays put because the game is paused.
-- A green run does not validate a picture: every capture is opened. What comes from the scene or from a shared tool is
-  described to Pickle Tools with the capture (via the Ticket Manager if it cannot be reached), never worked around here.
-- Captures are recompressed (palette or width) to stay under 2 MB each before they enter `Art/Gallery/` as candidates.
+- Pass map `Tests/Pickle/wsl-deps.sanctuary.map` (copy of Backlot's minimum list, seeds in `Tests/Pickle/config/sanctuary/`); feature carries `@requires:nelim.sanctuarybacklot`, so every other pass skips it.
+- Steps: Sanctuary + Pickle Tools steps for place, decor, keepers' look, camera; this suite's `GallerySteps.cs` for beast placed + turned on cell, qiongqi caught mid-flight, pause, capture of map alone. Pose cannot be frozen (no step, verified negative by Pickle Tools): pawn stays put because game paused.
+- Green run ≠ validated picture: open every capture. Issues from scene or shared tool → describe to Pickle Tools with capture (via Ticket Manager if unreachable), never work around here.
+- Recompress captures (palette or width) to stay <2 MB each before entering `Art/Gallery/` as candidates.
 
 ## State (2026-10-08)
 
-Written and resolved by the shared `scripts/Check-Steps.ps1` (all patterns compile, every line resolves against this suite, Pickle and both
-shared catalogues); first run requested, evidence `2026-10-08d-gallery-1`; no capture seen yet; `Art/Gallery/` holds
-`0-preview.png` only.
+Written + resolved by shared `scripts/Check-Steps.ps1` (all patterns compile, every line resolves against this suite, Pickle, both shared catalogues); first run requested, evidence `2026-10-08d-gallery-1`; no capture seen yet; `Art/Gallery/` holds `0-preview.png` only.
