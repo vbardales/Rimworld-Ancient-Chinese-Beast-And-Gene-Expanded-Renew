@@ -10,7 +10,7 @@ packageId:    nelim.ancientchinesebeastandgeneexpanded
 repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 visibility:   public
 detached:     yes
-workflow_stage: postOnSteam[1.1.0]
+workflow_stage: code[1.2.0]
 social_preview_sha256: 394a74e01465952f456c84ce7069270661b750f73df85d53730a465c6c0e2626
 echo_review_sha: acf8b487c6fd413a3fd6f7dea299232702f466d6  # 2026-11-16, 10.a: echo kept again, echo-source.png and gallery 1 to 8 unchanged since 2026-11-15; only 0-preview.png (our own render of the new Preview) and Preview.config.json changed. Previous: 9d5b8f0b962db7260d3622a85774d6cad1044006  # 2026-11-15, 10.a: echo kept (echo-source.png, winged qiongqi line art, Preview panel bottom-left); the new gallery shows the same beast (images 2, 3, 8), subject unchanged; Preview.png unchanged, still equals 0-preview.png and social_preview_sha256
 publication_changelog_review_sha: d7493d64d8c270087bd8ab943ce3044d6f67a59b
@@ -110,7 +110,7 @@ remaining:
 session:      local_5bc1b5af-5a8d-4b9e-98fa-5f1f54777aa6
 updated:      2026-11-16
 upstream_synced: 2026-11-12 MonsterTower/AncientChineseBeast@f6d3d19
-protocols_read_sha: d6ad17eb9c50ee25e6e5d28edd26a56c3f232f68
+protocols_read_sha: 70263f7abedb6f58a8a477e803c19bd877a406cf
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -250,3 +250,5 @@ NOTE 2026-11-16 (Audit answer, 1.7): prerequisites met for a first ticket (Pickl
 STATE 2026-11-16 (change notes): Virginie posted the real BBCode notes of 1.0.0 and 1.1.0 on the Steam change-notes page (the pointer sentence is gone). Rule from the owner: a change note is always the real changelog (BBCode list), never again the pointer; proposed to Audit as a shared rule with a lint. Still open in postOnSteam: the three comments and the gallery replacement (her word).
 
 STATE 2026-11-16 (gallery posted): Virginie replaced the gallery of item 3806709132 with `Art/Gallery/0` to `8` (her word in chat). Open in postOnSteam: the three comments (original 3292446841, Chinese Comprehensive Expansion 3221850511, Use This Instead 3396308787) and the collection check (3815982565).
+
+STATE 2026-11-16 (back to code[1.2.0]): owner order, the 1.7 pass restarts the chain at `code[1.2.0]` (AUDIT 14.e). 1.1.0 is published and in watch; still owed from it: the three Steam comments and the collection check (Virginie), the 1.6 non-regression of the published 1.1.0 (14.a, folded into the first 1.7 ticket cycle: Mod and Source are unchanged), cleanUp. Open for 1.2.0: No Version Warning Workshop id from Virginie; 1.7 ticket through file-pickle-ticket on the 1.7 lane; test the net472 DLL first. The steam-note lint of Audit (70263f7) applies from writeReleaseDocs.

@@ -4,6 +4,10 @@ Format inspired by [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). The
 `## [<version>]` section of a version, so each one keeps that heading exactly. This file serves the repository and
 the writing of Steam patch notes; RimWorld does not display it in game.
 
+## [Unreleased]
+
+Planned as 1.2.0: the RimWorld 1.7 pass (`tested_1_7`; no `1.7` in `supportedVersions` before a green 1.7 run and the owner's word).
+
 ## [1.1.0] - 2026-11-16
 
 The RimWorld 1.7 pass (`tested_1_7`) comes later: no `1.7` in `supportedVersions` before a green 1.7 run. Since 1.0.0:
