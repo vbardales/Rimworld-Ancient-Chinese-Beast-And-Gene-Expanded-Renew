@@ -10,7 +10,7 @@ packageId:    nelim.ancientchinesebeastandgeneexpanded
 repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 visibility:   public
 detached:     yes
-workflow_stage: publish[1.1.0]
+workflow_stage: startWatch[1.1.0]
 social_preview_sha256: 394a74e01465952f456c84ce7069270661b750f73df85d53730a465c6c0e2626
 echo_review_sha: acf8b487c6fd413a3fd6f7dea299232702f466d6  # 2026-11-16, 10.a: echo kept again, echo-source.png and gallery 1 to 8 unchanged since 2026-11-15; only 0-preview.png (our own render of the new Preview) and Preview.config.json changed. Previous: 9d5b8f0b962db7260d3622a85774d6cad1044006  # 2026-11-15, 10.a: echo kept (echo-source.png, winged qiongqi line art, Preview panel bottom-left); the new gallery shows the same beast (images 2, 3, 8), subject unchanged; Preview.png unchanged, still equals 0-preview.png and social_preview_sha256
 publication_changelog_review_sha: d7493d64d8c270087bd8ab943ce3044d6f67a59b
@@ -110,7 +110,7 @@ remaining:
 session:      local_5bc1b5af-5a8d-4b9e-98fa-5f1f54777aa6
 updated:      2026-11-16
 upstream_synced: 2026-11-12 MonsterTower/AncientChineseBeast@f6d3d19
-protocols_read_sha: a7f8c05ba5d9d62f8f2ec9f52f0b5944a2f4c92c
+protocols_read_sha: d6ad17eb9c50ee25e6e5d28edd26a56c3f232f68
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -236,3 +236,5 @@ Run [43944718301](https://github.com/vbardales/Rimworld-Ancient-Chinese-Beast-An
 ### Publication 1.1.0 - 2026-11-16
 
 Virginie validated in chat the French and English wording changed after 2026-11-13 ("Oui, validé"). Publish run [43945169309](https://github.com/vbardales/Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew/actions/runs/43945169309) dispatched with `dispatch-publish.sh` on `c42180d847a35f09d8fb1d4470d3a7344b49999c`, version 1.1.0, options `--preview --description` (same as the dry-run 43944718301); it waits for her approval of `steam-production`.
+
+STATE 2026-11-16 (published): run 43945169309 green (`publish` and `tag-and-release`), approved by Virginie on `steam-production`. Tag `v1.1.0` and GitHub release exist; `About/PublishedFileId.txt` unchanged (3806709132, committed). Item already public (switched 2026-10-13). 13.b: SUBSCRIBE-TEST? sent to PiI, answer awaited. workflow_stage `startWatch[1.1.0]`.
