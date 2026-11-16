@@ -1,0 +1,5 @@
+# Pass "v17": the RimWorld 1.7 diagnostic (AUDIT "Passe 1.7"), English only (the 1.7 install ships no French pack).
+# No Version Warning (Mlie.NoVersionWarning, Workshop 2599504692, needs Harmony, which every pass stages) is a TEST-ONLY
+# mod: it silences the yellow "not declared for 1.7" warning so the mod loads without noise. A pass proves 1.7 by the log
+# and the report, never by the screen. It is never in LoadFolders.xml, About.xml or the dependencies of the mod.
+Mlie.NoVersionWarning 2599504692
