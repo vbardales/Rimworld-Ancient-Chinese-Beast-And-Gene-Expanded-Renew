@@ -13,7 +13,7 @@ detached:     yes
 workflow_stage: writeReleaseDocs[1.1.0]
 social_preview_sha256: 394a74e01465952f456c84ce7069270661b750f73df85d53730a465c6c0e2626
 echo_review_sha: acf8b487c6fd413a3fd6f7dea299232702f466d6  # 2026-11-16, 10.a: echo kept again, echo-source.png and gallery 1 to 8 unchanged since 2026-11-15; only 0-preview.png (our own render of the new Preview) and Preview.config.json changed. Previous: 9d5b8f0b962db7260d3622a85774d6cad1044006  # 2026-11-15, 10.a: echo kept (echo-source.png, winged qiongqi line art, Preview panel bottom-left); the new gallery shows the same beast (images 2, 3, 8), subject unchanged; Preview.png unchanged, still equals 0-preview.png and social_preview_sha256
-publication_changelog_review_sha: 5bed84a774984f2711ba3048ce90046038b30fcc
+publication_changelog_review_sha: 4b6a2e6795c4ed4c5156f3bfe932a74bececca51
 licence:      silent
 licence_at:   reviewed 2026-09-12 - original files and About.xml, English and Chinese Workshop
             descriptions, all 68 public comments, and the four coauthors' Steam profiles;
@@ -222,3 +222,5 @@ STATE 2026-11-16 (icon moved): Virginie asked for the ModIcon at the top-left. A
 NOTE 2026-11-16 (owner): the tool for every image generation is DALL-E (OpenAI), always. PUBLICATION.md "AI-GENERATED" already says DALL-E for the preview background and the icon: unchanged, no model version to add. Told to Audit for the shared procedure.
 
 STATE 2026-11-16 (writeReleaseDocs, 11.a to 11.k read): 11.a description complete, `Languages` paragraph added (Chinese extended with Claude, reviewed by ChatGPT, no native check; French proofread by a native speaker); 11.b structure checked (body, IF I GO QUIET, AI-GENERATED, THANKS, ATTRIBUTION line, `Source code on GitHub` last, target the mod repo); 11.c About.xml description regenerated from PUBLICATION.md, `sync-about-description.mjs` says identical; 11.d links on every cited mod; 11.e PUBLICATION.md up to date (gallery table 0 to 8 accepted, dependencies, adult boxes: nine images); 11.f CHANGELOG `## [Unreleased]` holds the 1.1.0 entries incl. the Languages and review items; 11.g adult boxes none, nine images opened 2026-11-15; 11.h thank-you and Use This Instead drafts exist (post at `postOnSteam`); 11.i change note `[b]1.1.0[/b]` written; 11.k: gameplay Pickle steps exist (`Tests/Pickle/Source`, 20 step files); `GALLERY-PROPS.md` 9b n/a: the mod ships no prop, apparel or hairstyle for other mods (only the gene extractor, its own, seen in gallery 7). OPEN: 11.j, Virginie reads `PUBLICATION.md` and `CHANGELOG.md` (the Steam description changed, so the 2026-10-13 review `5bed84a` is stale); `publication_changelog_review_sha` is written only on her chat confirmation.
+
+STATE 2026-11-16 (11.j done): Virginie read PUBLICATION.md and CHANGELOG.md of this revision and validated ("je valide, relu", chat). `publication_changelog_review_sha` set to the commit read. 11.a to 11.k closed.
