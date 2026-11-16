@@ -128,7 +128,7 @@ What is reused and how it differs is detailed in ATTRIBUTION.md, and LICENSE say
 ### 1.1.0
 
 Steam change note of the next publish; its first line carries the version. The full list is `CHANGELOG.md`,
-section `## [1.1.0]` (still `## [Unreleased]` until the publish). 1.0.0 went out on 2026-10-13 with `[b]1.0.0[/b]`.
+section `## [1.1.0]`. 1.0.0 went out on 2026-10-13 with `[b]1.0.0[/b]`.
 
 ```
 [b]1.1.0[/b]
