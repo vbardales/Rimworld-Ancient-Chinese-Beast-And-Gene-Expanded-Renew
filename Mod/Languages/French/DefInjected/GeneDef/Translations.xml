@@ -24,7 +24,7 @@
   <SZGene_QiongQi_Scratch.label>griffes de qiongqi</SZGene_QiongQi_Scratch.label>
   <SZGene_QiongQi_Scratch.symbolPack.wholeNameSymbols.0.symbol>bénédiction du qiongqi</SZGene_QiongQi_Scratch.symbolPack.wholeNameSymbols.0.symbol>
   <SZGene_QiongQi_Scratch.symbolPack.wholeNameSymbols.1.symbol>don du qiongqi</SZGene_QiongQi_Scratch.symbolPack.wholeNameSymbols.1.symbol>
-  <SZGene_SeXie_Ring.description>L'aura massacre-cœur d'une sexie. Tous les êtres vivants à sa portée entrent dans une rage meurtrière.</SZGene_SeXie_Ring.description>
+  <SZGene_SeXie_Ring.description>L'aura massacre-cœur, prélevée sur une sexie. Tous les êtres vivants à sa portée entrent dans une rage meurtrière.</SZGene_SeXie_Ring.description>
   <SZGene_SeXie_Ring.label>aura massacre-cœur de sexie</SZGene_SeXie_Ring.label>
   <SZGene_SeXie_Ring.symbolPack.wholeNameSymbols.0.symbol>bénédiction de la sexie</SZGene_SeXie_Ring.symbolPack.wholeNameSymbols.0.symbol>
   <SZGene_SeXie_Ring.symbolPack.wholeNameSymbols.1.symbol>don de la sexie</SZGene_SeXie_Ring.symbolPack.wholeNameSymbols.1.symbol>
@@ -32,11 +32,11 @@
   <SZGene_SeXie_Shoot.label>aiguillons de cristal de sexie</SZGene_SeXie_Shoot.label>
   <SZGene_SeXie_Shoot.symbolPack.wholeNameSymbols.0.symbol>bénédiction de la sexie</SZGene_SeXie_Shoot.symbolPack.wholeNameSymbols.0.symbol>
   <SZGene_SeXie_Shoot.symbolPack.wholeNameSymbols.1.symbol>don de la sexie</SZGene_SeXie_Shoot.symbolPack.wholeNameSymbols.1.symbol>
-  <SZGene_SeXie_Strength.description>Le gène de force monstrueuse d'une sexie. Il augmente la capacité de transport et l'aptitude au combat à mains nues.</SZGene_SeXie_Strength.description>
+  <SZGene_SeXie_Strength.description>Le gène de force monstrueuse, prélevé sur une sexie. Il augmente la capacité de transport et l'aptitude au combat à mains nues.</SZGene_SeXie_Strength.description>
   <SZGene_SeXie_Strength.label>force monstrueuse de sexie</SZGene_SeXie_Strength.label>
   <SZGene_SeXie_Strength.symbolPack.wholeNameSymbols.0.symbol>bénédiction de la sexie</SZGene_SeXie_Strength.symbolPack.wholeNameSymbols.0.symbol>
   <SZGene_SeXie_Strength.symbolPack.wholeNameSymbols.1.symbol>don de la sexie</SZGene_SeXie_Strength.symbolPack.wholeNameSymbols.1.symbol>
-  <SZGene_YearBeast_Flamethrower.description>Le souffle de feu d'un Nian. Confère la capacité de cracher du feu dans un cône, comme le monstre lui-même.</SZGene_YearBeast_Flamethrower.description>
+  <SZGene_YearBeast_Flamethrower.description>Le souffle de feu, prélevé sur un Nian, permet à son porteur de cracher du feu dans un cône, comme le monstre lui-même.</SZGene_YearBeast_Flamethrower.description>
   <SZGene_YearBeast_Flamethrower.label>souffle de feu de Nian</SZGene_YearBeast_Flamethrower.label>
   <SZGene_YearBeast_Flamethrower.symbolPack.wholeNameSymbols.0.symbol>bénédiction du Nian</SZGene_YearBeast_Flamethrower.symbolPack.wholeNameSymbols.0.symbol>
   <SZGene_YearBeast_Flamethrower.symbolPack.wholeNameSymbols.1.symbol>don du Nian</SZGene_YearBeast_Flamethrower.symbolPack.wholeNameSymbols.1.symbol>
