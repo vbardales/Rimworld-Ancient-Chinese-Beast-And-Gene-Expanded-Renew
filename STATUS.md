@@ -283,3 +283,5 @@ STATE 2026-11-17 (CI regenerated): CI/CD regenerated `.github` and `Tests/Test-M
 STATE 2026-11-17 (2369 green, tested_1_7 yes): ticket 2369 RUN_DONE green, 1 of 1 (47 s, set v17), firecracker chain green on 1.7 with the batched watch. Evidence minified and moved to `Tests/Pickle/Evidence/2026-11-17i-v17-firecracker`. Inbox 0. Every own red of the 1.7 diagnostic is now green; `tested_1_7: yes`. `<li>1.7</li>` and the Preview badge only with Virginie's word, same commit as the Preview redo. Owed: 1.6 non-regression of 1.1.0 (14.a), sync-nsb-npt, STATUS.md journal move (48 KB).
 
 STATE 2026-11-17 (1.7 declared, owner "oui"): `<li>1.7</li>` added to supportedVersions, Preview re-rendered (badge now 1.7, opened: nothing cut), `social_preview_sha256` updated (new Preview to upload to the repo Social preview by Virginie). Art/Preview.config.json unchanged. Target 1.2.0.
+
+STATE 2026-11-17 (Social preview): Preview.png (sha256 = social_preview_sha256, 1.7 badge) uploaded to the repo Social preview through Claude in Chrome, on the owner's order; the settings page shows the new image. Nothing owed from Virginie.
