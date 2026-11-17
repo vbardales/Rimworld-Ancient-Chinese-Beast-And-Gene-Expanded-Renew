@@ -11,6 +11,7 @@ repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 visibility:   public
 detached:     yes
 workflow_stage: playTests[1.2.0]
+tested_1_7: yes  # 2026-11-17: baseline 170 passed (a8a1), our 7 time-bound reds all green since with tick batches (drought 585f, scheduler 40a4, births 3fcf, firecracker 2369); the 7 other reds were NPT scenarios (tool side)
 social_preview_sha256: 394a74e01465952f456c84ce7069270661b750f73df85d53730a465c6c0e2626
 echo_review_sha: acf8b487c6fd413a3fd6f7dea299232702f466d6  # 2026-11-16, 10.a: echo kept again, echo-source.png and gallery 1 to 8 unchanged since 2026-11-15; only 0-preview.png (our own render of the new Preview) and Preview.config.json changed. Previous: 9d5b8f0b962db7260d3622a85774d6cad1044006  # 2026-11-15, 10.a: echo kept (echo-source.png, winged qiongqi line art, Preview panel bottom-left); the new gallery shows the same beast (images 2, 3, 8), subject unchanged; Preview.png unchanged, still equals 0-preview.png and social_preview_sha256
 publication_changelog_review_sha: d7493d64d8c270087bd8ab943ce3044d6f67a59b
@@ -110,7 +111,7 @@ remaining:
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
 updated:      2026-11-16
 upstream_synced: 2026-11-16 MonsterTower/AncientChineseBeast@f6d3d19
-protocols_read_sha: 6c71ac3c6cfab0e1bf4911aa98fec1c833e74740
+protocols_read_sha: bcd13d616a9af97e28b1435a8379af73c6107ce1
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -278,3 +279,5 @@ STATE 2026-11-17 (3fcf green): ticket 3fcf RUN_DONE green, exit 0, 4 of 4 passed
 STATE 2026-11-17 (firecracker batch filed): PiT built a generic batched watch (ColonistRace WatchSteps.cs, 9c7ef64e, compiled, not yet played; PiT vanilla check ticket da70). Feature `28-firecracker-tick-batch` (committed) uses `the game is advanced by 240 ticks watching the field "damageDef" of the things of def "SZ_Firecracker_Explosion"`, then `showed` and `never showed the value` for Flame, FlameB, FlameC, and keeps our local `no firecracker piece remains`. Ticket 2369 (1.7, English, `wsl-deps.v17.map`, filter `28-firecracker-tick-batch`), evidence `Tests/Pickle/Inbox/2026-11-17i-v17-firecracker`. On RUN_DONE: if a name does not resolve ("unset"), tell PiT; if green, delete the local watch step and scenario of 09 only if the owner of 1.6 runs need them (they still serve the 1.6 lane: keep). Then `tested_1_7`.
 
 STATE 2026-11-17 (CI regenerated): CI/CD regenerated `.github` and `Tests/Test-Mod.ps1` (stamp d20db370c66b, Steam tags now a default of every publication, `--tags` and `update_tags` removed). Committed by path and pushed. `Check-CiTemplate` identical, `Tests/Test-Mod.ps1` 6 passed, 0 failed, 0 skipped. The 1.1.0 dry-run (43944718301) is obsolete: the dry-run of 1.2.0 is redone without `--tags` at `publish`. A real publish needs STEAM_REFRESH_TOKEN on `steam-production` (Virginie).
+
+STATE 2026-11-17 (2369 green, tested_1_7 yes): ticket 2369 RUN_DONE green, 1 of 1 (47 s, set v17), firecracker chain green on 1.7 with the batched watch. Evidence minified and moved to `Tests/Pickle/Evidence/2026-11-17i-v17-firecracker`. Inbox 0. Every own red of the 1.7 diagnostic is now green; `tested_1_7: yes`. `<li>1.7</li>` and the Preview badge only with Virginie's word, same commit as the Preview redo. Owed: 1.6 non-regression of 1.1.0 (14.a), sync-nsb-npt, STATUS.md journal move (48 KB).
