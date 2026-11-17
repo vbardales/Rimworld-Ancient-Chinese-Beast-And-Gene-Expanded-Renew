@@ -111,7 +111,7 @@ remaining:
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
 updated:      2026-11-16
 upstream_synced: 2026-11-16 MonsterTower/AncientChineseBeast@f6d3d19
-protocols_read_sha: bcd13d616a9af97e28b1435a8379af73c6107ce1
+protocols_read_sha: 0c59185cff579d49553219a4e5beaf9dbc59b6a9
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
