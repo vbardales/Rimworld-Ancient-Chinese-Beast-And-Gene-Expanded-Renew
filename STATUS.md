@@ -10,10 +10,10 @@ packageId:    nelim.ancientchinesebeastandgeneexpanded
 repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 visibility:   public
 detached:     yes
-workflow_stage: writeShotlist[1.2.0]
+workflow_stage: mountPreview[1.2.0]
 tested_1_7: yes  # 2026-11-17: baseline 170 passed (a8a1), our 7 time-bound reds all green since with tick batches (drought 585f, scheduler 40a4, births 3fcf, firecracker 2369); the 7 other reds were NPT scenarios (tool side)
 social_preview_sha256: 0868266b0e73fc9131a723c56188c77a774c3a6a3d28cb1d62bcc5092a53b521
-echo_review_sha: acf8b487c6fd413a3fd6f7dea299232702f466d6  # 2026-11-16, 10.a: echo kept again, echo-source.png and gallery 1 to 8 unchanged since 2026-11-15; only 0-preview.png (our own render of the new Preview) and Preview.config.json changed. Previous: 9d5b8f0b962db7260d3622a85774d6cad1044006  # 2026-11-15, 10.a: echo kept (echo-source.png, winged qiongqi line art, Preview panel bottom-left); the new gallery shows the same beast (images 2, 3, 8), subject unchanged; Preview.png unchanged, still equals 0-preview.png and social_preview_sha256
+echo_review_sha: 979ef9fa06d355d9fe37ca55bdb8017b997e4fc2  # 2026-11-17, 10.a (replay): echo kept, echo-source.png and gallery 1 to 8 unchanged since acf8b48; only 0-preview.png and Preview.ico changed (our own render of the 1.7 badge Preview, 79b32d2). Previous: acf8b487c6fd413a3fd6f7dea299232702f466d6  # 2026-11-16, 10.a: echo kept again, echo-source.png and gallery 1 to 8 unchanged since 2026-11-15; only 0-preview.png (our own render of the new Preview) and Preview.config.json changed. Previous: 9d5b8f0b962db7260d3622a85774d6cad1044006  # 2026-11-15, 10.a: echo kept (echo-source.png, winged qiongqi line art, Preview panel bottom-left); the new gallery shows the same beast (images 2, 3, 8), subject unchanged; Preview.png unchanged, still equals 0-preview.png and social_preview_sha256
 publication_changelog_review_sha: d7493d64d8c270087bd8ab943ce3044d6f67a59b
 licence:      silent
 licence_at:   reviewed 2026-09-12 - original files and About.xml, English and Chinese Workshop
@@ -111,7 +111,7 @@ remaining:
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
 updated:      2026-11-17
 upstream_synced: 2026-11-16 MonsterTower/AncientChineseBeast@f6d3d19
-protocols_read_sha: 65dd2d05a875cceb223c08e6d4dc1e4e1a7a5438
+protocols_read_sha: 8bc315e3ec20718924896debe5d45d1bd533edae
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -216,3 +216,5 @@ STATE 2026-11-17 (Social preview): Preview.png (sha256 = social_preview_sha256, 
 STATE 2026-11-17 (1.6 non-regression filed): journal moved to `Docs/runs/2026-11-17-status-history.md` (STATUS.md 27 KB). Ticket bf17 (1.6, English, filter `!24-gallery`, no DepMap, tree 4fcb011 frozen, Mod and Source unchanged since 6589e5f except text), evidence `Tests/Pickle/Inbox/2026-11-17j-16-noregression-en`. This is 14.a for the published 1.1.0. French not replayed (French text changed 2026-11-13 to 16, validated by Virginie, still owed if wanted). On RUN_DONE: read summary.json, junit.xml, triage, then cleanUp.
 
 STATE 2026-11-17 (replay, 8.m and 8.n, Audit answer: no skip, AUDIT.md chain stays whole): code_review_sha refreshed (diff read: 1.7 line and Preview only). playTests[1.2.0] to writeShotlist[1.2.0]. 9 non touché : galerie 1.1.0 acceptée et inchangée (Art/Gallery images 1 to 8 unchanged since acf8b48, see 1.1.0 table above).
+
+STATE 2026-11-17 (replay, 9.f): writeShotlist[1.2.0] to mountPreview[1.2.0]. 10 non touché : Preview 1.7 refaite et envoyée (render and badge 79b32d2, social_preview_sha256 equals Mod/About/Preview.png), echo kept (10.a, echo_review_sha refreshed).
