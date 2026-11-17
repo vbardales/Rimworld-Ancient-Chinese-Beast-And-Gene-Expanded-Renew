@@ -107,10 +107,10 @@ remaining:
       branch is unreachable. Inherited, deliberate, costs nothing
   - defect: the keyed string SZ_CannotReachBuildingToExtractGene is referenced from neither the
       C# nor the defs. Inherited, left alone
-session:      local_5bc1b5af-5a8d-4b9e-98fa-5f1f54777aa6
+session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
 updated:      2026-11-16
 upstream_synced: 2026-11-16 MonsterTower/AncientChineseBeast@f6d3d19
-protocols_read_sha: be4423754614e7195f84d0b9bc32eb62820f3cfb
+protocols_read_sha: e19a3fd36ee9105d052d5ae434329a7b60db3327
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -244,3 +244,5 @@ STATE 2026-11-16 (chain walked down to playTests[1.2.0], owner order, ticket a8a
 STATE 2026-11-17 (a8a1 RUN_DONE, triaged): exit 8, exitReason watchdog-timeout, 200 scenarios: 170 passed, 16 skipped, 14 failed (evidence `Tests/Pickle/Inbox/2026-11-16a-v17-en`, peak RAM 11141 MiB). Seven failures are NPT's own scenarios (bill, surgery, research tab, filmstrip, raid alarm, watch mode: tool side, to PiT via TM). Seven are ours, all by step timeout or slow ticks (186 to 246 ticks in 300 to 404 real seconds): scheduler x4 (30 s timeout on "no nian/ordinary beast present"), firecracker chain (90 s), drought (246 of 3600 ticks), tame pair births YearBeast and QiongQi (186/192 ticks). Slow ticks point to lane or load, not a proven mod defect: `tested_1_7` stays open. Replay as small tickets (tree a0bbc6e, English, v17 map): 64b0 (10-scheduler + firecracker), 7c28 (drought), b127 (breeding; the def pre-check warned "no scenario matches" on the outline title, filter may match nothing at run time: check `total` first). On results: `tested_1_7` yes, or no with the log error in docs/runs/. PiT answer (via TM): its 6 reds are load symptoms (time-bound steps starving at 186-246 ticks per 300-404 s, 11 GB RAM), no PiT change, not mod failures; if still red alone on a lighter lane, send PiT (local_03a66e9e) the ticket id. Triage of `2026-11-16a-v17-en` due: Parked (not Evidence, reds are load). Tickets waiting: 64b0, 7c28, b127.
 
 STATE 2026-11-16 (before sleep): playTests[1.2.0], ticket a8a1 (1.7 diagnostic, English, `-Game /home/nelim/rimworld17`, `wsl-deps.v17.map`, `!24-gallery`, tree frozen at c180a81) in the queue. On RUN_DONE: read summary.json (exitReason, total, passed) then junit.xml, triage the Inbox folder `Tests/Pickle/Inbox/2026-11-16a-v17-en`, record `tested_1_7` (yes, or no with the log error in docs/runs/; tool-caused red is a tool defect, never `no`), then replay-audit. Owed from 1.1.0: 1.6 non-regression (14.a) folded into the first 1.7 cycle, cleanUp. Rule of the owner: "J'attends" lines carry no ticket index, position or inbox (panel shows them). Change notes are real BBCode changelogs. Open for Virginie: nothing.
+
+STATE 2026-11-17 (resume, replay results in Inbox, not yet triaged): `Tests/Pickle/Inbox/2026-11-17a-v17-sched` 0/15 failed (exitReason failed, peak 8873 MiB): 11 reds are "Accessing map pawns off main thread" (vanilla YoungstersHappy thought on pawn Larson, spawn steps, wait 10 ticks), 4 are step timeouts. `2026-11-17a-v17-sched-1` 5 passed, 5 failed (all step timeouts: firecracker 90 s, "no nian/ordinary beast present after 30/60 ticks" 30 s). Main-thread error looks like a 1.7 lane or tool symptom, not read yet in the log. NSB warn (colonists or animals changed 2026-11-17): sync-nsb-npt owed before any new scene, gallery is accepted so not blocking.
