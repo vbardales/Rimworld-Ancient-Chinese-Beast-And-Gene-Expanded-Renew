@@ -212,3 +212,5 @@ STATE 2026-11-17 (2369 green, tested_1_7 yes): ticket 2369 RUN_DONE green, 1 of 
 STATE 2026-11-17 (1.7 declared, owner "oui"): `<li>1.7</li>` added to supportedVersions, Preview re-rendered (badge now 1.7, opened: nothing cut), `social_preview_sha256` updated (new Preview to upload to the repo Social preview by Virginie). Art/Preview.config.json unchanged. Target 1.2.0.
 
 STATE 2026-11-17 (Social preview): Preview.png (sha256 = social_preview_sha256, 1.7 badge) uploaded to the repo Social preview through Claude in Chrome, on the owner's order; the settings page shows the new image. Nothing owed from Virginie.
+
+STATE 2026-11-17 (1.6 non-regression filed): journal moved to `Docs/runs/2026-11-17-status-history.md` (STATUS.md 27 KB). Ticket bf17 (1.6, English, filter `!24-gallery`, no DepMap, tree 4fcb011 frozen, Mod and Source unchanged since 6589e5f except text), evidence `Tests/Pickle/Inbox/2026-11-17j-16-noregression-en`. This is 14.a for the published 1.1.0. French not replayed (French text changed 2026-11-13 to 16, validated by Virginie, still owed if wanted). On RUN_DONE: read summary.json, junit.xml, triage, then cleanUp.
