@@ -12,7 +12,7 @@ visibility:   public
 detached:     yes
 workflow_stage: playTests[1.2.0]
 tested_1_7: yes  # 2026-11-17: baseline 170 passed (a8a1), our 7 time-bound reds all green since with tick batches (drought 585f, scheduler 40a4, births 3fcf, firecracker 2369); the 7 other reds were NPT scenarios (tool side)
-social_preview_sha256: 394a74e01465952f456c84ce7069270661b750f73df85d53730a465c6c0e2626
+social_preview_sha256: 0868266b0e73fc9131a723c56188c77a774c3a6a3d28cb1d62bcc5092a53b521
 echo_review_sha: acf8b487c6fd413a3fd6f7dea299232702f466d6  # 2026-11-16, 10.a: echo kept again, echo-source.png and gallery 1 to 8 unchanged since 2026-11-15; only 0-preview.png (our own render of the new Preview) and Preview.config.json changed. Previous: 9d5b8f0b962db7260d3622a85774d6cad1044006  # 2026-11-15, 10.a: echo kept (echo-source.png, winged qiongqi line art, Preview panel bottom-left); the new gallery shows the same beast (images 2, 3, 8), subject unchanged; Preview.png unchanged, still equals 0-preview.png and social_preview_sha256
 publication_changelog_review_sha: d7493d64d8c270087bd8ab943ce3044d6f67a59b
 licence:      silent
@@ -281,3 +281,5 @@ STATE 2026-11-17 (firecracker batch filed): PiT built a generic batched watch (C
 STATE 2026-11-17 (CI regenerated): CI/CD regenerated `.github` and `Tests/Test-Mod.ps1` (stamp d20db370c66b, Steam tags now a default of every publication, `--tags` and `update_tags` removed). Committed by path and pushed. `Check-CiTemplate` identical, `Tests/Test-Mod.ps1` 6 passed, 0 failed, 0 skipped. The 1.1.0 dry-run (43944718301) is obsolete: the dry-run of 1.2.0 is redone without `--tags` at `publish`. A real publish needs STEAM_REFRESH_TOKEN on `steam-production` (Virginie).
 
 STATE 2026-11-17 (2369 green, tested_1_7 yes): ticket 2369 RUN_DONE green, 1 of 1 (47 s, set v17), firecracker chain green on 1.7 with the batched watch. Evidence minified and moved to `Tests/Pickle/Evidence/2026-11-17i-v17-firecracker`. Inbox 0. Every own red of the 1.7 diagnostic is now green; `tested_1_7: yes`. `<li>1.7</li>` and the Preview badge only with Virginie's word, same commit as the Preview redo. Owed: 1.6 non-regression of 1.1.0 (14.a), sync-nsb-npt, STATUS.md journal move (48 KB).
+
+STATE 2026-11-17 (1.7 declared, owner "oui"): `<li>1.7</li>` added to supportedVersions, Preview re-rendered (badge now 1.7, opened: nothing cut), `social_preview_sha256` updated (new Preview to upload to the repo Social preview by Virginie). Art/Preview.config.json unchanged. Target 1.2.0.
