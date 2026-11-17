@@ -1,8 +1,8 @@
-# TEMPORARY lane test (2026-11-17), delete after the run. Same as the drought scenario of 04-critical-hooks, plus the
-# Pickle Tools tick-batch step (ColonistRace/Source/TickSteps.cs, "NOT PLAYED when written"), to see whether 3600 ticks
-# fit on the 1.7 lane (llvmpipe, about 1 frame per second).
+# The drought scenario of 04-critical-hooks, with the Pickle Tools tick-batch step: on the 1.7 lane (software rendering,
+# about 1 frame per second) 3600 real ticks run in about 2 minutes, where waiting for them takes over 400 seconds and times out
+# (tickets 7c28 and 585f, 2026-11-17). Needs Colonist Race, so it skips itself in a pass that does not stage it (wsl-deps.v17.map does).
 @requires:nelim.pickletools.colonistrace
-Feature: TEMP tick batch on the 1.7 lane
+Feature: Ancient Chinese Beast drought after a tick batch
 
   Scenario: the drought rots plants hourly but spares its four exceptions after a tick batch
     Given the save "test-colony" is loaded
