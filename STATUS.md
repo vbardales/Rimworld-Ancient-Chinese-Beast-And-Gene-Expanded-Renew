@@ -110,7 +110,7 @@ remaining:
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
 updated:      2026-11-16
 upstream_synced: 2026-11-16 MonsterTower/AncientChineseBeast@f6d3d19
-protocols_read_sha: 3877cddbd9c609f36e095783362553c642fc1180
+protocols_read_sha: f02fd1d74e36b6e471861bd056a0a628e1caf396
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -266,3 +266,5 @@ STATE 2026-11-17 (batch features): Cloud confirms 585f (no lane change). Feature
 STATE 2026-11-17 (8fd2 result): ticket 8fd2 red, evidence parked `Tests/Pickle/Parked/2026-11-17e-v17-screen960`. Drought without tick batch at 960x540: 628 of 3600 ticks in 401.8 s (1.56 ticks per real second), against 354 ticks in 401.9 s at 1920x1080 (7c28): 1.8x faster, still too slow alone. Reported to Cloud. Tick-batch remains the fix. Waiting: 40a4.
 
 STATE 2026-11-17 (Inbox triaged): Inbox 0. `2026-11-17d-v17-tickbatch` (585f, green) minified and moved to `Tests/Pickle/Evidence/` (proof of the drought tick-batch scenario on 1.7). Deleted: the four red lane-time runs (`2026-11-17a-v17-sched-1`, `b-v17-drought`, `c-v17-breed`, `e-v17-screen960`: numbers kept in this file and sent to Cloud) and the baseline `2026-11-16a-v17-en` (170 passed, 14 red lane or tool side; Prune-Evidence released it, the drought scenario is green in 585f). Parked 0. Waiting: 40a4. The `.github/` and `Tests/Test-Mod.ps1` changes in the tree are another session's (CI/CD regeneration), not committed here.
+
+STATE 2026-11-17 (40a4 result): ticket 40a4 RUN_DONE red, evidence `Tests/Pickle/Inbox/2026-11-17f-v17-batch` (exit 1, total 8, 4 passed, 4 failed, set v17). The 4 scheduler tick-batch scenarios (26) passed in 33 to 38 s each: scheduler converted, green on 1.7. The 4 births (27) failed at the first spawn step `I spawn the tame "<kind>" of gender male at x=144 z=155` (local step SpawnSteps.cs, plain PawnGenerator.GeneratePawn + GenSpawn.Spawn): "Accessing map pawns off main thread - this is never allowed due to list pooling and will result in modification exceptions elsewhere in code." The same step ran fine in b127 (original 15 scenario, reached Mate job), so the failure is new with the batch run order: the births follow the scheduler scenarios that used the PiT tick-batch step; a batch left running on another thread is the lead (not proven). To PiT via TM. Not a mod defect. `tested_1_7` stays open. Firecracker still not converted.
