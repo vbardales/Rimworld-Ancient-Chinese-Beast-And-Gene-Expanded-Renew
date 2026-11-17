@@ -110,7 +110,7 @@ remaining:
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
 updated:      2026-11-16
 upstream_synced: 2026-11-16 MonsterTower/AncientChineseBeast@f6d3d19
-protocols_read_sha: f02fd1d74e36b6e471861bd056a0a628e1caf396
+protocols_read_sha: 6c71ac3c6cfab0e1bf4911aa98fec1c833e74740
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -270,3 +270,5 @@ STATE 2026-11-17 (Inbox triaged): Inbox 0. `2026-11-17d-v17-tickbatch` (585f, gr
 STATE 2026-11-17 (40a4 result): ticket 40a4 RUN_DONE red, evidence `Tests/Pickle/Inbox/2026-11-17f-v17-batch` (exit 1, total 8, 4 passed, 4 failed, set v17). The 4 scheduler tick-batch scenarios (26) passed in 33 to 38 s each: scheduler converted, green on 1.7. The 4 births (27) failed at the first spawn step `I spawn the tame "<kind>" of gender male at x=144 z=155` (local step SpawnSteps.cs, plain PawnGenerator.GeneratePawn + GenSpawn.Spawn): "Accessing map pawns off main thread - this is never allowed due to list pooling and will result in modification exceptions elsewhere in code." The same step ran fine in b127 (original 15 scenario, reached Mate job), so the failure is new with the batch run order: the births follow the scheduler scenarios that used the PiT tick-batch step; a batch left running on another thread is the lead (not proven). To PiT via TM. Not a mod defect. `tested_1_7` stays open. Firecracker still not converted.
 
 STATE 2026-11-17 (births refiled): PiT answer: the batch step starts no thread, but its old code returned after the last `WaitFrames` without going back to the main thread; fixed in PickleTools 96817438 (step now ends with `LookSteps.OnMainThread`), picked up through the `path:` overlay of `wsl-deps.v17.map`. Ticket 5e1e (1.7, English, `wsl-deps.v17.map`, filter `27-breeding-tick-batch`, tree 5d55f7d), evidence `Tests/Pickle/Inbox/2026-11-17g-v17-births`. On RUN_DONE: check `total` is 4; if still "off main thread", send PiT the error stack (junit.xml), and consider a main-thread await in our `SpawnTame`.
+
+STATE 2026-11-17 (5e1e result): ticket 5e1e RUN_DONE red, evidence `Tests/Pickle/Inbox/2026-11-17g-v17-births` (exit 1, total 4, 3 passed, 1 failed, set v17). The "Accessing map pawns off main thread" error is gone after the PiT fix: three births pass in about 72 s each. Failed: YearBeast birth, step `pawn 2 is pregnant within 60 seconds`, 216 of 3600 ticks in 306.2 real seconds, male job Mate, female job Wait: the batch did not run its ticks in that first scenario (slow lane, not a thread error, not a proven mod defect). Replay filed: ticket 3fcf (1.7, English, `wsl-deps.v17.map`, filter `27-breeding-tick-batch`, evidence `Tests/Pickle/Inbox/2026-11-17h-v17-births-2`). If the first scenario is red again, tell PiT (batch step gave up after 216 ticks). `tested_1_7` stays open.
