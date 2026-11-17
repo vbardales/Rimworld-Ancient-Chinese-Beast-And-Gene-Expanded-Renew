@@ -110,7 +110,7 @@ remaining:
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
 updated:      2026-11-16
 upstream_synced: 2026-11-16 MonsterTower/AncientChineseBeast@f6d3d19
-protocols_read_sha: e19a3fd36ee9105d052d5ae434329a7b60db3327
+protocols_read_sha: 6b415bd04cb9a46f24231cbfba2421978dd16fd2
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -250,3 +250,5 @@ STATE 2026-11-17 (resume, 64b0 result): ticket 64b0 RUN_DONE red, read `Tests/Pi
 STATE 2026-11-17 (7c28 result): ticket 7c28 RUN_DONE red, evidence `Tests/Pickle/Inbox/2026-11-17b-v17-drought` (exit 1, 0 passed, 1 failed of 1, set v17). Drought scenario: plant at x=140 z=150 took no damage within 60 s; game advanced 354 of 3600 ticks in 401.9 real seconds (about 0.9 tick per real second), same slow-tick pattern as 64b0: lane symptom, not a proven mod defect. `tested_1_7` stays open. TM wrote the tick-speed question to Cloud (lane check). Waiting ticket: b127.
 
 STATE 2026-11-17 (b127 result): ticket b127 RUN_DONE red, evidence `Tests/Pickle/Inbox/2026-11-17c-v17-breed` (exit 1, 0 passed, 4 failed of 4, set v17). Scenario "a tame pair mates and the female gives birth" x4 (YearBeast, QiongQi, SeXie, SeXieInsect): not pregnant after 1 matings; game advanced 192 of 3600 ticks in about 305 real seconds (0.6 tick per real second), same slow-tick pattern as 64b0 and 7c28: lane symptom. Male reached cell (147, 0, 155) with job Mate, so mating started. `tested_1_7` stays open. No ticket pending; waiting on Cloud tick-speed fix or a shorter scenario.
+
+STATE 2026-11-17 (Inbox triaged): deleted `2026-11-17a-v17-sched` (0/15, vanilla YoungstersHappy "Accessing map pawns off main thread" plus timeouts, tool/lane side, nothing for the mod). Moved to Parked, waiting for the Cloud tick-speed fix and the replay: `2026-11-16a-v17-en` (170 passed baseline), `2026-11-17a-v17-sched-1` (64b0), `2026-11-17b-v17-drought` (7c28), `2026-11-17c-v17-breed` (b127). Inbox 0, parked 4. protocols_read_sha refreshed.
