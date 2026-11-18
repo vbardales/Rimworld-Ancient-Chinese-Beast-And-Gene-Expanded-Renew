@@ -10,7 +10,7 @@ packageId:    nelim.ancientchinesebeastandgeneexpanded
 repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 visibility:   public
 detached:     yes
-workflow_stage: startWatch[1.2.0]
+workflow_stage: postOnSteam[1.2.0]
 tested_1_7: yes  # 2026-11-17: baseline 170 passed (a8a1), our 7 time-bound reds all green since with tick batches (drought 585f, scheduler 40a4, births 3fcf, firecracker 2369); the 7 other reds were NPT scenarios (tool side)
 social_preview_sha256: 62216f5b519f010f91174cf016253987b6e6c1b7ff211cf0e2f5ab1592c12134
 echo_review_sha: 91bc63b3fd1cca5e03baf36c4b5ee9f450de99be  # 2026-11-18, 10.a (after the palette redo and the layout choice): echo kept, echo-source.png unchanged, only 0-preview.png and Preview.png re-rendered (veil #552B17, layout A). Previous: 2026-11-18, 10.a (new Preview source): echo kept, echo-source.png unchanged, still the winged qiongqi line art, the new source shows the same four beasts and the rooster, Preview rendered with the echo under the panel text; the echo's wing tip almost touches the real qiongqi's paw and the title ends a few pixels from its wing (doubtful, flagged to Virginie). Previous: 2026-11-17, 10.a (replay): echo kept, echo-source.png and gallery 1 to 8 unchanged since acf8b48; only 0-preview.png and Preview.ico changed (our own render of the 1.7 badge Preview, 79b32d2). Previous: acf8b487c6fd413a3fd6f7dea299232702f466d6  # 2026-11-16, 10.a: echo kept again, echo-source.png and gallery 1 to 8 unchanged since 2026-11-15; only 0-preview.png (our own render of the new Preview) and Preview.config.json changed. Previous: 9d5b8f0b962db7260d3622a85774d6cad1044006  # 2026-11-15, 10.a: echo kept (echo-source.png, winged qiongqi line art, Preview panel bottom-left); the new gallery shows the same beast (images 2, 3, 8), subject unchanged; Preview.png unchanged, still equals 0-preview.png and social_preview_sha256
@@ -112,7 +112,7 @@ remaining:
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
 updated:      2026-11-18
 upstream_synced: 2026-11-16 MonsterTower/AncientChineseBeast@f6d3d19
-protocols_read_sha: 3af323f80304f930d38d8845d021494122abc0b9
+protocols_read_sha: 3a13bf8803f4c25b30574a1eae94f1b50f21ad9a
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -242,3 +242,5 @@ STATE 2026-11-18 (13.a done): publish run 44306165735 green, approved by Virgini
 STATE 2026-11-18 (13.b done, 13.f): subscribe test by PiI OK 2026-11-18: local copy refreshed (unsubscribe, resubscribe), diff against git archive v1.2.0 (5589f4b) Mod empty, 195 files each side, supportedVersions 1.6 and 1.7, About.xml holds the RimImmortal-Living thanks line, page tags (API) Mod, 1.6, 1.7, item updated 2026-11-18 12:42 UTC. workflow_stage publish to startWatch[1.2.0]. Subscription stays (owner subscribed to her own item). Owed by Virginie: Social preview upload (10.f), page gallery image 0 (14.h); thank-you comments after the page is checked.
 
 STATE 2026-11-18 (10.f done): Preview.png (sha256 62216f5b... = social_preview_sha256, 802 KB) uploaded to the repo Social preview through Claude in Chrome on the owner order; the settings page shows the new image (panel bottom left, ModIcon top left). Owed by Virginie: page gallery image 0 (14.h); thank-you comments RimImmortal-Living and Tribal Tattoos.
+
+STATE 2026-11-18 (14.b, 14.h, 14.g): owner posted the two thank-you comments (RimImmortal-Living 3326145525, Tribal Tattoos 2782262247), registry rows set to posted; page gallery image 0 updated by hand by the owner; Social preview done. workflow_stage startWatch to postOnSteam[1.2.0]. Next: runNoRegression[1.2.0] (14.a, Mod and Source unchanged since 1.1.0 apart from text and the 1.7 line; a 1.6 and 1.7 replay on the published tree is the proof owed).
