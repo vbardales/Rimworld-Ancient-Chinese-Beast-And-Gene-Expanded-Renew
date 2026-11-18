@@ -10,7 +10,7 @@ packageId:    nelim.ancientchinesebeastandgeneexpanded
 repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 visibility:   public
 detached:     yes
-workflow_stage: publish[1.2.0]
+workflow_stage: mountPreview[1.2.0]
 tested_1_7: yes  # 2026-11-17: baseline 170 passed (a8a1), our 7 time-bound reds all green since with tick batches (drought 585f, scheduler 40a4, births 3fcf, firecracker 2369); the 7 other reds were NPT scenarios (tool side)
 social_preview_sha256: 0868266b0e73fc9131a723c56188c77a774c3a6a3d28cb1d62bcc5092a53b521
 echo_review_sha: 979ef9fa06d355d9fe37ca55bdb8017b997e4fc2  # 2026-11-17, 10.a (replay): echo kept, echo-source.png and gallery 1 to 8 unchanged since acf8b48; only 0-preview.png and Preview.ico changed (our own render of the 1.7 badge Preview, 79b32d2). Previous: acf8b487c6fd413a3fd6f7dea299232702f466d6  # 2026-11-16, 10.a: echo kept again, echo-source.png and gallery 1 to 8 unchanged since 2026-11-15; only 0-preview.png (our own render of the new Preview) and Preview.config.json changed. Previous: 9d5b8f0b962db7260d3622a85774d6cad1044006  # 2026-11-15, 10.a: echo kept (echo-source.png, winged qiongqi line art, Preview panel bottom-left); the new gallery shows the same beast (images 2, 3, 8), subject unchanged; Preview.png unchanged, still equals 0-preview.png and social_preview_sha256
@@ -220,3 +220,5 @@ STATE 2026-11-18 (11.j done, 12.a to 12.e): Virginie validated PUBLICATION.md an
 STATE 2026-11-18 (12.e, 12.f, 12.h): dry-run 1.2.0 green, run 44301292364, SHA 56aeb94e68c17453dadf75b34a5e354cd8a3ae8f, options --preview --description (title false). Log read: version 1.2.0; change note is the real BBCode list of PUBLICATION.md 1.2.0 (three items); preview to send sha256 0868266b... equals social_preview_sha256 (page now holds 394a74e0..., the old 1.6 badge); description diff against the page printed; tags to send Mod, 1.6, 1.7 (adds 1.7). workflow_stage writeReleaseDocs to publish[1.2.0]. Publish dispatch next with the same options, approval of steam-production by Virginie; PublishedFileId.txt already committed (3806709132).
 
 STATE 2026-11-18 (13.a): publish dispatched, run 44301506459, SHA 56aeb94e68c17453dadf75b34a5e354cd8a3ae8f, version 1.2.0, --preview --description, waiting for Virginie to approve steam-production. After the upload: subscribe test through PiI (13.b), startWatch (13.f).
+
+STATE 2026-11-18 (back to mountPreview[1.2.0], owner): publish run 44301506459 cancelled before approval (nothing sent to Steam); dry-run 44301292364 and SHA 56aeb94e become obsolete, a new Preview means a new commit, a new dry-run and a new publish. Preview prompt regenerated with scripts/New-PreviewPrompt.mjs (2026-11-18 blocks: three-line negative, no icon corner) in Docs/PROMPT_AncientChineseBeastAndGeneExpandedRenew.md; Virginie generates with DALL-E and the references of Art/Gallery-clean/, then the render and 10.a to 10.f are redone.
