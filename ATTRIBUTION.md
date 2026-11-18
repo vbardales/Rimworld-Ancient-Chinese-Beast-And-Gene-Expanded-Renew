@@ -274,3 +274,18 @@ mod's name and copies nothing of it. Thanks to Mlie and XeoNovaDan.
 dependency of the mod. Thanks to their authors.
 
 The update was done with the help of an AI assistant (Claude, by Anthropic).
+
+## Gallery set
+
+The mods the gallery shows or stages, read from the scenarios of `24-gallery.feature` (owner rule 2026-11-18, `WORKSHOP_COMMENTS.md`). None is a dependency of this mod. Chinese Comprehensive Expansion, the one tied to this mod, is credited above and in the description; each mod below gets a thank-you comment or joins the page's `Covers` there.
+
+| Mod | Author | Workshop id | Seen in |
+| --- | --- | --- | --- |
+| RimImmortal-Living (`RI.RimImmortal.Living`, needs RimImmortal-Core 3296476341) | TangW, 逍逍客 | 3326145525 | Nelim's robes and hats (`RI_Apparel_*`), every image |
+| Chinese Comprehensive Expansion | ninedaylongbow, Frolg | 3221850511 | the Taoist hat (`HXApparel_TaoistHat_A`) |
+| Roo's HD Hairstyles (continued) | Qux, after Rooboid | 3559870636 | Nelim's and Blue's hair (`Roo_*`) |
+| Hat Hair Control | lordfelix | 3760821540 | long hair kept visible under a hat |
+| EyeGenes3 | Lucius | 3745223213 | Blue's eyes (`Eyes_SkyBlue`) |
+| Tribal Tattoos | Shenanigans | 2782262247 | Blue's tattoo (`STribalTat_Body_SacredWater`) |
+
+The Sanctuary itself and the staging steps are the owner's own (Nelim's Sanctuary Backlot and Nelim's Pickle Tools). The pawn-looks stack the Sanctuary loads (bodies, faces, facial animation) is shared by all its scenes and is credited by the Sanctuary, not here.

@@ -22,15 +22,15 @@ checked 2026-10-08 against `PUBLISHING.md`, « Images »: numbered `0-`, `1-`, `
 in the folder; `0-` is a byte copy of `Mod/About/Preview.png` (compared after the 2026-10-08 regeneration); every other
 image is a **staged photograph** of the shared Sanctuary location, not a test capture; each image under 2 MB, the folder
 under 8 MB. `Art/Gallery/` holds only the ready-to-ship set (final names, subtitled),
-a refused image is recomposed and replaced. The story, the set and the shot list are in `GALLERY.md`. State 2026-11-15: images 0 to 8, indexes contiguous, subtitled, accepted by the owner on 2026-11-15.
+a refused image is recomposed and replaced. The story, the set and the shot list are in `GALLERY.md`. State 2026-11-18: images 0 to 8, indexes contiguous, subtitled, accepted by the owner on 2026-11-15 and unchanged since; only `0-preview.png` was redone (1.7 badge, 2026-11-17).
 
 ## Dependencies and DLC
 
-Hard: Harmony (`brrainz.harmony`, Workshop 2009463077) and Biotech (`Ludeon.RimWorld.Biotech`), both in `modDependencies`. Optional, never required: Chinese Comprehensive Expansion (`loadAfter`), A Dog Said... Animal Prosthetics 2 (`loadBefore`, patch), Nocturnal Animals (patch). Incompatible: the original mod (`incompatibleWith`). No other DLC. Read from `About.xml`, 2026-10-13.
+Hard: Harmony (`brrainz.harmony`, Workshop 2009463077) and Biotech (`Ludeon.RimWorld.Biotech`), both in `modDependencies`. Optional, never required: Chinese Comprehensive Expansion (`loadAfter`), A Dog Said... Animal Prosthetics 2 (`loadBefore`, patch), Nocturnal Animals (patch). Incompatible: the original mod (`incompatibleWith`). No other DLC. Read from `About.xml`, 2026-10-13, read again 2026-11-18 (1.2.0): `supportedVersions` now holds 1.6 and 1.7 (green 1.7 run, owner's word 2026-11-17), nothing else changed.
 
 ## Adult content boxes
 
-None ticked. The mod holds no nudity, sexual content or gore beyond RimWorld's own combat. All nine gallery images (0 to 8) were opened on 2026-11-15 and show creatures, a rooster, colonists and a workshop only.
+None ticked. The mod holds no nudity, sexual content or gore beyond RimWorld's own combat. All nine gallery images (0 to 8) were opened on 2026-11-15 and show creatures, a rooster, colonists and a workshop only. Gallery unchanged for 1.2.0 (images 1 to 8 as of 2026-11-15); the Preview (0) was re-rendered with the 1.7 badge and opened on 2026-11-17, same content.
 
 ## Gallery subtitles
 
@@ -113,21 +113,37 @@ The update to the latest RimWorld version, its tests and its documentation were 
 andery233xj, Frolg, DongFang and Ninedaylongbow, for the mod: the beasts, the art, the mechanics and the original code are theirs.
 SamBucher, for [A Dog Said... Animal Prosthetics 2](https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862), and for explaining how to add a mod to it.
 Mlie and XeoNovaDan, for [Nocturnal Animals](https://steamcommunity.com/sharedfiles/filedetails/?id=2269731409), whose body clocks this mod plugs into.
-ninedaylongbow and Frolg, for [Chinese Comprehensive Expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=3221850511), the optional companion this one loads after.
+ninedaylongbow and Frolg, for [Chinese Comprehensive Expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=3221850511), the optional companion this one loads after, and the Taoist hat Nelim wears in the gallery.
+TangW and 逍逍客, for [RimImmortal-Living](https://steamcommunity.com/sharedfiles/filedetails/?id=3326145525), the robes and hats Nelim wears in the gallery.
 Andreas Pardeike, for Harmony.
 
 Tested with Pickle, RimLogging and Nelim's Pickle Tools, thanks to their authors: development only, never a dependency of this mod.
 
-What is reused and how it differs is detailed in ATTRIBUTION.md, and LICENSE says what the MIT grant covers. The changelog and the list of defects inherited from the original are in the repository.
+What is reused and how it differs is detailed in ATTRIBUTION.md (with the other mods the gallery shows), and LICENSE says what the MIT grant covers. The changelog and the list of defects inherited from the original are in the repository.
 
 [Source code on GitHub](https://github.com/vbardales/Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew)
 ```
 
 ## Change note
 
-### 1.1.0
+### 1.2.0
 
 Steam change note of the next publish; its first line carries the version. The full list is `CHANGELOG.md`,
+section `## [1.2.0]`.
+
+```
+[b]1.2.0[/b]
+[list]
+[*] Now runs on RimWorld 1.7 as well as 1.6, checked with the mod's own scenarios (beasts, genes, extractor, incidents, breeding); nothing in the content changed.
+[*] New Preview image with the 1.7 badge.
+[*] The credits now name the mods the gallery shows, starting with RimImmortal-Living, whose robes Nelim wears.
+[/list]
+[url=https://github.com/vbardales/Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew/blob/main/CHANGELOG.md]Full changelog on GitHub[/url]
+```
+
+### 1.1.0
+
+Steam change note of 1.1.0 (published 2026-11-16); its first line carries the version. The full list is `CHANGELOG.md`,
 section `## [1.1.0]`. 1.0.0 went out on 2026-10-13 with `[b]1.0.0[/b]`.
 
 ```
@@ -162,27 +178,20 @@ Posted by Virginie on the Steam change-notes page on 2026-11-16, replacing the p
 [url=https://github.com/vbardales/Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew/blob/main/CHANGELOG.md]Full changelog on GitHub[/url]
 ```
 
-## Thank-you comment (not posted)
+## Thank-you comments (1.2.0, not posted)
 
-Register: `WORKSHOP_COMMENTS.md`, row 3292446841 (the original mod). Post only after item 3806709132 is public,
-by the owner, on the original page. It is also the way the original authors can reach her to ask for a takedown.
-The pages of Harmony, Pickle, RimLogging, A Dog Said... Animal Prosthetics 2 and Nocturnal Animals already have
-their comment (or a draft) from another mod of the collection: only `Covers` was extended, nothing more to post.
+Register: `WORKSHOP_COMMENTS.md`. The original mod (3292446841) and Chinese Comprehensive Expansion (3221850511) were posted on 2026-10-13, and the pages of Harmony, Pickle, RimLogging, A Dog Said... Animal Prosthetics 2 and Nocturnal Animals already hold a comment from another mod of the collection. For the gallery of 1.2.0 (owner rule 2026-11-18, every gallery mod is thanked), the pages of Roo's HD Hairstyles (3559870636), EyeGenes3 (3745223213) and Hat Hair Control (3760821540) are already `posted`: this mod only joins their `Covers`, no second message. Two pages have no comment yet and get one, posted by the owner after 1.2.0 is public. The pages were not read by a session (Steam bot protection): check each pseudo on the page and the mood of the last comments before posting.
 
-```
-Wanted to see the mingshe's wind wall on a 1.6 colony, so here's an unofficial update: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806709132]Ancient Chinese Beast And Gene Expanded Renew[/url]. The beasts are all yours, I only moved it over. Thank you for them :) If you'd rather it came down, just tell me here or on the page.
-```
-
-One more recipient: Chinese Comprehensive Expansion (3221850511, by ninedaylongbow and Frolg), the optional `loadAfter` mod exercised by pass 3. Register row drafted 2026-10-13. Post after item 3806709132 is public, by the owner, on that page:
+RimImmortal-Living (3326145525, TangW and 逍逍客; the third author account is deleted on the page):
 
 ```
-I had your Chinese Comprehensive Expansion load beside an unofficial 1.6 update of Ancient Chinese Beast And Gene Expanded to check that the two get along, and they do: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806709132]Ancient Chinese Beast And Gene Expanded Renew[/url] simply loads after yours. Thank you for the expansion :)
+Nelim wears your robes and hats in every picture of the gallery of [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806709132]Ancient Chinese Beast And Gene Expanded Renew[/url], and the dragon robe holds its own next to a qiongqi xD Thank you @TangW(堂丸) and @逍逍客 for the mod :)
 ```
 
-## Use This Instead comment (not posted)
-
-Register: `USE_THIS_INSTEAD.md`, row 3292446841. Post only after item 3806709132 is public, by the owner, on the [Use This Instead](https://steamcommunity.com/sharedfiles/filedetails/?id=3396308787) page.
+Tribal Tattoos (2782262247, Shenanigans):
 
 ```
-A replacement for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3292446841]山海志怪-华夏凶兽和基因扩展 Ancient Chinese Beast And Gene Expanded[/url] (andery233xj, Frolg, DongFang, Ninedaylongbow; packageId andery233xj.AncientChineseBeast; RimWorld 1.4 and 1.5): [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806709132]Ancient Chinese Beast And Gene Expanded Renew (unofficial)[/url], packageId nelim.ancientchinesebeastandgeneexpanded, for the latest RimWorld version. It is declared incompatible with the original. Thank you for keeping this list :)
+Blue, the guest in two pictures of the gallery of [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806709132]Ancient Chinese Beast And Gene Expanded Renew[/url], wears the Sacred Water tattoo from your pack, and it still reads at gallery size. Thank you @Shenanigans :)
 ```
+
+No Use This Instead comment for this mod (Mlie, 2026-11-18, on the page: a ` Renew` suffix is enough, AUDIT.md 13.b).
