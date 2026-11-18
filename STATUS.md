@@ -10,7 +10,7 @@ packageId:    nelim.ancientchinesebeastandgeneexpanded
 repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 visibility:   public
 detached:     yes
-workflow_stage: runNoRegression[1.2.0]
+workflow_stage: cleanUp[1.2.0]
 tested_1_7: yes  # 2026-11-17: baseline 170 passed (a8a1), our 7 time-bound reds all green since with tick batches (drought 585f, scheduler 40a4, births 3fcf, firecracker 2369); the 7 other reds were NPT scenarios (tool side)
 social_preview_sha256: 62216f5b519f010f91174cf016253987b6e6c1b7ff211cf0e2f5ab1592c12134
 echo_review_sha: 91bc63b3fd1cca5e03baf36c4b5ee9f450de99be  # 2026-11-18, 10.a (after the palette redo and the layout choice): echo kept, echo-source.png unchanged, only 0-preview.png and Preview.png re-rendered (veil #552B17, layout A). Previous: 2026-11-18, 10.a (new Preview source): echo kept, echo-source.png unchanged, still the winged qiongqi line art, the new source shows the same four beasts and the rooster, Preview rendered with the echo under the panel text; the echo's wing tip almost touches the real qiongqi's paw and the title ends a few pixels from its wing (doubtful, flagged to Virginie). Previous: 2026-11-17, 10.a (replay): echo kept, echo-source.png and gallery 1 to 8 unchanged since acf8b48; only 0-preview.png and Preview.ico changed (our own render of the 1.7 badge Preview, 79b32d2). Previous: acf8b487c6fd413a3fd6f7dea299232702f466d6  # 2026-11-16, 10.a: echo kept again, echo-source.png and gallery 1 to 8 unchanged since 2026-11-15; only 0-preview.png (our own render of the new Preview) and Preview.config.json changed. Previous: 9d5b8f0b962db7260d3622a85774d6cad1044006  # 2026-11-15, 10.a: echo kept (echo-source.png, winged qiongqi line art, Preview panel bottom-left); the new gallery shows the same beast (images 2, 3, 8), subject unchanged; Preview.png unchanged, still equals 0-preview.png and social_preview_sha256
@@ -112,7 +112,7 @@ remaining:
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
 updated:      2026-11-18
 upstream_synced: 2026-11-16 MonsterTower/AncientChineseBeast@f6d3d19
-protocols_read_sha: c75e709ad14b7a6f8640d3660311fbd18e5242b0
+protocols_read_sha: 047972c293149676611a809601213c5511e85917
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -250,3 +250,4 @@ STATE 2026-11-18 (14.i, 14.a digested): 1d91 (1.6 EN) green 200 passed, 38 skipp
 STATE 2026-11-18 (resume): protocols_read_sha c75e709a (AUDIT 8.m text-display exception, 11.h, GALLERY Cat and visual mods, PUBLISHING-CI token: none touches this stage). b144 (1.7 EN, set A, 6 vanilla-step scenarios) delivered in Inbox 2026-11-18c-17-rerun-a: 0 passed, 6 failed, exitReason failed, timeouts and never-finish waits on vanilla steps (bill, surgery, research tab, filmstrip, raid 120 ticks, watch mode), no 1.2.0 scenario in it: slow 1.7 lane / tool side, not mod logic. Not yet triaged to Evidence or deleted. Waiting 5d01 (B) and 5cf0 (C).
 STATE 2026-11-18 (b144 digested): RUN_DONE b144 read, summary.json 6 total, 0 passed, 6 failed, exitReason failed (vanilla-step timeouts, slow 1.7 lane, no 1.2.0 scenario). Evidence deleted (red, tool side). Waiting 5d01 (B) and 5cf0 (C).
 STATE 2026-11-19 (5d01 digested): RUN_DONE 5d01 (B, 1.7 EN, set v17) read: summary.json 10 played, 1 passed, 9 failed, exitReason in-progress (run cut). The 9 reds are the old wall-clock scenarios (drought 258 of 3600 ticks in 407 s, firecracker watch 90 s timeout, beast schedule 30 s timeouts, three breeding scenarios 192 ticks of 3600 in 305 s): slow 1.7 lane, not mod logic. Their tick-batch twins (features 25 to 28: drought 585f, scheduler 40a4, births 3fcf, firecracker 2369) are the 1.7 proof, green 2026-11-17. Evidence deleted (red, tool side). Waiting 5cf0 (C).
+STATE 2026-11-19 (14.a verdict): 5cf0 (C, 1.7 EN) read: summary.json 14 total, 11 passed, 3 failed, exitReason failed. Reds: egg scenario twice (234 and 246 ticks of 2400 in about 300 s) and extractor hauling (step "the game runs for 5 seconds" timed out after 170 s): slow 1.7 lane, wall-clock steps, no mod defect; they passed in baseline a8a1 on the fast lane. Barrier, qiongqi, nian beast, stale letter, strength, horn all green. With 1d91 (1.6 EN, 200 passed) and the batch twins 25 to 28, 14.a is green: nothing that was green turned red. Evidence deleted. workflow_stage runNoRegression to cleanUp[1.2.0] (14.j).
