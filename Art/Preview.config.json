@@ -16,7 +16,7 @@
   "echo": { "file": "echo-source.png" },
   "icon": { "file": "ModIcon-source.png", "corner": "top-left" },
   "palette": {
-    "veil": "#613522",
+    "veil": "#552B17",
     "inkPrimary": "#F2ECE1",
     "inkSecondary": "#F5CF97",
     "accent": "#F2701E",
