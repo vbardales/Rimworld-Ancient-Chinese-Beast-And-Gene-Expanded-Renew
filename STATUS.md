@@ -10,7 +10,7 @@ packageId:    nelim.ancientchinesebeastandgeneexpanded
 repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 visibility:   public
 detached:     yes
-workflow_stage: mountPreview[1.2.0]
+workflow_stage: writeReleaseDocs[1.2.0]
 tested_1_7: yes  # 2026-11-17: baseline 170 passed (a8a1), our 7 time-bound reds all green since with tick batches (drought 585f, scheduler 40a4, births 3fcf, firecracker 2369); the 7 other reds were NPT scenarios (tool side)
 social_preview_sha256: 0868266b0e73fc9131a723c56188c77a774c3a6a3d28cb1d62bcc5092a53b521
 echo_review_sha: 979ef9fa06d355d9fe37ca55bdb8017b997e4fc2  # 2026-11-17, 10.a (replay): echo kept, echo-source.png and gallery 1 to 8 unchanged since acf8b48; only 0-preview.png and Preview.ico changed (our own render of the 1.7 badge Preview, 79b32d2). Previous: acf8b487c6fd413a3fd6f7dea299232702f466d6  # 2026-11-16, 10.a: echo kept again, echo-source.png and gallery 1 to 8 unchanged since 2026-11-15; only 0-preview.png (our own render of the new Preview) and Preview.config.json changed. Previous: 9d5b8f0b962db7260d3622a85774d6cad1044006  # 2026-11-15, 10.a: echo kept (echo-source.png, winged qiongqi line art, Preview panel bottom-left); the new gallery shows the same beast (images 2, 3, 8), subject unchanged; Preview.png unchanged, still equals 0-preview.png and social_preview_sha256
@@ -109,9 +109,9 @@ remaining:
   - defect: the keyed string SZ_CannotReachBuildingToExtractGene is referenced from neither the
       C# nor the defs. Inherited, left alone
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
-updated:      2026-11-17
+updated:      2026-11-18
 upstream_synced: 2026-11-16 MonsterTower/AncientChineseBeast@f6d3d19
-protocols_read_sha: 327ab598fa055a5cf6239a494a9e230a0c527111
+protocols_read_sha: 0eefecd4df1293ee5af90190617dad4bf3e1c40f
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -209,3 +209,5 @@ Summary 2026-11-18 (STATE lines of 2026-11-17 moved to `Docs/runs/2026-11-18-sta
 
 
 STATE 2026-11-18 (resume): ticket bf17 (1.6 non-regression, English, tree 4fcb011) delivered in Inbox: summary.json 238 total, 200 passed, 0 failed, 38 skipped, exitReason passed. 14.a green for 1.1.0. evidence minified (110.7 to 39.4 MB) and moved to Tests/Pickle/Evidence/2026-11-17j-16-noregression-en, Inbox empty. Owed: sync-nsb-npt (NPT changed 2026-11-18), STATUS.md journal move (29 KB).
+
+STATE 2026-11-18 (10.g): mountPreview[1.2.0] to writeReleaseDocs[1.2.0]. Preview 1.7 rendered, echo kept, social_preview_sha256 current (10.a to 10.f done 2026-11-17). Owner (2026-11-18): cleanUp not needed when the mod goes back into a dev loop, 1.2.0 continues without it; remark sent to Audit.
