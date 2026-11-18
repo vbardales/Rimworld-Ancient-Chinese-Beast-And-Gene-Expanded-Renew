@@ -111,7 +111,7 @@ remaining:
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
 updated:      2026-11-17
 upstream_synced: 2026-11-16 MonsterTower/AncientChineseBeast@f6d3d19
-protocols_read_sha: 8bc315e3ec20718924896debe5d45d1bd533edae
+protocols_read_sha: 327ab598fa055a5cf6239a494a9e230a0c527111
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -218,3 +218,5 @@ STATE 2026-11-17 (1.6 non-regression filed): journal moved to `Docs/runs/2026-11
 STATE 2026-11-17 (replay, 8.m and 8.n, Audit answer: no skip, AUDIT.md chain stays whole): code_review_sha refreshed (diff read: 1.7 line and Preview only). playTests[1.2.0] to writeShotlist[1.2.0]. 9 non touché : galerie 1.1.0 acceptée et inchangée (Art/Gallery images 1 to 8 unchanged since acf8b48, see 1.1.0 table above).
 
 STATE 2026-11-17 (replay, 9.f): writeShotlist[1.2.0] to mountPreview[1.2.0]. 10 non touché : Preview 1.7 refaite et envoyée (render and badge 79b32d2, social_preview_sha256 equals Mod/About/Preview.png), echo kept (10.a, echo_review_sha refreshed).
+
+STATE 2026-11-18 (resume): ticket bf17 (1.6 non-regression, English, tree 4fcb011) delivered in Inbox: summary.json 238 total, 200 passed, 0 failed, 38 skipped, exitReason passed. 14.a green for 1.1.0. Evidence still in Tests/Pickle/Inbox/2026-11-17j-16-noregression-en: to minify and move to Evidence. Owed: sync-nsb-npt (NPT changed 2026-11-18), STATUS.md journal move (29 KB).
