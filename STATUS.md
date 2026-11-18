@@ -219,4 +219,4 @@ STATE 2026-11-17 (replay, 8.m and 8.n, Audit answer: no skip, AUDIT.md chain sta
 
 STATE 2026-11-17 (replay, 9.f): writeShotlist[1.2.0] to mountPreview[1.2.0]. 10 non touché : Preview 1.7 refaite et envoyée (render and badge 79b32d2, social_preview_sha256 equals Mod/About/Preview.png), echo kept (10.a, echo_review_sha refreshed).
 
-STATE 2026-11-18 (resume): ticket bf17 (1.6 non-regression, English, tree 4fcb011) delivered in Inbox: summary.json 238 total, 200 passed, 0 failed, 38 skipped, exitReason passed. 14.a green for 1.1.0. Evidence still in Tests/Pickle/Inbox/2026-11-17j-16-noregression-en: to minify and move to Evidence. Owed: sync-nsb-npt (NPT changed 2026-11-18), STATUS.md journal move (29 KB).
+STATE 2026-11-18 (resume): ticket bf17 (1.6 non-regression, English, tree 4fcb011) delivered in Inbox: summary.json 238 total, 200 passed, 0 failed, 38 skipped, exitReason passed. 14.a green for 1.1.0. evidence minified (110.7 to 39.4 MB) and moved to Tests/Pickle/Evidence/2026-11-17j-16-noregression-en, Inbox empty. Owed: sync-nsb-npt (NPT changed 2026-11-18), STATUS.md journal move (29 KB).
