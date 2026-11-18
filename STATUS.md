@@ -10,7 +10,7 @@ packageId:    nelim.ancientchinesebeastandgeneexpanded
 repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 visibility:   public
 detached:     yes
-workflow_stage: writeReleaseDocs[1.2.0]
+workflow_stage: publish[1.2.0]
 tested_1_7: yes  # 2026-11-17: baseline 170 passed (a8a1), our 7 time-bound reds all green since with tick batches (drought 585f, scheduler 40a4, births 3fcf, firecracker 2369); the 7 other reds were NPT scenarios (tool side)
 social_preview_sha256: 0868266b0e73fc9131a723c56188c77a774c3a6a3d28cb1d62bcc5092a53b521
 echo_review_sha: 979ef9fa06d355d9fe37ca55bdb8017b997e4fc2  # 2026-11-17, 10.a (replay): echo kept, echo-source.png and gallery 1 to 8 unchanged since acf8b48; only 0-preview.png and Preview.ico changed (our own render of the 1.7 badge Preview, 79b32d2). Previous: acf8b487c6fd413a3fd6f7dea299232702f466d6  # 2026-11-16, 10.a: echo kept again, echo-source.png and gallery 1 to 8 unchanged since 2026-11-15; only 0-preview.png (our own render of the new Preview) and Preview.config.json changed. Previous: 9d5b8f0b962db7260d3622a85774d6cad1044006  # 2026-11-15, 10.a: echo kept (echo-source.png, winged qiongqi line art, Preview panel bottom-left); the new gallery shows the same beast (images 2, 3, 8), subject unchanged; Preview.png unchanged, still equals 0-preview.png and social_preview_sha256
@@ -112,7 +112,7 @@ remaining:
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
 updated:      2026-11-18
 upstream_synced: 2026-11-16 MonsterTower/AncientChineseBeast@f6d3d19
-protocols_read_sha: 0eefecd4df1293ee5af90190617dad4bf3e1c40f
+protocols_read_sha: b8336866995a8c1d6540a013017f9aea3fa8beb7
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -216,3 +216,5 @@ STATE 2026-11-18 (10.g): mountPreview[1.2.0] to writeReleaseDocs[1.2.0]. Preview
 STATE 2026-11-18 (writeReleaseDocs 11.a to 11.k): 11.a description complete (RimImmortal-Living line added, About.xml synced and checked), 11.b order kept, 11.c About.xml equals the block, 11.d Workshop links on CCE, ADS2, Nocturnal Animals, RimImmortal-Living, 11.e PUBLICATION.md updated (gallery state, dependencies re-read, change note 1.2.0), 11.f CHANGELOG [Unreleased] holds 1.2.0, 11.g adult boxes: none, images unchanged since 2026-11-15, Preview opened 2026-11-17, 11.h thanks_drafted_line 1.2: gallery mods listed in ATTRIBUTION.md "Gallery set"; drafts for RimImmortal-Living 3326145525 and Tribal Tattoos 2782262247, Covers extended for Roo HD 3559870636, EyeGenes3 3745223213, Hat Hair Control 3760821540 (pages not read, pseudos to confirm), 11.i change note 1.2.0 BBCode list written, UTI comment dropped (13.b), 11.j owner reread owed, 11.k Check-Status 0 error 0 warning, 9a steps: tick-batch features 25 to 28, 9b GALLERY-PROPS row added.
 
 STATE 2026-11-18 (11.j done, 12.a to 12.e): Virginie validated PUBLICATION.md and CHANGELOG.md of the 1.2 line ("je valide"), publication_changelog_review_sha set. 12.a code_review_sha refreshed (text only, no code). 12.b dependencies unchanged since declareDependencies (About.xml diff is the description only). 12.c Check-Status -Strict: 0 error, 0 warning. 12.c bis: documents already minified 2026-11-16 (1a96f5b) and unchanged since, nothing to redo. 12.d tree pushed, Source and Assemblies unchanged since 6589e5f. 12.e CHANGELOG dated [1.2.0] - 2026-11-18, dry-run next with --preview --description (Preview and description changed since 1.1.0). Note: STYLE_RIMWORLD (2026-11-18) says the ModIcon has no reserved corner in a new prompt; our Preview keeps its accepted top-left icon, not re-rendered.
+
+STATE 2026-11-18 (12.e, 12.f, 12.h): dry-run 1.2.0 green, run 44301292364, SHA 56aeb94e68c17453dadf75b34a5e354cd8a3ae8f, options --preview --description (title false). Log read: version 1.2.0; change note is the real BBCode list of PUBLICATION.md 1.2.0 (three items); preview to send sha256 0868266b... equals social_preview_sha256 (page now holds 394a74e0..., the old 1.6 badge); description diff against the page printed; tags to send Mod, 1.6, 1.7 (adds 1.7). workflow_stage writeReleaseDocs to publish[1.2.0]. Publish dispatch next with the same options, approval of steam-production by Virginie; PublishedFileId.txt already committed (3806709132).
