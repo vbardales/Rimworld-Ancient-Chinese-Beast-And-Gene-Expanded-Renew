@@ -10,10 +10,10 @@ packageId:    nelim.ancientchinesebeastandgeneexpanded
 repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 visibility:   public
 detached:     yes
-workflow_stage: publish[1.2.0]
+workflow_stage: startWatch[1.2.0]
 tested_1_7: yes  # 2026-11-17: baseline 170 passed (a8a1), our 7 time-bound reds all green since with tick batches (drought 585f, scheduler 40a4, births 3fcf, firecracker 2369); the 7 other reds were NPT scenarios (tool side)
 social_preview_sha256: 62216f5b519f010f91174cf016253987b6e6c1b7ff211cf0e2f5ab1592c12134
-echo_review_sha: 6fcf8d217282294fb90e61ac65f09a93cd72a055  # 2026-11-18, 10.a (new Preview source): echo kept, echo-source.png unchanged, still the winged qiongqi line art, the new source shows the same four beasts and the rooster, Preview rendered with the echo under the panel text; the echo's wing tip almost touches the real qiongqi's paw and the title ends a few pixels from its wing (doubtful, flagged to Virginie). Previous: 2026-11-17, 10.a (replay): echo kept, echo-source.png and gallery 1 to 8 unchanged since acf8b48; only 0-preview.png and Preview.ico changed (our own render of the 1.7 badge Preview, 79b32d2). Previous: acf8b487c6fd413a3fd6f7dea299232702f466d6  # 2026-11-16, 10.a: echo kept again, echo-source.png and gallery 1 to 8 unchanged since 2026-11-15; only 0-preview.png (our own render of the new Preview) and Preview.config.json changed. Previous: 9d5b8f0b962db7260d3622a85774d6cad1044006  # 2026-11-15, 10.a: echo kept (echo-source.png, winged qiongqi line art, Preview panel bottom-left); the new gallery shows the same beast (images 2, 3, 8), subject unchanged; Preview.png unchanged, still equals 0-preview.png and social_preview_sha256
+echo_review_sha: 91bc63b3fd1cca5e03baf36c4b5ee9f450de99be  # 2026-11-18, 10.a (after the palette redo and the layout choice): echo kept, echo-source.png unchanged, only 0-preview.png and Preview.png re-rendered (veil #552B17, layout A). Previous: 2026-11-18, 10.a (new Preview source): echo kept, echo-source.png unchanged, still the winged qiongqi line art, the new source shows the same four beasts and the rooster, Preview rendered with the echo under the panel text; the echo's wing tip almost touches the real qiongqi's paw and the title ends a few pixels from its wing (doubtful, flagged to Virginie). Previous: 2026-11-17, 10.a (replay): echo kept, echo-source.png and gallery 1 to 8 unchanged since acf8b48; only 0-preview.png and Preview.ico changed (our own render of the 1.7 badge Preview, 79b32d2). Previous: acf8b487c6fd413a3fd6f7dea299232702f466d6  # 2026-11-16, 10.a: echo kept again, echo-source.png and gallery 1 to 8 unchanged since 2026-11-15; only 0-preview.png (our own render of the new Preview) and Preview.config.json changed. Previous: 9d5b8f0b962db7260d3622a85774d6cad1044006  # 2026-11-15, 10.a: echo kept (echo-source.png, winged qiongqi line art, Preview panel bottom-left); the new gallery shows the same beast (images 2, 3, 8), subject unchanged; Preview.png unchanged, still equals 0-preview.png and social_preview_sha256
 publication_changelog_review_sha: fd2eea026104d91d60f905f251f6925f90cee573  # 2026-11-18, 11.j: Virginie read PUBLICATION.md and CHANGELOG.md of the 1.2 line and validated ("je valide", chat). Previous: d7493d64d8c270087bd8ab943ce3044d6f67a59b  # 1.1 line
 thanks_drafted_line: 1.2
 licence:      silent
@@ -112,7 +112,7 @@ remaining:
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
 updated:      2026-11-18
 upstream_synced: 2026-11-16 MonsterTower/AncientChineseBeast@f6d3d19
-protocols_read_sha: ab437501baa79c4bfbd996f1f2b61bc89ab0bf7a
+protocols_read_sha: 3af323f80304f930d38d8845d021494122abc0b9
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -238,3 +238,5 @@ STATE 2026-11-18 (13.a, publish failed before any upload): run 44305168579 appro
 STATE 2026-11-18 (13.a, publish dispatched again): STEAM_REFRESH_TOKEN now on steam-production (secret names listed: STEAM_CONFIG_VDF_B64, STEAM_REFRESH_TOKEN, STEAM_USERNAME). New publish run 44306165735, SHA 5589f4b3239314c0f65a8f90cad5eb22e26e931b, 1.2.0, --preview --description, waiting for Virginie approval.
 
 STATE 2026-11-18 (13.a done): publish run 44306165735 green, approved by Virginie. Uploaded to Workshop item 3806709132 (manifest 1428240935711862017), tags set and read back from Steam: Mod, 1.6, 1.7, tag v1.2.0 on 5589f4b3239314c0f65a8f90cad5eb22e26e931b, release v1.2.0 published. PublishedFileId.txt unchanged (3806709132). Subscribe test asked of PiI (13.b), answer awaited. Owed: Social preview upload (10.f, repo setting, sha256 62216f5b... = social_preview_sha256), page gallery image 0 by hand (14.h), thank-you comments RimImmortal-Living and Tribal Tattoos after the page shows 1.2.0, startWatch (13.f) after the PiI answer.
+
+STATE 2026-11-18 (13.b done, 13.f): subscribe test by PiI OK 2026-11-18: local copy refreshed (unsubscribe, resubscribe), diff against git archive v1.2.0 (5589f4b) Mod empty, 195 files each side, supportedVersions 1.6 and 1.7, About.xml holds the RimImmortal-Living thanks line, page tags (API) Mod, 1.6, 1.7, item updated 2026-11-18 12:42 UTC. workflow_stage publish to startWatch[1.2.0]. Subscription stays (owner subscribed to her own item). Owed by Virginie: Social preview upload (10.f), page gallery image 0 (14.h); thank-you comments after the page is checked.
