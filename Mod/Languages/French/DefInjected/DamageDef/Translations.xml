@@ -16,6 +16,6 @@
   <SZ_SeXieToxicBite.label>morsure toxique</SZ_SeXieToxicBite.label>
   <SZ_SeXieToxicRangedStab.deathMessage>{0} a succombé aux blessures perforantes.</SZ_SeXieToxicRangedStab.deathMessage>
   <SZ_SeXieToxicRangedStab.label>perforation</SZ_SeXieToxicRangedStab.label>
-  <SZ_SoundWaveDamage.deathMessage>{0} a succombé à un écrasement.</SZ_SoundWaveDamage.deathMessage>
+  <SZ_SoundWaveDamage.deathMessage>{0} a été écrasé à mort.</SZ_SoundWaveDamage.deathMessage>
   <SZ_SoundWaveDamage.label>onde sonore</SZ_SoundWaveDamage.label>
 </LanguageData>
