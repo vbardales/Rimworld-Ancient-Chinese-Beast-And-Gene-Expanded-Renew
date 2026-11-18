@@ -10,7 +10,7 @@ packageId:    nelim.ancientchinesebeastandgeneexpanded
 repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 visibility:   public
 detached:     yes
-workflow_stage: mountPreview[1.2.0]
+workflow_stage: publish[1.2.0]
 tested_1_7: yes  # 2026-11-17: baseline 170 passed (a8a1), our 7 time-bound reds all green since with tick batches (drought 585f, scheduler 40a4, births 3fcf, firecracker 2369); the 7 other reds were NPT scenarios (tool side)
 social_preview_sha256: 62216f5b519f010f91174cf016253987b6e6c1b7ff211cf0e2f5ab1592c12134
 echo_review_sha: 6fcf8d217282294fb90e61ac65f09a93cd72a055  # 2026-11-18, 10.a (new Preview source): echo kept, echo-source.png unchanged, still the winged qiongqi line art, the new source shows the same four beasts and the rooster, Preview rendered with the echo under the panel text; the echo's wing tip almost touches the real qiongqi's paw and the title ends a few pixels from its wing (doubtful, flagged to Virginie). Previous: 2026-11-17, 10.a (replay): echo kept, echo-source.png and gallery 1 to 8 unchanged since acf8b48; only 0-preview.png and Preview.ico changed (our own render of the 1.7 badge Preview, 79b32d2). Previous: acf8b487c6fd413a3fd6f7dea299232702f466d6  # 2026-11-16, 10.a: echo kept again, echo-source.png and gallery 1 to 8 unchanged since 2026-11-15; only 0-preview.png (our own render of the new Preview) and Preview.config.json changed. Previous: 9d5b8f0b962db7260d3622a85774d6cad1044006  # 2026-11-15, 10.a: echo kept (echo-source.png, winged qiongqi line art, Preview panel bottom-left); the new gallery shows the same beast (images 2, 3, 8), subject unchanged; Preview.png unchanged, still equals 0-preview.png and social_preview_sha256
@@ -112,7 +112,7 @@ remaining:
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
 updated:      2026-11-18
 upstream_synced: 2026-11-16 MonsterTower/AncientChineseBeast@f6d3d19
-protocols_read_sha: f8fee9ce3e84db4584ec0256dddb91ff50a3b435
+protocols_read_sha: ab437501baa79c4bfbd996f1f2b61bc89ab0bf7a
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -230,3 +230,5 @@ STATE 2026-11-18 (palette redone, owner): palette taken again from the new Previ
 STATE 2026-11-18 (owner: "je valide le 2"): option 2 kept, wait for the renderer to place the ModIcon under the panel (asked of Audit); the current Preview (icon top-left) is not final, so no Social preview upload, no dry-run and no publish until the new render is made and opened. Cancelled publish run 44301506459 stays cancelled.
 
 STATE 2026-11-18 (owner: two layouts offered, A panel bottom-left + ModIcon top-left, or B panel top-left + ModIcon bottom-left): both rendered and opened. B is worse: the summary line runs into the qiongqi blue wing ("a divine" cut) and the echo overlaps its wing. A kept (committed render 62216f5b..., already the one in Mod/About/Preview.png and Art/Gallery/0-preview.png). The under-the-panel placement asked of Audit is no longer needed. Next: Social preview upload (10.f), new dry-run, publish.
+
+STATE 2026-11-18 (12.e, 12.f, 12.h, second dry-run): dry-run 1.2.0 green, run 44304949173, SHA 5589f4b3239314c0f65a8f90cad5eb22e26e931b, options --preview --description. Log read: Publishing that SHA as 1.2.0; preview to send 821540 bytes sha256 62216f5b... equals social_preview_sha256 (page holds 394a74e0...); change note is the 1.2.0 BBCode list; tags to send Mod, 1.6, 1.7 (adds 1.7). Replaces dry-run 44301292364 (obsolete, old Preview). workflow_stage mountPreview to publish[1.2.0]. Publish dispatch next, approval of steam-production by Virginie. Owed after: Social preview upload (10.f), page gallery image 0 by hand (14.h).
