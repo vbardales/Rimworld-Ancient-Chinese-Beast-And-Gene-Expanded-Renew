@@ -4,9 +4,9 @@ Format inspired by [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). The
 `## [<version>]` section of a version, so each one keeps that heading exactly. This file serves the repository and
 the writing of Steam patch notes; RimWorld does not display it in game.
 
-## [Unreleased]
+## [1.2.0] - 2026-11-18
 
-Planned as 1.2.0. Since 1.1.0:
+Since 1.1.0:
 
 - **RimWorld 1.7 is declared** in `supportedVersions` (`1.6` and `1.7`), after a green 1.7 diagnostic: 170 scenarios passed and the mod's own slow-tick time-outs were fixed in the tests only (tick batches), never in `Mod/` or `Source/`. The C# and the defs are unchanged.
 - `Preview.png` re-rendered with the 1.7 badge.
