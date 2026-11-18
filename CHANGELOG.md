@@ -11,6 +11,7 @@ Planned as 1.2.0. Since 1.1.0:
 - **RimWorld 1.7 is declared** in `supportedVersions` (`1.6` and `1.7`), after a green 1.7 diagnostic: 170 scenarios passed and the mod's own slow-tick time-outs were fixed in the tests only (tick batches), never in `Mod/` or `Source/`. The C# and the defs are unchanged.
 - `Preview.png` re-rendered with the 1.7 badge.
 - The Workshop description now thanks the authors of RimImmortal-Living, whose robes and hats Nelim wears in the gallery, and `ATTRIBUTION.md` gains a "Gallery set" section naming the other mods the gallery shows. No game content changed.
+- The Workshop description now lists all twelve genes (it named nine: the mingshe's fangs, the qiongqi's eye and the sexie's monstrous strength were missing). French: the Pleiades star officer "appears near a colony at its own hours" (it read as whim).
 - Tests only: four tick-batch scenarios (drought, scheduler, breeding, firecracker chain) and a 1.7 dependency map.
 
 ## [1.1.0] - 2026-11-16
