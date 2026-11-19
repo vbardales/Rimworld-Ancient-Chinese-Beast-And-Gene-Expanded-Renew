@@ -3,17 +3,16 @@ localization: complete
 translation_en: complete
 translation_fr: complete
 settings_audit: not_applicable
-code_review_sha: fd2eea026104d91d60f905f251f6925f90cee573  # 2026-11-18, 12.a: diff 36832a44..HEAD over Mod and Source read: Mod/About/About.xml (description text: RimImmortal-Living thanks line, twelve genes) and five French DefInjected text lines (passes 27 to 32), Source, Assemblies and Patches unchanged: revue du diff : texte seul. Previous: 36832a442299fb7ac38b49d6389de132a35cb6df  # 2026-11-17, 8.m (replay): diff 1a96f5bc..HEAD over Mod and Source read: Mod/About/About.xml adds <li>1.7</li> to supportedVersions only, Mod/About/Preview.png rebuilt, Source and Assemblies unchanged: revue du diff : images et texte seuls. Previous: 1a96f5bc5f12d7df4261fce3473025703c8b437b  # 2026-11-16, 12.a: diff acf8b48..HEAD over Mod and Source read: only the About.xml description text (Languages paragraph, SamBucher wording), revue du diff : texte seul, no code. Previous: acf8b487c6fd413a3fd6f7dea299232702f466d6  # 2026-11-16, 8.m: diff 6589e5f..HEAD over Mod and Source read: Source, Assemblies and Patches unchanged; Mod/Defs hold six text-tag lines only (description, label) and Mod/Languages and About.xml text, OptionalCompat.xml one declaration: revue du diff : textes seuls, no code. Previous: 6589e5f5ef5c4b560b62bd1ccfa9b74f6241b2ce  # 2026-11-07, 8.m: Opus review f809e47f..0962a7e (4 findings in Ability_WindBarrier.cs), fixed in 6589e5f, diff 0962a7e..HEAD re-read (only that fix, Source and the rebuilt DLL), barrier replay f878 green. Previous: f809e47f4cd07d3a34b67b1d9c119e762a478f31  # 2026-10-13, 8.m exceptions: reviewed diff 54eb9fb..HEAD over Mod and Source (git diff --stat): only Mod/About/About.xml (description text, nothing else) and Mod/ATTRIBUTION.md (one sentence about the removed Art/textures-original), no code: revue du diff : images et texte seuls. Previous: 54eb9fb, 2026-10-13, 8.m (moved past the French and gene-name text edits of this commit, Defs QiongQi.xml and MingShe.xml read, no code; and past two description-only edits of About.xml, no code): 5ea69ab..HEAD over Source and Mod holds no code change (only Source/Directory.Build.props intermediates path build/, ATTRIBUTION.md, Preview.png, desktop.ini removed): 0 findings. Earlier review, was `code_review`: <sha> (2026-10-08, /code-review at low effort over 89a2575..5ea69ab, the 0.1.0 commit that tracked the PublishedFileId, limited to Source, Mod/Defs, Mod/Patches and Tests/Pickle/Source: 0 findings; low effort reads the diff once, no verify pass. First review of this mod, nothing earlier existed)
-audit_revision: 67a4b37 (HEAD, pushed, tree clean when the 2026-10-01 audit began). While it ran, another session regenerated `Art/` and `Mod/About/Preview.png` in the working tree: uncommitted, not touched and not audited here
+code_review_sha: fd2eea026104d91d60f905f251f6925f90cee573  # 2026-11-18, 12.a: diff 36832a44..HEAD over Mod and Source read: Mod/About/About.xml (description text: RimImmortal-Living thanks line, twelve genes) and five French DefInjected text lines (passes 27 to 32), Source, Assemblies and Patches unchanged: revue du diff : texte seul.
 mod:          Ancient Chinese Beast And Gene Expanded Renew (unofficial)
 packageId:    nelim.ancientchinesebeastandgeneexpanded
 repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 visibility:   public
 detached:     yes
-workflow_stage: cleanUp[1.2.0]
+workflow_stage: dormant[1.2.0]
 tested_1_7: yes  # 2026-11-17: baseline 170 passed (a8a1), our 7 time-bound reds all green since with tick batches (drought 585f, scheduler 40a4, births 3fcf, firecracker 2369); the 7 other reds were NPT scenarios (tool side)
 social_preview_sha256: 62216f5b519f010f91174cf016253987b6e6c1b7ff211cf0e2f5ab1592c12134
-echo_review_sha: 91bc63b3fd1cca5e03baf36c4b5ee9f450de99be  # 2026-11-18, 10.a (after the palette redo and the layout choice): echo kept, echo-source.png unchanged, only 0-preview.png and Preview.png re-rendered (veil #552B17, layout A). Previous: 2026-11-18, 10.a (new Preview source): echo kept, echo-source.png unchanged, still the winged qiongqi line art, the new source shows the same four beasts and the rooster, Preview rendered with the echo under the panel text; the echo's wing tip almost touches the real qiongqi's paw and the title ends a few pixels from its wing (doubtful, flagged to Virginie). Previous: 2026-11-17, 10.a (replay): echo kept, echo-source.png and gallery 1 to 8 unchanged since acf8b48; only 0-preview.png and Preview.ico changed (our own render of the 1.7 badge Preview, 79b32d2). Previous: acf8b487c6fd413a3fd6f7dea299232702f466d6  # 2026-11-16, 10.a: echo kept again, echo-source.png and gallery 1 to 8 unchanged since 2026-11-15; only 0-preview.png (our own render of the new Preview) and Preview.config.json changed. Previous: 9d5b8f0b962db7260d3622a85774d6cad1044006  # 2026-11-15, 10.a: echo kept (echo-source.png, winged qiongqi line art, Preview panel bottom-left); the new gallery shows the same beast (images 2, 3, 8), subject unchanged; Preview.png unchanged, still equals 0-preview.png and social_preview_sha256
+echo_review_sha: 91bc63b3fd1cca5e03baf36c4b5ee9f450de99be  # 2026-11-18, 10.a (after the palette redo and the layout choice): echo kept, echo-source.png unchanged, only 0-preview.png and Preview.png re-rendered (veil #552B17, layout A).
 publication_changelog_review_sha: fd2eea026104d91d60f905f251f6925f90cee573  # 2026-11-18, 11.j: Virginie read PUBLICATION.md and CHANGELOG.md of the 1.2 line and validated ("je valide", chat). Previous: d7493d64d8c270087bd8ab943ce3044d6f67a59b  # 1.1 line
 thanks_drafted_line: 1.2
 licence:      silent
@@ -29,17 +28,6 @@ showcase:     complete
 tested_on: 2026-11-06 pickle 6589e5f (1.6, English: feature 20 wind barrier 2/2 and feature 13 original mod 1/1 green; French feature 15 22/22 green 2026-11-03)
 workshop:     published 2026-10-13, item 3806709132, public since 2026-10-13 (the owner switched it, after the upload), version 1.0.0, tag v1.0.0, run 38369937487 (publish and tag-and-release green)
 remaining:
-  - verified 2026-11-16 (replay 4.b, 4.e): Mod/About/OptionalCompat.xml declares XeoNovaDan.NocturnalAnimals (workshop 2004368312, patch) beside Mlie.XNDNocturnalAnimals; Check-OptionalCompat exit 0
-  - verified 2026-11-16 (replay 10.f): Preview.png uploaded to the repo Social preview (owner, in chat); social_preview_sha256 equals the current Preview.png
-  - verified 2026-10-01: French review by Virginie (see "Translation audit - 2026-10-01"). 11 source cells of
-      `FRENCH_REVIEW.md` stay marked unverified (fields inherited from vanilla parents, not read)
-  - verified 2026-10-13: Pickle on the 1.6 tree, read from the kept reports (`summary.json` `exitReason` first). Pass 1
-      (English, 2026-10-01): 83 passed, 5 red (aura ring, egg, barrier cut, barrier throw-back, strike), all five green since
-      (`2026-10-08a-replay-reds`, the 2026-10-08c replay (evidence deleted 2026-10-18), the 2026-10-08b run (evidence deleted 2026-10-18), the 2026-10-10f run (evidence deleted 2026-10-18)). Pass 2 (French, 2026-10-02):
-      chunks a, b, c ran (drought and egg red, both green since); chunk d left no report, features 18 to 23 re-run in French
-      the 2026-10-08b run (evidence deleted 2026-10-18) and the siege `2026-10-10i/j`. Passes 3 (the 2026-10-02g run (evidence deleted 2026-10-18)), 4 (the 2026-10-02f run (evidence deleted 2026-10-18)),
-      5 (the 2026-10-01d run (evidence deleted 2026-10-18), 11/11) and 6 (the 2026-10-01e run (evidence deleted 2026-10-18), 11/11) passed. No red scenario is left. No full pass is owed
-      before publish (AGENTS.md, rule of 2026-10-13): non-regression after the commit, at `followUp`
   - unverified: the delivered assembly changed four times in a week (forced "Beast attack now" 2026-09-25, rest
       and breeding 2026-09-25, the sexie's tunnel 2026-09-27, the wind barrier's projectile guard 2026-10-01). Current
       SHA-256 `40AA5903...A7BA74` (before the guard `042989FA...A1295F`), rebuilt by `Tests/Run-All.ps1` on 2026-10-01
@@ -54,28 +42,14 @@ remaining:
       attack; a fresh beast starts rested, so this is judged low risk, not measured)
   - unverified: no person has played the mod. What is known of it in a game is what Pickle showed on 2026-09-25
       (above); TESTING.md remains the protocol, 29 scenarios
-  - verified 2026-10-13: the nine manual exceptions. M1 to M5 automated and green (features 04, 20, 21, 22). M6 (feature 19),
-      M7 (feature 18) and M8 (feature 23) green in French (`2026-10-08b`, `2026-10-09a`). M9 not applicable: the game’s own
-      behaviour, reason in Tests/Pickle/README.md; the owner can overturn it
-  - verified 2026-10-13: the two `@review` captures that missed their subject were retaken (the 2026-10-09a run (evidence deleted 2026-10-18)) and opened:
-      the Pleiades star officer fills the view; the sexie (label "Sexie (human form)") stands in the red-carpeted room, red figure with spear.
-      Both show their subject. The other seven were opened 2026-10-01
   - unverified: whether `MonsterTower/AncientChineseBeast` (the 1.5 source, see the 2026-10-01 audit) belongs to the
       four credited authors: nothing links it to them. The pull request exists: [MonsterTower/AncientChineseBeast#1](https://github.com/MonsterTower/AncientChineseBeast/pull/1)
       (from `vbardales/AncientChineseBeast`, opened 2026-10-09, open on 2026-10-13, one commit, no comment, no reply). The C# has not
       changed since it was opened (`git log --since=2026-10-09 -- Source` holds only the `build/` path), so it is current
-  - verified 2026-10-01: Tests/Run-All.ps1 under PowerShell 7.6.6, exit 0: 341 content checks and five negative
-      controls, 26 assembly contracts, XML fields, classes, def references and external types, 137 of 137
-      configuration defs, 378 Def fields and 9 Keyed entries with four translation negative controls, both XML
-      exit-code checks. The delivered assembly came out byte-identical
   - unverified: the nian beast's description lost its butchery paragraph on 2026-09-25 (English, French,
       Simplified Chinese; the promise of "nian beast fangs" was inherited text, a butchery yields meat only,
       seen in the run of that day). The field paths are unchanged; the four PowerShell 7 translation scripts
       were re-run 2026-09-26 and are green; the new text is in no in-game check yet
-  - verified 2026-09-26: Tests/Run-All.ps1 ran whole under PowerShell 7.6 (pwsh, installed on this machine): builds, 341
-      content checks, translation check (378 Def fields, 9 Keyed, 0 failure), configuration, XML checker exit codes, all
-      negative controls green. The content negative control for the repository URL was fixed the same day (the
-      description now carries the URL twice, so the mutation removes both)
   - unverified: A Dog Said... Animal Prosthetics 2 compatibility (Mod/Patches/ADogSaidAnimalProsthetics2.xml,
       loadBefore in About.xml, added 2026-09-24). Offline: the patch's paths and lists are checked against a
       stand-in of the other mod's category defs, negative control seen. In game: feature 14, pass 5
@@ -87,13 +61,6 @@ remaining:
       wooden and simple and no bionic, the four hostile beasts nothing, and the load order is the mod first. Still
       unverified: what the Health tab's operation menu shows for a given body part, which is the other mod's own
       logic and is not asserted (TESTING.md, H1)
-  - verified 2026-09-28: pass 3, the optional mod ninedaylongbow.ChineseComprehensiveExpansion (the one
-      mod About.xml names in loadAfter). Its Workshop id (3221850511) was looked up (`Search-Workshop.sh`
-      over the local corpus, by its packageId; a Windows subscription, 1.6 folder present) and the pass
-      written (`17-chinese-comprehensive-expansion.feature`, `wsl-deps.cce.map`, mirrors the ADS2 pass: no
-      patch either way, only the loadAfter order and no def conflict). First run red, the map's order
-      copied from ads2 unadjusted (this mod before CCE instead of after); fixed and green, 1/1
-      (evidence the 2026-09-28b run (evidence deleted 2026-10-18))
   - checked 2026-09-28: what the 0.1.0 upload carried. The item's own cached copy
       (`steamapps/workshop/content/294100/3806709132`, since the owner is subscribed to her own item) still
       holds the 80 `.dds` files (28 MB total with the textures) that sat beside the PNGs at upload time,
@@ -112,7 +79,7 @@ remaining:
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
 updated:      2026-11-19
 upstream_synced: 2026-11-16 MonsterTower/AncientChineseBeast@f6d3d19
-protocols_read_sha: 2621dc51cc3b38eb80b335ca63d50849fe373a1d
+protocols_read_sha: 712841fd78e5fa4ee29e8d75a6713fe171f6fe4a
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
@@ -136,17 +103,9 @@ Eight staged scenes (one day at Nelim's Sanctuary, Blue the only guest) plus Pre
 | 7 | `7-extractor.jpg` | three archite capsules at the gene extractor, a hen on the bench |
 | 8 | `8-tame-clones.jpg` | night, Nelim feeds the five tamed clones |
 
-### Reviews by Virginie - 2026-10-13
-
-She validated in chat ("validé") French of revision `54eb9fb` (`FRENCH_REVIEW.md`, regenerated at `e50d33d`: crow song without generic masculine, "rage meurtrière" for three berserker uses, qiongqi claw gene names, sound-wave wording), then `PUBLICATION.md` and `CHANGELOG.md` at `e50d33d`. Review-line table of `FRENCH_REVIEW.md` stays blank: shared script never writes it (hers), so her word recorded here.
-
-Sections of the 1.0.0 dry-run, publication, non-regression and the 1.1.0 plan moved to `Docs/runs/2026-11-16-status-history.md` (run 38369174343 dry-run, run 38369937487 publication, tag v1.0.0 on ff3ecbd).
-
-### Echo review - 2026-10-13
-
-Kept. `Art/echo-source.png` is line art of winged qiongqi; gallery 2 (four beasts) and 3 (qiongqi far from Lan) show same beast, so echo and gallery agree, subject not moved. Preview rendered from it (`ccf028b`, flipped echo, cropped badge) is 896x504, opened full size: title, rule, summary, red echo under panel text, ModIcon bottom right, 1.6 badge top right, nothing cut. `Mod/About/Preview.png` sha256 `d39149d2...` equals `social_preview_sha256`: GitHub social preview current (repository public). `Art/` holds minimal set plus `textures-original/` (kept, owner decision 2026-10-11).
-
 ### Ecosystem - 2026-11-13
+Reviews and echo review of 2026-10-13 (French and PUBLICATION validated by Virginie, echo kept) moved to `Docs/runs/2026-11-19-status-sections.md`; current echo state is `echo_review_sha`.
+
 
 AUDIT 1.a, Steam search done by PiI (2026-11-13), full study in `docs/inventory/ecosystem-steam/AncientChineseBeastAndGeneExpandedRenew.md`. PiI one-line reply: original 3292446841 and its NoGene sibling 3047055011 (same author andery233xj, 21 shared defNames, held `needs_npt`) are the only mods sharing our defNames; no third fork; 19 weak hits, none shared.
 
@@ -212,3 +171,5 @@ Summary 2026-11-18 (STATE lines of 2026-11-17 moved to `Docs/runs/2026-11-18-sta
 Summary 2026-11-19 (STATE lines of 2026-11-18 resume to 2026-11-19 5d01 moved to `Docs/runs/2026-11-19-status-history.md`): 1.2.0 published (run 44306165735, tag v1.2.0, item 3806709132), subscribe test OK, Social preview and gallery image 0 done, thank-you comments posted. 14.a non-regression: bf17 and 1d91 (1.6 EN) green; 1.7 reds b144, 5d01, 5cf0 all slow 1.7 lane, batch twins 25 to 28 green. Owed: sync-nsb-npt (NPT changed 2026-11-19).
 
 STATE 2026-11-19 (14.a verdict): 5cf0 (C, 1.7 EN) read: summary.json 14 total, 11 passed, 3 failed, exitReason failed. Reds: egg scenario twice (234 and 246 ticks of 2400 in about 300 s) and extractor hauling (step "the game runs for 5 seconds" timed out after 170 s): slow 1.7 lane, wall-clock steps, no mod defect; they passed in baseline a8a1 on the fast lane. Barrier, qiongqi, nian beast, stale letter, strength, horn all green. With 1d91 (1.6 EN, 200 passed) and the batch twins 25 to 28, 14.a is green: nothing that was green turned red. Evidence deleted. workflow_stage runNoRegression to cleanUp[1.2.0] (14.j).
+
+STATE 2026-11-19 (cleanUp 14.c to 14.e): evidence 79 to 0.9 MB (deleted cloud-cpu-4 red, 2026-11-17j covered, 18a screenshots; 18a kept with RELEASE.md as the 1.6 non-regression proof of 1.2.0; Prune-Evidence -Apply removed 4 green folders), PUBLICATION.md old change notes (1.1.0, 1.0.0) moved to Docs/runs/2026-11-19-publication-sent.md, posted thank-you texts kept (WORKSHOP_COMMENTS cites them), STATUS front matter verified items and 2026-10-13 sections moved to Docs/runs, TESTING.md already holds only the current protocol. 14.d: only main, no branch to delete. WSL: of the five ids of this mod maps only 3292446841 (the original) is named by no other mod map; not found in the WSL Workshop folders, nothing removed; 2269731409, 2599504692, 3221850511, 3238353862 stay (other mods maps name them). workflow_stage cleanUp to dormant[1.2.0] (14.e).
