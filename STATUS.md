@@ -10,7 +10,7 @@ repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
 remote:       https://github.com/vbardales/Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew.git
 visibility:   public
 detached:     yes
-workflow_stage: ecosystem[1.2.0]
+workflow_stage: shootGallery[1.2.0]
 tested_1_7: yes  # 2026-11-17: baseline 170 passed (a8a1), our 7 time-bound reds all green since with tick batches (drought 585f, scheduler 40a4, births 3fcf, firecracker 2369); the 7 other reds were NPT scenarios (tool side)
 social_preview_sha256: 62216f5b519f010f91174cf016253987b6e6c1b7ff211cf0e2f5ab1592c12134
 echo_review_sha: 91bc63b3fd1cca5e03baf36c4b5ee9f450de99be  # 2026-11-18, 10.a (after the palette redo and the layout choice): echo kept, echo-source.png unchanged, only 0-preview.png and Preview.png re-rendered (veil #552B17, layout A).
@@ -83,7 +83,7 @@ remaining:
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
 updated:      2026-11-22
 upstream_synced: 2026-11-16 MonsterTower/AncientChineseBeast@f6d3d19
-protocols_read_sha: 01d4eb44962935db937fc88acc42914c1a7c7b43
+protocols_read_sha: 5e55185c2894aa6ca5c357aa68a58231a15166a1
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
