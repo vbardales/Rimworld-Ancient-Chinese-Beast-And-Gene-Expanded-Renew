@@ -16,6 +16,7 @@ social_preview_sha256: 62216f5b519f010f91174cf016253987b6e6c1b7ff211cf0e2f5ab159
 echo_review_sha: 91bc63b3fd1cca5e03baf36c4b5ee9f450de99be  # 2026-11-18, 10.a (after the palette redo and the layout choice): echo kept, echo-source.png unchanged, only 0-preview.png and Preview.png re-rendered (veil #552B17, layout A).
 publication_changelog_review_sha: fd2eea026104d91d60f905f251f6925f90cee573  # 2026-11-18, 11.j: Virginie read PUBLICATION.md and CHANGELOG.md of the 1.2 line and validated ("je valide", chat). Previous: d7493d64d8c270087bd8ab943ce3044d6f67a59b  # 1.1 line
 thanks_drafted_line: 1.2
+ecosystem_line: 1.2  # 2026-11-22, PiI short DELTA since 2026-11-13: nothing new (report section "Delta 2026-11-22", pushed 9076dc7)
 licence:      silent
 licence_at:   reviewed 2026-09-12 - original files and About.xml, English and Chinese Workshop
             descriptions, all 68 public comments, and the four coauthors' Steam profiles;
@@ -113,6 +114,8 @@ AUDIT 1.a, Steam search done by PiI (2026-11-13), full study in `docs/inventory/
 
 Summary: Steam searches `Ancient Chinese Beast`, `Chinese mythology beasts`, `Chinese creature genes`. Found: original 3292446841 (2024-08, protected); NoGene sibling 3047055011 (fork-or-rewrite, same author's variant without the genes, not a competitor); link 3293695725 "Remove Ancient Chinese Beast Gene textures" (patch of the original, 1.6); name only 3313313985 "Ancient amorphous threat". PiI subscribed to the two small ones for study and unsubscribed them. Nothing else Chinese-themed holds our `SZ_*` defNames. Local scan from this session agrees (corpus 5302/5306 folders, 2 hits, our own `About.xml`). Gap settled 2026-11-13 (Steam API `GetPublishedFileDetails`, local `About.xml` files): 3047055011 created 2023-10-07, last updated 2023-11-27, `supportedVersions` 1.4 only, 1486 subscribers: dead for 1.6 (PiI's "alive 1.6" is wrong; the 2026-09-05 date is the local download). Upstream 3292446841 created 2024-07-19, last updated 2024-08-14, `supportedVersions` 1.4 and 1.5, folders `1.4/` `1.5/`, no 1.6, 3167 subscribers: not updated since our port. Licence not read. Nothing to add to `Check-OptionalCompat.ps1`, no combined pass owed at 8.f.
 
+
+Delta 2026-11-22 (PiI, short search for the 1.2 line, report `docs/inventory/ecosystem-steam/AncientChineseBeastAndGeneExpandedRenew.md`): nothing new since 2026-11-13, no fork, duplicate or translation of the original 3292446841 or the twin 3047055011. Original last updated 2024-08-14 (1.4 1.5), twin 2023-11-27 (1.4), patch 3293695725 2025-06-18 (1.6). One link row added: Chinese Comprehensive Expansion 3221850511 (same authors, 1.5 1.6, named by our About loadAfter). Marks kept, no subscription made, local defName scan not rerun.
 
 Owner decision 2026-11-16: no action on the patch 3293695725 (Remove Ancient Chinese Beast Gene textures) nor on the twin 3047055011 (NoGene, 1.4 only). Like every patch of an original, they wait for the release or the RTI pass; nothing asked of their authors, no own patch, no incompatibility declared now.
 ## History
