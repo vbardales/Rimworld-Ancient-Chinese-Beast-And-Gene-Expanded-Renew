@@ -9,9 +9,9 @@ This file = behavior inventory from which Pickle companion suite must be written
 
 Some evidence inherently human: whether animation, particle effects, sound, text clipping or translated phrase looks or sounds right. Even then Gherkin scenario must prepare exact moment (e.g. sexie at transformation, qiongqi starting flight, mingshe dying with drought active) and capture it. Manual play = exception for missing automation capability or private pre-existing save; never substitutes for scenario setup. Record exception, reason, exact evidence to inspect in `Tests/Pickle/README.md`.
 
-Evidence stays on disk, out of git. Which proofs of run worth keeping, in what form, how long, is in `docs/runs/README.md`; read before deleting or committing anything run wrote.
+Evidence stays on disk, out of git. Which proofs of run worth keeping, in what form, how long, is in `TEST-EVIDENCE.md` of the protocols; read before deleting or committing anything run wrote.
 
-Companion suite exists (`Tests/Pickle/`, 23 features, 112 scenarios), played feature by feature since 2026-09-25 (`docs/runs/`); not played as one full run on current tree. Which of 28 cases below each feature plays = table in its README, so are nine manual exceptions (M1 to M9). On 2026-10-01 M1 to M5 automated and green, M6 and M7 automated and red, M8 and M9 neither automated nor played; until every one green or explicitly not applicable with reason, mod cannot be `tested`. Written scenario = automation, not evidence anything passed: evidence = report of run on current tree.
+Companion suite exists (`Tests/Pickle/`, 23 features, 112 scenarios), played feature by feature since 2026-09-25 (`Docs/runs/pickle.md`); not played as one full run on current tree. Which of 28 cases below each feature plays = table in its README, so are nine manual exceptions (M1 to M9). On 2026-10-01 M1 to M5 automated and green, M6 and M7 automated and red, M8 and M9 neither automated nor played; until every one green or explicitly not applicable with reason, mod cannot be `tested`. Written scenario = automation, not evidence anything passed: evidence = report of run on current tree.
 
 **What `tested` asks for** (`AUDIT.md`, `done -> tested`), and where mod stands 2026-10-01: no scenario tagged `@wip` (holds); every `@requires` scenario has run on current tree (not yet: `13`, `14`, `16` ran on older trees, `17` on current one); no manual test left to validate (not met); Pickle suites green with `exitReason` read first and `@review` captures opened (two of nine do not show subject); logs checked and interface verified in English and French; French review by owner.
 
@@ -46,7 +46,7 @@ No pass without DLC (Biotech hard dependency, mod does not load without it), no 
   by Ludeon Studios\Player.log`). Red error there = result even when scenario looked fine on screen.
 - Expect this mod **only one loaded** beyond Harmony, Biotech, DLCs, for first run at least. Second run inside full modlist worth doing afterwards; any difference between two runs is itself finding.
 
-Every "expected" line below read out of code or defs. Pickle runs of 2026-09-25 showed some happening (`docs/runs/`); **no person yet observed any of it.**
+Every "expected" line below read out of code or defs. Pickle runs of 2026-09-25 showed some happening (`Docs/runs/pickle.md`); **no person yet observed any of it.**
 
 ---
 

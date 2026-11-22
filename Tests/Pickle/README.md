@@ -1,6 +1,6 @@
 # In-game scenarios, run by Pickle
 
-Dev-only companion, never shipped in `Mod/`. Turns `TESTING.md` behaviors into self-staging scenarios: each loads/builds own state, acts via real game path, asserts what assertable, and where picture only honest evidence takes bounded `@review` capture for human to open. **First run 2026-09-25**, partial (`docs/runs/`). All numbers below count what written, not what passed.
+Dev-only companion, never shipped in `Mod/`. Turns `TESTING.md` behaviors into self-staging scenarios: each loads/builds own state, acts via real game path, asserts what assertable, and where picture only honest evidence takes bounded `@review` capture for human to open. **First run 2026-09-25**, partial (`Docs/runs/pickle.md`). All numbers below count what written, not what passed.
 
 ## Present coverage
 
@@ -32,7 +32,7 @@ Dev-only companion, never shipped in `Mod/`. Turns `TESTING.md` behaviors into s
 | `22-siege` | 1 | M5: nian beast attacks enclosure of colonist it can't reach (enclosure, not door specifically: door = least resistance, scenario only asks something of enclosure breached) | none |
 | `23-letter-language` | 1 | M8: beast chosen in save with letter in other language sends Def letter in run language (`Singleton.BeastFor`); played in English pass and again in French | none |
 
-Nine captures total from English pass, plus tenth `19` takes when passes. `docs/runs/README.md` says which keep and how small. Opened 2026-10-01: `05` capture (star officer) and `11` (tunnel) don't show subject; camera + zoom to set in those scenarios.
+Nine captures total from English pass, plus tenth `19` takes when passes. `TEST-EVIDENCE.md` of the protocols says which keep and how small. Opened 2026-10-01: `05` capture (star officer) and `11` (tunnel) don't show subject; camera + zoom to set in those scenarios.
 
 ### Where each of the 28 scenarios of `TESTING.md` is played
 
