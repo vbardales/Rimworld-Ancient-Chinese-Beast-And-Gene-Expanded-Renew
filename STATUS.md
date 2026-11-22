@@ -7,9 +7,10 @@ code_review_sha: fd2eea026104d91d60f905f251f6925f90cee573  # 2026-11-18, 12.a: d
 mod:          Ancient Chinese Beast And Gene Expanded Renew (unofficial)
 packageId:    nelim.ancientchinesebeastandgeneexpanded
 repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
+remote:       https://github.com/vbardales/Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew.git
 visibility:   public
 detached:     yes
-workflow_stage: dormant[1.2.0]
+workflow_stage: ecosystem[1.2.0]
 tested_1_7: yes  # 2026-11-17: baseline 170 passed (a8a1), our 7 time-bound reds all green since with tick batches (drought 585f, scheduler 40a4, births 3fcf, firecracker 2369); the 7 other reds were NPT scenarios (tool side)
 social_preview_sha256: 62216f5b519f010f91174cf016253987b6e6c1b7ff211cf0e2f5ab1592c12134
 echo_review_sha: 91bc63b3fd1cca5e03baf36c4b5ee9f450de99be  # 2026-11-18, 10.a (after the palette redo and the layout choice): echo kept, echo-source.png unchanged, only 0-preview.png and Preview.png re-rendered (veil #552B17, layout A).
@@ -28,6 +29,7 @@ showcase:     complete
 tested_on: 2026-11-06 pickle 6589e5f (1.6, English: feature 20 wind barrier 2/2 and feature 13 original mod 1/1 green; French feature 15 22/22 green 2026-11-03)
 workshop:     published 2026-10-13, item 3806709132, public since 2026-10-13 (the owner switched it, after the upload), version 1.0.0, tag v1.0.0, run 38369937487 (publish and tag-and-release green)
 remaining:
+  - open 2.h (replay 2026-11-22, typed by Virginie): `ecosystem_line` absent, the 1.2 line never went through ecosystem[1.2.0]. Ask PiI for the short DELTA since 2026-11-13 (`ECOSYSTEM? <Mod> | DELTA depuis 2026-11-13`), copy it into Ecosystem, write `ecosystem_line: 1.2`, then replay. Known beyond the replay stop (not read): `gallery_validated_sha` and `preview_source_decision` absent (9.f, 10.a bis)
   - unverified: the delivered assembly changed four times in a week (forced "Beast attack now" 2026-09-25, rest
       and breeding 2026-09-25, the sexie's tunnel 2026-09-27, the wind barrier's projectile guard 2026-10-01). Current
       SHA-256 `40AA5903...A7BA74` (before the guard `042989FA...A1295F`), rebuilt by `Tests/Run-All.ps1` on 2026-10-01
@@ -77,7 +79,7 @@ remaining:
   - defect: the keyed string SZ_CannotReachBuildingToExtractGene is referenced from neither the
       C# nor the defs. Inherited, left alone
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
-updated:      2026-11-19
+updated:      2026-11-22
 upstream_synced: 2026-11-16 MonsterTower/AncientChineseBeast@f6d3d19
 protocols_read_sha: 01d4eb44962935db937fc88acc42914c1a7c7b43
 ---
