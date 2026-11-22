@@ -15,3 +15,5 @@ nelim.ancientchinesebeastandgeneexpanded   path:AncientChineseBeastAndGeneExpand
 XXK.AncientChineseBeastNoTexture   3293695725
 Mlie.UseThisInstead   3396308787
 nelim.resolvethisinstead   path:ResolveThisInstead/Mod
+# The "has no value in the field" steps of 29-no-texture-patch (PiT DefFieldSteps, 2026-11-22).
+nelim.pickletools.deffields   path:PickleTools/DefFieldSteps/Mod
