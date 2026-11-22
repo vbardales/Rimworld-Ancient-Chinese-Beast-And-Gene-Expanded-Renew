@@ -4,6 +4,14 @@ Format inspired by [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). The
 `## [<version>]` section of a version, so each one keeps that heading exactly. This file serves the repository and
 the writing of Steam patch notes; RimWorld does not display it in game.
 
+## [Unreleased]
+
+Since 1.2.0 (documentation and gallery only; `Mod/` content and `Source/` are unchanged):
+
+- The Workshop description gains a "Gene textures" paragraph: Remove Ancient Chinese Beast Gene textures (3293695725, by 逍逍客) removes the textures of four genes (the mingshe's wind wing, the qiongqi's flying strike, the sexie's shoot, the year beast's horn) and keeps their abilities. Tested with this mod, whatever the load order; nothing to change in the mod itself.
+- Gallery images 3 (the qiongqi, Nelim braces behind the sandbags) and 6 (the sexie's aura ring) were taken again, closer and with every subject clear of the subtitle.
+- Tests only: feature 29 checks that the no-texture patch applies to this mod's four genes, and the gallery scenarios 3 and 6 were recomposed.
+
 ## [1.2.0] - 2026-11-18
 
 Since 1.1.0:
