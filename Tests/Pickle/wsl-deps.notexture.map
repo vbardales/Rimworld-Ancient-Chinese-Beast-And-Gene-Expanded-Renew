@@ -1,0 +1,17 @@
+# Pass "notexture": the Workshop patch "Remove Ancient Chinese Beast Gene textures" and Resolve This Instead beside this mod.
+#
+# XXK.AncientChineseBeastNoTexture, Workshop 3293695725, by 逍逍客, supports 1.5 and 1.6. Its Patches/Patch.xml has four
+# PatchOperationRemove (success Always) on /Defs/GeneDef[defName="..."]/renderNodeProperties for SZGene_MingShe_WindWing,
+# SZGene_QiongQi_FlyingStrike, SZGene_SeXie_Shoot and SZGene_YearBeast_Horn, four defNames this mod also defines. Its
+# About.xml declares no dependency and no guard: the "requires the original" is only on the Steam page. So the patch
+# should apply to this mod when it loads after it, and do nothing (no error) when it loads before.
+# Resolve This Instead (nelim.resolvethisinstead, with Mlie.UseThisInstead 3396308787, the data it reads) is staged as a
+# player of Renew would have it.
+#
+# ORDER. The staging activates the mods named here in this order, then the mod under test. Naming this mod's own
+# packageId with a path: overlay puts it first (see wsl-deps.ads2.map); the patch loads after it, as a player's
+# mod manager would place it.
+nelim.ancientchinesebeastandgeneexpanded   path:AncientChineseBeastAndGeneExpandedRenew/Mod
+XXK.AncientChineseBeastNoTexture   3293695725
+Mlie.UseThisInstead   3396308787
+nelim.resolvethisinstead   path:ResolveThisInstead/Mod
