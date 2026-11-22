@@ -30,26 +30,13 @@ dependencies: declared
 workshop_required_items: done, 2026-11-16 (read on the Steam page: Harmony 2009463077, Biotech DLC 1826140)
 showcase:     complete
 tested_on: 2026-11-18 pickle 1d91 (1.6 English non-regression of 1.2.0, 200 passed, 38 skipped, exitReason passed, Docs/runs/pickle.md); earlier 2026-11-06 pickle 6589e5f (1.6, English: feature 20 wind barrier 2/2 and feature 13 original mod 1/1 green; French feature 15 22/22 green 2026-11-03)
-workshop:     published 2026-10-13, item 3806709132, public since 2026-10-13 (the owner switched it, after the upload), version 1.0.0, tag v1.0.0, run 38369937487 (publish and tag-and-release green)
+workshop:     published 2026-10-13, item 3806709132, public since 2026-10-13 (the owner switched it, after the upload), version 1.0.0 then 1.1.0 (2026-11-16) and 1.2.0 (2026-11-18, run 44306165735, tag v1.2.0)
 remaining:
   - gallery 3 CANDIDATE (2026-11-22, ticket 94d3 green on hetzner, capture opened: Nelim directly behind the sandbags, clear of the subtitle band, qiongqi and hen readable; 268 px read as before). Files Art/Gallery-clean/3-qiongqi.jpg and Art/Gallery/3-qiongqi.jpg (0,42 MB), run minified in Tests/Pickle/Evidence/2026-11-22b-gallery-3-qiongqi. Scene 6 candidate since 51d2. All 8 images are candidates and subtitled (hash 7687bfe8274569fb4480aa027e1a8bd472213134). Next: replay-audit, then Virginie validates the whole gallery once (9.f, `gallery_validated_sha`), never image by image
   - patch 3293695725 "Remove Ancient Chinese Beast Gene textures" (XXK.AncientChineseBeastNoTexture; Virginie 2026-11-22: "B, quitte a le mettre sous forme de param dans la conf", test it with RTI). Read: Patches/Patch.xml = 4 PatchOperationRemove (success Always) of renderNodeProperties on SZGene_MingShe_WindWing, SZGene_QiongQi_FlyingStrike, SZGene_SeXie_Shoot, SZGene_YearBeast_Horn, all four defined by this mod too; its About has no dependency or guard, so it should apply when loaded after this mod (not verified in game). RTI session: irrelevant to this patch (no MayRequire/FindMod); UTI already pairs andery233xj.AncientChineseBeast to this mod but the pair is OFF by default in RTI, on by default only if Renew ships About/ResolveThisInstead.xml with the pair and `<compatible>yes</compatible>` (optional, not asked). Test: Tests/Pickle/wsl-deps.notexture.map + 29-no-texture-patch.feature (d568e88), ticket 330e RAN 2026-11-22: scenario 2 (four genes lose their render nodes, abilities stay) GREEN with the patch loaded BEFORE this mod, scenario 1 RED on its own assertion "loads after" (staging put the patch first); XML patches apply after all defs, so order likely irrelevant, not proven; TM confirms the order is the map/staging, not the game; this mod has no loadAfter on the patch and needs none. Order assertion removed from scenario 1; rerun ticket de08 GREEN 2/2 2026-11-22 (hetzner; scenario 2 uses the PiT "has no value" steps, 4 of them, so they are played and green), minified in Tests/Pickle/Evidence/2026-11-22c-notexture-29, parked run deleted. PiI told the id is free. Virginie 2026-11-22: option 1 (documentation only, no incompatibility to remove: Renew declares incompatibleWith only the original, Remove has no dependency). Note written in PUBLICATION.md ("Gene textures", credit 逍逍客) and synced into About.xml; EN only, FR and zh notes not asked. The map wsl-deps.notexture.map stays (PiI told, id stays subscribed); it uses PiT's two new steps "has no value / has a value in the field" (compiled, NOT PLAYED, DefFieldSteps): a red may be the steps, not the patch. PiI keeps 3293695725 subscribed (protected study_for_ACBaGE) until I say free. On RUN_DONE: green means recommend documentation only (PUBLICATION.md and About note: subscribe to the patch, load it after Renew); then ask Virginie option 1 (note) or 2 (an options checkbox "show gene textures", needs C# in Source, EN/FR/zh keys, MOD_SETTINGS.md pass, version 1.3.0, tests). Tell PiI the id is free when done
-  - (older) gallery 3 and 6 REDO a third time (2026-11-22): ticket 00a2 green (2/2), captures opened and 268 px thumbnails checked, both REDO, run folder deleted. 3: qiongqi faces Nelim, hen and sandbag shown, but Nelim about 15 px tall at 268 px, back to camera, rifle and bracing not readable (understanding 3.5). 6: aura ring and scorpion readable, but Ryu stands idle with pale torso (collar shirt reads as bare), no knife visible, no lunge, Nelim not cowering visibly (adequacy 3, understanding 3). Cause of 6 not established: berserk is sent before the knife and the poses are set, the job may be dropped; ask NPT for a mid-attack pose step. Recomposed b5b6cc9 (3: Nelim one cell closer, zoom 12; 6: knife wielded, Ryu ordered to attack the sexie with the existing NPT step, 40 ticks pass before the pause, shirt (52,84,120), zoom 12), ticket 8725 "gallery 3 and 6 redo v3 b5b6cc9" filed (evidence Tests/Pickle/Inbox/gallery-redo-3-6c). On RUN_DONE: open both captures, thumbnail check at 268 px, judge (score-gallery), subtitle (Add-Subtitle), add to Art/Gallery and Art/Gallery-clean as 3-qiongqi.jpg and 6-sexie-aura.jpg
   - translations (Virginie 2026-11-23, rule (a), PUBLISHING.md and AUDIT 11.h): THANKS now cites the original authors for the mod AND its Simplified Chinese text (done, About synced). Their thank-you message: a comment on the original page was posted 2026-10-13; Virginie 2026-11-23 asked for a message about the translations: drafted in PUBLICATION.md (Thank-you comments), to post after the next release is public
   - dormant[1.2.0] since 2026-11-23 (Virginie oui, Audit: resting state for cleanup only; the WARN changelog top section [Unreleased] is accepted). Release chain parked (replay of 11.h..12.h only with --lock-state until she names a version, then `/audit-replay 1.2.1 ecosystem..`). Last replay writeReleaseDocs.. 2026-11-22: 11.a to 11.g done (adult boxes text fixed in place). Open: 11.h thanks draft for Remove (she said not now), 11.i Steam note of the next version, 11.j her reread of PUBLICATION.md and CHANGELOG.md (description changed), 12.a code review record (About.xml description text changed since fd2eea0), 12.b to 12.h. VERSION: suffix 1.2.0 is the published one (v1.2.0 tagged 2026-11-18); next version unnumbered (CHANGELOG [Unreleased]); Virginie 2026-11-22: "on clean pour l instant", no release now
   - AGENTS migration done 2026-11-22: Docs/PROTOCOLS-READ.md and the Docs/runs files other than pickle.md and the cited 2026-11-19-publication-sent.md removed, pointers rewritten (STATUS, TESTING, Tests/Pickle/README, .gitignore)
-  - unverified: the delivered assembly changed four times in a week (forced "Beast attack now" 2026-09-25, rest
-      and breeding 2026-09-25, the sexie's tunnel 2026-09-27, the wind barrier's projectile guard 2026-10-01). Current
-      SHA-256 `40AA5903...A7BA74` (before the guard `042989FA...A1295F`), rebuilt by `Tests/Run-All.ps1` on 2026-10-01
-      and byte-identical to the delivered file. The guard is in no in-game run yet. Offline: 26 assembly contracts and
-      341 content checks green. In game: green per feature, see above
-  - unverified: the beasts rest and breed (2026-09-25, merged into main): every beast has a rest need and two sexes, the
-      tame ones give birth (or lay eggs: mingshe and star officer) to babies that grow through baby, juvenile and adult,
-      and Nocturnal Animals gives each a body clock. Offline: 341 content checks green, the XML classes, fields and
-      references green, the French keys resolved. In game, green on 2026-09-26: feature 15 (rest 11/11, eggs 2/2,
-      births 4/4) and feature 16 (11/11). Saved clones stay genderless and sterile. Not played: a long hostile raid, to
-      see whether a tired hostile beast lies down instead of attacking (its think trees put SatisfyBasicNeeds before the
-      attack; a fresh beast starts rested, so this is judged low risk, not measured)
   - unverified: no person has played the mod. What is known of it in a game is what Pickle showed on 2026-09-25
       (above); TESTING.md remains the protocol, 29 scenarios
   - unverified: whether `MonsterTower/AncientChineseBeast` (the 1.5 source, see the 2026-10-01 audit) belongs to the
@@ -60,26 +47,8 @@ remaining:
       Simplified Chinese; the promise of "nian beast fangs" was inherited text, a butchery yields meat only,
       seen in the run of that day). The field paths are unchanged; the four PowerShell 7 translation scripts
       were re-run 2026-09-26 and are green; the new text is in no in-game check yet
-  - unverified: A Dog Said... Animal Prosthetics 2 compatibility (Mod/Patches/ADogSaidAnimalProsthetics2.xml,
-      loadBefore in About.xml, added 2026-09-24). Offline: the patch's paths and lists are checked against a
-      stand-in of the other mod's category defs, negative control seen. In game: feature 14, pass 5
-      (wsl-deps.ads2.map, Workshop 3238353862, a Windows subscription at 1.3.7), written and submitted to the
-      TicketDispatcher. First run 2026-09-25: 4 of 11 passed, 7 failed, all seven because the staging loaded
-      this mod after ADS2 (it does not sort by loadBefore), which is what the mechanism predicts and not a defect of
-      the patch. With the pass map naming this mod first (`path:` overlay), the second run passed 11 of 11
-      (exitReason passed, 2026-09-25): the five clones offer wooden, simple and bionic replacements, the chicken
-      wooden and simple and no bionic, the four hostile beasts nothing, and the load order is the mod first. Still
-      unverified: what the Health tab's operation menu shows for a given body part, which is the other mod's own
       logic and is not asserted (TESTING.md, H1)
-  - checked 2026-09-28: what the 0.1.0 upload carried. The item's own cached copy
-      (`steamapps/workshop/content/294100/3806709132`, since the owner is subscribed to her own item) still
-      holds the 80 `.dds` files (28 MB total with the textures) that sat beside the PNGs at upload time,
-      written by the game. They are gitignored and untracked (`git ls-files` finds none, `git check-ignore`
-      confirms `*.dds`), so a checkout has none of them: the next publish, which the CI builds from a
-      checkout, replaces the item's content wholesale and drops them on its own, nothing to do by hand.
       The item stays private and prepublished, so no one has downloaded the 0.1.0 copy
-  - unverified: English and French display checks, generated names, debug actions and
-      save/reload across languages have not been run; see TESTING.md, Translation checks
   - defect: Singleton.nextBeastTimeHours is incremented, reset, and read by nothing. Inherited,
       deliberate, harmless now that no button depends on it
   - defect: CompAbilityEffect_SectorCells caches into a list it fills with itself, so the cache
