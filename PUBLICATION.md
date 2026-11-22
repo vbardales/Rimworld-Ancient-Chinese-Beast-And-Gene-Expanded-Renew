@@ -81,6 +81,8 @@ Works with [A Dog Said... Animal Prosthetics 2](https://steamcommunity.com/share
 
 Loads after [Chinese Comprehensive Expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=3221850511) (optional), by two of the same authors: no patch, only the load order, so the two sit together without a conflict.
 
+Gene textures: the beast genes show wings, horns and other textures on a pawn. If you prefer a plain look, subscribe to [Remove Ancient Chinese Beast Gene textures](https://steamcommunity.com/sharedfiles/filedetails/?id=3293695725) by 逍逍客. It removes the textures of four genes (the mingshe's wind wing, the qiongqi's flying strike, the sexie's shoot and the year beast's horn) and keeps their abilities. Tested with this mod; the load order does not matter.
+
 The beasts rest and breed like any animal: they lie down when tired, and a tame pair has offspring that grow up (the mingshe and the Pleiades star officer lay eggs). Clones saved before this version have no sex and stay sterile. With [Nocturnal Animals](https://steamcommunity.com/sharedfiles/filedetails/?id=2269731409) (optional) each beast keeps its own hours: the qiongqi and the sexie hunt by night.
 
 Languages: English and French, and Simplified Chinese. French: proofread by a native speaker. Simplified Chinese: the authors' own text; what was added (the labels that used to be hard-coded) was completed with Claude (Anthropic) and reviewed by ChatGPT (OpenAI), and has not been checked by a native speaker.
