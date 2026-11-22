@@ -192,7 +192,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+WaitCombat"
-    And Nelim's Pickle Tools: I frame the cell (179, 145) at zoom 12
+    And Nelim's Pickle Tools: I frame the cell (179, 145) at zoom 5
     And Nelim's Pickle Tools: I place the decor "Sandbags" at (180, 143)
     And Nelim's Pickle Tools: I place the decor "Sandbags" at (181, 143)
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (174, 142)
@@ -393,7 +393,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Ryu" is ordered to attack the thing "SZ_SeXieInsect" at (181, 144)
     And Nelim's Pickle Tools: I let 40 ticks pass
     And Nelim's Pickle Tools: time is paused for the capture
-    And Nelim's Pickle Tools: I frame the cell (177, 143) at zoom 12
+    And Nelim's Pickle Tools: I frame the cell (177, 143) at zoom 6
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-6-sexie-aura"
     And Nelim's Pickle Tools: the interface is shown again
