@@ -3,7 +3,7 @@ localization: complete
 translation_en: complete
 translation_fr: complete
 settings_audit: not_applicable
-code_review_sha: fd2eea026104d91d60f905f251f6925f90cee573  # 2026-11-18, 12.a: diff 36832a44..HEAD over Mod and Source read: Mod/About/About.xml (description text: RimImmortal-Living thanks line, twelve genes) and five French DefInjected text lines (passes 27 to 32), Source, Assemblies and Patches unchanged: revue du diff : texte seul.
+code_review_sha: e8760d61f13ecaa0d60cf1876a314571bdb4f279  # 2026-11-23, 12.a: diff fd2eea02..HEAD over Mod and Source read: Mod/About/About.xml (description text: Gene textures paragraph, THANKS lines for Remove and the Chinese text), Mod/ATTRIBUTION.md (Gallery set copy), Mod/About/Preview.png (re-render); Source, Assemblies and Patches unchanged: revue du diff : texte seul. Previous: fd2eea026104d91d60f905f251f6925f90cee573
 mod:          Ancient Chinese Beast And Gene Expanded Renew (unofficial)
 packageId:    nelim.ancientchinesebeastandgeneexpanded
 repo:         Rimworld-Ancient-Chinese-Beast-And-Gene-Expanded-Renew
