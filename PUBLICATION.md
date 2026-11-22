@@ -160,10 +160,4 @@ Tribal Tattoos (2782262247, Shenanigans):
 Blue, the guest in two pictures of the gallery of [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806709132]Ancient Chinese Beast And Gene Expanded Renew[/url], wears the Sacred Water tattoo from your pack, and it still reads at gallery size. Thank you @Shenanigans :)
 ```
 
-Original mod (3292446841, andery233xj, Frolg, DongFang and Ninedaylongbow), for its Simplified Chinese text (owner rule 2026-11-23, a reused translation gets its own message; a first comment on the page was posted 2026-10-13, this one is about the text):
-
-```
-The Simplified Chinese text of [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806709132]Ancient Chinese Beast And Gene Expanded Renew[/url] is yours: the names, descriptions and letters of the beasts and genes stay as you wrote them, and the few labels I had to add follow your wording. 谢谢 andery233xj, Frolg, DongFang and Ninedaylongbow for the mod and for its text :)
-```
-
 No Use This Instead comment for this mod (Mlie, 2026-11-18, on the page: a ` Renew` suffix is enough, AUDIT.md 13.b).
