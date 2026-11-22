@@ -37,6 +37,7 @@
 #          Gun_BoltActionRifle, watchful. Face WaitCombat.
 #          Risk: the flight cannot be caught in a frame (feature 21 proves it). Plan: the shot is the moment before, as the subtitle says.
 #          v4 (2026-11-22, REDO of the take judged image 3.5, decoration 3: bare gravel, blue patches on the west side, Nelim tiny at the bottom edge): tighter zoom, frame moved east, decor tripled around the row of sandbags. Instant: the qiongqi has just turned its eyes on the hen, Nelim raises the rifle; obtained by facing South at spawn and the pause.
+#          v5 (2026-11-22, capture of ticket 3308 read, REDO: image 3.5, understanding 3.5, adequacy 3: the qiongqi at the bottom faced away from Nelim, who stood above the sandbags, so "picked its target" did not read; the hen was hidden behind its wing; Nelim tiny and still): the qiongqi moves to the top (179,147) facing South, toward Nelim; Sandbags row at z 143; Nelim at (179,140) facing North, seen from behind, rifle ready, in the foreground; the hen at (176,145) beside its line, visible; Hay moved to z 141 to 144 so none is under the beast. Instant unchanged.
 #   4. 14h bare clearing. Subject: the nian beast breathes fire at a muffalo, Nelim holds the firecracker. Composition: zoom 7, cell (194,150), flame
 #          across the frame, Nelim at the left edge. Living: nian beast, muffalo. Decor: Plant_Daylily fully grown at (188,146), (189,147). Nelim:
 #          brown middle robe (122,84,52), SanShan hat, long loose hair. Action: carries SZ_Firecracker. Face cheerful.
@@ -58,6 +59,7 @@
 #          from the lunging Ryu. Face afraid. Ryu: MeleeWeapon_Knife in hand, face AttackMelee2.
 #          Risk: Ryu reads as a head on a pale torso, and nothing says berserk. Plan: Thin body (as in scene 5) and a knife in his hand; Ryu close to Nelim, facing her; wield step after the pause as in scene 5.
 #          v23 (2026-11-22, REDO of the take judged: Ryu a head on a pale torso, Nelim calm, berserk not readable, decoration 3.5): Thin body, knife, Ryu and Nelim face to face, zoom 10, more decor. Instant: the ring has just closed on Ryu, he turns on Nelim; obtained by the step that sends him berserk, then the pause.
+#          v24 (2026-11-22, capture of ticket 3308 read, REDO: image 3.5, understanding 2.5, adequacy 2.5: in side view Ryu was again a head on a pale torso, no knife visible, no lunge, Nelim standing calm 3 cells away): Ryu at (174,143) and Nelim at (174,141) both facing South, face to face on one vertical line, so both read from the front; Ryu one cell-pair from her, knife in hand, Nelim south of him, afraid. Frame, zoom, scorpion and decor unchanged.
 #   7. 19h postindustrial workshop. Subject: Nelim at the gene extractor, three archite capsules, a hen under the bench. Composition: zoom 5, cell
 #          (230,213), the machine in the centre, capsules in a row of the machine itself (props, not subjects). Living: a hen, daylilies. Decor: three
 #          ArchiteCapsule, Plant_Daylily at (227,215) and (233,215), four TorchLamp lit around the bench (the roof stays: GALLERY.md, "Éclairer un lieu
@@ -178,21 +180,21 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: all animals are removed
-    And Ancient Chinese Beast: I spawn the pawn "SZ_QiongQi" at (179, 140) facing South
+    And Ancient Chinese Beast: I spawn the pawn "SZ_QiongQi" at (179, 147) facing South
     And Nelim's Pickle Tools: time is paused for the capture
-    And Ancient Chinese Beast: I spawn the female pawn "SZ_Chicken" at (177, 143) facing South
-    And Nelim's Pickle Tools: I place the decor "Sandbags" at (178, 145)
-    And Nelim's Pickle Tools: I place the decor "Sandbags" at (179, 145)
+    And Ancient Chinese Beast: I spawn the female pawn "SZ_Chicken" at (176, 145) facing South
+    And Nelim's Pickle Tools: I place the decor "Sandbags" at (178, 143)
+    And Nelim's Pickle Tools: I place the decor "Sandbags" at (179, 143)
     And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_SanShanHat"
     And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_BasicMiddleClothes" dyed rgb (122, 84, 52)
-    And Nelim's Pickle Tools: "Nelim" stands at (179, 147) facing South
+    And Nelim's Pickle Tools: "Nelim" stands at (179, 140) facing North
     And Nelim's Pickle Tools: "Nelim" carries the item "Gun_BoltActionRifle"
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+WaitCombat"
     And Nelim's Pickle Tools: I frame the cell (179, 144) at zoom 9
-    And Nelim's Pickle Tools: I place the decor "Sandbags" at (180, 145)
-    And Nelim's Pickle Tools: I place the decor "Sandbags" at (181, 145)
+    And Nelim's Pickle Tools: I place the decor "Sandbags" at (180, 143)
+    And Nelim's Pickle Tools: I place the decor "Sandbags" at (181, 143)
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (174, 142)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (174, 142) is lit
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (184, 142)
@@ -207,10 +209,10 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (182, 149) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (174, 139) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (184, 139) fully grown
-    And Nelim's Pickle Tools: I place the decor "Hay" at (177, 148)
-    And Nelim's Pickle Tools: I place the decor "Hay" at (181, 148)
-    And Nelim's Pickle Tools: I place the decor "Hay" at (175, 147)
-    And Nelim's Pickle Tools: I place the decor "Hay" at (183, 147)
+    And Nelim's Pickle Tools: I place the decor "Hay" at (177, 141)
+    And Nelim's Pickle Tools: I place the decor "Hay" at (181, 141)
+    And Nelim's Pickle Tools: I place the decor "Hay" at (175, 143)
+    And Nelim's Pickle Tools: I place the decor "Hay" at (183, 144)
     When Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-3-qiongqi-behind-nelim"
     And Nelim's Pickle Tools: the interface is shown again
@@ -384,8 +386,8 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: I place the decor "Sandbags" at (167, 146)
     And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_SanShanHat"
     And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_BasicMiddleClothes" dyed rgb (122, 84, 52)
-    And Nelim's Pickle Tools: "Nelim" stands at (171, 143) facing East
-    And Nelim's Pickle Tools: "Ryu" stands at (174, 143) facing West
+    And Nelim's Pickle Tools: "Nelim" stands at (174, 141) facing South
+    And Nelim's Pickle Tools: "Ryu" stands at (174, 143) facing South
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+FleeAndCower"
