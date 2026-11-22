@@ -187,12 +187,12 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: I place the decor "Sandbags" at (179, 143)
     And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_SanShanHat"
     And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_BasicMiddleClothes" dyed rgb (122, 84, 52)
-    And Nelim's Pickle Tools: "Nelim" stands at (179, 140) facing North
+    And Nelim's Pickle Tools: "Nelim" stands at (179, 141) facing North
     And Nelim's Pickle Tools: "Nelim" carries the item "Gun_BoltActionRifle"
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+WaitCombat"
-    And Nelim's Pickle Tools: I frame the cell (179, 144) at zoom 9
+    And Nelim's Pickle Tools: I frame the cell (179, 145) at zoom 12
     And Nelim's Pickle Tools: I place the decor "Sandbags" at (180, 143)
     And Nelim's Pickle Tools: I place the decor "Sandbags" at (181, 143)
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (174, 142)
@@ -355,15 +355,10 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Ryu" hairstyle is "Roo_Royal_CleancutHD"
     And Nelim's Pickle Tools: "Ryu" face tattoo is "none"
     And Nelim's Pickle Tools: "Ryu" body tattoo is "STribalTat_Body_SacredWater"
-    And Nelim's Pickle Tools: "Ryu" wears "Apparel_CollarShirt" dyed rgb (236, 226, 200)
+    And Nelim's Pickle Tools: "Ryu" wears "Apparel_CollarShirt" dyed rgb (52, 84, 120)
     And Nelim's Pickle Tools: "Ryu" wears "Apparel_Pants" dyed rgb (44, 40, 48)
-    And Nelim's Pickle Tools: "Ryu" stands at (174, 143) facing West
+    And Nelim's Pickle Tools: "Ryu" stands at (174, 143) facing East
     And Ancient Chinese Beast: I spawn the pawn "SZ_SeXieInsect" at (181, 144) with its aura clock at zero
-    And Nelim's Pickle Tools: time is paused for the capture
-    And Nelim's Pickle Tools: I frame the cell (177, 143) at zoom 10
-    When Ancient Chinese Beast: pawn 1 is sent berserk as the aura does
-    And Nelim's Pickle Tools: time is paused for the capture
-    And Nelim's Pickle Tools: "Ryu" wields "MeleeWeapon_Knife"
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (178, 138)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (178, 138) is lit
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (168, 140)
@@ -387,13 +382,18 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_SanShanHat"
     And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_BasicMiddleClothes" dyed rgb (122, 84, 52)
     And Nelim's Pickle Tools: "Nelim" stands at (174, 141) facing South
-    And Nelim's Pickle Tools: "Ryu" stands at (174, 143) facing South
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+FleeAndCower"
     And Nelim's Pickle Tools: "Ryu" facial expression is "normal+AttackMelee2"
     And Nelim's Pickle Tools: the eclipse of the map is ended
     And Nelim's Pickle Tools: the game condition "PsychicSoothe" is ended
+    When Ancient Chinese Beast: pawn 1 is sent berserk as the aura does
+    And Nelim's Pickle Tools: "Ryu" wields "MeleeWeapon_Knife"
+    And Nelim's Pickle Tools: "Ryu" is ordered to attack the thing "SZ_SeXieInsect" at (181, 144)
+    And Nelim's Pickle Tools: I let 40 ticks pass
+    And Nelim's Pickle Tools: time is paused for the capture
+    And Nelim's Pickle Tools: I frame the cell (177, 143) at zoom 12
     And Nelim's Pickle Tools: the map is shown alone for a capture
     And I take a screenshot "gallery-6-sexie-aura"
     And Nelim's Pickle Tools: the interface is shown again
