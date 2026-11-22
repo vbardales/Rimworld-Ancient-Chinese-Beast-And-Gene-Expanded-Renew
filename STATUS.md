@@ -27,10 +27,11 @@ upstream_mod_remotes:
 dependencies: declared
 workshop_required_items: done, 2026-11-16 (read on the Steam page: Harmony 2009463077, Biotech DLC 1826140)
 showcase:     complete
-tested_on: 2026-11-06 pickle 6589e5f (1.6, English: feature 20 wind barrier 2/2 and feature 13 original mod 1/1 green; French feature 15 22/22 green 2026-11-03)
+tested_on: 2026-11-18 pickle 1d91 (1.6 English non-regression of 1.2.0, 200 passed, 38 skipped, exitReason passed, Docs/runs/pickle.md); earlier 2026-11-06 pickle 6589e5f (1.6, English: feature 20 wind barrier 2/2 and feature 13 original mod 1/1 green; French feature 15 22/22 green 2026-11-03)
 workshop:     published 2026-10-13, item 3806709132, public since 2026-10-13 (the owner switched it, after the upload), version 1.0.0, tag v1.0.0, run 38369937487 (publish and tag-and-release green)
 remaining:
-  - open 2.h (replay 2026-11-22, typed by Virginie): `ecosystem_line` absent, the 1.2 line never went through ecosystem[1.2.0]. Ask PiI for the short DELTA since 2026-11-13 (`ECOSYSTEM? <Mod> | DELTA depuis 2026-11-13`), copy it into Ecosystem, write `ecosystem_line: 1.2`, then replay. Known beyond the replay stop (not read): `gallery_validated_sha` and `preview_source_decision` absent (9.f, 10.a bis)
+  - open 9.f (replay 2026-11-22): `gallery_validated_sha` absent; the 8-image gallery (hash 1bf9befe03df3dbfe96e44b523a38be6aa5a374e) needs Virginie's oui in the session chat, then write the field. Replay proposes shootGallery[1.2.0] until then, stage move awaits her oui. Beyond the replay stop (not read): `preview_source_decision` absent (10.a bis)
+  - housekeeping owed (AGENTS migration): delete Docs/PROTOCOLS-READ.md and the Docs/runs files other than pickle.md (pickle.md created 2026-11-22), after rewriting the STATUS, PUBLICATION, TESTING and Tests/Pickle/README pointers to them
   - unverified: the delivered assembly changed four times in a week (forced "Beast attack now" 2026-09-25, rest
       and breeding 2026-09-25, the sexie's tunnel 2026-09-27, the wind barrier's projectile guard 2026-10-01). Current
       SHA-256 `40AA5903...A7BA74` (before the guard `042989FA...A1295F`), rebuilt by `Tests/Run-All.ps1` on 2026-10-01
