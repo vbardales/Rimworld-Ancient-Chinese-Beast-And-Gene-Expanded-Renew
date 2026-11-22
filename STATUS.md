@@ -30,7 +30,7 @@ showcase:     complete
 tested_on: 2026-11-18 pickle 1d91 (1.6 English non-regression of 1.2.0, 200 passed, 38 skipped, exitReason passed, Docs/runs/pickle.md); earlier 2026-11-06 pickle 6589e5f (1.6, English: feature 20 wind barrier 2/2 and feature 13 original mod 1/1 green; French feature 15 22/22 green 2026-11-03)
 workshop:     published 2026-10-13, item 3806709132, public since 2026-10-13 (the owner switched it, after the upload), version 1.0.0, tag v1.0.0, run 38369937487 (publish and tag-and-release green)
 remaining:
-  - gallery 3 and 6 REDO (2026-11-22, session verdict after Virginie said refais 3 et 6): old captures deleted, scenarios recomposed (919af4a), ticket 3308 "gallery 3 and 6 redo 919af4a" filed on wsl-deps.sanctuary.map. Plan self-check 5 on paper (not a score-gallery run). On RUN_DONE: open both captures, run score-gallery, subtitle (Add-Subtitle) and add to Art/Gallery and Art/Gallery-clean as 3-qiongqi.jpg and 6-sexie-aura.jpg
+  - gallery 3 and 6 REDO again (2026-11-22): ticket 3308 green (2/2) but both captures read and judged REDO (3: qiongqi faced away from Nelim, hen hidden, Nelim tiny; 6: Ryu head on pale torso again, no knife, no lunge; all four notes under 4). Run folder deleted, scenes recomposed (e4211fe: 3 qiongqi top facing Nelim, Nelim foreground facing North; 6 Ryu and Nelim face to face facing South), ticket 00a2 "gallery 3 and 6 redo v2 e4211fe" filed on wsl-deps.sanctuary.map. On RUN_DONE: open both captures, judge (score-gallery), subtitle (Add-Subtitle), add to Art/Gallery and Art/Gallery-clean as 3-qiongqi.jpg and 6-sexie-aura.jpg. 268 px thumbnail check not done on 3308 (both REDO anyway)
   - open 9.f (replay 2026-11-22): `gallery_validated_sha` absent; the 8-image gallery (hash 1bf9befe03df3dbfe96e44b523a38be6aa5a374e) needs Virginie's oui in the session chat, then write the field. Replay proposes shootGallery[1.2.0] until then, stage move awaits her oui. Beyond the replay stop (not read): `preview_source_decision` absent (10.a bis)
   - housekeeping owed (AGENTS migration): delete Docs/PROTOCOLS-READ.md and the Docs/runs files other than pickle.md (pickle.md created 2026-11-22), after rewriting the STATUS, PUBLICATION, TESTING and Tests/Pickle/README pointers to them
   - unverified: the delivered assembly changed four times in a week (forced "Beast attack now" 2026-09-25, rest
@@ -84,7 +84,7 @@ remaining:
 session:      local_f1e4cc35-8614-406f-80ff-0a2487014a59
 updated:      2026-11-22
 upstream_synced: 2026-11-16 MonsterTower/AncientChineseBeast@f6d3d19
-protocols_read_sha: 5e55185c2894aa6ca5c357aa68a58231a15166a1
+protocols_read_sha: fa8a6288080d0a90268c5a9f80d485154437dd57
 ---
 # Ancient Chinese Beast And Gene Expanded Renew: status
 
