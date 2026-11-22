@@ -9,7 +9,7 @@
 # player of Renew would have it.
 #
 # ORDER. The staging activates the mods named here in this order, then the mod under test. Naming this mod's own
-# packageId with a path: overlay puts it first (see wsl-deps.ads2.map); the patch loads after it, as a player's
+# packageId with a path: overlay asks for it first (see wsl-deps.ads2.map), but run 330e (2026-11-22) loaded it AFTER the patch: the order is not enforced here, and the feature no longer asserts it. A player's
 # mod manager would place it.
 nelim.ancientchinesebeastandgeneexpanded   path:AncientChineseBeastAndGeneExpandedRenew/Mod
 XXK.AncientChineseBeastNoTexture   3293695725

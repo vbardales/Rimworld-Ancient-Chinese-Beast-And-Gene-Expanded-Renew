@@ -7,19 +7,18 @@
 #
 # and is skipped by requirement in every other pass. The patch (Patches/Patch.xml) holds four PatchOperationRemove
 # (success Always) on /Defs/GeneDef[defName="..."]/renderNodeProperties for four genes this mod also defines. Its
-# About.xml has no dependency and no guard, so it should apply to this mod when it loads after it. This pass settles
+# About.xml has no dependency and no guard, so it should apply to this mod whatever the load order (XML patches run after all defs are loaded; run 330e loaded it BEFORE this mod). This pass settles
 # that, and that nothing logs a warning or an error with the patch and Resolve This Instead staged.
 # The two "has no value" steps are new (PiT, 2026-11-22), compiled and not played when this file was written.
 @requires:XXK.AncientChineseBeastNoTexture
 @requires:nelim.pickletools.deffields
 Feature: The no-texture patch of the original applies to this mod's genes
 
-  Scenario: the three mods load, the patch after this mod
+  Scenario: the three mods load
     Given Ancient Chinese Beast: the main menu is open within 120 seconds
     Then mod "XXK.AncientChineseBeastNoTexture" is loaded
     And mod "nelim.resolvethisinstead" is loaded
     And mod "nelim.ancientchinesebeastandgeneexpanded" is loaded
-    And mod "XXK.AncientChineseBeastNoTexture" loads after "nelim.ancientchinesebeastandgeneexpanded"
     And no warnings from mod "Ancient Chinese Beast And Gene Expanded Renew (unofficial)"
     And no errors were logged
 
