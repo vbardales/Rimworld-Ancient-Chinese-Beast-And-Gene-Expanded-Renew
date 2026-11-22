@@ -187,7 +187,7 @@ Feature: The gallery of Ancient Chinese Beast And Gene Expanded Renew
     And Nelim's Pickle Tools: I place the decor "Sandbags" at (179, 143)
     And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_SanShanHat"
     And Nelim's Pickle Tools: "Nelim" wears "RI_Apparel_BasicMiddleClothes" dyed rgb (122, 84, 52)
-    And Nelim's Pickle Tools: "Nelim" stands at (179, 141) facing North
+    And Nelim's Pickle Tools: "Nelim" stands at (179, 142) facing North
     And Nelim's Pickle Tools: "Nelim" carries the item "Gun_BoltActionRifle"
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
